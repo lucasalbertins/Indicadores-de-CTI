@@ -1,0 +1,3 @@
+vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^bundle {
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#> 
+}

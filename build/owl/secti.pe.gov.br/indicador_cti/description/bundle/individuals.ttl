@@ -1,0 +1,117 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+owl:topDataProperty  rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#identificador>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#formula>
+        rdf:type  owl:DatatypeProperty .
+
+owl:Nothing  rdf:type  owl:Class .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Indicador>
+        rdf:type  owl:Class .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#contribuiPara>
+        rdf:type  owl:ObjectProperty .
+
+<http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem>
+        rdf:type    owl:Thing , <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Indicador> ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#fim>
+                "EQUILIBRAR" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#formula>
+                "nPesFm/(nPesMasc+nPesFm)" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#nome>
+                "Proporção de pesquisadoras em tempo integral" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#status>
+                "Em avaliação" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAlvo>
+                "0.5"^^xsd:double ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAtual>
+                "0.3"^^xsd:double ;
+        owl:sameAs  <http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem> .
+
+<http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen>
+        rdf:type    owl:Thing , <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Objetivo> ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#descricao>
+                "Alcançar a igualdade de gênero" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#identificador>
+                "OBJ-03" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#monitoradoPor>
+                <http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem> ;
+        owl:sameAs  <http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen> .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#fim>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#discriminacao>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesFem>
+        rdf:type    <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao> , owl:Thing ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#contribuiPara>
+                <http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen> ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#discriminacao>
+                "Profissionais de P&D do sexo feminino" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#termo>
+                "nPesFm" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valor>
+                "30.0"^^xsd:double ;
+        owl:sameAs  <http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesFem> .
+
+owl:Thing  rdf:type  owl:Class .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#termo>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAlvo>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao>
+        rdf:type  owl:Class .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Objetivo>
+        rdf:type  owl:Class .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#nome>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#descricao>
+        rdf:type  owl:DatatypeProperty .
+
+owl:topObjectProperty
+        rdf:type  owl:SymmetricProperty , owl:TransitiveProperty , owl:ObjectProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#status>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#monitoradoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesMasc>
+        rdf:type    <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao> , owl:Thing ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#contribuiPara>
+                <http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen> ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#discriminacao>
+                "Profissionais de P&D do sexo masculino" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#termo>
+                "nPesMasc" ;
+        <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valor>
+                "70.0"^^xsd:double ;
+        owl:sameAs  <http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesMasc> .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAtual>
+        rdf:type  owl:DatatypeProperty .
+
+<http://secti.pe.gov.br/indicador_cti/description/bundle/individuals>
+        rdf:type         owl:Ontology ;
+        rdfs:comment     "Generated by Owl Reason 2.14.0" ;
+        owl:imports      <http://secti.pe.gov.br/indicador_cti/description/bundle> ;
+        owl:versionInfo  "1742387431" .
+
+<http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valor>
+        rdf:type  owl:DatatypeProperty .

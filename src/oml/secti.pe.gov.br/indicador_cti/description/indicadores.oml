@@ -1,0 +1,34 @@
+description <http://secti.pe.gov.br/indicador_cti/description/indicadores#> as indicadores {	
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#> as indicador
+
+	instance propPesqFem : indicador:Indicador [
+		indicador:nome "Proporção de pesquisadoras em tempo integral"
+		indicador:formula "nPesFm/(nPesMasc+nPesFm)"
+		indicador:valorAtual "0.3"^^xsd:double
+		indicador:valorAlvo "0.5"^^xsd:double
+		indicador:fim "EQUILIBRAR"
+		indicador:status "Em avaliação"
+	]
+	
+	instance equidadeGen : indicador:Objetivo [
+		indicador:descricao "Alcançar a igualdade de gênero"
+		indicador:identificador "OBJ-03"
+		indicador:monitoradoPor propPesqFem
+	]
+	
+	instance quantPesFem : indicador:Contribuicao [
+		indicador:contribuiPara equidadeGen
+		indicador:termo "nPesFm"
+		indicador:discriminacao "Profissionais de P&D do sexo feminino"
+		indicador:valor "30"^^xsd:double
+	]
+	
+	instance quantPesMasc : indicador:Contribuicao [
+		indicador:contribuiPara equidadeGen
+		indicador:termo "nPesMasc"
+		indicador:discriminacao "Profissionais de P&D do sexo masculino"
+		indicador:valor "70"^^xsd:double
+	]
+	
+}

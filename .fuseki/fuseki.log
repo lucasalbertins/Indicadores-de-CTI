@@ -1,0 +1,34 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/albertins/.m2/repository/org/apache/jena/jena-fuseki-server/4.6.1/jena-fuseki-server-4.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/albertins/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.18.0/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+[2025-03-19 09:33:31] Server     INFO  Apache Jena Fuseki 4.6.1
+[2025-03-19 09:33:31] Server     INFO  Incoming connections limited to localhost
+[2025-03-19 09:33:31] Config     INFO  FUSEKI_HOME=/Applications/Rosetta.app/Contents/MacOS/workspace/Indicadores de CTI/.fuseki/.
+[2025-03-19 09:33:31] Config     INFO  FUSEKI_BASE=/Applications/Rosetta.app/Contents/MacOS/workspace/Indicadores de CTI/.fuseki/run
+[2025-03-19 09:33:31] Config     INFO  Shiro file: file:///Applications/Rosetta.app/Contents/MacOS/workspace/Indicadores de CTI/.fuseki/run/shiro.ini
+[2025-03-19 09:33:31] Config     ERROR Skipping: Failed to build service for "Indicadores de CTI"
+[2025-03-19 09:33:31] Config     ERROR     String '/Indicadores de CTI' not valid as 'service'
+[2025-03-19 09:33:31] Server     INFO  System
+[2025-03-19 09:33:31] Server     INFO    Memory: 4.5 GiB
+[2025-03-19 09:33:31] Server     INFO    Java:   17.0.10
+[2025-03-19 09:33:31] Server     INFO    OS:     Mac OS X 14.1 aarch64
+[2025-03-19 09:33:31] Server     INFO    PID:    83256
+[2025-03-19 09:33:31] Server     INFO  Started 2025/03/19 09:33:31 BRT on port 3030
+[2025-03-19 09:33:55] Admin      INFO  [2] Create database : name = /indicadoresCTI
+[2025-03-19 09:34:56] Fuseki     INFO  [6] POST http://localhost:3030/indicadoresCTI/data
+[2025-03-19 09:34:56] Fuseki     INFO  [7] POST http://localhost:3030/indicadoresCTI/data
+[2025-03-19 09:34:56] Fuseki     INFO  [8] POST http://localhost:3030/indicadoresCTI/data
+[2025-03-19 09:34:56] Fuseki     INFO  [6] Filename: classes.ttl, Content-Type=application/octet-stream, Charset=null => Turtle : Count=29 Triples=29 Quads=0
+[2025-03-19 09:34:56] Fuseki     INFO  [6] 200 OK (32 ms)
+[2025-03-19 09:34:56] Fuseki     INFO  [7] Filename: properties.ttl, Content-Type=application/octet-stream, Charset=null => Turtle : Count=40 Triples=40 Quads=0
+[2025-03-19 09:34:56] Fuseki     INFO  [7] 200 OK (37 ms)
+[2025-03-19 09:34:56] Fuseki     INFO  [8] Filename: individuals.ttl, Content-Type=application/octet-stream, Charset=null => Turtle : Count=55 Triples=55 Quads=0
+[2025-03-19 09:34:56] Fuseki     INFO  [8] 200 OK (25 ms)
+[2025-03-19 09:35:04] Fuseki     INFO  [11] POST http://localhost:3030/indicadoresCTI/query
+[2025-03-19 09:35:04] Fuseki     INFO  [11] Query = PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {   ?sub ?pred ?obj . } LIMIT 10
+[2025-03-19 09:35:04] Fuseki     INFO  [11] 200 OK (31 ms)
+[2025-03-19 09:35:14] Fuseki     INFO  [12] POST http://localhost:3030/indicadoresCTI/query
+[2025-03-19 09:35:14] Fuseki     INFO  [12] Query = PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {   ?sub ?pred ?obj . } 
+[2025-03-19 09:35:14] Fuseki     INFO  [12] 200 OK (17 ms)

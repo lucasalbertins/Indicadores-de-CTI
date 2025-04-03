@@ -1,0 +1,69 @@
+@dc:creator "W3C"
+@dc:rights "Copyright 2002 W3C."
+@dc:source "https://www.w3.org/TR/owl2-syntax/#ref-xml-schema-datatypes"
+@dc:description "The OWL2 vocabulary is a subset of the vocabulary maintained by the W3C."
+@dc:title "OWL2"
+vocabulary <http://www.w3.org/2002/07/owl#> as owl {
+
+	extends <http://purl.org/dc/elements/1.1/> as dc
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	extends <http://www.w3.org/1999/02/22-rdf-syntax-ns#> as rdf
+
+	aspect Thing
+	
+	aspect Nothing
+
+	annotation property backwardCompatibleWith
+
+	annotation property deprecated
+
+	annotation property incompatibleWith
+
+	annotation property priorVersion
+
+	annotation property versionInfo
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Real_Numbers.2C_Decimal_Numbers.2C_and_Integers"
+	scalar real < rdfs:Literal
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Real_Numbers.2C_Decimal_Numbers.2C_and_Integers"
+	scalar rational < real
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Real_Numbers.2C_Decimal_Numbers.2C_and_Integers"
+	ref scalar xsd:decimal < rational
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Floating-Point_Numbers"
+	ref scalar xsd:double < rdfs:Literal
+	
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Floating-Point_Numbers"
+	ref scalar xsd:float < rdfs:Literal
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Strings"
+	ref scalar xsd:string < rdf:PlainLiteral
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Boolean_Values"
+	ref scalar xsd:boolean < rdfs:Literal
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Binary_Data"
+	ref scalar xsd:hexBinary < rdfs:Literal
+	
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Binary_Data"
+	ref scalar xsd:base64Binary < rdfs:Literal
+	
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#IRIs_2"
+	ref scalar xsd:anyURI < rdfs:Literal
+	
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Time_Instants"
+	ref scalar xsd:dateTime < rdfs:Literal
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#Literals"
+	ref scalar rdf:PlainLiteral < rdfs:Literal
+
+	@dc:source "https://www.w3.org/TR/owl2-syntax/#XML_Literals"
+	ref scalar rdf:XMLLiteral < rdfs:Literal
+
+}

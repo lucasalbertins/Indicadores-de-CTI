@@ -1,0 +1,78 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#> as indicador {
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	concept Indicador
+	
+	concept Objetivo
+
+	concept Contribuicao
+	
+	scalar Finalidade [
+		oneOf "MAXIMIZAR", "MINIMIZAR", "EQUILIBRAR"
+	]
+
+	scalar property nome [
+		domain Indicador
+		range xsd:string
+	]
+
+	scalar property valorAtual [
+		domain Indicador
+		range xsd:double
+	]
+
+	scalar property valorAlvo [
+		domain Indicador
+		range xsd:double
+	]
+
+	scalar property status [
+		domain Indicador
+		range xsd:string
+	]
+
+	scalar property formula [
+		domain Indicador
+		range xsd:string
+	]
+
+	relation monitoradoPor [
+		from Objetivo
+		to Indicador
+	]
+
+	scalar property identificador [
+		domain Objetivo
+		range xsd:string
+	]
+
+	scalar property descricao [
+		domain Objetivo
+		range xsd:string
+	]
+
+	relation contribuiPara [
+		from Contribuicao
+		to Objetivo
+	]
+
+	scalar property termo [
+		domain Contribuicao
+		range xsd:string
+	]
+
+	scalar property valor [
+		domain Contribuicao
+		range xsd:double
+	]
+
+	scalar property discriminacao [
+		domain Contribuicao
+		range xsd:string
+	]
+
+	scalar property fim [
+		domain Indicador
+		range Finalidade
+	]
+}

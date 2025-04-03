@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuites name="http://secti.pe.gov.br/indicador_cti/description/bundle">
+  <testsuite name="Consistency">
+    <testcase name="http://secti.pe.gov.br/indicador_cti/description/bundle"/>
+  </testsuite>
+  <testsuite name="Satisfiability">
+    <testcase name="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao"/>
+    <testcase name="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Indicador"/>
+    <testcase name="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Objetivo"/>
+  </testsuite>
+</testsuites>

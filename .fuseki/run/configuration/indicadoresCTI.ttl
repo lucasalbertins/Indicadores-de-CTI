@@ -1,0 +1,73 @@
+@prefix :       <http://base/#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+@prefix ja:     <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb:    <http://jena.hpl.hp.com/2008/tdb#> .
+
+<http://jena.apache.org/2016/tdb#GraphTDB>
+        rdfs:subClassOf  ja:Model .
+
+ja:ModelRDFS  rdfs:subClassOf  ja:Model .
+
+ja:RDFDatasetSink  rdfs:subClassOf  ja:RDFDataset .
+
+tdb:DatasetTDB  rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/access#SecurityRegistry>
+        rdfs:subClassOf  ja:Model .
+
+<http://jena.apache.org/2016/tdb#GraphTDB2>
+        rdfs:subClassOf  ja:Model .
+
+:dataset  rdf:type  ja:DatasetTxnMem .
+
+<http://jena.apache.org/text#TextDataset>
+        rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/access#AccessControlledDataset>
+        rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetZero  rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/2016/tdb#DatasetTDB>
+        rdfs:subClassOf  ja:RDFDataset .
+
+ja:ViewGraph  rdfs:subClassOf  ja:Model .
+
+ja:GraphRDFS  rdfs:subClassOf  ja:Model .
+
+tdb:GraphTDB  rdfs:subClassOf  ja:Model .
+
+ja:DatasetTxnMem  rdfs:subClassOf  ja:RDFDataset .
+
+:service1  rdf:type      fuseki:Service ;
+        fuseki:dataset   :dataset ;
+        fuseki:endpoint  [ fuseki:name       "update" ;
+                           fuseki:operation  fuseki:update
+                         ] ;
+        fuseki:endpoint  [ fuseki:operation  fuseki:query ] ;
+        fuseki:endpoint  [ fuseki:name       "get" ;
+                           fuseki:operation  fuseki:gsp-r
+                         ] ;
+        fuseki:endpoint  [ fuseki:operation  fuseki:update ] ;
+        fuseki:endpoint  [ fuseki:name       "query" ;
+                           fuseki:operation  fuseki:query
+                         ] ;
+        fuseki:endpoint  [ fuseki:name       "sparql" ;
+                           fuseki:operation  fuseki:query
+                         ] ;
+        fuseki:endpoint  [ fuseki:operation  fuseki:gsp-rw ] ;
+        fuseki:endpoint  [ fuseki:name       "data" ;
+                           fuseki:operation  fuseki:gsp-rw
+                         ] ;
+        fuseki:name      "indicadoresCTI" .
+
+ja:MemoryDataset  rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetOne  rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/2016/tdb#DatasetTDB2>
+        rdfs:subClassOf  ja:RDFDataset .
+
+ja:DatasetRDFS  rdfs:subClassOf  ja:RDFDataset .

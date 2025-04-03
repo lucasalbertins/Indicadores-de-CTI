@@ -1,0 +1,205 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Apache Jena - Fuseki WAR File
+
+
+From: 'an unknown organization'
+  - Titanium JSON-LD 1.1 (JRE11) (https://github.com/filip26/titanium-json-ld) com.apicatalog:titanium-json-ld:jar:1.3.1
+    License: Apache License, Version 2.0  (http://apache.org/licenses/LICENSE-2.0)
+  - dexx (https://github.com/andrewoma/dexx) com.github.andrewoma.dexx:collection:jar:0.7
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+  - JSONLD Java :: Core (http://github.com/jsonld-java/jsonld-java/jsonld-java/) com.github.jsonld-java:jsonld-java:bundle:0.13.4
+    License: Revised BSD License  (https://raw.github.com/jsonld-java/jsonld-java/master/LICENCE)
+  - Gson (https://github.com/google/gson/gson) com.google.code.gson:gson:jar:2.9.1
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Protocol Buffers [Core] (https://developers.google.com/protocol-buffers/protobuf-java/) com.google.protobuf:protobuf-java:bundle:3.21.4
+    License: BSD-3-Clause  (https://opensource.org/licenses/BSD-3-Clause)
+  - micrometer-core (https://github.com/micrometer-metrics/micrometer) io.micrometer:micrometer-core:jar:1.9.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - micrometer-registry-prometheus (https://github.com/micrometer-metrics/micrometer) io.micrometer:micrometer-registry-prometheus:jar:1.9.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Prometheus Java Simpleclient (http://github.com/prometheus/client_java/simpleclient) io.prometheus:simpleclient:bundle:0.15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Prometheus Java Simpleclient Common (http://github.com/prometheus/client_java/simpleclient_common) io.prometheus:simpleclient_common:bundle:0.15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Prometheus Java Span Context Supplier - Common (http://github.com/prometheus/client_java/simpleclient_tracer/simpleclient_tracer_common) io.prometheus:simpleclient_tracer_common:bundle:0.15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Prometheus Java Span Context Supplier - OpenTelemetry (http://github.com/prometheus/client_java/simpleclient_tracer/simpleclient_tracer_otel) io.prometheus:simpleclient_tracer_otel:bundle:0.15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Prometheus Java Span Context Supplier - OpenTelemetry Agent (http://github.com/prometheus/client_java/simpleclient_tracer/simpleclient_tracer_otel_agent) io.prometheus:simpleclient_tracer_otel_agent:bundle:0.15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Thrift (http://thrift.apache.org) org.apache.thrift:libthrift:jar:0.16.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - HdrHistogram (http://hdrhistogram.github.io/HdrHistogram/) org.hdrhistogram:HdrHistogram:bundle:2.1.12
+    License: Public Domain, per Creative Commons CC0  (http://creativecommons.org/publicdomain/zero/1.0/)    License: BSD-2-Clause  (https://opensource.org/licenses/BSD-2-Clause)
+  - LatencyUtils (http://latencyutils.github.io/LatencyUtils/) org.latencyutils:LatencyUtils:jar:2.0.3
+    License: Public Domain, per Creative Commons CC0  (http://creativecommons.org/publicdomain/zero/1.0/)
+
+From: 'Apache Jena' (https://jena.apache.org/)
+  - Apache Jena - Command line tools (https://jena.apache.org/) org.apache.jena:jena-cmds:jar:4.6.1
+    License: Apache 2.0 License  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - Fuseki Core Engine (https://jena.apache.org/jena-fuseki-core/) org.apache.jena:jena-fuseki-core:jar:4.6.1
+    License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - Fuseki Webapp (https://jena.apache.org/jena-fuseki-webapp/) org.apache.jena:jena-fuseki-webapp:jar:4.6.1
+    License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Eclipse Foundation' (https://www.eclipse.org)
+  - JSON-P Default Provider (https://github.com/eclipse-ee4j/jsonp) org.glassfish:jakarta.json:bundle:2.0.1
+    License: Eclipse Public License 2.0  (https://projects.eclipse.org/license/epl-2.0)    License: GNU General Public License, version 2 with the GNU Classpath Exception  (https://projects.eclipse.org/license/secondary-gpl-2.0-cp)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.13.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.13.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.13.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'GlassFish Community' (https://javaee.github.io/glassfish)
+  - javax.annotation API (http://jcp.org/en/jsr/detail?id=250) javax.annotation:javax.annotation-api:jar:1.3.2
+    License: CDDL + GPLv2 with classpath exception  (https://github.com/javaee/javax.annotation/blob/master/LICENSE)
+
+From: 'Mort Bay Consulting' (http://www.mortbay.com)
+  - Jetty :: Servlet API and Schemas for JPMS and OSGi (https://eclipse.org/jetty/jetty-servlet-api) org.eclipse.jetty.toolchain:jetty-servlet-api:jar:4.0.6
+    License: Apache Software License - Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)    License: Eclipse Public License - Version 1.0  (http://www.eclipse.org/org/documents/epl-v10.php)
+
+From: 'OWASP (Open Web-Application Security Project)' (https://www.owasp.org/)
+  - Java Encoder (https://www.owasp.org/index.php/OWASP_Java_Encoder_Project/encoder) org.owasp.encoder:encoder:jar:1.2.2
+    License: The BSD 3-Clause License  (http://www.opensource.org/licenses/BSD-3-Clause)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - JCL 1.2 implemented over SLF4J (http://www.slf4j.org) org.slf4j:jcl-over-slf4j:jar:1.7.36
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.36
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Commons Collections (http://commons.apache.org/collections/) commons-collections:commons-collections:jar:3.2.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache HttpClient (http://hc.apache.org/httpcomponents-client) org.apache.httpcomponents:httpclient:jar:4.5.13
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache HttpClient Cache (http://hc.apache.org/httpcomponents-client) org.apache.httpcomponents:httpclient-cache:jar:4.5.13
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache HttpCore (http://hc.apache.org/httpcomponents-core-ga) org.apache.httpcomponents:httpcore:jar:4.4.15
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Commons BeanUtils (https://commons.apache.org/proper/commons-beanutils/) commons-beanutils:commons-beanutils:jar:1.9.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons CLI (https://commons.apache.org/proper/commons-cli/) commons-cli:commons-cli:jar:1.5.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Codec (https://commons.apache.org/proper/commons-codec/) commons-codec:commons-codec:jar:1.15
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons FileUpload (http://commons.apache.org/proper/commons-fileupload/) commons-fileupload:commons-fileupload:jar:1.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons IO (https://commons.apache.org/proper/commons-io/) commons-io:commons-io:jar:2.11.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Compress (https://commons.apache.org/proper/commons-compress/) org.apache.commons:commons-compress:jar:1.21
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons CSV (https://commons.apache.org/proper/commons-csv/) org.apache.commons:commons-csv:jar:1.9.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Lang (https://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.12.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - ARQ (https://jena.apache.org/jena-arq/) org.apache.jena:jena-arq:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - Base Common Environment (https://jena.apache.org/jena-base/) org.apache.jena:jena-base:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - Core (https://jena.apache.org/jena-core/) org.apache.jena:jena-core:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - DBOE Base (https://jena.apache.org/jena-dboe-base/) org.apache.jena:jena-dboe-base:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - DBOE Indexes (https://jena.apache.org/jena-dboe-index/) org.apache.jena:jena-dboe-index:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - DBOE Storage (https://jena.apache.org/jena-dboe-storage/) org.apache.jena:jena-dboe-storage:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - DBOE Transactional Datastructures (https://jena.apache.org/jena-dboe-trans-data/) org.apache.jena:jena-dboe-trans-data:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - DBOE Transactions (https://jena.apache.org/jena-dboe-transaction/) org.apache.jena:jena-dboe-transaction:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - IRI (https://jena.apache.org/jena-iri/) org.apache.jena:jena-iri:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - RDF Connection (https://jena.apache.org/jena-rdfconnection/) org.apache.jena:jena-rdfconnection:jar:4.6.1
+    License: Apache 2.0 License  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - SHACL (https://jena.apache.org/jena-shacl/) org.apache.jena:jena-shacl:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - Shadowed external libraries (https://jena.apache.org/jena-shaded-guava/) org.apache.jena:jena-shaded-guava:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - ShEx (https://jena.apache.org/jena-shex/) org.apache.jena:jena-shex:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - TDB1 (Native Triple Store) (https://jena.apache.org/jena-tdb/) org.apache.jena:jena-tdb:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Jena - DBOE TDB2 (Native Triple Store) (https://jena.apache.org/jena-tdb2/) org.apache.jena:jena-tdb2:jar:4.6.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Jena - SPARQL Text Search (https://jena.apache.org/jena-text/) org.apache.jena:jena-text:jar:4.6.1
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j API (https://logging.apache.org/log4j/2.x/log4j-api/) org.apache.logging.log4j:log4j-api:jar:2.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j Core (https://logging.apache.org/log4j/2.x/log4j-core/) org.apache.logging.log4j:log4j-core:jar:2.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j SLF4J Binding (https://logging.apache.org/log4j/2.x/log4j-slf4j-impl/) org.apache.logging.log4j:log4j-slf4j-impl:jar:2.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j Web (https://logging.apache.org/log4j/2.x/log4j-web/) org.apache.logging.log4j:log4j-web:jar:2.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Common Analyzers (https://lucene.apache.org/lucene-parent/lucene-analyzers-common) org.apache.lucene:lucene-analyzers-common:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Memory (https://lucene.apache.org/lucene-parent/lucene-backward-codecs) org.apache.lucene:lucene-backward-codecs:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Core (https://lucene.apache.org/lucene-parent/lucene-core) org.apache.lucene:lucene-core:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Highlighter (https://lucene.apache.org/lucene-parent/lucene-highlighter) org.apache.lucene:lucene-highlighter:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Memory (https://lucene.apache.org/lucene-parent/lucene-memory) org.apache.lucene:lucene-memory:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Queries (https://lucene.apache.org/lucene-parent/lucene-queries) org.apache.lucene:lucene-queries:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene QueryParsers (https://lucene.apache.org/lucene-parent/lucene-queryparser) org.apache.lucene:lucene-queryparser:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Lucene Sandbox (https://lucene.apache.org/lucene-parent/lucene-sandbox) org.apache.lucene:lucene-sandbox:jar:8.11.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Cache (https://shiro.apache.org/shiro-cache/) org.apache.shiro:shiro-cache:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Configuration :: Core (https://shiro.apache.org/shiro-config/shiro-config-core/) org.apache.shiro:shiro-config-core:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Configuration :: OGDL (https://shiro.apache.org/shiro-config/shiro-config-ogdl/) org.apache.shiro:shiro-config-ogdl:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Core (https://shiro.apache.org/shiro-core/) org.apache.shiro:shiro-core:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Cryptography :: Ciphers (https://shiro.apache.org/shiro-crypto/shiro-crypto-cipher/) org.apache.shiro:shiro-crypto-cipher:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Cryptography :: Core (https://shiro.apache.org/shiro-crypto/shiro-crypto-core/) org.apache.shiro:shiro-crypto-core:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Cryptography :: Hashing (https://shiro.apache.org/shiro-crypto/shiro-crypto-hash/) org.apache.shiro:shiro-crypto-hash:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Event (https://shiro.apache.org/shiro-event/) org.apache.shiro:shiro-event:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Lang (https://shiro.apache.org/shiro-lang/) org.apache.shiro:shiro-lang:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Shiro :: Web (https://shiro.apache.org/shiro-web/) org.apache.shiro:shiro-web:bundle:1.9.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Webtide' (https://webtide.com)
+  - Jetty :: Http Utility (https://eclipse.org/jetty/jetty-http) org.eclipse.jetty:jetty-http:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: IO Utility (https://eclipse.org/jetty/jetty-io) org.eclipse.jetty:jetty-io:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Security (https://eclipse.org/jetty/jetty-security) org.eclipse.jetty:jetty-security:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Server Core (https://eclipse.org/jetty/jetty-server) org.eclipse.jetty:jetty-server:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Servlet Handling (https://eclipse.org/jetty/jetty-servlet) org.eclipse.jetty:jetty-servlet:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Utility Servlets and Filters (https://eclipse.org/jetty/jetty-servlets) org.eclipse.jetty:jetty-servlets:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Utilities (https://eclipse.org/jetty/jetty-util) org.eclipse.jetty:jetty-util:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: Webapp Application Support (https://eclipse.org/jetty/jetty-webapp) org.eclipse.jetty:jetty-webapp:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Jetty :: XML utilities (https://eclipse.org/jetty/jetty-xml) org.eclipse.jetty:jetty-xml:jar:10.0.11
+    License: Eclipse Public License - Version 2.0  (https://www.eclipse.org/legal/epl-2.0)    License: Apache Software License - Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+
