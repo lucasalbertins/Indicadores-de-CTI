@@ -6,16 +6,15 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	concept Objetivo
 	concept Indicador
 	concept FonteDeDados
-	concept TipoIndicador
 	concept Contribuinte
 	concept InstituicaoFinanciadora
 	concept PublicoAlvo
 	
-	scalar status [
+	scalar status-indicador [
 		oneOf "Ativo", "Inativo", "Obsoleto"
 	]
 	
-	scalar finalidade [
+	scalar finalidade-indicador [
 		oneOf "Maximizar", "Minimizar", "Equilibrar"
 	]
 	
@@ -23,13 +22,48 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 		oneOf "Contexto", "Insumo", "Processo", "Resultado", "Impacto", "CicloDesenvolvimento"
 	]
 	
-	scalar property nome [
-		domain ProgramaCTI, Indicador, FonteDeDados, Contribuinte, InstituicaoFinanciadora, PublicoAlvo
+	scalar property nome-programa [
+		domain ProgramaCTI
 		range xsd:string
 	]
 	
-	scalar property descricao [
-		domain ProgramaCTI, Objetivo, Indicador
+	scalar property nome-indicador [
+		domain Indicador
+		range xsd:string
+	]
+	
+	scalar property nome-fonte-dados [
+		domain FonteDeDados
+		range xsd:string
+	]
+	
+	scalar property nome-contribuinte [
+		domain Contribuinte
+		range xsd:string
+	]
+	
+	scalar property nome-instituicao-financeira [
+		domain InstituicaoFinanciadora
+		range xsd:string
+	]
+	
+	scalar property nome-publico-alvo [
+		domain PublicoAlvo
+		range xsd:string
+	]
+	
+	scalar property descricao-programa [
+		domain ProgramaCTI
+		range xsd:string
+	]
+	
+	scalar property descricao-objetivo [
+		domain Objetivo
+		range xsd:string
+	]
+	
+	scalar property descricao-indicador [
+		domain Indicador
 		range xsd:string
 	]
 	
@@ -48,9 +82,19 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 		range xsd:string
 	]
 	
-	scalar property nome-tipo-indicador [
-		domain TipoIndicador
+	scalar property tipo [
+		domain Indicador
 		range tipo-indicador
+	]
+	
+	scalar property status [
+		domain Indicador
+		range status-indicador
+	]
+	
+	scalar property finalidade [
+		domain Indicador
+		range finalidade-indicador
 	]
 	
 	scalar property valorAtual [
@@ -68,38 +112,45 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 		range xsd:dateTime
 	]
 	
-	relation monitoradoPor [
+	relation entity monitoradoPor [
 		from Objetivo
 		to Indicador
+		forward monitorado
+		reverse monitora
 	]
 	
-	relation contribuiPara [
+	relation entity contribuiPara [
 		from Contribuinte
 		to Objetivo
+		forward contribui
+		reverse contribuido
 	]
 	
-	relation usaDadosDe [
+	relation entity usaDadosDe [
 		from Indicador
 		to FonteDeDados
+		forward usa
+		reverse fornece
 	]
 	
-	relation pertenceAoPrograma [
+	relation entity pertenceAoPrograma [
 		from Objetivo
 		to ProgramaCTI
+		forward pertence
+		reverse abrange
 	] 
 	
-	relation financiadoPor [
+	relation entity financiadoPor [
 		from ProgramaCTI
 		to InstituicaoFinanciadora
+		forward financiado
+		reverse financia
 	]
 	
-	relation beneficia [
+	relation entity beneficia [
 		from ProgramaCTI
 		to PublicoAlvo
-	]
-	
-	relation classificadoComo [
-		from Indicador
-		to TipoIndicador
+		forward favorece
+		reverse beneficiado
 	]
 }
