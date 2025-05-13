@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:oml="http://opencaesar.io/oml" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_VfOb8J0UEe-93eZU_6ntLQ" selectedViews="_fIZVoJ0UEe-93eZU_6ntLQ _DzD8YJ05Ee-93eZU_6ntLQ" version="15.1.0.202211301600">
+  <viewpoint:DAnalysis uid="_VfOb8J0UEe-93eZU_6ntLQ" selectedViews="_fIZVoJ0UEe-93eZU_6ntLQ _DzD8YJ05Ee-93eZU_6ntLQ" version="15.2.0.202303281325">
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/bundle.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/bundle.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/indicador.oml</semanticResources>
@@ -11,6 +11,9 @@
     <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/bundle.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/bundle.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/IndicadoresCTI.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

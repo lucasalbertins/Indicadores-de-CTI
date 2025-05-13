@@ -1,0 +1,105 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/IndicadoresCTI#> as IndicadoresCTI {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	concept ProgramaCTI
+	concept Objetivo
+	concept Indicador
+	concept FonteDeDados
+	concept TipoIndicador
+	concept Contribuinte
+	concept InstituicaoFinanciadora
+	concept PublicoAlvo
+	
+	scalar status [
+		oneOf "Ativo", "Inativo", "Obsoleto"
+	]
+	
+	scalar finalidade [
+		oneOf "Maximizar", "Minimizar", "Equilibrar"
+	]
+	
+	scalar tipo-indicador [
+		oneOf "Contexto", "Insumo", "Processo", "Resultado", "Impacto", "CicloDesenvolvimento"
+	]
+	
+	scalar property nome [
+		domain ProgramaCTI, Indicador, FonteDeDados, Contribuinte, InstituicaoFinanciadora, PublicoAlvo
+		range xsd:string
+	]
+	
+	scalar property descricao [
+		domain ProgramaCTI, Objetivo, Indicador
+		range xsd:string
+	]
+	
+	scalar property palavrasChave  [
+		domain ProgramaCTI
+		range xsd:string
+	]
+	
+	scalar property formula [
+		domain Indicador
+		range xsd:string
+	]
+	
+	scalar property periodicidade [
+		domain Indicador
+		range xsd:string
+	]
+	
+	scalar property nome-tipo-indicador [
+		domain TipoIndicador
+		range tipo-indicador
+	]
+	
+	scalar property valorAtual [
+		domain Indicador
+		range xsd:double
+	]
+	
+	scalar property meta [
+		domain Indicador
+		range xsd:double
+	]
+	
+	scalar property anoCriacao [
+		domain ProgramaCTI
+		range xsd:dateTime
+	]
+	
+	relation monitoradoPor [
+		from Objetivo
+		to Indicador
+	]
+	
+	relation contribuiPara [
+		from Contribuinte
+		to Objetivo
+	]
+	
+	relation usaDadosDe [
+		from Indicador
+		to FonteDeDados
+	]
+	
+	relation pertenceAoPrograma [
+		from Objetivo
+		to ProgramaCTI
+	] 
+	
+	relation financiadoPor [
+		from ProgramaCTI
+		to InstituicaoFinanciadora
+	]
+	
+	relation beneficia [
+		from ProgramaCTI
+		to PublicoAlvo
+	]
+	
+	relation classificadoComo [
+		from Indicador
+		to TipoIndicador
+	]
+}
