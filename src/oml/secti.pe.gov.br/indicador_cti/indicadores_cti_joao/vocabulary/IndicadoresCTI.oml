@@ -16,7 +16,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	]
 	
 	scalar finalidade [
-		oneOf "Maximizar", "Minimizar", "Equilibrar"
+		oneOf "Maximizar", "Minimizar"
 	]
 	
 	scalar tipo-indicador [
