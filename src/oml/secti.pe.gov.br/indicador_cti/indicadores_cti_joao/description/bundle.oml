@@ -1,2 +1,4 @@
 description bundle <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/bundle#> as ^bundle {
+	
+	includes <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/InstanciasIndicadoresCTI#>
 }
