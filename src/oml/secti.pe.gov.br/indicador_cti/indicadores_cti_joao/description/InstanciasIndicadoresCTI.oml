@@ -1,22 +1,23 @@
 description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/InstanciasIndicadoresCTI#> as InstanciasIndicadoresCTI {
-	
-	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/IndicadoresCTI#> as IndicadoresCTI
-	
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
 	instance CientistaArretado : IndicadoresCTI:ProgramaCTI [
-		IndicadoresCTI:nome-programa "Programa Cientista Arretado"
-		IndicadoresCTI:descricao-programa "Programa para fortalecimento das políticas públicas de CT&I em PE"
+		base:nome "Programa Cientista Arretado"
+		base:descricao "Programa para fortalecimento das políticas públicas de CT&I em PE"
 		IndicadoresCTI:anoCriacao "2024-01-01T08:00:00Z"^^xsd:dateTime
 		IndicadoresCTI:palavrasChave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos"
-	] 
-	
-	instance FortalecerPesquisa : IndicadoresCTI:Objetivo [
-		IndicadoresCTI:descricao-objetivo "Fortalecer a excelência em pesquisa científica no estado"
 	]
-	
+
+	instance FortalecerPesquisa : IndicadoresCTI:Objetivo [
+		base:descricao "Fortalecer a excelência em pesquisa científica no estado"
+	]
+
 	instance NumArtigosPublicados : IndicadoresCTI:Indicador [
-		IndicadoresCTI:nome-indicador "Número de artigos científicos publicados"
-		IndicadoresCTI:descricao-indicador "Quantidade de publicações oriundas dos projetos apoiados"
+		base:nome "Número de artigos científicos publicados"
+		base:descricao "Quantidade de publicações oriundas dos projetos apoiados"
 		IndicadoresCTI:tipo "Resultado"
 		IndicadoresCTI:formula "Contagem de publicações indexadas em bases internacionais por ano"
 		IndicadoresCTI:valorAtual "72.0"^^xsd:double
@@ -25,30 +26,30 @@ description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/descripti
 		IndicadoresCTI:status "Ativo"
 		IndicadoresCTI:finalidade "Maximizar"
 	]
-	
+
 	instance WoS : IndicadoresCTI:FonteDeDados [
-		IndicadoresCTI:nome-fonte-dados "Web of Science"
+		base:nome "Web of Science"
 	]
-	
+
 	instance SCOPUS : IndicadoresCTI:FonteDeDados [
-		IndicadoresCTI:nome-fonte-dados "SCOPUS"
+		base:nome "SCOPUS"
 	]
-	
+
 	relation instance monitoradoPor : IndicadoresCTI:monitoradoPor [
 		from FortalecerPesquisa
 		to NumArtigosPublicados
 	]
-	
+
 	relation instance pertenceAoPrograma : IndicadoresCTI:pertenceAoPrograma [
 		from FortalecerPesquisa
 		to CientistaArretado
 	]
-	
+
 	relation instance usaDadosDeWoS : IndicadoresCTI:usaDadosDe [
 		from NumArtigosPublicados
 		to WoS
 	]
-	
+
 	relation instance usaDadosDeScopus : IndicadoresCTI:usaDadosDe [
 		from NumArtigosPublicados
 		to SCOPUS

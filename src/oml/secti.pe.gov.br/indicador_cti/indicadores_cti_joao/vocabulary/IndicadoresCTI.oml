@@ -1,156 +1,139 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/IndicadoresCTI#> as IndicadoresCTI {
-	
+
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	concept ProgramaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel
 	
-	concept ProgramaCTI
-	concept Objetivo
-	concept Indicador
-	concept FonteDeDados
-	concept Contribuinte
-	concept InstituicaoFinanciadora
-	concept PublicoAlvo
-	
+	concept Objetivo < base:EntidadeDescritivel
+
+	concept Indicador < base:EntidadeNomeavel, base:EntidadeDescritivel
+
+	concept FonteDeDados < base:EntidadeNomeavel
+
+	concept Contribuinte < base:EntidadeNomeavel
+
+	concept InstituicaoFinanciadora < base:EntidadeNomeavel
+
+	concept PublicoAlvo < base:EntidadeNomeavel
+
 	scalar status-indicador [
 		oneOf "Ativo", "Inativo", "Obsoleto"
 	]
-	
+
 	scalar finalidade-indicador [
 		oneOf "Maximizar", "Minimizar", "Equilibrar"
 	]
-	
+
 	scalar tipo-indicador [
 		oneOf "Contexto", "Insumo", "Processo", "Resultado", "Impacto", "CicloDesenvolvimento"
 	]
-	
-	scalar property nome-programa [
+
+	scalar property palavrasChave [
 		domain ProgramaCTI
 		range xsd:string
+		functional
 	]
-	
-	scalar property nome-indicador [
-		domain Indicador
-		range xsd:string
-	]
-	
-	scalar property nome-fonte-dados [
-		domain FonteDeDados
-		range xsd:string
-	]
-	
-	scalar property nome-contribuinte [
-		domain Contribuinte
-		range xsd:string
-	]
-	
-	scalar property nome-instituicao-financeira [
-		domain InstituicaoFinanciadora
-		range xsd:string
-	]
-	
-	scalar property nome-publico-alvo [
-		domain PublicoAlvo
-		range xsd:string
-	]
-	
-	scalar property descricao-programa [
-		domain ProgramaCTI
-		range xsd:string
-	]
-	
-	scalar property descricao-objetivo [
-		domain Objetivo
-		range xsd:string
-	]
-	
-	scalar property descricao-indicador [
-		domain Indicador
-		range xsd:string
-	]
-	
-	scalar property palavrasChave  [
-		domain ProgramaCTI
-		range xsd:string
-	]
-	
+
 	scalar property formula [
 		domain Indicador
 		range xsd:string
+		functional
 	]
-	
+
 	scalar property periodicidade [
 		domain Indicador
 		range xsd:string
+		functional
 	]
-	
+
 	scalar property tipo [
 		domain Indicador
 		range tipo-indicador
+		functional
 	]
-	
+
 	scalar property status [
 		domain Indicador
 		range status-indicador
+		functional
 	]
-	
+
 	scalar property finalidade [
 		domain Indicador
 		range finalidade-indicador
+		functional
 	]
-	
+
 	scalar property valorAtual [
 		domain Indicador
 		range xsd:double
+		functional
 	]
-	
+
 	scalar property meta [
 		domain Indicador
 		range xsd:double
+		functional
 	]
-	
+
 	scalar property anoCriacao [
 		domain ProgramaCTI
 		range xsd:dateTime
+		functional
 	]
-	
+
 	relation entity monitoradoPor [
 		from Objetivo
 		to Indicador
 		forward monitorado
 		reverse monitora
+		symmetric
+		irreflexive
 	]
-	
+
 	relation entity contribuiPara [
 		from Contribuinte
 		to Objetivo
 		forward contribui
 		reverse contribuido
+		symmetric
+		irreflexive
 	]
-	
+
 	relation entity usaDadosDe [
 		from Indicador
 		to FonteDeDados
 		forward usa
 		reverse fornece
+		symmetric
+		irreflexive
 	]
-	
+
 	relation entity pertenceAoPrograma [
 		from Objetivo
 		to ProgramaCTI
 		forward pertence
 		reverse abrange
-	] 
-	
+		symmetric
+		irreflexive
+	]
+
 	relation entity financiadoPor [
 		from ProgramaCTI
 		to InstituicaoFinanciadora
 		forward financiado
 		reverse financia
+		symmetric
+		irreflexive
 	]
-	
+
 	relation entity beneficia [
 		from ProgramaCTI
 		to PublicoAlvo
 		forward favorece
 		reverse beneficiado
+		symmetric
+		irreflexive
 	]
 }
