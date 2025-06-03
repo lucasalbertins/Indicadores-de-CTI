@@ -1,0 +1,107 @@
+description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/description/InstanciasIndicadores#> as InstanciasIndicadores {
+	
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/ProgramasCTI#> as ProgramasCTI
+
+	instance CientistaArretado : IndicadoresCTI:ProgramaCTI [
+    	base:nome "Programa Cientista Arretado" 
+    	base:descricao "Programa para fortalecimento das políticas públicas de CT&I em PE" 
+    	base:AnoCriacao "2024-01-01T08:00:00Z"^^xsd:dateTime 
+    	base:palavrasChave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos" 
+    	inst:direcionadoPor inst:FortalecerPoliticasCTI 
+    	inst:financiadoPor inst:Secti
+	] 
+
+	instance inst:Secti : base:InstituicaoFinanciadora [
+    	base:Nomeavel "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco" 
+    	base:Descritivel "Órgão estadual responsável pela política de CT&I" 
+    	inst:pertenceA inst:GovernoEstadual
+	] 
+
+	instance inst:Finep : base:InstituicaoFinanciadora [
+   		base:Nomeavel "Financiadora de Estudos e Projetos" 
+    	base:Descritivel "Empresa pública federal de fomento à ciência, tecnologia e inovação" 
+    	inst:pertenceA inst:GovernoFederal
+	] 
+
+	instance inst:FortalecerPoliticasCTI : base:Missao [
+    	base:Descritivel "Fortalecer as políticas públicas de ciência, tecnologia e inovação do estado de Pernambuco" 
+    	base:Objetivo "Aprimorar o planejamento, monitoramento e avaliação de impacto das políticas e programas de CT&I locais."
+	] 
+
+	instance inst:ComunidadeCientifica : base:PublicoAlvo [
+    	base:Nomeavel "Comunidade Científica" 
+    	base:Descritivel "Pesquisadores, cientistas e instituições de pesquisa do estado" 
+    	inst:cobertoPor inst:CientistaArretado 
+    	inst:impactadoPor inst:FortalecerPoliticasCTI
+	] 
+
+	instance inst:EmpresasInovadoras : base:PublicoAlvo [
+    	base:Nomeavel "Empresas Inovadoras" 
+    	base:Descritivel "Empresas com foco em inovação e desenvolvimento tecnológico" 
+    	inst:cobertoPor inst:CientistaArretado 
+    	inst:impactadoPor inst:FortalecerPoliticasCTI
+	] 
+
+	instance inst:GovernoEstadual : base:NaturezaParceiros [
+    	base:Nomeavel "Governo Estadual" 
+    	base:Descritivel"Órgãos e entidades da administração pública estadual"
+	] 
+
+	instance inst:GovernoFederal : base:NaturezaParceiros [
+    	base:Nomeavel "Governo Federal" 
+    	base:Descritivel "Órgãos e entidades da administração pública federal"
+	] 
+
+	instance InvestimentoProgramaCientistaArretado : base:Investimento [
+    	base:valor "1000000.0"^^xsd:double 
+    	base:unidade "BRL" 
+   		base:Periodico "2024"^^xsd:gYear 
+    	base:referenteA inst:CientistaArretado
+	] 
+
+	relation instance financiadoPorSecti : base:FinanciadoPor [
+    	from CientistaArretado
+    	to Secti
+	] 
+
+	relation instance financiadoPorFinep : FinanciadoPor [
+    	from CientistaArretado
+    	to Finep
+	] 
+
+	relation instance direcionadoPorMissao : DirecionadoPor [
+    	from CientistaArretado
+    	to FortalecerPoliticasCTI
+	] 
+
+	relation instance pertenceGovernoEstadual : base:pertenceA [
+    	from Secti
+    	to GovernoEstadual
+	] 
+
+	relation instance pertenceGovernoFederal : base:pertenceA [
+    	from Finep
+    	to GovernoFederal
+	]	 
+
+	relation instance cobertoComunidadeCientifica : base:CobertoPor [
+    	from ComunidadeCientifica
+    	to CientistaArretado
+	] 
+
+	relation instance cobertoEmpresasInovadoras : base:CobertoPor [
+    	from EmpresasInovadoras
+    	to CientistaArretado
+	] 
+
+	relation instance impactadoComunidadeCientifica : base:ImpactadoPor [
+    	from ComunidadeCientifica
+    	to FortalecerPoliticasCTI
+	] 
+
+	relation instance inst:impactadoEmpresasInovadoras : base:ImpactadoPor [
+    	from inst:EmpresasInovadoras
+    	to inst:FortalecerPoliticasCTI
+	] 
+}
