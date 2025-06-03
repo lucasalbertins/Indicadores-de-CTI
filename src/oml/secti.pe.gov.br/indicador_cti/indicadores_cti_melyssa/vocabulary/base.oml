@@ -1,0 +1,29 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/base#> as base {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	aspect Nomeavel 
+	aspect Descritivel
+	aspect Associavel
+	aspect Periodico
+	
+	scalar property nome [
+		domain Nomeavel
+		range xsd:string
+	]
+	
+	scalar property descricao[
+		domain Descritivel
+		range xsd:string
+	]
+	
+	scalar property palavra-chave[
+		domain Associavel
+		range xsd:string
+	]
+	
+	scalar property periodicidade[
+		domain Periodico
+		range xsd:dateTime
+	]
+}
