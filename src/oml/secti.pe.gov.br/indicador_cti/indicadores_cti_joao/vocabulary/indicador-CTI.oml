@@ -1,0 +1,61 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/indicador-CTI#> as IndicadoresCTI {
+
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	concept Indicador < base:EntidadeNomeavel, base:EntidadeDescritivel
+
+	scalar status-indicador [
+		oneOf "Ativo", "Inativo", "Obsoleto"
+	]
+
+	scalar finalidade-indicador [
+		oneOf "Maximizar", "Minimizar", "Equilibrar"
+	]
+
+	scalar tipo-indicador [
+		oneOf "Contexto", "Insumo", "Processo", "Resultado", "Impacto", "CicloDesenvolvimento"
+	]
+
+	scalar property formula [
+		domain Indicador
+		range xsd:string
+		functional
+	]
+
+	scalar property periodicidade [
+		domain Indicador
+		range xsd:string
+		functional
+	]
+
+	scalar property tipo [
+		domain Indicador
+		range tipo-indicador
+		functional
+	]
+
+	scalar property status [
+		domain Indicador
+		range status-indicador
+		functional
+	]
+
+	scalar property finalidade [
+		domain Indicador
+		range finalidade-indicador
+		functional
+	]
+
+	scalar property valorAtual [
+		domain Indicador
+		range xsd:double
+		functional
+	]
+
+	scalar property meta [
+		domain Indicador
+		range xsd:double
+		functional
+	]
+}

@@ -4,6 +4,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	aspect EntidadeNomeavel 
 	aspect EntidadeDescritivel
+	aspect EntidadeTipavel
 	
 	scalar property nome [
 		domain EntidadeNomeavel
@@ -13,6 +14,12 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	scalar property descricao [
 		domain EntidadeDescritivel
+		range xsd:string
+		functional
+	]
+	
+	scalar property tipo [
+		domain EntidadeTipavel
 		range xsd:string
 		functional
 	]
