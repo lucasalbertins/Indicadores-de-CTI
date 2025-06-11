@@ -1,107 +1,158 @@
 description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/description/InstanciasIndicadores#> as InstanciasIndicadores {
 	
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/ProgramasCTI#> as ProgramasCTI
 
-	instance CientistaArretado : IndicadoresCTI:ProgramaCTI [
+	instance CientistaArretado : ProgramasCTI:ProgramaCTI [
     	base:nome "Programa Cientista Arretado" 
     	base:descricao "Programa para fortalecimento das políticas públicas de CT&I em PE" 
-    	base:AnoCriacao "2024-01-01T08:00:00Z"^^xsd:dateTime 
-    	base:palavrasChave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos" 
-    	inst:direcionadoPor inst:FortalecerPoliticasCTI 
-    	inst:financiadoPor inst:Secti
+    	base:periodicidade "2024-01-01T08:00:00Z"^^xsd:dateTime 
+    	base:palavra-chave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos" 
+	] 
+	
+	instance PBPG : ProgramasCTI:ProgramaCTI [
+        base:nome "Programa de Bolsas de Pós-Graduação de Pernambuco (PBPG)"
+        base:descricao "Programa de formação de recursos humanos qualificados para atender às demandas estratégicas de CT&I no estado de Pernambuco"
+        base:periodicidade "2025-01-01T08:00:00Z"^^xsd:dateTime
+        base:palavra-chave "Formação, Pós-Graduação, Pesquisa, Inovação, Interiorização"
+    ]
+
+    instance FACEPE : ProgramasCTI:InstituicaoFinanciadora [
+        base:nome "Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco"
+        base:descricao "Agência de fomento estadual voltada ao apoio à pesquisa científica, tecnológica e de inovação"
+    ]
+
+    instance MissaoPBPG : ProgramasCTI:Missao [
+        base:descricao "Formar recursos humanos qualificados, fortalecer a pós-graduação, interiorizar a ciência, desenvolver o ecossistema de CT&I e promover sustentabilidade financeira"
+    ]
+
+    instance AlunosPosGraduacao : ProgramasCTI:PublicoAlvo [
+        base:nome "Alunos de Pós-Graduação"
+        base:descricao "Estudantes de mestrado e doutorado vinculados a programas de pós-graduação do estado"
+    ]
+
+    instance InstituicoesPesquisa : ProgramasCTI:PublicoAlvo [
+        base:nome "Instituições de Ensino e Pesquisa"
+        base:descricao "Universidades, Institutos Federais e ICTs do estado"
+    ]
+
+    instance InvestimentoPBPG2025 : ProgramasCTI:Investimento [
+        base:valor "20000000.0"^^xsd:double
+        base:periodicidade "2025"^^xsd:dateTime
+    ]
+	
+	instance Secti : ProgramasCTI:InstituicaoFinanciadora [
+    	base:nome "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco" 
+    	base:descricao "Órgão estadual responsável pela política de CT&I" 
 	] 
 
-	instance inst:Secti : base:InstituicaoFinanciadora [
-    	base:Nomeavel "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco" 
-    	base:Descritivel "Órgão estadual responsável pela política de CT&I" 
-    	inst:pertenceA inst:GovernoEstadual
+	instance Finep : ProgramasCTI:InstituicaoFinanciadora [
+   		base:nome "Financiadora de Estudos e Projetos" 
+    	base:descricao "Empresa pública federal de fomento à ciência, tecnologia e inovação" 
 	] 
 
-	instance inst:Finep : base:InstituicaoFinanciadora [
-   		base:Nomeavel "Financiadora de Estudos e Projetos" 
-    	base:Descritivel "Empresa pública federal de fomento à ciência, tecnologia e inovação" 
-    	inst:pertenceA inst:GovernoFederal
+	instance FortalecerPoliticasCTI : ProgramasCTI:Missao [
+    	base:descricao "Fortalecer as políticas públicas de ciência, tecnologia e inovação do estado de Pernambuco"
 	] 
 
-	instance inst:FortalecerPoliticasCTI : base:Missao [
-    	base:Descritivel "Fortalecer as políticas públicas de ciência, tecnologia e inovação do estado de Pernambuco" 
-    	base:Objetivo "Aprimorar o planejamento, monitoramento e avaliação de impacto das políticas e programas de CT&I locais."
+	instance ComunidadeCientifica : ProgramasCTI:PublicoAlvo [
+    	base:nome "Comunidade Científica" 
+    	base:descricao "Pesquisadores, cientistas e instituições de pesquisa do estado" 
 	] 
 
-	instance inst:ComunidadeCientifica : base:PublicoAlvo [
-    	base:Nomeavel "Comunidade Científica" 
-    	base:Descritivel "Pesquisadores, cientistas e instituições de pesquisa do estado" 
-    	inst:cobertoPor inst:CientistaArretado 
-    	inst:impactadoPor inst:FortalecerPoliticasCTI
+	instance EmpresasInovadoras : ProgramasCTI:PublicoAlvo [
+    	base:nome "Empresas Inovadoras" 
+    	base:descricao "Empresas com foco em inovação e desenvolvimento tecnológico" 
 	] 
 
-	instance inst:EmpresasInovadoras : base:PublicoAlvo [
-    	base:Nomeavel "Empresas Inovadoras" 
-    	base:Descritivel "Empresas com foco em inovação e desenvolvimento tecnológico" 
-    	inst:cobertoPor inst:CientistaArretado 
-    	inst:impactadoPor inst:FortalecerPoliticasCTI
+	instance GovernoEstadual : ProgramasCTI:NaturezaParceiros [
+    	base:nome "Governo Estadual" 
+    	base:descricao"Órgãos e entidades da administração pública estadual"
 	] 
 
-	instance inst:GovernoEstadual : base:NaturezaParceiros [
-    	base:Nomeavel "Governo Estadual" 
-    	base:Descritivel"Órgãos e entidades da administração pública estadual"
+	instance GovernoFederal : ProgramasCTI:NaturezaParceiros [
+    	base:nome "Governo Federal" 
+    	base:descricao"Órgãos e entidades da administração pública federal"
 	] 
 
-	instance inst:GovernoFederal : base:NaturezaParceiros [
-    	base:Nomeavel "Governo Federal" 
-    	base:Descritivel "Órgãos e entidades da administração pública federal"
-	] 
-
-	instance InvestimentoProgramaCientistaArretado : base:Investimento [
+	instance InvestimentoProgramaCientistaArretado : ProgramasCTI:Investimento [
     	base:valor "1000000.0"^^xsd:double 
-    	base:unidade "BRL" 
-   		base:Periodico "2024"^^xsd:gYear 
-    	base:referenteA inst:CientistaArretado
+   		base:periodicidade "2024"^^xsd:dateTime
 	] 
 
-	relation instance financiadoPorSecti : base:FinanciadoPor [
+	relation instance financiadoPorSecti : ProgramasCTI:FinanciadoPor [
     	from CientistaArretado
     	to Secti
 	] 
 
-	relation instance financiadoPorFinep : FinanciadoPor [
+	relation instance financiadoPorFinep : ProgramasCTI:FinanciadoPor [
     	from CientistaArretado
     	to Finep
 	] 
+	
+	relation instance financiadoPorFACEPE : ProgramasCTI:FinanciadoPor [
+        from PBPG
+        to FACEPE
+    ]
 
-	relation instance direcionadoPorMissao : DirecionadoPor [
+    relation instance direcionadoPorMissaoPBPG : ProgramasCTI:DirecionadoPor [
+        from PBPG
+        to MissaoPBPG
+    ]
+
+    relation instance pertenceAFacepe : ProgramasCTI:pertenceA [
+        from FACEPE
+        to GovernoEstadual
+    ]
+
+    relation instance cobertoAlunosPos : ProgramasCTI:CobertoPor [
+        from AlunosPosGraduacao
+        to PBPG
+    ]
+
+    relation instance cobertoIEPs : ProgramasCTI:CobertoPor [
+        from InstituicoesPesquisa
+        to PBPG
+    ]
+
+    relation instance impactadoAlunosPos : ProgramasCTI:ImpactadoPor [
+        from AlunosPosGraduacao
+        to MissaoPBPG
+    ]
+
+    relation instance impactadoIEPs : ProgramasCTI:ImpactadoPor [
+        from InstituicoesPesquisa
+        to MissaoPBPG
+    ]
+
+	relation instance direcionadoPorMissao : ProgramasCTI:DirecionadoPor [
     	from CientistaArretado
     	to FortalecerPoliticasCTI
 	] 
 
-	relation instance pertenceGovernoEstadual : base:pertenceA [
+	relation instance pertenceGovernoEstadual : ProgramasCTI:pertenceA [
     	from Secti
     	to GovernoEstadual
 	] 
 
-	relation instance pertenceGovernoFederal : base:pertenceA [
-    	from Finep
-    	to GovernoFederal
-	]	 
-
-	relation instance cobertoComunidadeCientifica : base:CobertoPor [
+	relation instance cobertoComunidadeCientifica : ProgramasCTI:CobertoPor [
     	from ComunidadeCientifica
     	to CientistaArretado
 	] 
 
-	relation instance cobertoEmpresasInovadoras : base:CobertoPor [
+	relation instance cobertoEmpresasInovadoras : ProgramasCTI:CobertoPor [
     	from EmpresasInovadoras
     	to CientistaArretado
 	] 
 
-	relation instance impactadoComunidadeCientifica : base:ImpactadoPor [
+	relation instance impactadoComunidadeCientifica : ProgramasCTI:ImpactadoPor [
     	from ComunidadeCientifica
     	to FortalecerPoliticasCTI
 	] 
 
-	relation instance inst:impactadoEmpresasInovadoras : base:ImpactadoPor [
-    	from inst:EmpresasInovadoras
-    	to inst:FortalecerPoliticasCTI
+	relation instance impactadoEmpresasInovadoras : ProgramasCTI:ImpactadoPor [
+    	from EmpresasInovadoras
+    	to FortalecerPoliticasCTI
 	] 
 }
