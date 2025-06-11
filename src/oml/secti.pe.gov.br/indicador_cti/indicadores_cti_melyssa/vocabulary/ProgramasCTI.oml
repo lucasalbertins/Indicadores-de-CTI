@@ -3,11 +3,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabul
 	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/base#> as base
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	concept ProgramaCTI < base:Nomeavel, base:Descritivel
+	concept ProgramaCTI < base:Nomeavel, base:Descritivel, base:Associavel, base:Periodico
 	concept InstituicaoFinanciadora < base:Nomeavel, base:Descritivel
 	concept Missao < base:Descritivel
 	concept PublicoAlvo < base:Nomeavel, base:Descritivel
-	concept Investimento
+	concept Investimento 
 	concept NaturezaParceiros< base:Nomeavel, base:Descritivel
 
 	
@@ -66,5 +66,12 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabul
 		to Missao
 		forward impactado
 		reverse impacta
+	]
+	
+	relation entity ReferenteA [
+		from Investimento
+		to ProgramaCTI
+		forward seRefere
+		reverse referido
 	]
 }

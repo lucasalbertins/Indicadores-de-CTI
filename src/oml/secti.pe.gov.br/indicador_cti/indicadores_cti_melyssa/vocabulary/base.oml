@@ -6,6 +6,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabul
 	aspect Descritivel
 	aspect Associavel
 	aspect Periodico
+	aspect Economico
 	
 	scalar property nome [
 		domain Nomeavel
@@ -25,5 +26,10 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabul
 	scalar property periodicidade[
 		domain Periodico
 		range xsd:dateTime
+	]
+	
+	scalar property valor[
+		domain Economico
+		range xsd:double
 	]
 }
