@@ -1,2 +1,93 @@
 description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/instancias-programas-CTI#> as instancias-programas-CTI {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/programa-CTI#> as programa-CTI
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PBPG : programa-CTI:ProgramaCTI [
+		base:nome "Programa de Concessão de Bolsas de Pós-Graduação"
+		base:descricao "Programa de apoio à pós-graduação stricto sensu em Pernambuco"
+		programa-CTI:anoCriacao "2008-05-22T08:00:00Z"^^xsd:dateTime
+		programa-CTI:palavrasChave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos"
+	]
+	
+	instance CAPES : canvas:ParceiroChave [
+		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
+		base:tipo "Agência de Fomento"
+	]
+	
+	instance CriseOrcamentaria : canvas:FatorExterno [
+		base:nome "Crise Orçamentária"
+		canvas:tipoFator "Desafio"
+	]
+	
+	instance BolsistaMestrado : canvas:Entrada [
+		base:nome "Bolsista de Mestrado"
+		base:tipo "Recursos Humanos"
+	]
+	
+	instance LancamentoEdital : canvas:AtividadeChave [
+		base:nome "Lançamento de editais de fomento"
+		base:tipo "Fomento e Financiamento"
+	]
+	
+	instance RelatorioPesquisa : canvas:Saida [
+		base:nome "Relatórios de acompanhamento de teses/dissertações"
+	]
+	
+	instance FormarRH : canvas:Objetivo [
+		base:nome "Formação de Recursos Humanos de Alto Nível"
+		base:descricao "Formar mestres e doutores para atender às demandas do Estado de Pernambuco"
+	]
+	
+	instance AumentoConceito : canvas:Resultado [
+		base:nome "Melhora em relação ao aumento do conceito CAPES dos programas de pós-graduação"
+		base:tipo "Produção Científica e Tecnológica"
+	]
+	
+	instance AlunoPos : canvas:PublicoAlvo [
+		base:nome "Aluno de Pós-Graduação"
+		canvas:tipoPublico "Beneficiário Direto"
+	]
+	
+	relation instance possuiParceiros : programa-CTI:possuiParceiros [
+		from PBPG
+		to CAPES
+	]
+	
+	relation instance condicionadoPor : programa-CTI:condicionadoPor [
+		from PBPG
+		to CriseOrcamentaria
+	]
+	
+	relation instance recebeEntradas : programa-CTI:recebeEntradas [
+		from PBPG
+		to BolsistaMestrado
+	]
+	
+	relation instance executaAtividade : programa-CTI:executaAtividade [
+		from PBPG
+		to LancamentoEdital
+	]
+	
+	relation instance geraSaidas : programa-CTI:geraSaidas [
+		from PBPG
+		to RelatorioPesquisa
+	]
+	
+	relation instance buscaAtingir : programa-CTI:buscaAtingir [
+		from PBPG
+		to FormarRH
+	]
+	
+	relation instance produzResultados : programa-CTI:produzResultados [
+		from PBPG
+		to AumentoConceito
+	]
+	
+	relation instance direcionadoA : programa-CTI:direcionadoA [
+		from PBPG
+		to AlunoPos
+	]
 }

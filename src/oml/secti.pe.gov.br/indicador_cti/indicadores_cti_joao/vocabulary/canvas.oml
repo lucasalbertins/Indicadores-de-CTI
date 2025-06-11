@@ -34,11 +34,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	// Exemplos de nomes para um Resultado: Melhora do conceito CAPES dos programas, Criação e consolidação de startups tecnológicas...  
 	
 	scalar tipo-fator [
-		oneOf "Oportunidades", "Desafios"
+		oneOf "Oportunidade", "Desafio"
 	]
 	
 	scalar tipo-publico [
-		oneOf "Diretos", "Indiretos"
+		oneOf "Beneficiário Direto", "Beneficiário Indireto"
 	]
 	
 	scalar property tipoFator [
