@@ -38,7 +38,7 @@ description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/descri
     ]
 
     instance InvestimentoPBPG2025 : ProgramasCTI:Investimento [
-        base:valor "20000000.0"^^xsd:double
+        base:valor "2"^^xsd:double
         base:periodicidade "2025"^^xsd:dateTime
     ]
 	

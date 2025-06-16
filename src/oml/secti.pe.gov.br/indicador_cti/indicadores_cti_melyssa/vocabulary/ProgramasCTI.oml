@@ -7,7 +7,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabul
 	concept InstituicaoFinanciadora < base:Nomeavel, base:Descritivel
 	concept Missao < base:Descritivel
 	concept PublicoAlvo < base:Nomeavel, base:Descritivel
-	concept Investimento 
+	concept Investimento < base:Economico, base:Periodico
 	concept NaturezaParceiros< base:Nomeavel, base:Descritivel
 
 	
