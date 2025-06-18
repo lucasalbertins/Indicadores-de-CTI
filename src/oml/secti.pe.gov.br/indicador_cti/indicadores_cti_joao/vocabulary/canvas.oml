@@ -2,54 +2,35 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
 	
-	concept ParceiroChave < base:EntidadeNomeavel, base:EntidadeTipavel
-	// Exemplos de tipos de Parceiros-chave: Agências de Fomento, Governo, IEPs...
-	// Exemplos de nomes de Parceiros-chave: CAPES, FACEPE, etc...
+	concept AgenciaDeFomentoEFinanciamento < base:ParceiroChave
+	concept Governo < base:ParceiroChave
+	concept IEP < base:ParceiroChave
+	concept SetorPrivado < base:ParceiroChave
+	concept ComunidadeCientificaEEcossistemaDeCTI < base:ParceiroChave
+	concept Aluno < base:ParceiroChave
+	concept Sociedade < base:ParceiroChave
 	
-	concept FatorExterno < base:EntidadeNomeavel
-	// Em relação aos tipos de Fatores Externos: Oportunidades e Desafios.
-	// Exemplo de um nome de um Fator Externo: Existência de parcerias com governo e empresas interessadas.
+	concept Oportunidade < base:FatorExterno
+	concept Desafio < base:FatorExterno
 	
-	concept Entrada < base:EntidadeNomeavel, base:EntidadeTipavel
-	// Exemplos de tipos de Entradas: Recursos Financeiros e Recursos Humanos.
-	// Exemplos de nomes para uma Entrada: Verba da FACEPE, Bolsistas de Mestrado...
+	concept RecursoFinanceiro < base:Entrada
+	concept RecursoHumano < base:Entrada
+	concept InfraestruturaETecnologia < base:Entrada
+	concept ConhecimentoEArticulacao < base:Entrada
 	
-	concept AtividadeChave < base:EntidadeNomeavel, base:EntidadeTipavel
-	// Exemplos de tipos de Atividades-chave: Fomento e Financiamento, e Implementação e Gestão.
-	// Exemplos de nomes para uma Atividade-chave: Lançamento de um edital de fomento, disponibilização orçamentária...
+	concept FomentoEFinanciamento < base:AtividadeChave
+	concept ImplementacaoEGestao < base:AtividadeChave
+	concept ArticulacaoEApoio < base:AtividadeChave
 	
 	concept Saida < base:EntidadeNomeavel
-	// Exemplos de nomes para uma Saída: Editais de fomento publicados e divulgados, contratos firmados...
 	
 	concept Objetivo < base:EntidadeNomeavel, base:EntidadeDescritivel
-	// Exemplos de nomes para um Objetivo: Formação de Recursos Humanos de Alto Nível, Fortalecimento da pós-graduação...
-	// Exemplo de uma descrição para um Objetivo: Formar recursos humanos qualificados para atender às demandas do Estado de Pernambuco...
 	
-	concept PublicoAlvo < base:EntidadeNomeavel
-	// Em relação aos tipos de Fatores Externos: Diretos e Indiretos.
-	// Exemplo de nomes para um Público-alvo: Alunos de Pós-Graduação, Pesquisadores, Sociedade... 
+	concept FormacaoEQualificacaoDeRH < base:Resultado
+	concept ProducaoCientificaETecnologica < base:Resultado
+	concept InovacaoEDesenvolvimentoEconomicoSocial < base:Resultado
+	concept ImpactoRegionalEFortalecimentoDoEcossistemaDeCTI < base:Resultado
 	
-	concept Resultado < base:EntidadeNomeavel, base:EntidadeTipavel
-	// Exemplos de tipos de Resultados: Formação e Qualificação de Recursos Humanos, Produção Científica e Tecnológica...
-	// Exemplos de nomes para um Resultado: Melhora do conceito CAPES dos programas, Criação e consolidação de startups tecnológicas...  
-	
-	scalar tipo-fator [
-		oneOf "Oportunidade", "Desafio"
-	]
-	
-	scalar tipo-publico [
-		oneOf "Beneficiário Direto", "Beneficiário Indireto"
-	]
-	
-	scalar property tipoFator [
-		domain FatorExterno
-		range tipo-fator
-		functional
-	]
-	
-	scalar property tipoPublico [
-		domain PublicoAlvo
-		range tipo-publico
-		functional
-	]
+	concept BeneficiarioDireto < base:PublicoAlvo
+	concept BeneficiarioIndireto < base:PublicoAlvo
 }

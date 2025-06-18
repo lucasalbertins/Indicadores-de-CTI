@@ -20,7 +20,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	relation entity possuiParceiros [
 		from ProgramaCTI
-		to canvas:ParceiroChave
+		to base:ParceiroChave
 		forward parceiroDe
 		reverse parceriaDe
 		symmetric
@@ -29,7 +29,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 
 	relation entity condicionadoPor [
 		from ProgramaCTI
-		to canvas:FatorExterno
+		to base:FatorExterno
 		forward condicionado
 		reverse condiciona
 		symmetric
@@ -38,7 +38,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 
 	relation entity recebeEntradas [
 		from ProgramaCTI
-		to canvas:Entrada
+		to base:Entrada
 		forward recebe
 		reverse fornecePara
 		symmetric
@@ -47,7 +47,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	relation entity executaAtividade [
 		from ProgramaCTI
-		to canvas:AtividadeChave
+		to base:AtividadeChave
 		forward executa
 		reverse executadoPor
 		symmetric
@@ -74,7 +74,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 
 	relation entity produzResultados [
 		from ProgramaCTI
-		to canvas:Resultado
+		to base:Resultado
 		forward produz
 		reverse produzidoPor
 		symmetric
@@ -83,7 +83,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary
 	
 	relation entity direcionadoA [
 		from ProgramaCTI
-		to canvas:PublicoAlvo
+		to base:PublicoAlvo
 		forward direcionado
 		reverse alvoDe
 		symmetric

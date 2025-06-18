@@ -12,24 +12,20 @@ description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/descripti
 		programa-CTI:palavrasChave "Inovação, Pesquisa, Empreendedorismo, Formação de Talentos"
 	]
 	
-	instance CAPES : canvas:ParceiroChave [
-		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
-		base:tipo "Agência de Fomento"
+	instance CAPES : canvas:AgenciaDeFomentoEFinanciamento [
+		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES"
 	]
 	
-	instance CriseOrcamentaria : canvas:FatorExterno [
+	instance CriseOrcamentaria : canvas:Desafio [
 		base:nome "Crise Orçamentária"
-		canvas:tipoFator "Desafio"
 	]
 	
-	instance BolsistaMestrado : canvas:Entrada [
+	instance BolsistaMestrado : canvas:RecursoHumano [
 		base:nome "Bolsista de Mestrado"
-		base:tipo "Recursos Humanos"
 	]
 	
-	instance LancamentoEdital : canvas:AtividadeChave [
+	instance LancamentoEdital : canvas:FomentoEFinanciamento [
 		base:nome "Lançamento de editais de fomento"
-		base:tipo "Fomento e Financiamento"
 	]
 	
 	instance RelatorioPesquisa : canvas:Saida [
@@ -41,14 +37,12 @@ description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/descripti
 		base:descricao "Formar mestres e doutores para atender às demandas do Estado de Pernambuco"
 	]
 	
-	instance AumentoConceito : canvas:Resultado [
+	instance AumentoConceito : canvas:ProducaoCientificaETecnologica [
 		base:nome "Melhora em relação ao aumento do conceito CAPES dos programas de pós-graduação"
-		base:tipo "Produção Científica e Tecnológica"
 	]
 	
-	instance AlunoPos : canvas:PublicoAlvo [
+	instance AlunoPos : canvas:BeneficiarioDireto [
 		base:nome "Aluno de Pós-Graduação"
-		canvas:tipoPublico "Beneficiário Direto"
 	]
 	
 	relation instance possuiParceiros : programa-CTI:possuiParceiros [
