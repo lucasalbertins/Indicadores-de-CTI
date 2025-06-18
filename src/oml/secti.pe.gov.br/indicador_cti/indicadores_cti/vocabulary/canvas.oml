@@ -1,6 +1,6 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/canvas#> as canvas {
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/canvas#> as canvas {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base#> as base
 	
 	concept AgenciaDeFomentoEFinanciamento < base:ParceiroChave
 	concept Governo < base:ParceiroChave

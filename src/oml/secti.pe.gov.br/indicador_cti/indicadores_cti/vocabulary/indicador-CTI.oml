@@ -1,6 +1,6 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/indicador-CTI#> as IndicadoresCTI {
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/indicador-CTI#> as IndicadoresCTI {
 
-	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base#> as base
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
 	concept Indicador < base:EntidadeNomeavel, base:EntidadeDescritivel

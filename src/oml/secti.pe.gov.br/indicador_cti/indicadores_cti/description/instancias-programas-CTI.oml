@@ -1,8 +1,8 @@
-description <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/instancias-programas-CTI#> as instancias-programas-CTI {
+description <http://secti.pe.gov.br/indicador_cti/indicadores_cti/description/instancias-programas-CTI#> as instancias-programas-CTI {
 	
-	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
-	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/canvas#> as canvas
-	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/programa-CTI#> as programa-CTI
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/programa-CTI#> as programa-CTI
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	instance PBPG : programa-CTI:ProgramaCTI [

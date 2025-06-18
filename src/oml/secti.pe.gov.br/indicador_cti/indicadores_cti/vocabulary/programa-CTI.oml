@@ -1,7 +1,7 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/programa-CTI#> as programa-CTI {
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/programa-CTI#> as programa-CTI {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base
-	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/canvas#> as canvas
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/canvas#> as canvas
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	concept ProgramaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel

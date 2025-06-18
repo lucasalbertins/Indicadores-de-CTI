@@ -1,4 +1,4 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base#> as base {
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base#> as base {
 	
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	

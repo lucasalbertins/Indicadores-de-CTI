@@ -11,14 +11,14 @@
     <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/bundle.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/bundle.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/base.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/canvas.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/programa-CTI.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/vocabulary/indicador-CTI.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/instancias-programas-CTI.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti_joao/description/instancias-indicadores-CTI.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/description/bundle.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/description/instancias-indicadores-CTI.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/description/instancias-programas-CTI.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/base.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/bundle.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/canvas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/indicador-CTI.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/programa-CTI.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

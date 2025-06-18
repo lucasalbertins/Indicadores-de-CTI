@@ -1,0 +1,6 @@
+description bundle <http://secti.pe.gov.br/indicador_cti/indicadores_cti/description/bundle#> as ^bundle {
+	
+	includes <http://secti.pe.gov.br/indicador_cti/indicadores_cti/description/instancias-indicadores-CTI#>
+	includes <http://secti.pe.gov.br/indicador_cti/indicadores_cti/description/instancias-programas-CTI#>
+	uses <http://secti.pe.gov.br/indicador_cti/indicadores_cti/vocabulary/bundle#>
+}
