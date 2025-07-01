@@ -1,0 +1,63 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel
+	
+	relation possuiParceiros [
+		from programaCTI
+		to base:ParceiroChave
+		symmetric
+		irreflexive
+	]
+	
+	relation condicionadoPor [
+		from programaCTI
+		to base:FatorExterno
+		symmetric
+		irreflexive
+	]
+	
+	relation recebeEntradas [
+		from programaCTI
+		to base:Entrada
+		symmetric
+		irreflexive
+	]
+	
+	relation executa [
+		from programaCTI
+		to base:AtividadeChave
+		symmetric
+		irreflexive
+	]
+	
+	relation geraSaidas [
+		from programaCTI
+		to canvas:Saida
+		symmetric
+		irreflexive
+	]
+	
+	relation buscaAtingir [
+		from programaCTI
+		to canvas:Objetivo
+		symmetric
+		irreflexive
+	]
+	
+	relation produzResultados [
+		from programaCTI
+		to base:Resultado
+		symmetric
+		irreflexive
+	]
+	
+	relation direcionadoA [
+		from programaCTI
+		to base:PublicoAlvo
+		symmetric
+		irreflexive
+	]
+}

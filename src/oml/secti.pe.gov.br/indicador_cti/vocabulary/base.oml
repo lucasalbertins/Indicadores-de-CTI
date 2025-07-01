@@ -1,0 +1,26 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	aspect EntidadeNomeavel
+	aspect EntidadeDescritivel
+	
+	aspect ParceiroChave
+	aspect FatorExterno
+	aspect Entrada
+	aspect AtividadeChave
+	aspect Resultado
+	aspect PublicoAlvo
+	
+	scalar property nome [
+		domain EntidadeNomeavel
+		range xsd:string
+		functional
+	]
+	
+	scalar property descricao [
+		domain EntidadeDescritivel
+		range xsd:string
+		functional
+	]
+}

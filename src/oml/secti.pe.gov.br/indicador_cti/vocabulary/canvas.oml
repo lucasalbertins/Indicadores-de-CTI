@@ -1,0 +1,46 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	
+	concept AgenciaFomento < base:EntidadeNomeavel, base:ParceiroChave
+	concept AgenciaFinanciamento < base:EntidadeNomeavel, base:ParceiroChave
+	concept Governo < base:EntidadeNomeavel, base:ParceiroChave
+	concept IEP < base:EntidadeNomeavel, base:ParceiroChave
+	concept SetorPrivado < base:EntidadeNomeavel, base:ParceiroChave
+	concept ComunidadeCientifica < base:EntidadeNomeavel, base:ParceiroChave
+	concept EcossistemaCTI < base:EntidadeNomeavel, base:ParceiroChave
+	concept Aluno < base:EntidadeNomeavel, base:ParceiroChave
+	concept Sociedade < base:EntidadeNomeavel, base:ParceiroChave
+	
+	concept Oportunidade < base:EntidadeNomeavel, base:FatorExterno
+	concept Desafio < base:EntidadeNomeavel, base:FatorExterno
+	
+	concept RecursoFinanceiro < base:EntidadeNomeavel, base:Entrada
+	concept RecursoHumano < base:EntidadeNomeavel, base:Entrada
+	concept Infraestrutura < base:EntidadeNomeavel, base:Entrada
+	concept Tecnologia < base:EntidadeNomeavel, base:Entrada
+	concept Conhecimento < base:EntidadeNomeavel, base:Entrada
+	concept Articulacao < base:EntidadeNomeavel, base:Entrada
+	
+	concept Fomento < base:EntidadeNomeavel, base:AtividadeChave
+	concept Financiamento < base:EntidadeNomeavel, base:AtividadeChave
+	concept ImplementacaoPrograma < base:EntidadeNomeavel, base:AtividadeChave
+	concept GestaoPrograma < base:EntidadeNomeavel, base:AtividadeChave
+	concept ArticulacaoEcossistema < base:EntidadeNomeavel, base:AtividadeChave
+	concept ApoioEcossistema < base:EntidadeNomeavel, base:AtividadeChave
+	
+	concept Saida < base:EntidadeNomeavel
+	concept Objetivo < base:EntidadeNomeavel, base:EntidadeDescritivel
+	
+	concept FormacaoRH < base:EntidadeNomeavel, base:Resultado
+	concept QualificacaoRH < base:EntidadeNomeavel, base:Resultado
+	concept ProducaoCientifica < base:EntidadeNomeavel, base:Resultado
+	concept ProducaoTecnologica < base:EntidadeNomeavel, base:Resultado
+	concept Inovacao < base:EntidadeNomeavel, base:Resultado
+	concept DesenvolvimentoEconomico-Social < base:EntidadeNomeavel, base:Resultado
+	concept ImpactoRegional < base:EntidadeNomeavel, base:Resultado
+	concept FortalecimentoEcossistemaCTI < base:EntidadeNomeavel, base:Resultado
+	
+	concept BeneficiarioDireto < base:EntidadeNomeavel, base:PublicoAlvo
+	concept BeneficiarioIndireto < base:EntidadeNomeavel, base:PublicoAlvo
+}

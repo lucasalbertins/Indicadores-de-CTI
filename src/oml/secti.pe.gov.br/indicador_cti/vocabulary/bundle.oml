@@ -1,3 +1,7 @@
 vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^bundle {
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#> 
+	
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#>
 }

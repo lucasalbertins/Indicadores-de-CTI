@@ -1,0 +1,53 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas#> as programas {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PBPG : programa:programaCTI [
+		base:nome "Programa de Bolsas de Pós-Graduação"
+		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas 
+de estudo para alunos de pós-graduação"
+		programa:possuiParceiros CAPES
+		programa:condicionadoPor CriseOrcamentaria
+		programa:recebeEntradas TimeFACEPE
+		programa:executa PlanejamentoEdital
+		programa:geraSaidas RelatorioPesquisa
+		programa:buscaAtingir FormacaoRH
+		programa:produzResultados AumentoPublicacoes
+		programa:direcionadoA AlunoPos
+	]
+	
+	instance CAPES : canvas:AgenciaFomento [
+		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
+	]
+	
+	instance CriseOrcamentaria : canvas:Desafio [
+		base:nome "Crise Orçamentária"
+	]
+	
+	instance TimeFACEPE : canvas:RecursoHumano [
+		base:nome "Time da FACEPE"
+	]
+	
+	instance PlanejamentoEdital : canvas:Fomento [
+		base:nome "Planejamento do edital do PBPG"
+	]
+	
+	instance RelatorioPesquisa : canvas:Saida [
+		base:nome "Entrega do relatório completo de pesquisa do projeto"
+	]
+	
+	instance FormacaoRH : canvas:Objetivo [
+		base:nome "Formação de recursos humanos de alto nível"
+		base:descricao "Formar recursos humanos qualificados para atender às demandas do Estado de Pernambuco"
+	]
+	
+	instance AumentoPublicacoes : canvas:ProducaoCientifica [
+		base:nome "Aumento quantitativo da produção científica"
+	]
+	
+	instance AlunoPos : canvas:BeneficiarioDireto [
+		base:nome "Aluno de pós-graduação"
+	]
+}
