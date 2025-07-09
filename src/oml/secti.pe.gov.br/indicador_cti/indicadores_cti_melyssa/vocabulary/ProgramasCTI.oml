@@ -1,0 +1,77 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/ProgramasCTI#> as ProgramasCTI {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/base#> as base
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	concept ProgramaCTI < base:Nomeavel, base:Descritivel, base:Associavel, base:Periodico
+	concept InstituicaoFinanciadora < base:Nomeavel, base:Descritivel
+	concept Missao < base:Descritivel
+	concept PublicoAlvo < base:Nomeavel, base:Descritivel
+	concept Investimento < base:Economico, base:Periodico
+	concept NaturezaParceiros< base:Nomeavel, base:Descritivel
+
+	
+	scalar status-indicador [
+		oneOf "Ativo", "Inativo", "Obsoleto"
+	]
+	
+	scalar finalidade-indicador [
+		oneOf "Maximizar", "Minimizar", "Equilibrar"
+	]
+	
+	scalar tipo-indicador [
+		oneOf "Contexto", "Insumo", "Processo", "Resultado", "Impacto", "CicloDesenvolvimento", "Relevancia", "Capacitacao", "Cobertura"
+	]
+	
+	scalar property AnoCriacao [
+		domain ProgramaCTI
+		range xsd:dateTime
+	]
+	
+	scalar property Objetivo[
+		domain Missao
+		range xsd:string
+	]
+	
+	relation entity FinanciadoPor [
+		from ProgramaCTI
+		to InstituicaoFinanciadora
+		forward financiado
+		reverse financia
+	]
+	
+	
+	relation entity DirecionadoPor [
+		from ProgramaCTI
+		to Missao
+		forward direcionado
+		reverse direciona
+	]
+	
+	relation entity pertenceA [
+		from InstituicaoFinanciadora
+		to NaturezaParceiros
+		forward pertence
+	]
+	
+	relation entity CobertoPor[
+		from PublicoAlvo
+		to ProgramaCTI
+		forward coberto
+		reverse cobre
+	]
+	
+	relation entity ImpactadoPor[
+		from PublicoAlvo
+		to Missao
+		forward impactado
+		reverse impacta
+	]
+	
+	relation entity ReferenteA [
+		from Investimento
+		to ProgramaCTI
+		forward seRefere
+		reverse referido
+	]
+}
