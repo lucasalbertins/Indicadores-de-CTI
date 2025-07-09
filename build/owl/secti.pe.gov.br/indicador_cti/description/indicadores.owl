@@ -7,10 +7,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:indicador="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#"
      xmlns:indicadores="http://secti.pe.gov.br/indicador_cti/description/indicadores#">
     <owl:Ontology rdf:about="http://secti.pe.gov.br/indicador_cti/description/indicadores">
-        <owl:imports rdf:resource="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador"/>
         <oml:namespace rdf:resource="http://secti.pe.gov.br/indicador_cti/description/indicadores#"/>
         <oml:prefix>indicadores</oml:prefix>
         <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
@@ -21,7 +19,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
+    // Annotation properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -30,175 +28,24 @@
     
 
 
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#contribuiPara -->
+    <!-- http://opencaesar.io/oml#namespace -->
 
 
-    <owl:ObjectProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#contribuiPara"/>
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
     
 
 
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#monitoradoPor -->
+    <!-- http://opencaesar.io/oml#prefix -->
 
 
-    <owl:ObjectProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#monitoradoPor"/>
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://opencaesar.io/oml#type -->
 
 
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#descricao -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#descricao"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#discriminacao -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#discriminacao"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#fim -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#fim"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#formula -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#formula"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#identificador -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#identificador"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#nome -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#nome"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#status -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#status"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#termo -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#termo"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valor -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valor"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAlvo -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAlvo"/>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAtual -->
-
-
-    <owl:DatatypeProperty rdf:about="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#valorAtual"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen -->
-
-
-    <owl:NamedIndividual rdf:about="http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen">
-        <rdf:type rdf:resource="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Objetivo"/>
-        <indicador:monitoradoPor rdf:resource="http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem"/>
-        <indicador:descricao>Alcançar a igualdade de gênero</indicador:descricao>
-        <indicador:identificador>OBJ-03</indicador:identificador>
-        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem -->
-
-
-    <owl:NamedIndividual rdf:about="http://secti.pe.gov.br/indicador_cti/description/indicadores#propPesqFem">
-        <rdf:type rdf:resource="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Indicador"/>
-        <indicador:fim>EQUILIBRAR</indicador:fim>
-        <indicador:formula>nPesFm/(nPesMasc+nPesFm)</indicador:formula>
-        <indicador:nome>Proporção de pesquisadoras em tempo integral</indicador:nome>
-        <indicador:status>Em avaliação</indicador:status>
-        <indicador:valorAlvo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</indicador:valorAlvo>
-        <indicador:valorAtual rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3</indicador:valorAtual>
-        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesFem -->
-
-
-    <owl:NamedIndividual rdf:about="http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesFem">
-        <rdf:type rdf:resource="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao"/>
-        <indicador:contribuiPara rdf:resource="http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen"/>
-        <indicador:discriminacao>Profissionais de P&amp;D do sexo feminino</indicador:discriminacao>
-        <indicador:termo>nPesFm</indicador:termo>
-        <indicador:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.0</indicador:valor>
-        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesMasc -->
-
-
-    <owl:NamedIndividual rdf:about="http://secti.pe.gov.br/indicador_cti/description/indicadores#quantPesMasc">
-        <rdf:type rdf:resource="http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#Contribuicao"/>
-        <indicador:contribuiPara rdf:resource="http://secti.pe.gov.br/indicador_cti/description/indicadores#equidadeGen"/>
-        <indicador:discriminacao>Profissionais de P&amp;D do sexo masculino</indicador:discriminacao>
-        <indicador:termo>nPesMasc</indicador:termo>
-        <indicador:valor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.0</indicador:valor>
-        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
-    </owl:NamedIndividual>
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
 </rdf:RDF>
 
 

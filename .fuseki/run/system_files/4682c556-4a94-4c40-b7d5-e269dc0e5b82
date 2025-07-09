@@ -43,25 +43,25 @@ ja:DatasetTxnMem  rdfs:subClassOf  ja:RDFDataset .
 
 :service1  rdf:type      fuseki:Service ;
         fuseki:dataset   :dataset ;
-        fuseki:endpoint  [ fuseki:name       "update" ;
-                           fuseki:operation  fuseki:update
-                         ] ;
         fuseki:endpoint  [ fuseki:operation  fuseki:query ] ;
         fuseki:endpoint  [ fuseki:name       "get" ;
                            fuseki:operation  fuseki:gsp-r
                          ] ;
+        fuseki:endpoint  [ fuseki:name       "update" ;
+                           fuseki:operation  fuseki:update
+                         ] ;
+        fuseki:endpoint  [ fuseki:operation  fuseki:gsp-rw ] ;
         fuseki:endpoint  [ fuseki:operation  fuseki:update ] ;
-        fuseki:endpoint  [ fuseki:name       "query" ;
-                           fuseki:operation  fuseki:query
+        fuseki:endpoint  [ fuseki:name       "data" ;
+                           fuseki:operation  fuseki:gsp-rw
                          ] ;
         fuseki:endpoint  [ fuseki:name       "sparql" ;
                            fuseki:operation  fuseki:query
                          ] ;
-        fuseki:endpoint  [ fuseki:operation  fuseki:gsp-rw ] ;
-        fuseki:endpoint  [ fuseki:name       "data" ;
-                           fuseki:operation  fuseki:gsp-rw
+        fuseki:endpoint  [ fuseki:name       "query" ;
+                           fuseki:operation  fuseki:query
                          ] ;
-        fuseki:name      "indicadoresCTI" .
+        fuseki:name      "indicadores-CTI" .
 
 ja:MemoryDataset  rdfs:subClassOf  ja:RDFDataset .
 
