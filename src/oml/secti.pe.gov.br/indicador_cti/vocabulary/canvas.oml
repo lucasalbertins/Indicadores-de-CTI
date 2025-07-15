@@ -3,8 +3,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	
 	concept ParceiroChave < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept FatorOportunidade < base:EntidadeNomeavel, base:EntidadeDescritivel, base:FatorExterno
-	concept FatorDesafio < base:EntidadeNomeavel, base:EntidadeDescritivel, base:FatorExterno
+	concept FatorExternoOportunidade < base:EntidadeNomeavel, base:EntidadeDescritivel, base:FatorExterno
+	concept FatorExternoDesafio < base:EntidadeNomeavel, base:EntidadeDescritivel, base:FatorExterno
 	concept Entrada < base:EntidadeNomeavel, base:EntidadeDescritivel
 	concept AtividadeChave < base:EntidadeNomeavel, base:EntidadeDescritivel
 	concept Saida < base:EntidadeNomeavel, base:EntidadeDescritivel
@@ -13,6 +13,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 	concept ResultadoCurtoPrazo < base:EntidadeNomeavel, base:EntidadeDescritivel, base:Resultado
 	concept ResultadoMedioPrazo < base:EntidadeNomeavel, base:EntidadeDescritivel, base:Resultado
 	concept ResultadoLongoPrazo < base:EntidadeNomeavel, base:EntidadeDescritivel, base:Resultado
-	concept PublicoDireto < base:EntidadeNomeavel, base:EntidadeDescritivel, base:PublicoAlvo
-	concept PublicoIndireto < base:EntidadeNomeavel, base:EntidadeDescritivel, base:PublicoAlvo
+	concept PublicoAlvoDireto < base:EntidadeNomeavel, base:EntidadeDescritivel, base:PublicoAlvo
+	concept PublicoAlvoIndireto < base:EntidadeNomeavel, base:EntidadeDescritivel, base:PublicoAlvo
 }
