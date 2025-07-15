@@ -1,3 +1,0 @@
-vocabulary bundle <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/bundle#> as ^bundle {
-	includes <http://secti.pe.gov.br/indicador_cti/indicadores_cti_melyssa/vocabulary/ProgramasCTI#>
-}
