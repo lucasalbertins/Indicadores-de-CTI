@@ -8,46 +8,429 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas#> as pro
 		base:nome "Programa de Bolsas de Pós-Graduação"
 		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas 
 de estudo para alunos de pós-graduação"
-		programa:possuiParceiros CAPES
-		programa:condicionadoPor CriseOrcamentaria
-		programa:recebeEntradas TimeFACEPE
-		programa:executa PlanejamentoEdital
-		programa:geraSaidas RelatorioPesquisa
-		programa:buscaAtingir FormacaoRH
-		programa:produzResultados AumentoPublicacoes
-		programa:direcionadoA AlunoPos
+		programa:possuiParceiros CAPES, SECTI-PE, UFRPE
+		programa:condicionadoPor FE1, FE2, FE3, FE4, FE5, FE6, FE7, FE8
+		programa:recebeEntradas EN1, EN2, EN3, EN4, EN5, EN6, EN7
+		programa:executa AC1, AC2, AC3, AC4, AC5, AC6, AC7
+		programa:geraSaidas OUT1, OUT2, OUT3, OUT4, OUT5, OUT6, OUT7
+		programa:buscaAtingir OBJ1, OBJ2, OBJ3, OBJ4, OBJ5, OBJ6
+		programa:produzResultados RES1, RES2, RES3, RES4, RES5, RES6, RES7, RES8, RES9, RES10, RES11, RES12, RES13, RES14
+		programa:direcionadoA PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8
 	]
 	
-	instance CAPES : canvas:AgenciaFomento [
+	instance RedesDeInovacao : programa:programaCTI [
+		base:nome "Programa: Redes de Inovação"
+		base:descricao "Foi criado para fomentar a criação e o fortalecimento de redes de colaboração entre diferentes instituições e 
+setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
+		programa:possuiParceiros Inovar-PE, AGE, Adepe
+		programa:condicionadoPor FE2, FE9, FE10, FE11, FE12, FE3, FE13, FE14, FE15
+		programa:recebeEntradas EN2, EN3, EN5, EN6, EN7, EN8
+		programa:executa AC1, AC3, AC4, AC6, AC7
+		programa:geraSaidas OUT1, OUT2, OUT3, OUT4, OUT6, OUT7
+		programa:buscaAtingir OBJ7, OBJ8, OBJ9, OBJ10, OBJ11, OBJ12, OBJ13, OBJ14, OBJ15
+		programa:produzResultados RES1, RES2, RES3, RES4, RES5, RES6, RES7, RES8, RES9, RES10, RES11, RES12, RES13, RES14
+		programa:direcionadoA PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8
+	]
+	
+	instance CAPES : canvas:ParceiroChave [
 		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
+		base:descricao "Agência nacional de fomento"
 	]
 	
-	instance CriseOrcamentaria : canvas:Desafio [
-		base:nome "Crise Orçamentária"
+	instance SECTI-PE : canvas:ParceiroChave [
+		base:nome "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco"
+		base:descricao "Organização pública"
 	]
 	
-	instance TimeFACEPE : canvas:RecursoHumano [
-		base:nome "Time da FACEPE"
+	instance UFRPE : canvas:ParceiroChave [
+		base:nome "Universidade Federal Rural de Pernambuco"
+		base:descricao "ICT"
 	]
 	
-	instance PlanejamentoEdital : canvas:Fomento [
-		base:nome "Planejamento do edital do PBPG"
+	instance Inovar-PE : canvas:ParceiroChave [
+		base:nome "Fundo de Inovação do Estado de Pernambuco"
+		base:descricao "Organização pública"
 	]
 	
-	instance RelatorioPesquisa : canvas:Saida [
-		base:nome "Entrega do relatório completo de pesquisa do projeto"
+	instance AGE : canvas:ParceiroChave [
+		base:nome "Agência de Empreendedorismo de Pernambuco"
+		base:descricao "Organização pública"
 	]
 	
-	instance FormacaoRH : canvas:Objetivo [
-		base:nome "Formação de recursos humanos de alto nível"
-		base:descricao "Formar recursos humanos qualificados para atender às demandas do Estado de Pernambuco"
+	instance Adepe : canvas:ParceiroChave [
+		base:nome "Agência de Desenvolvimento Econômico de Pernambuco"
+		base:descricao "Organização pública"
 	]
 	
-	instance AumentoPublicacoes : canvas:ProducaoCientifica [
-		base:nome "Aumento quantitativo da produção científica"
+	instance FE1 : canvas:FatorOportunidade [
+		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
+		base:descricao "lorem ipsum"
 	]
 	
-	instance AlunoPos : canvas:BeneficiarioDireto [
-		base:nome "Aluno de pós-graduação"
+	instance FE2 : canvas:FatorOportunidade [
+		base:nome "Reconhecimento da importância das atividades de CT&I para a sociedade"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE9 : canvas:FatorOportunidade [
+		base:nome "Aprimoramento do arcabouço legal de inovação"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE10 : canvas:FatorOportunidade [
+		base:nome "Potencial nº de articuladores de CT&I vinculados a ICTs"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE11 : canvas:FatorOportunidade [
+		base:nome "Crescimento do nº de startups e ambientes de inovação no Estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE12 : canvas:FatorOportunidade [
+		base:nome "Projeção de internacionalização das redes"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE3 : canvas:FatorDesafio [
+		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE4 : canvas:FatorDesafio [
+		base:nome "Mercado de trabalho aquecido"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE5 : canvas:FatorDesafio [
+		base:nome "Baixa atratividade das bolsas"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE6 : canvas:FatorDesafio [
+		base:nome "Estrutura administrativa de suporte insuficiente"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE7 : canvas:FatorDesafio [
+		base:nome "Evasão dos estudantes"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE8 : canvas:FatorDesafio [
+		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE13 : canvas:FatorDesafio [
+		base:nome "Envolvimento tímido do setor empresarial"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE14 : canvas:FatorDesafio [
+		base:nome "Prazo insuficiente para tornar as redes autossustentáveis"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance FE15 : canvas:FatorDesafio [
+		base:nome "Restrições apresentadas pelo arcabouço legal"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN1 : canvas:Entrada [
+		base:nome "Orçamento estadual - LOA FACEPE"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN8 : canvas:Entrada [
+		base:nome "Orçamento estadual - Fundo Inovar-PE"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN2 : canvas:Entrada [
+		base:nome "Orçamento dos parceiros co-financiadores"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN3 : canvas:Entrada [
+		base:nome "Câmaras da FACEPE"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN4 : canvas:Entrada [
+		base:nome "Avaliadores ad-hoc das propostas"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN5 : canvas:Entrada [
+		base:nome "Recursos humanos de suporte"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN6 : canvas:Entrada [
+		base:nome "Sistema de informação"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance EN7 : canvas:Entrada [
+		base:nome "Estratégia estadual de CT&I"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC1 : canvas:AtividadeChave [
+		base:nome "Gestão do ciclo de vida do Edital"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC2 : canvas:AtividadeChave [
+		base:nome "Gestão das bolsas"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC3 : canvas:AtividadeChave [
+		base:nome "Acompanhamento técnico"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC4 : canvas:AtividadeChave [
+		base:nome "Manutenção evolutiva e corretiva do AgilFAP"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC5 : canvas:AtividadeChave [
+		base:nome "Gestão de parcerias com entes públicos e privados"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC6 : canvas:AtividadeChave [
+		base:nome "Monitoramento dos indicadores de desempenho e impacto [incluindo egressos]"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance AC7 : canvas:AtividadeChave [
+		base:nome "Avaliação do programa"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT1 : canvas:Saida [
+		base:nome "Edital gerenciado com sucesso"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT2 : canvas:Saida [
+		base:nome "Bolsas implementadas e pagas de acordo com o planejamento"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT3 : canvas:Saida [
+		base:nome "Relatórios parciais e final de acompanhamento dos bolsistas"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT4 : canvas:Saida [
+		base:nome "AgilFAP em operação plena para atendimento ao programa"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT5 : canvas:Saida [
+		base:nome "Parcerias formalizadas por meio de instrumentos legais"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT6 : canvas:Saida [
+		base:nome "Infográfico atualizado de Indicadores de desempenho e impacto"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OUT7 : canvas:Saida [
+		base:nome "Plano de Avaliação do programa executado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ1 : canvas:ObjetivoGeral [
+		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação de modo a contribuir com o 
+desenvolvimento sustentável do estado de Pernambuco"
+		base:descricao "Objetivo geral do PBPG"
+	]
+	
+	instance OBJ7 : canvas:ObjetivoGeral [
+		base:nome "Incentivar a criação e o fortalecimento de redes autossustentáveis que promovam e articulem atividades de inovação 
+e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do Estado, visando o fortalecimento de seus ecossistemas"
+		base:descricao "Objetivo geral do Redes de Inovação"
+	]
+	
+	instance OBJ2 : canvas:ObjetivoEspecifico [
+		base:nome "Consolidar programas de pós-graduação (PPG) novos e emergentes"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ3 : canvas:ObjetivoEspecifico [
+		base:nome "Manter a excelência de PPG consolidados"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ4 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o desenvolvimento de dissertações e teses em áreas estratégicas e prioritárias para o estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a formação de mestres e doutores no interior do estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ6 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ8 : canvas:ObjetivoEspecifico [
+		base:nome "Promover atividades de CT&I de impacto, aderentes às RDs do Estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ9 : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar cooperações de CT&I e parcerias entre agentes do ecossistema de inovação, em redes autossustentáveis"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ10 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular ações de inovação aberta"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ11 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar a realização de eventos de CT&I"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ12 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o desenvolvimento de projetos de CT&I"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ13 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a transferência tecnológica"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ14 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a geração de novos negócios inovadores"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance OBJ15 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar articuladores que conectem o ecossistema às demais políticas de CT&I do Estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES1 : canvas:ResultadoCurtoPrazo [
+		base:nome "Titulação dos estudantes bolsistas PBPG como mestres e doutores"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES2 : canvas:ResultadoCurtoPrazo [
+		base:nome "Produção científica publicada em eventos e periódicos qualificados e de alto impacto"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES3 : canvas:ResultadoCurtoPrazo [
+		base:nome "Proteção intelectual do conhecimento gerado por meio de patentes depositadas e programas de software registrados"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES4 : canvas:ResultadoCurtoPrazo [
+		base:nome "Estoque de conhecimento em áreas estratégicas incrementado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES5 : canvas:ResultadoCurtoPrazo [
+		base:nome "Intercâmbio científico nacional e internacional"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES6 : canvas:ResultadoMedioPrazo [
+		base:nome "Absorção e fixação de mestres e doutores pelo ecossistema de CT&I do estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES7 : canvas:ResultadoMedioPrazo [
+		base:nome "Fixação de mestres e doutores no interior do estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES8 : canvas:ResultadoMedioPrazo [
+		base:nome "Aumento do conceito CAPES dos PPG novos e emergentes"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES9 : canvas:ResultadoMedioPrazo [
+		base:nome "Startups de base científica e tecnológica e Spin-offs acadêmicos"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES10 : canvas:ResultadoMedioPrazo [
+		base:nome "Geração de inovações para Indústria, Governo e Sociedade"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES11 : canvas:ResultadoLongoPrazo [
+		base:nome "Evolução dos índices econômicos, sociais e ambientais do estado"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES12 : canvas:ResultadoLongoPrazo [
+		base:nome "Fortalecimento das cadeias produtivas de setores estratégicos para Pernambuco"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES13 : canvas:ResultadoLongoPrazo [
+		base:nome "Licenciamento da propriedade intelectual pela Indústria e Governo"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance RES14 : canvas:ResultadoLongoPrazo [
+		base:nome "Empregabilidade dos egressos de alto nível salarial"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA1 : canvas:PublicoDireto [
+		base:nome "Estudantes de pós-graduação stricto sensu"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA2 : canvas:PublicoDireto [
+		base:nome "Professores orientadores"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA3 : canvas:PublicoDireto [
+		base:nome "Programas de pós-graduação (PPG) de Pernambuco"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA4 : canvas:PublicoIndireto [
+		base:nome "Governo"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA5 : canvas:PublicoIndireto [
+		base:nome "Indústria"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA6 : canvas:PublicoIndireto [
+		base:nome "Sociedade"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA7 : canvas:PublicoIndireto [
+		base:nome "Ecossistema de CT&I"
+		base:descricao "lorem ipsum"
+	]
+	
+	instance PA8 : canvas:PublicoIndireto [
+		base:nome "ICTs"
+		base:descricao "lorem ipsum"
 	]
 }

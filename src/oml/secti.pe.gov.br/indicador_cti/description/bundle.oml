@@ -2,4 +2,5 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	
 	includes <http://secti.pe.gov.br/indicador_cti/description/indicadores#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas#>
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#>
 }

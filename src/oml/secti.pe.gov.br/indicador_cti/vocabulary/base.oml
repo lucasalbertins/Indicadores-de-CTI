@@ -5,10 +5,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	aspect EntidadeNomeavel
 	aspect EntidadeDescritivel
 	
-	aspect ParceiroChave
 	aspect FatorExterno
-	aspect Entrada
-	aspect AtividadeChave
+	aspect Objetivo
 	aspect Resultado
 	aspect PublicoAlvo
 	

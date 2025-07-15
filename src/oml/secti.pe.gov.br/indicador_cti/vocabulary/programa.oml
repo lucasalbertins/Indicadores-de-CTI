@@ -7,57 +7,65 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	
 	relation possuiParceiros [
 		from programaCTI
-		to base:ParceiroChave
-		symmetric
+		to canvas:ParceiroChave
+		reverse parceiroDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation condicionadoPor [
 		from programaCTI
 		to base:FatorExterno
-		symmetric
+		reverse fatorDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation recebeEntradas [
 		from programaCTI
-		to base:Entrada
-		symmetric
+		to canvas:Entrada
+		reverse entradaDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation executa [
 		from programaCTI
-		to base:AtividadeChave
-		symmetric
+		to canvas:AtividadeChave
+		reverse atividadeDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation geraSaidas [
 		from programaCTI
 		to canvas:Saida
-		symmetric
+		reverse saidaDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation buscaAtingir [
 		from programaCTI
-		to canvas:Objetivo
-		symmetric
+		to base:Objetivo
+		reverse objetivoDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation produzResultados [
 		from programaCTI
 		to base:Resultado
-		symmetric
+		reverse resultadoDe
+		asymmetric
 		irreflexive
 	]
 	
 	relation direcionadoA [
 		from programaCTI
 		to base:PublicoAlvo
-		symmetric
+		reverse publicoDe
+		asymmetric
 		irreflexive
 	]
 }
