@@ -4,7 +4,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas#> as pro
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	
-	// Programas
 	instance PBPG : programa:programaCTI [
 		base:nome "Programa de Bolsas de Pós-Graduação"
 		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas 
@@ -32,6 +31,16 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 		programa:direcionadoA PA4, PA5, PA6, PA7, PA8, PA14, PA15, PA16, PA17, PA18
 	]
 	
+		instance EspacosCria : programa:programaCTI [
+		base:nome "Programa: Espaços Cria "
+		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
+		programa:possuiParceiros SEE, FACEPE, ETEs, EREMs
+		programa:recebeEntradas EN6, EN4, EN5, EN11, EN12
+		programa:executa AC8, AC9, AC10, AC11, AC12, AC13
+		programa:buscaAtingir OBJ16, OBJ17, OBJ18, OBJ19, OBJ20, OBJ21, OBJ22, OBJ23, OBJ24
+		programa:direcionadoA PA9, PA10, PA11, PA12, PA13, PA14, PA15
+	]
+	
 	// Parceiros-chave
 	instance PC1 : canvas:ParceiroChave [
 		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES"
@@ -51,20 +60,7 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 	instance PC6 : canvas:ParceiroChave [
 		base:nome "Agência de Desenvolvimento Econômico de Pernambuco - Adepe"
 	]
-	
-	//Oportunidades
-	instance FE1 : canvas:FatorExternoOportunidade 
 
-	instance EspacosCria : programa:programaCTI [
-		base:nome "Programa: Espaços Cria "
-		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
-		programa:possuiParceiros SEE, FACEPE, ETEs, EREMs
-		programa:recebeEntradas EN6, EN4, EN5, EN9, EN10
-		programa:executa AC8, AC9, AC10, AC11, AC12, AC13
-		programa:buscaAtingir OBJ16, OBJ17, OBJ18, OBJ19, OBJ20, OBJ21, OBJ22, OBJ23, OBJ24
-		programa:direcionadoA PA9, PA10, PA11, PA12, PA13, PA14, PA15
-	]
-	
 	instance CAPES : canvas:ParceiroChave [
 		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
 		base:descricao "Agência nacional de fomento"
@@ -114,8 +110,8 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 		base:nome "Escolas de Referência em Ensino Médio"
 		base:descricao "Organização pública"
 	]
-	
-	instance FE1 : canvas:FatorOportunidade [
+	//Oportunidades
+	instance FE1 : canvas:FatorExternoOportunidade [
 
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
 	]
@@ -169,14 +165,12 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 		base:nome "Orçamento estadual"
 	]
 	
-	instance EN8 : canvas:Entrada [
+	instance EN11 : canvas:Entrada [
 		base:nome "Orçamento estadual - Fundo Inovar-PE"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance EN9 : canvas:Entrada [
+	instance EN12 : canvas:Entrada [
 		base:nome "Orçamento estadual - LOA SEE"
-		base:descricao "lorem ipsum"
 	]
 	
 	instance EN2 : canvas:Entrada [
@@ -519,38 +513,31 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 		base:nome "Entidades da administração pública e de interesse social"
 	]
 	
-	instance PA9 : canvas:PublicoDireto [
+	instance PA19 : canvas:PublicoAlvoDireto [
 		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs)"
-		base:descricao "lorem ipsum"
 	]
 
-	instance PA10 : canvas:PublicoDireto [
+	instance PA20 : canvas:PublicoAlvoDireto [
 		base:nome "Professores da rede estadual de ensino"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance PA11 : canvas:PublicoIndireto [
+	instance PA21 : canvas:PublicoAlvoIndireto [
 		base:nome "Comunidades"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance PA12 : canvas:PublicoIndireto [
+	instance PA22 : canvas:PublicoAlvoIndireto [
 		base:nome "Associações"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance PA13 : canvas:PublicoIndireto [
+	instance PA23 : canvas:PublicoAlvoIndireto [
 		base:nome "Cooperativas"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance PA14 : canvas:PublicoIndireto [
+	instance PA24 : canvas:PublicoAlvoIndireto [
 		base:nome "Negócios locais"
-		base:descricao "lorem ipsum"
 	]
 	
-	instance PA15 : canvas:PublicoIndireto [
+	instance PA25 : canvas:PublicoAlvoIndireto [
 		base:nome "Comunidades Quilombolas"
-		base:descricao "lorem ipsum"
 	]
 }
