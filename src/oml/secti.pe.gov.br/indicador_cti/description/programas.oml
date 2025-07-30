@@ -30,10 +30,10 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 		programa:produzResultados RES6, RES7, RES8, RES9, RES15, RES16, RES18, RES21, RES22, RES23, RES24
 		programa:direcionadoA PA4, PA5, PA6, PA7, PA8, PA14, PA15, PA16, PA17, PA18
 	]
-	
-		instance EspacosCria : programa:programaCTI [
+	instance EspacosCria : programa:programaCTI [
 		base:nome "Programa: Espaços Cria "
-		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
+		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública 
+estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
 		programa:possuiParceiros SEE, FACEPE, ETEs, EREMs
 		programa:recebeEntradas EN6, EN4, EN5, EN11, EN12
 		programa:executa AC8, AC9, AC10, AC11, AC12, AC13
@@ -60,59 +60,25 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 	instance PC6 : canvas:ParceiroChave [
 		base:nome "Agência de Desenvolvimento Econômico de Pernambuco - Adepe"
 	]
-
-	instance CAPES : canvas:ParceiroChave [
-		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
-		base:descricao "Agência nacional de fomento"
-	]
-	
-	instance SECTI-PE : canvas:ParceiroChave [
-		base:nome "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco"
-		base:descricao "Organização pública"
-	]
-	
-	instance UFRPE : canvas:ParceiroChave [
-		base:nome "Universidade Federal Rural de Pernambuco"
-		base:descricao "ICT"
-	]
-	
-	instance Inovar-PE : canvas:ParceiroChave [
-		base:nome "Fundo de Inovação do Estado de Pernambuco"
-		base:descricao "Organização pública"
-	]
-	
-	instance AGE : canvas:ParceiroChave [
-		base:nome "Agência de Empreendedorismo de Pernambuco"
-		base:descricao "Organização pública"
-	]
-	
-	instance Adepe : canvas:ParceiroChave [
-		base:nome "Agência de Desenvolvimento Econômico de Pernambuco"
-		base:descricao "Organização pública"
-	]
-	
 	instance SEE : canvas:ParceiroChave [
 		base:nome "Secretaria de Educação e Esportes de Pernambuco"
 		base:descricao "Organização pública"
 	]
-	
 	instance FACEPE : canvas:ParceiroChave[
 		base:nome "Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco"
 		base:descricao "Organização pública"
-		]
-		
+	]
 	instance ETEs : canvas:ParceiroChave[
 		base:nome "Escolas Técnicas Estaduais"
 		base:descricao "Organização pública"
 	]
-	
 	instance EREMs : canvas:ParceiroChave[
 		base:nome "Escolas de Referência em Ensino Médio"
 		base:descricao "Organização pública"
 	]
+	
 	//Oportunidades
 	instance FE1 : canvas:FatorExternoOportunidade [
-
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
 	]
 	instance FE2 : canvas:FatorExternoOportunidade [
@@ -164,15 +130,12 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 	instance EN1 : canvas:Entrada [
 		base:nome "Orçamento estadual"
 	]
-	
 	instance EN11 : canvas:Entrada [
 		base:nome "Orçamento estadual - Fundo Inovar-PE"
 	]
-	
 	instance EN12 : canvas:Entrada [
 		base:nome "Orçamento estadual - LOA SEE"
 	]
-	
 	instance EN2 : canvas:Entrada [
 		base:nome "Orçamento dos parceiros co-financiadores"
 	]
@@ -197,14 +160,11 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 	instance EN9 : canvas:Entrada [
 		base:nome "Estratégia estadual de CT&I"
 	]
-	
-
-	// Atividades-chave
 	instance EN10 : canvas:Entrada [
 		base:nome "Gerência e Planejamento da SECTI"
-		base:descricao "lorem ipsum"
 	]
-	
+
+	// Atividades-chave
 	instance AC1 : canvas:AtividadeChave [
 		base:nome "Gestão do ciclo de vida do Edital"
 	]
@@ -226,38 +186,26 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 	instance AC7 : canvas:AtividadeChave [
 		base:nome "Avaliação do programa"
 	]
-	
-	// Saídas	
 	instance AC8 : canvas:AtividadeChave [
 		base:nome "Celebração de TED (SECTI, SEE, FACEPE)"
-		base:descricao "lorem ipsum"
 	]
-
 	instance AC9 : canvas:AtividadeChave [
 		base:nome "Lançamento de Edital de Bolsas e Auxílios"
-		base:descricao "lorem ipsum"
 	]
-	
 	instance AC10 : canvas:AtividadeChave [
 		base:nome "Procedimento de licitação para equipamentos"
-		base:descricao "lorem ipsum"
 	]
-	
 	instance AC11 : canvas:AtividadeChave [
 		base:nome "Inauguração de espaços CRIA"
-		base:descricao "lorem ipsum"
 	]
-	
 	instance AC12 : canvas:AtividadeChave [
 		base:nome "Acompanhamento de projetos"
-		base:descricao "lorem ipsum"
 	]
-	
 	instance AC13 : canvas:AtividadeChave [
 		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
-		base:descricao "lorem ipsum"
 	]
 	
+	// Saídas	
 	instance OUT1 : canvas:Saida [
 		base:nome "Edital gerenciado com sucesso"
 	]
@@ -330,19 +278,12 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance OBJ15 : canvas:ObjetivoEspecifico [
 		base:nome "Apoiar articuladores que conectem o ecossistema às demais políticas de CT&I do Estado"
 	]
-	
-	// Resultados a Curto Prazo
-
 	instance OBJ16 : canvas:ObjetivoEspecifico [
 		base:nome "Criar ambientes Maker em ETEs e EREMs"
-		base:descricao "lorem ipsum"
 	]
-
 	instance OBJ17 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a criatividade estudantil"
-		base:descricao "lorem ipsum"
 	]
-	
 	instance OBJ18 : canvas:ObjetivoEspecifico [
 		base:nome "Promover o protagonismo escolar na resolução de desafios cotidianos"
 		base:descricao "lorem ipsum"
@@ -378,6 +319,7 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 		base:descricao "lorem ipsum"
 	]
 	
+	// Resultados a Curto Prazo	
 	instance RES1 : canvas:ResultadoCurtoPrazo [
 		base:nome "Titulação dos estudantes bolsistas do programa como mestres e doutores"
 	]
@@ -480,6 +422,12 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance PA8 : canvas:PublicoAlvoDireto [
 		base:nome "Organizações da sociedade civil"
 	]
+	instance PA19 : canvas:PublicoAlvoDireto [
+		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs)"
+	]
+	instance PA20 : canvas:PublicoAlvoDireto [
+		base:nome "Professores da rede estadual de ensino"
+	]
 	
 	//Público-alvo Indireto
 	instance PA9 : canvas:PublicoAlvoIndireto [
@@ -512,31 +460,18 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance PA18 : canvas:PublicoAlvoIndireto [
 		base:nome "Entidades da administração pública e de interesse social"
 	]
-	
-	instance PA19 : canvas:PublicoAlvoDireto [
-		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs)"
-	]
-
-	instance PA20 : canvas:PublicoAlvoDireto [
-		base:nome "Professores da rede estadual de ensino"
-	]
-	
 	instance PA21 : canvas:PublicoAlvoIndireto [
 		base:nome "Comunidades"
 	]
-	
 	instance PA22 : canvas:PublicoAlvoIndireto [
 		base:nome "Associações"
 	]
-	
 	instance PA23 : canvas:PublicoAlvoIndireto [
 		base:nome "Cooperativas"
 	]
-	
 	instance PA24 : canvas:PublicoAlvoIndireto [
 		base:nome "Negócios locais"
 	]
-	
 	instance PA25 : canvas:PublicoAlvoIndireto [
 		base:nome "Comunidades Quilombolas"
 	]

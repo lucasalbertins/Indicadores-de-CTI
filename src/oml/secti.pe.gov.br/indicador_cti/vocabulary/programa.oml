@@ -8,7 +8,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation possuiParceiros [
 		from programaCTI
 		to canvas:ParceiroChave
-		reverse parceiroDe
+		reverse parceria
 		asymmetric
 		irreflexive
 	]
@@ -16,7 +16,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation condicionadoPor [
 		from programaCTI
 		to base:FatorExterno
-		reverse fatorDe
+		reverse condiciona
 		asymmetric
 		irreflexive
 	]
@@ -24,7 +24,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation recebeEntradas [
 		from programaCTI
 		to canvas:Entrada
-		reverse entradaDe
+		reverse fornece
 		asymmetric
 		irreflexive
 	]
@@ -32,7 +32,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation executa [
 		from programaCTI
 		to canvas:AtividadeChave
-		reverse atividadeDe
+		reverse executado
 		asymmetric
 		irreflexive
 	]
@@ -40,7 +40,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation geraSaidas [
 		from programaCTI
 		to canvas:Saida
-		reverse saidaDe
+		reverse gerada
 		asymmetric
 		irreflexive
 	]
@@ -48,7 +48,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation buscaAtingir [
 		from programaCTI
 		to base:Objetivo
-		reverse objetivoDe
+		reverse atingido
 		asymmetric
 		irreflexive
 	]
@@ -56,7 +56,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation produzResultados [
 		from programaCTI
 		to base:Resultado
-		reverse resultadoDe
+		reverse resulta
 		asymmetric
 		irreflexive
 	]
@@ -64,7 +64,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation direcionadoA [
 		from programaCTI
 		to base:PublicoAlvo
-		reverse publicoDe
+		reverse orientado
 		asymmetric
 		irreflexive
 	]
