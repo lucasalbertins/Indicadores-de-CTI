@@ -1,0 +1,8 @@
+// Consulta SPARQL para retornar todos os programas
+
+PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
+
+SELECT ?programaCTI
+WHERE {
+  ?programaCTI a programa:programaCTI .
+}
