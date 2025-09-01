@@ -1,0 +1,22 @@
+// Busca por atividades e parceiros chave de um programa
+
+PREFIX programa: http://secti.pe.gov.br/indicador\_cti/vocabulary/programa#
+PREFIX canvas: http://secti.pe.gov.br/indicador\_cti/vocabulary/canvas#
+PREFIX base: http://secti.pe.gov.br/indicador\_cti/vocabulary/base#
+#SELECT ?programa ?programaLabel ?atividadeChave ?atividadeLabel  ?parceiroChave ?parceiroLabel
+SELECT    ?atividadeLabel   ?parceiroLabel
+WHERE {
+  ?programa a programa:programaCTI ;
+   base:nome "Programa: Espaços Cria";
+   programa:executa ?atividadeChave ;
+   programa:possuiParceiros ?parceiroChave .
+ 
+   OPTIONAL { ?programa base:nome ?programaLabel . }
+
+  ?atividadeChave a canvas:AtividadeChave
+  OPTIONAL { ?atividadeChave base:nome ?atividadeLabel}
+ 
+  ?parceiroChave a canvas:ParceiroChave
+  OPTIONAL {?parceiroChave base:nome ?parceiroLabel}
+ 
+}

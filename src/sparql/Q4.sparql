@@ -1,0 +1,13 @@
+//Contar o número de atividades-chave por programa
+
+PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
+PREFIX canvas: <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>
+PREFIX base: <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+SELECT ?programaLabel (COUNT(?atividadeChave) AS ?totalAtividades)
+WHERE {
+    ?programa a programa:programaCTI ;
+              base:nome "Programa: Espaços Cria " ;
+              programa:executa ?atividadeChave .
+}
+GROUP BY ?programaLabel
+ORDER BY DESC(?totalAtividades)

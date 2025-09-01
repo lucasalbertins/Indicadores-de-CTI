@@ -31,14 +31,17 @@ setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e
 		programa:direcionadoA PA4, PA5, PA6, PA7, PA8, PA14, PA15, PA16, PA17, PA18
 	]
 	instance EspacosCria : programa:programaCTI [
-		base:nome "Programa: Espaços Cria "
+		base:nome "Programa: Espaços Cria"
 		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública 
 estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
-		programa:possuiParceiros SEE, FACEPE, ETEs, EREMs
-		programa:recebeEntradas EN6, EN4, EN5, EN11, EN12
-		programa:executa AC8, AC9, AC10, AC11, AC12, AC13
-		programa:buscaAtingir OBJ16, OBJ17, OBJ18, OBJ19, OBJ20, OBJ21, OBJ22, OBJ23, OBJ24
-		programa:direcionadoA PA9, PA10, PA11, PA12, PA13, PA14, PA15
+		programa:possuiParceiros SEE, FACEPE, ETEs, EREMs, SECTI, SAD
+		programa:condicionadoPor FE16, FE17, FE18, FE19, FE20,FE21, FE22, FE23, FE24, FE25, FE26
+		programa:recebeEntradas EN2, EN7, EN11, EN12, EN13, EN14, EN15, EN16
+		programa:executa AC8, AC9, AC10, AC11, AC12, AC13, AC14, AC15, AC16, AC17
+		programa:geraSaidas OUT8, OUT9, OUT10, OUT11, OUT12, OUT13
+		programa:buscaAtingir OBJ16, OBJ17, OBJ18, OBJ19, OBJ20, OBJ21, OBJ22, OBJ23, OBJ24, OB25
+		programa:produzResultados RES25, RES26, RES27, RES28, RES29, RES30, RES31, RES32, RES33, RES34, RES35, RES36, RES37, RES38, RES39, RES40, RES41
+		programa:direcionadoA PA19, PA20, PA21, PA22, PA23, PA24, PA25
 	]
 	
 	// Parceiros-chave
@@ -77,6 +80,16 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 		base:descricao "Organização pública"
 	]
 	
+	instance SECTI : canvas:ParceiroChave[
+		base:nome "Secretaria de Ciência, Tecnologia e Inovação"
+		base:descricao "Organização pública"
+	]
+	
+	instance SAD : canvas:ParceiroChave[
+		base:nome "Secretaria de administração"
+		base:descricao "Organização pública"
+	]
+	
 	//Oportunidades
 	instance FE1 : canvas:FatorExternoOportunidade [
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
@@ -96,7 +109,21 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 	instance FE6 : canvas:FatorExternoOportunidade [
 		base:nome "Projeção de internacionalização das redes"
 	]
-	
+	instance FE16 : canvas:FatorExternoOportunidade [
+		base:nome "Parcerias com empresas para programas de imersão e maratonas de desenvolvimento"
+	]
+	instance FE17 : canvas:FatorExternoOportunidade [
+		base:nome "Engajamento dos estudantes ativos nos Espaços CRIA aos grandes eventos de tecnologia (Campus Party, Rec´n play, Eli Summit…)"
+	]
+	instance FE18 : canvas:FatorExternoOportunidade [
+		base:nome "Participação em competições locais, interestaduais e internacionais"
+	]
+	instance FE19 : canvas:FatorExternoOportunidade [
+		base:nome "Progressão das ETEs e EREMs com Espaços CRIA para um modelo de incubação de novos negócios"
+	]
+	instance FE20 : canvas:FatorExternoOportunidade [
+		base:nome "Reconhecimento do potencial inovador e criativo  dos alunos da Escola Pública para resolução de problemas da sociedade "
+	]
 	//Desafios (Ameaças)
 	instance FE7 : canvas:FatorExternoDesafio [
 		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
@@ -125,7 +152,24 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 	instance FE15 : canvas:FatorExternoDesafio [
 		base:nome "Restrições apresentadas pelo arcabouço legal"
 	]
-	
+	instance FE21 : canvas:FatorExternoDesafio [
+		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED) com periodicidade anual"
+	]
+	instance FE22 : canvas:FatorExternoDesafio [
+		base:nome "Evasão estudantil por lacunas de continuidade entre as celebrações de TED e lançamento de novos editais"
+	]
+	instance FE23 : canvas:FatorExternoDesafio [
+		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos"
+	]
+	instance FE24 : canvas:FatorExternoDesafio [
+		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
+	]
+	instance FE25 : canvas:FatorExternoDesafio [
+		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
+	]
+	instance FE26 : canvas:FatorExternoDesafio [
+		base:nome "Falta de priorização da política de estímulo a STEM+C em mudanças de gestão"
+	]
 	// Entradas
 	instance EN1 : canvas:Entrada [
 		base:nome "Orçamento estadual"
@@ -163,7 +207,18 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 	instance EN10 : canvas:Entrada [
 		base:nome "Gerência e Planejamento da SECTI"
 	]
-
+	instance EN13 : canvas:Entrada [
+		base:nome "Espaços físicos adequados nas escolas"
+	]
+	instance EN14 : canvas:Entrada [
+		base:nome "Gerência e Planejamento da SECTI e SEE"
+	]
+	instance EN15 : canvas:Entrada [
+		base:nome "Sistemas de monitoramento dos espaços/projetos"
+	]
+	instance EN16 : canvas:Entrada [
+		base:nome "Recursos humanos: avaliadores ad hoc, corpo técnico-administrativo (FACEPE, SECTI, SAD, SEE)"
+	]
 	// Atividades-chave
 	instance AC1 : canvas:AtividadeChave [
 		base:nome "Gestão do ciclo de vida do Edital"
@@ -187,7 +242,7 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 		base:nome "Avaliação do programa"
 	]
 	instance AC8 : canvas:AtividadeChave [
-		base:nome "Celebração de TED (SECTI, SEE, FACEPE)"
+		base:nome "Celebração de TED para infraestrutura (SECTI, SEE, FACEPE)"
 	]
 	instance AC9 : canvas:AtividadeChave [
 		base:nome "Lançamento de Edital de Bolsas e Auxílios"
@@ -196,15 +251,26 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 		base:nome "Procedimento de licitação para equipamentos"
 	]
 	instance AC11 : canvas:AtividadeChave [
-		base:nome "Inauguração de espaços CRIA"
+		base:nome "Implantação e Inauguração dos Espaços CRIA nas diferentes regiões de desenvolvimento do estado"
 	]
 	instance AC12 : canvas:AtividadeChave [
-		base:nome "Acompanhamento de projetos"
+		base:nome "Monitoramento e avaliação dos projetos"
 	]
 	instance AC13 : canvas:AtividadeChave [
 		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
 	]
-	
+	instance AC14 : canvas:AtividadeChave [
+		base:nome "Manutenção dos equipamentos e infraestrutura do ECRIA"
+	]
+	instance AC15 : canvas:AtividadeChave [
+		base:nome "Aprimoramento tecnológico dos ECRIA"
+	]
+	instance AC16 : canvas:AtividadeChave [
+		base:nome "Ações de sensibilização e mobilização nas escolas"
+	]
+	instance AC17 : canvas:AtividadeChave [
+		base:nome "Formação dos professores responsáveis"
+	]
 	// Saídas	
 	instance OUT1 : canvas:Saida [
 		base:nome "Edital gerenciado com sucesso"
@@ -227,7 +293,24 @@ estadual de ensino médio e técnico de Pernambuco, através da criação de amb
 	instance OUT7 : canvas:Saida [
 		base:nome "Plano de Avaliação do programa executado"
 	]
-	
+	instance OUT8 : canvas:Saida [
+		base:nome "Formação de jovens com competências portadoras de futuro, com foco no mercado de trabalho"
+	]
+	instance OUT9 : canvas:Saida [
+		base:nome "Professores atualizados de acordo com as demandas na área de STEM+C"
+	]
+	instance OUT10 : canvas:Saida [
+		base:nome "ECRIA montados e operacionais"
+	]
+	instance OUT11 : canvas:Saida [
+		base:nome "Execução de projetos: Pagamento de bolsas, Compra de itens de custeio e manutenção, Relatórios técnicos parciais e finais para cada ciclo"
+	]
+	instance OUT12 : canvas:Saida [
+		base:nome "Eventos de divulgação de projetos dos espaços CRIA"
+	]
+	instance OUT13 : canvas:Saida [
+		base:nome "Portfólios de projetos inovadores, empreendedores e inclusivos, protótipos, produtos e soluções inovadoras desenvolvidas nos ECRIA"
+	]
 	// Objetivos Gerais
 	instance OBJ1 : canvas:ObjetivoGeral [
 		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação, de modo a contribuir com o 
@@ -236,6 +319,11 @@ desenvolvimento sustentável do estado de Pernambuco"
 	instance OBJ2 : canvas:ObjetivoGeral [
 		base:nome "Incentivar a criação e o fortalecimento de redes autossustentáveis que promovam e articulem atividades de inovação 
 e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do Estado, visando o fortalecimento de seus ecossistemas"
+	]
+	instance OB25 : canvas:ObjetivoGeral [
+		base:nome "Implantação de Espaços de Criação, Inovação e Aprendizagem, através da estruturação de centros de inovação para promover 
+o fortalecimento dos ecossistemas de indústria 4.0 e cultura maker, economia criativa, economia circular e negócios 4.0, nas diferentes 
+regiões de desenvolvimento do Estado de Pernambuco, com foco na formação de habilidades portadoras de futuro e no empreendedorismo inovador"
 	]
 	
 	// Objetivos Específicos	
@@ -279,46 +367,32 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 		base:nome "Apoiar articuladores que conectem o ecossistema às demais políticas de CT&I do Estado"
 	]
 	instance OBJ16 : canvas:ObjetivoEspecifico [
-		base:nome "Criar ambientes Maker em ETEs e EREMs"
-	]
-	instance OBJ17 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a criatividade estudantil"
 	]
-	instance OBJ18 : canvas:ObjetivoEspecifico [
+	instance OBJ17 : canvas:ObjetivoEspecifico [
 		base:nome "Promover o protagonismo escolar na resolução de desafios cotidianos"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ19 : canvas:ObjetivoEspecifico [
+	instance OBJ18 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular projetos de STEM"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ20 : canvas:ObjetivoEspecifico [
+	instance OBJ19 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular o empreendedorismo inovador"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ21 : canvas:ObjetivoEspecifico [
+	instance OBJ20 : canvas:ObjetivoEspecifico [
 		base:nome "Capacitar o corpo docente em tecnologias habilitadoras"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ22 : canvas:ObjetivoEspecifico [
+	instance OBJ21 : canvas:ObjetivoEspecifico [
 		base:nome "Promover vivências de soft skills"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ23 : canvas:ObjetivoEspecifico [
+	instance OBJ22 : canvas:ObjetivoEspecifico [
 		base:nome "Mitigar a evasão escolar"
-		base:descricao "lorem ipsum"
 	]
-	
-	instance OBJ24 : canvas:ObjetivoEspecifico [
+	instance OBJ23 : canvas:ObjetivoEspecifico [
 		base:nome "Melhorias dos indicadores de educação"
-		base:descricao "lorem ipsum"
 	]
-	
+	instance OBJ24 : canvas:ObjetivoEspecifico [
+		base:nome "Difundir CT&I nas instituições públicas e privadas"
+	]
 	// Resultados a Curto Prazo	
 	instance RES1 : canvas:ResultadoCurtoPrazo [
 		base:nome "Titulação dos estudantes bolsistas do programa como mestres e doutores"
@@ -347,7 +421,18 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance RES9 : canvas:ResultadoCurtoPrazo [
 		base:nome "Ampliação do nº de novos proponentes a editais de CT&I"
 	]
-	
+	instance RES25 : canvas:ResultadoLongoPrazo [
+		base:nome " Espaços implantados com equipamentos promovendo a cultura Maker e de indústria 4.0"
+	]
+	instance RES26 : canvas:ResultadoLongoPrazo [
+		base:nome "Desenvolvendo competências portadoras de futuro"
+	]
+	instance RES27 : canvas:ResultadoLongoPrazo [
+		base:nome "Novos produtos/protótipos criativos gerados"
+	]
+	instance RES28 : canvas:ResultadoLongoPrazo [
+		base:nome "Maior permanência dos alunos nas escolas com espaços CRIA"
+	]
 	//Resultados a Médio Prazo	
 	instance RES10 : canvas:ResultadoMedioPrazo [
 		base:nome "Absorção e fixação de mestres e doutores pelo ecossistema de CT&I do estado"
@@ -370,7 +455,21 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance RES16 : canvas:ResultadoMedioPrazo [
 		base:nome "Ampliação do nº de startups ativas em todo o Estado"
 	]
-	
+	instance RES29 : canvas:ResultadoLongoPrazo [
+		base:nome " Mais pessoas capacitadas em competências portadoras de futuro"
+	]
+	instance RES30 : canvas:ResultadoLongoPrazo [
+		base:nome " Maior ingresso de estudantes da rede pública em cursos superiores STEM+C"
+	]
+	instance RES31 : canvas:ResultadoLongoPrazo [
+		base:nome " Aumento da empregabilidade de pessoas na área de STEM+C em áreas prioritárias para o Estado"
+	]
+	instance RES32 : canvas:ResultadoLongoPrazo [
+		base:nome " Melhoria dos índices educacionais do Estado"
+	]
+	instance RES33 : canvas:ResultadoLongoPrazo [
+		base:nome "Criação de startups por egressos das escolas com espaços CRIA"
+	]
 	//Resultados a Longo Prazo
 	instance RES17 : canvas:ResultadoLongoPrazo [
 		base:nome "Evolução dos índices econômicos, sociais e ambientais do estado"
@@ -396,7 +495,30 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 	instance RES24 : canvas:ResultadoLongoPrazo [
 		base:nome "Ampliação do faturamento obtido por empresas pernambucanas"
 	]
-	
+	instance RES34 : canvas:ResultadoLongoPrazo [
+		base:nome "Mais professores capazes de formar recursos humanos em STEM+C"
+	]
+	instance RES35 : canvas:ResultadoLongoPrazo [
+		base:nome "Mais profissionais para lidar com projetos de tecnologia e inovação"
+	]
+	instance RES36 : canvas:ResultadoLongoPrazo [
+		base:nome "Maior competitividade das empresas e entidades pernambucanas"
+	]
+	instance RES37 : canvas:ResultadoLongoPrazo [
+		base:nome "Mais recursos humanos desenvolvendo soluções baseadas em CT&I em todo o território pernambucano promovendo transformação social"
+	]
+	instance RES38 : canvas:ResultadoLongoPrazo [
+		base:nome "Atração de estudantes talentosos nas áreas de STEM+C"
+	]
+	instance RES39 : canvas:ResultadoLongoPrazo [
+		base:nome "Elevação da qualidade de vida e a prosperidade baseada em CT&I"
+	]
+	instance RES40 : canvas:ResultadoLongoPrazo [
+		base:nome "Desenvolvimento econômico e social do Estado de Pernambuco"
+	]
+	instance RES41 : canvas:ResultadoLongoPrazo [
+		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
+	]
 	//Público-alvo Direto
 	instance PA1 : canvas:PublicoAlvoDireto [
 		base:nome "Estudantes de pós-graduação stricto sensu"
@@ -423,7 +545,7 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 		base:nome "Organizações da sociedade civil"
 	]
 	instance PA19 : canvas:PublicoAlvoDireto [
-		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs)"
+		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs) com futuro para as EREFEMs"
 	]
 	instance PA20 : canvas:PublicoAlvoDireto [
 		base:nome "Professores da rede estadual de ensino"
@@ -461,7 +583,7 @@ e integrem ICTs e demais agentes do ecossistema, em consonância com as RDs do E
 		base:nome "Entidades da administração pública e de interesse social"
 	]
 	instance PA21 : canvas:PublicoAlvoIndireto [
-		base:nome "Comunidades"
+		base:nome "Comunidades (inovação social e inclusiva)"
 	]
 	instance PA22 : canvas:PublicoAlvoIndireto [
 		base:nome "Associações"
