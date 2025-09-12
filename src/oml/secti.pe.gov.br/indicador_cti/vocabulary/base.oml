@@ -5,17 +5,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	aspect EntidadeNomeavel
 	aspect EntidadeDescritivel
 	
-	aspect FatorExterno
-	aspect Objetivo
-	aspect Resultado
-	aspect PublicoAlvo
-	
 	scalar property nome [
 		domain EntidadeNomeavel
 		range xsd:string
 		functional
 	]
-	
 	scalar property descricao [
 		domain EntidadeDescritivel
 		range xsd:string

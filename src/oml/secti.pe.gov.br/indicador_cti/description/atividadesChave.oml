@@ -1,0 +1,57 @@
+description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadesChave {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance AC1 : canvas:AtividadeChave [
+		base:nome "Gestão do ciclo de vida do Edital"
+	]
+	instance AC2 : canvas:AtividadeChave [
+		base:nome "Gestão das bolsas oriundas do programa"
+	]
+	instance AC3 : canvas:AtividadeChave [
+		base:nome "Acompanhamento técnico e financeiro do programa"
+	]
+	instance AC4 : canvas:AtividadeChave [
+		base:nome "Manutenção evolutiva e corretiva do AgilFAP"
+	]
+	instance AC5 : canvas:AtividadeChave [
+		base:nome "Gestão de parcerias com entes públicos e privados"
+	]
+	instance AC6 : canvas:AtividadeChave [
+		base:nome "Monitoramento dos indicadores de desempenho e impacto"
+	]
+	instance AC7 : canvas:AtividadeChave [
+		base:nome "Avaliação do programa"
+	]
+	instance AC8 : canvas:AtividadeChave [
+		base:nome "Celebração de TED para infraestrutura (SECTI, SEE, FACEPE)"
+	]
+	instance AC9 : canvas:AtividadeChave [
+		base:nome "Lançamento de Edital de Bolsas e Auxílios"
+	]
+	instance AC10 : canvas:AtividadeChave [
+		base:nome "Procedimento de licitação para equipamentos"
+	]
+	instance AC11 : canvas:AtividadeChave [
+		base:nome "Implantação e Inauguração dos Espaços CRIA nas diferentes regiões de desenvolvimento do estado"
+	]
+	instance AC12 : canvas:AtividadeChave [
+		base:nome "Monitoramento e avaliação dos projetos"
+	]
+	instance AC13 : canvas:AtividadeChave [
+		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
+	]
+	instance AC14 : canvas:AtividadeChave [
+		base:nome "Manutenção dos equipamentos e infraestrutura do ECRIA"
+	]
+	instance AC15 : canvas:AtividadeChave [
+		base:nome "Aprimoramento tecnológico dos ECRIA"
+	]
+	instance AC16 : canvas:AtividadeChave [
+		base:nome "Ações de sensibilização e mobilização nas escolas"
+	]
+	instance AC17 : canvas:AtividadeChave [
+		base:nome "Formação dos professores responsáveis"
+	]
+}

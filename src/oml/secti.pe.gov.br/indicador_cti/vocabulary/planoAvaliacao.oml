@@ -1,0 +1,10 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	
+	concept questaoAvaliacao < base:EntidadeNomeavel, base:EntidadeDescritivel
+	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeDescritivel
+	concept limitacao < base:EntidadeNomeavel, base:EntidadeDescritivel
+	concept metrica < base:EntidadeNomeavel, base:EntidadeDescritivel
+	concept metodologia < base:EntidadeNomeavel, base:EntidadeDescritivel
+}

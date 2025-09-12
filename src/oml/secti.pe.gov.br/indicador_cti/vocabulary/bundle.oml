@@ -4,4 +4,5 @@ vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#>
 }

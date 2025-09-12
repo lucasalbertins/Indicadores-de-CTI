@@ -18,6 +18,17 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa-EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspacosCria.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/fatoresExternos.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/atividadesChave.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/saidas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/resultados.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicoAlvo.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programasFormacaoFixacaoTalentos.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programasEmpreendedorismoInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programasInfraestrutura.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

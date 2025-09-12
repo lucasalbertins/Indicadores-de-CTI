@@ -1,0 +1,85 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatoresExternos {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance FE1 : canvas:Oportunidade [
+		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
+	]
+	instance FE2 : canvas:Oportunidade [
+		base:nome "Maior reconhecimento da importância das atividades de CT&I para as atividades produtivas e sociedade no geral"
+	]
+	instance FE3 : canvas:Oportunidade [
+		base:nome "Aprimoramento do arcabouço legal de inovação"
+	]
+	instance FE4 : canvas:Oportunidade [
+		base:nome "Potencial nº de articuladores de CT&I vinculados a ICTs"
+	]
+	instance FE5 : canvas:Oportunidade [
+		base:nome "Crescimento do nº de startups e ambientes de inovação no Estado"
+	]
+	instance FE6 : canvas:Oportunidade [
+		base:nome "Projeção de internacionalização das redes"
+	]
+	instance FE7 : canvas:Oportunidade [
+		base:nome "Parcerias com empresas para programas de imersão e maratonas de desenvolvimento"
+	]
+	instance FE8 : canvas:Oportunidade [
+		base:nome "Engajamento dos estudantes ativos nos Espaços CRIA aos grandes eventos de tecnologia (Campus Party, Rec´n play, Eli Summit…)"
+	]
+	instance FE9 : canvas:Oportunidade [
+		base:nome "Participação em competições locais, interestaduais e internacionais"
+	]
+	instance FE10 : canvas:Oportunidade [
+		base:nome "Progressão das ETEs e EREMs com Espaços CRIA para um modelo de incubação de novos negócios"
+	]
+	instance FE11 : canvas:Oportunidade [
+		base:nome "Reconhecimento do potencial inovador e criativo  dos alunos da Escola Pública para resolução de problemas da sociedade "
+	]
+
+	instance FE12 : canvas:Ameaca [
+		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
+	]
+	instance FE13 : canvas:Ameaca [
+		base:nome "Mercado de trabalho aquecido"
+	]
+	instance FE14 : canvas:Ameaca [
+		base:nome "Baixa atratividade das bolsas"
+	]
+	instance FE15 : canvas:Ameaca [
+		base:nome "Estrutura administrativa de suporte insuficiente"
+	]
+	instance FE16 : canvas:Ameaca [
+		base:nome "Evasão dos estudantes"
+	]
+	instance FE17 : canvas:Ameaca [
+		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
+	]
+	instance FE18 : canvas:Ameaca [
+		base:nome "Envolvimento tímido do setor empresarial"
+	]
+	instance FE19 : canvas:Ameaca [
+		base:nome "Prazo insuficiente para tornar as redes autossustentáveis"
+	]
+	instance FE20 : canvas:Ameaca [
+		base:nome "Restrições apresentadas pelo arcabouço legal"
+	]
+	instance FE21 : canvas:Ameaca [
+		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED) com periodicidade anual"
+	]
+	instance FE22 : canvas:Ameaca [
+		base:nome "Evasão estudantil por lacunas de continuidade entre as celebrações de TED e lançamento de novos editais"
+	]
+	instance FE23 : canvas:Ameaca [
+		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos"
+	]
+	instance FE24 : canvas:Ameaca [
+		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
+	]
+	instance FE25 : canvas:Ameaca [
+		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
+	]
+	instance FE26 : canvas:Ameaca [
+		base:nome "Falta de priorização da política de estímulo a STEM+C em mudanças de gestão"
+	]
+}

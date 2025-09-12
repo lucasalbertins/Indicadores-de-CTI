@@ -1,0 +1,45 @@
+description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance OUT1 : canvas:Saida [
+		base:nome "Edital gerenciado com sucesso"
+	]
+	instance OUT2 : canvas:Saida [
+		base:nome "Bolsas implementadas e pagas de acordo com o planejamento"
+	]
+	instance OUT3 : canvas:Saida [
+		base:nome "Relatórios parciais e final de acompanhamento"
+	]
+	instance OUT4 : canvas:Saida [
+		base:nome "AgilFAP em operação plena para atendimento ao programa"
+	]
+	instance OUT5 : canvas:Saida [
+		base:nome "Parcerias formalizadas por meio de instrumentos legais"
+	]
+	instance OUT6 : canvas:Saida [
+		base:nome "Infográfico atualizado de Indicadores de desempenho e impacto do programa"
+	]
+	instance OUT7 : canvas:Saida [
+		base:nome "Plano de Avaliação do programa executado"
+	]
+	instance OUT8 : canvas:Saida [
+		base:nome "Formação de jovens com competências portadoras de futuro, com foco no mercado de trabalho"
+	]
+	instance OUT9 : canvas:Saida [
+		base:nome "Professores atualizados de acordo com as demandas na área de STEM+C"
+	]
+	instance OUT10 : canvas:Saida [
+		base:nome "ECRIA montados e operacionais"
+	]
+	instance OUT11 : canvas:Saida [
+		base:nome "Execução de projetos: Pagamento de bolsas, Compra de itens de custeio e manutenção, Relatórios técnicos parciais e finais para cada ciclo"
+	]
+	instance OUT12 : canvas:Saida [
+		base:nome "Eventos de divulgação de projetos dos espaços CRIA"
+	]
+	instance OUT13 : canvas:Saida [
+		base:nome "Portfólios de projetos inovadores, empreendedores e inclusivos, protótipos, produtos e soluções inovadoras desenvolvidas nos ECRIA"
+	]
+}

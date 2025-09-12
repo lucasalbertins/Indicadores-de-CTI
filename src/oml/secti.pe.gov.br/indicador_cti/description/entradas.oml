@@ -1,0 +1,45 @@
+description <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entradas {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance EN1 : canvas:Entrada [
+		base:nome "Orçamento estadual"
+	]
+	instance EN2 : canvas:Entrada [
+		base:nome "Orçamento dos parceiros co-financiadores"
+	]
+	instance EN3 : canvas:Entrada [
+		base:nome "Câmaras da FACEPE"
+	]
+	instance EN4 : canvas:Entrada [
+		base:nome "Comissões de julgamento da FACEPE"
+	]
+	instance EN5 : canvas:Entrada [
+		base:nome "Avaliadores ad-hoc das propostas"
+	]
+	instance EN6 : canvas:Entrada [
+		base:nome "Recursos humanos de suporte ao programa"
+	]
+	instance EN7 : canvas:Entrada [
+		base:nome "AgilFAP"
+	]
+	instance EN8 : canvas:Entrada [
+		base:nome "Recursos de TI de suporte ao programa"
+	]
+	instance EN9 : canvas:Entrada [
+		base:nome "Estratégia estadual de CT&I"
+	]
+	instance EN10 : canvas:Entrada [
+		base:nome "Gerência e Planejamento da SECTI"
+	]
+	instance EN11 : canvas:Entrada [
+		base:nome "Espaços físicos adequados nas escolas"
+	]
+	instance EN12 : canvas:Entrada [
+		base:nome "Gerência e Planejamento da SECTI e SEE"
+	]
+	instance EN13 : canvas:Entrada [
+		base:nome "Sistemas de monitoramento dos espaços/projetos"
+	]
+}

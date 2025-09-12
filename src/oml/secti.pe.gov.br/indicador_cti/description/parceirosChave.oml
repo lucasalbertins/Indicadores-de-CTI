@@ -1,0 +1,39 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceirosChave {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance CAPES : canvas:ParceiroChave [
+		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
+	]
+	instance SECTI-PE : canvas:ParceiroChave [
+		base:nome "Secretaria de Ciência, Tecnologia e Inovação de Pernambuco"
+	]
+	instance UFRPE : canvas:ParceiroChave [
+		base:nome "Universidade Federal Rural de Pernambuco"
+	]
+	instance Inovar-PE : canvas:ParceiroChave [
+		base:nome "Fundo de Inovação do Estado de Pernambuco"
+	]
+	instance AGE : canvas:ParceiroChave [
+		base:nome "Agência de Empreendedorismo de Pernambuco"
+	]
+	instance Adepe : canvas:ParceiroChave [
+		base:nome "Agência de Desenvolvimento Econômico de Pernambuco"
+	]
+	instance SEE : canvas:ParceiroChave [
+		base:nome "Secretaria de Educação e Esportes de Pernambuco"
+	]
+	instance FACEPE : canvas:ParceiroChave[
+		base:nome "Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco"
+	]
+	instance ETEs : canvas:ParceiroChave[
+		base:nome "Escolas Técnicas Estaduais"
+	]
+	instance EREMs : canvas:ParceiroChave[
+		base:nome "Escolas de Referência em Ensino Médio"
+	]
+	instance SAD : canvas:ParceiroChave[
+		base:nome "Secretaria de Administração"
+	]
+}

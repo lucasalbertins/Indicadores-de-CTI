@@ -3,8 +3,10 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
-	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel
-	
+	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel [
+		restricts buscaAtingir1 to max 1
+	]
+
 	relation possuiParceiros [
 		from programaCTI
 		to canvas:ParceiroChave
@@ -12,15 +14,13 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	
 	relation condicionadoPor [
 		from programaCTI
-		to base:FatorExterno
+		to canvas:FatorExterno
 		reverse condiciona
 		asymmetric
 		irreflexive
 	]
-	
 	relation recebeEntradas [
 		from programaCTI
 		to canvas:Entrada
@@ -28,7 +28,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	
 	relation executa [
 		from programaCTI
 		to canvas:AtividadeChave
@@ -36,7 +35,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	
 	relation geraSaidas [
 		from programaCTI
 		to canvas:Saida
@@ -44,26 +42,30 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	
-	relation buscaAtingir [
-		from programaCTI
-		to base:Objetivo
-		reverse atingido
-		asymmetric
-		irreflexive
-	]
-	
 	relation produzResultados [
 		from programaCTI
-		to base:Resultado
+		to canvas:Resultado
 		reverse resulta
 		asymmetric
 		irreflexive
 	]
-	
+	relation buscaAtingir1 [
+		from programaCTI
+		to canvas:ObjetivoGeral
+		reverse atingido1
+		asymmetric
+		irreflexive
+	]
+	relation buscaAtingir2 [
+		from programaCTI
+		to canvas:ObjetivoEspecifico
+		reverse atingido2
+		asymmetric
+		irreflexive
+	]
 	relation direcionadoA [
 		from programaCTI
-		to base:PublicoAlvo
+		to canvas:PublicoAlvo
 		reverse orientado
 		asymmetric
 		irreflexive

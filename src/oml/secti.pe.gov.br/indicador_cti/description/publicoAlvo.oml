@@ -1,0 +1,107 @@
+description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	
+	instance PA1 : canvas:PublicoAlvo [
+		base:nome "Estudantes de pós-graduação stricto sensu"
+		canvas:tipo "direto"
+	]
+	instance PA2 : canvas:PublicoAlvo [
+		base:nome "Professores orientadores"
+		canvas:tipo "direto"
+	]
+	instance PA3 : canvas:PublicoAlvo [
+		base:nome "Programas de pós-graduação (PPG) de Pernambuco"
+		canvas:tipo "direto"
+	]
+	instance PA4 : canvas:PublicoAlvo [
+		base:nome "Articuladores de CT&I vinculados a ICTs"
+		canvas:tipo "direto"
+	]
+	instance PA5 : canvas:PublicoAlvo [
+		base:nome "ICTs"
+		canvas:tipo "direto"
+	]
+	instance PA6 : canvas:PublicoAlvo [
+		base:nome "Empresas"
+		canvas:tipo "direto"
+	]
+	instance PA7 : canvas:PublicoAlvo [
+		base:nome "Governo"
+		canvas:tipo "direto"
+	]
+	instance PA8 : canvas:PublicoAlvo [
+		base:nome "Organizações da sociedade civil"
+		canvas:tipo "direto"
+	]
+	instance PA9 : canvas:PublicoAlvo [
+		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs) com futuro para as EREFEMs"
+		canvas:tipo "direto"
+	]
+	instance PA10 : canvas:PublicoAlvo [
+		base:nome "Professores da rede estadual de ensino"
+		canvas:tipo "direto"
+	]
+	
+	instance PA11 : canvas:PublicoAlvo [
+		base:nome "Governo"
+		canvas:tipo "indireto"
+	]
+	instance PA12 : canvas:PublicoAlvo [
+		base:nome "Indústria"
+		canvas:tipo "indireto"
+	]
+	instance PA13 : canvas:PublicoAlvo [
+		base:nome "Sociedade"
+		canvas:tipo "indireto"
+	]
+	instance PA14 : canvas:PublicoAlvo [
+		base:nome "Ecossistema de CT&I"
+		canvas:tipo "indireto"
+	]
+	instance PA15 : canvas:PublicoAlvo [
+		base:nome "ICTs"
+		canvas:tipo "indireto"
+	]
+	instance PA16 : canvas:PublicoAlvo [
+		base:nome "Grupos de pesquisa"
+		canvas:tipo "indireto"
+	]
+	instance PA17 : canvas:PublicoAlvo [
+		base:nome "Empresas de base tecnológica"
+		canvas:tipo "indireto"
+	]
+	instance PA18 : canvas:PublicoAlvo [
+		base:nome "Empresas de base tradicional"
+		canvas:tipo "indireto"
+	]
+	instance PA19 : canvas:PublicoAlvo [
+		base:nome "Entidades promotoras de inovação"
+		canvas:tipo "indireto"
+	]
+	instance PA20 : canvas:PublicoAlvo [
+		base:nome "Entidades da administração pública e de interesse social"
+		canvas:tipo "indireto"
+	]
+	instance PA21 : canvas:PublicoAlvo [
+		base:nome "Comunidades (inovação social e inclusiva)"
+		canvas:tipo "indireto"
+	]
+	instance PA22 : canvas:PublicoAlvo [
+		base:nome "Associações"
+		canvas:tipo "indireto"
+	]
+	instance PA23 : canvas:PublicoAlvo [
+		base:nome "Cooperativas"
+		canvas:tipo "indireto"
+	]
+	instance PA24 : canvas:PublicoAlvo [
+		base:nome "Negócios locais"
+		canvas:tipo "indireto"
+	]
+	instance PA25 : canvas:PublicoAlvo [
+		base:nome "Comunidades Quilombolas"
+		canvas:tipo "indireto"
+	]
+}

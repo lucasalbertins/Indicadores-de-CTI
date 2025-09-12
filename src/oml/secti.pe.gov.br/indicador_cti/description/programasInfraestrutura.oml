@@ -1,0 +1,69 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programasInfraestrutura#> as programasInfraestrutura {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance EspacosCria : programa:programaCTI [
+		base:nome "Programa: Espaços Cria"
+		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública 
+estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
+		programa:possuiParceiros parceiroChave:SEE, parceiroChave:FACEPE, parceiroChave:ETEs, parceiroChave:EREMs, 
+		parceiroChave:SECTI-PE, parceiroChave:SAD
+		programa:condicionadoPor fatorExterno:FE12, fatorExterno:FE13, fatorExterno:FE14, fatorExterno:FE15, fatorExterno:FE16, 
+		fatorExterno:FE21, fatorExterno:FE22, fatorExterno:FE23, fatorExterno:FE24, fatorExterno:FE25, fatorExterno:FE26
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN11, entrada:EN12, entrada:EN13
+		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, 
+		atividadeChave:AC13, atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17
+		programa:geraSaidas saida:OUT8, saida:OUT9, saida:OUT10, saida:OUT11, saida:OUT12, saida:OUT13
+		programa:produzResultados resultado:RES25, resultado:RES26, resultado:RES27, resultado:RES28, resultado:RES29, resultado:RES30, 
+		resultado:RES31, resultado:RES32, resultado:RES33, resultado:RES34, resultado:RES35, resultado:RES36, resultado:RES37, 
+		resultado:RES38, resultado:RES39, resultado:RES40, resultado:RES41
+		programa:direcionadoA publicoAlvo:PA9, publicoAlvo:PA10, publicoAlvo:PA21, publicoAlvo:PA22, publicoAlvo:PA23, publicoAlvo:PA24, 
+		publicoAlvo:PA25
+		programa:buscaAtingir1 OBJGeral
+		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
+		OBJEspecifico5, OBJEspecifico6, OBJEspecifico7, OBJEspecifico8
+	]
+	
+	instance OBJGeral : canvas:ObjetivoGeral [
+		base:nome "Implantação de Espaços de Criação, Inovação e Aprendizagem, através da estruturação de centros de inovação para promover 
+o fortalecimento dos ecossistemas de indústria 4.0 e cultura maker, economia criativa, economia circular e negócios 4.0, nas diferentes 
+regiões de desenvolvimento do Estado de Pernambuco, com foco na formação de habilidades portadoras de futuro e no empreendedorismo inovador"
+	]
+	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a criatividade estudantil"
+	]
+	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
+		base:nome "Promover o protagonismo escolar na resolução de desafios cotidianos"
+	]
+	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular projetos de STEM"
+	]
+	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular o empreendedorismo inovador"
+	]
+	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
+		base:nome "Capacitar o corpo docente em tecnologias habilitadoras"
+	]
+	instance OBJEspecifico6 : canvas:ObjetivoEspecifico [
+		base:nome "Promover vivências de soft skills"
+	]
+	instance OBJEspecifico7 : canvas:ObjetivoEspecifico [
+		base:nome "Mitigar a evasão escolar"
+	]
+	instance OBJEspecifico8 : canvas:ObjetivoEspecifico [
+		base:nome "Melhorias dos indicadores de educação"
+	]
+	instance OBJEspecifico9 : canvas:ObjetivoEspecifico [
+		base:nome "Difundir CT&I nas instituições públicas e privadas"
+	]
+}
