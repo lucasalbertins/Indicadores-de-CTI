@@ -1,5 +1,4 @@
-description <http://secti.pe.gov.br/indicador_cti/description/programasInfraestrutura#> as programasInfraestrutura {
-	
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA#> as eCRIA {
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada

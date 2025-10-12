@@ -1,0 +1,71 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas {
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/classificacao#> as cl
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as pl
+	
+	
+	// Fórmula de cálculo da métrica
+	scalar property formulaCalculo [
+		domain pl:metrica
+		range xsd:string
+	]
+	
+	// Meta ou valor esperado para a métrica
+	scalar property metaEsperada [
+		domain pl:metrica
+		range xsd:string
+	]
+	
+	// Valor de baseline (linha de base) da métrica
+	scalar property valorBaseline [
+		domain pl:metrica
+		range xsd:string
+	]
+	
+	// RELAÇÕES: MÉTRICA
+	
+	// Métrica é coletada em fonte(s) de informação
+	relation coletadaDe [
+		from pl:metrica
+		to pl:fonteInformacao
+		reverse forneceMetrica
+		asymmetric
+		irreflexive
+	]
+	
+	// Métrica tem periodicidade de coleta
+	relation temPeriodicidade [
+		from pl:metrica
+		to cl:periodicidade
+		reverse periodicidadeDe
+		asymmetric
+		irreflexive
+	]
+	
+	// Métrica é expressa em unidade de medida
+	relation temUnidadeMedida [
+		from pl:metrica
+		to cl:unidadeMedida
+		reverse unidadeDe
+		asymmetric
+		irreflexive
+	]
+	
+	// Métrica utiliza metodologia de coleta/análise (métrica é resultado da met. de coleta/análise)
+	relation utilizaMetodologia [
+		from pl:metrica
+		to pl:metodologia
+		reverse metodologiaDe
+		asymmetric
+		irreflexive
+	]
+	
+	// Métrica possui limitações
+	relation possuiLimitacao [
+		from pl:metrica
+		to pl:limitacao
+		reverse limitacaoDe
+		asymmetric
+		irreflexive
+	]
+}
