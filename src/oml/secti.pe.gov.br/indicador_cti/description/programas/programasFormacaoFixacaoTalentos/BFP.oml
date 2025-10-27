@@ -1,0 +1,49 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP#> as BFP {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance BFP : programa:programaCTI [
+		
+		base:nome "Programa:Programa de Bolsas de Fixação de Pesquisadores"
+		base:descricao "O BFP (Bolsa de Fixação de Pesquisador) é um programa de bolsas de estudo para incentivar a fixação de pesquisadores doutores com sólida experiência em C,T&I, em instituições de ensino superior e pesquisa estabelecidas em Pernambuco."
+		programa:possuiParceiros parceiroChave:FACEPE, parceiroChave:ICT, parceiroChave:CAPES, parceiroChave:AGINT
+		programa:condicionadoPor fatorExterno:FE1, fatorExterno:FE2, fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido,fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte		
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN3, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN9 
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7	
+		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT14, saida:OUT4, saida:OUT6, saida:OUT7
+		programa:produzResultados resultado:RES10, resultado:RES2, resultado:RES42, resultado:RES43,resultado:RES4, resultado:RES44, resultado:RES12, resultado:RES13, resultado:RES14,resultado:RES17, resultado:RES18, resultado:RES19, resultado:RES20
+		programa:direcionadoA publicoAlvo:PA2,publicoAlvo:PA26, publicoAlvo:PA3, publicoAlvo:PA11, publicoAlvo:PA12, publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15
+		programa:buscaAtingir1 OBJGeral
+		programa:buscaAtingir2 DesenvolvimentoCientificoPE, FortacelerGruposPesquisa, FomentarPesquisaPE, EstimularCooperacao 
+	]
+	
+	instance OBJGeral : canvas:ObjetivoGeral [
+		base:nome "Incentivar a fixação de doutores no estado de Pernambuco em Instituições de ensino superior e pesquisa, Institutos de pesquisa e Empresas públicas de
+					pesquisa e desenvolvimento que atuem em investigação científica, tecnológica e/ou inovação."
+	]
+	instance DesenvolvimentoCientificoPE : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para o desenvolvimento científico tecnológico ou de inovação em PE."
+	]
+	instance FortacelerGruposPesquisa : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para fortalecer e/ou nuclear os grupos de pesquisa atuantes no estado."
+	]
+	instance FomentarPesquisaPE : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar o desenvolvimento de pesquisa de excelência no estado."
+	]
+	instance FormacaoRH : canvas:ObjetivoEspecifico [
+		base:nome "Contribuição para formação de recursos humanos no estado."
+	]
+	instance EstimularCooperacao : canvas:ObjetivoEspecifico [
+		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais."
+	]
+}

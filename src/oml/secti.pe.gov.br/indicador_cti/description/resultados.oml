@@ -216,6 +216,18 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
 		canvas:prazo "longo"
 	]
+	instance RES42 : canvas:Resultado [
+		base:nome "Aumento do número de trabalhos de IC, TCC, extensão e inovação (co)orientados pelo bolsista BFP"
+		canvas:prazo "curto"
+	]
+	instance RES43 : canvas:Resultado [
+		base:nome "Aumento da Proteção intelectual do conhecimento gerado por meio de patentes depositadas e programas de software registrados"
+		canvas:prazo "curto"
+	]
+	instance RES44 : canvas:Resultado [
+		base:nome "Cooperação científica e tecnológica nacional e internacional incrementado"
+		canvas:prazo "curto"
+	]
 	instance AltaOcupacaoVagas : canvas:Resultado [
 		base:nome "Sustentação de alta ocupação de vagas e baixa evasão, consolidando o impacto das bolsas na permanência estudantil."
 		canvas:prazo "longo"
