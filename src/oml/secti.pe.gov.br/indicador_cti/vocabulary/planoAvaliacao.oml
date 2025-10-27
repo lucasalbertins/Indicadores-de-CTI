@@ -1,11 +1,149 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
 	
 	concept questaoAvaliacao < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeDescritivel
 	concept limitacao < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept metrica < base:EntidadeNomeavel, base:EntidadeDescritivel
 	concept metodologia < base:EntidadeNomeavel, base:EntidadeDescritivel
+	// Tipo de Fonte - classificação da fonte (sistema, base gov., pesquisa...)
+	concept tipoFonte < base:EntidadeNomeavel
+	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeDescritivel
 	
-	}
+	// URL ou localização da fonte
+	scalar property localizacaoFonte [
+		domain fonteInformacao
+		range xsd:string
+	]
+	
+	// Responsável pela fonte
+	scalar property responsavelFonte [
+		domain fonteInformacao
+		range xsd:string
+	]
+	
+	// Frequência de atualização da fonte
+	scalar property frequenciaAtualizacao [
+		domain fonteInformacao
+		range xsd:string
+	]
+	
+	// Disponibilidade dos dados (0-100%)
+	scalar property disponibilidadeDados [
+		domain fonteInformacao
+		range xsd:integer
+	]
+	
+	// RELAÇÕES: FONTE DE INFORMAÇÃO
+	
+	// Fonte é classificada por tipo
+	relation classificadaComo [
+		from fonteInformacao
+		to tipoFonte
+		reverse tipoClassificaDe
+		asymmetric
+		irreflexive
+	]
+	
+	// Fonte pode ter limitações associadas
+	relation temLimitacao [
+		from fonteInformacao
+		to limitacao
+		reverse limitacaoDaFonte
+		asymmetric
+		irreflexive
+	]
+	 // Questão possui métricas para sua medição
+	relation possuiMetrica [
+		from questaoAvaliacao
+		to metrica
+		reverse metricaDe
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão pertence a uma categoria
+	relation pertenceCategoria [
+		from questaoAvaliacao
+		to categoriaAvaliacao
+		reverse contemQuestao
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão avalia uma dimensão específica
+	relation avaliaDimensao [
+		from questaoAvaliacao
+		to dimensaoAvaliacao
+		reverse dimensaoAvaliadaPor
+		asymmetric
+		irreflexive
+	]
+	
+	// RELAÇÕES: ALINHAMENTO COM CANVAS
+	
+	// Questão alinha-se com Objetivos Gerais do programa
+	relation alinhaComObjetivoGeral [
+		from questaoAvaliacao
+		to canvas:ObjetivoGeral
+		reverse objetivoAvaliadoPorQuestao
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão alinha-se com Objetivos Específicos do programa
+	relation alinhaComObjetivoEspecifico [
+		from questaoAvaliacao
+		to canvas:ObjetivoEspecifico
+		reverse avaliadoPor
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão alinha-se com Resultados esperados
+	relation alinhaComResultado [
+		from questaoAvaliacao
+		to canvas:Resultado
+		reverse resultadoAvaliadoPor
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão alinha-se com Saídas do programa
+	relation alinhaComSaida [
+		from questaoAvaliacao
+		to canvas:Saida
+		reverse avaliadaPorQuestao
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão relaciona-se com Atividades-Chave
+	relation relacionaAtividadeChave [
+		from questaoAvaliacao
+		to canvas:AtividadeChave
+		reverse monitoradaPorQuestao
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão foca em Público-Alvo específico
+	relation focaPublicoAlvo [
+		from questaoAvaliacao
+		to canvas:PublicoAlvo
+		reverse avaliadoPorQuestao
+		asymmetric
+		irreflexive
+	]
+	
+	// Questão pode estar relacionada a Fatores Externos
+	relation influenciadaPorFator [
+		from questaoAvaliacao
+		to canvas:FatorExterno
+		reverse influenciaQuestao
+		asymmetric
+		irreflexive
+	]
+}

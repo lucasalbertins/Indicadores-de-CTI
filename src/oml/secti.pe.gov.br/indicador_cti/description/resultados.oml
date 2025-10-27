@@ -39,6 +39,22 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome "Ampliação do nº de novos proponentes a editais de CT&I"
 		canvas:prazo "curto"
 	]
+	instance AumentoEstudantesMatriculados : canvas:Resultado [
+	base:nome "Aumento do número de estudantes de baixa renda matriculados em cursos de graduação das Autarquias Municipais de Ensino Superior de Pernambuco por meio da concessão de bolsas de estudo, integrais ou parciais. Esse crescimento inclui a ampliação da matrícula de pessoas com deficiência e de mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência doméstica e familiar, bem como o aumento do número de professores matriculados para a realização da segunda graduação em licenciaturas."
+	canvas:prazo "curto"
+	]
+	instance CrescimentoMatriculaSTEM : canvas:Resultado [
+		base:nome "Crescimento da matrícula em cursos STEM e licenciaturas, fortalecendo áreas estratégicas."
+		canvas:prazo "curto"
+	]
+	instance AmpliacaoAcessoES : canvas:Resultado [
+		base:nome "Ampliação do acesso ao ensino superior, com maior ocupação das vagas disponíveis."
+		canvas:prazo "curto"
+	]
+	instance ReducaoEvasao : canvas:Resultado [
+		base:nome "Redução de evasão e aumento do número de concluintes de graduação."
+		canvas:prazo "curto"
+	]
 	
 	instance RES10 : canvas:Resultado [
 		base:nome "Absorção e fixação de mestres e doutores pelo ecossistema de CT&I do estado"
@@ -68,7 +84,38 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome "Ampliação do nº de startups ativas em todo o Estado"
 		canvas:prazo "médio"
 	]
-	
+	instance ExpansaoEstudantesBeneficiados : canvas:Resultado [
+		base:nome "Expansão do número de estudantes beneficiados com bolsas de estudo."
+		canvas:prazo "médio"
+	]
+	instance GarantiaVagasReservadas : canvas:Resultado [
+		base:nome "Garantia de todas as vagas reservadas para pessoas com deficiência e para mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência doméstica e familiar, assim como para professores em segunda licenciatura."
+		canvas:prazo "médio"
+	]
+	instance CrescMatriculasSTEM : canvas:Resultado [
+		base:nome "Crescimento da matrícula em cursos STEM e licenciaturas, fortalecendo áreas estratégicas."
+		canvas:prazo "médio"
+	]
+	instance ConsolidacaoReducaoEvasao : canvas:Resultado [
+		base:nome "Consolidação da redução da evasão estudantil, com aumento significativo de concluintes e formação de capital humano qualificado, alinhado às demandas do Estado e às áreas prioritárias (STEM, licenciaturas e cursos superiores de tecnologia)."
+		canvas:prazo "médio"
+	]
+	instance AumentoProfessoresConcluindo : canvas:Resultado [
+		base:nome "Aumento do número de professores concluindo segunda graduação em licenciaturas."
+		canvas:prazo "médio"
+	]
+	instance AumentoRetencaoTalentos : canvas:Resultado [
+		base:nome "Aumento da trabalhabilidade e retenção de talentos nas regiões de desenvolvimento onde o bolsista está inserido."
+		canvas:prazo "médio"
+	]
+	instance AumentoConcluintesRD : canvas:Resultado [
+		base:nome "Aumento do número de concluintes na respectiva região de desenvolvimento, matriculado na respectiva Autarquia."
+		canvas:prazo "médio"
+	]
+	instance FortalecimentoAcessoES : canvas:Resultado [
+		base:nome "Fortalecimento do acesso ao ensino superior, com maior ocupação das vagas disponíveis."
+		canvas:prazo "médio"
+	]
 	instance RES17 : canvas:Resultado [
 		base:nome "Evolução dos índices econômicos, sociais e ambientais do estado"
 		canvas:prazo "longo"
@@ -167,6 +214,30 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	]
 	instance RES41 : canvas:Resultado [
 		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
+		canvas:prazo "longo"
+	]
+	instance AltaOcupacaoVagas : canvas:Resultado [
+		base:nome "Sustentação de alta ocupação de vagas e baixa evasão, consolidando o impacto das bolsas na permanência estudantil."
+		canvas:prazo "longo"
+	]
+	instance FormacaoProfissionaisQuali : canvas:Resultado [
+		base:nome "Formação consistente de profissionais qualificados, contribuindo para o desenvolvimento científico, tecnológico, econômico e social de Pernambuco."
+		canvas:prazo "longo"
+	]
+	instance ConsolidacaoEstimuloLdos : canvas:Resultado [
+		base:nome "Consolidação do estímulo às licenciaturas, fortalecendo a formação de professores e melhorando a qualidade da educação básica no estado."
+		canvas:prazo "longo"
+	]
+	instance ContinuidadeIncentivoSTEM : canvas:Resultado [
+		base:nome "Continuidade do incentivo aos cursos STEM, priorizando áreas estratégicas para o desenvolvimento do Estado."
+		canvas:prazo "longo"
+	]
+	instance ImpactoSocialContrapartidas : canvas:Resultado [
+		base:nome "Impacto social das contrapartidas pelos bolsistas, promovendo atividades educativas, de extensão, científicas ou tecnológicas sob supervisão docente."
+		canvas:prazo "longo"
+	]
+	instance RetencaoTalendoRD : canvas:Resultado [
+		base:nome "Retenção do talento na região de desenvolvimento onde realizou a graduação."
 		canvas:prazo "longo"
 	]
 }

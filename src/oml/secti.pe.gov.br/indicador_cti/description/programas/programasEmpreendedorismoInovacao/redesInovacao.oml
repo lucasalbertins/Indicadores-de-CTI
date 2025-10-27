@@ -17,8 +17,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 setores, com o objetivo de impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		programa:possuiParceiros parceiroChave:Inovar-PE, parceiroChave:AGE, parceiroChave:Adepe
 		programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE4, fatorExterno:FE5, fatorExterno:FE6, 
-		fatorExterno:FE12, fatorExterno:FE18, fatorExterno:FE19, fatorExterno:FE20
-		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+		fatorExterno:ExpansaoDemanda, fatorExterno:FE18, fatorExterno:FE19, fatorExterno:FE20
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT6, saida:OUT7
 		programa:produzResultados resultado:RES6, resultado:RES7, resultado:RES8, resultado:RES9, resultado:RES15, resultado:RES16, 

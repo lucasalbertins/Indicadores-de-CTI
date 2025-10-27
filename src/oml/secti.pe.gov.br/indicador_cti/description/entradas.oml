@@ -3,7 +3,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entr
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
-	instance EN1 : canvas:Entrada [
+	instance OrcamentoEstadual : canvas:Entrada [
 		base:nome "Orçamento estadual"
 	]
 	instance EN2 : canvas:Entrada [
@@ -42,4 +42,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entr
 	instance EN13 : canvas:Entrada [
 		base:nome "Sistemas de monitoramento dos espaços/projetos"
 	]
+	instance RecursoFinanceiro : canvas:Entrada [
+	base:nome "dotação orçamentária estadual específica para concessão das bolsas; autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior"
+	]
+	instance RHSECTI : canvas:Entrada [
+	base:nome "Recurso Humano: equipe técnica responsável pela gestão do programa, apoio jurídico, administrativo e de comunicação; profissionais de tecnologia da informação para operação e manutenção do sistema de gerenciamento do PROUPE."
+	]
+	instance RHAutarquias : canvas:Entrada [
+	base:nome "Recursos Humanos Autarquias Municipais de Ensino Superior: equipe responsável pela inscrição, validação e acompanhamento dos bolsistas; professores orientadores das atividades de contrapartida educativa."
+	]
+	instance SistemaGerencimento : canvas:Entrada [
+	base:nome "Recursos da Informação: sistema de gerenciamento do PROUPE; responsável pelo controle das inscrições, resultados, contrapartida educativa e pagamentos."
+	]
+	
 }

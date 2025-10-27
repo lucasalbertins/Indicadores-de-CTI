@@ -36,20 +36,35 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 	instance FE11 : canvas:Oportunidade [
 		base:nome "Reconhecimento do potencial inovador e criativo  dos alunos da Escola Pública para resolução de problemas da sociedade "
 	]
+	instance ExpansaoDemanda : canvas:Oportunidade [
+	base:nome "Expansão da demanda por Ensino Superior no interior, ampliando alcance e impacto social do PROUPE."
+	]
+instance ValorizacaoAreasSTEM : canvas:Oportunidade [
+	base:nome "Valorização das áreas STEM e das licenciaturas, fortalecendo a relevância estratégica do Programa."
+	]
+instance IntegracaoPoliticasFederais : canvas:Oportunidade [
+	base:nome "Integração com políticas federais de educação e ciência, potencializando resultados e recursos."
+	]
+instance CrescimentoMercadoTrabalho : canvas:Oportunidade [
+	base:nome "Crescimento do mercado de trabalho qualificado, aumentando a empregabilidade dos bolsistas, principalmente nas áreas STEM."
+	]
+instance ReconhecimentoPublico : canvas:Oportunidade [
+	base:nome "Reconhecimento público e fortalecimento institucional, consolidando o PROUPE como política de referência."
+	]
 
-	instance FE12 : canvas:Ameaca [
+	instance CortesContingenciamento : canvas:Ameaca [
 		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
 	]
-	instance FE13 : canvas:Ameaca [
+	instance MercadoAquecido : canvas:Ameaca [
 		base:nome "Mercado de trabalho aquecido"
 	]
-	instance FE14 : canvas:Ameaca [
+	instance BaixaAtratividadeBolsas : canvas:Ameaca [
 		base:nome "Baixa atratividade das bolsas"
 	]
-	instance FE15 : canvas:Ameaca [
+	instance EstruturadeSuporte : canvas:Ameaca [
 		base:nome "Estrutura administrativa de suporte insuficiente"
 	]
-	instance FE16 : canvas:Ameaca [
+	instance EvasaoEstudantes : canvas:Ameaca [
 		base:nome "Evasão dos estudantes"
 	]
 	instance FE17 : canvas:Ameaca [
@@ -64,22 +79,35 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 	instance FE20 : canvas:Ameaca [
 		base:nome "Restrições apresentadas pelo arcabouço legal"
 	]
-	instance FE21 : canvas:Ameaca [
+	instance MorosidadeTED : canvas:Ameaca [
 		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED) com periodicidade anual"
 	]
-	instance FE22 : canvas:Ameaca [
+	instance EvasaoporTED : canvas:Ameaca [
 		base:nome "Evasão estudantil por lacunas de continuidade entre as celebrações de TED e lançamento de novos editais"
 	]
-	instance FE23 : canvas:Ameaca [
+	instance PerdadeAdesao : canvas:Ameaca [
 		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos"
 	]
-	instance FE24 : canvas:Ameaca [
+	instance FaltaRH : canvas:Ameaca [
 		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
 	]
-	instance FE25 : canvas:Ameaca [
+	instance FaltaPerenidade : canvas:Ameaca [
 		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
 	]
-	instance FE26 : canvas:Ameaca [
+	instance FaltaPriorizacao : canvas:Ameaca [
 		base:nome "Falta de priorização da política de estímulo a STEM+C em mudanças de gestão"
+	]
+	instance ValidacaoInscricoes : canvas:Ameaca [
+	base:nome "Validação equivocada das inscrições pelas Autarquias Municipais de Ensino Superior, sem observância dos requisitos legais, o que pode gerar questionamentos jurídicos e comprometer a credibilidade do Programa."
+	]
+	
+	instance DificuldadeCumprimentoProporcaoLegal : canvas:Ameaca [
+	base:nome "Dificuldades no cumprimento da proporção legal prevista na Lei nº 17.945/2022, que estabelece, prioritariamente: 70% das bolsas para estudantes com renda per capita de até 1,5 salário-mínimo; 30% das bolsas para estudantes com renda per capita entre 1,5 e 4 salários-mínimos. Esse cenário levou a uma distribuição em que o maior percentual de bolsas não é destinado a estudantes matriculados em Licenciaturas e cursos STEM (Ciência, Tecnologia, Engenharia e Matemática)."
+	]
+instance DescumprimentoContrapartida : canvas:Ameaca [
+	base:nome "Descumprimento da contrapartida obrigatória por parte de bolsistas que abandonam, desistem ou trancam o curso, dificultando o retorno social esperado do Programa em atividades educativas, de extensão ou científicas e tecnológicas, podendo gerar passivos de processos administrativos."
+	]
+instance ProblemasSistemaGerenciamento : canvas:Ameaca [
+	base:nome "Problemas de gestão com o sistema de gerenciamento do PROUPE, limitando a execução e acompanhamento do programa pela SECTI e gerando riscos de continuidade, segurança e sustentabilidade do PROUPE, diante da dificuldade de contratação de recursos humanos com habilidades e competências específicas para atendimento às peculiaridades do sistema."
 	]
 }

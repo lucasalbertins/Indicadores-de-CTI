@@ -24,34 +24,95 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 	instance AC7 : canvas:AtividadeChave [
 		base:nome "Avaliação do programa"
 	]
-	instance AC8 : canvas:AtividadeChave [
+	instance CelebracaoTED : canvas:AtividadeChave [
 		base:nome "Celebração de TED para infraestrutura (SECTI, SEE, FACEPE)"
 	]
-	instance AC9 : canvas:AtividadeChave [
+	instance LancamentoEdital : canvas:AtividadeChave [
 		base:nome "Lançamento de Edital de Bolsas e Auxílios"
 	]
-	instance AC10 : canvas:AtividadeChave [
+	instance LicitacaoEquipamentos : canvas:AtividadeChave [
 		base:nome "Procedimento de licitação para equipamentos"
 	]
-	instance AC11 : canvas:AtividadeChave [
+	instance ImplantacaoECRIA : canvas:AtividadeChave [
 		base:nome "Implantação e Inauguração dos Espaços CRIA nas diferentes regiões de desenvolvimento do estado"
 	]
-	instance AC12 : canvas:AtividadeChave [
+	instance MonitoramentoeAvaliacao : canvas:AtividadeChave [
 		base:nome "Monitoramento e avaliação dos projetos"
 	]
-	instance AC13 : canvas:AtividadeChave [
+	instance GestaoCicloEdital : canvas:AtividadeChave [
 		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
 	]
-	instance AC14 : canvas:AtividadeChave [
+	instance ManutencaoEquipamentos : canvas:AtividadeChave [
 		base:nome "Manutenção dos equipamentos e infraestrutura do ECRIA"
 	]
-	instance AC15 : canvas:AtividadeChave [
+	instance AprimoramentoTecnologico : canvas:AtividadeChave [
 		base:nome "Aprimoramento tecnológico dos ECRIA"
 	]
-	instance AC16 : canvas:AtividadeChave [
+	instance AcoesSensibilizacao : canvas:AtividadeChave [
 		base:nome "Ações de sensibilização e mobilização nas escolas"
 	]
-	instance AC17 : canvas:AtividadeChave [
+	instance FormacaoProfessores : canvas:AtividadeChave [
 		base:nome "Formação dos professores responsáveis"
 	]
+	instance SolicitacaoDisponibilidadeOrcamentaria : canvas:AtividadeChave [
+	base:nome "Solicitação e emissão da Declaração de Disponibilidade Orçamentária (DDO), garantindo recursos para execução do programa."
+]
+	instance AutorizacaoCamaraProgramacaoFinanceira : canvas:AtividadeChave [
+		base:nome "Autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior."
+	]
+	instance InscricaoCandidatos : canvas:AtividadeChave [
+		base:nome "Inscrição dos candidatos e entrega de documentos nas respectivas Autarquias de Ensino Superior."
+	]
+	instance ValidacaoInscricoes : canvas:AtividadeChave [
+		base:nome "Validação das inscrições pelas Autarquias Municipais de Ensino Superior via sistema de gerenciamento do PROUPE."
+	]
+	instance SelecaoContemplados : canvas:AtividadeChave [
+		base:nome "Seleção dos contemplados de acordo com a nota do ENEM e reserva de vagas pela SECTI."
+	]
+	instance DivulgacaoResultado : canvas:AtividadeChave [
+		base:nome "Divulgação do resultado preliminar."
+	]
+	instance ApresentacaoRecursos : canvas:AtividadeChave [
+		base:nome "Período para apresentação de recursos pelos candidatos."
+	]
+	instance PrimeiraConvocacao : canvas:AtividadeChave [
+		base:nome "Publicação da primeira convocação."
+	]
+	instance DivulgarListasRemanejamento : canvas:AtividadeChave [
+		base:nome "Divulgação das listas de remanejamento, conforme disponibilidade de vagas."
+	]
+	instance AssinaturaObrigatoria : canvas:AtividadeChave [
+		base:nome "Assinatura obrigatória pelo candidato em cada etapa de convocação após cada etapa de convocação."
+	]
+	instance ImplementacaoBolsas : canvas:AtividadeChave [
+		base:nome "Implementação das bolsas."
+	]
+	instance RepasseFinanceiro : canvas:AtividadeChave [
+		base:nome "Repasse financeiro mensal às Autarquias Municipais de Ensino Superior para garantir a efetivação das bolsas de estudo."
+	]
+	instance CumprimentoPelosBolsistas : canvas:AtividadeChave [
+		base:nome "Cumprimento, pelos bolsistas, de atividades educativas, de extensão, científicas ou tecnológicas, sob supervisão docente, em escolas públicas municipais ou estaduais, ou em instituições públicas ou privadas."
+	]
+	instance AcompanhamentoAtividadesContrapartida : canvas:AtividadeChave [
+		base:nome "Registro e acompanhamento das atividades de contrapartida pelas Autarquias Municipais de Ensino Superior, com inserção das informações no sistema de gerenciamento do PROUPE."
+	]
+	instance ValidacaoCumprimentoContrapartida : canvas:AtividadeChave [
+		base:nome "Validação pela SECTI do cumprimento da contrapartida como condição para manutenção e renovação da bolsa."
+	]
+	instance AcompanhamentoPeloSistema : canvas:AtividadeChave [
+		base:nome "Acompanhamento contínuo da execução do PROUPE por meio do sistema de gerenciamento, incluindo controle das bolsas ativas, repasses financeiros, cumprimento da contrapartida educativa, controle de desempenho acadêmico e índices de evasão."
+	]
+	instance VerificacaoMensal : canvas:AtividadeChave [
+		base:nome "Verificação mensal das informações prestadas pelas Autarquias Municipais de Ensino Superior, assegurando conformidade com a legislação e os critérios do edital."
+	]
+	instance EmissaoRelatoriosTecnicos : canvas:AtividadeChave [
+		base:nome "Emissão de relatórios técnicos e financeiros para avaliação da execução do programa e apoio à tomada de decisão."
+	]
+	instance AvaliacaoImpactoPrograma : canvas:AtividadeChave [
+		base:nome "Avaliação do impacto do programa na ampliação do acesso ao ensino superior, na redução das desigualdades educacionais e na formação de profissionais qualificados nas regiões atendidas."
+	]
+	instance ParceriasEstrategicas : canvas:AtividadeChave [
+		base:nome "Parcerias estratégicas com setor privado e sociedade civil, ampliando impacto em extensão, inovação e trabalhabilidade."
+	]
+	
 }

@@ -42,4 +42,55 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 	instance OUT13 : canvas:Saida [
 		base:nome "Portfólios de projetos inovadores, empreendedores e inclusivos, protótipos, produtos e soluções inovadoras desenvolvidas nos ECRIA"
 	]
+	instance DDO : canvas:Saida [
+	base:nome "Declaração de Disponibilidade Orçamentária (DDO) emitida e aprovada."
+	]
+	instance RecursosOrcamentarios : canvas:Saida [
+		base:nome "Recursos orçamentários assegurados e liberados para execução do programa."
+	]
+	instance FluxoFinanceiro : canvas:Saida [
+		base:nome "Fluxo financeiro regular estabelecido para repasse mensal às Autarquias Municipais de Ensino Superior."
+	]
+	instance EditalSelecao : canvas:Saida [
+		base:nome "Edital de seleção publicado e amplamente divulgado."
+	]
+	instance InscricoesValidadas : canvas:Saida [
+		base:nome "Inscrições de candidatos realizadas e validadas pelas Autarquias Municipais de Ensino Superior."
+	]
+	instance BaseDadosCandidatos : canvas:Saida [
+		base:nome "Base de dados de candidatos, organizada e registrada no sistema de gerenciamento do PROUPE."
+	]
+	instance ResultadoPreliminar : canvas:Saida [
+		base:nome "Resultado preliminar e listas de convocação divulgadas publicamente, garantindo transparência e ampla concorrência."
+	]
+	instance AnaliseRecursos : canvas:Saida [
+		base:nome "Análise de recursos analisados e respondidos dentro do prazo."
+	]
+	instance ListasRemanejamento : canvas:Saida [
+		base:nome "Listas de remanejamento publicadas até o preenchimento total das vagas ou convocação de todos os candidatos aptos."
+	]
+	instance TermosCompromisso : canvas:Saida [
+		base:nome "Termos de compromisso assinados e enviados digitalmente para SECTI."
+	]
+	instance BolsasImplementadas : canvas:Saida [
+		base:nome "Bolsas implementadas e repasses mensais efetivados às Autarquias Municipais de Ensino Superior."
+	]
+	instance ControleFinanceiroAcademico : canvas:Saida [
+		base:nome "Controle financeiro e acadêmico dos bolsistas atualizado no sistema de gerenciamento do PROUPE."
+	]
+	instance AtvdEducativasCientificas : canvas:Saida [
+		base:nome "Atividades educativas, científicas, de extensão ou tecnológicas realizadas sob supervisão docente."
+	]
+	instance RelatoriosContrapartida : canvas:Saida [
+		base:nome "Relatórios de contrapartida validados pelas Autarquias e registrados no sistema de gerenciamento do PROUPE, semestralmente."
+	]
+	instance RelatoriosMensaisSemestraisAnuais : canvas:Saida [
+		base:nome "Relatórios mensais, semestrais e anuais de desempenho orçamentário e financeiro do PROUPE."
+	]
+	instance PainelAcompanhamentoAtualizado : canvas:Saida [
+		base:nome "Painel de acompanhamento atualizado no sistema de gerenciamento do PROUPE, com dados de bolsas, contrapartidas e indicadores de desvinculação do programa (abandono ou conclusão)."
+	]
+	instance AvaliacaoImpactoPrograma : canvas:Saida [
+		base:nome "Avaliação de impacto do programa publicada periodicamente, evidenciando resultados e benefícios sociais, educacionais e econômicos."
+	]
 }

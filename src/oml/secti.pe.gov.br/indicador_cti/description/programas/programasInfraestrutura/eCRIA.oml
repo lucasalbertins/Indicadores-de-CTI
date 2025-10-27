@@ -17,11 +17,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 estadual de ensino médio e técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores."
 		programa:possuiParceiros parceiroChave:SEE, parceiroChave:FACEPE, parceiroChave:ETEs, parceiroChave:EREMs, 
 		parceiroChave:SECTI-PE, parceiroChave:SAD
-		programa:condicionadoPor fatorExterno:FE12, fatorExterno:FE13, fatorExterno:FE14, fatorExterno:FE15, fatorExterno:FE16, 
-		fatorExterno:FE21, fatorExterno:FE22, fatorExterno:FE23, fatorExterno:FE24, fatorExterno:FE25, fatorExterno:FE26
-		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN11, entrada:EN12, entrada:EN13
-		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, 
-		atividadeChave:AC13, atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17
+		programa:condicionadoPor fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, fatorExterno:EvasaoEstudantes, 
+		fatorExterno:MorosidadeTED, fatorExterno:EvasaoporTED, fatorExterno:PerdadeAdesao, fatorExterno:FaltaRH, fatorExterno:FaltaPerenidade, fatorExterno:FaltaPriorizacao
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN11, entrada:EN12, entrada:EN13
+		programa:executa atividadeChave:CelebracaoTED, atividadeChave:LancamentoEdital, atividadeChave:LicitacaoEquipamentos, atividadeChave:ImplantacaoECRIA, atividadeChave:MonitoramentoeAvaliacao, 
+		atividadeChave:GestaoCicloEdital, atividadeChave:ManutencaoEquipamentos, atividadeChave:AprimoramentoTecnologico, atividadeChave:AcoesSensibilizacao, atividadeChave:FormacaoProfessores
 		programa:geraSaidas saida:OUT8, saida:OUT9, saida:OUT10, saida:OUT11, saida:OUT12, saida:OUT13
 		programa:produzResultados resultado:RES25, resultado:RES26, resultado:RES27, resultado:RES28, resultado:RES29, resultado:RES30, 
 		resultado:RES31, resultado:RES32, resultado:RES33, resultado:RES34, resultado:RES35, resultado:RES36, resultado:RES37, 
