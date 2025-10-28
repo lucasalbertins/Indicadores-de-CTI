@@ -7,7 +7,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 		base:nome "Edital gerenciado com sucesso"
 	]
 	instance OUT2 : canvas:Saida [
-		base:nome "Bolsas implementadas e pagas de acordo com o planejamento"
+		base:nome "Bolsas/subvenções implementadas e pagas de acordo com o planejamento"
 	]
 	instance OUT3 : canvas:Saida [
 		base:nome "Relatórios parciais e final de acompanhamento"

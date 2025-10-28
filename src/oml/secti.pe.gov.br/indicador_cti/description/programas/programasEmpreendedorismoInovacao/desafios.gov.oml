@@ -1,0 +1,62 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/desafios.gov#> as desafios.gov {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance Desafios.gov : programa:programaCTI [
+		base:nome "Programa: Desafios.gov"
+		base:descricao "Foi criado com o objetivo de apoiar micro e pequenas empresas (especialmente 
+startups) a desenvolverem soluções inovadoras para desafios da gestão pública do estado de Pernambuco"
+		programa:possuiParceiros parceiroChave:Inovar-PE, parceiroChave:AGE, parceiroChave:OrgaosPublicos, 
+		parceiroChave:EmpresasIntegrantes, parceiroChave:AmbientesInovacao
+		programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE5, fatorExterno:FE12, 
+		fatorExterno:FE21, fatorExterno:FE22
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN4, 
+		entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT6, saida:OUT7
+		programa:produzResultados resultado:RES42, resultado:RES43, resultado:RES44, resultado:RES45, 
+		resultado:RES46, resultado:RES17
+		programa:direcionadoA publicoAlvo:PA6, publicoAlvo:PA7, publicoAlvo:PA8, publicoAlvo:PA11, 
+		publicoAlvo:PA12, publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15, publicoAlvo:PA16, 
+		publicoAlvo:PA17, publicoAlvo:PA18, publicoAlvo:PA19, publicoAlvo:PA20
+		programa:buscaAtingir1 OBJGeral
+		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
+		OBJEspecifico5, OBJEspecifico6
+	]
+	
+	instance OBJGeral : canvas:ObjetivoGeral [
+		base:nome "Apoiar MPEs pernambucanas em projetos de desenvolvimento e implantação de produtos, 
+serviços e/ou processos inovadores que contemplem desafios de órgãos públicos do Estado de Pernambuco"
+	]
+	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o desenvolvimento de projetos de PD&I aplicados a desafios de órgãos 
+públicos do Estado de Pernambuco"
+	]
+	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
+		base:nome "Induzir o desenvolvimento de soluções inovadoras socialmente relevantes"
+	]
+	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a consolidação de empresas pernambucanas de base tecnológica especializadas 
+em soluções de aprimoramento dos serviços públicos (govtechs), inclusive no interior do Estado"
+	]
+	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar a formação de parcerias entre o setor público e o setor privado"
+	]
+	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a transferência tecnológica e de conhecimentos"
+	]
+	instance OBJEspecifico6 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de 
+soluções inovadoras"
+	]
+}

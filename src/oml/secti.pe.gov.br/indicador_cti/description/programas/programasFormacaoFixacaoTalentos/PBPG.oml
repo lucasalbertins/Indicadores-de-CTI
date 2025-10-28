@@ -1,4 +1,4 @@
-description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/pBPG#> as pBPG {
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG#> as PBPG {
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada

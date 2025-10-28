@@ -39,6 +39,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 	instance ASSIESPE : canvas:ParceiroChave [
 		base:nome "Associação das Instituições Municipais de Ensino Superior de Pernambuco"
 	]
+	
 	// Autarquias como agrupador conceitual
 	instance AutarquiasMunicipais : canvas:ParceiroChave [
 		base:nome "Autarquias Municipais de Ensino Superior do estado de Pernambuco"
@@ -79,4 +80,21 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 		instance AEDS : canvas:ParceiroChave [
 			base:nome "Autarquia Educacional de Salgueiro (AEDS)"
 		]
+	
+	// Parceiros-chave mais gerais
+	instance OrgaosPublicos : canvas:ParceiroChave [
+		base:nome "Órgãos públicos integrantes que são apoiadores"
+	]
+	instance EmpresasIntegrantes : canvas:ParceiroChave [
+		base:nome "Empresas integrantes que são apoiadoras"
+	]
+	instance AmbientesInovacao : canvas:ParceiroChave [
+		base:nome "Ambientes promotores de inovação"
+	]
+	instance ICTsIntegrantes : canvas:ParceiroChave [
+		base:nome "ICTs integrantes que são apoiadoras"
+	]
+	instance FundacoesApoio : canvas:ParceiroChave [
+		base:nome "Fundações de Apoio credenciadas junto às ICTs pernambucanas"
+	]
 }

@@ -7,7 +7,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
 	]
 	instance FE2 : canvas:Oportunidade [
-		base:nome "Maior reconhecimento da importância das atividades de CT&I para as atividades produtivas e sociedade no geral"
+		base:nome "Maior reconhecimento da importância das atividades de CT&I/PD&I para as atividades produtivas e sociedade no geral"
 	]
 	instance FE3 : canvas:Oportunidade [
 		base:nome "Aprimoramento do arcabouço legal de inovação"
@@ -36,22 +36,32 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 	instance FE11 : canvas:Oportunidade [
 		base:nome "Reconhecimento do potencial inovador e criativo  dos alunos da Escola Pública para resolução de problemas da sociedade "
 	]
+	instance FE12 : canvas:Oportunidade [
+		base:nome "Projeção do Estado quanto ao nº de empresas pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos"
+	]
+	instance FE13 : canvas:Oportunidade [
+		base:nome "Crescente busca por soluções tecnológicas, sejam por empresas, cooperativas, órgãos 
+de governo, associações ou demais organizações do terceiro setor"
+	]
+	instance FE14 : canvas:Oportunidade [
+		base:nome "Crescente busca pela ampliação da competitividade das empresas nos mercados em que 
+atuam"
+	]
 	instance ExpansaoDemanda : canvas:Oportunidade [
 	base:nome "Expansão da demanda por Ensino Superior no interior, ampliando alcance e impacto social do PROUPE."
 	]
-instance ValorizacaoAreasSTEM : canvas:Oportunidade [
+	instance ValorizacaoAreasSTEM : canvas:Oportunidade [
 	base:nome "Valorização das áreas STEM e das licenciaturas, fortalecendo a relevância estratégica do Programa."
 	]
-instance IntegracaoPoliticasFederais : canvas:Oportunidade [
+	instance IntegracaoPoliticasFederais : canvas:Oportunidade [
 	base:nome "Integração com políticas federais de educação e ciência, potencializando resultados e recursos."
 	]
-instance CrescimentoMercadoTrabalho : canvas:Oportunidade [
+	instance CrescimentoMercadoTrabalho : canvas:Oportunidade [
 	base:nome "Crescimento do mercado de trabalho qualificado, aumentando a empregabilidade dos bolsistas, principalmente nas áreas STEM."
 	]
-instance ReconhecimentoPublico : canvas:Oportunidade [
+	instance ReconhecimentoPublico : canvas:Oportunidade [
 	base:nome "Reconhecimento público e fortalecimento institucional, consolidando o PROUPE como política de referência."
 	]
-
 	instance CortesContingenciamento : canvas:Ameaca [
 		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
 	]
@@ -71,13 +81,20 @@ instance ReconhecimentoPublico : canvas:Oportunidade [
 		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
 	]
 	instance FE18 : canvas:Ameaca [
-		base:nome "Envolvimento tímido do setor empresarial"
+		base:nome "Envolvimento tímido do setor empresarial, cooperativas, órgãos de governo, 
+associações ou demais organizações do terceiro setor"
 	]
 	instance FE19 : canvas:Ameaca [
 		base:nome "Prazo insuficiente para tornar as redes autossustentáveis"
 	]
 	instance FE20 : canvas:Ameaca [
 		base:nome "Restrições apresentadas pelo arcabouço legal"
+	]
+	instance FE21 : canvas:Ameaca [
+		base:nome "Indisponibilidade do orçamento estadual"
+	]
+	instance FE22 : canvas:Ameaca [
+		base:nome "Desconhecimento das oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de soluções inovadoras"
 	]
 	instance MorosidadeTED : canvas:Ameaca [
 		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED) com periodicidade anual"
@@ -100,14 +117,13 @@ instance ReconhecimentoPublico : canvas:Oportunidade [
 	instance ValidacaoInscricoes : canvas:Ameaca [
 	base:nome "Validação equivocada das inscrições pelas Autarquias Municipais de Ensino Superior, sem observância dos requisitos legais, o que pode gerar questionamentos jurídicos e comprometer a credibilidade do Programa."
 	]
-	
 	instance DificuldadeCumprimentoProporcaoLegal : canvas:Ameaca [
 	base:nome "Dificuldades no cumprimento da proporção legal prevista na Lei nº 17.945/2022, que estabelece, prioritariamente: 70% das bolsas para estudantes com renda per capita de até 1,5 salário-mínimo; 30% das bolsas para estudantes com renda per capita entre 1,5 e 4 salários-mínimos. Esse cenário levou a uma distribuição em que o maior percentual de bolsas não é destinado a estudantes matriculados em Licenciaturas e cursos STEM (Ciência, Tecnologia, Engenharia e Matemática)."
 	]
-instance DescumprimentoContrapartida : canvas:Ameaca [
+	instance DescumprimentoContrapartida : canvas:Ameaca [
 	base:nome "Descumprimento da contrapartida obrigatória por parte de bolsistas que abandonam, desistem ou trancam o curso, dificultando o retorno social esperado do Programa em atividades educativas, de extensão ou científicas e tecnológicas, podendo gerar passivos de processos administrativos."
 	]
-instance ProblemasSistemaGerenciamento : canvas:Ameaca [
+	instance ProblemasSistemaGerenciamento : canvas:Ameaca [
 	base:nome "Problemas de gestão com o sistema de gerenciamento do PROUPE, limitando a execução e acompanhamento do programa pela SECTI e gerando riscos de continuidade, segurança e sustentabilidade do PROUPE, diante da dificuldade de contratação de recursos humanos com habilidades e competências específicas para atendimento às peculiaridades do sistema."
 	]
 }

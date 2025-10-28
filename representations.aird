@@ -31,8 +31,13 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/metricas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/fontesInformacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/redesInovacao.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/pBPG.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/desafios.gov.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETSuperior.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETSolucoes.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETResiTec.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

@@ -4,7 +4,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
 	instance PA1 : canvas:PublicoAlvo [
-		base:nome "Estudantes de pós-graduação stricto sensu"
+		base:nome "Estudantes de pós-graduação"
+		canvas:tipo "direto"
+	]
+	instance PA26 : canvas:PublicoAlvo [
+		base:nome "Estudantes de graduação"
 		canvas:tipo "direto"
 	]
 	instance PA2 : canvas:PublicoAlvo [
@@ -41,6 +45,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 	]
 	instance PA10 : canvas:PublicoAlvo [
 		base:nome "Professores da rede estadual de ensino"
+		canvas:tipo "direto"
+	]
+	instance PA27 : canvas:PublicoAlvo [
+		base:nome "Cooperativas e associações"
 		canvas:tipo "direto"
 	]
 	
@@ -104,9 +112,12 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 		base:nome "Comunidades Quilombolas"
 		canvas:tipo "indireto"
 	]
+	instance PA28 : canvas:PublicoAlvo [
+		base:nome "Fundações de Apoio credenciadas junto às ICTs pernambucanas"
+		canvas:tipo "indireto"
+	]
 	instance EstudantesdasAutarquias : canvas:PublicoAlvo [
 	base:nome "Estudantes das Autarquias Municipais de Ensino Superior do Estado de Pernambuco, não portadores de diploma de curso superior, cuja renda familiar mensal per capita não exceda o valor de 1,5 (um e meio) salário mínimo, ressalvado os casos de complementação pedagógica para bacharelado e segunda licenciatura em áreas afins para professores do Ensino Fundamental ou Médio."
 	canvas:tipo "direto"
 ]
-	
 }

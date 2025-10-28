@@ -39,6 +39,16 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome "Ampliação do nº de novos proponentes a editais de CT&I"
 		canvas:prazo "curto"
 	]
+	instance RES42 : canvas:Resultado [
+		base:nome "Ampliação do nº de projetos de PD&I ativos que envolvam órgãos públicos da esfera 
+estadual em parceria com empresas pernambucanas de base tecnológica"
+		canvas:prazo "curto"
+	]
+	instance RES47 : canvas:Resultado [
+		base:nome "Ampliação do nº de participantes certificados em cursos de curta duração com enfoque 
+em desafios tecnológicos"
+		canvas:prazo "curto"
+	]
 	instance AumentoEstudantesMatriculados : canvas:Resultado [
 	base:nome "Aumento do número de estudantes de baixa renda matriculados em cursos de graduação das Autarquias Municipais de Ensino Superior de Pernambuco por meio da concessão de bolsas de estudo, integrais ou parciais. Esse crescimento inclui a ampliação da matrícula de pessoas com deficiência e de mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência doméstica e familiar, bem como o aumento do número de professores matriculados para a realização da segunda graduação em licenciaturas."
 	canvas:prazo "curto"
@@ -82,6 +92,24 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	]
 	instance RES16 : canvas:Resultado [
 		base:nome "Ampliação do nº de startups ativas em todo o Estado"
+		canvas:prazo "médio"
+	]
+	instance RES43 : canvas:Resultado [
+		base:nome "Absorção de novas soluções por empresas, cooperativas, órgãos de governo, associações 
+ou demais organizações do terceiro setor integrantes dos projetos apoiados"
+		canvas:prazo "médio"
+	]
+	instance RES44 : canvas:Resultado [
+		base:nome "Ampliação do nº de patentes depositadas e programas de softwares registrados"
+		canvas:prazo "médio"
+	]
+	instance RES48 : canvas:Resultado [
+		base:nome "Ampliação do nº de participantes certificados em jornadas de extensão tecnológica"
+		canvas:prazo "médio"
+	]
+	instance RES50 : canvas:Resultado [
+		base:nome "Ampliação do nº de pós-graduados formados no Estado, em nível de pós-graduação lato 
+sensu"
 		canvas:prazo "médio"
 	]
 	instance ExpansaoEstudantesBeneficiados : canvas:Resultado [
@@ -214,6 +242,26 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	]
 	instance RES41 : canvas:Resultado [
 		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
+		canvas:prazo "longo"
+	]
+	instance RES45 : canvas:Resultado [
+		base:nome "Ampliação do nº de compras públicas de soluções inovadoras realizadas por órgãos 
+públicos do Estado de Pernambuco"
+		canvas:prazo "longo"
+	]
+	instance RES46 : canvas:Resultado [
+		base:nome "Ampliação do nº de empregos, do portfólio e do faturamento obtido por empresas 
+pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos, inclusive no interior"
+		canvas:prazo "longo"
+	]
+	instance RES49 : canvas:Resultado [
+		base:nome "Ampliação do nº de empregos e do faturamento obtido por empresas pernambucanas de 
+base tradicional, com vistas ao fortalecimento dos arranjos produtivos locais do Estado;"
+		canvas:prazo "longo"
+	]
+	instance RES51 : canvas:Resultado [
+		base:nome "Empregabilidade de participantes em empresas integrantes dos projetos apoiados ou em 
+outras empresas aderentes às temáticas dos projetos"
 		canvas:prazo "longo"
 	]
 	instance AltaOcupacaoVagas : canvas:Resultado [
