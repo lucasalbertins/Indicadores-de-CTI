@@ -228,6 +228,30 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome "Cooperação científica e tecnológica nacional e internacional incrementado"
 		canvas:prazo "curto"
 	]
+	instance RES45 : canvas:Resultado [
+		base:nome "Aumento do número de orientações, nos níveis de graduação e pós-graduação em pesquisa e inovação nas ICTs fora da RMR"
+		canvas:prazo "curto"
+	]
+	instance RES46 : canvas:Resultado [
+		base:nome "Incremento de grupos de pesquisa atuantes nas ICTs fora da RMR."
+		canvas:prazo "curto"
+	]
+	instance RES47 : canvas:Resultado [
+		base:nome "Aumento da Proteção intelectual do conhecimento gerado por meio de patentes depositadas e programas de software registrados fora da RMR."
+		canvas:prazo "curto"
+	]
+	instance RES48 : canvas:Resultado [
+		base:nome "Aumento da captação de recursos através de editais de fomento, cooperações e convênios com ICTs e empresas."
+		canvas:prazo "curto"
+	]
+	instance RES49 : canvas:Resultado [
+		base:nome "Aumento da participação em sociedades científicas, conselhos, editoriais de periódicos no país e no exterior."
+		canvas:prazo "curto"
+	]
+	instance RES50 : canvas:Resultado [
+		base:nome "Fortalecimento da manutenção e estabilidade do pesquisador fora da RMR."
+		canvas:prazo "longo"
+	]
 	instance AltaOcupacaoVagas : canvas:Resultado [
 		base:nome "Sustentação de alta ocupação de vagas e baixa evasão, consolidando o impacto das bolsas na permanência estudantil."
 		canvas:prazo "longo"

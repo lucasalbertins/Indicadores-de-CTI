@@ -14,6 +14,44 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	instance BPP : programa:programaCTI [
 		
-		base:nome "Programa:Programa de Bolsas Pernambucanas de Produtividade"
+		base:nome "Programa:Programa de Bolsas Pernambucana de Produtividade"
+		base:descricao "O BPP (Programa de Bolsas Pernambucana de Produtividade) tem como finalidade apoiar pesquisadores(as) residentes e atuantes no Estado de Pernambuco, com notável produção científica, tecnológica e/ou de inovação, por meio da concessão de Auxílios (adicional de bancada) e Bolsas de Produtividade em Pesquisa. Essa iniciativa visa incrementar a produção científica, tecnológica e inovadora de qualidade."
+		programa:possuiParceiros parceiroChave:FACEPE, parceiroChave:ICT, parceiroChave:CAPES, parceiroChave:AGINT
+		programa:condicionadoPor fatorExterno:FE1, fatorExterno:FE2, fatorExterno:CortesContingenciamento, fatorExterno:EvasaoEstudantes, fatorExterno:EstruturadeSuporte		
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN3, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN9 
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7	
+		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT6, saida:OUT7
+		programa:produzResultados resultado:RES2, resultado:RES44, resultado:RES45, resultado:RES46, resultado:RES47, resultado:RES4, resultado:RES44, resultado:RES48, resultado:RES49, resultado:RES12,resultado:RES13, resultado:RES14, resultado:RES17, resultado:RES18, resultado:RES19, resultado:RES50
+		programa:direcionadoA publicoAlvo:PA27, publicoAlvo:PA3, publicoAlvo:PA28, publicoAlvo:PA11, publicoAlvo:PA12, publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15
+		programa:buscaAtingir1 OBJGeral
+		programa:buscaAtingir2 DesenvolvimentoCientificoPE, FortacelerGruposPesquisa, FomentarPesquisaPE, EstimularCooperacao, AmpliarCompetitividade, ImpulsionarDesenvolvimento, EstimularParticipacao
+	]
+	
+	instance OBJGeral : canvas:ObjetivoGeral [
+		base:nome "Apoiar pesquisadores(as) residentes e atuantes fora da Região Metropolitana do Recife, que contribuam para o incremento da produção científica, tecnológica e inovadora de qualidade."
+	]
+	instance DesenvolvimentoCientificoPE : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para o desenvolvimento científico tecnológico ou de inovação no estado fora da RMR."
+	]
+	instance FortacelerGruposPesquisa : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para fortalecer e/ou nuclear os grupos de pesquisa atuantes no estado fora da RMR."
+	]
+	instance FomentarPesquisaPE : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar o desenvolvimento de  pesquisa de excelência no estado fora da RMR."
+	]
+	instance FormacaoRH : canvas:ObjetivoEspecifico [
+		base:nome "Contribuição para formação de recursos humanos no estado fora da RMR."
+	]
+	instance EstimularCooperacao : canvas:ObjetivoEspecifico [
+		base:nome "Estimular cooperações científicas e tecnológicas com grupos de pesquisa ou instituições no país ou no exterior."
+	]
+	instance AmpliarCompetitividade : canvas:ObjetivoEspecifico [
+		base:nome "Ampliar a competitividade do pesquisador para além do âmbito local."
+	]
+	instance ImpulsionarDesenvolvimento : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar o desenvolvimento equitativo do conhecimento em todo estado de Pernambuco."
+	]
+	instance EstimularParticipacao : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a participação em sociedades científicas, conselhos, editoriais de periódicos no país e no exterior."
 	]
 }
