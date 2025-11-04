@@ -43,7 +43,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entr
 		base:nome "Sistemas de monitoramento dos espaços/projetos"
 	]
 	instance RecursoFinanceiro : canvas:Entrada [
-	base:nome "dotação orçamentária estadual específica para concessão das bolsas; autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior"
+	base:nome "Dotação orçamentária estadual específica para concessão das bolsas; autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior"
 	]
 	instance RHSECTI : canvas:Entrada [
 	base:nome "Recurso Humano: equipe técnica responsável pela gestão do programa, apoio jurídico, administrativo e de comunicação; profissionais de tecnologia da informação para operação e manutenção do sistema de gerenciamento do PROUPE."

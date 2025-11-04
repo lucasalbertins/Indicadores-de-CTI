@@ -216,6 +216,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
 		canvas:prazo "longo"
 	]
+	instance AumentoProducaoLabs : canvas:Resultado [
+		base:nome " Aumento da produção científica e tecnológica a partir dos laboratórios contemplados."
+		canvas:prazo "longo"
+	]
+	instance AumentoCapacidadeResp : canvas:Resultado [
+		base:nome "Ampliação da capacidade de resposta a desafios estratégicos e problemas urgentes para o estado de Pernambuco (ex: mudanças climáticas, Zika, derramamento de petróleo, Covid-19)."
+		canvas:prazo "longo"
+	]
 	instance RES42 : canvas:Resultado [
 		base:nome "Aumento do número de trabalhos de IC, TCC, extensão e inovação (co)orientados pelo bolsista BFP"
 		canvas:prazo "curto"
@@ -275,5 +283,21 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	instance RetencaoTalendoRD : canvas:Resultado [
 		base:nome "Retenção do talento na região de desenvolvimento onde realizou a graduação."
 		canvas:prazo "longo"
+	]
+	instance InfraestruturaAprimorada : canvas:Resultado [
+		base:nome "Infraestrutura de pesquisa aprimorada a partir dos laboratórios multiusuários e acervos científicos recuperados, implantados, mantidos e operacionais em Pernambuco"
+		canvas:prazo "curto"
+	]
+	instance AumentoServicos : canvas:Resultado [
+		base:nome "Aumento no acesso a serviços especializados e acervos para a comunidade científica e o setor produtivo"
+		canvas:prazo "curto"
+	]
+	instance ConsolidacaoRedes : canvas:Resultado [
+		base:nome "Consolidação de redes interlaboratoriais promovendo a colaboração e o compartilhamento de recursos."
+		canvas:prazo "curto"
+	]
+	instance PlanejamentoeSustentabilidade : canvas:Resultado [
+		base:nome "Planejamento e sustentabilidade financeira e da gestão dos laboratórios."
+		canvas:prazo "curto"
 	]
 }

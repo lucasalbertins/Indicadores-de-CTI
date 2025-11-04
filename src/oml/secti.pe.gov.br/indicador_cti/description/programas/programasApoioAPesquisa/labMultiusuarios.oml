@@ -1,2 +1,55 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/labMultiusuarios#> as labMultiusuarios {
+	
+extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance LaboratoriosMultiusuarios : programa:programaCTI [
+		base:nome "Programa: Laboratórios Multiusuários"
+		base:descricao "Foi criado com o objetivo de apoiar a ampliação do acesso de pesquisadores a serviços especializados de suporte à pesquisa e/ou acervos científicos em Pernambuco, por meio do financiamento de projetos de implantação, recuperação,
+		 manutenção, operação ou disponibilização de laboratórios multiusuários e acervos científicos."
+		programa:possuiParceiros parceiroChave:FACEPE, parceiroChave:ICT, parceiroChave:PESQ
+		programa:condicionadoPor fatorExterno:LegislacaoNacional, fatorExterno:DisponibilidadeOrcamentaria, fatorExterno:CriseNacional, fatorExterno:FlutuacaoCambial, fatorExterno:LimiteCota, 
+		fatorExterno:ProblemasUrgentes, fatorExterno:NovasTecnologias, fatorExterno:ParceriasAcademiaEmpresa
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN5, entrada:EN7
+		programa:executa atividadeChave:AC1, atividadeChave:LancamentoEdital, atividadeChave:InscricaoCandidatos, atividadeChave:MonitoramentoeAvaliacao, atividadeChave:AC3, atividadeChave:AC7
+		programa:geraSaidas saida:OUT1, saida:EditalSelecao, saida:Outorga, saida:OUT3, saida:OUT4
+		programa:produzResultados resultado:InfraestruturaAprimorada, resultado:AumentoServicos, resultado:ConsolidacaoRedes, resultado:RES50, resultado:PlanejamentoeSustentabilidade, resultado:RES14, 
+		resultado:AumentoProducaoLabs, resultado:AumentoCapacidadeResp
+		programa:direcionadoA publicoAlvo:PA15, publicoAlvo:PA27, publicoAlvo:ComunidadeCientifica, publicoAlvo:PA6, publicoAlvo:PA8
+		programa:buscaAtingir1 OBJGeral
+		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
+		OBJEspecifico5, OBJEspecifico6
+	]
+	
+	instance OBJGeral : canvas:ObjetivoGeral [
+		base:nome "Incentivar e apoiar a implantação, recuperação, conservação, manutenção e disponibilização de laboratórios multiusuários e acervos científicos no estado de Pernambuco."
+	]
+	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
+		base:nome "Maximizar os benefícios das estruturas laboratoriais"
+	]
+	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
+		base:nome "Promover o avanço estadual em CT&I através da universalização do acesso "
+	]
+	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular o uso compartilhado de equipamentos e laboratórios"
+	]
+	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
+		base:nome "Prover recursos para aquisição, manutenção e atualização de equipamentos"
+	]
+	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular interação, integração, intercâmbio de conhecimento "
+	]
+	instance OBJEspecifico6 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar a acreditação e certificação dos laboratórios em Pernambuco"
+	]
+	
 }

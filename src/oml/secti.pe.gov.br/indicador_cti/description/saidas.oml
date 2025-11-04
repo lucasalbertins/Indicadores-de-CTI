@@ -96,5 +96,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 	instance AvaliacaoImpactoPrograma : canvas:Saida [
 		base:nome "Avaliação de impacto do programa publicada periodicamente, evidenciando resultados e benefícios sociais, educacionais e econômicos."
 	]
+	instance Outorga : canvas:Saida [
+		base:nome "Termos de Outorga assinados."
+	]
 	
 }

@@ -51,7 +51,12 @@ instance CrescimentoMercadoTrabalho : canvas:Oportunidade [
 instance ReconhecimentoPublico : canvas:Oportunidade [
 	base:nome "Reconhecimento público e fortalecimento institucional, consolidando o PROUPE como política de referência."
 	]
-
+instance NovasTecnologias : canvas:Oportunidade [
+	base:nome "Novas tecnologias e suas tendências para responder às demandas aos desafios estratégicos e problemas urgentes"
+	]
+instance ParceriasAcademiaEmpresa : canvas:Oportunidade [
+	base:nome "Parcerias entre academia-empresas para aperfeiçoamento dos laboratórios multiusuários."
+	]
 	instance CortesContingenciamento : canvas:Ameaca [
 		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
 	]
@@ -110,4 +115,23 @@ instance DescumprimentoContrapartida : canvas:Ameaca [
 instance ProblemasSistemaGerenciamento : canvas:Ameaca [
 	base:nome "Problemas de gestão com o sistema de gerenciamento do PROUPE, limitando a execução e acompanhamento do programa pela SECTI e gerando riscos de continuidade, segurança e sustentabilidade do PROUPE, diante da dificuldade de contratação de recursos humanos com habilidades e competências específicas para atendimento às peculiaridades do sistema."
 	]
+instance LegislacaoNacional : canvas:Ameaca [
+	base:nome "Legislação nacional e estadual vigente relacionada ao Marco Legal de CT&I e as normas internas da FACEPE"
+	]
+instance DisponibilidadeOrcamentaria : canvas:Ameaca [
+	base:nome "Disponibilidade orçamentária e financeira do Tesouro Estadual"
+	]
+instance CriseNacional : canvas:Ameaca [
+	base:nome "Crises político-econômica nacional e internacional"
+	]
+instance FlutuacaoCambial : canvas:Ameaca [
+	base:nome "Flutuação cambial"
+	]
+instance LimiteCota : canvas:Ameaca [
+	base:nome "Limite da cota de importação de equipamentos e insumos para pesquisa do país"
+	]
+instance ProblemasUrgentes : canvas:Ameaca [
+	base:nome "Cenário de problemas urgentes (Crises sanitárias, ambientais e sociais)"
+	]
+	
 }

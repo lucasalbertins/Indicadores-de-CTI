@@ -45,6 +45,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 	instance AGINT : canvas:ParceiroChave[
 		base:nome "Agências Internacionais de Fomento à CT&I"
 	]
+	instance PESQ : canvas:ParceiroChave[
+		base:nome "Pesquisadores"
+	]
 	// Autarquias como agrupador conceitual
 	instance AutarquiasMunicipais : canvas:ParceiroChave [
 		base:nome "Autarquias Municipais de Ensino Superior do estado de Pernambuco"
