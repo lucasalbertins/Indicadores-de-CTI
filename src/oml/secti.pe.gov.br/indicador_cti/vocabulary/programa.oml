@@ -4,7 +4,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as pl
 	
-	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel [
+	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
 		restricts buscaAtingir1 to max 1
 	]
 
@@ -71,12 +71,10 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	
-	// Programa é avaliado por questões
 	relation avaliadoPor [
-		from programa:programaCTI
+		from programaCTI
 		to pl:questaoAvaliacao
-		reverse avaliaPrograma
+		reverse avalia
 		asymmetric
 		irreflexive
 	]

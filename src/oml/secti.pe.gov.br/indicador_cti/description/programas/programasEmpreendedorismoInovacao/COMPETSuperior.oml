@@ -16,7 +16,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Programa: COMPET Superior"
 		base:descricao "Foi criado com o objetivo de apoiar a formação de estudantes de nível superior 
 por meio de extensão tecnológica"
-		programa:possuiParceiros parceiroChave:ICTsIntegrantes, parceiroChave:EmpresasIntegrantes, parceiroChave:OrgaosPublicos
+		programa:possuiParceiros parceiroChave:ICTsIntegrantes, parceiroChave:EmpresasIntegrantes, 
+		parceiroChave:OrgaosPublicos
 		programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE13, fatorExterno:FE18, 
 		fatorExterno:FE21
 		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN4, 

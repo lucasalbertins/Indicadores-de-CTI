@@ -4,6 +4,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	
 	aspect EntidadeNomeavel
 	aspect EntidadeDescritivel
+	aspect EntidadeIdentificavel
 	
 	scalar property nome [
 		domain EntidadeNomeavel
@@ -12,6 +13,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	]
 	scalar property descricao [
 		domain EntidadeDescritivel
+		range xsd:string
+		functional
+	]
+	scalar property id [
+		domain EntidadeIdentificavel
 		range xsd:string
 		functional
 	]

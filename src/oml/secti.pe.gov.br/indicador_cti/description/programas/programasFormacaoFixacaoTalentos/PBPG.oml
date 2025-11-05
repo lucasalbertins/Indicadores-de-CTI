@@ -1,4 +1,5 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG#> as PBPG {
+	
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -13,28 +14,31 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	instance PBPG : programa:programaCTI [
 		base:nome "Programa de Bolsas de Pós-Graduação"
-		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas 
-de estudo para alunos de pós-graduação"
+		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de 
+Pernambuco, oferecendo bolsas de estudo para alunos de pós-graduação"
 		programa:possuiParceiros parceiroChave:CAPES, parceiroChave:SECTI-PE, parceiroChave:UFRPE
-		programa:condicionadoPor fatorExterno:FE1, fatorExterno:FE2, fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, 
-		fatorExterno:EstruturadeSuporte, fatorExterno:EvasaoEstudantes, fatorExterno:FE17
-		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, 
-		atividadeChave:AC6, atividadeChave:AC7
-		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT5, saida:OUT6, saida:OUT7
-		programa:produzResultados resultado:RES1, resultado:RES2, resultado:RES3, resultado:RES4, resultado:RES5, resultado:RES10, 
-		resultado:RES11, resultado:RES12, resultado:RES13, resultado:RES14, resultado:RES17, resultado:RES18, resultado:RES19, 
-		resultado:RES20
-		programa:direcionadoA publicoAlvo:PA1, publicoAlvo:PA2, publicoAlvo:PA3, publicoAlvo:PA11, publicoAlvo:PA12, publicoAlvo:PA13, 
-		publicoAlvo:PA14, publicoAlvo:PA15
+		programa:condicionadoPor fatorExterno:FE1, fatorExterno:FE2, fatorExterno:CortesContingenciamento, 
+		fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, 
+		fatorExterno:EvasaoEstudantes, fatorExterno:FE17
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN5, 
+		entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, 
+		atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT5, saida:OUT6, 
+		saida:OUT7
+		programa:produzResultados resultado:RES1, resultado:RES2, resultado:RES3, resultado:RES4, 
+		resultado:RES5, resultado:RES10, resultado:RES11, resultado:RES12, resultado:RES13, 
+		resultado:RES14, resultado:RES17, resultado:RES18, resultado:RES19, resultado:RES20
+		programa:direcionadoA publicoAlvo:PA1, publicoAlvo:PA2, publicoAlvo:PA3, publicoAlvo:PA11, 
+		publicoAlvo:PA12, publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15
 		programa:buscaAtingir1 OBJGeral
 		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
 		OBJEspecifico5
 	]
 	
 	instance OBJGeral : canvas:ObjetivoGeral [
-		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação, de modo a contribuir com o 
-desenvolvimento sustentável do estado de Pernambuco"
+		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação, de 
+modo a contribuir com o desenvolvimento sustentável do estado de Pernambuco"
 	]
 	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
 		base:nome "Consolidar programas de pós-graduação (PPG) novos e emergentes"
@@ -43,12 +47,14 @@ desenvolvimento sustentável do estado de Pernambuco"
 		base:nome "Manter a excelência de PPG consolidados"
 	]
 	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
-		base:nome "Incentivar o desenvolvimento de dissertações e teses em áreas estratégicas e prioritárias para o estado"
+		base:nome "Incentivar o desenvolvimento de dissertações e teses em áreas estratégicas e 
+prioritárias para o estado"
 	]
 	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a formação de mestres e doutores no interior do estado"
 	]
 	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
-		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais"
+		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, 
+nacionais e internacionais"
 	]
 }
