@@ -31,13 +31,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as 
 		asymmetric
 		irreflexive
 	]
-	relation temFonte [
-		from questaoAvaliacao
-		to fonteInformacao
-		reverse fonteInformacaoPara
-		asymmetric
-		irreflexive
-	]
 	relation temEscopo [
 		from questaoAvaliacao
 		to escopo

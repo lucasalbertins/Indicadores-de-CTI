@@ -5,6 +5,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	aspect EntidadeNomeavel
 	aspect EntidadeDescritivel
 	aspect EntidadeIdentificavel
+	aspect EntidadeAgregavel
 	
 	scalar property nome [
 		domain EntidadeNomeavel
@@ -20,5 +21,14 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 		domain EntidadeIdentificavel
 		range xsd:string
 		functional
+	]
+	
+	relation entity Agregados [
+		from EntidadeAgregavel
+		to EntidadeAgregavel
+		forward agrega
+		reverse agregadoPor
+		asymmetric
+		irreflexive
 	]
 }
