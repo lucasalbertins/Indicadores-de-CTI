@@ -1,0 +1,25 @@
+PREFIX canvas: <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>
+PREFIX plano:  <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#>
+PREFIX met:    <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+ASK {
+  VALUES ?objetivo { <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/OBJEspecifico1> }
+  
+  FILTER EXISTS {
+    ?resultado canvas:buscaAtingir ?objetivo .
+    ?qa       plano:alinhaComResultado ?resultado .
+    ?qa       plano:temMetrica         ?metrica .
+    ?metrica  met:valorAtual ?va ;
+              met:valorMeta  ?vm .
+  }
+  
+  FILTER NOT EXISTS {
+    ?resultado canvas:buscaAtingir ?objetivo .
+    ?qa       plano:alinhaComResultado ?resultado .
+    ?qa       plano:temMetrica         ?metrica .
+    ?metrica  met:valorAtual ?va ;
+              met:valorMeta  ?vm .
+    FILTER(xsd:decimal(?va) < xsd:decimal(?vm))
+  }
+}

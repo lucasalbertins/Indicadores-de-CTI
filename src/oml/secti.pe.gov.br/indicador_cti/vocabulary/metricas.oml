@@ -18,11 +18,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 	]
 	scalar property valorAtual [
 		domain metrica
-		range xsd:double
+		range xsd:decimal
 	]
 	scalar property valorMeta [
 		domain metrica
-		range xsd:double
+		range xsd:decimal
 	]
 	
 	relation temFonte [
