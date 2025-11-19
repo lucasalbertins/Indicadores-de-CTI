@@ -4,10 +4,13 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	concept metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
+	aspect metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
 	base:EntidadeAgregavel
-	concept metricaSimples < metrica
+	concept metricaSimples < metrica [
+		restricts base:agrega to max 0
+	]
 	concept metricaComposta < metrica [
+		//Metricas compostas podem agregas outra metricas compostas?
 		restricts all base:agrega to metricaComposta
 		restricts all base:agregadoPor to metricaSimples
 	]

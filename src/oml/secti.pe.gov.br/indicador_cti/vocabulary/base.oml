@@ -4,7 +4,9 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	
 	aspect EntidadeNomeavel
 	aspect EntidadeDescritivel
-	aspect EntidadeIdentificavel
+	aspect EntidadeIdentificavel [
+		key id
+	]
 	aspect EntidadeAgregavel
 	
 	scalar property nome [

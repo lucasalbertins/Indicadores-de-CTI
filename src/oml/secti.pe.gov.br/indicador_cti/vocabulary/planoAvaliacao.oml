@@ -66,20 +66,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as 
 		asymmetric
 		irreflexive
 	]
-	relation alinhaComObjetivoGeral [
-		from questaoAvaliacao
-		to canvas:ObjetivoGeral
-		reverse objetivoGeralAlinhadoCom
-		asymmetric
-		irreflexive
-	]
-	relation alinhaComObjetivoEspecifico [
-		from questaoAvaliacao
-		to canvas:ObjetivoEspecifico
-		reverse objetivoEspecificoAlinhadoCom
-		asymmetric
-		irreflexive
-	]
 	relation alinhaComResultado [
 		from questaoAvaliacao
 		to canvas:Resultado
