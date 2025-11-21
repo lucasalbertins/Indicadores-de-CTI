@@ -7,21 +7,23 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
-	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+
 	
 	instance PBPG : programa:programaCTI [
 		base:nome "Programa de Bolsas de Pós-Graduação"
 		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de 
 Pernambuco, oferecendo bolsas de estudo para alunos de pós-graduação"
-		programa:possuiParceiros parceiroChave:CAPES, parceiroChave:SECTI-PE, parceiroChave:UFRPE
+		programa:possuiParceiros parceiroChave:ICT, parceiroChave:AGINT, parceiroChave:OrganizacoesPublicasPrivadas
 		programa:condicionadoPor fatorExterno:FE1, fatorExterno:FE2, fatorExterno:CortesContingenciamento, 
 		fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, 
 		fatorExterno:EvasaoEstudantes, fatorExterno:FE17
-		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN5, 
-		entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, 
+		entrada:EN6, entrada:EN7, entrada:EN9
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, 
 		atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT5, saida:OUT6, 
@@ -57,4 +59,861 @@ prioritárias para o estado"
 		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, 
 nacionais e internacionais"
 	]
+	
+	//Fontes de informação
+	
+	instance AgilFAP : planoAvaliacao:fonteInformacao[
+		base:nome "AfilFAP[FACEPE]"
+	]
+	
+	instance RAIS : planoAvaliacao:fonteInformacao[
+		base:nome "RAIS[MTE]"
+	]
+	
+	instance PlataformaSucupira : planoAvaliacao:fonteInformacao[
+		base:nome "Plataforma Sucupira [CAPES]"
+	]
+	
+	instance BaseEmpresasPE : planoAvaliacao:fonteInformacao[
+		base:nome "Base de empresas[JUCEPE]"
+	]
+	
+	instance PlataformaCarlosChagas : planoAvaliacao:fonteInformacao[
+		base:nome "Plataforma Carlos Chagas [CNPQ]"
+	]
+	
+	instance PlataformaLattes : planoAvaliacao:fonteInformacao[
+		base:nome "Plataforma Lattes [CNPQ]"
+	]
+	
+	instance INPI : planoAvaliacao:fonteInformacao[
+		base:nome "Repositório de Propriedade Intelectual [INPI]"
+	]
+	
+	instance GoogleScholar : planoAvaliacao:fonteInformacao[
+		base:nome "Plataforma Google Scholar [Google]"
+	]
+	
+	instance Elsevier : planoAvaliacao:fonteInformacao[
+		base:nome "Repositório Scopus e API Scival [Elsevier]"
+	]
+	
+	instance Clarivate : planoAvaliacao:fonteInformacao[
+		base:nome "Repositório WoS [Clarivate]"
+	]
+	
+	instance DadosPrimarios : planoAvaliacao:fonteInformacao[
+		base:nome "Dados primários"
+	]
+	
+	instance IBGE : planoAvaliacao:fonteInformacao[
+		base:nome "IBGE"
+	]
+	
+	//Escopo
+	
+	instance escopoP1 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a efetiva contribuição do PBPG para com a formação de mestres e doutores em Pernambuco. A comparação será longitudinal (ao longo dos anos) do próprio PBPG."
+	
+	]
+		
+	instance escopoP2 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a contribuição dos trabalhos fomentados pelo PBPG em áreas estratégicas prioritárias para o estado de Pernambuco. A comparação será longitudinal (ao longo dos anos) e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em Instituições de Ciência e Tecnologia de Pernambuco - ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP3 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a contribuição do PBPG na formação de mão de obra qualificada em atuação profissional em Pernambuco. A comparação será longitudinal (ao longo dos anos) e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP4 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da qualidade dos PPGs de Pernambuco apoiados pelo PBPG.  A comparação será longitudinal (ao longo dos quadriênios)"
+	]
+	
+	instance escopoP5 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produtividade científica dos docentes permanentes dos PPG apoiados pelo PBPG.  A comparação será longitudinal (ao longo dos anos) e transversal  entre o grupo tratado (docentes permanentes orientadores de bolsistas PBPG) e o grupo controle (docentes permanentes não orientadores de bolsistas PBPG)."
+	]
+	
+	instance escopoP6 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produção científica dos egressos do PBPG. A comparação será longitudinal (ao longo dos anos) do próprio PBPG  e transversal  entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)"
+	]
+	
+	instance escopoP7 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produção tecnológica, com proteção intelectual, dos egressos PBPG titulados. A comparação será longitudinal (ao longo dos anos) do próprio PBPG e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP8 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produção tecnológica, com proteção intelectual, dos egressos titulados do PBPG. A comparação será longitudinal (ao longo dos anos) do próprio PBPG e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP9 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produção tecnológica, com proteção intelectual, dos bolsistas PBPG em cooperação com outras organizações. A comparação será longitudinal (ao longo dos anos) do próprio PBPG  e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP10 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da formação acadêmica dos bolsistas PBPG em cooperação científica com outras ICT. A comparação será longitudinal (ao longo dos anos) do próprio PBPG  e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP11 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da cooperação científica dos doutores egressos PBPG com outras ICT. A comparação será longitudinal (ao longo dos anos) do próprio PBPG e transversal entre o grupo tratado (doutores egressos PBPG) e o grupo controle (doutores de ICT-PE não egressos PBPG)."
+	]
+	
+	instance escopoP12 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução das cooperações científicas com outras ICT na formação dos bolsistas PBPG. A comparação será longitudinal (ao longo dos anos) do próprio PBPG e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP13 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da entrega de inovações fomentadas pelo PBPG para empresas e governo. A comparação será longitudinal (ao longo dos anos) do próprio PBPG."
+	]
+	
+	instance escopoP14 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da geração de negócios a partir do trabalho de pesquisa fomentado pelo PBPG. A comparação será longitudinal (ao longo dos anos) do próprio PBPG."
+	]
+	
+	instance escopoP15 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a empregabilidade, a atuação em atividade econômica e a renda formal de egressos do PBPG após 5 anos de titulação. A comparação será longitudinal (ao longo dos anos) e transversal entre o grupo tratado (bolsistas PBPG titulados) e o grupo controle (mestres e doutores titulados em ICT-PE não bolsistas PBPG)."
+	]
+	
+	instance escopoP16 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução do licenciamento e comercialização da produção tecnológica (patentes e programas de computador) fomentada pelo PBPG. A comparação será longitudinal (ao longo dos anos) do próprio PBPG."
+	]
+	
+	instance escopoP17 : planoAvaliacao:escopo[
+		base:descricao "Espera-se identificar a evolução da produtividade nos segmentos econômicos de Pernambuco em que mestres e doutores egressos do PBPG atuam profissionalmente. A comparação será longitudinal (ao longo dos anos)."
+	]
+	
+	//Métodos avaliação
+	
+	instance MA1P1 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "Análise Descritiva"
+	]
+	
+	instance MA1P2 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Definir as áreas estratégicas prioritárias para o estado de Pernambuco;
+						(2) Mapear as palavras-chave para enquadramento das áreas estratégicas prioritárias;
+						(3) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(4) Acessar F2 para obter informações (título, resumo e palavras-chave) das teses e dissertações dos mestres e doutores titulados em ICT-PE;
+						(5) Realizar pareamento entre as informações obtidas de F1 e F2;
+						(6) Calcular P2.M1;
+						(7) Calcular P2.M2 e comparar com P2.M2.VE;
+						(8) Aplicar o método de regressão de dados em painel para comparação transversal.  "
+
+	]
+	
+	instance MA1P3 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 e obter informações sobre os bolsistas PBPG; 
+						(2) Acessar F2 para obter informações sobre mestres e doutores titulados em ICT-PE;
+						(3) Acessar F3 para obter informações sobre mestres e doutores com emprego formal no Estado;
+						(4) Realizar pareamento entre as informações obtidas de F1, F2 e F3;
+						(5) Calcular P3.M1 e comparar com P3.M1.VE;
+						(6) Calcular P3.M2;
+						(7) Aplicar o método de regressão de dados em painel para comparação transversal.  "
+
+	]
+	
+	instance MA1P4 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter os PPGs aos quais os bolsistas PBPG são vinculados;
+						(2) Acessar F2 para obter os conceitos atribuídos aos PPGs das ICT-PE;
+						(3) Realizar o pareamento entre as informações obtidas de F1 e F2;
+						(4) Calcular P4.M1, P4.M2 e P4.M3 "
+
+	]
+	
+	instance MA1P5 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter os PPGs aos quais os bolsistas PBPG são vinculados;
+						(2) Acessar F2 para: obter informações dos docentes permanentes dos PPG das ICT-PE (DC - PPG - ICT-PE); e a classificação QUALIS dos veículos de publicação;
+						(3) Acessar F4 para obter informações dos DC - PPG - ICT-PE que são bolsistas de produtividade;
+						(4) Acessar F6 para obter informações sobre as patentes depositadas por DC - PPG - ICT-PE;
+						(5) Acessar F7 para obter os índices h, h5 e i10 dos DC - PPG - ICT-PE; "
+
+	]
+	
+	instance MA1P6 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter: informações sobre os mestres e doutores titulados em ICT-PE; e classificação QUALIS dos eventos e periódicos;
+						(3) Acessar F5, F8 e F9 para obter informações das publicações dos mestres e doutores titulados em ICT-PE;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2, F5, F8 e F9;
+						(5) Calcular P6.M1, P6.M2 (e comparar com o P6.M2.VE) e P6.M3;  "
+
+	]
+	
+	instance MA1P7 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os mestres e doutores titulados em ICT-PE;
+						(3) Acessar F6 para obter informações sobre as patentes depositadas e programas de computador registrados pelos bolsistas PBPG;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F6;
+						(5) Calcular P7.M1;
+						(6) Calcular P7.M2 e comparar com P7.M2.VE;
+						(7) Aplicar o método de regressão de dados em painel para comparação transversal.  "
+
+	]
+	
+	instance MA1P8 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os mestres e doutores titulados em ICT-PE;
+						(3) Acessar F5, F8 e F9 para obter informações das publicações dos mestres e doutores titulados em ICT-PE;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2, F5, F8 e F9;
+						(5) Calcular P8.M1;
+						(6) Calcular P8.M2 e comparar com P8.M2.VE;
+						(7) Calcular P8.M3 e comparar com P8.M3.VE;
+						(8) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P9 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os mestres e doutores titulados em ICT-PE;
+						(3) Acessar F6 para obter informações sobre as patentes depositadas e programas de computador registrados pelos mestres e doutores titulados em ICT-PE;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F6;
+						(5) Calcular P9.M1;
+						(6) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P10 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 e F5 para obter: informações sobre os mestres e doutores titulados em ICT-PE, incluindo formação no modelo sanduíche;
+						(3) Realizar o pareamento entre as informações obtidas em F1, F2 e F5;
+						(4) Calcular P10.M1 e P10.M2;
+						(5) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P11 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas de doutorado egressos PBPG;
+						(2) Acessar F2 para obter informações sobre os doutores titulados em ICT-PE; 
+						(3) Acessar F5 para obter informações sobre formação pós-doutoral dos doutores titulados em ICT-PE;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F5;
+						(5) Calcular P11.M1 e P11.M2;
+						(6) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P12 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas egressos PBPG;
+						(2) Acessar F2 para obter informações sobre os mestres e doutores titulados em ICT-PE, incluindo co-orientação e co-titulação; 
+						(3) Realizar o pareamento entre as informações obtidas em F1 e F2;
+						(5) Calcular P12.M1 e P12.M2;
+						(6) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P13 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG e respectivos professores orientadores;
+						(2) Acessar F2 para obter informações sobre os bolsistas PBPG titulados; 
+						(3) Aplicar questionário (survey) para coleta de informações (F11) juntos a bolsistas, egressos e professores orientadores do PBPG;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F11;
+						(5) Calcular P13.M1. "
+
+	]
+	
+	instance MA1P14 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os bolsistas PBPG titulados; 
+						(3) Aplicar questionário (survey) para coleta de informações (F11) juntos a egressos do PBPG;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F11;
+						(5) Calcular P14.M1.  "
+
+	]
+	
+	instance MA1P15 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os mestres e doutores titulados em ICT-PE; 
+						(3) Acessar F3 para obter informações sobre mestres e doutores titulados em ICT-PE com emprego formal;
+						(4) Realizar pareamento entre as informações obtidas de F1, F2 e F3;
+						(5) Calcular P15.M1 e P15.M2;
+						(6) Aplicar o método de regressão de dados em painel para comparação transversal. "
+
+	]
+	
+	instance MA1P16 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os bolsistas PBPG;
+						(2) Acessar F2 para obter informações sobre os bolsistas PBPG titulados; 
+						(3) Aplicar questionário (survey) para coleta de informações (F11) juntos a egressos do PBPG;
+						(4) Realizar o pareamento entre as informações obtidas em F1, F2 e F11;
+						(5) Calcular P16.M1. "
+ 
+	]
+	
+	instance MA1P17 : planoAvaliacao:metodoAvaliacao[
+		base:descricao "(1) Acessar F1 para obter informações sobre os egressos PBPG;
+						(2) Acessar F2 para obter informações sobre os egressos PBPG titulados; 
+						(3) Acessar F3 para obter informações sobre egressos PBPG titulados com emprego formal em Pernambuco;
+						(4) Acessar F12 para obter informações sobre produto por trabalhador por segmento econômico
+						(5) Realizar pareamento entre as informações obtidas de F1, F2, F3 e F12;
+						(5) Calcular P17.M1 e P17.M2.  "
+		
+
+	]
+	
+	
+	//Métricas plano de avaliação
+	
+	instance PA1ME1 : metricas:metricaComposta [
+		base:nome "Taxa Titulação"
+		base:descricao "Número de bolsistas PBPG titulados no ano sobre o total de cotas PBPG encerradas no ano"
+		metricas:formula "Bolsistas PBPG titulados por ano / Total de cotas PBPG encerradas por ano"
+		metricas:temFonte AgilFAP,PlataformaSucupira	 
+		planoAvaliacao:temMetrica PA1ME1 				
+		
+	]
+	
+	instance PA1ME2 : metricas:metricaSimples [
+		base:nome "Qtde Titulados"
+		base:descricao "Número de bolsistas PBPG titulados, desagregado por: (a) ano de titulação, (b) Modalidade (Mestrado e Doutorado), (c) Prazo (conclusão no prazo regular e Com prorrogação), (d) Grande Área do Conhecimento (CAPES), e (e)  Região de Desenvolvimento do Estado (RDE)."		
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA2ME1 : metricas:metricaSimples [
+		base:nome "Qtde Trab Áreas Prior"
+		base:descricao "Número de dissertações e teses de bolsistas PBPG por área estratégica prioritária para Pernambuco."		
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA2ME2 : metricas:metricaComposta [
+		base:nome "Taxa Trab Áreas Prior"
+		base:descricao "Proporção de dissertações e teses de bolsistas PBPG nas áreas estratégicas prioritárias em relação ao total de dissertações e teses PBPG."	
+		metricas:formula "Número de dissertações e teses PBPG nas áreas / Total de dissertações e teses PBPG"	
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA3ME1 : metricas:metricaComposta [
+		base:nome "Taxa Fixação"
+		base:descricao "Proporção de mestres e doutores egressos PBPG, após dois anos de titulação, empregados em Pernambuco com relação ao total de mestres e doutores egressos PBPG, desdobrado por segmento (governo, empresas, ICT) e por RD."	
+		metricas:formula "pbpg EMPREGADOS PE / Número total de egressos PBPG"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS				 
+		 				
+		
+	]
+	
+	instance PA3ME2 : metricas:metricaSimples [
+		base:nome "Qtde Mestres Doutorando"
+		base:descricao "Número de mestres egressos PBPG, após dois anos de titulação, que estão em cursos de doutorado em ICT-PE."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS			 
+		 				
+		
+	]
+	
+	instance PA4ME1 : metricas:metricaSimples [
+		base:nome "Conceito PPG"
+		base:descricao "Conceito CAPES dos Programas de Pós-graduação (PPG) apoiados pelo PBPG, por avaliação quadrienal e por área de conhecimento."		
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA4ME2 : metricas:metricaSimples [
+		base:nome "Taxa PPG Excelência"
+		base:descricao " Percentual de PPGs apoiados pelo PBPG com conceitos de excelência da CAPES (6 e 7)"		
+		metricas:temFonte AgilFAP,PlataformaSucupira		 
+		 				
+		
+	]
+	
+	instance PA4ME3 : metricas:metricaSimples [
+		base:nome "Taxa PPG Emergentes"
+		base:descricao "Percentual de PPGs apoiados pelo PBPG que elevaram seu conceito CAPES."		
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA5ME1 : metricas:metricaSimples [
+		base:nome "Qtde Pub Quali DP"
+		base:descricao "Número de publicações qualificadas (Qualis A1 a A4) dos Docentes Permanentes (DP) dos Programas de Pós-graduação (PPG) com bolsistas PBPG"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaCarlosChagas,PlataformaLattes,INPI,GoogleScholar,Elsevier,Clarivate,BaseEmpresasPE			 
+		 				
+		
+	]
+	
+	instance PA5ME2 : metricas:metricaSimples [
+		base:nome "Índices Citações DP"
+		base:descricao "Média dos índices índice-h, índice h5 e índice i10 dos Docentes Permanentes (DP) dos Programas de Pós-graduação (PPG) com bolsistas PBPG"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaCarlosChagas,PlataformaLattes,INPI,GoogleScholar,Elsevier,Clarivate,BaseEmpresasPE			 
+		 				
+		
+	]
+	
+	instance PA5ME3 : metricas:metricaSimples [
+		base:nome "Qtde Bolsas Prod DP"
+		base:descricao "Número  de bolsas de produtividade CNPQ dos Docentes Permanentes (DP) dos Programas de Pós-graduação (PPG) com bolsistas PBPG. "		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaCarlosChagas,PlataformaLattes,INPI,GoogleScholar,Elsevier,Clarivate,BaseEmpresasPE			 
+		 				
+		
+	]
+	
+	instance PA5ME4 : metricas:metricaSimples [
+		base:nome "Qtde Patentes DP"
+		base:descricao "Número de patentes depositadas no INPI por Docentes Permanentes (DP) dos Programas de Pós-graduação (PPG) com bolsistas PBPG"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaCarlosChagas,PlataformaLattes,INPI,GoogleScholar,Elsevier,Clarivate,BaseEmpresasPE			 
+		 				
+		
+	]
+	
+	instance PA5ME5 : metricas:metricaSimples [
+		base:nome "Qtde Startups DP"
+		base:descricao "Número de startups tendo como sócios Docentes Permanentes (DP) dos Programas de Pós-graduação (PPG) com bolsistas PBPG."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaCarlosChagas,PlataformaLattes,INPI,GoogleScholar,Elsevier,Clarivate,BaseEmpresasPE			 
+		 				
+		
+	]
+	
+	instance PA6ME1 : metricas:metricaSimples [
+		base:nome "Qtde Pub Quali Bolsistas"
+		base:descricao "Número de publicações qualificadas (Qualis A1 a A4) dos egressos PBPG até dois anos após a titulação"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate	 
+		 				
+		
+	]
+	
+	instance PA6ME2 : metricas:metricaComposta [
+		base:nome "Taxa Prod Quali Bols"
+		base:descricao "Proporção de egressos PBPG com pelo menos uma produção qualificada até dois anos após a titulação com relação ao total de bolsistas egressos PBPG."	
+		metricas:formula "Egressos PBPG com produção / Número total de egressos PBPG"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate				 
+		 				
+		
+	]
+	
+	instance PA6ME3 : metricas:metricaSimples [
+		base:nome "Qtde Pub Eventos Internac Bols"
+		base:descricao "Número de trabalhos publicados em anais de eventos internacionais por egressos PBPG até dois anos após a titulação."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate				 
+		 				
+		
+	]
+	
+	instance PA7ME1 : metricas:metricaSimples [
+		base:nome "Qtde Prod Tec Bols"
+		base:descricao "Quantidade de produção tecnológica, com proteção intelectual, dos egressos PBPG até dois anos após titulação, desagregado por: (a) patentes depositadas no INPI; e (b) programas de computador registrados no INPI"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,INPI				 
+		 				
+		
+	]
+	
+	instance PA7ME2 : metricas:metricaComposta [
+		base:nome "Taxa Prod Tec Bol"
+		base:descricao "Proporção de egressos PBPG com produção tecnológica com relação ao total de egressos PBPG."	
+		metricas:formula "Egressos PBPG com produção / Número total de egressos PBPG"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,INPI					 
+		 				
+		
+	]
+	
+	instance PA8ME1 : metricas:metricaSimples [
+		base:nome "Qtde Pub Coaut Bols"
+		base:descricao "Quantidade de publicações dos bolsistas PBPG até dois anos após a titulação em co-autoria com pelo menos um autor filiado a outra organização, desagregado por: (a) tipo da organização (empresa, outra ICT e governo); (b) natureza da organização (pública, privada); e (c) localização da organização (nacional, exterior"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate				 
+		 				
+		
+	]
+	
+	instance PA8ME2 : metricas:metricaComposta [
+		base:nome "Taxa Pub Coaut Nac Bols"
+		base:descricao " proporção de bolsistas PBPG com publicação em coautoria nacional até dois anos após a titulação em relação ao total de bolsistas PBPG com pelo menos uma publicação."	
+		metricas:formula "Bolsistas PBPG com publicação coautoral nacional / Total de bolsistas PBPG com publicação"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate					 
+		 				
+		
+	]
+	
+	instance PA8ME3 : metricas:metricaComposta [
+		base:nome "Taxa Prod Tec Bol"
+		base:descricao "Proporção de egressos PBPG com produção tecnológica com relação ao total de egressos PBPG."	
+		metricas:formula "Bolsistas PBPG com publicação coautoral internacional / Total de bolsistas PBPG com publicação"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate						 
+		 				
+		
+	]
+	
+	instance PA9ME1 : metricas:metricaSimples [
+		base:nome "Qtde Prod Tec Coaut Bols"
+		base:descricao "Quantidade da produção tecnológica, com proteção intelectual, dos bolsistas PBPG até dois anos após titulação, em co-autoria com pelo menos um autor filiado a outra organização, desagregado por: (a) tipo da propriedade intelectual (patente, programa de computador); (b) tipo da organização (empresa, ICT, governo); (c) natureza da organização (pública, privada); e (d) localização da organização (nacional, exterior)."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,INPI				 
+		 				
+		
+	]
+	
+	instance PA10ME1 : metricas:metricaComposta [
+		base:nome "Taxa Sand Nac Bols"
+		base:descricao "proporção de bolsistas e egressos PBPG titulados que realizaram mestrado ou doutorado sanduíche em outra ICT nacional em relação ao total de bolsistas PBPG."	
+		metricas:formula "Egressos PBPG sanduíche nacional / Total de bolsistas PBPG "	
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate						 
+		 				
+		
+	]
+	
+	instance PA10ME2 : metricas:metricaComposta [
+		base:nome "Taxa Sand Internac Bols"
+		base:descricao "proporção de bolsistas e egressos PBPG titulados que realizaram mestrados ou doutorados sanduíche em ICT estrangeira em relação ao total de bolsistas PBPG."	
+		metricas:formula "Egressos PBPG sanduíche internacional / Total de bolsistas PBPG com publicação"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes,Elsevier,Clarivate						 
+		 				
+		
+	]
+	
+	instance PA11ME1 : metricas:metricaSimples [
+		base:nome "Qtde Pós-Doc Nac Bols"
+		base:descricao "número de doutores egressos PBPG que realizaram estágio pós-doutoral em ICT nacional em até dois anos após titulação"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes				 
+		 				
+		
+	]
+	
+	instance PA11ME2 : metricas:metricaSimples [
+		base:nome "Qtde Pós-Doc Internac Bols"
+		base:descricao "número de doutores egressos PBPG que realizaram estágio pós-doutoral em ICT estrangeira em até dois anos após titulação."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,PlataformaLattes				 
+		 				
+		
+	]
+	
+	instance PA12ME1 : metricas:metricaSimples [
+		base:nome "Qtde Bols Co-orient"
+		base:descricao "Número de egressos PBPG que foram co-orientados por pesquisadores de outras ICTs (nacionais e estrangeiras)"		
+		metricas:temFonte AgilFAP,PlataformaSucupira				 
+		 				
+		
+	]
+	
+	instance PA12ME2 : metricas:metricaSimples [
+		base:nome "Qtde Bols Co-titul"
+		base:descricao "Número de egressos PBPG co-titulados (co-tutela) mestres e doutores."		
+		metricas:temFonte AgilFAP,PlataformaSucupira			 
+		 				
+		
+	]
+	
+	instance PA13ME1 : metricas:metricaSimples [
+		base:nome "Qtde Inovações"
+		base:descricao "número de inovações (produtos, processos, serviços) fomentadas do PBPG foram adotadas por empresas e pelo governo."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,DadosPrimarios				 
+		 				
+		
+	]
+	
+	instance PA14ME1 : metricas:metricaSimples [
+		base:nome "Qtde Startups Bols"
+		base:descricao "número de startups e spin-offs acadêmicos com a participação direta de egressos do PBPG."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,DadosPrimarios				 
+		 				
+		
+	]
+	
+	instance PA15ME1 : metricas:metricaComposta [
+		base:nome "Índice Empregab Bols"
+		base:descricao "Índice de empregabilidade dos egressos PBPG após 5 anos de titulação."	
+		metricas:formula "Egressos PBPG empregados / Número total de egressos PBPG"	
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS						 
+		 				
+		
+	]
+	
+	instance PA15ME2 : metricas:metricaSimples [
+		base:nome "Qtde CNAE Bols"
+		base:descricao "número de egressos PBPG após 5 anos de titulação empregados por seção da Classificação Nacional de Atividades Econômicas (CNAE) e Renda formal (faixas de salários mínimos"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS					 
+		 				
+		
+	]
+	
+	instance PA16ME1 : metricas:metricaSimples [
+		base:nome "Qtde CNAE Bols"
+		base:descricao "número de patentes e programas de computador licenciados e comercializados, de propriedade de egressos do PBPG."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS
+							 
+		 				
+		
+	]
+	
+	instance PA17ME1 : metricas:metricaSimples [
+		base:nome "Produtiv Econo"
+		base:descricao "produto por trabalhador (produtividade) nos segmentos econômicos de Pernambuco em que atuam profissionalmente mestres e doutores egressos do PBPG."		
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS,IBGE					 
+		 				
+		
+	]
+	
+	instance PA17ME2 : metricas:metricaSimples [
+		base:nome "Empregados Setor Estratégico PE"
+		base:descricao "Número absoluto de egressos PBPG empregados em setores estratégicos de Pernambuco"		
+		metricas:temFonte AgilFAP,PlataformaSucupira,RAIS,IBGE					 
+		 				
+		
+	]
+	
+	// Custos
+	
+	instance ALTO : planoAvaliacao:custoExecucao[
+		base:nome "alto"
+		
+	]
+	
+	instance BAIXO : planoAvaliacao:custoExecucao[
+		base:nome "baixo"
+		
+	]
+	
+	instance MODERADO : planoAvaliacao:custoExecucao[
+		base:nome "moderado"
+		
+	]
+	
+	// Riscos
+	
+	instance R1 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte FI2 para obtenção de informações de indivíduos."
+	]
+	
+	instance R2 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F3 para obtenção de informações de indivíduos."
+	]
+		
+	
+	instance R3 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F4 para obtenção de informações de indivíduos."
+	]
+	
+	instance R4 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F5 para obtenção de informações de indivíduos."
+	]
+	
+	instance R5 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F6 para obtenção de informações de indivíduos."
+	]
+	
+	instance R6 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F7 para obtenção de informações de indivíduos."
+	]
+	
+	instance R7 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F8 para obtenção de informações de indivíduos."
+	]
+	
+	instance R8 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F9 para obtenção de informações de indivíduos."
+	]
+	
+	instance R9 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F10 para obtenção de informações de indivíduos."
+	]
+	
+	instance R10 : planoAvaliacao:risco[
+		base:descricao "Dependência de respostas voluntárias na aplicação de survey"
+	]
+	
+	instance R11 : planoAvaliacao:risco[
+		base:descricao "Acesso à fonte F12 para obtenção de informações sobre produtividade por segmento econômico."
+	]
+	
+	//Limitações
+	
+	instance LP4 : planoAvaliacao:limitacao[
+		base:descricao "A análise não identifica a causalidade entre as cotas PBPG que os PPGs recebem e o respectivo conceito atribuído em cada avaliação quadrienal da CAPES."
+	]
+	
+	instance LP5 : planoAvaliacao:limitacao[
+		base:descricao "A análise identifica correlação, mas não garante identificar a causalidade entre as cotas PBPG que os PPGs recebem e a evolução da produtividade científica dos docentes permanentes dos PPG das ICT-PE."
+	]
+	
+	instance LP13 : planoAvaliacao:limitacao[
+		base:descricao "Não haverá garantia da precisão de P13.M1."
+		
+	]
+	
+	instance LP14 : planoAvaliacao:limitacao[
+		base:descricao "Não haverá garantia da precisão de P14.M1."
+		
+	]
+	
+	instance LP16 : planoAvaliacao:limitacao[
+		base:descricao "Não haverá garantia da precisão de P16.M1."
+		
+	]
+	//Perguntas de avaliação
+	
+	instance P1 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P1"
+		base:descricao "Qual a taxa de sucesso e quantos bolsistas PBPG foram titulados como mestres e doutores, por ano, por prazo (regular ou prorrogado), por área de conhecimento e por região de desenvolvimento do Estado?"
+		planoAvaliacao:temMetodologia MA1P1 
+		planoAvaliacao:temEscopo escopoP1		
+		planoAvaliacao:temMetrica PA1ME1,PA1ME2		 
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1
+	]
+	
+	instance P2 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P2"
+		base:descricao "Qual o quantitativo e o percentual de dissertações/teses desenvolvidas por bolsistas PBPG em áreas estratégicas prioritárias para Pernambuco?"
+		planoAvaliacao:temMetodologia MA1P2 
+		planoAvaliacao:temEscopo escopoP2		
+		planoAvaliacao:temMetrica PA2ME1,PA2ME2
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1
+		
+	]
+	
+	instance P3 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P3"
+		base:descricao "Qual a taxa de fixação de egressos do PBPG no Estado, por segmento (governo, empresas, ICT) e por região de desenvolvimento, após 2 anos da titulação?"
+		planoAvaliacao:temMetodologia MA1P3 
+		planoAvaliacao:temEscopo escopoP3		
+		planoAvaliacao:temMetrica PA3ME1,PA3ME2
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R2
+	]
+	
+	instance P4 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P4"
+		base:descricao "Qual a evolução do conceito CAPES dos PPGs apoiados pelo PBPG?"
+		planoAvaliacao:temMetodologia MA1P4 
+		planoAvaliacao:temEscopo escopoP4		
+		planoAvaliacao:temMetrica PA4ME1,PA4ME2,PA4ME3
+		planoAvaliacao:temCusto BAIXO
+		planoAvaliacao:temRisco R1,R2
+		planoAvaliacao:temLimitacao LP4
+	]
+	
+	instance P5 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P5"
+		base:descricao "Qual a evolução da qualidade científica e tecnológica (quantitativo de citações, publicações, índice h, bolsa de produtividade, patentes, startups) dos docentes permanentes (orientadores) dos PPGs apoiados pelo PBPG?"
+		planoAvaliacao:temMetodologia MA1P5 
+		planoAvaliacao:temEscopo escopoP5		
+		planoAvaliacao:temMetrica PA5ME1,PA5ME2,PA5ME3,PA5ME4,PA5ME5
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R3,R4,R5,R6,R7,R8,R9
+		planoAvaliacao:temLimitacao LP5
+	]
+	
+	instance P6 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P6"
+		base:descricao "Quantas publicações em periódicos e eventos de alto impacto, nacionais e internacionais, foram realizadas por bolsistas do PBPG em até 02 anos após a titulação?"
+		planoAvaliacao:temMetodologia MA1P6 
+		planoAvaliacao:temEscopo escopoP6		
+		planoAvaliacao:temMetrica PA6ME1,PA6ME2,PA6ME3
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R7,R8
+	]
+	
+	instance P7 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P7"
+		base:descricao "Quantas patentes foram depositadas e programas de computador foram registrados por egressos PBPG em até dois anos após a titulação?"
+		planoAvaliacao:temMetodologia MA1P7 
+		planoAvaliacao:temEscopo escopoP7		
+		planoAvaliacao:temMetrica PA7ME1,PA7ME2
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1,R5
+	]
+	
+	instance P8 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P8"
+		base:descricao "Quantas publicações em co-autoria com organizações (empresas, ICT e governo) públicas ou privadas, nacionais ou estrangeiras foram realizadas por bolsistas PBPG em até dois anos após a titulação?"
+		planoAvaliacao:temMetodologia MA1P8 
+		planoAvaliacao:temEscopo escopoP8		
+		planoAvaliacao:temMetrica PA8ME1,PA8ME2,PA8ME3
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1,R7,R8
+	]
+	
+	instance P9 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P9"
+		base:descricao "Quantas patentes foram depositadas e programas de computador foram registrados em co-autoria com organizações (empresas, ICT, governo) públicas ou privadas, nacionais ou internacionais por bolsistas PBPG em até 02 anos após a titulação?"
+		planoAvaliacao:temMetodologia MA1P5 
+		planoAvaliacao:temEscopo escopoP5		
+		planoAvaliacao:temMetrica PA5ME1,PA5ME2,PA5ME3,PA5ME4,PA5ME5
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1,R5
+	]
+	
+	instance P10 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P10"
+		base:descricao "Quantos mestrados/doutorados sanduíche foram realizados por bolsistas PBPG em ICT nacionais e internacionais?"
+		planoAvaliacao:temMetodologia MA1P10 
+		planoAvaliacao:temEscopo escopoP10		
+		planoAvaliacao:temMetrica PA10ME1,PA10ME2
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1
+	]
+	
+	instance P11 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P11"
+		base:descricao "Quantos estágios pós-doutoral foram realizados por egressos do PBPG em até 02 anos após a titulação em outra ICT?"
+		planoAvaliacao:temMetodologia MA1P11 
+		planoAvaliacao:temEscopo escopoP11		
+		planoAvaliacao:temMetrica PA11ME1,PA11ME2
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R4
+		
+	]
+	
+	instance P12 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P12"
+		base:descricao "Quantos bolsistas PPBG foram co-orientados por pesquisadores de outras ICTs e/ou co-titulados (co-tutela) mestres e doutores?"
+		planoAvaliacao:temMetodologia MA1P12 
+		planoAvaliacao:temEscopo escopoP12		
+		planoAvaliacao:temMetrica PA12ME1,PA12ME2
+		planoAvaliacao:temCusto MODERADO
+		planoAvaliacao:temRisco R1
+	]
+	
+	instance P13 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P13"
+		base:descricao "Quantas inovações (produtos, processos, serviços) fomentadas pelo PPBG foram adotadas por empresas e pelo governo?"
+		planoAvaliacao:temMetodologia MA1P13 
+		planoAvaliacao:temEscopo escopoP13		
+		planoAvaliacao:temMetrica PA13ME1
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R10
+		planoAvaliacao:temLimitacao LP13
+	]
+	
+	instance P14 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P14"
+		base:descricao "Quantas startups de base científica e tecnológica e spin-offs acadêmicos foram criados com a participação direta de egressos do PBPG?"
+		planoAvaliacao:temMetodologia MA1P14 
+		planoAvaliacao:temEscopo escopoP14		
+		planoAvaliacao:temMetrica PA14ME1
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R10
+		planoAvaliacao:temLimitacao LP14 
+	]
+	
+	instance P15 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P15"
+		base:descricao "Qual o índice de empregabilidade, por atividade econômica, de egressos PBPG em cargos de alto nível salarial (considerando natureza jurídica e atividade econômica) após 5 anos de titulação?"
+		planoAvaliacao:temMetodologia MA1P15 
+		planoAvaliacao:temEscopo escopoP15		
+		planoAvaliacao:temMetrica PA15ME1,PA15ME2
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R2
+	]
+	
+	instance P16 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P16"
+		base:descricao "Qual o quantitativo de patentes e programas de computador de egressos do PBPG licenciados e comercializados?"
+		planoAvaliacao:temMetodologia MA1P16 
+		planoAvaliacao:temEscopo escopoP16		
+		planoAvaliacao:temMetrica PA16ME1
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R9
+		planoAvaliacao:temLimitacao LP16 
+	]
+	
+	instance P17 : planoAvaliacao:questaoAvaliacao[
+		base:nome "P17"
+		base:descricao "Qual a evolução da produtividade dos segmentos econômicos de Pernambuco com maior percentual de mestres e doutores egressos do PBPG?"
+		planoAvaliacao:temMetodologia MA1P17 
+		planoAvaliacao:temEscopo escopoP17		
+		planoAvaliacao:temMetrica PA17ME1,PA17ME2
+		planoAvaliacao:temCusto ALTO
+		planoAvaliacao:temRisco R1,R2,R11
+	]
+	
+	
+	
 }
