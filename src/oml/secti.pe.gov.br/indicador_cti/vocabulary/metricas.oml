@@ -10,11 +10,19 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 		restricts base:agrega to max 0
 	]
 	concept metricaComposta < metrica [
-		//Metricas compostas podem agregas outra metricas compostas?
 		restricts all base:agrega to metricaComposta
 		restricts all base:agregadoPor to metricaSimples
 	]
-
+	
+	scalar Finalidade [
+		oneOf "Maximizar", "Minimizar", "Equilibrar"
+	]
+	
+	scalar property finalidade [
+		domain metrica
+		range Finalidade
+		functional
+	]
 	scalar property formula [
 		domain metricaComposta
 		range xsd:string

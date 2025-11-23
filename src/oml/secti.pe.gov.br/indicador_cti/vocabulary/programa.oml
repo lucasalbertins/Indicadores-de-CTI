@@ -5,13 +5,13 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as pl
 	
 	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
-		restricts buscaAtingir1 to max 1
+		restricts buscaAtingirGeral to max 1
 	]
 
 	relation possuiParceiros [
 		from programaCTI
 		to canvas:ParceiroChave
-		reverse parceria
+		reverse parceiroDe
 		asymmetric
 		irreflexive
 	]
@@ -25,49 +25,49 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 	relation recebeEntradas [
 		from programaCTI
 		to canvas:Entrada
-		reverse fornece
+		reverse entradaDe
 		asymmetric
 		irreflexive
 	]
 	relation executa [
 		from programaCTI
 		to canvas:AtividadeChave
-		reverse executado
+		reverse executadoPor
 		asymmetric
 		irreflexive
 	]
 	relation geraSaidas [
 		from programaCTI
 		to canvas:Saida
-		reverse gerada
+		reverse saidaDe
 		asymmetric
 		irreflexive
 	]
 	relation produzResultados [
 		from programaCTI
-		to canvas:Resultado
-		reverse resulta
+		to canvas:ResultadoEsperado
+		reverse resultadoDe
 		asymmetric
 		irreflexive
 	]
-	relation buscaAtingir1 [
+	relation buscaAtingirGeral [
 		from programaCTI
 		to canvas:ObjetivoGeral
-		reverse atingido1
+		reverse atingidoPor
 		asymmetric
 		irreflexive
 	]
-	relation buscaAtingir2 [
+	relation buscaAtingirEspecifico [
 		from programaCTI
 		to canvas:ObjetivoEspecifico
-		reverse atingido2
+		reverse alcancadoPor
 		asymmetric
 		irreflexive
 	]
 	relation direcionadoA [
 		from programaCTI
 		to canvas:PublicoAlvo
-		reverse orientado
+		reverse orientadoA
 		asymmetric
 		irreflexive
 	]

@@ -3,27 +3,36 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
-	instance OUT1 : canvas:Saida [
+	instance SA1 : canvas:Saida [
 		base:nome "Edital gerenciado com sucesso"
+		base:id "SA1"
 	]
-	instance OUT2 : canvas:Saida [
-		base:nome "Bolsas/subvenções implementadas e pagas de acordo com o planejamento"
+	instance SA2 : canvas:Saida [
+		base:nome "Bolsas implementadas e pagas de acordo com o planejamento"
+		base:id "SA2"
 	]
-	instance OUT3 : canvas:Saida [
-		base:nome "Relatórios parciais e final de acompanhamento"
+	instance SA3 : canvas:Saida [
+		base:nome "Relatórios parciais e final de acompanhamento dos bolsistas"
+		base:id "SA3"
 	]
-	instance OUT4 : canvas:Saida [
-		base:nome "AgilFAP em operação plena para atendimento ao programa"
+	instance SA4 : canvas:Saida [
+		base:nome "AgilFAP em operação plena para atendimento ao Programa"
+		base:id "SA4"
 	]
-	instance OUT5 : canvas:Saida [
-		base:nome "Parcerias formalizadas por meio de instrumentos legais"
+	instance SA5 : canvas:Saida [
+		base:nome "Parcerias formalizadas por meio de instrumentos legais como convênios, acordos de cooperação técnica, etc..."
+		base:id "SA5"
 	]
-	instance OUT6 : canvas:Saida [
-		base:nome "Infográfico atualizado de Indicadores de desempenho e impacto do programa"
+	instance SA6 : canvas:Saida [
+		base:nome "Infográfico atualizado de Indicadores de desempenho e impacto do Programa"
+		base:id "SA6"
 	]
-	instance OUT7 : canvas:Saida [
-		base:nome "Plano de Avaliação do programa executado"
+	instance SA7 : canvas:Saida [
+		base:nome "Plano de Avaliação do Programa executado"
+		base:id "SA7"
 	]
+	
+	
 	instance OUT8 : canvas:Saida [
 		base:nome "Formação de jovens com competências portadoras de futuro, com foco no mercado de trabalho"
 	]

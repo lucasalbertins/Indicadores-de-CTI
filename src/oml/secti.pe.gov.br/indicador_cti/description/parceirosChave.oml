@@ -3,6 +3,19 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
+	instance PC1 : canvas:ParceiroChave [
+		base:nome "Instituições de Ciência e Tecnologia (ICTs)"
+		base:id "PC1"
+	]
+	instance PC2 : canvas:ParceiroChave [
+		base:nome "Organizações públicas e privadas"
+		base:id "PC2"
+	]
+	instance PC3 : canvas:ParceiroChave [
+		base:nome "Agências nacionais e internacionais de fomento à CT&I"
+		base:id "PC3"
+	]
+	
 	instance CAPES : canvas:ParceiroChave [
 		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
 	]
@@ -38,6 +51,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 	]
 	instance ASSIESPE : canvas:ParceiroChave [
 		base:nome "Associação das Instituições Municipais de Ensino Superior de Pernambuco"
+	]
+	instance AGINT : canvas:ParceiroChave [
 	]
 	
 	// Autarquias como agrupador conceitual
@@ -90,9 +105,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> a
 	]
 	instance AmbientesInovacao : canvas:ParceiroChave [
 		base:nome "Ambientes promotores de inovação"
-	]
-	instance ICTsIntegrantes : canvas:ParceiroChave [
-		base:nome "ICTs integrantes que são apoiadoras"
 	]
 	instance FundacoesApoio : canvas:ParceiroChave [
 		base:nome "Fundações de Apoio credenciadas junto às ICTs pernambucanas"

@@ -6,6 +6,15 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 		restricts base:id to max 1
 		restricts base:id to min 1
 	]
+	aspect FatorExterno < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	concept Oportunidade < FatorExterno [
+		restricts base:id to max 1
+		restricts base:id to min 1
+	]
+	concept Ameaca < FatorExterno [
+		restricts base:id to max 1
+		restricts base:id to min 1
+	]
 	concept Entrada < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
 		restricts base:id to max 1
 		restricts base:id to min 1
@@ -18,7 +27,16 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 		restricts base:id to max 1
 		restricts base:id to min 1
 	]
-	concept Resultado < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
+	aspect Objetivo < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	concept ObjetivoGeral < Objetivo [
+		restricts base:id to max 1
+		restricts base:id to min 1
+	]
+	concept ObjetivoEspecifico < Objetivo [
+		restricts base:id to max 1
+		restricts base:id to min 1
+	]
+	concept ResultadoEsperado < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
 		restricts base:id to max 1
 		restricts base:id to min 1
 	]
@@ -26,15 +44,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 		restricts base:id to max 1
 		restricts base:id to min 1
 	]
-	concept FatorExterno < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
-		restricts base:id to max 1
-		restricts base:id to min 1
-	]
-	concept Oportunidade < FatorExterno
-	concept Ameaca < FatorExterno
-	concept Objetivo < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
-	concept ObjetivoGeral < Objetivo
-	concept ObjetivoEspecifico < Objetivo
 
 	scalar Prazo [
 		oneOf "curto", "médio", "longo"
@@ -44,7 +53,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 	]
 	
 	scalar property prazo [
-		domain Resultado
+		domain ResultadoEsperado
 		range Prazo
 		functional
 	]
@@ -69,8 +78,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 		irreflexive
 	]
 	relation buscaAtingir [
-		from Resultado
-		to ObjetivoEspecifico
+		from ObjetivoEspecifico
+		to ResultadoEsperado
 		reverse atingidoPor
 		asymmetric
 		irreflexive

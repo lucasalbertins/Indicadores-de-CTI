@@ -4,22 +4,19 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
 	
-	concept questaoAvaliacao < base:EntidadeNomeavel, base:EntidadeDescritivel, 
-	base:EntidadeIdentificavel
-	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeDescritivel, 
-	base:EntidadeIdentificavel
-	concept escopo < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept metodoAvaliacao < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept custoExecucao < base:EntidadeNomeavel, base:EntidadeDescritivel
-	concept risco < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
-	concept limitacao < base:EntidadeNomeavel, base:EntidadeDescritivel
+	concept questaoAvaliacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
+	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
+	concept escopo < base:EntidadeDescritivel, base:EntidadeIdentificavel
+	concept metodoAvaliacao < base:EntidadeDescritivel, base:EntidadeIdentificavel
+	concept risco < base:EntidadeDescritivel, base:EntidadeIdentificavel
+	concept limitacao < base:EntidadeDescritivel
 	
 	scalar Custo [
 		oneOf "Alto", "Moderado", "Baixo"
 	]
 	
 	scalar property custo [
-		domain custoExecucao
+		domain questaoAvaliacao
 		range Custo
 		functional
 	]
@@ -45,13 +42,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as 
 		asymmetric
 		irreflexive
 	]
-	relation temCusto [
-		from questaoAvaliacao
-		to custoExecucao
-		reverse custoPara
-		asymmetric
-		irreflexive
-	]
 	relation temRisco [
 		from questaoAvaliacao
 		to risco
@@ -68,8 +58,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as 
 	]
 	relation alinhaComResultado [
 		from questaoAvaliacao
-		to canvas:Resultado
-		reverse resultadoAlinhadoCom
+		to canvas:ResultadoEsperado
+		reverse alinhadoCom
 		asymmetric
 		irreflexive
 	]

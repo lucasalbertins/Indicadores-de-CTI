@@ -3,12 +3,41 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
-	instance FE1 : canvas:Oportunidade [
+	instance FE.OP1 : canvas:Oportunidade [
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
+		base:id "FE.OP1"
 	]
-	instance FE2 : canvas:Oportunidade [
-		base:nome "Maior reconhecimento da importância das atividades de CT&I/PD&I para as atividades produtivas e sociedade no geral"
+	instance FE.OP2 : canvas:Oportunidade [
+		base:nome "Reconhecimento da importância das pesquisas nas atividades produtivas"
+		base:id "FE.OP2"
 	]
+	
+	instance FE.AM1 : canvas:Ameaca [
+		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
+		base:id "FE.AM1"
+	]
+	instance FE.AM2 : canvas:Ameaca [
+		base:nome "Mercado de trabalho aquecido"
+		base:id "FE.AM2"
+	]
+	instance FE.AM3 : canvas:Ameaca [
+		base:nome "Baixa atratividade das bolsas"
+		base:id "FE.AM3"
+	]
+	instance FE.AM4 : canvas:Ameaca [
+		base:nome "Estrutura administrativa de suporte insuficiente ao programa"
+		base:id "FE.AM4"
+	]
+	instance FE.AM5 : canvas:Ameaca [
+		base:nome "Evasão dos estudantes"
+		base:id "FE.AM5"
+	]
+	instance FE.AM6 : canvas:Ameaca [
+		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
+		base:id "FE.AM6"
+	]
+	
+
 	instance FE3 : canvas:Oportunidade [
 		base:nome "Aprimoramento do arcabouço legal de inovação"
 	]
@@ -62,24 +91,7 @@ atuam"
 	instance ReconhecimentoPublico : canvas:Oportunidade [
 	base:nome "Reconhecimento público e fortalecimento institucional, consolidando o PROUPE como política de referência."
 	]
-	instance CortesContingenciamento : canvas:Ameaca [
-		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
-	]
-	instance MercadoAquecido : canvas:Ameaca [
-		base:nome "Mercado de trabalho aquecido"
-	]
-	instance BaixaAtratividadeBolsas : canvas:Ameaca [
-		base:nome "Baixa atratividade das bolsas"
-	]
-	instance EstruturadeSuporte : canvas:Ameaca [
-		base:nome "Estrutura administrativa de suporte insuficiente"
-	]
-	instance EvasaoEstudantes : canvas:Ameaca [
-		base:nome "Evasão dos estudantes"
-	]
-	instance FE17 : canvas:Ameaca [
-		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
-	]
+
 	instance FE18 : canvas:Ameaca [
 		base:nome "Envolvimento tímido do setor empresarial, cooperativas, órgãos de governo, 
 associações ou demais organizações do terceiro setor"

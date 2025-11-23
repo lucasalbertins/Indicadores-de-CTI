@@ -3,10 +3,80 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
-	instance RES1 : canvas:Resultado [
-		base:nome "Titulação dos estudantes bolsistas do programa como mestres e doutores"
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do número de mestres e doutores titulados no Estado"
+		base:id "RE.CP1"
 		canvas:prazo "curto"
 	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento da produção científica publicada em eventos e periódicos qualificados e de alto impacto"
+		base:id "RE.CP2"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Aumento do número de patentes depositadas e programas de software registrados"
+		base:id "RE.CP3"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Incremento do estoque de conhecimento em áreas estratégicas para o Estado"
+		base:id "RE.CP4"
+		canvas:prazo "curto"
+	]
+	instance RE.CP5 : canvas:ResultadoEsperado [
+		base:nome "Maior intercâmbio científico nacional e internacional"
+		base:id "RE.CP5"
+		canvas:prazo "curto"
+	]
+	
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Aumento da fixação de mestres e doutores pelo ecossistema de CT&I do Estado, inclusive no interior"
+		base:id "RE.MP1"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento do conceito CAPES dos PPGs novos e emergentes"
+		base:id "RE.MP2"
+		canvas:prazo "médio"
+	]
+	instance RE.MP3 : canvas:ResultadoEsperado [
+		base:nome "Manutenção do conceito CAPES dos PPGs de excelência"
+		base:id "RE.MP3"
+		canvas:prazo "médio"
+	]
+	instance RE.MP4 : canvas:ResultadoEsperado [
+		base:nome "Aumento do número de startups de base científica e tecnológica e spin-offs acadêmicos"
+		base:id "RE.MP4"
+		canvas:prazo "médio"
+	]
+	instance RE.MP5 : canvas:ResultadoEsperado [
+		base:nome "Aumento das inovações para Governo, Empresas e Sociedade"
+		base:id "RE.MP5"
+		canvas:prazo "médio"
+	]
+	
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Evolução dos índices econômicos, sociais, ambientais do Estado"
+		base:id "RE.LP1"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Fortalecimento das cadeias produtivas de setores estratégicos para Pernambuco"
+		base:id "RE.LP2"
+		canvas:prazo "longo"
+	]
+	instance RE.LP3 : canvas:ResultadoEsperado [
+		base:nome "Aumento da quantidade de licenciamentos de propriedade intelectual pelo Governo e Empresas Privadas"
+		base:id "RE.LP3"
+		canvas:prazo "longo"
+	]
+	instance RE.LP4 : canvas:ResultadoEsperado [
+		base:nome "Aumento da empregabilidade dos egressos PBPG de alto nível salarial"
+		base:id "RE.LP4"
+		canvas:prazo "longo"
+	]
+
+
 	instance RES2 : canvas:Resultado [
 		base:nome "Produção científica publicada em eventos e periódicos qualificados e de alto impacto"
 		canvas:prazo "curto"

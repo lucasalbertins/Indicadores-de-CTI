@@ -5,25 +5,34 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 	
 	instance AC1 : canvas:AtividadeChave [
 		base:nome "Gestão do ciclo de vida do Edital"
+		base:id "AC1"
 	]
 	instance AC2 : canvas:AtividadeChave [
-		base:nome "Gestão das bolsas oriundas do programa"
+		base:nome "Gestão das bolsas"
+		base:id "AC2"
 	]
 	instance AC3 : canvas:AtividadeChave [
-		base:nome "Acompanhamento técnico e financeiro do programa"
+		base:nome "Acompanhamento técnico"
+		base:id "AC3"
 	]
 	instance AC4 : canvas:AtividadeChave [
 		base:nome "Manutenção evolutiva e corretiva do AgilFAP"
+		base:id "AC4"
 	]
 	instance AC5 : canvas:AtividadeChave [
 		base:nome "Gestão de parcerias com entes públicos e privados"
+		base:id "AC5"
 	]
 	instance AC6 : canvas:AtividadeChave [
 		base:nome "Monitoramento dos indicadores de desempenho e impacto"
+		base:id "AC6"
 	]
 	instance AC7 : canvas:AtividadeChave [
-		base:nome "Avaliação do programa"
+		base:nome "Avaliação do Programa"
+		base:id "AC7"
 	]
+	
+	
 	instance CelebracaoTED : canvas:AtividadeChave [
 		base:nome "Celebração de TED para infraestrutura (SECTI, SEE, FACEPE)"
 	]
@@ -114,5 +123,4 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 	instance ParceriasEstrategicas : canvas:AtividadeChave [
 		base:nome "Parcerias estratégicas com setor privado e sociedade civil, ampliando impacto em extensão, inovação e trabalhabilidade."
 	]
-	
 }
