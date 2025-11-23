@@ -77,284 +77,284 @@ description <http://secti.pe.gov.br/indicador_cti/description/resultados#> as re
 	]
 
 
-	instance RES2 : canvas:Resultado [
+	instance RES2 : canvas:ResultadoEsperado [
 		base:nome "Produção científica publicada em eventos e periódicos qualificados e de alto impacto"
 		canvas:prazo "curto"
 	]
-	instance RES3 : canvas:Resultado [
+	instance RES3 : canvas:ResultadoEsperado [
 		base:nome "Proteção intelectual do conhecimento gerado por meio de patentes depositadas, e programas de software registrados"
 		canvas:prazo "curto"
 	]
-	instance RES4 : canvas:Resultado [
+	instance RES4 : canvas:ResultadoEsperado [
 		base:nome "Estoque de conhecimento em áreas estratégicas incrementado"
 		canvas:prazo "curto"
 	]
-	instance RES5 : canvas:Resultado [
+	instance RES5 : canvas:ResultadoEsperado [
 		base:nome "Intercâmbio científico nacional e internacional"
 		canvas:prazo "curto"
 	]
-	instance RES6 : canvas:Resultado [
+	instance RES6 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de instrumentos de parceria firmados entre ICTs e demais agentes do ecossistema"
 		canvas:prazo "curto"
 	]
-	instance RES7 : canvas:Resultado [
+	instance RES7 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de eventos de CT&I realizados em todo o Estado"
 		canvas:prazo "curto"
 	]
-	instance RES8 : canvas:Resultado [
+	instance RES8 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de projetos de CT&I ativos em todo o Estado"
 		canvas:prazo "curto"
 	]
-	instance RES9 : canvas:Resultado [
+	instance RES9 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de novos proponentes a editais de CT&I"
 		canvas:prazo "curto"
 	]
-	instance RES42 : canvas:Resultado [
+	instance RES42 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de projetos de PD&I ativos que envolvam órgãos públicos da esfera 
 estadual em parceria com empresas pernambucanas de base tecnológica"
 		canvas:prazo "curto"
 	]
-	instance RES47 : canvas:Resultado [
+	instance RES47 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de participantes certificados em cursos de curta duração com enfoque 
 em desafios tecnológicos"
 		canvas:prazo "curto"
 	]
-	instance AumentoEstudantesMatriculados : canvas:Resultado [
+	instance AumentoEstudantesMatriculados : canvas:ResultadoEsperado [
 	base:nome "Aumento do número de estudantes de baixa renda matriculados em cursos de graduação das Autarquias Municipais de Ensino Superior de Pernambuco por meio da concessão de bolsas de estudo, integrais ou parciais. Esse crescimento inclui a ampliação da matrícula de pessoas com deficiência e de mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência doméstica e familiar, bem como o aumento do número de professores matriculados para a realização da segunda graduação em licenciaturas."
 	canvas:prazo "curto"
 	]
-	instance CrescimentoMatriculaSTEM : canvas:Resultado [
+	instance CrescimentoMatriculaSTEM : canvas:ResultadoEsperado [
 		base:nome "Crescimento da matrícula em cursos STEM e licenciaturas, fortalecendo áreas estratégicas."
 		canvas:prazo "curto"
 	]
-	instance AmpliacaoAcessoES : canvas:Resultado [
+	instance AmpliacaoAcessoES : canvas:ResultadoEsperado [
 		base:nome "Ampliação do acesso ao ensino superior, com maior ocupação das vagas disponíveis."
 		canvas:prazo "curto"
 	]
-	instance ReducaoEvasao : canvas:Resultado [
+	instance ReducaoEvasao : canvas:ResultadoEsperado [
 		base:nome "Redução de evasão e aumento do número de concluintes de graduação."
 		canvas:prazo "curto"
 	]
 	
-	instance RES10 : canvas:Resultado [
+	instance RES10 : canvas:ResultadoEsperado [
 		base:nome "Absorção e fixação de mestres e doutores pelo ecossistema de CT&I do estado"
 		canvas:prazo "médio"
 	]
-	instance RES11 : canvas:Resultado [
+	instance RES11 : canvas:ResultadoEsperado [
 		base:nome "Fixação de mestres e doutores no interior do estado"
 		canvas:prazo "médio"
 	]
-	instance RES12 : canvas:Resultado [
+	instance RES12 : canvas:ResultadoEsperado [
 		base:nome "Aumento do conceito CAPES dos PPG novos e emergentes"
 		canvas:prazo "médio"
 	]
-	instance RES13 : canvas:Resultado [
+	instance RES13 : canvas:ResultadoEsperado [
 		base:nome "Startups de base científica e tecnológica e Spin-offs acadêmicos"
 		canvas:prazo "médio"
 	]
-	instance RES14 : canvas:Resultado [
+	instance RES14 : canvas:ResultadoEsperado [
 		base:nome "Geração de inovações para Indústria, Governo e Sociedade"
 		canvas:prazo "médio"
 	]
-	instance RES15 : canvas:Resultado [
+	instance RES15 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de ações de inovação aberta realizadas em todo o Estado"
 		canvas:prazo "médio"
 	]
-	instance RES16 : canvas:Resultado [
+	instance RES16 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de startups ativas em todo o Estado"
 		canvas:prazo "médio"
 	]
-	instance RES43 : canvas:Resultado [
+	instance RES43 : canvas:ResultadoEsperado [
 		base:nome "Absorção de novas soluções por empresas, cooperativas, órgãos de governo, associações 
 ou demais organizações do terceiro setor integrantes dos projetos apoiados"
 		canvas:prazo "médio"
 	]
-	instance RES44 : canvas:Resultado [
+	instance RES44 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de patentes depositadas e programas de softwares registrados"
 		canvas:prazo "médio"
 	]
-	instance RES48 : canvas:Resultado [
+	instance RES48 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de participantes certificados em jornadas de extensão tecnológica"
 		canvas:prazo "médio"
 	]
-	instance RES50 : canvas:Resultado [
+	instance RES50 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de pós-graduados formados no Estado, em nível de pós-graduação lato 
 sensu"
 		canvas:prazo "médio"
 	]
-	instance ExpansaoEstudantesBeneficiados : canvas:Resultado [
+	instance ExpansaoEstudantesBeneficiados : canvas:ResultadoEsperado [
 		base:nome "Expansão do número de estudantes beneficiados com bolsas de estudo."
 		canvas:prazo "médio"
 	]
-	instance GarantiaVagasReservadas : canvas:Resultado [
+	instance GarantiaVagasReservadas : canvas:ResultadoEsperado [
 		base:nome "Garantia de todas as vagas reservadas para pessoas com deficiência e para mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência doméstica e familiar, assim como para professores em segunda licenciatura."
 		canvas:prazo "médio"
 	]
-	instance CrescMatriculasSTEM : canvas:Resultado [
+	instance CrescMatriculasSTEM : canvas:ResultadoEsperado [
 		base:nome "Crescimento da matrícula em cursos STEM e licenciaturas, fortalecendo áreas estratégicas."
 		canvas:prazo "médio"
 	]
-	instance ConsolidacaoReducaoEvasao : canvas:Resultado [
+	instance ConsolidacaoReducaoEvasao : canvas:ResultadoEsperado [
 		base:nome "Consolidação da redução da evasão estudantil, com aumento significativo de concluintes e formação de capital humano qualificado, alinhado às demandas do Estado e às áreas prioritárias (STEM, licenciaturas e cursos superiores de tecnologia)."
 		canvas:prazo "médio"
 	]
-	instance AumentoProfessoresConcluindo : canvas:Resultado [
+	instance AumentoProfessoresConcluindo : canvas:ResultadoEsperado [
 		base:nome "Aumento do número de professores concluindo segunda graduação em licenciaturas."
 		canvas:prazo "médio"
 	]
-	instance AumentoRetencaoTalentos : canvas:Resultado [
+	instance AumentoRetencaoTalentos : canvas:ResultadoEsperado [
 		base:nome "Aumento da trabalhabilidade e retenção de talentos nas regiões de desenvolvimento onde o bolsista está inserido."
 		canvas:prazo "médio"
 	]
-	instance AumentoConcluintesRD : canvas:Resultado [
+	instance AumentoConcluintesRD : canvas:ResultadoEsperado [
 		base:nome "Aumento do número de concluintes na respectiva região de desenvolvimento, matriculado na respectiva Autarquia."
 		canvas:prazo "médio"
 	]
-	instance FortalecimentoAcessoES : canvas:Resultado [
+	instance FortalecimentoAcessoES : canvas:ResultadoEsperado [
 		base:nome "Fortalecimento do acesso ao ensino superior, com maior ocupação das vagas disponíveis."
 		canvas:prazo "médio"
 	]
-	instance RES17 : canvas:Resultado [
+	instance RES17 : canvas:ResultadoEsperado [
 		base:nome "Evolução dos índices econômicos, sociais e ambientais do estado"
 		canvas:prazo "longo"
 	]
-	instance RES18 : canvas:Resultado [
+	instance RES18 : canvas:ResultadoEsperado [
 		base:nome "Fortalecimento das cadeias produtivas de setores estratégicos para Pernambuco"
 		canvas:prazo "longo"
 	]
-	instance RES19 : canvas:Resultado [
+	instance RES19 : canvas:ResultadoEsperado [
 		base:nome "Licenciamento da propriedade intelectual pela Indústria e Governo"
 		canvas:prazo "longo"
 	]
-	instance RES20 : canvas:Resultado [
+	instance RES20 : canvas:ResultadoEsperado [
 		base:nome "Empregabilidade dos egressos de alto nível salarial"
 		canvas:prazo "longo"
 	]
-	instance RES21 : canvas:Resultado [
+	instance RES21 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de transferências tecnológicas realizadas no Estado"
 		canvas:prazo "longo"
 	]
-	instance RES22 : canvas:Resultado [
+	instance RES22 : canvas:ResultadoEsperado [
 		base:nome "Ampliação da produção de CT&I de grupos de pesquisa vinculados às redes apoiadas"
 		canvas:prazo "longo"
 	]
-	instance RES23 : canvas:Resultado [
+	instance RES23 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de redes de inovação ativas e autossustentáveis em todo Estado"
 		canvas:prazo "longo"
 	]
-	instance RES24 : canvas:Resultado [
+	instance RES24 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do faturamento obtido por empresas pernambucanas"
 		canvas:prazo "longo"
 	]
-	instance RES25 : canvas:Resultado [
+	instance RES25 : canvas:ResultadoEsperado [
 		base:nome " Espaços implantados com equipamentos promovendo a cultura Maker e de indústria 4.0"
 		canvas:prazo "longo"
 	]
-	instance RES26 : canvas:Resultado [
+	instance RES26 : canvas:ResultadoEsperado [
 		base:nome "Desenvolvendo competências portadoras de futuro"
 		canvas:prazo "longo"
 	]
-	instance RES27 : canvas:Resultado [
+	instance RES27 : canvas:ResultadoEsperado [
 		base:nome "Novos produtos/protótipos criativos gerados"
 		canvas:prazo "longo"
 	]
-	instance RES28 : canvas:Resultado [
+	instance RES28 : canvas:ResultadoEsperado [
 		base:nome "Maior permanência dos alunos nas escolas com espaços CRIA"
 		canvas:prazo "longo"
 	]
-	instance RES29 : canvas:Resultado [
+	instance RES29 : canvas:ResultadoEsperado [
 		base:nome " Mais pessoas capacitadas em competências portadoras de futuro"
 		canvas:prazo "longo"
 	]
-	instance RES30 : canvas:Resultado [
+	instance RES30 : canvas:ResultadoEsperado [
 		base:nome " Maior ingresso de estudantes da rede pública em cursos superiores STEM+C"
 		canvas:prazo "longo"
 	]
-	instance RES31 : canvas:Resultado [
+	instance RES31 : canvas:ResultadoEsperado [
 		base:nome " Aumento da empregabilidade de pessoas na área de STEM+C em áreas prioritárias para o Estado"
 		canvas:prazo "longo"
 	]
-	instance RES32 : canvas:Resultado [
+	instance RES32 : canvas:ResultadoEsperado [
 		base:nome " Melhoria dos índices educacionais do Estado"
 		canvas:prazo "longo"
 	]
-	instance RES33 : canvas:Resultado [
+	instance RES33 : canvas:ResultadoEsperado [
 		base:nome "Criação de startups por egressos das escolas com espaços CRIA"
 		canvas:prazo "longo"
 	]
-	instance RES34 : canvas:Resultado [
+	instance RES34 : canvas:ResultadoEsperado [
 		base:nome "Mais professores capazes de formar recursos humanos em STEM+C"
 		canvas:prazo "longo"
 	]
-	instance RES35 : canvas:Resultado [
+	instance RES35 : canvas:ResultadoEsperado [
 		base:nome "Mais profissionais para lidar com projetos de tecnologia e inovação"
 		canvas:prazo "longo"
 	]
-	instance RES36 : canvas:Resultado [
+	instance RES36 : canvas:ResultadoEsperado [
 		base:nome "Maior competitividade das empresas e entidades pernambucanas"
 		canvas:prazo "longo"
 	]
-	instance RES37 : canvas:Resultado [
+	instance RES37 : canvas:ResultadoEsperado [
 		base:nome "Mais recursos humanos desenvolvendo soluções baseadas em CT&I em todo o território pernambucano promovendo transformação social"
 		canvas:prazo "longo"
 	]
-	instance RES38 : canvas:Resultado [
+	instance RES38 : canvas:ResultadoEsperado [
 		base:nome "Atração de estudantes talentosos nas áreas de STEM+C"
 		canvas:prazo "longo"
 	]
-	instance RES39 : canvas:Resultado [
+	instance RES39 : canvas:ResultadoEsperado [
 		base:nome "Elevação da qualidade de vida e a prosperidade baseada em CT&I"
 		canvas:prazo "longo"
 	]
-	instance RES40 : canvas:Resultado [
+	instance RES40 : canvas:ResultadoEsperado [
 		base:nome "Desenvolvimento econômico e social do Estado de Pernambuco"
 		canvas:prazo "longo"
 	]
-	instance RES41 : canvas:Resultado [
+	instance RES41 : canvas:ResultadoEsperado [
 		base:nome " Promoção da modernização das escolas e práticas para atividades curriculares"
 		canvas:prazo "longo"
 	]
-	instance RES45 : canvas:Resultado [
+	instance RES45 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de compras públicas de soluções inovadoras realizadas por órgãos 
 públicos do Estado de Pernambuco"
 		canvas:prazo "longo"
 	]
-	instance RES46 : canvas:Resultado [
+	instance RES46 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de empregos, do portfólio e do faturamento obtido por empresas 
 pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos, inclusive no interior"
 		canvas:prazo "longo"
 	]
-	instance RES49 : canvas:Resultado [
+	instance RES49 : canvas:ResultadoEsperado [
 		base:nome "Ampliação do nº de empregos e do faturamento obtido por empresas pernambucanas de 
 base tradicional, com vistas ao fortalecimento dos arranjos produtivos locais do Estado;"
 		canvas:prazo "longo"
 	]
-	instance RES51 : canvas:Resultado [
+	instance RES51 : canvas:ResultadoEsperado [
 		base:nome "Empregabilidade de participantes em empresas integrantes dos projetos apoiados ou em 
 outras empresas aderentes às temáticas dos projetos"
 		canvas:prazo "longo"
 	]
-	instance AltaOcupacaoVagas : canvas:Resultado [
+	instance AltaOcupacaoVagas : canvas:ResultadoEsperado [
 		base:nome "Sustentação de alta ocupação de vagas e baixa evasão, consolidando o impacto das bolsas na permanência estudantil."
 		canvas:prazo "longo"
 	]
-	instance FormacaoProfissionaisQuali : canvas:Resultado [
+	instance FormacaoProfissionaisQuali : canvas:ResultadoEsperado [
 		base:nome "Formação consistente de profissionais qualificados, contribuindo para o desenvolvimento científico, tecnológico, econômico e social de Pernambuco."
 		canvas:prazo "longo"
 	]
-	instance ConsolidacaoEstimuloLdos : canvas:Resultado [
+	instance ConsolidacaoEstimuloLdos : canvas:ResultadoEsperado [
 		base:nome "Consolidação do estímulo às licenciaturas, fortalecendo a formação de professores e melhorando a qualidade da educação básica no estado."
 		canvas:prazo "longo"
 	]
-	instance ContinuidadeIncentivoSTEM : canvas:Resultado [
+	instance ContinuidadeIncentivoSTEM : canvas:ResultadoEsperado [
 		base:nome "Continuidade do incentivo aos cursos STEM, priorizando áreas estratégicas para o desenvolvimento do Estado."
 		canvas:prazo "longo"
 	]
-	instance ImpactoSocialContrapartidas : canvas:Resultado [
+	instance ImpactoSocialContrapartidas : canvas:ResultadoEsperado [
 		base:nome "Impacto social das contrapartidas pelos bolsistas, promovendo atividades educativas, de extensão, científicas ou tecnológicas sob supervisão docente."
 		canvas:prazo "longo"
 	]
-	instance RetencaoTalendoRD : canvas:Resultado [
+	instance RetencaoTalendoRD : canvas:ResultadoEsperado [
 		base:nome "Retenção do talento na região de desenvolvimento onde realizou a graduação."
 		canvas:prazo "longo"
 	]

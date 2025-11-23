@@ -1,12 +1,12 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA#> as eCRIA {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	//extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	//extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+	//extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	//extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
@@ -19,25 +19,25 @@ entre estudantes da rede pública estadual de ensino médio e técnico de Pernam
 ambientes de aprendizagem colaborativos e inovadores"
 		programa:possuiParceiros parceiroChave:SEE, parceiroChave:FACEPE, parceiroChave:ETEs, 
 		parceiroChave:EREMs, parceiroChave:SECTI-PE, parceiroChave:SAD
-		programa:condicionadoPor fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, fatorExterno:EvasaoEstudantes, 
-		fatorExterno:MorosidadeTED, fatorExterno:EvasaoporTED, fatorExterno:PerdadeAdesao, 
-		fatorExterno:FaltaRH, fatorExterno:FaltaPerenidade, fatorExterno:FaltaPriorizacao
-		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN5, entrada:EN6, 
-		entrada:EN7, entrada:EN11, entrada:EN12, entrada:EN13
+	//	programa:condicionadoPor fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, fatorExterno:EvasaoEstudantes, 
+	//	fatorExterno:MorosidadeTED, fatorExterno:EvasaoporTED, fatorExterno:PerdadeAdesao, 
+	//	fatorExterno:FaltaRH, fatorExterno:FaltaPerenidade, fatorExterno:FaltaPriorizacao
+	//	programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN5, entrada:EN6, 
+	//	entrada:EN7, entrada:EN11, entrada:EN12, entrada:EN13
 		programa:executa atividadeChave:CelebracaoTED, atividadeChave:LancamentoEdital, atividadeChave:LicitacaoEquipamentos, atividadeChave:ImplantacaoECRIA, atividadeChave:MonitoramentoeAvaliacao, 
 		atividadeChave:GestaoCicloEdital, atividadeChave:ManutencaoEquipamentos, 
 		atividadeChave:AprimoramentoTecnologico, atividadeChave:AcoesSensibilizacao, 
 		atividadeChave:FormacaoProfessores
 		programa:geraSaidas saida:OUT8, saida:OUT9, saida:OUT10, saida:OUT11, saida:OUT12, saida:OUT13
-		programa:produzResultados resultado:RES25, resultado:RES26, resultado:RES27, resultado:RES28, 
-		resultado:RES29, resultado:RES30, resultado:RES31, resultado:RES32, resultado:RES33, 
-		resultado:RES34, resultado:RES35, resultado:RES36, resultado:RES37, resultado:RES38, 
-		resultado:RES39, resultado:RES40, resultado:RES41
-		programa:direcionadoA publicoAlvo:PA9, publicoAlvo:PA10, publicoAlvo:PA21, publicoAlvo:PA22, 
-		publicoAlvo:PA23, publicoAlvo:PA24, publicoAlvo:PA25
-		programa:buscaAtingir1 OBJGeral
-		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
-		OBJEspecifico5, OBJEspecifico6, OBJEspecifico7, OBJEspecifico8
+	//	programa:produzResultados resultado:RES25, resultado:RES26, resultado:RES27, resultado:RES28, 
+	//	resultado:RES29, resultado:RES30, resultado:RES31, resultado:RES32, resultado:RES33, 
+	//	resultado:RES34, resultado:RES35, resultado:RES36, resultado:RES37, resultado:RES38, 
+	//	resultado:RES39, resultado:RES40, resultado:RES41
+	//	programa:direcionadoA publicoAlvo:PA9, publicoAlvo:PA10, publicoAlvo:PA21, publicoAlvo:PA22, 
+	//	publicoAlvo:PA23, publicoAlvo:PA24, publicoAlvo:PA25
+	//	programa:buscaAtingir1 OBJGeral
+	//	programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
+	//	OBJEspecifico5, OBJEspecifico6, OBJEspecifico7, OBJEspecifico8
 	]
 	
 	instance OBJGeral : canvas:ObjetivoGeral [

@@ -1,12 +1,12 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETSolucoes#> as COMPETSolucoes {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+//	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	//extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	//extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
-	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
+//	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+//	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	//extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
@@ -17,23 +17,23 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Foi criado com o objetivo de apoiar a inovação tecnológica em micro e pequenas 
 empresas do estado. Ele incentiva projetos que desenvolvam e implantem soluções para desafios locais, 
 fortalecendo a competitividade territorial através de parcerias"
-		programa:possuiParceiros parceiroChave:Inovar-PE, parceiroChave:AGE, 
-		parceiroChave:EmpresasIntegrantes, parceiroChave:AmbientesInovacao
-		programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE5, fatorExterno:FE18, 
-		fatorExterno:FE21
-		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN4, 
-		entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+	//	programa:possuiParceiros parceiroChave:Inovar-PE, parceiroChave:AGE, 
+		//parceiroChave:EmpresasIntegrantes, parceiroChave:AmbientesInovacao
+	//	programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE5, fatorExterno:FE18, 
+		//fatorExterno:FE21
+		//programa:recebeEntradas entrada:OrcamentoEstadual, entrada:EN2, entrada:EN3, entrada:EN4, 
+		//entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, 
 		atividadeChave:AC7
-		programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT6, saida:OUT7
-		programa:produzResultados resultado:RES42, resultado:RES43, resultado:RES44, resultado:RES21, 
-		resultado:RES46, resultado:RES49, resultado:RES17
-		programa:direcionadoA publicoAlvo:PA6, publicoAlvo:PA27, publicoAlvo:PA11, publicoAlvo:PA12, 
-		publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15, publicoAlvo:PA17, publicoAlvo:PA18, 
-		publicoAlvo:PA19, publicoAlvo:PA20
-		programa:buscaAtingir1 OBJGeral
-		programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
-		OBJEspecifico5
+	//	programa:geraSaidas saida:OUT1, saida:OUT2, saida:OUT3, saida:OUT4, saida:OUT6, saida:OUT7
+	//	programa:produzResultados resultado:RES42, resultado:RES43, resultado:RES44, resultado:RES21, 
+		//resultado:RES46, resultado:RES49, resultado:RES17
+		//programa:direcionadoA publicoAlvo:PA6, publicoAlvo:PA27, publicoAlvo:PA11, publicoAlvo:PA12, 
+		//publicoAlvo:PA13, publicoAlvo:PA14, publicoAlvo:PA15, publicoAlvo:PA17, publicoAlvo:PA18, 
+		//publicoAlvo:PA19, publicoAlvo:PA20
+		//programa:buscaAtingir1 OBJGeral
+		//programa:buscaAtingir2 OBJEspecifico1, OBJEspecifico2, OBJEspecifico3, OBJEspecifico4, 
+	//	OBJEspecifico5
 	]
 	
 	instance OBJGeral : canvas:ObjetivoGeral [

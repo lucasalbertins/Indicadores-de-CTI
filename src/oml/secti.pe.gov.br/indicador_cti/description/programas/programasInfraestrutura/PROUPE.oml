@@ -2,10 +2,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+//	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
+	//extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
@@ -26,8 +26,8 @@ municipais de Pernambuco"
 		fatorExterno:ProblemasSistemaGerenciamento,fatorExterno:ExpansaoDemanda, 
 		fatorExterno:ValorizacaoAreasSTEM,fatorExterno:IntegracaoPoliticasFederais, 
 		fatorExterno:CrescimentoMercadoTrabalho, fatorExterno:ReconhecimentoPublico
-		programa:recebeEntradas entrada:OrcamentoEstadual, entrada:RecursoFinanceiro, entrada:RHSECTI, 
-		entrada:RHAutarquias, entrada:SistemaGerencimento 
+	//	programa:recebeEntradas entrada:OrcamentoEstadual, entrada:RecursoFinanceiro, entrada:RHSECTI, 
+	//	entrada:RHAutarquias, entrada:SistemaGerencimento 
 		programa:executa atividadeChave:LancamentoEdital, 
 		atividadeChave:SolicitacaoDisponibilidadeOrcamentaria, 
 		atividadeChave:AutorizacaoCamaraProgramacaoFinanceira, atividadeChave:InscricaoCandidatos, 
@@ -47,20 +47,20 @@ municipais de Pernambuco"
 		saida:AtvdEducativasCientificas, saida:RelatoriosContrapartida, 
 		saida:RelatoriosMensaisSemestraisAnuais, saida:PainelAcompanhamentoAtualizado, 
 		saida:AvaliacaoImpactoPrograma
-		programa:produzResultados resultado:AumentoEstudantesMatriculados, 
-		resultado:CrescimentoMatriculaSTEM, resultado:AmpliacaoAcessoES, resultado:ReducaoEvasao,
-		resultado:ExpansaoEstudantesBeneficiados, resultado:GarantiaVagasReservadas, 
-		resultado:CrescMatriculasSTEM, resultado:ConsolidacaoReducaoEvasao, 
-		resultado:AumentoProfessoresConcluindo,
-		resultado:AumentoRetencaoTalentos, resultado:AumentoConcluintesRD, 
-		resultado:FortalecimentoAcessoES, resultado:AltaOcupacaoVagas, 
-		resultado:FormacaoProfissionaisQuali, resultado:ConsolidacaoEstimuloLdos, 
-		resultado:ContinuidadeIncentivoSTEM , resultado:ImpactoSocialContrapartidas, 
-		resultado:RetencaoTalendoRD
+	//	programa:produzResultados resultado:AumentoEstudantesMatriculados, 
+		//resultado:CrescimentoMatriculaSTEM, resultado:AmpliacaoAcessoES, resultado:ReducaoEvasao,
+		//resultado:ExpansaoEstudantesBeneficiados, resultado:GarantiaVagasReservadas, 
+		//resultado:CrescMatriculasSTEM, resultado:ConsolidacaoReducaoEvasao, 
+		//resultado:AumentoProfessoresConcluindo,
+		//resultado:AumentoRetencaoTalentos, resultado:AumentoConcluintesRD, 
+		//resultado:FortalecimentoAcessoES, resultado:AltaOcupacaoVagas, 
+		//resultado:FormacaoProfissionaisQuali, resultado:ConsolidacaoEstimuloLdos, 
+		//resultado:ContinuidadeIncentivoSTEM , resultado:ImpactoSocialContrapartidas, 
+		//resultado:RetencaoTalendoRD
 		programa:direcionadoA publicoAlvo:EstudantesdasAutarquias
-		programa:buscaAtingir1 OBJGeral
-		programa:buscaAtingir2 AmpliacaoAcessoES, QualificacaoCapitalHumano, InclusaoEquidade, 
-		InteorizacaoES
+	//	programa:buscaAtingir1 OBJGeral
+		//programa:buscaAtingir2 AmpliacaoAcessoES, QualificacaoCapitalHumano, InclusaoEquidade, 
+		//InteorizacaoES
 	]
 	
 	instance OBJGeral : canvas:ObjetivoGeral [
