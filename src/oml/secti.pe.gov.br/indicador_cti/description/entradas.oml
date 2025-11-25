@@ -31,36 +31,47 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entr
 	
 	instance EN55 : canvas:Entrada [
 		base:nome "Avaliadores ad-hoc das propostas"
+		base:id "EN7"
 	]
 	instance EN66 : canvas:Entrada [
 		base:nome "Recursos humanos de suporte ao programa"
+		base:id "EN8"
 	]
 	instance EN8 : canvas:Entrada [
 		base:nome "Recursos de TI de suporte ao programa"
+		base:id "EN9"
 	]
 	instance EN10 : canvas:Entrada [
 		base:nome "Gerência e Planejamento da SECTI"
+		base:id "EN10"
 	]
 	instance EN11 : canvas:Entrada [
 		base:nome "Espaços físicos adequados nas escolas"
+		base:id "EN11"
 	]
 	instance EN12 : canvas:Entrada [
 		base:nome "Gerência e Planejamento da SECTI e SEE"
+		base:id "EN12"
 	]
 	instance EN13 : canvas:Entrada [
 		base:nome "Sistemas de monitoramento dos espaços/projetos"
+		base:id "EN13"
 	]
 	instance RecursoFinanceiro : canvas:Entrada [
-	base:nome "dotação orçamentária estadual específica para concessão das bolsas; autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior"
+		base:nome "dotação orçamentária estadual específica para concessão das bolsas; autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior"
+		base:id "EN14"
 	]
 	instance RHSECTI : canvas:Entrada [
-	base:nome "Recurso Humano: equipe técnica responsável pela gestão do programa, apoio jurídico, administrativo e de comunicação; profissionais de tecnologia da informação para operação e manutenção do sistema de gerenciamento do PROUPE."
+		base:nome "Recurso Humano: equipe técnica responsável pela gestão do programa, apoio jurídico, administrativo e de comunicação; profissionais de tecnologia da informação para operação e manutenção do sistema de gerenciamento do PROUPE."
+		base:id "EN15"
 	]
 	instance RHAutarquias : canvas:Entrada [
-	base:nome "Recursos Humanos Autarquias Municipais de Ensino Superior: equipe responsável pela inscrição, validação e acompanhamento dos bolsistas; professores orientadores das atividades de contrapartida educativa."
+		base:nome "Recursos Humanos Autarquias Municipais de Ensino Superior: equipe responsável pela inscrição, validação e acompanhamento dos bolsistas; professores orientadores das atividades de contrapartida educativa."
+		base:id "EN16"
 	]
 	instance SistemaGerencimento : canvas:Entrada [
-	base:nome "Recursos da Informação: sistema de gerenciamento do PROUPE; responsável pelo controle das inscrições, resultados, contrapartida educativa e pagamentos."
+		base:nome "Recursos da Informação: sistema de gerenciamento do PROUPE; responsável pelo controle das inscrições, resultados, contrapartida educativa e pagamentos."
+		base:id "EN17"
 	]
 	
 }

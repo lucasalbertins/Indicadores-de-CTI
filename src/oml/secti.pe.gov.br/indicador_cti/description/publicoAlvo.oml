@@ -47,84 +47,104 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 	
 	
 	instance PA9 : canvas:PublicoAlvo [
-		base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs) com futuro para as EREFEMs"
-		canvas:tipo "direto"
+	    base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs) com futuro para as EREFEMs"
+	    base:id "PA9"
+	    canvas:tipo "direto"
 	]
 	instance PA10 : canvas:PublicoAlvo [
-		base:nome "Professores da rede estadual de ensino"
-		canvas:tipo "direto"
+	    base:nome "Professores da rede estadual de ensino"
+	    base:id "PA10"
+	    canvas:tipo "direto"
 	]
 	instance PA27 : canvas:PublicoAlvo [
-		base:nome "Cooperativas e associações"
-		canvas:tipo "direto"
+	    base:nome "Cooperativas e associações"
+	    base:id "PA27"
+	    canvas:tipo "direto"
 	]
-	
 	instance PA11 : canvas:PublicoAlvo [
-		base:nome "Governo"
-		canvas:tipo "indireto"
+	    base:nome "Governo"
+	    base:id "PA11"
+	    canvas:tipo "indireto"
 	]
 	instance PA12 : canvas:PublicoAlvo [
-		base:nome "Indústria"
-		canvas:tipo "indireto"
+	    base:nome "Indústria"
+	    base:id "PA12"
+	    canvas:tipo "indireto"
 	]
 	instance PA13 : canvas:PublicoAlvo [
-		base:nome "Sociedade"
-		canvas:tipo "indireto"
+	    base:nome "Sociedade"
+	    base:id "PA13"
+	    canvas:tipo "indireto"
 	]
 	instance PA14 : canvas:PublicoAlvo [
-		base:nome "Ecossistema de CT&I"
-		canvas:tipo "indireto"
+	    base:nome "Ecossistema de CT&I"
+	    base:id "PA14"
+	    canvas:tipo "indireto"
 	]
 	instance PA15 : canvas:PublicoAlvo [
-		base:nome "ICTs"
-		canvas:tipo "indireto"
+	    base:nome "ICTs"
+	    base:id "PA15"
+	    canvas:tipo "indireto"
 	]
 	instance PA16 : canvas:PublicoAlvo [
-		base:nome "Grupos de pesquisa"
-		canvas:tipo "indireto"
+	    base:nome "Grupos de pesquisa"
+	    base:id "PA16"
+	    canvas:tipo "indireto"
 	]
 	instance PA17 : canvas:PublicoAlvo [
-		base:nome "Empresas de base tecnológica"
-		canvas:tipo "indireto"
+	    base:nome "Empresas de base tecnológica"
+	    base:id "PA17"
+	    canvas:tipo "indireto"
 	]
 	instance PA18 : canvas:PublicoAlvo [
-		base:nome "Empresas de base tradicional"
-		canvas:tipo "indireto"
+	    base:nome "Empresas de base tradicional"
+	    base:id "PA18"
+	    canvas:tipo "indireto"
 	]
 	instance PA19 : canvas:PublicoAlvo [
-		base:nome "Entidades promotoras de inovação"
-		canvas:tipo "indireto"
+	    base:nome "Entidades promotoras de inovação"
+	    base:id "PA19"
+	    canvas:tipo "indireto"
 	]
 	instance PA20 : canvas:PublicoAlvo [
-		base:nome "Entidades da administração pública e de interesse social"
-		canvas:tipo "indireto"
+	    base:nome "Entidades da administração pública e de interesse social"
+	    base:id "PA20"
+	    canvas:tipo "indireto"
 	]
 	instance PA21 : canvas:PublicoAlvo [
-		base:nome "Comunidades (inovação social e inclusiva)"
-		canvas:tipo "indireto"
+	    base:nome "Comunidades (inovação social e inclusiva)"
+	    base:id "PA21"
+	    canvas:tipo "indireto"
 	]
 	instance PA22 : canvas:PublicoAlvo [
-		base:nome "Associações"
-		canvas:tipo "indireto"
+	    base:nome "Associações"
+	    base:id "PA22"
+	    canvas:tipo "indireto"
 	]
 	instance PA23 : canvas:PublicoAlvo [
-		base:nome "Cooperativas"
-		canvas:tipo "indireto"
+	    base:nome "Cooperativas"
+	    base:id "PA23"
+	    canvas:tipo "indireto"
 	]
 	instance PA24 : canvas:PublicoAlvo [
-		base:nome "Negócios locais"
-		canvas:tipo "indireto"
+	    base:nome "Negócios locais"
+	    base:id "PA24"
+	    canvas:tipo "indireto"
 	]
 	instance PA25 : canvas:PublicoAlvo [
-		base:nome "Comunidades Quilombolas"
-		canvas:tipo "indireto"
+	    base:nome "Comunidades Quilombolas"
+	    base:id "PA25"
+	    canvas:tipo "indireto"
 	]
 	instance PA28 : canvas:PublicoAlvo [
-		base:nome "Fundações de Apoio credenciadas junto às ICTs pernambucanas"
-		canvas:tipo "indireto"
+	    base:nome "Fundações de Apoio credenciadas junto às ICTs pernambucanas"
+	    base:id "PA28"
+	    canvas:tipo "indireto"
 	]
 	instance EstudantesdasAutarquias : canvas:PublicoAlvo [
-	base:nome "Estudantes das Autarquias Municipais de Ensino Superior do Estado de Pernambuco, não portadores de diploma de curso superior, cuja renda familiar mensal per capita não exceda o valor de 1,5 (um e meio) salário mínimo, ressalvado os casos de complementação pedagógica para bacharelado e segunda licenciatura em áreas afins para professores do Ensino Fundamental ou Médio."
-	canvas:tipo "direto"
+	    base:nome "Estudantes das Autarquias Municipais de Ensino Superior do Estado de Pernambuco, não portadores de diploma de curso superior, cuja renda familiar mensal per capita não exceda o valor de 1,5 (um e meio) salário mínimo, ressalvado os casos de complementação pedagógica para bacharelado e segunda licenciatura em áreas afins para professores do Ensino Fundamental ou Médio."
+	    base:id "ESTAUT"
+	    canvas:tipo "direto"
 	]
+
 }
