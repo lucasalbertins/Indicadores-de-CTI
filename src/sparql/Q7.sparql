@@ -5,17 +5,20 @@ PREFIX met:      <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#>
 PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
 PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?nomeMetrica ?finalidade ?va ?vm ?status
+SELECT DISTINCT ?nomePrograma ?nomeObjetivo ?nomeResultado ?nomeMetrica ?finalidade ?va ?vm ?status
 WHERE {
-  # Busca somente o PBPG pelo ID
-  ?progInstance base:id "PR1" . 
+  # Busca pelo termo "bolsas de pós-graduação" no nome do programa
+  ?progInstance base:nome ?nomePrograma .
+  FILTER CONTAINS(LCASE(?nomePrograma), "bolsas de pós-graduação")
   ?progInstance programa:buscaAtingirEspecifico ?objetivo .
-
+  ?objetivo base:nome ?nomeObjetivo .
+  
   # Busca o objetivo -> resultado -> questão -> métrica
   ?objetivo canvas:buscaAtingir ?resultado .
   ?questao  plano:alinhaComResultado ?resultado ;
             plano:temMetrica ?metrica .
-
+  ?resultado base:nome ?nomeResultado .
+  
   # Busca o valor atual e valor da meta
   ?metrica met:valorAtual ?va ;
            met:valorMeta  ?vm .
