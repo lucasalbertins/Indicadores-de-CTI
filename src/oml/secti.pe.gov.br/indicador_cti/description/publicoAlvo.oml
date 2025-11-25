@@ -48,12 +48,12 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 	
 	instance PA9 : canvas:PublicoAlvo [
 	    base:nome "Estudantes da rede estadual de ensino (ETEs e EREMs) com futuro para as EREFEMs"
-	    base:id "PA9"
+	    base:id "P9"
 	    canvas:tipo "direto"
 	]
 	instance PA10 : canvas:PublicoAlvo [
 	    base:nome "Professores da rede estadual de ensino"
-	    base:id "PA10"
+	    base:id "P10"
 	    canvas:tipo "direto"
 	]
 	instance PA27 : canvas:PublicoAlvo [
@@ -63,37 +63,37 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as p
 	]
 	instance PA11 : canvas:PublicoAlvo [
 	    base:nome "Governo"
-	    base:id "PA11"
+	    base:id "P11"
 	    canvas:tipo "indireto"
 	]
 	instance PA12 : canvas:PublicoAlvo [
 	    base:nome "Indústria"
-	    base:id "PA12"
+	    base:id "P12"
 	    canvas:tipo "indireto"
 	]
 	instance PA13 : canvas:PublicoAlvo [
 	    base:nome "Sociedade"
-	    base:id "PA13"
+	    base:id "P13"
 	    canvas:tipo "indireto"
 	]
 	instance PA14 : canvas:PublicoAlvo [
 	    base:nome "Ecossistema de CT&I"
-	    base:id "PA14"
+	    base:id "P14"
 	    canvas:tipo "indireto"
 	]
 	instance PA15 : canvas:PublicoAlvo [
 	    base:nome "ICTs"
-	    base:id "PA15"
+	    base:id "P15"
 	    canvas:tipo "indireto"
 	]
 	instance PA16 : canvas:PublicoAlvo [
 	    base:nome "Grupos de pesquisa"
-	    base:id "PA16"
+	    base:id "P16"
 	    canvas:tipo "indireto"
 	]
 	instance PA17 : canvas:PublicoAlvo [
 	    base:nome "Empresas de base tecnológica"
-	    base:id "PA17"
+	    base:id "P17"
 	    canvas:tipo "indireto"
 	]
 	instance PA18 : canvas:PublicoAlvo [

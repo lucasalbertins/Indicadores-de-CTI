@@ -17,6 +17,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas 
 de estudo para alunos de instituições de ensino superior públicas estaduais, principalmente de autarquias 
 municipais de Pernambuco"
+		base:id "PROUPE"
 		programa:possuiParceiros parceiroChave:SECTI-PE, parceiroChave:ASSIESPE, parceiroChave:AEDAI, 
 		parceiroChave:AEDA, parceiroChave:AESA, parceiroChave:ABCDE, parceiroChave:AEB, 
 		parceiroChave:AEDECCA, parceiroChave:AESGA, parceiroChave:AMESG, parceiroChave:AESLI, 
@@ -68,29 +69,34 @@ municipais de Pernambuco"
 qualificados, capazes de contribuir para o desenvolvimento social, econômico e tecnológico de Pernambuco, 
 especialmente nas regiões interioranas, reduzindo desigualdades educacionais e fortalecendo a 
 interiorização da educação superior"
+		base:id "g"
 	]
 	instance AmpliacaoAcessoES : canvas:ObjetivoEspecifico [
 		base:nome "Ampliação do acesso ao Ensino Superior: garantir condições financeiras para que 
 estudantes de baixa renda (renda familiar per capita entre 1,5 e 4 salários-mínimos) possam cursar 
 graduação nas Autarquias Municipais de Ensino Superior, reduzindo desigualdades educacionais, e 
 favorecendo jovens de regiões historicamente menos atendidas"
+		base:id "h"
 	]
 	instance QualificacaoCapitalHumano : canvas:ObjetivoEspecifico [
 		base:nome "Qualificação do capital humano: formar profissionais em áreas estratégicas, com 
 prioridade para cursos de STEM, licenciaturas e cursos superiores de tecnologia; desenvolver competências 
 técnicas, científicas e pedagógicas para promover o desenvolvimento econômico, social e tecnológico das 
 diversas regiões de desenvolvimento de Pernambuco"
+		base:id "i"
 	]
 	instance InclusaoEquidade : canvas:ObjetivoEspecifico [
 		base:nome "Inclusão social e equidade: reservar até 20% das vagas para professores em exercício, 
 pessoas com deficiência e mulheres em situação de vulnerabilidade socioeconômica ou vítimas de violência 
 doméstica e familiar; contribuir para a diversidade e inclusão no Ensino Superior, reconhecendo condições 
 sociais que exigem atenção especial"
+		base:id "j"
 	]
 	instance InteorizacaoES : canvas:ObjetivoEspecifico [
 		base:nome "Interiorização do Ensino Superior: incentivar a permanência de talentos na região onde 
 estudam, reduzindo deslocamentos para grandes centros urbanos; estimular o desenvolvimento regional por 
 meio da qualificação de profissionais localmente, fortalecendo a economia, a ciência e a tecnologia nos 
 municípios atendidos"
+		base:id "k"
 	]
 }

@@ -16,6 +16,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Programa: COMPET Superior"
 		base:descricao "Foi criado com o objetivo de apoiar a formação de estudantes de nível superior 
 por meio de extensão tecnológica"
+		base:id "tech"
 	//	programa:possuiParceiros parceiroChave:ICTsIntegrantes, parceiroChave:EmpresasIntegrantes, 
 		//parceiroChave:OrgaosPublicos
 		//programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE13, fatorExterno:FE18, 
@@ -39,16 +40,20 @@ por meio de extensão tecnológica"
 recursos humanos qualificados em nível de graduação, mediante parcerias entre ICTs, empresas, 
 cooperativas, órgãos de governo, associações ou demais organizações do terceiro setor, no Estado de 
 Pernambuco"
+		base:id "cetene"
 	]
 	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
 		base:nome "Promover a formação de recursos humanos por extensão tecnológica, com enfoque em 
 desafios tecnológicos aderentes à estrutura produtiva e social do Estado, inclusive no interior"
+		base:id "exterior"
 	]
 	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
 		base:nome "Incentivar a empregabilidade de recursos humanos qualificados"
+		base:id "milo"
 	]
 	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
 		base:nome "Impulsionar a formação de parcerias entre ICTs e demais agentes do ecossistema de 
 inovação"
+		base:id "teclado"
 	]
 }

@@ -16,6 +16,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Programa: Desafios.gov"
 		base:descricao "Foi criado com o objetivo de apoiar micro e pequenas empresas (especialmente 
 startups) a desenvolverem soluções inovadoras para desafios da gestão pública do estado de Pernambuco"
+		base:id "joao"
 		//programa:possuiParceiros parceiroChave:Inovar-PE, parceiroChave:AGE, parceiroChave:OrgaosPublicos, 
 		//parceiroChave:EmpresasIntegrantes, parceiroChave:AmbientesInovacao
 		//programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE5, fatorExterno:FE12, 
@@ -38,26 +39,33 @@ startups) a desenvolverem soluções inovadoras para desafios da gestão públic
 	instance OBJGeral : canvas:ObjetivoGeral [
 		base:nome "Apoiar MPEs pernambucanas em projetos de desenvolvimento e implantação de produtos, 
 serviços e/ou processos inovadores que contemplem desafios de órgãos públicos do Estado de Pernambuco"
+		base:id "Apoiar"
 	]
 	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
 		base:nome "Incentivar o desenvolvimento de projetos de PD&I aplicados a desafios de órgãos 
 públicos do Estado de Pernambuco"
+		base:id "Incentivar"
 	]
 	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
 		base:nome "Induzir o desenvolvimento de soluções inovadoras socialmente relevantes"
+		base:id "Induzir"
 	]
 	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
 		base:nome "Promover a consolidação de empresas pernambucanas de base tecnológica especializadas 
 em soluções de aprimoramento dos serviços públicos (govtechs), inclusive no interior do Estado"
+		base:id "Promover"
 	]
 	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
 		base:nome "Impulsionar a formação de parcerias entre o setor público e o setor privado"
+		base:id "borto"
 	]
 	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a transferência tecnológica e de conhecimentos"
+		base:id "ai"
 	]
 	instance OBJEspecifico6 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de 
 soluções inovadoras"
+		base:id "novo"
 	]
 }

@@ -13,7 +13,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
-	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	instance PR1 : programa:programaCTI [
 		base:nome "PBPG: Programa de Bolsas de Pós-Graduação"

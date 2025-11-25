@@ -17,6 +17,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo 
 entre estudantes da rede pública estadual de ensino médio e técnico de Pernambuco, através da criação de 
 ambientes de aprendizagem colaborativos e inovadores"
+		base:id "EspacosCria"
 		programa:possuiParceiros parceiroChave:SEE, parceiroChave:FACEPE, parceiroChave:ETEs, 
 		parceiroChave:EREMs, parceiroChave:SECTI-PE, parceiroChave:SAD
 	//	programa:condicionadoPor fatorExterno:CortesContingenciamento, fatorExterno:MercadoAquecido, fatorExterno:BaixaAtratividadeBolsas, fatorExterno:EstruturadeSuporte, fatorExterno:EvasaoEstudantes, 
@@ -45,32 +46,42 @@ ambientes de aprendizagem colaborativos e inovadores"
 centros de inovação para promover o fortalecimento dos ecossistemas de indústria 4.0 e cultura maker, 
 economia criativa, economia circular e negócios 4.0, nas diferentes regiões de desenvolvimento do Estado 
 de Pernambuco, com foco na formação de habilidades portadoras de futuro e no empreendedorismo inovador"
+		base:id "ee"
 	]
 	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a criatividade estudantil"
+		base:id "OBJEspecifico1"
 	]
 	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
 		base:nome "Promover o protagonismo escolar na resolução de desafios cotidianos"
+		base:id "OBJEspecifico2"
 	]
 	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular projetos de STEM"
+		base:id "OBJEspecifico3"
 	]
 	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular o empreendedorismo inovador"
+		base:id "a"
 	]
 	instance OBJEspecifico5 : canvas:ObjetivoEspecifico [
 		base:nome "Capacitar o corpo docente em tecnologias habilitadoras"
+		base:id "b"
 	]
 	instance OBJEspecifico6 : canvas:ObjetivoEspecifico [
 		base:nome "Promover vivências de soft skills"
+		base:id "c"
 	]
 	instance OBJEspecifico7 : canvas:ObjetivoEspecifico [
 		base:nome "Mitigar a evasão escolar"
+		base:id "d"
 	]
 	instance OBJEspecifico8 : canvas:ObjetivoEspecifico [
 		base:nome "Melhorias dos indicadores de educação"
+		base:id "e"
 	]
 	instance OBJEspecifico9 : canvas:ObjetivoEspecifico [
 		base:nome "Difundir CT&I nas instituições públicas e privadas"
+		base:id "f"
 	]
 }

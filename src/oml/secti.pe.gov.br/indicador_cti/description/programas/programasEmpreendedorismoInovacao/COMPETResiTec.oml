@@ -16,6 +16,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Programa: COMPET Residência Tecnológica"
 		base:descricao "Foi criado com o objetivo de promover a integração e fixação de talentos 
 altamente qualificados no ecossistema de ciência, tecnologia e inovação (CT&I) em Pernambuco"
+		base:id "l"
 	//	programa:possuiParceiros parceiroChave:ICTsIntegrantes, parceiroChave:EmpresasIntegrantes, 
 		//parceiroChave:FundacoesApoio
 		//programa:condicionadoPor fatorExterno:FE2, fatorExterno:FE3, fatorExterno:FE14, fatorExterno:FE18, 
@@ -38,20 +39,25 @@ altamente qualificados no ecossistema de ciência, tecnologia e inovação (CT&I
 		base:nome "Apoiar a execução de Cursos de Residência Tecnológica que contribuam para a formação 
 de recursos humanos qualificados em nível de pós-graduação lato sensu, mediante parcerias entre ICTs e 
 médias e grandes empresas pernambucanas"
+		base:id "m"
 	]
 	instance OBJEspecifico1 : canvas:ObjetivoEspecifico [
 		base:nome "Promover a formação de recursos humanos em nível de pós-graduação lato sensu, com 
 enfoque em desafios tecnológicos aderentes aos ambientes produtivos do Estado"
+		base:id "n"
 	]
 	instance OBJEspecifico2 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular conhecimentos e capacidades técnicas que incrementem a competitividade dos 
 ambientes produtivos, inclusive no interior do Estado"
+		base:id "o"
 	]
 	instance OBJEspecifico3 : canvas:ObjetivoEspecifico [
 		base:nome "Incentivar a empregabilidade de recursos humanos qualificados em médias e grandes 
 empresas pernambucanas"
+		base:id "p"
 	]
 	instance OBJEspecifico4 : canvas:ObjetivoEspecifico [
 		base:nome "Impulsionar a formação de parcerias entre ICTs e o setor privado"
+		base:id "q"
 	]
 }
