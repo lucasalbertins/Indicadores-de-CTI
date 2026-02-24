@@ -1,9 +1,11 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa {
-	
+
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as pl
-	
+
 	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
 		restricts buscaAtingirGeral to max 1
 	]
@@ -15,6 +17,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation condicionadoPor [
 		from programaCTI
 		to canvas:FatorExterno
@@ -22,6 +25,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation recebeEntradas [
 		from programaCTI
 		to canvas:Entrada
@@ -29,6 +33,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation executa [
 		from programaCTI
 		to canvas:AtividadeChave
@@ -36,6 +41,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation geraSaidas [
 		from programaCTI
 		to canvas:Saida
@@ -43,6 +49,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation produzResultados [
 		from programaCTI
 		to canvas:ResultadoEsperado
@@ -50,6 +57,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation buscaAtingirGeral [
 		from programaCTI
 		to canvas:ObjetivoGeral
@@ -57,6 +65,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation buscaAtingirEspecifico [
 		from programaCTI
 		to canvas:ObjetivoEspecifico
@@ -64,6 +73,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation direcionadoA [
 		from programaCTI
 		to canvas:PublicoAlvo
@@ -71,6 +81,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
+
 	relation avaliadoPor [
 		from programaCTI
 		to pl:questaoAvaliacao

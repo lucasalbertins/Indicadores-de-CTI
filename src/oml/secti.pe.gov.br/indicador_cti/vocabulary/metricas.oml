@@ -1,46 +1,72 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas {
-	
+
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
+
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
-	
-	aspect metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
-	base:EntidadeAgregavel
-	concept metricaSimples < metrica [
+
+	aspect metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, base:EntidadeAgregavel
+
+	concept metrica < metrica [
 		restricts base:agrega to max 0
 	]
-	concept metricaComposta < metrica [
-		restricts all base:agrega to metricaComposta
-		restricts all base:agregadoPor to metricaSimples
-	]
-	
+
 	scalar Finalidade [
 		oneOf "Maximizar", "Minimizar", "Equilibrar"
 	]
-	
+
 	scalar property finalidade [
 		domain metrica
 		range Finalidade
 		functional
 	]
-	scalar property formula [
-		domain metricaComposta
-		range xsd:string
-	]
+
 	scalar property valorAtual [
 		domain metrica
 		range xsd:decimal
 	]
+
 	scalar property valorMeta [
 		domain metrica
 		range xsd:decimal
 	]
-	
+
 	relation temFonte [
 		from metrica
 		to planoAvaliacao:fonteInformacao
 		reverse fontePara
 		asymmetric
 		irreflexive
+	]
+
+	scalar property scalarProperty [
+		domain metrica
+		range xsd:string
+	]
+
+	scalar property scalarProperty1 [
+		domain metrica
+		range xsd:string
+	]
+
+	relation unreifiedRelation [
+		from metrica
+		to planoAvaliacao:questaoAvaliacao
+	]
+
+	scalar property scalarProperty2 [
+		domain metrica
+		range xsd:string
+	]
+
+	scalar property scalarProperty3 [
+		domain metrica
+		range xsd:string
+	]
+
+	relation unreifiedRelation1 [
+		from metrica
+		to planoAvaliacao:questaoAvaliacao
 	]
 }
