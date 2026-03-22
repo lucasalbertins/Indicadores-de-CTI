@@ -1,0 +1,113 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#> as PA1.ME1 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratSemestre : formulas:estratificacao [
+		base:id "estrat_semestre"
+		base:nome "Semestre"
+	]
+	
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade"
+		base:nome "Modalidade"
+	]
+	
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+	
+	// Fórmula: divisão(bolsistasTitulados, cotasEncerradas)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiVariavel varDividendo
+		formulas:possuiVariavel varDivisor
+	]
+	
+	instance varDividendo : formulas:variavel [
+		base:id "arg_dividendo"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:usadaComoVariavel PA1.ME2:quantidadeTitulados
+		formulas:possuiValor AgilFap_Quantidade_Titulados
+		formulas:variavelDe formulaDivisao
+	]
+	
+
+	instance AgilFap_Quantidade_Titulados : formulas:tipovalorFonteDados [
+		base:id "AgilFapTitulados"
+		formulas:valorFonteDados "agilfap.quantidade.titulados"
+	]
+	
+	instance varDivisor : formulas:variavel [
+		base:id "var_divisor"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:variavelDe formulaDivisao
+		formulas:possuiValor AgilFap_Cotas_Encerradas
+	]
+	 instance AgilFap_Cotas_Encerradas : formulas:tipovalorFonteDados [
+		base:id "AgilFapTitulados"
+		formulas:valorFonteDados "agilfap.cotas.encerradas"
+	]
+	
+	// MÉTRICA: Taxa de Titulação
+	// Fórmula: multiplicação(divisão(bolsistas, cotas), 100)
+	instance taxaTitulacao : metricas:metrica [
+		base:id "PA1.ME1"
+		base:nome "Taxa de Titulação"
+		base:descricao "Percentual de bolsistas PBPG titulados sobre cotas encerradas"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fonte:FI1, fonte:FI2
+		metricas:valorAtual 0.90
+		metricas:valorMeta  0.80
+		base:agregadoPor PA1.ME2:quantidadeTitulados
+	]
+	
+	instance formulaMultiplicacao : formulas:formula[
+		base:id "formula_multiplicacao"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiVariavel argMultiplicando
+		formulas:possuiVariavel argMultiplicador
+	]
+	
+	// Argumento 1: multiplicando (métrica composta com fórmula interna)
+	instance argMultiplicando : formulas:variavel [
+		base:id "arg_multiplicando"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:valorFormula formulaDivisao
+		formulas:variavelDe formulaMultiplicacao
+	]
+	
+	// Argumento 2: multiplicador (valor literal)
+	instance argMultiplicador : formulas:variavel [
+		base:id "arg_multiplicador"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:variavelDe formulaMultiplicacao
+	]
+	
+	instance valorLiteral : formulas:tipovalorLiteral [
+		formulas:valorLiteral 100
+	]
+	
+}

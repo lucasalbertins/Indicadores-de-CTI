@@ -1,0 +1,111 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	
+	concept formula < base:EntidadeIdentificavel [
+		restricts referenciaOperacao to exactly 1
+		restricts possuiVariavel to min 1
+		restricts formulaDe to exactly 1
+	]
+	concept estratificacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
+	concept variavel < base:EntidadeIdentificavel, base:EntidadeNomeavel  [
+		restricts posicao to exactly 1
+		restricts nome to exactly 1
+		restricts possuiValor to exactly 1
+    ]
+	
+	aspect valordeVariavel < base:EntidadeIdentificavel
+	
+	concept tipovalorLiteral < valordeVariavel
+	concept tipovalorMetrica < valordeVariavel 
+	concept tipovalorFonteDados < valordeVariavel
+	concept tipovalorFormula < valordeVariavel
+	
+	scalar property posicao [
+		domain variavel
+		range xsd:int
+		functional
+	]
+	
+	scalar property nome [
+		domain variavel
+		range xsd:string
+		functional
+	]
+	
+	scalar property valorLiteral [
+    	domain tipovalorLiteral
+    	range xsd:decimal
+    	functional
+	]
+	
+	scalar property valorFonteDados [
+	    domain tipovalorFonteDados
+	    range xsd:string //URI
+	    functional
+	]
+	
+	
+	// Referencia operações do OpenMath (divide, times, plus, etc.)
+	scalar property referenciaOperacao [
+		domain formula
+		range xsd:string
+		functional
+	]
+	
+	relation possuiFormula [
+		from metricas:metrica
+		to formula
+		reverse formulaDe
+		functional
+		asymmetric
+		irreflexive
+	]
+	
+	relation valorMetrica [
+    	from tipovalorMetrica
+    	to metricas:metrica
+    	reverse usadaComoVariavel
+		functional
+		asymmetric
+		irreflexive	
+	]
+	
+	// variavel que referencia OUTRA FÓRMULA (para aninhamento)
+	relation valorFormula [
+		from tipovalorFormula
+		to formula
+		reverse usadaPorVariavel
+		functional
+		asymmetric
+		irreflexive
+	]
+	
+	relation possuiValor [
+		from variavel
+		to valordeVariavel
+		reverse valorDe
+		functional
+		asymmetric
+		irreflexive
+	]
+	
+	relation possuiVariavel[
+		from formula
+		to variavel
+		reverse variavelDe
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+	
+	relation estratificadaPor [
+		from metricas:metrica
+		to estratificacao
+		reverse estratificaDe
+		asymmetric
+		irreflexive
+	]
+}

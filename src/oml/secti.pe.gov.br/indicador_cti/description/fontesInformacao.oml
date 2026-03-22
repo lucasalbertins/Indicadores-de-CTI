@@ -1,4 +1,4 @@
-description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fontesInformacao {
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte {
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao

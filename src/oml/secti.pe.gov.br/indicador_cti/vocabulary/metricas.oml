@@ -5,14 +5,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	aspect metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
-	base:EntidadeAgregavel
-	concept metricaSimples < metrica [
-		restricts base:agrega to max 0
-	]
-	concept metricaComposta < metrica [
-		restricts all base:agrega to metricaComposta
-		restricts all base:agregadoPor to metricaSimples
-	]
+	base:EntidadeAgregavel 
 	
 	scalar Finalidade [
 		oneOf "Maximizar", "Minimizar", "Equilibrar"
@@ -23,10 +16,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 		range Finalidade
 		functional
 	]
-	scalar property formula [
-		domain metricaComposta
-		range xsd:string
-	]
+
 	scalar property valorAtual [
 		domain metrica
 		range xsd:decimal
