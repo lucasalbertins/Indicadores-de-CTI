@@ -1,0 +1,22 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado#> as CientistaArretado {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR6 : programa:programaCTI [
+		base:nome "Cientista Arretado"
+		base:descricao "Financia pesquisas aplicadas para resolver desafios da gestão pública estadual. Com foco em inovação, aproxima pesquisadores sêniores de 
+ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que gerem impacto social e soluções baseadas em evidências"
+		base:id "PR6"
+		programa:possuiParceiros parceiroChave:PC4, parceiroChave:PC11, parceiroChave:PC12, parceiroChave:PC13, parceiroChave:PC1
+		programa:condicionadoPor fatorExterno:FE.OP7, fatorExterno:FE.OP4, fatorExterno:FE.AM13, fatorExterno:FE.AM14, fatorExterno:FE.AM8, fatorExterno:FE.AM10
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN4, entrada:EN5, entrada:EN6, entrada:EN8, entrada:EN10, entrada:EN11
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4, saida:SA9, saida:SA10, saida:SA11
+	]
+}

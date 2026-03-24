@@ -1,0 +1,24 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA#> as eCRIA {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR5 : programa:programaCTI [
+		base:nome "Espaços CRIA"
+		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e 
+técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores"
+		base:id "PR5"
+		programa:possuiParceiros parceiroChave:PC11, parceiroChave:PC16, parceiroChave:PC4, parceiroChave:PC17, parceiroChave:PC18
+		programa:condicionadoPor fatorExterno:FE.OP14, fatorExterno:FE.OP15, fatorExterno:FE.OP16, fatorExterno:FE.OP17, fatorExterno:FE.OP18, 
+		fatorExterno:FE.AM20, fatorExterno:FE.AM21, fatorExterno:FE.AM22, fatorExterno:FE.AM23, fatorExterno:FE.AM24, fatorExterno:FE.AM25
+		programa:recebeEntradas entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN12, entrada:EN13, entrada:EN14
+		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, atividadeChave:AC13, 
+		atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17, atividadeChave:AC18
+		programa:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17
+	]
+}

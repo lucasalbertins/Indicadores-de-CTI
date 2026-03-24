@@ -4,15 +4,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
 	instance SA1 : canvas:Saida [
-		base:nome "Edital gerenciado com sucesso"
+		base:nome "Edital do Programa gerenciado com sucesso"
 		base:id "SA1"
 	]
 	instance SA2 : canvas:Saida [
-		base:nome "Bolsas implementadas e pagas de acordo com o planejamento"
+		base:nome "Bolsas/subvenções implementadas e pagas de acordo com o planejamento"
 		base:id "SA2"
 	]
 	instance SA3 : canvas:Saida [
-		base:nome "Relatórios parciais e final de acompanhamento dos bolsistas"
+		base:nome "Relatórios parciais e/ou final de acompanhamento"
 		base:id "SA3"
 	]
 	instance SA4 : canvas:Saida [
@@ -20,7 +20,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 		base:id "SA4"
 	]
 	instance SA5 : canvas:Saida [
-		base:nome "Parcerias formalizadas por meio de instrumentos legais como convênios, acordos de cooperação técnica, etc..."
+		base:nome "Parcerias formalizadas por meio de instrumentos legais"
 		base:id "SA5"
 	]
 	instance SA6 : canvas:Saida [
@@ -31,98 +31,113 @@ description <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saidas
 		base:nome "Plano de Avaliação do Programa executado"
 		base:id "SA7"
 	]
-	
-	
-	instance OUT8 : canvas:Saida [
-	    base:nome "Formação de jovens com competências portadoras de futuro, com foco no mercado de trabalho"
-	    base:id "OUT8"
+	instance SA8 : canvas:Saida [
+		base:nome "Seminário de avaliação"
+		base:id "SA8"
 	]
-	instance OUT9 : canvas:Saida [
-	    base:nome "Professores atualizados de acordo com as demandas na área de STEM+C"
-	    base:id "OUT9"
+	instance SA9 : canvas:Saida [
+		base:nome "Soluções tecnológicas e inovadoras desenvolvidas"
+		base:id "SA9"
 	]
-	instance OUT10 : canvas:Saida [
-	    base:nome "ECRIA montados e operacionais"
-	    base:id "OUT10"
+	instance SA10 : canvas:Saida [
+		base:nome "Novas estruturas governamentais e instrumentos de gestão criados/aplicados a partir do desenvolvimento das soluções aos desafios postos"
+		base:id "SA10"
 	]
-	instance OUT11 : canvas:Saida [
-	    base:nome "Execução de projetos: Pagamento de bolsas, Compra de itens de custeio e manutenção, Relatórios técnicos parciais e finais para cada ciclo"
-	    base:id "OUT11"
+	instance SA11 : canvas:Saida [
+		base:nome "Capacitação e treinamento dos gestores/servidores públicos para o uso e aplicação das soluções desenvolvidas"
+		base:id "SA11"
 	]
-	instance OUT12 : canvas:Saida [
-	    base:nome "Eventos de divulgação de projetos dos espaços CRIA"
-	    base:id "OUT12"
+	instance SA12 : canvas:Saida [
+		base:nome "Formação de jovens com competências portadoras de futuro, com foco no mercado de trabalho"
+		base:id "SA12"
 	]
-	instance OUT13 : canvas:Saida [
-	    base:nome "Portfólios de projetos inovadores, empreendedores e inclusivos, protótipos, produtos e soluções inovadoras desenvolvidas nos ECRIA"
-	    base:id "OUT13"
+	instance SA13 : canvas:Saida [
+		base:nome "Professores atualizados de acordo com as demandas na área de STEM+C"
+		base:id "SA13"
 	]
-	instance DDO : canvas:Saida [
-	    base:nome "Declaração de Disponibilidade Orçamentária (DDO) emitida e aprovada."
-	    base:id "OUT-DDO"
+	instance SA14 : canvas:Saida [
+		base:nome "ECRIA montados e operacionais"
+		base:id "SA14"
 	]
-	instance RecursosOrcamentarios : canvas:Saida [
-	    base:nome "Recursos orçamentários assegurados e liberados para execução do programa."
-	    base:id "OUT-RECORC"
+	instance SA15 : canvas:Saida [
+		base:nome "Execução de projetos oriundos do Programa"
+		base:id "SA15"
 	]
-	instance FluxoFinanceiro : canvas:Saida [
-	    base:nome "Fluxo financeiro regular estabelecido para repasse mensal às Autarquias Municipais de Ensino Superior."
-	    base:id "OUT-FLUXFIN"
+	instance SA16 : canvas:Saida [
+		base:nome "Eventos de divulgação de projetos dos espaços CRIA"
+		base:id "SA16"
 	]
-	instance EditalSelecao : canvas:Saida [
-	    base:nome "Edital de seleção publicado e amplamente divulgado."
-	    base:id "OUT-EDITSEL"
+	instance SA17 : canvas:Saida [
+		base:nome "Portfólios de projetos inovadores, empreendedores e inclusivos, protótipos, produtos e soluções inovadoras desenvolvidas nos ECRIA"
+		base:id "SA17"
 	]
-	instance InscricoesValidadas : canvas:Saida [
-	    base:nome "Inscrições de candidatos realizadas e validadas pelas Autarquias Municipais de Ensino Superior."
-	    base:id "OUT-INSCVAL"
+	instance SA18 : canvas:Saida [
+		base:nome "Declaração de Disponibilidade Orçamentária (DDO) emitida e aprovada"
+		base:id "SA18"
 	]
-	instance BaseDadosCandidatos : canvas:Saida [
-	    base:nome "Base de dados de candidatos, organizada e registrada no sistema de gerenciamento do PROUPE."
-	    base:id "OUT-BASECAND"
+	instance SA19 : canvas:Saida [
+		base:nome "Recursos orçamentários assegurados e liberados para execução do programa"
+		base:id "SA19"
 	]
-	instance ResultadoPreliminar : canvas:Saida [
-	    base:nome "Resultado preliminar e listas de convocação divulgadas publicamente, garantindo transparência e ampla concorrência."
-	    base:id "OUT-RESPREL"
+	instance SA20 : canvas:Saida [
+		base:nome "Fluxo financeiro regular estabelecido para repasse mensal às Autarquias Municipais de Ensino Superior"
+		base:id "SA20"
 	]
-	instance AnaliseRecursos : canvas:Saida [
-	    base:nome "Análise de recursos analisados e respondidos dentro do prazo."
-	    base:id "OUT-ANALREC"
+	instance SA21 : canvas:Saida [
+		base:nome "Edital de seleção publicado e amplamente divulgado"
+		base:id "SA21"
 	]
-	instance ListasRemanejamento : canvas:Saida [
-	    base:nome "Listas de remanejamento publicadas até o preenchimento total das vagas ou convocação de todos os candidatos aptos."
-	    base:id "OUT-LISTREM"
+	instance SA22 : canvas:Saida [
+		base:nome "Inscrições de candidatos realizadas e validadas pelas Autarquias Municipais de Ensino Superior"
+		base:id "SA22"
 	]
-	instance TermosCompromisso : canvas:Saida [
-	    base:nome "Termos de compromisso assinados e enviados digitalmente para SECTI."
-	    base:id "OUT-TERMCOMP"
+	instance SA23 : canvas:Saida [
+		base:nome "Base de dados de candidatos, organizada e registrada no sistema de gerenciamento do Programa"
+		base:id "SA23"
 	]
-	instance BolsasImplementadas : canvas:Saida [
-	    base:nome "Bolsas implementadas e repasses mensais efetivados às Autarquias Municipais de Ensino Superior."
-	    base:id "OUT-BOLSIMP"
+	instance SA24 : canvas:Saida [
+		base:nome "Resultado preliminar e listas de convocação divulgadas publicamente, garantindo transparência e ampla concorrência"
+		base:id "SA24"
 	]
-	instance ControleFinanceiroAcademico : canvas:Saida [
-	    base:nome "Controle financeiro e acadêmico dos bolsistas atualizado no sistema de gerenciamento do PROUPE."
-	    base:id "OUT-CONTRFIN"
+	instance SA25 : canvas:Saida [
+		base:nome "Processos de recursos analisados e respondidos dentro do prazo"
+		base:id "SA25"
 	]
-	instance AtvdEducativasCientificas : canvas:Saida [
-	    base:nome "Atividades educativas, científicas, de extensão ou tecnológicas realizadas sob supervisão docente."
-	    base:id "OUT-ATVEDU"
+	instance SA26 : canvas:Saida [
+		base:nome "Listas de remanejamento publicadas até o preenchimento total das vagas ou convocação de todos os candidatos aptos"
+		base:id "SA26"
 	]
-	instance RelatoriosContrapartida : canvas:Saida [
-	    base:nome "Relatórios de contrapartida validados pelas Autarquias e registrados no sistema de gerenciamento do PROUPE, semestralmente."
-	    base:id "OUT-RELCONTR"
+	instance SA27 : canvas:Saida [
+		base:nome "Termos de compromisso assinados e enviados digitalmente para SECTI"
+		base:id "SA27"
 	]
-	instance RelatoriosMensaisSemestraisAnuais : canvas:Saida [
-	    base:nome "Relatórios mensais, semestrais e anuais de desempenho orçamentário e financeiro do PROUPE."
-	    base:id "OUT-RELMSA"
+	instance SA28 : canvas:Saida [
+		base:nome "Bolsas implementadas e repasses mensais efetivados às Autarquias Municipais de Ensino Superior"
+		base:id "SA28"
 	]
-	instance PainelAcompanhamentoAtualizado : canvas:Saida [
-	    base:nome "Painel de acompanhamento atualizado no sistema de gerenciamento do PROUPE, com dados de bolsas, contrapartidas e indicadores de desvinculação do programa (abandono ou conclusão)."
-	    base:id "OUT-PAINACOMP"
+	instance SA29 : canvas:Saida [
+		base:nome "Controle financeiro e acadêmico dos bolsistas atualizado no sistema de gerenciamento do Programa"
+		base:id "SA29"
 	]
-	instance AvaliacaoImpactoPrograma : canvas:Saida [
-	    base:nome "Avaliação de impacto do programa publicada periodicamente, evidenciando resultados e benefícios sociais, educacionais e econômicos."
-	    base:id "OUT-AVALIMP"
+	instance SA30 : canvas:Saida [
+		base:nome "Atividades educativas, científicas, de extensão ou tecnológicas realizadas sob supervisão docente"
+		base:id "SA30"
+	]
+	instance SA31 : canvas:Saida [
+		base:nome "Relatórios de contrapartida validados pelas Autarquias e registrados no sistema de gerenciamento do Programa, semestralmente"
+		base:id "SA31"
+	]
+	instance SA32 : canvas:Saida [
+		base:nome "Relatórios mensais, semestrais e anuais de desempenho orçamentário e financeiro do Programa"
+		base:id "SA32"
+	]
+	instance SA33 : canvas:Saida [
+		base:nome "Painel de acompanhamento atualizado no sistema de gerenciamento do Programa, com dados de bolsas, contrapartidas e indicadores de desvinculação 
+do programa"
+		base:id "SA33"
+	]
+	instance SA34 : canvas:Saida [
+		base:nome "Avaliação de impacto do programa publicada periodicamente, evidenciando resultados e benefícios sociais, educacionais e econômicos"
+		base:id "SA34"
 	]
 }

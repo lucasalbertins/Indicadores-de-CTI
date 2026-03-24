@@ -1,0 +1,25 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/LabMultiusuarios#> as LabMultiusuarios {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR2 : programa:programaCTI [
+		base:nome "Lab.Multiusuários"
+		base:descricao "Apoiar atividades que propiciem a ampliação do acesso de pesquisadores a serviços especializados de suporte à pesquisa existentes no 
+estado, mediante apoio financeiro a projetos para manutenção, operação e disponibilização de laboratórios multiusuários ou recuperação e conservação de acervos de 
+interesse científico visando ampliar a sua disponibilidade e acessibilidade para pesquisadores, empresas e sociedade em geral, e maximizar os benefícios dessas 
+estruturas, equipamentos e acervos para a geração de conhecimento no estado de Pernambuco"
+		base:id "PR2"
+		programa:possuiParceiros parceiroChave:PC4, parceiroChave:PC1, parceiroChave:PC2, parceiroChave:PC5
+		programa:condicionadoPor fatorExterno:FE.OP3, fatorExterno:FE.OP4, fatorExterno:FE.OP5, fatorExterno:FE.OP6, fatorExterno:FE.AM7, fatorExterno:FE.AM8, 
+		fatorExterno:FE.AM9, fatorExterno:FE.AM10
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN4, entrada:EN5, entrada:EN6, entrada:EN7, entrada:EN8, entrada:EN9
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4
+	]
+}

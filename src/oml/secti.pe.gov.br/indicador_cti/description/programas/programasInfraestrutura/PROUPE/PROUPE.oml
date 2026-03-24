@@ -1,0 +1,27 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE#> as PROUPE {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR9 : programa:programaCTI [
+		base:nome "ProUPE"
+		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas de estudo para alunos de instituições de ensino superior 
+públicas estaduais, principalmente de autarquias municipais de Pernambuco"
+		base:id "PR9"
+		programa:possuiParceiros parceiroChave:PC11, parceiroChave:PC19, parceiroChave:PC20, parceiroChave:PC21, parceiroChave:PC22, parceiroChave:PC23, 
+		parceiroChave:PC24, parceiroChave:PC25, parceiroChave:PC26, parceiroChave:PC27, parceiroChave:PC28, parceiroChave:PC29, parceiroChave:PC30, 
+		parceiroChave:PC31, parceiroChave:PC32
+		programa:condicionadoPor fatorExterno:FE.OP19, fatorExterno:FE.OP20, fatorExterno:FE.OP21, fatorExterno:FE.OP22,fatorExterno:FE.OP23, 
+		fatorExterno:FE.OP24,fatorExterno:FE.AM26, fatorExterno:FE.AM27, fatorExterno:FE.AM28, fatorExterno:FE.AM29
+		programa:recebeEntradas entrada:EN2, entrada:EN4, entrada:EN6, entrada:EN15
+		programa:executa atividadeChave:AC19, atividadeChave:AC20, atividadeChave:AC21, atividadeChave:AC22, atividadeChave:AC23, atividadeChave:AC24, 
+		atividadeChave:AC25
+		programa:geraSaidas saida:SA18, saida:SA19, saida:SA20, saida:SA21, saida:SA22, saida:SA23, saida:SA24, saida:SA25, saida:SA26, saida:SA27, saida:SA28, 
+		saida:SA29, saida:SA30, saida:SA31, saida:SA32, saida:SA33, saida:SA34
+	]
+}

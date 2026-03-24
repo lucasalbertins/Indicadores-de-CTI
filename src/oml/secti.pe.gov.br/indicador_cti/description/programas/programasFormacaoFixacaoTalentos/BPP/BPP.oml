@@ -1,0 +1,21 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP#> as BPP {
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR8 : programa:programaCTI [
+		base:nome "Bolsa de Produtividade Pernambucana"
+		base:descricao "Apoia pesquisadores com notável produção científica, tecnológica ou de inovação em Pernambuco. A modalidade oferece bolsas e adicionais de 
+bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos, especialmente no interior do estado"
+		base:id "PR8"
+		programa:possuiParceiros parceiroChave:PC1, parceiroChave:PC2, parceiroChave:PC3
+		programa:condicionadoPor fatorExterno:FE.OP1, fatorExterno:FE.OP2, fatorExterno:FE.AM1, fatorExterno:FE.AM12, fatorExterno:FE.AM4
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN4, entrada:EN5, entrada:EN6, entrada:EN7
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+	]
+}

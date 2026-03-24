@@ -1,0 +1,22 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#> as DesafiosGov {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR7 : programa:programaCTI [
+		base:nome "Desafios.gov"
+		base:descricao "Foi criado com o objetivo de apoiar micro e pequenas empresas (especialmente startups) a desenvolverem soluções inovadoras para desafios 
+da gestão pública do estado de Pernambuco"
+		base:id "PR7"
+		programa:possuiParceiros parceiroChave:PC6, parceiroChave:PC8, parceiroChave:PC9, parceiroChave:PC14, parceiroChave:PC15
+		programa:condicionadoPor fatorExterno:FE.OP8, fatorExterno:FE.OP9, fatorExterno:FE.OP11, fatorExterno:FE.OP13, fatorExterno:FE.AM15, fatorExterno:FE.AM19
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
+		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+	]
+}

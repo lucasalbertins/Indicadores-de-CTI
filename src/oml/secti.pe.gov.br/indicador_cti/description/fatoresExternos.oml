@@ -3,6 +3,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
+	
+	// Oportunidades
 	instance FE.OP1 : canvas:Oportunidade [
 		base:nome "Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa"
 		base:id "FE.OP1"
@@ -11,7 +13,96 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 		base:nome "Reconhecimento da importância das pesquisas nas atividades produtivas"
 		base:id "FE.OP2"
 	]
+	instance FE.OP3 : canvas:Oportunidade [
+		base:nome "Disponibilidade orçamentária e financeira do Tesouro Estadual"
+		base:id "FE.OP3"
+	]
+	instance FE.OP4 : canvas:Oportunidade [
+		base:nome "Novas tecnologias e suas tendências para responder às demandas aos desafios estratégicos e problemas urgentes"
+		base:id "FE.OP4"
+	]
+	instance FE.OP5 : canvas:Oportunidade [
+		base:nome "Parcerias entre academia-empresas para aperfeiçoamento dos laboratórios multiusuários"
+		base:id "FE.OP5"
+	]
+	instance FE.OP6 : canvas:Oportunidade [
+		base:nome "Legislação nacional e estadual vigente relacionada ao Marco Legal de CT&I"
+		base:id "FE.OP6"
+	]
+	instance FE.OP7 : canvas:Oportunidade [
+		base:nome "Massa crítica de pesquisadores existente no estado nas mais variadas áreas do conhecimento para atuar nos projetos"
+		base:id "FE.OP7"
+	]
+	instance FE.OP8 : canvas:Oportunidade [
+		base:nome "Maior reconhecimento da importância das atividades de CT&I e/ou pesquisa para a sociedade"
+		base:id "FE.OP8"
+	]
+	instance FE.OP9 : canvas:Oportunidade [
+		base:nome "Aprimoramento do arcabouço legal de inovação"
+		base:id "FE.OP9"
+	]
+	instance FE.OP10 : canvas:Oportunidade [
+		base:nome "Potencial nº de articuladores de CT&I vinculados a ICTs"
+		base:id "FE.OP10"
+	]
+	instance FE.OP11 : canvas:Oportunidade [
+		base:nome "Crescimento do nº de startups e ambientes de inovação no Estado"
+		base:id "FE.OP11"
+	]
+	instance FE.OP12 : canvas:Oportunidade [
+		base:nome "Projeção de internacionalização das redes"
+		base:id "FE.OP12"
+	]
+	instance FE.OP13 : canvas:Oportunidade [
+		base:nome "Projeção do Estado quanto ao nº de empresas pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos"
+		base:id "FE.OP13"
+	]
+	instance FE.OP14 : canvas:Oportunidade [
+		base:nome "Parcerias com empresas para programas de imersão e maratonas de desenvolvimento"
+		base:id "FE.OP14"
+	]
+	instance FE.OP15 : canvas:Oportunidade [
+		base:nome "Engajamento dos estudantes ativos nos Espaços CRIA aos grandes eventos de tecnologia"
+		base:id "FE.OP15"
+	]
+	instance FE.OP16 : canvas:Oportunidade [
+		base:nome "Participação em competições locais, interestaduais e internacionais"
+		base:id "FE.OP16"
+	]
+	instance FE.OP17 : canvas:Oportunidade [
+		base:nome "Progressão das ETEs e EREMs com Espaços CRIA para um modelo de incubação de novos negócios"
+		base:id "FE.OP17"
+	]
+	instance FE.OP18 : canvas:Oportunidade [
+		base:nome "Reconhecimento do potencial inovador e criativo  dos alunos da Escola Pública para resolução de problemas da sociedade"
+		base:id "FE.OP18"
+	]
+	instance FE.OP19 : canvas:Oportunidade [
+		base:nome "Expansão da demanda por Ensino Superior no interior"
+		base:id "FE.OP19"
+	]
+	instance FE.OP20 : canvas:Oportunidade [
+		base:nome "Valorização das áreas STEM e das licenciaturas"
+		base:id "FE.OP20"
+	]
+	instance FE.OP21 : canvas:Oportunidade [
+		base:nome "Integração com políticas federais de educação e ciência"
+		base:id "FE.OP21"
+	]
+	instance FE.OP22 : canvas:Oportunidade [
+		base:nome "Crescimento do mercado de trabalho qualificado"
+		base:id "FE.OP22"
+	]
+	instance FE.OP23 : canvas:Oportunidade [
+		base:nome "Reconhecimento público e fortalecimento institucional"
+		base:id "FE.OP23"
+	]
+	instance FE.OP24 : canvas:Oportunidade [
+		base:nome "Parcerias estratégicas com setor privado e sociedade civil"
+		base:id "FE.OP24"
+	]
 	
+	// Ameaças
 	instance FE.AM1 : canvas:Ameaca [
 		base:nome "Cortes e contingenciamento de recursos estaduais para CT&I"
 		base:id "FE.AM1"
@@ -36,131 +127,97 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> 
 		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
 		base:id "FE.AM6"
 	]
-	
-
-	instance FE3 : canvas:Oportunidade [
-		base:nome "Aprimoramento do arcabouço legal de inovação"
-		base:id "FE.OP3"
-	]
-	instance FE4 : canvas:Oportunidade [
-		base:nome "Potencial nº de articuladores de CT&I vinculados a ICTs"
-		base:id "FE.OP4"
-	]
-	instance FE5 : canvas:Oportunidade [
-		base:nome "Crescimento do nº de startups e ambientes de inovação no Estado"
-		base:id "FE.OP5"
-	]
-	instance FE6 : canvas:Oportunidade [
-		base:nome "Projeção de internacionalização das redes"
-		base:id "FE.OP6"
-	]
-	instance FE7 : canvas:Oportunidade [
-		base:nome "Parcerias com empresas para programas de imersão e maratonas de desenvolvimento"
-		base:id "FE.OP7"
-	]
-	instance FE8 : canvas:Oportunidade [
-		base:nome "Engajamento dos estudantes ativos nos Espaços CRIA aos grandes eventos de tecnologia"
-		base:id "FE.OP8"
-	]
-	instance FE9 : canvas:Oportunidade [
-		base:nome "Participação em competições locais, interestaduais e internacionais"
-		base:id "FE.OP9"
-	]
-	instance FE10 : canvas:Oportunidade [
-		base:nome "Progressão das ETEs e EREMs com Espaços CRIA para um modelo de incubação de novos negócios"
-		base:id "FE.OP10"
-	]
-	instance FE11 : canvas:Oportunidade [
-		base:nome "Reconhecimento do potencial inovador e criativo dos alunos da Escola Pública para resolução de problemas da sociedade"
-		base:id "FE.OP11"
-	]
-	instance FE12 : canvas:Oportunidade [
-		base:nome "Projeção do Estado quanto ao nº de empresas pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos"
-		base:id "FE.OP12"
-	]
-	instance FE13 : canvas:Oportunidade [
-		base:nome "Crescente busca por soluções tecnológicas..."
-		base:id "FE.OP13"
-	]
-	instance FE14 : canvas:Oportunidade [
-		base:nome "Crescente busca pela ampliação da competitividade das empresas..."
-		base:id "FE.OP14"
-	]
-	instance ExpansaoDemanda : canvas:Oportunidade [
-		base:nome "Expansão da demanda por Ensino Superior no interior..."
-		base:id "FE.OP15"
-	]
-	instance ValorizacaoAreasSTEM : canvas:Oportunidade [
-		base:nome "Valorização das áreas STEM e das licenciaturas..."
-		base:id "FE.OP16"
-	]
-	instance IntegracaoPoliticasFederais : canvas:Oportunidade [
-		base:nome "Integração com políticas federais de educação e ciência..."
-		base:id "FE.OP17"
-	]
-	instance CrescimentoMercadoTrabalho : canvas:Oportunidade [
-		base:nome "Crescimento do mercado de trabalho qualificado..."
-		base:id "FE.OP18"
-	]
-	instance ReconhecimentoPublico : canvas:Oportunidade [
-		base:nome "Reconhecimento público e fortalecimento institucional..."
-		base:id "FE.OP19"
-	]
-
-	instance FE18 : canvas:Ameaca [
-		base:nome "Envolvimento tímido do setor empresarial..."
+	instance FE.AM7 : canvas:Ameaca [
+		base:nome "Limite da cota de importação de equipamentos e insumos para pesquisa do país"
 		base:id "FE.AM7"
 	]
-	instance FE19 : canvas:Ameaca [
-		base:nome "Prazo insuficiente para tornar as redes autossustentáveis"
+	instance FE.AM8 : canvas:Ameaca [
+		base:nome "Crises político-econômica nacional e/ou internacional"
 		base:id "FE.AM8"
 	]
-	instance FE20 : canvas:Ameaca [
-		base:nome "Restrições apresentadas pelo arcabouço legal"
+	instance FE.AM9 : canvas:Ameaca [
+		base:nome "Flutuação cambial"
 		base:id "FE.AM9"
 	]
-	instance FE22 : canvas:Ameaca [
-		base:nome "Desconhecimento das oportunidades relacionadas ao Marco Legal de CT&I..."
+	instance FE.AM10 : canvas:Ameaca [
+		base:nome "Cenário de problemas urgentes (Crises sanitárias, ambientais e sociais)"
 		base:id "FE.AM10"
 	]
-	instance MorosidadeTED : canvas:Ameaca [
-		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED)..."
+	instance FE.AM11 : canvas:Ameaca [
+		base:nome "Mercado de trabalho em recessão"
 		base:id "FE.AM11"
 	]
-	instance EvasaoporTED : canvas:Ameaca [
-		base:nome "Evasão estudantil por lacunas de continuidade..."
+	instance FE.AM12 : canvas:Ameaca [
+		base:nome "Evasão das ICTs fora da RMR"
 		base:id "FE.AM12"
 	]
-	instance PerdadeAdesao : canvas:Ameaca [
-		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos"
+	instance FE.AM13 : canvas:Ameaca [
+		base:nome "Problemas estruturais na gestão de dados governamentais, como a dispersão, divergência e escassez que retardam ou impedem o desenvolvimento dos 
+projetos"
 		base:id "FE.AM13"
 	]
-	instance FaltaRH : canvas:Ameaca [
-		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
+	instance FE.AM14 : canvas:Ameaca [
+		base:nome "Limitação orçamentária do governo do Estado para continuidade das ações"
 		base:id "FE.AM14"
 	]
-	instance FaltaPerenidade : canvas:Ameaca [
-		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
+	instance FE.AM15 : canvas:Ameaca [
+		base:nome "Indisponibilidade financeira do Fundo Inovar-PE"
 		base:id "FE.AM15"
 	]
-	instance FaltaPriorizacao : canvas:Ameaca [
-		base:nome "Falta de priorização da política de estímulo a STEM+C em mudanças de gestão"
+	instance FE.AM16 : canvas:Ameaca [
+		base:nome "Envolvimento tímido do setor empresarial"
 		base:id "FE.AM16"
 	]
-	instance ValidacaoInscricoes : canvas:Ameaca [
-		base:nome "Validação equivocada das inscrições pelas Autarquias..."
+	instance FE.AM17 : canvas:Ameaca [
+		base:nome "Prazo insuficiente para tornar as redes auto sustentáveis"
 		base:id "FE.AM17"
 	]
-	instance DificuldadeCumprimentoProporcaoLegal : canvas:Ameaca [
-		base:nome "Dificuldades no cumprimento da proporção legal prevista na Lei nº 17.945/2022..."
+	instance FE.AM18 : canvas:Ameaca [
+		base:nome "Restrições apresentadas pelo arcabouço legal"
 		base:id "FE.AM18"
 	]
-	instance DescumprimentoContrapartida : canvas:Ameaca [
-		base:nome "Descumprimento da contrapartida obrigatória por parte de bolsistas..."
+	instance FE.AM19 : canvas:Ameaca [
+		base:nome "Desconhecimento das oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de soluções inovadoras"
 		base:id "FE.AM19"
 	]
-	instance ProblemasSistemaGerenciamento : canvas:Ameaca [
-		base:nome "Problemas de gestão com o sistema de gerenciamento do PROUPE..."
+	instance FE.AM20 : canvas:Ameaca [
+		base:nome "Morosidade na celebração de Termo de Execução Descentralizada (TED) com periodicidade anual"
 		base:id "FE.AM20"
+	]
+	instance FE.AM21 : canvas:Ameaca [
+		base:nome "Evasão estudantil por lacunas de continuidade entre as celebrações de TED e lançamento de novos editais"
+		base:id "FE.AM21"
+	]
+	instance FE.AM22 : canvas:Ameaca [
+		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos"
+		base:id "FE.AM22"
+	]
+	instance FE.AM23 : canvas:Ameaca [
+		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
+		base:id "FE.AM23"
+	]
+	instance FE.AM24 : canvas:Ameaca [
+		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
+		base:id "FE.AM24"
+	]
+	instance FE.AM25 : canvas:Ameaca [
+		base:nome "Falta de priorização da política de estímulo a STEM+C em mudancas de gestão"
+		base:id "FE.AM25"
+	]
+	instance FE.AM26 : canvas:Ameaca [
+		base:nome "Validação equivocada das inscrições pelas Autarquias Municipais de Ensino Superior"
+		base:id "FE.AM26"
+	]
+	instance FE.AM27 : canvas:Ameaca [
+		base:nome "Dificuldades no cumprimento da proporção legal prevista na Lei nº 17.945/2022"
+		base:id "FE.AM27"
+	]
+	instance FE.AM28 : canvas:Ameaca [
+		base:nome "Descumprimento da contrapartida obrigatória por parte de bolsistas que abandonam, desistem ou trancam o curso"
+		base:id "FE.AM28"
+	]
+	instance FE.AM29 : canvas:Ameaca [
+		base:nome "Problemas de gestão com o sistema de gerenciamento do programa"
+		base:id "FE.AM29"
 	]
 }

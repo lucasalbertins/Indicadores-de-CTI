@@ -4,7 +4,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	
 	instance AC1 : canvas:AtividadeChave [
-		base:nome "Gestão do ciclo de vida do Edital"
+		base:nome "Gestão do ciclo de vida do edital/concessão"
 		base:id "AC1"
 	]
 	instance AC2 : canvas:AtividadeChave [
@@ -12,7 +12,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 		base:id "AC2"
 	]
 	instance AC3 : canvas:AtividadeChave [
-		base:nome "Acompanhamento técnico"
+		base:nome "Acompanhamento técnico/financeiro do Programa"
 		base:id "AC3"
 	]
 	instance AC4 : canvas:AtividadeChave [
@@ -24,134 +24,83 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 		base:id "AC5"
 	]
 	instance AC6 : canvas:AtividadeChave [
-		base:nome "Monitoramento dos indicadores de desempenho e impacto"
+		base:nome "Monitoramento dos indicadores de desempenho e impacto do Programa"
 		base:id "AC6"
 	]
 	instance AC7 : canvas:AtividadeChave [
 		base:nome "Avaliação do Programa"
 		base:id "AC7"
 	]
-	
-	
-	instance CelebracaoTED : canvas:AtividadeChave [
-	base:nome "Celebração de TED para infraestrutura (SECTI, SEE, FACEPE)"
-	base:id "AC8"
+	instance AC8 : canvas:AtividadeChave [
+		base:nome "Celebração de TED para infraestrutura"
+		base:id "AC8"
 	]
-	instance LancamentoEdital : canvas:AtividadeChave [
-		base:nome "Lançamento de Edital de Bolsas e Auxílios"
+	instance AC9 : canvas:AtividadeChave [
+		base:nome "Procedimento de licitação para equipamentos"
 		base:id "AC9"
 	]
-	instance LicitacaoEquipamentos : canvas:AtividadeChave [
-		base:nome "Procedimento de licitação para equipamentos"
+	instance AC10 : canvas:AtividadeChave [
+		base:nome "Implantação e Inauguração dos Espaços CRIA nas diferentes regiões de desenvolvimento do estado"
 		base:id "AC10"
 	]
-	instance ImplantacaoECRIA : canvas:AtividadeChave [
-		base:nome "Implantação e Inauguração dos Espaços CRIA nas diferentes regiões de desenvolvimento do estado"
+	instance AC11 : canvas:AtividadeChave [
+		base:nome "Manutenção dos equipamentos e infraestrutura do ECRIA"
 		base:id "AC11"
 	]
-	instance MonitoramentoeAvaliacao : canvas:AtividadeChave [
-		base:nome "Monitoramento e avaliação dos projetos"
+	instance AC12 : canvas:AtividadeChave [
+		base:nome "Aprimoramento tecnológico dos ECRIA"
 		base:id "AC12"
 	]
-	instance GestaoCicloEdital : canvas:AtividadeChave [
-		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
+	instance AC13 : canvas:AtividadeChave [
+		base:nome "Celebração de TED para operação (SEE e FACEPE)"
 		base:id "AC13"
 	]
-	instance ManutencaoEquipamentos : canvas:AtividadeChave [
-		base:nome "Manutenção dos equipamentos e infraestrutura do ECRIA"
+	instance AC14 : canvas:AtividadeChave [
+		base:nome "Lançamento de Edital de Bolsas e Auxílios"
 		base:id "AC14"
 	]
-	instance AprimoramentoTecnologico : canvas:AtividadeChave [
-		base:nome "Aprimoramento tecnológico dos ECRIA"
+	instance AC15 : canvas:AtividadeChave [
+		base:nome "Gestão de ciclo anual do Edital de apoio aos ECRIA"
 		base:id "AC15"
 	]
-	instance AcoesSensibilizacao : canvas:AtividadeChave [
+	instance AC16 : canvas:AtividadeChave [
 		base:nome "Ações de sensibilização e mobilização nas escolas"
 		base:id "AC16"
 	]
-	instance FormacaoProfessores : canvas:AtividadeChave [
-		base:nome "Formação dos professores responsáveis"
+	instance AC17 : canvas:AtividadeChave [
+		base:nome "Monitoramento e avaliação dos projetos"
 		base:id "AC17"
 	]
-	instance SolicitacaoDisponibilidadeOrcamentaria : canvas:AtividadeChave [
-		base:nome "Solicitação e emissão da Declaração de Disponibilidade Orçamentária (DDO), garantindo recursos para execução do programa."
+	instance AC18 : canvas:AtividadeChave [
+		base:nome "Formação dos professores responsáveis"
 		base:id "AC18"
 	]
-	instance AutorizacaoCamaraProgramacaoFinanceira : canvas:AtividadeChave [
-		base:nome "Autorização da Câmara de Programação Financeira (CPF); repasse financeiro mensal às Autarquias Municipais de Ensino Superior."
+	instance AC19 : canvas:AtividadeChave [
+		base:nome "Planejamento Orçamentário"
 		base:id "AC19"
 	]
-	instance InscricaoCandidatos : canvas:AtividadeChave [
-		base:nome "Inscrição dos candidatos e entrega de documentos nas respectivas Autarquias de Ensino Superior."
+	instance AC20 : canvas:AtividadeChave [
+		base:nome "Processo Seletivo de Bolsas"
 		base:id "AC20"
 	]
-	instance ValidacaoInscricoes : canvas:AtividadeChave [
-		base:nome "Validação das inscrições pelas Autarquias Municipais de Ensino Superior via sistema de gerenciamento do PROUPE."
+	instance AC21 : canvas:AtividadeChave [
+		base:nome "Publicação de Resultados do processo seletivo pela SECTI"
 		base:id "AC21"
 	]
-	instance SelecaoContemplados : canvas:AtividadeChave [
-		base:nome "Seleção dos contemplados de acordo com a nota do ENEM e reserva de vagas pela SECTI."
+	instance AC22 : canvas:AtividadeChave [
+		base:nome "Assinatura de Termo de Compromisso pelo candidato"
 		base:id "AC22"
 	]
-	instance DivulgacaoResultado : canvas:AtividadeChave [
-		base:nome "Divulgação do resultado preliminar."
+	instance AC23 : canvas:AtividadeChave [
+		base:nome "Concessão e Pagamento das Bolsas pela SECTI"
 		base:id "AC23"
 	]
-	instance ApresentacaoRecursos : canvas:AtividadeChave [
-		base:nome "Período para apresentação de recursos pelos candidatos."
+	instance AC24 : canvas:AtividadeChave [
+		base:nome "Entrega de Contrapartida"
 		base:id "AC24"
 	]
-	instance PrimeiraConvocacao : canvas:AtividadeChave [
-		base:nome "Publicação da primeira convocação."
+	instance AC25 : canvas:AtividadeChave [
+		base:nome "Monitoramento de execução do Programa"
 		base:id "AC25"
 	]
-	instance DivulgarListasRemanejamento : canvas:AtividadeChave [
-		base:nome "Divulgação das listas de remanejamento, conforme disponibilidade de vagas."
-		base:id "AC26"
-	]
-	instance AssinaturaObrigatoria : canvas:AtividadeChave [
-		base:nome "Assinatura obrigatória pelo candidato em cada etapa de convocação após cada etapa de convocação."
-		base:id "AC27"
-	]
-	instance ImplementacaoBolsas : canvas:AtividadeChave [
-		base:nome "Implementação das bolsas."
-		base:id "AC28"
-	]
-	instance RepasseFinanceiro : canvas:AtividadeChave [
-		base:nome "Repasse financeiro mensal às Autarquias Municipais de Ensino Superior para garantir a efetivação das bolsas de estudo."
-		base:id "AC29"
-	]
-	instance CumprimentoPelosBolsistas : canvas:AtividadeChave [
-		base:nome "Cumprimento, pelos bolsistas, de atividades educativas, de extensão, científicas ou tecnológicas, sob supervisão docente, em escolas públicas municipais ou estaduais, ou em instituições públicas ou privadas."
-		base:id "AC30"
-	]
-	instance AcompanhamentoAtividadesContrapartida : canvas:AtividadeChave [
-	base:nome "Registro e acompanhamento das atividades de contrapartida pelas Autarquias Municipais de Ensino Superior, com inserção das informações no sistema de gerenciamento do PROUPE."
-	base:id "AC31"
-	]
-	instance ValidacaoCumprimentoContrapartida : canvas:AtividadeChave [
-		base:nome "Validação pela SECTI do cumprimento da contrapartida como condição para manutenção e renovação da bolsa."
-		base:id "AC32"
-	]
-	instance AcompanhamentoPeloSistema : canvas:AtividadeChave [
-		base:nome "Acompanhamento contínuo da execução do PROUPE por meio do sistema de gerenciamento, incluindo controle das bolsas ativas, repasses financeiros, cumprimento da contrapartida educativa, controle de desempenho acadêmico e índices de evasão."
-		base:id "AC33"
-	]
-	instance VerificacaoMensal : canvas:AtividadeChave [
-		base:nome "Verificação mensal das informações prestadas pelas Autarquias Municipais de Ensino Superior, assegurando conformidade com a legislação e os critérios do edital."
-		base:id "AC34"
-	]
-	instance EmissaoRelatoriosTecnicos : canvas:AtividadeChave [
-		base:nome "Emissão de relatórios técnicos e financeiros para avaliação da execução do programa e apoio à tomada de decisão."
-		base:id "AC35"
-	]
-	instance AvaliacaoImpactoPrograma : canvas:AtividadeChave [
-		base:nome "Avaliação do impacto do programa na ampliação do acesso ao ensino superior, na redução das desigualdades educacionais e na formação de profissionais qualificados nas regiões atendidas."
-		base:id "AC36"
-	]
-	instance ParceriasEstrategicas : canvas:AtividadeChave [
-		base:nome "Parcerias estratégicas com setor privado e sociedade civil, ampliando impacto em extensão, inovação e trabalhabilidade."
-		base:id "AC37"
-	]
-	
-	}
+}

@@ -1,0 +1,23 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/RedesInovacao#> as RedesInovacao {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+ 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR3 : programa:programaCTI [
+		base:nome "Redes de Inovação"
+		base:descricao "Foi criado para fomentar a criação e o fortalecimento de redes de colaboração entre diferentes instituições e setores, com o objetivo de 
+impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
+		base:id "PR3"
+		programa:possuiParceiros parceiroChave:PC6, parceiroChave:PC7, parceiroChave:PC8, parceiroChave:PC9, parceiroChave:PC10
+		programa:condicionadoPor fatorExterno:FE.OP8, fatorExterno:FE.OP9, fatorExterno:FE.OP10, fatorExterno:FE.OP11, fatorExterno:FE.OP12, fatorExterno:FE.AM15, 
+		fatorExterno:FE.AM16, fatorExterno:FE.AM17, fatorExterno:FE.AM18
+		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
+		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+	]
+}
