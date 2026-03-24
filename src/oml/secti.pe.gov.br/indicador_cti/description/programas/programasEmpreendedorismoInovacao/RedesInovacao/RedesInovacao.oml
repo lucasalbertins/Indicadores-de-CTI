@@ -5,7 +5,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	
 	instance PR3 : programa:programaCTI [
@@ -19,5 +21,101 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+		programa:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
+		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:buscaAtingirGeral OB.GE
+		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
+	]
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Incentivar a criação e o fortalecimento de redes autossustentáveis que promovam e articulem atividades de inovação e integrem ICTs e demais 
+agentes do ecossistema, em consonância com as RDs do Estado, visando o fortalecimento de seus ecossistemas"
+		base:id "OB.GE - RedesInovacao"
+	]
+	
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar cooperações de CT&I e parcerias entre agentes do ecossistema de inovação, em redes autossustentáveis, aderentes às RDs do Estado"
+		base:id "OB.ES1 - RedesInovacao"
+		canvas:buscaAtingir RE.LP3, RE.LP4
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular ações de inovação aberta aderentes às RDs do Estado"
+		base:id "OB.ES2 - RedesInovacao"
+		canvas:buscaAtingir RE.MP1
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar a realização de eventos de CT&I, aderentes às RDs do Estado"
+		base:id "OB.ES3 - RedesInovacao"
+		canvas:buscaAtingir RE.CP1
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o desenvolvimento de projetos de CT&I, aderentes às RDs do Estado"
+		base:id "OB.ES4 - RedesInovacao"
+		canvas:buscaAtingir RE.CP2
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a transferência tecnológica realizadas no estado"
+		base:id "OB.ES5 - RedesInovacao"
+		canvas:buscaAtingir RE.LP1
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a geração de startups e negócios, aderentes às RDs do Estado"
+		base:id "OB.ES6 - RedesInovacao"
+		canvas:buscaAtingir RE.MP2, RE.LP2
+	]
+	instance OB.ES7 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar articuladores que conectem o ecossistema às demais políticas de CT&I do Estado"
+		base:id "OB.ES7 - RedesInovacao"
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Indução de eventos de CT&I realizados pela rede  em todo o Estado, aderentes às RDs do Estado"
+		base:id "RE.CP1 - RedesInovacao"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Indução de projetos de CT&I aderentes às RD pelas redes fomentadas em todo o Estado"
+		base:id "RE.CP2 - RedesInovacao"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de ações de inovação aberta realizadas em todo o Estado"
+		base:id "RE.MP1 - RedesInovacao"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de startups ativas em todo o Estado"
+		base:id "RE.MP2 - RedesInovacao"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de transferências tecnológicas realizadas no Estado"
+		base:id "RE.LP1 - RedesInovacao"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do faturamento das empresas participantes da rede"
+		base:id "RE.LP2 - RedesInovacao"
+		canvas:prazo "longo"
+	]
+	instance RE.LP3 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de redes de inovação ativas e autossustentáveis em todo Estado"
+		base:id "RE.LP3 - RedesInovacao"
+		canvas:prazo "longo"
+	]
+	instance RE.LP4 : canvas:ResultadoEsperado [
+		base:nome "Ampliação da produção de CT&I de grupos de pesquisa vinculados às redes apoiadas"
+		base:id "RE.LP4 - RedesInovacao"
+		canvas:prazo "longo"
 	]
 }

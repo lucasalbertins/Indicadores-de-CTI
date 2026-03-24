@@ -78,7 +78,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
 		irreflexive
 	]
 	relation buscaAtingir [
-		from ObjetivoEspecifico
+		from Objetivo
 		to ResultadoEsperado
 		reverse atingidoPor
 		asymmetric

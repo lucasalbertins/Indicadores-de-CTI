@@ -5,7 +5,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	
 	instance PR7 : programa:programaCTI [
@@ -18,5 +20,75 @@ da gestão pública do estado de Pernambuco"
 		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+		programa:produzResultados RE.CP1, RE.MP1, RE.LP1, RE.LP2
+		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:buscaAtingirGeral OB.GE
+		programa:buscaAtingirEspecifico OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+	]
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Apoiar MPEs em projetos de desenvolvimento e implantação de produtos, serviços e/ou processos inovadores que contemplem desafios de órgãos 
+públicos do Estado"
+		base:id "OB.GE - DesafiosGov"
+	]
+	
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o desenvolvimento de projetos de PD&I aplicados a desafios de órgãos públicos do Estado em parceria com empresas de base tecnológica"
+		base:id "OB.ES1 - DesafiosGov"
+		canvas:buscaAtingir RE.CP1
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a consolidação de empresas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos, inclusive no interior 
+do Estado"
+		base:id "OB.ES3 - DesafiosGov"
+		canvas:buscaAtingir RE.MP1, RE.LP1, RE.LP2
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar a formação de parcerias entre o setor público e o setor privado"
+		base:id "OB.ES4 - DesafiosGov"
+		canvas:buscaAtingir RE.CP1
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a transferência tecnológica e de conhecimentos, inclusive para o setor público"
+		base:id "OB.ES5 - DesafiosGov"
+		canvas:buscaAtingir RE.MP1
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de soluções inovadoras"
+		base:id "OB.ES6 - DesafiosGov"
+		canvas:buscaAtingir RE.MP1, RE.LP1
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Indução do nº de projetos de PD&I ativos que envolvam órgãos públicos da esfera estadual em parceria com empresas pernambucanas de base 
+tecnológica"
+		base:id "RE.CP1 - DesafiosGov"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Absorção de soluções inovadoras por órgãos públicos do Estado de Pernambuco"
+		base:id "RE.MP1 - DesafiosGov"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de contratações por órgãos públicos do Estado de Pernambuco"
+		base:id "RE.LP1 - DesafiosGov"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do nº de empregos, do portfólio, do faturamento obtido, das PIs e software registrados por empresas pernambucanas de base tecnológica 
+especializadas em soluções de aprimoramento dos serviços públicos, inclusive no interior"
+		base:id "RE.LP2 - DesafiosGov"
+		canvas:prazo "longo"
 	]
 }

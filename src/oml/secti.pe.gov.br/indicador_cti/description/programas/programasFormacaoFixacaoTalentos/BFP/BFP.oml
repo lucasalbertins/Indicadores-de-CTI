@@ -5,7 +5,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	
 	instance PR4 : programa:programaCTI [
@@ -17,5 +19,112 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN4, entrada:EN5, entrada:EN6, entrada:EN7
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7, saida:SA8
+		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3
+		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:buscaAtingirGeral OB.GE
+		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+	]
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Incentivar a fixação de doutores no estado de Pernambuco em Instituições de ensino superior e pesquisa, Institutos de pesquisa e Empresas 
+públicas de pesquisa e desenvolvimento que atuem em investigação científica, tecnológica e/ou inovação"
+		base:id "OB.GE - BFP"
+	]
+	
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Fixar pesquisadores altamente qualificados no ecossistema de CT&I do Estado"
+		base:id "OB.ES1 - BFP"
+		canvas:buscaAtingir RE.CP1, RE.MP1
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para fortalecer e/ou nuclear os grupos de pesquisa atuantes no estado"
+		base:id "OB.ES2 - BFP"
+		canvas:buscaAtingir RE.CP2, RE.MP1
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar o desenvolvimento de pesquisa e inovação de excelência no estado"
+		base:id "OB.ES3 - BFP"
+		canvas:buscaAtingir RE.CP2, RE.CP4, RE.MP1
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Contribuição para formação de recursos humanos no estado"
+		base:id "OB.ES4 - BFP"
+		canvas:buscaAtingir RE.CP3, RE.LP3
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular cooperações científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais"
+		base:id "OB.ES5 - BFP"
+		canvas:buscaAtingir RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP2
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Contribuir para o desenvolvimento científico, tecnológico ou de inovação"
+		base:id "OB.ES6 - BFP"
+		canvas:buscaAtingir RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Absorção e fixação de doutores pelo ecossistema de CT&I do estado"
+		base:id "RE.CP1 - BFP"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento da produção científica, tecnológica e de inovação dos grupos de pesquisa em Pernambuco no qual o bolsista está associado"
+		base:id "RE.CP2 - BFP"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Aumento do número de trabalhos de IC, TCC, pós-graduação, extensão e inovação orientados e/ou coorientados pelo bolsista BFP"
+		base:id "RE.CP3 - BFP"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Aumento da Proteção intelectual do conhecimento gerado por meio de patentes depositadas e/ou programas de software registrados"
+		base:id "RE.CP4 - BFP"
+		canvas:prazo "curto"
+	]
+	instance RE.CP5 : canvas:ResultadoEsperado [
+		base:nome "Cooperação científica e tecnológica nacional e internacional incrementado"
+		base:id "RE.CP5 - BFP"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Aumento do conceito CAPES dos PPGs"
+		base:id "RE.MP1 - BFP"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento de Startups de base científica e tecnológica e Spin-offs acadêmicos"
+		base:id "RE.MP2 - BFP"
+		canvas:prazo "médio"
+	]
+	instance RE.MP3 : canvas:ResultadoEsperado [
+		base:nome "Geração de inovações (produtos, processos, soluções, serviços) para Indústria, Governo e Sociedade"
+		base:id "RE.MP3 - BFP"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Evolução dos índices econômicos, sociais e ambientais do estado"
+		base:id "RE.LP1 - BFP"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Licenciamento da propriedade intelectual pela Indústria e Governo"
+		base:id "RE.LP2 - BFP"
+		canvas:prazo "longo"
+	]
+	instance RE.LP3 : canvas:ResultadoEsperado [
+		base:nome "Empregabilidade dos egressos BFP de alto nível salarial"
+		base:id "RE.LP3 - BFP"
+		canvas:prazo "longo"
 	]
 }

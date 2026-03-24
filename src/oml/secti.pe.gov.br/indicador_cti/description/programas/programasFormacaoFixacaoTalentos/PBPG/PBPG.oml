@@ -5,7 +5,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/resultados#> as resultado
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
@@ -26,8 +25,9 @@ pós-graduação"
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, 
 		atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7
-		programa:produzResultados resultado:RE.CP1, resultado:RE.CP2, resultado:RE.CP3, resultado:RE.CP4, resultado:RE.CP5, resultado:RE.MP1, resultado:RE.MP2, resultado:RE.MP3, resultado:RE.MP4, resultado:RE.MP5, resultado:RE.LP1, resultado:RE.LP2, resultado:RE.LP3, resultado:RE.LP4
-		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2, RE.LP3, RE.LP4
+		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA9, PA10, PA11, PA12, PA13, PA14, PA15, PA16, PA17
@@ -35,40 +35,120 @@ pós-graduação"
 	
 	// Objetivo Geral
 	instance OB.GE : canvas:ObjetivoGeral [
-		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação de modo a contribuir com o desenvolvimento sustentável do estado de Pernambuco"
-		base:id "OB.GE"
+		base:nome "Promover a formação de recursos humanos qualificados em nível de pós-graduação de modo a contribuir com o desenvolvimento sustentável do estado 
+de Pernambuco"
+		base:id "OB.GE - PBPG"
 	]
 	
 	// Objetivos Específicos
 	instance OB.ES1 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a formação e a fixação de mestres e doutores no estado de Pernambuco, em especial no interior"
-		base:id "OB.ES1"
-		canvas:buscaAtingir resultado:RE.CP1, resultado:RE.MP1, resultado:RE.LP4
+		base:id "OB.ES1 - PBPG"
+		canvas:buscaAtingir RE.CP1, RE.MP1, RE.LP4
 	]
 	instance OB.ES2 : canvas:ObjetivoEspecifico [
 		base:nome "Incentivar o desenvolvimento de dissertações e teses em áreas estratégicas e prioritárias para o Estado de Pernambuco"
-		base:id "OB.ES2"
-		canvas:buscaAtingir resultado:RE.CP4, resultado:RE.LP2
+		base:id "OB.ES2 - PBPG"
+		canvas:buscaAtingir RE.CP4, RE.LP2
 	]
 	instance OB.ES3 : canvas:ObjetivoEspecifico [
-		base:nome "Estimular a produção e a disseminação de conhecimento de vanguarda e a mão de obra de alto nível para o desenvolvimento competitivo e sustentável do Estado de Pernambuco"
-		base:id "OB.ES3"
-		canvas:buscaAtingir resultado:RE.CP2, resultado:RE.CP3, resultado:RE.MP4, resultado:RE.LP1, resultado:RE.LP2, resultado:RE.LP4
+		base:nome "Estimular a produção e a disseminação de conhecimento de vanguarda e a mão de obra de alto nível para o desenvolvimento competitivo e 
+sustentável do Estado de Pernambuco"
+		base:id "OB.ES3 - PBPG"
+		canvas:buscaAtingir RE.CP2, RE.CP3, RE.MP4, RE.LP1, RE.LP2, RE.LP4
 	]
 	instance OB.ES4 : canvas:ObjetivoEspecifico [
 		base:nome "Apoiar a consolidação de Programas de Pós-graduação (PPGs) novos e emergentes"
-		base:id "OB.ES4"
-		canvas:buscaAtingir resultado:RE.MP2
+		base:id "OB.ES4 - PBPG"
+		canvas:buscaAtingir RE.MP2
 	]
 	instance OB.ES5 : canvas:ObjetivoEspecifico [
 		base:nome "Contribuir para a manutenção da excelência de PPGs consolidados"
-		base:id "OB.ES5"
-		canvas:buscaAtingir resultado:RE.MP3
+		base:id "OB.ES5 - PBPG"
+		canvas:buscaAtingir RE.MP3
 	]
 	instance OB.ES6 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular cooperações e transferências científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais"
-		base:id "OB.ES6"
-		canvas:buscaAtingir resultado:RE.CP5, resultado:RE.MP4, resultado:RE.MP5, resultado:RE.LP3
+		base:id "OB.ES6 - PBPG"
+		canvas:buscaAtingir RE.CP5, RE.MP4, RE.MP5, RE.LP3
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do número de mestres e doutores titulados no Estado"
+		base:id "RE.CP1 - PBPG"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento da produção científica publicada em eventos e periódicos qualificados e de alto impacto"
+		base:id "RE.CP2 - PBPG"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Aumento do número de patentes depositadas e programas de software registrados"
+		base:id "RE.CP3 - PBPG"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Incremento do estoque de conhecimento em áreas estratégicas para o Estado"
+		base:id "RE.CP4 - PBPG"
+		canvas:prazo "curto"
+	]
+	instance RE.CP5 : canvas:ResultadoEsperado [
+		base:nome "Maior intercâmbio científico nacional e internacional"
+		base:id "RE.CP5 - PBPG"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Aumento da fixação de mestres e doutores pelo ecossistema de CT&I do Estado, inclusive no interior"
+		base:id "RE.MP1 - PBPG"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento do conceito CAPES dos PPGs novos e emergentes"
+		base:id "RE.MP2 - PBPG"
+		canvas:prazo "médio"
+	]
+	instance RE.MP3 : canvas:ResultadoEsperado [
+		base:nome "Manutenção do conceito CAPES dos PPGs de excelência"
+		base:id "RE.MP3 - PBPG"
+		canvas:prazo "médio"
+	]
+	instance RE.MP4 : canvas:ResultadoEsperado [
+		base:nome "Aumento do número de startups de base científica e tecnológica e spin-offs acadêmicos"
+		base:id "RE.MP4 - PBPG"
+		canvas:prazo "médio"
+	]
+	instance RE.MP5 : canvas:ResultadoEsperado [
+		base:nome "Aumento das inovações para Governo, Empresas e Sociedade"
+		base:id "RE.MP5 - PBPG"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Evolução dos índices econômicos, sociais e ambientais do Estado"
+		base:id "RE.LP1 - PBPG"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Fortalecimento das cadeias produtivas de setores estratégicos para Pernambuco"
+		base:id "RE.LP2 - PBPG"
+		canvas:prazo "longo"
+	]
+	instance RE.LP3 : canvas:ResultadoEsperado [
+		base:nome "Aumento da quantidade de licenciamentos de propriedade intelectual pelo Governo e Empresas Privadas"
+		base:id "RE.LP3 - PBPG"
+		canvas:prazo "longo"
+	]
+	instance RE.LP4 : canvas:ResultadoEsperado [
+		base:nome "Aumento da empregabilidade dos egressos PBPG de alto nível salarial"
+		base:id "RE.LP4 - PBPG"
+		canvas:prazo "longo"
 	]
 	
 	// Questões de Avaliação
@@ -80,7 +160,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA1.ES
 		planoAvaliacao:temMetodologia PA1.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP1
+		planoAvaliacao:alinhaComResultado RE.CP1
 	]
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o quantitativo e o percentual de dissertações/teses desenvolvidas por bolsistas PBPG em áreas estratégicas prioritárias para Pernambuco?"
@@ -90,7 +170,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA2.ES
 		planoAvaliacao:temMetodologia PA2.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP4
+		planoAvaliacao:alinhaComResultado RE.CP4
 	]
 	instance PA3 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de fixação de egressos do PBPG no Estado, por segmento (governo, empresas, ICT) e por região de desenvolvimento, após 2 anos da titulação?"
@@ -100,7 +180,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA3.ES
 		planoAvaliacao:temMetodologia PA3.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.MP1
+		planoAvaliacao:alinhaComResultado RE.MP1
 	]
 	instance PA4 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução do conceito CAPES dos PPGs apoiados pelo PBPG?"
@@ -110,7 +190,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA4.ES
 		planoAvaliacao:temMetodologia PA4.MA
 		planoAvaliacao:temLimitacao LIM1
-		planoAvaliacao:alinhaComResultado resultado:RE.MP2, resultado:RE.MP3
+		planoAvaliacao:alinhaComResultado RE.MP2, RE.MP3
 	]
 	instance PA5 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da qualidade científica e tecnológica (quantitativo de citações, publicações, índice h, bolsa de produtividade, patentes, startups) dos docentes permanentes (orientadores) dos PPGs apoiados pelo PBPG?"
@@ -121,7 +201,7 @@ pós-graduação"
 		planoAvaliacao:temMetodologia PA5.MA
 		planoAvaliacao:temRisco R1
 		planoAvaliacao:temLimitacao LIM2
-		planoAvaliacao:alinhaComResultado resultado:RE.CP2, resultado:RE.CP3, resultado:RE.MP4
+		planoAvaliacao:alinhaComResultado RE.CP2, RE.CP3, RE.MP4
 	]
 	instance PA6 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas publicações em periódicos e eventos de alto impacto, nacionais e internacionais, foram realizadas por bolsistas do PBPG em até 02 anos após a titulação?"
@@ -131,7 +211,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA6.ES
 		planoAvaliacao:temMetodologia PA6.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP2
+		planoAvaliacao:alinhaComResultado RE.CP2
 	]
 	instance PA7 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados por egressos PBPG em até dois anos após a titulação?"
@@ -141,7 +221,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA7.ES
 		planoAvaliacao:temMetodologia PA7.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP3
+		planoAvaliacao:alinhaComResultado RE.CP3
 	]
 	instance PA8 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas publicações em co-autoria com organizações (empresas, ICT e governo) públicas ou privadas, nacionais ou estrangeiras foram realizadas por bolsistas PBPG em até dois anos após a titulação?"
@@ -151,7 +231,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA8.ES
 		planoAvaliacao:temMetodologia PA8.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP2
+		planoAvaliacao:alinhaComResultado RE.CP2
 	]
 	instance PA9 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados em co-autoria com organizações (empresas, ICT, governo) públicas ou privadas, nacionais ou internacionais por bolsistas PBPG em até 02 anos após a titulação?"
@@ -161,7 +241,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA9.ES
 		planoAvaliacao:temMetodologia PA9.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP3
+		planoAvaliacao:alinhaComResultado RE.CP3
 	]
 	instance PA10 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos mestrados/doutorados sanduíche foram realizados por bolsistas PBPG em ICT nacionais e internacionais?"
@@ -171,7 +251,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA10.ES
 		planoAvaliacao:temMetodologia PA10.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP5
+		planoAvaliacao:alinhaComResultado RE.CP5
 	]
 	instance PA11 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos estágios pós-doutoral foram realizados por egressos do PBPG em até 02 anos após a titulação em outra ICT?"
@@ -181,7 +261,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA11.ES
 		planoAvaliacao:temMetodologia PA11.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP5
+		planoAvaliacao:alinhaComResultado RE.CP5
 	]
 	instance PA12 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos bolsistas PPBG foram co-orientados por pesquisadores de outras ICTs e/ou co-titulados (co-tutela) mestres e doutores?"
@@ -191,7 +271,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA12.ES
 		planoAvaliacao:temMetodologia PA12.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.CP5
+		planoAvaliacao:alinhaComResultado RE.CP5
 	]
 	instance PA13 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas inovações (produtos, processos, serviços) fomentadas pelo PPBG foram adotadas por empresas e pelo governo?"
@@ -202,7 +282,7 @@ pós-graduação"
 		planoAvaliacao:temMetodologia PA13.MA
 		planoAvaliacao:temRisco R1, R2
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado resultado:RE.MP5
+		planoAvaliacao:alinhaComResultado RE.MP5
 	]
 	instance PA14 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas startups de base científica e tecnológica e spin-offs acadêmicos foram criados com a participação direta de egressos do PBPG?"
@@ -213,7 +293,7 @@ pós-graduação"
 		planoAvaliacao:temMetodologia PA14.MA
 		planoAvaliacao:temRisco R1, R2
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado resultado:RE.MP4
+		planoAvaliacao:alinhaComResultado RE.MP4
 	]
 	instance PA15 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o índice de empregabilidade, por atividade econômica, de egressos PBPG em cargos de alto nível salarial (considerando natureza jurídica e atividade econômica) após 5 anos de titulação?"
@@ -223,7 +303,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA15.ES
 		planoAvaliacao:temMetodologia PA15.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.LP4
+		planoAvaliacao:alinhaComResultado RE.LP4
 	]
 	instance PA16 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o quantitativo de patentes e programas de computador de egressos do PBPG licenciados e comercializados?"
@@ -234,7 +314,7 @@ pós-graduação"
 		planoAvaliacao:temMetodologia PA16.MA
 		planoAvaliacao:temRisco R1
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado resultado:RE.LP3
+		planoAvaliacao:alinhaComResultado RE.LP3
 	]
 	instance PA17 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da produtividade dos segmentos econômicos de Pernambuco com maior percentual de mestres e doutores egressos do PBPG?"
@@ -244,7 +324,7 @@ pós-graduação"
 		planoAvaliacao:temEscopo PA17.ES
 		planoAvaliacao:temMetodologia PA17.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado resultado:RE.LP1, resultado:RE.LP2
+		planoAvaliacao:alinhaComResultado RE.LP1, RE.LP2
 	]
 	
 	//Métricas	

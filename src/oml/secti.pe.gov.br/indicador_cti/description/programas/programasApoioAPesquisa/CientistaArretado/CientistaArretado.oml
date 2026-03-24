@@ -5,7 +5,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
 	
 	instance PR6 : programa:programaCTI [
@@ -18,5 +20,106 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN4, entrada:EN5, entrada:EN6, entrada:EN8, entrada:EN10, entrada:EN11
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4, saida:SA9, saida:SA10, saida:SA11
+		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2
+		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:buscaAtingirGeral OB.GE
+		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5
+	]
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Fomentar a cooperação entre o governo do estado e pesquisadores de ICTs pernambucanas para o desenvolvimento de inovações e tecnologias que 
+solucionem desafios no âmbito governamental"
+		base:id "OB.GE - CientistaArretado"
+		canvas:buscaAtingir RE.CP1
+	]
+	
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar a inovação na gestão pública estadual"
+		base:id "OB.ES1 - CientistaArretado"
+		canvas:buscaAtingir RE.CP3
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar a articulação entre o governo do estado e pesquisadores de ICTs"
+		base:id "OB.ES2 - CientistaArretado"
+		canvas:buscaAtingir RE.CP2
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Ampliar a efetividade dos serviços públicos prestados à sociedade"
+		base:id "OB.ES3 - CientistaArretado"
+		canvas:buscaAtingir RE.MP1, RE.LP1
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a eficiência da gestão pública estadual"
+		base:id "OB.ES4 - CientistaArretado"
+		canvas:buscaAtingir RE.CP5, RE.MP2, RE.MP3
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Fortalecer o Sistema Estadual de Ciência, Tecnologia e Inovação com maior interação, integração, intercâmbio de conhecimento e alianças 
+estratégicas entre ICTs e o governo do estado"
+		base:id "OB.ES5 - CientistaArretado"
+		canvas:buscaAtingir RE.CP4, RE.LP2
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Desenvolvimento de soluções inovadoras para os desafios do setor público"
+		base:id "RE.CP1 - CientistaArretado"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Maior integração entre os pesquisadores pernambucanos e o governo do estado"
+		base:id "RE.CP2 - CientistaArretado"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Criação de novas estruturas governamentais e instrumentos de gestão a partir das soluções inovadoras desenvolvidas"
+		base:id "RE.CP3 - CientistaArretado"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Geração de novos conhecimentos e inovações no Sistema Estadual de CT&I"
+		base:id "RE.CP4 - CientistaArretado"
+		canvas:prazo "curto"
+	]
+	instance RE.CP5 : canvas:ResultadoEsperado [
+		base:nome "Recursos humanos do governo (técnico, servidores, gestores públicos) mais capacitados para o desenvolvimento, uso e aplicação das soluções 
+desenvolvidas"
+		base:id "RE.CP5 - CientistaArretado"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação da efetividade dos serviços públicos prestados à sociedade (diretamente nos órgãos demandantes)"
+		base:id "RE.MP1 - CientistaArretado"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Eficiência da gestão pública estadual (fazer mais com menos recursos – tempo, pessoas e orçamento) com base nas soluções implementadas"
+		base:id "RE.MP2 - CientistaArretado"
+		canvas:prazo "médio"
+	]
+	instance RE.MP3 : canvas:ResultadoEsperado [
+		base:nome "Garantia, sem ônus, do direito de propriedade, uso e posse dos resultados desenvolvidos (dados, códigos fonte, tecnologias, documentos) para os 
+órgãos e entidades da administração pública estadual"
+		base:id "RE.MP3 - CientistaArretado"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação da capacidade de resposta em temas/desafios estratégicos para o estado de Pernambuco"
+		base:id "RE.LP1 - CientistaArretado"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Consolidação de alianças estratégicas entre ICTs e o governo do estado (redes e intercâmbio de conhecimento)"
+		base:id "RE.LP2 - CientistaArretado"
+		canvas:prazo "longo"
 	]
 }
