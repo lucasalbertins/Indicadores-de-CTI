@@ -9,12 +9,6 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/canvas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/programa.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas.oml</semanticResources>
-    <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
-    <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
-    <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
-    <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
-    <semanticResources>build/oml/www.w3.org/2002/07/owl.oml</semanticResources>
-    <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa-EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspacosCria.oml</semanticResources>
@@ -44,6 +38,34 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/canvasPBPG.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/canvasCientistaArretado.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/PA_BPP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/canvasBPP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/canvasRedesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/canvasPROUPE.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/PA_LabMultiusuarios.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/PA_BFP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/PA_DesafiosGov.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/canvasLabMultiusuarios.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/canvaseCRIA.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/PA_RedesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/canvasBFP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/RedesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/canvasDesafiosGov.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/LabMultiusuarios.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PA_PROUPE.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
+    <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/2002/07/owl.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

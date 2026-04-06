@@ -2,6 +2,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/canvasPBPG#> as canvasPBPG
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#> as PA1.ME1
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
@@ -10,11 +12,11 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de sucesso e quantos bolsistas PBPG foram titulados como mestres e doutores, por ano, por prazo (regular ou prorrogado), por área de conhecimento e por região de desenvolvimento do Estado?"
 		base:id "PA1"
 		planoAvaliacao:custo "Moderado"
-		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2
+		planoAvaliacao:temMetrica PA1.ME1:taxaTitulacao, PA1.ME2:quantidadeTitulados
 		planoAvaliacao:temEscopo PA1.ES
 		planoAvaliacao:temMetodologia PA1.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP1
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP1
 	]
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o quantitativo e o percentual de dissertações/teses desenvolvidas por bolsistas PBPG em áreas estratégicas prioritárias para Pernambuco?"
@@ -24,7 +26,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA2.ES
 		planoAvaliacao:temMetodologia PA2.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP4
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP4
 	]
 	instance PA3 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de fixação de egressos do PBPG no Estado, por segmento (governo, empresas, ICT) e por região de desenvolvimento, após 2 anos da titulação?"
@@ -34,7 +36,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA3.ES
 		planoAvaliacao:temMetodologia PA3.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.MP1
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.MP1
 	]
 	instance PA4 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução do conceito CAPES dos PPGs apoiados pelo PBPG?"
@@ -44,7 +46,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA4.ES
 		planoAvaliacao:temMetodologia PA4.MA
 		planoAvaliacao:temLimitacao LIM1
-		planoAvaliacao:alinhaComResultado RE.MP2, RE.MP3
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.MP2, canvasPBPG:RE.MP3
 	]
 	instance PA5 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da qualidade científica e tecnológica (quantitativo de citações, publicações, índice h, bolsa de produtividade, patentes, startups) dos docentes permanentes (orientadores) dos PPGs apoiados pelo PBPG?"
@@ -55,7 +57,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temMetodologia PA5.MA
 		planoAvaliacao:temRisco R1
 		planoAvaliacao:temLimitacao LIM2
-		planoAvaliacao:alinhaComResultado RE.CP2, RE.CP3, RE.MP4
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP2, canvasPBPG:RE.CP3, canvasPBPG:RE.MP4
 	]
 	instance PA6 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas publicações em periódicos e eventos de alto impacto, nacionais e internacionais, foram realizadas por bolsistas do PBPG em até 02 anos após a titulação?"
@@ -65,7 +67,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA6.ES
 		planoAvaliacao:temMetodologia PA6.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP2
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP2
 	]
 	instance PA7 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados por egressos PBPG em até dois anos após a titulação?"
@@ -75,7 +77,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA7.ES
 		planoAvaliacao:temMetodologia PA7.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP3
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP3
 	]
 	instance PA8 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas publicações em co-autoria com organizações (empresas, ICT e governo) públicas ou privadas, nacionais ou estrangeiras foram realizadas por bolsistas PBPG em até dois anos após a titulação?"
@@ -85,7 +87,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA8.ES
 		planoAvaliacao:temMetodologia PA8.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP2
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP2
 	]
 	instance PA9 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados em co-autoria com organizações (empresas, ICT, governo) públicas ou privadas, nacionais ou internacionais por bolsistas PBPG em até 02 anos após a titulação?"
@@ -95,7 +97,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA9.ES
 		planoAvaliacao:temMetodologia PA9.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP3
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP3
 	]
 	instance PA10 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos mestrados/doutorados sanduíche foram realizados por bolsistas PBPG em ICT nacionais e internacionais?"
@@ -105,7 +107,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA10.ES
 		planoAvaliacao:temMetodologia PA10.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP5
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP5
 	]
 	instance PA11 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos estágios pós-doutoral foram realizados por egressos do PBPG em até 02 anos após a titulação em outra ICT?"
@@ -115,7 +117,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA11.ES
 		planoAvaliacao:temMetodologia PA11.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP5
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP5
 	]
 	instance PA12 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos bolsistas PPBG foram co-orientados por pesquisadores de outras ICTs e/ou co-titulados (co-tutela) mestres e doutores?"
@@ -125,7 +127,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA12.ES
 		planoAvaliacao:temMetodologia PA12.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.CP5
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.CP5
 	]
 	instance PA13 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas inovações (produtos, processos, serviços) fomentadas pelo PPBG foram adotadas por empresas e pelo governo?"
@@ -136,7 +138,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temMetodologia PA13.MA
 		planoAvaliacao:temRisco R1, R2
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado RE.MP5
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.MP5
 	]
 	instance PA14 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas startups de base científica e tecnológica e spin-offs acadêmicos foram criados com a participação direta de egressos do PBPG?"
@@ -147,7 +149,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temMetodologia PA14.MA
 		planoAvaliacao:temRisco R1, R2
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado RE.MP4
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.MP4
 	]
 	instance PA15 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o índice de empregabilidade, por atividade econômica, de egressos PBPG em cargos de alto nível salarial (considerando natureza jurídica e atividade econômica) após 5 anos de titulação?"
@@ -157,7 +159,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA15.ES
 		planoAvaliacao:temMetodologia PA15.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.LP4
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.LP4
 	]
 	instance PA16 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o quantitativo de patentes e programas de computador de egressos do PBPG licenciados e comercializados?"
@@ -168,7 +170,7 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temMetodologia PA16.MA
 		planoAvaliacao:temRisco R1
 		planoAvaliacao:temLimitacao LIM3
-		planoAvaliacao:alinhaComResultado RE.LP3
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.LP3
 	]
 	instance PA17 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da produtividade dos segmentos econômicos de Pernambuco com maior percentual de mestres e doutores egressos do PBPG?"
@@ -178,28 +180,12 @@ instance PA1 : planoAvaliacao:questaoAvaliacao [
 		planoAvaliacao:temEscopo PA17.ES
 		planoAvaliacao:temMetodologia PA17.MA
 		planoAvaliacao:temRisco R1
-		planoAvaliacao:alinhaComResultado RE.LP1, RE.LP2
+		planoAvaliacao:alinhaComResultado canvasPBPG:RE.LP1, canvasPBPG:RE.LP2
 	]
 	
 	//Métricas	
 	// Inserindo Cenário: Meta 80%, Atingido 90% (Sucesso)
-	instance PA1.ME1 : metricas:metrica [
-		base:nome "Taxa Titulação"
-		base:descricao "Número de bolsistas PBPG titulados no ano sobre o total de cotas PBPG encerradas no ano"
-		base:id "PA1.ME1"
-		metricas:temFonte fonte:FI1, fonte:FI2
-		metricas:finalidade "Maximizar"
-		metricas:valorAtual 0.90
-		metricas:valorMeta  0.80
-	]
 	
-	instance PA1.ME2 : metricas:metrica[
-		base:nome "Qtde Titulados"
-		base:descricao "Número de bolsistas PBPG titulados, desagregado por: (a) ano de titulação, (b) Modalidade (Mestrado e Doutorado), (c) Prazo (conclusão no prazo regular e Com prorrogação), (d) Grande Área do Conhecimento (CAPES), e (e)  Região de Desenvolvimento do Estado (RDE)"
-		base:id "PA1.ME2"
-		metricas:temFonte fonte:FI1, fonte:FI2
-		metricas:finalidade "Maximizar"
-	]
 	instance PA2.ME1 : metricas:metrica [
 		base:nome "Qtde Trab Áreas Prior"
 		base:descricao "Número de dissertações e teses de bolsistas PBPG por área estratégica prioritária para Pernambuco"

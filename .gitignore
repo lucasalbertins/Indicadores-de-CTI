@@ -1,5 +1,6 @@
 .gradle/
 .fuseki/
+.aird/
 build/
 *.log
 *.zip

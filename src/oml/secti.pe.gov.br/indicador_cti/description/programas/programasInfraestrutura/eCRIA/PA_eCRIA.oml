@@ -1,2 +1,31 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA#> as PA_eCRIA {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/canvaseCRIA#> as canvaseCRIA
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	
+	instance QA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quantos Espaços Cria foram implantados, com distribuição por região de desenvolvimento (RD), tipo de escola e faixa de IDHM?"
+		base:id "QA1"
+		planoAvaliacao:custo "Moderado"
+	//	planoAvaliacao:temMetrica PA1.ME1, PA1.ME2
+	//	planoAvaliacao:temEscopo PA1.ES
+	//	planoAvaliacao:temMetodologia PA1.MA
+	//	planoAvaliacao:temRisco R1
+		planoAvaliacao:alinhaComResultado canvaseCRIA:RE.CP1
+		]
+		
+		//Métricas	
+	// Inserindo Cenário: Meta 80%, Atingido 90% (Sucesso)
+	instance espacosPlanejados : metricas:metrica [
+		base:nome "Número de espaços planejados"
+		base:descricao "Número de bolsistas PBPG titulados no ano sobre o total de cotas PBPG encerradas no ano"
+		base:id "espacosPlanejados"
+		metricas:temFonte fonte:FI1, fonte:FI2
+		metricas:finalidade "Maximizar"
+		metricas:valorAtual 0.90
+		metricas:valorMeta  0.80
+	]
 }

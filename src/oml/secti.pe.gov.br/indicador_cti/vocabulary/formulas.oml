@@ -1,36 +1,36 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas {
-	
+
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
 	
 	concept formula < base:EntidadeIdentificavel [
 		restricts referenciaOperacao to exactly 1
-		restricts possuiVariavel to min 1
+		restricts possuiArgumento to min 1
 		restricts formulaDe to exactly 1
 	]
 	concept estratificacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
-	concept variavel < base:EntidadeIdentificavel, base:EntidadeNomeavel  [
+	concept argumento < base:EntidadeIdentificavel, base:EntidadeNomeavel  [
 		restricts posicao to exactly 1
 		restricts nome to exactly 1
 		restricts possuiValor to exactly 1
     ]
 	
-	aspect valordeVariavel < base:EntidadeIdentificavel
+	aspect valordeArgumento < base:EntidadeIdentificavel
 	
-	concept tipovalorLiteral < valordeVariavel
-	concept tipovalorMetrica < valordeVariavel 
-	concept tipovalorFonteDados < valordeVariavel
-	concept tipovalorFormula < valordeVariavel
+	concept tipovalorLiteral < valordeArgumento
+	concept tipovalorMetrica < valordeArgumento 
+	concept tipovalorFonteDados < valordeArgumento
+	concept tipovalorFormula < valordeArgumento
 	
 	scalar property posicao [
-		domain variavel
+		domain argumento
 		range xsd:int
 		functional
 	]
 	
 	scalar property nome [
-		domain variavel
+		domain argumento
 		range xsd:string
 		functional
 	]
@@ -54,12 +54,11 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formul
 		range xsd:string
 		functional
 	]
-	
+
 	relation possuiFormula [
 		from metricas:metrica
 		to formula
 		reverse formulaDe
-		functional
 		asymmetric
 		irreflexive
 	]
@@ -84,18 +83,18 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formul
 	]
 	
 	relation possuiValor [
-		from variavel
-		to valordeVariavel
+		from argumento
+		to valordeArgumento
 		reverse valorDe
 		functional
 		asymmetric
 		irreflexive
 	]
 	
-	relation possuiVariavel[
+	relation possuiArgumento[
 		from formula
-		to variavel
-		reverse variavelDe
+		to argumento
+		reverse argumentoDe
 		inverse functional
 		asymmetric
 		irreflexive

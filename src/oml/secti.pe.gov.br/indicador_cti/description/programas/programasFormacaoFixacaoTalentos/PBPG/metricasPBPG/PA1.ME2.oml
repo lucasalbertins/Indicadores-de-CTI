@@ -25,6 +25,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:id "estrat_rde"
 		base:nome "Região de Desenvolvimento do Estado"
 	]
+	
 	instance estratPrazoConclusao : formulas:estratificacao [
 		base:id "estratPrazoConclusao"
 		base:nome "Conclusao"
@@ -48,16 +49,16 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance formulaIdentidadePA1ME2 : formulas:formula [
 		base:id "formula_identidade_pa1me2"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
-		formulas:possuiVariavel varFonteBolsistas
+		formulas:possuiArgumento varFonteBolsistas
 	]
 	
 	// Variável vem da fonte de dados
-	instance varFonteBolsistas : formulas:variavel [
+	instance varFonteBolsistas : formulas:argumento [
 		base:id "var_fonte_bolsistas"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "value"
 		formulas:possuiValor AgilFap_bolsistas_Titulados
-		formulas:variavelDe formulaIdentidadePA1ME2
+		formulas:argumentoDe formulaIdentidadePA1ME2
 	]
 	
 	instance AgilFap_bolsistas_Titulados : formulas:tipovalorFonteDados [

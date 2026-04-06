@@ -4,7 +4,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metric
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	aspect metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
+	concept metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
 	base:EntidadeAgregavel 
 	
 	scalar Finalidade [
