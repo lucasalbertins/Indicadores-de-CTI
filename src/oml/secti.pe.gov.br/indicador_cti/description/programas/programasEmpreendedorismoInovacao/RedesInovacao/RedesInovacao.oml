@@ -22,8 +22,8 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
 		programa:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
-		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
-		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:direcionadoA publicoAlvo:PU.DI14, publicoAlvo:PU.DI15, publicoAlvo:PU.DI9, publicoAlvo:PU.DI16, publicoAlvo:PU.DI17, publicoAlvo:PU.IN9, 
+		publicoAlvo:PU.IN10, publicoAlvo:PU.IN11, publicoAlvo:PU.IN12, publicoAlvo:PU.IN13
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
 	]

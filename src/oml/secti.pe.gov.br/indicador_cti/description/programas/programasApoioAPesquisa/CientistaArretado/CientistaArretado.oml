@@ -21,8 +21,8 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4, saida:SA9, saida:SA10, saida:SA11
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2
-		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
-		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:direcionadoA publicoAlvo:PU.DI10, publicoAlvo:PU.DI11, publicoAlvo:PU.DI12, publicoAlvo:PU.DI13, publicoAlvo:PU.DI9, publicoAlvo:PU.IN3, 
+		publicoAlvo:PU.IN1
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5
 	]

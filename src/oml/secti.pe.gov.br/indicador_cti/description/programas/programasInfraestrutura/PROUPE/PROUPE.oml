@@ -1,4 +1,4 @@
-description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/canvasPROUPE#> as canvasPROUPE {
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE#> as PROUPE {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
@@ -27,8 +27,7 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		saida:SA29, saida:SA30, saida:SA31, saida:SA32, saida:SA33, saida:SA34
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.MP6, RE.MP7, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, 
 		RE.LP6
-		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
-		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:direcionadoA publicoAlvo:PU.DI22
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 	]

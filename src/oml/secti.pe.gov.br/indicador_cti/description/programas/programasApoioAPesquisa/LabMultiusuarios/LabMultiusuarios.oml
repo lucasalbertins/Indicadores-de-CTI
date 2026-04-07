@@ -24,8 +24,7 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2
-		programa:direcionadoA publicoAlvo:PU.DI1, publicoAlvo:PU.DI2, publicoAlvo:PU.DI3, publicoAlvo:PU.IN1, publicoAlvo:PU.IN2, publicoAlvo:PU.IN3, 
-		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
+		programa:direcionadoA publicoAlvo:PU.DI7, publicoAlvo:PU.DI8, publicoAlvo:PU.DI9, publicoAlvo:PU.IN3
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8, OB.ES9
 	]

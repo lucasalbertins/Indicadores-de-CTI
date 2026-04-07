@@ -8,30 +8,24 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/saidas#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/canvasCientistaArretado#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/canvasLabMultiusuarios#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/PA_LabMultiusuarios#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/LabMultiusuarios#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/canvasRedesInovacao#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/PA_RedesInovacao#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/RedesInovacao#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/canvasDesafiosGov#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/PA_DesafiosGov#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/canvasBFP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/PA_BFP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/canvasBPP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/PA_BPP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/canvaseCRIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/canvasPROUPE#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PA_PROUPE#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/canvasPBPG#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#>
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#>

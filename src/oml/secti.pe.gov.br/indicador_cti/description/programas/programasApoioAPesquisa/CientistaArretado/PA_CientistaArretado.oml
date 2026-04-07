@@ -1,2 +1,517 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado#> as PA_CientistaArretado {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado#> as CientistaArretado
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	
+instance PA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução do número de projetos apoiados em cada edital (em todas as rodadas)?"
+		base:id "PA1 - CientistaArretado"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:temMetrica PA1.ME1
+		planoAvaliacao:temEscopo PA1.ES
+		planoAvaliacao:temMetodologia PA1.MA
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP1
+	]
+	instance PA2 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução do número de soluções validadas ao final do período do projeto (desenvolvidas ou em fase piloto) em cada edital (todas as 
+rodadas)?"
+		base:id "PA2 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA2.ME1
+		planoAvaliacao:temEscopo PA2.ES
+		planoAvaliacao:temMetodologia PA2.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP1
+	]
+	instance PA3 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a proporção de projetos cujas soluções foram efetivamente implementadas nos órgãos demandantes após a finalização dos projetos?"
+		base:id "PA3 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA3.ME1, PA3.ME2
+		planoAvaliacao:temEscopo PA3.ES
+		planoAvaliacao:temMetodologia PA3.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP1
+	]
+	instance PA4 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quais as ICTs-PE envolvidas como instituições executoras nos projetos por edital (todas as rodadas)?"
+		base:id "PA4 - CientistaArretado"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2, PA4.ME3
+		planoAvaliacao:temEscopo PA4.ES
+		planoAvaliacao:temMetodologia PA4.MA
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP2
+	]
+	instance PA5 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual o número de pesquisadores vinculados às ICTs e envolvidos nos projetos aprovados por edital (todas as rodadas)?"
+		base:id "PA5 - CientistaArretado"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:temMetrica PA5.ME1
+		planoAvaliacao:temEscopo PA5.ES
+		planoAvaliacao:temMetodologia PA5.MA
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP2
+	]
+	instance PA6 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual o número de órgãos da administração pública (direta ou indireta) envolvidos na execução dos projetos (demandantes)?"
+		base:id "PA6 - CientistaArretado"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:temMetrica PA6.ME1, PA6.ME2
+		planoAvaliacao:temEscopo PA6.ES
+		planoAvaliacao:temMetodologia PA6.MA
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP2
+	]
+	instance PA7 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução do número de servidores/empregados públicos envolvidos como contrapartida ou equipe de apoio nos projetos nos órgãos 
+demandantes?"
+		base:id "PA7 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA7.ME1
+		planoAvaliacao:temEscopo PA7.ES
+		planoAvaliacao:temMetodologia PA7.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP2
+	]
+	instance PA8 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução da diversidade de áreas/temas estratégicos cobertos pelos projetos apoiados (Ex: Saúde, Segurança, Gestão Hídrica)?"
+		base:id "PA8 - CientistaArretado"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2, PA8.ME3, PA8.ME4
+		planoAvaliacao:temEscopo PA8.ES
+		planoAvaliacao:temMetodologia PA8.MA
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP3
+	]
+	instance PA9 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quais instrumentos de gestão ou estruturas (ex: portais de dados, núcleos de análise, etc.) foram criados ou aprimorados a partir dos projetos?"
+		base:id "PA9 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA9.ME1, PA9.ME2
+		planoAvaliacao:temEscopo PA9.ES
+		planoAvaliacao:temMetodologia PA9.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP3
+	]
+	instance PA10 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual o número de produção científica ou tecnológica publicações científicas e/ou trabalhos técnicos (artigos, TCC, dissertações e teses) gerados 
+diretamente a partir dos projetos apoiados?"
+		base:id "PA10 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA10.ME1, PA10.ME2
+		planoAvaliacao:temEscopo PA10.ES
+		planoAvaliacao:temMetodologia PA10.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP4
+	]
+	instance PA11 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual o número de servidores/gestores públicos capacitados/treinados para o uso ou gestão das soluções desenvolvidas nos órgãos demandantes?"
+		base:id "PA11 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA11.ME1
+		planoAvaliacao:temEscopo PA11.ES
+		planoAvaliacao:temMetodologia PA11.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.CP5
+	]
+	instance PA12 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Em que medida as soluções resultantes dos projetos demonstraram melhoria resposta/entrega de serviços nos órgãos demandantes?"
+		base:id "PA12 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA12.ME1
+		planoAvaliacao:temEscopo PA12.ES
+		planoAvaliacao:temMetodologia PA12.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.MP1
+	]
+	instance PA13 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a redução de recursos (tempo, pessoas, custos e/ou outras variáveis) utilizados na execução das atividades relacionadas aos projetos 
+apoiados nos órgãos demandantes após a implementação das soluções?"
+		base:id "PA13 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA13.ME1, PA13.ME2, PA13.ME3
+		planoAvaliacao:temEscopo PA13.ES
+		planoAvaliacao:temMetodologia PA13.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.MP2
+	]
+	instance PA14 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a proporção de projetos que tiveram suas soluções (conhecimento, códigos, tecnologias, dados, etc.) transferidas (direito de propriedade, 
+uso ou posse) para o órgão demandante?"
+		base:id "PA14 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA14.ME1, PA14.ME2
+		planoAvaliacao:temEscopo PA14.ES
+		planoAvaliacao:temMetodologia PA14.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.MP3
+	]
+	instance PA15 : planoAvaliacao:questaoAvaliacao [
+		base:nome "As soluções apoiadas contribuíram para a capacidade de resposta (serviços prestados à sociedade) do Estado em temas/desafios estratégicos?"
+		base:id "PA15 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA15.ME1
+		planoAvaliacao:temEscopo PA15.ES
+		planoAvaliacao:temMetodologia PA15.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.MP1
+	]
+	instance PA16 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quantas novas alianças estratégicas formais (acordos e/ou convênios) foram estabelecidas entre órgãos do governo e ICTs a partir dos projetos?"
+		base:id "PA16 - CientistaArretado"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA16.ME1
+		planoAvaliacao:temEscopo PA16.ES
+		planoAvaliacao:temMetodologia PA16.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado CientistaArretado:RE.LP2
+	]
+	
+	//Métricas	
+	instance PA1.ME1 : metricas:metrica [
+		base:descricao "Número de projetos apoiados em cada edital (em todas as rodadas)"
+		base:id "PA1.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	
+	instance PA2.ME1 : metricas:metrica [
+		base:descricao "Número de soluções validadas ao final do período do projeto (desenvolvidas ou em fase piloto)"
+		base:id "PA2.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA3.ME1 : metricas:metrica [
+		base:descricao "Número total de projetos aprovados a partir dos editais e rodadas"
+		base:id "PA3.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA3.ME2 : metricas:metrica[
+		base:descricao "Número de projetos cujas soluções foram efetivamente implementadas nos órgãos demandantes"
+		base:id "PA3.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA4.ME1 : metricas:metrica [
+		base:descricao "Nome de ICTs-PE participantes (diferentes CNPJs) por edital"
+		base:id "PA4.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA4.ME2 : metricas:metrica [
+		base:descricao "Localização de ICTs-PE participantes (diferentes CNPJs) por edital (município, estado e país)"
+		base:id "PA4.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA4.ME3 : metricas:metrica [
+		base:descricao "Número de ICTs-PE participantes (diferentes CNPJs) por edital"
+		base:id "PA4.ME3 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	
+	instance PA5.ME1 : metricas:metrica [
+		base:descricao "Número de pesquisadores envolvidos (bolsistas, diferentes CPFs) e participantes por grau de instrução: ensino médio, técnico, graduação, 
+mestre, doutor, pós-doutor)"
+		base:id "PA5.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	
+	instance PA6.ME1 : metricas:metrica [
+		base:descricao "Nome dos órgãos da administração pública (direta ou indireta) envolvidos na execução dos projetos (demandante)"
+		base:id "PA6.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA6.ME2 : metricas:metrica [
+		base:descricao "Número dos órgãos da administração pública (direta ou indireta) envolvidos na execução dos projetos (demandante) CNPJ diferentes"
+		base:id "PA6.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	
+	instance PA7.ME1 : metricas:metrica [
+		base:descricao "Número de servidores/empregados públicos (diferentes CPFs) envolvidos nos projetos"
+		base:id "PA7.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA8.ME1 : metricas:metrica [
+		base:descricao "Áreas do conhecimento (classificação do CNPq) abordadas nos projetos apoiados"
+		base:id "PA8.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA8.ME2 : metricas:metrica [
+		base:descricao "Número de áreas do conhecimento (classificação do CNPq) abordados nos projetos apoiados"
+		base:id "PA8.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA8.ME3 : metricas:metrica [
+		base:descricao "Temas estratégicos definidos nos Editais/Rodadas"
+		base:id "PA8.ME3 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	instance PA8.ME4 : metricas:metrica [
+		base:descricao "Número de temas estratégicos definidos nos Editais/Rodadas (acumulado)"
+		base:id "PA8.ME4 - CientistaArretado"
+		metricas:temFonte fonte:FI1
+	]
+	
+	instance PA9.ME1 : metricas:metrica [
+		base:descricao "Instrumentos/estruturas criadas ou aprimoradas ao final do período do projeto (ex: portais de dados, núcleos de análise, modelos, etc.)"
+		base:id "PA9.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	instance PA9.ME2 : metricas:metrica [
+		base:descricao "Número de novos instrumentos/estruturas criadas/aprimoradas ao final do período do projeto"
+		base:id "PA9.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA10.ME1 : metricas:metrica [
+		base:descricao "Número total de publicações científicas em periódicos, anais de conferências, etc. gerados diretamente a partir de insumos dos projetos 
+apoiados"
+		base:id "PA10.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	instance PA10.ME2 : metricas:metrica [
+		base:descricao "Número total de TCC, dissertações e teses geradas a partir de insumos dos projetos apoiados"
+		base:id "PA10.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA11.ME1 : metricas:metrica [
+		base:descricao "Número total de pessoas (servidores/gestores públicos) treinadas/capacitadas para o uso ou gestão das soluções desenvolvidas nos órgãos 
+demandantes"
+		base:id "PA11.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA12.ME1 : metricas:metrica [
+		base:descricao "Número de respostas ou entregas de serviços à população gerados pelas soluções desenvolvidas a partir dos projetos apoiados"
+		base:id "PA12.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA13.ME1 : metricas:metrica [
+		base:descricao "Indicadores de utilização de recursos (tempo, pessoas, custos e/ou outras variáveis) na execução das atividades relacionadas aos projetos 
+apoiados, nos órgãos demandantes, antes da implementação das soluções"
+		base:id "PA13.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	instance PA13.ME2 : metricas:metrica [
+		base:descricao "Indicadores de utilização de recursos (tempo, pessoas, custos e/ou outras variáveis) na execução das atividades relacionadas aos projetos 
+apoiados, nos órgãos demandantes, após da implementação das soluções"
+		base:id "PA13.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	instance PA13.ME3 : metricas:metrica [
+		base:descricao "Variação percentual das variáveis e indicadores de utilização de recursos (tempo, pessoas, custos e/ou outras variáveis) na execução das 
+atividades relacionadas aos projetos apoiados, nos órgãos demandantes, após da implementação das soluções"
+		base:id "PA13.ME3 - CientistaArretado"
+		metricas:temFonte fonte:FI13
+	]
+	
+	instance PA14.ME1 : metricas:metrica [
+		base:descricao "Número de projetos com documentos, Termo de Cessão, Transferência Tecnológica entregue ou assinado"
+		base:id "PA14.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	instance PA14.ME2 : metricas:metrica [
+		base:descricao "Percentual de projetos com documentos, Termo de Cessão, Transferência Tecnológica entregue ou assinado em relação ao total de projetos 
+desenvolvidos"
+		base:id "PA14.ME2 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	instance PA15.ME1 : metricas:metrica [
+		base:descricao "Número de soluções apoiadas que contribuíram para ampliar a capacidade de resposta (serviços prestados à sociedade) do Estado em 
+temas/desafios estratégicos"
+		base:id "PA15.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI1, fonte:FI11
+	]
+	
+	instance PA16.ME1 : metricas:metrica [
+		base:descricao "Número de acordos ou convênios interinstitucionais firmados entre órgãos do governo e ICTs até 2 anos de vigência do projeto"
+		base:id "PA16.ME1 - CientistaArretado"
+		metricas:temFonte fonte:FI11
+	]
+	
+	// Escopos e Métodos de Avaliação
+	instance PA1.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar o número direto de projetos apoiados em cada edital (ou seja, pelo programa) em termos absoluto. Esse valor será utilizado como 
+base e referência para calcular outras variáveis e indicadores de avaliação do programa"
+		base:id "PA1.ES - CientistaArretado"
+	]
+	instance PA1.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA1.MA - CientistaArretado"
+	]
+	
+	instance PA2.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar o número soluções validadas ao final do período do projeto (desenvolvidas ou em fase piloto)"
+		base:id "PA2.ES - CientistaArretado"
+	]
+	instance PA2.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA2.MA - CientistaArretado"
+	]
+	
+	instance PA3.ES : planoAvaliacao:escopo [
+		base:descricao "Verificar a capacidade dos projetos desenvolverem efetivamente soluções implementadas nos órgãos demandantes"
+		base:id "PA3.ES - CientistaArretado"
+	]
+	instance PA3.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA3.MA - CientistaArretado"
+	]
+	
+	instance PA4.ES : planoAvaliacao:escopo [
+		base:descricao "Medir a articulação entre governo e academia a partir do número de instituições vinculadas ao Programa"
+		base:id "PA4.ES - CientistaArretado"
+	]
+	instance PA4.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA4.MA - CientistaArretado"
+	]
+	
+	instance PA5.ES : planoAvaliacao:escopo [
+		base:descricao "Medir a articulação entre governo e academia a partir do número de pesquisadores vinculados ao Programa"
+		base:id "PA5.ES - CientistaArretado"
+	]
+	instance PA5.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA5.MA - CientistaArretado"
+	]
+	
+	instance PA6.ES : planoAvaliacao:escopo [
+		base:descricao "Medir a articulação entre governo e academia a partir do número de órgãos da administração pública (direta ou indireta) envolvidos ao 
+programa"
+		base:id "PA6.ES - CientistaArretado"
+	]
+	instance PA6.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA6.MA - CientistaArretado"
+	]
+	
+	instance PA7.ES : planoAvaliacao:escopo [
+		base:descricao "Medir a integração do corpo técnico do governo com a execução dos projetos"
+		base:id "PA7.ES - CientistaArretado"
+	]
+	instance PA7.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA7.MA - CientistaArretado"
+	]
+	
+	instance PA8.ES : planoAvaliacao:escopo [
+		base:descricao "Mapear a aderência do programa à diversidade de temas, áreas e desafios governamentais. Áreas do conhecimento do CNPq e temas estratégicos 
+estão listados nos anexos"
+		base:id "PA8.ES - CientistaArretado"
+	]
+	instance PA8.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA8.MA - CientistaArretado"
+	]
+	
+	instance PA9.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar as entregas de médio prazo com potencial de institucionalização"
+		base:id "PA9.ES - CientistaArretado"
+	]
+	instance PA9.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA9.MA - CientistaArretado"
+	]
+	
+	instance PA10.ES : planoAvaliacao:escopo [
+		base:descricao "Mensurar a produção científica e trabalhos técnicos gerados e de amplo acesso, a partir dos projetos apoiados"
+		base:id "PA10.ES - CientistaArretado"
+	]
+	instance PA10.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA10.MA - CientistaArretado"
+	]
+	
+	instance PA11.ES : planoAvaliacao:escopo [
+		base:descricao "Medir o desenvolvimento de capital humano no setor público para absorver inovação"
+		base:id "PA11.ES - CientistaArretado"
+	]
+	instance PA11.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA11.MA - CientistaArretado"
+	]
+	
+	instance PA12.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar o número de respostas ou entregas de serviços à população gerados pelas soluções desenvolvidas"
+		base:id "PA12.ES - CientistaArretado"
+	]
+	instance PA12.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA12.MA - CientistaArretado"
+	]
+	
+	instance PA13.ES : planoAvaliacao:escopo [
+		base:descricao "Medir o resultado direto na redução dos recursos (tempo, pessoas, custos e/ou outras variáveis) na das atividades relacionadas aos projetos 
+apoiados, nos órgãos demandantes (eficiência da gestão pública)"
+		base:id "PA13.ES - CientistaArretado"
+	]
+	instance PA13.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA13.MA - CientistaArretado"
+	]
+	
+	instance PA14.ES : planoAvaliacao:escopo [
+		base:descricao "Verificar a sustentabilidade das soluções desenvolvidas e o direito de propriedade, uso ou posse das soluções para uso contínuo pelo 
+Estado sem ônus"
+		base:id "PA14.ES - CientistaArretado"
+	]
+	instance PA14.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA14.MA - CientistaArretado"
+	]
+	
+	instance PA15.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar o resultado direto da capacidade de resposta (serviços prestados à sociedade) das soluções desenvolvidas a partir do Programa 
+em temas/desafios estratégicos"
+		base:id "PA15.ES - CientistaArretado"
+	]
+	instance PA15.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "A resposta para esta pergunta é sim ou não. Relacionar os dados dos projetos com as respostas da pesquisa primária. Análise longitudinal e 
+descritiva."
+		base:id "PA15.MA - CientistaArretado"
+	]
+	
+	instance PA16.ES : planoAvaliacao:escopo [
+		base:descricao "Quantificar novas alianças estratégicas e a formalização da colaboração no longo prazo a partir dos projetos apoiados (acordos e termos de 
+colaboração podem durar mais de um ano o que pode somar um alcance de mais de 5 anos do início do projeto apoiado, longo prazo)"
+		base:id "PA16.ES - CientistaArretado"
+	]
+	instance PA16.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise longitudinal e descritiva"
+		base:id "PA16.MA - CientistaArretado"
+	]
+
+	// Riscos e Limitações
+	instance R1 : planoAvaliacao:risco [
+		base:descricao "Não obtenção de respostas dos órgãos demandantes"
+		base:id "R1 - CientistaArretado"
+	]
+
+	instance LIM1 : planoAvaliacao:limitacao [
+		base:descricao "Dependência da disponibilidade dos dados no AgilFAP/FACEPE"
+	]
+	instance LIM2 : planoAvaliacao:limitacao [
+		base:descricao "Só é possível obter os dados primários para responder a essa pergunta de avaliação e calcular as métricas a partir de pesquisa primária 
+junto aos órgãos demandantes"
+	]
 }

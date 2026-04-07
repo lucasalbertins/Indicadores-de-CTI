@@ -51,4 +51,12 @@ description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#>
 		base:nome "IBGE"
 		base:id "FI12"
 	]
+	instance FI13 : planoAvaliacao:fonteInformacao [
+		base:nome "Resultado da análise/execução de uma ou mais métricas associadas"
+		base:id "FI13"
+	]
+	instance FI14 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma Nacional de Infraestrutura de Pesquisa – PNIPE [MCTI]"
+		base:id "FI14"
+	]
 }
