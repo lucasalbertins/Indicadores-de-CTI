@@ -1,2 +1,224 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/PA_DesafiosGov#> as PA_DesafiosGov {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#> as DesafiosGov
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	
+	instance PA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "O programa induziu o aumento do  volume de projetos de PD&I em parceria entre o Estado e empresas de base tecnológica?"
+		base:id "PA1 - DesafiosGov"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:temMetrica PA1.ME1
+		planoAvaliacao:temEscopo PA1.ES
+		planoAvaliacao:temMetodologia PA1.MA
+		planoAvaliacao:temRisco R1
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado DesafiosGov:RE.CP1
+	]
+	instance PA2 : planoAvaliacao:questaoAvaliacao [
+		base:nome "As soluções desenvolvidas nos projetos apoiados pelo programa foram absorvidas pelo Estado?"
+		base:id "PA2 - DesafiosGov"
+		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:temMetrica PA2.ME1
+		planoAvaliacao:temEscopo PA2.ES
+		planoAvaliacao:temMetodologia PA2.MA
+		planoAvaliacao:temRisco R2
+		planoAvaliacao:temLimitacao LIM2
+		planoAvaliacao:alinhaComResultado DesafiosGov:RE.MP1
+	]
+	instance PA3 : planoAvaliacao:questaoAvaliacao [
+		base:nome "O programa gerou pedidos de propriedade intelectual (patentes depositadas e programas registrados)?"
+		base:id "PA3 - DesafiosGov"
+		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:temMetrica PA3.ME1
+		planoAvaliacao:temEscopo PA3.ES
+		planoAvaliacao:temMetodologia PA3.MA
+		planoAvaliacao:temRisco R3, R4
+		planoAvaliacao:temLimitacao LIM3
+		planoAvaliacao:alinhaComResultado DesafiosGov:RE.LP2
+	]
+	instance PA4 : planoAvaliacao:questaoAvaliacao [
+		base:nome "O programa induziu a contratação de soluções pelo Estado junto às empresas apoiadas?"
+		base:id "PA4 - DesafiosGov"
+		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2
+		planoAvaliacao:temEscopo PA4.ES
+		planoAvaliacao:temMetodologia PA4.MA
+		planoAvaliacao:temRisco R5
+		planoAvaliacao:temLimitacao LIM4
+		planoAvaliacao:alinhaComResultado DesafiosGov:RE.LP1
+	]
+	instance PA5 : planoAvaliacao:questaoAvaliacao [
+		base:nome "O programa induziu o aumento dos empregos, do faturamento e da carteira ofertada pelas empresas apoiadas no programa?"
+		base:id "PA5 - DesafiosGov"
+		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:temMetrica PA5.ME1, PA5.ME2, PA5.ME3
+		planoAvaliacao:temEscopo PA5.ES
+		planoAvaliacao:temMetodologia PA5.MA
+		planoAvaliacao:temRisco R6, R7
+		planoAvaliacao:temLimitacao LIM5
+		planoAvaliacao:alinhaComResultado DesafiosGov:RE.LP2
+	]
+	
+	//Métricas	
+	instance PA1.ME1 : metricas:metrica [
+		base:nome "Taxa de Novos Projetos"
+		base:descricao "Nº de novos projetos apoiados pelo programa sobre o nº de projetos de PD&I vigentes com participação de Secretarias e órgãos vinculados"
+		base:id "PA1.ME1 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI15, fonte:FI11
+	]
+	
+	instance PA2.ME1 : metricas:metrica [
+		base:nome "Taxa de Absorção"
+		base:descricao "Nº de soluções absorvidas pelo Estado sobre o nº de projetos apoiados pelo programa"
+		base:id "PA2.ME1 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI11
+	]
+	
+	instance PA3.ME1 : metricas:metrica [
+		base:nome "Qtde de PIs"
+		base:descricao "Nº de patentes depositadas e programas registrados a partir do apoio aos projetos"
+		base:id "PA3.ME1 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI6
+	]
+	
+	instance PA4.ME1 : metricas:metrica [
+		base:nome "Qtde de Contratos"
+		base:descricao "Nº de contratos firmados entre Estado e empresas apoiadas pelo programa"
+		base:id "PA4.ME1 - DesafiosGov"
+		metricas:temFonte fonte:FI15, fonte:FI16
+	]
+	instance PA4.ME2 : metricas:metrica [
+		base:nome "Valor Contratado"
+		base:descricao "Volume de recursos envolvidos em contratos firmados entre Estado e empresas apoiadas pelo programa"
+		base:id "PA4.ME2 - DesafiosGov"
+		metricas:temFonte fonte:FI15, fonte:FI16
+	]
+	
+	instance PA5.ME1 : metricas:metrica [
+		base:nome "Taxa Crescim. Emprego"
+		base:descricao "Nº de empregados das empresas apoiadas, no ano atual, sobre o observado no ano anterior"
+		base:id "PA5.ME1 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI3
+	]
+	instance PA5.ME2 : metricas:metrica [
+		base:nome "Taxa Crescim. Faturamento"
+		base:descricao "Faturamento anual das empresas apoiadas, no ano atual, sobre o observado no ano anterior"
+		base:id "PA5.ME2 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI3
+	]
+	instance PA5.ME3 : metricas:metrica [
+		base:nome "Taxa Crescim. Carteira"
+		base:descricao "Nº de produtos e serviços ofertados na carteira das empresas apoiadas, no ano atual, sobre o observado no ano anterior"
+		base:id "PA5.ME3 - DesafiosGov"
+		metricas:temFonte fonte:FI1, fonte:FI3
+	]
+	
+	// Escopos e Métodos de Avaliação
+	instance PA1.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar a efetiva contribuição do programa sobre o volume de projetos de PD&I cujas Secretarias e órgãos vinculados se 
+envolvem. A comparação será longitudinal (ao longo dos anos) de execução do próprio programa"
+		base:id "PA1.ES - DesafiosGov"
+	]
+	instance PA1.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise descritiva"
+		base:id "PA1.MA - DesafiosGov"
+	]
+	
+	instance PA2.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o quanto os projetos apoiados se converteram em soluções absorvidas pelo Estado. A comparação será longitudinal 
+(ao longo dos anos) de execução do próprio programa"
+		base:id "PA2.ES - DesafiosGov"
+	]
+	instance PA2.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise descritiva"
+		base:id "PA2.MA - DesafiosGov"
+	]
+	
+	instance PA3.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o quanto os projetos apoiados se converteram em pedidos de propriedade intelectual junto ao INPI. A comparação será 
+longitudinal (ao longo dos anos) de execução do próprio programa"
+		base:id "PA3.ES - DesafiosGov"
+	]
+	instance PA3.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise descritiva"
+		base:id "PA3.MA - DesafiosGov"
+	]
+	
+	instance PA4.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o quanto os projetos apoiados se converteram em contratos firmados entre Estado e respectivas empresas. A comparação 
+será longitudinal (ao longo dos anos) de execução do próprio programa"
+		base:id "PA4.ES - DesafiosGov"
+	]
+	instance PA4.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise descritiva"
+		base:id "PA4.MA - DesafiosGov"
+	]
+	
+	instance PA5.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o quanto a participação no programa induziu o nº de empregos, o faturamento e a diversificação da carteira de 
+produtos e serviços ofertada pelas empresas apoiadas"
+		base:id "PA5.ES - DesafiosGov"
+	]
+	instance PA5.MA : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise descritiva"
+		base:id "PA5.MA - DesafiosGov"
+	]
+	
+	//Riscos
+	instance R1 : planoAvaliacao:risco [
+		base:descricao "Acesso às fontes FI15 e FI11 para obtenção de informações confiáveis quanto ao nº de projetos de PD&I vigentes com participação de 
+Secretarias e órgãos vinculados"
+		base:id "R1 - DesafiosGov"
+	]
+	instance R2 : planoAvaliacao:risco [
+		base:descricao "As informações do nº de soluções absorvidas são autodeclaratórias e encontram-se nos relatórios de execução dos projetos apoiados, o que 
+demanda a sistematização da coleta via formulário"
+		base:id "R2 - DesafiosGov"
+	]
+	instance R3 : planoAvaliacao:risco [
+		base:descricao "As informações do nº de pedidos de PI em FI1 são autodeclaratórias e encontram-se nos relatórios de execução dos projetos apoiados, o que 
+demanda a sistematização da coleta via formulário"
+		base:id "R3 - DesafiosGov"
+	]
+	instance R4 : planoAvaliacao:risco [
+		base:descricao "As informações em FI6 demandam a busca por CNPJ do solicitante da PI"
+		base:id "R4 - DesafiosGov"
+	]
+	instance R5 : planoAvaliacao:risco [
+		base:descricao "As informações do nº de contratos e seus valores demandam a mineração de dados junto às fontes de informação envolvidas"
+		base:id "R5 - DesafiosGov"
+	]
+	instance R6 : planoAvaliacao:risco [
+		base:descricao "As informações em FI1 são autodeclaratórias e encontram-se nos relatórios de execução dos projetos apoiados, o que demanda a sistematização 
+da coleta via formulário"
+		base:id "R6 - DesafiosGov"
+	]
+	instance R7 : planoAvaliacao:risco [
+		base:descricao "As informações do nº de empregos e faturamento de valores demandam a mineração de dados junto às fontes de informação envolvidas"
+		base:id "R7 - DesafiosGov"
+	]
+
+	// Limitações
+	instance LIM1 : planoAvaliacao:limitacao [
+		base:descricao "O indicador é limitado à quantidade de projetos e não leva em consideração o montante de recursos envolvido, cuja mensuração é ainda mais 
+complexa"
+	]
+	instance LIM2 : planoAvaliacao:limitacao [
+		base:descricao "As informações são autodeclaratórias, o que demanda a validação por parte do órgão estadual que absorveu a solução"
+	]
+	instance LIM3 : planoAvaliacao:limitacao [
+		base:descricao "O depósito de pedidos de PI pode ocorrer após a conclusão formal do projeto, o que pode levar à subestimação dos resultados diretamente 
+atribuíveis ao programa no período de avaliação"
+	]
+	instance LIM4 : planoAvaliacao:limitacao [
+		base:descricao "A celebração de contratos públicos pode ocorrer após longos trâmites administrativos e jurídicos, frequentemente ultrapassando o período de 
+avaliação, o que pode subestimar os efeitos do programa"
+	]
+	instance LIM5 : planoAvaliacao:limitacao [
+		base:descricao "A pergunta de avaliação e suas métricas se restringem a informações sobre as govtechs apoiadas, mas a análise para o setor como um todo 
+(govtechs no Estado) seria mais relevante, embora mais complexa"
+	]
 }
