@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/LabMultiusuarios#> as LabMultiusuarios {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/PA_LabMultiusuarios#> as PA_LabMultiusuarios
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -27,6 +28,10 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 		programa:direcionadoA publicoAlvo:PU.DI7, publicoAlvo:PU.DI8, publicoAlvo:PU.DI9, publicoAlvo:PU.IN3
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8, OB.ES9
+		programa:avaliadoPor PA_LabMultiusuarios:PA1, PA_LabMultiusuarios:PA2, PA_LabMultiusuarios:PA3, PA_LabMultiusuarios:PA4, PA_LabMultiusuarios:PA5, 
+		PA_LabMultiusuarios:PA6, PA_LabMultiusuarios:PA7, PA_LabMultiusuarios:PA8, PA_LabMultiusuarios:PA9, PA_LabMultiusuarios:PA10, PA_LabMultiusuarios:PA11, 
+		PA_LabMultiusuarios:PA12, PA_LabMultiusuarios:PA13, PA_LabMultiusuarios:PA14, PA_LabMultiusuarios:PA15, PA_LabMultiusuarios:PA16, PA_LabMultiusuarios:PA17, 
+		PA_LabMultiusuarios:PA18, PA_LabMultiusuarios:PA19, PA_LabMultiusuarios:PA20, PA_LabMultiusuarios:PA21, PA_LabMultiusuarios:PA22
 	]
 	
 	// Objetivo Geral

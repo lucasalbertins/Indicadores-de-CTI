@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#> as PBPG {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#> as PA-PBPG
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -27,7 +28,8 @@ pós-graduação"
 		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
-		//programa:avaliadoPor PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8, PA9, PA10, PA11, PA12, PA13, PA14, PA15, PA16, PA17
+		programa:avaliadoPor PA-PBPG:PA1, PA-PBPG:PA2, PA-PBPG:PA3, PA-PBPG:PA4, PA-PBPG:PA5, PA-PBPG:PA6, PA-PBPG:PA7, PA-PBPG:PA8, PA-PBPG:PA9, PA-PBPG:PA10, 
+		PA-PBPG:PA11, PA-PBPG:PA12, PA-PBPG:PA13, PA-PBPG:PA14, PA-PBPG:PA15, PA-PBPG:PA16, PA-PBPG:PA17
 	]
 	
 	// Objetivo Geral

@@ -6,7 +6,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
 	
-instance PA1 : planoAvaliacao:questaoAvaliacao [
+	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução do número de projetos apoiados em cada edital (em todas as rodadas)?"
 		base:id "PA1 - CientistaArretado"
 		planoAvaliacao:custo "Baixo"

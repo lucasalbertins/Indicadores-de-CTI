@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado#> as CientistaArretado {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado#> as PA_CientistaArretado
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -25,6 +26,10 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 		publicoAlvo:PU.IN1
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5
+		programa:avaliadoPor PA_CientistaArretado:PA1, PA_CientistaArretado:PA2, PA_CientistaArretado:PA3, PA_CientistaArretado:PA4, PA_CientistaArretado:PA5, 
+		PA_CientistaArretado:PA6, PA_CientistaArretado:PA7, PA_CientistaArretado:PA8, PA_CientistaArretado:PA9, PA_CientistaArretado:PA10, 
+		PA_CientistaArretado:PA11, PA_CientistaArretado:PA12, PA_CientistaArretado:PA13, PA_CientistaArretado:PA14, PA_CientistaArretado:PA15, 
+		PA_CientistaArretado:PA16
 	]
 	
 	// Objetivo Geral

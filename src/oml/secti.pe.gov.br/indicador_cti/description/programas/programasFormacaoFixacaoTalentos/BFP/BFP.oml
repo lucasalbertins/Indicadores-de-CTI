@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP#> as BFP {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/PA_BFP#> as PA_BFP
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -24,6 +25,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+		programa:avaliadoPor PA_BFP:PA1, PA_BFP:PA2, PA_BFP:PA3, PA_BFP:PA4, PA_BFP:PA5, PA_BFP:PA6, PA_BFP:PA7, PA_BFP:PA8, PA_BFP:PA9, PA_BFP:PA10, PA_BFP:PA11
 	]
 	
 	// Objetivo Geral

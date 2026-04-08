@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/RedesInovacao#> as RedesInovacao {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/PA_RedesInovacao#> as PA_RedesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
  	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -26,6 +27,8 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		publicoAlvo:PU.IN10, publicoAlvo:PU.IN11, publicoAlvo:PU.IN12, publicoAlvo:PU.IN13
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
+		programa:avaliadoPor PA_RedesInovacao:PA1, PA_RedesInovacao:PA2, PA_RedesInovacao:PA3, PA_RedesInovacao:PA4, PA_RedesInovacao:PA5, PA_RedesInovacao:PA6, 
+		PA_RedesInovacao:PA7, PA_RedesInovacao:PA8, PA_RedesInovacao:PA9
 	]
 	
 	// Objetivo Geral

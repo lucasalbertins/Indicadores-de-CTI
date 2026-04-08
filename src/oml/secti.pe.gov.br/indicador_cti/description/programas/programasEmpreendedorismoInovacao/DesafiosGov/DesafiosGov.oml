@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#> as DesafiosGov {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/PA_DesafiosGov#> as PA_DesafiosGov
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
@@ -24,6 +25,7 @@ da gestão pública do estado de Pernambuco"
 		programa:direcionadoA publicoAlvo:PU.DI18, publicoAlvo:PU.DI19, publicoAlvo:PU.IN14, publicoAlvo:PU.IN15, publicoAlvo:PU.IN16
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+		programa:avaliadoPor PA_DesafiosGov:PA1, PA_DesafiosGov:PA2, PA_DesafiosGov:PA3, PA_DesafiosGov:PA4, PA_DesafiosGov:PA5
 	]
 	
 	// Objetivo Geral
