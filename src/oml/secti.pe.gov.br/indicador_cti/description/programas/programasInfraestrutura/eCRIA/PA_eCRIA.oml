@@ -1,2 +1,37 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA#> as PA_eCRIA {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA#> as eCRIA
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	
+	instance PA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quantos Espaços Cria foram implantados, com distribuição por região de desenvolvimento (RD), tipo de escola e faixa de IDHM?"
+		base:id "PA1 - eCRIA"
+		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:temMetrica PA1.ME1
+		//planoAvaliacao:temEscopo PA1.ES
+		//planoAvaliacao:temMetodologia PA1.MA
+		//planoAvaliacao:temRisco R1
+		//planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado eCRIA:RE.CP1
+	]
+	
+	//Métricas
+	instance PA1.ME1 : metricas:metrica [
+		base:nome "Número de espaços planejado"
+		base:descricao "Nº de novos espaços de ambientes pedagógicos planejados"
+		base:id "PA1.ME1 - eCRIA"
+		metricas:temFonte fonte:FI18
+		//P1.M1.VE. Definido no planejamento anual pela SECTI e Secretaria de Educação
+	]
+	
+
+
+//P1.M2. Número de espaços em processo de implantação;
+//P1.M2.VE. Definido no planejamento anual pela SECTI e Secretaria de Educação 
+//P1.M3. Número de espaços implantados e operacionais;
+//P1.M3.VE. Definido no planejamento anual pela SECTI e Secretaria de Educação
+	
 }

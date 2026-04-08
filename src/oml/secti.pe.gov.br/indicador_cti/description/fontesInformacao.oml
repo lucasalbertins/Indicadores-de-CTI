@@ -71,4 +71,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#>
 		base:nome "Planilhas de acompanhamento da SECTI"
 		base:id "FI17"
 	]
+	
+	instance FI18 : planoAvaliacao:fonteInformacao [
+		base:nome "Relatório mensal da plataforma de CT&I de acompanhamento de implantação dos ECRIA"
+		base:id "FI18"
+	]
 }

@@ -1,16 +1,15 @@
-description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#> as PA1.ME1 {
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME3#> as PA1.ME3 {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
-		
+	
 	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
-	instance estratSemestre : formulas:estratificacao [
-		base:id "estrat_semestre"
-		base:nome "Semestre"
+	instance estratEDT : formulas:estratificacao [
+		base:id "estrat_edital"
+		base:nome "Edital"
 	]
 	
 	instance estratModalidade : formulas:estratificacao [
@@ -28,22 +27,18 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Região de Desenvolvimento do Estado"
 	]
 	
-	// MÉTRICA: Taxa de Titulação
-	// Fórmula: multiplicação(divisão(bolsistas, cotas), 100)
-	instance taxaTitulacao : metricas:metrica [
-		base:id "PA1.ME1_PBPG"
-		base:nome "Taxa de Titulação"
-		base:descricao "Percentual de bolsistas PBPG titulados sobre cotas encerradas"
-		metricas:finalidade "Maximizar"
+	// MÉTRICA: Taxa de Não Titulação
+	instance taxaNaoTitulacao : metricas:metrica [
+		base:id "PA1.ME3_PBPG"
+		base:nome "Taxa de Não Titulação"
+		base:descricao "Número de bolsistas contemplados no edital PBPG não titulados sobre o total de bolsistas contemplados no mesmo edital PBPG"
+		metricas:finalidade "Minimizar"
 		formulas:possuiFormula formulaMultiplicacao
-		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratEDT
 		formulas:estratificadaPor estratModalidade
 		formulas:estratificadaPor estratArea
 		formulas:estratificadaPor estratRDE
-		metricas:temFonte fonte:FI1, fonte:FI2
-		metricas:valorAtual 0.90
-		metricas:valorMeta  0.80
-		base:agregadoPor PA1.ME2:quantidadeTitulados
+		metricas:temFonte fonte:FI2
 	]
 	 
 	 // Fórmula: divisão(bolsistasTitulados, cotasEncerradas)
@@ -52,14 +47,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
 		formulas:possuiArgumento argDividendo
 		formulas:possuiArgumento argDivisor
-		formulas:formulaDe taxaTitulacao
+		formulas:formulaDe taxaNaoTitulacao
 	]
 	
 	instance argDividendo : formulas:argumento [
 		base:id "arg_dividendo"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "dividend"
-		formulas:possuiValor AgilFap_Quantidade_Titulados
+		formulas:possuiValor Sucupira_Quantidade_Nao_Titulados
 		formulas:argumentoDe formulaDivisao
 	]
 	
@@ -68,24 +63,24 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:posicao "2"^^xsd:int
 		formulas:nome "divisor"
 		formulas:argumentoDe formulaDivisao
-		formulas:possuiValor AgilFap_Cotas_Encerradas
+		formulas:possuiValor Sucupira_Total_Bolsistas_PBPG
 	]
 
-	instance AgilFap_Quantidade_Titulados : formulas:tipovalorMetrica [
-		base:id "AgilFapQtdeTitulados"
-		formulas:valorMetrica PA1.ME2:quantidadeTitulados
-	]
+	instance Sucupira_Quantidade_Nao_Titulados : formulas:tipovalorFonteDados [
+		base:id "SucupiraQtdNaoTitulados"
+		formulas:valorFonteDados "sucupira.nao.titulados"
+		]
 	
-	 instance AgilFap_Cotas_Encerradas : formulas:tipovalorFonteDados [
-		base:id "AgilFapCotasEncerradas"
-		formulas:valorFonteDados "agilfap.cotas.encerradas"
+	 instance Sucupira_Total_Bolsistas_PBPG : formulas:tipovalorFonteDados [
+		base:id "SucupiraTotalBolsistasPBPG"
+		formulas:valorFonteDados "sucupira.total.bolsistas"
 	]
 	instance formulaMultiplicacao : formulas:formula[
 		base:id "formula_multiplicacao"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
 		formulas:possuiArgumento argMultiplicando
 		formulas:possuiArgumento argMultiplicador
-		formulas:formulaDe taxaTitulacao
+		formulas:formulaDe taxaNaoTitulacao
 	]
 	
 	// Argumento 1: multiplicando (métrica composta com fórmula interna)
@@ -113,5 +108,4 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance valorLiteral : formulas:tipovalorLiteral [
 		formulas:valorLiteral 100
 	]
-	
 }

@@ -200,6 +200,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		metricas:temFonte fonte:FI1, fonte:FI2
 		metricas:finalidade "Maximizar"
 	]
+	
+	instance PA1.ME3 : metricas:metrica [
+		base:nome "Taxa de Não Titulação"
+		base:descricao "Número de bolsistas contemplados no edital PBPG não titulados sobre o total de bolsistas contemplados no mesmo edital PBPG"
+		base:id "PA1.ME3 - PBPG"
+		metricas:temFonte fonte:FI2
+		metricas:finalidade "Minimizar"
+	]
 	instance PA2.ME1 : metricas:metrica [
 		base:nome "Qtde Trab Áreas Prior"
 		base:descricao "Número de dissertações e teses de bolsistas PBPG por área estratégica prioritária para Pernambuco"

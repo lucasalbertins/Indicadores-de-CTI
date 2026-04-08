@@ -32,7 +32,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 	
 	instance quantidadeTitulados : metricas:metrica [
-		base:id "PA1.ME2"
+		base:id "PA1.ME2_PBPG"
 		base:nome "Quantidade Titulados"
 		base:descricao "Número de bolsistas PBPG titulados"
 		metricas:finalidade "Maximizar"
@@ -42,7 +42,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:estratificadaPor estratPrazoConclusao
 		formulas:estratificadaPor estratArea
 		formulas:estratificadaPor estratRDE
-		metricas:temFonte fonte:FI1, fonte:FI2
+		metricas:temFonte fonte:FI2
 	]
 	
 	// retorna o valor da fonte de dados
