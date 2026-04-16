@@ -52,7 +52,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
 		formulas:possuiArgumento argDividendo
 		formulas:possuiArgumento argDivisor
-		formulas:formulaDe taxaTitulacao
+		//formulas:formulaDe taxaTitulacao
 	]
 	
 	instance argDividendo : formulas:argumento [

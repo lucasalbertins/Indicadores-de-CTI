@@ -7,14 +7,20 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formul
 	concept formula < base:EntidadeIdentificavel [
 		restricts referenciaOperacao to exactly 1
 		restricts possuiArgumento to min 1
-		restricts formulaDe to exactly 1
 	]
+	
+	ref concept metricas:metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
+	base:EntidadeAgregavel [
+		restricts possuiFormula to max 1
+	]
+	
 	concept estratificacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
 	concept argumento < base:EntidadeIdentificavel, base:EntidadeNomeavel  [
 		restricts posicao to exactly 1
 		restricts nome to exactly 1
 		restricts possuiValor to exactly 1
     ]
+	
 	
 	aspect valordeArgumento < base:EntidadeIdentificavel
 	
