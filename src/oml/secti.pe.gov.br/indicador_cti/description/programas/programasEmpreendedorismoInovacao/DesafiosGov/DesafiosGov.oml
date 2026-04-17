@@ -1,7 +1,10 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#> as DesafiosGov {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/PA_DesafiosGov#> as PA_DesafiosGov
-	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceiroChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao#> as parceirosAmbientesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
@@ -16,7 +19,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Foi criado com o objetivo de apoiar micro e pequenas empresas (especialmente startups) a desenvolverem soluções inovadoras para desafios 
 da gestão pública do estado de Pernambuco"
 		base:id "PR7"
-		programa:possuiParceiros parceiroChave:PC6, parceiroChave:PC8, parceiroChave:PC9, parceiroChave:PC14, parceiroChave:PC15
+		programa:possuiParceiros parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosGoverno:PC1.11, parceirosEmpresas:PC4.1, 
+		parceirosEmpresas:PC4.2, parceirosAmbientesInovacao:PC5.9
 		programa:condicionadoPor fatorExterno:FE.OP8, fatorExterno:FE.OP9, fatorExterno:FE.OP11, fatorExterno:FE.OP13, fatorExterno:FE.AM15, fatorExterno:FE.AM19
 		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7

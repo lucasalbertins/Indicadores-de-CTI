@@ -1,0 +1,50 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PC1.1 : canvas:ParceiroChave [
+		base:nome "SECTI-PE"
+		base:id "PC1.1"
+	]
+	instance PC1.2 : canvas:ParceiroChave [
+		base:nome "SEPLAG-PE"
+		base:id "PC1.2"
+	]
+	instance PC1.3 : canvas:ParceiroChave [
+		base:nome "SEE-PE"
+		base:id "PC1.3"
+	]
+	instance PC1.4 : canvas:ParceiroChave [
+		base:nome "SES-PE"
+		base:id "PC1.4"
+	]
+	instance PC1.5 : canvas:ParceiroChave [
+		base:nome "SAD-PE"
+		base:id "PC1.5"
+	]
+	instance PC1.6 : canvas:ParceiroChave [
+		base:nome "SEDEPE"
+		base:id "PC1.6"
+	]
+	instance PC1.7 : canvas:ParceiroChave [
+		base:nome "SECMULHER-PE"
+		base:id "PC1.7"
+	]
+	instance PC1.8 : canvas:ParceiroChave [
+		base:nome "ATI"
+		base:id "PC1.8"
+	]
+	instance PC1.9 : canvas:ParceiroChave [
+		base:nome "Consulados e embaixadas"
+		base:id "PC1.9"
+	]
+	instance PC1.10 : canvas:ParceiroChave [
+		base:nome "Órgãos da administração pública direta do Estado"
+		base:id "PC1.10"
+	]
+	instance PC1.11 : canvas:ParceiroChave [
+		base:nome "Órgãos públicos integrantes"
+		base:id "PC1.11"
+	]
+}

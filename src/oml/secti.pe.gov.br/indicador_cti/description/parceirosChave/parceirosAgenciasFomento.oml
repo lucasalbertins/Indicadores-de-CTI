@@ -1,0 +1,46 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PC2.1 : canvas:ParceiroChave [
+		base:nome "FACEPE"
+		base:id "PC2.1"
+	]
+	instance PC2.2 : canvas:ParceiroChave [
+		base:nome "Fundo Inovar-PE"
+		base:id "PC2.2"
+	]
+	instance PC2.3 : canvas:ParceiroChave [
+		base:nome "AGE"
+		base:id "PC2.3"
+	]
+	instance PC2.4 : canvas:ParceiroChave [
+		base:nome "ADEPE"
+		base:id "PC2.4"
+	]
+	instance PC2.5 : canvas:ParceiroChave [
+		base:nome "FINEP"
+		base:id "PC2.5"
+	]
+	instance PC2.6 : canvas:ParceiroChave [
+		base:nome "CAPES"
+		base:id "PC2.6"
+	]
+	instance PC2.7 : canvas:ParceiroChave [
+		base:nome "CNPq"
+		base:id "PC2.7"
+	]
+	instance PC2.8 : canvas:ParceiroChave [
+		base:nome "Fundos de investimentos privados e Venture Capital (FIP NE; HIKER VENTURES; CRIATEC 4; TRIAXIS, BABSON ANGELS, etc)"
+		base:id "PC2.8"
+	]
+	instance PC2.9 : canvas:ParceiroChave [
+		base:nome "Agências internacionais de fomento"
+		base:id "PC2.9"
+	]
+	instance PC2.10 : canvas:ParceiroChave [
+		base:nome "Agências nacionais de fomento de forma geral"
+		base:id "PC2.10"
+	]
+}

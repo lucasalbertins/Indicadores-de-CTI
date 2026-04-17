@@ -1,0 +1,42 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao#> as parceirosAmbientesInovacao {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PC5.1 : canvas:ParceiroChave [
+		base:nome "Parques Tecnológicos"
+		base:id "PC5.1"
+	]
+	instance PC5.2 : canvas:ParceiroChave [
+		base:nome "Porto Digital"
+		base:id "PC5.2"
+	]
+	instance PC5.3 : canvas:ParceiroChave [
+		base:nome "Parqtel"
+		base:id "PC5.3"
+	]
+	instance PC5.4 : canvas:ParceiroChave [
+		base:nome "ITEP"
+		base:id "PC5.4"
+	]
+	instance PC5.5 : canvas:ParceiroChave [
+		base:nome "Comunidades de startups (Manguezal, Sete Colinas, ACIC, Tapioca Valley, Caroá Hub; São Francisco Valley, etc)"
+		base:id "PC5.5"
+	]
+	instance PC5.6 : canvas:ParceiroChave [
+		base:nome "Incubadoras"
+		base:id "PC5.6"
+	]
+	instance PC5.7 : canvas:ParceiroChave [
+		base:nome "Aceleradoras"
+		base:id "PC5.7"
+	]
+	instance PC5.8 : canvas:ParceiroChave [
+		base:nome "Hubs de Inovação (Coworkings, Living Labs, Espaços Makers, etc)"
+		base:id "PC5.8"
+	]
+	instance PC5.9 : canvas:ParceiroChave [
+		base:nome "Ambientes promotores de inovação de forma geral"
+		base:id "PC5.9"
+	]
+}

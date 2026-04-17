@@ -1,0 +1,46 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PC3.1 : canvas:ParceiroChave [
+		base:nome "ICT (exceto IES)"
+		base:id "PC3.1"
+	]
+	instance PC3.2 : canvas:ParceiroChave [
+		base:nome "ICT/IES – Federais e Estaduais (UFPE, UFRPE, UPE, UNIVASF, etc)"
+		base:id "PC3.2"
+	]
+	instance PC3.3 : canvas:ParceiroChave [
+		base:nome "ICT/IES – Autarquias Municipais"
+		base:id "PC3.3"
+	]
+	instance PC3.4 : canvas:ParceiroChave [
+		base:nome "ICT/IES – Privadas (UNICAP, Uninassau, etc)"
+		base:id "PC3.4"
+	]
+	instance PC3.5 : canvas:ParceiroChave [
+		base:nome "ASSIESPE"
+		base:id "PC3.5"
+	]
+	instance PC3.6 : canvas:ParceiroChave [
+		base:nome "Laboratórios Multiusuários"
+		base:id "PC3.6"
+	]
+	instance PC3.7 : canvas:ParceiroChave [
+		base:nome "Acervos Científicos"
+		base:id "PC3.7"
+	]
+	instance PC3.8 : canvas:ParceiroChave [
+		base:nome "Escolas de ensino médio (EREM, ETE, outras)"
+		base:id "PC3.8"
+	]
+	instance PC3.9 : canvas:ParceiroChave [
+		base:nome "Escolas de ensino fundamental"
+		base:id "PC3.9"
+	]
+	instance PC3.10 : canvas:ParceiroChave [
+		base:nome "Rede Nacional de Ensino e Pesquisa (RNP)"
+		base:id "PC3.10"
+	]
+}

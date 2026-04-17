@@ -1,0 +1,46 @@
+description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PC4.1 : canvas:ParceiroChave [
+		base:nome "Empresas públicas (SUAPE, Compesa, Copergás, Serpro....)"
+		base:id "PC4.1"
+	]
+	instance PC4.2 : canvas:ParceiroChave [
+		base:nome "Empresas privadas em geral"
+		base:id "PC4.2"
+	]
+	instance PC4.3 : canvas:ParceiroChave [
+		base:nome "Empresas privadas – MPE"
+		base:id "PC4.3"
+	]
+	instance PC4.4 : canvas:ParceiroChave [
+		base:nome "Empresas privadas – Média e Grande"
+		base:id "PC4.4"
+	]
+	instance PC4.5 : canvas:ParceiroChave [
+		base:nome "Empresas de base tecnológica e startups"
+		base:id "PC4.5"
+	]
+	instance PC4.6 : canvas:ParceiroChave [
+		base:nome "Cooperativas e associações"
+		base:id "PC4.6"
+	]
+	instance PC4.7 : canvas:ParceiroChave [
+		base:nome "Sistema S (Sebrae, Senac, Senai e SESC)"
+		base:id "PC4.7"
+	]
+	instance PC4.8 : canvas:ParceiroChave [
+		base:nome "Neoenergia"
+		base:id "PC4.8"
+	]
+	instance PC4.9 : canvas:ParceiroChave [
+		base:nome "Provedores de internet"
+		base:id "PC4.9"
+	]
+	instance PC4.10 : canvas:ParceiroChave [
+		base:nome "Apex Brasil"
+		base:id "PC4.10"
+	]
+}
