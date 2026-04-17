@@ -1,4 +1,4 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas {
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	

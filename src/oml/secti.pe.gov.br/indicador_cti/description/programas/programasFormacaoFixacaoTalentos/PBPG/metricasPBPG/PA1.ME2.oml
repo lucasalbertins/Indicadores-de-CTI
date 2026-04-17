@@ -1,33 +1,33 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2 {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	instance estratSemestre : formulas:estratificacao [
-		base:id "estrat_semestre"
+		base:id "estrat_semestre_PA1.ME2"
 		base:nome "Semestre"
 	]
 	
 	instance estratModalidade : formulas:estratificacao [
-		base:id "estrat_modalidade"
+		base:id "estrat_modalidade_PA1.ME2"
 		base:nome "Modalidade"
 	]
 	
 	instance estratArea : formulas:estratificacao [
-		base:id "estrat_area"
+		base:id "estrat_area_PA1.ME2"
 		base:nome "Grande Área do Conhecimento FACEPE"
 	]
 	
 	instance estratRDE : formulas:estratificacao [
-		base:id "estrat_rde"
+		base:id "estrat_rde_PA1.ME2"
 		base:nome "Região de Desenvolvimento do Estado"
 	]
 	
 	instance estratPrazoConclusao : formulas:estratificacao [
-		base:id "estratPrazoConclusao"
+		base:id "estratPrazoConclusao_PA1.ME2"
 		base:nome "Conclusao"
 	]
 	
@@ -47,14 +47,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// retorna o valor da fonte de dados
 	instance formulaIdentidadePA1ME2 : formulas:formula [
-		base:id "formula_identidade_pa1me2"
+		base:id "formula_identidade_PA1.ME2"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
 		formulas:possuiArgumento varFonteBolsistas
 	]
 	
 	// Variável vem da fonte de dados
 	instance varFonteBolsistas : formulas:argumento [
-		base:id "var_fonte_bolsistas"
+		base:id "var_fonte_bolsistas_PA1.ME2"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "value"
 		formulas:possuiValor AgilFap_bolsistas_Titulados
@@ -62,7 +62,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 	
 	instance AgilFap_bolsistas_Titulados : formulas:tipovalorFonteDados [
-		base:id "AgilFapTitulados"
+		base:id "AgilFapTitulados_PA1.ME2"
 		formulas:valorFonteDados "agilfap.bolsistas.titulados"
 	]
 }

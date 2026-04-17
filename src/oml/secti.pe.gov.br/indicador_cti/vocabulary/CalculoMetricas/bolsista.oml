@@ -1,0 +1,84 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#> as bolsista {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#> as projeto
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	concept bolsista < base:EntidadeNomeavel
+	
+	scalar modalidade [
+		oneOf "MESTRADO", "DOUTORADO"
+	]
+	scalar status [
+		oneOf "ADIMPLENTE", "INADIMPLENTE"
+	]
+	
+	scalar property nr_cpf_bolsista [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property an_nascimento_bolsista [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property nm_pais_nacionalidade_bolsista [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property nm_cidade_endereco_bolsista [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property id_bolsa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property dt_inicio_bolsa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property id_semestre_bolsa_fim [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property vl_recebido [
+		domain bolsista
+		range xsd:double
+		functional
+	]
+	scalar property nm_modalidade [
+		domain bolsista
+		range modalidade
+		functional
+	]
+	scalar property id_semestre_defesa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property id_semestre_titulacao [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+	scalar property nm_status [
+		domain bolsista
+		range status
+		functional
+	]
+	
+	relation desenvolve [
+		from bolsista
+		to projeto:projeto
+		reverse desenvolvidoPor
+		asymmetric
+		irreflexive
+	]
+}

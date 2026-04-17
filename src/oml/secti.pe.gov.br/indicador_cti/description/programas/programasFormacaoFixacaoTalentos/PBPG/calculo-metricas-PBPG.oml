@@ -1,0 +1,2954 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/calculo-metricas-PBPG#> as calculo-metricas-PBPG {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#> as PBPG
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#> as bolsista
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#> as projeto
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital#> as edital
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	//EDITAIS
+	instance Edital-PBPG-12-2023 : edital:edital [
+		base:id "01/12/2023"
+		base:nome "FACEPE 12/2023-PBPG"
+		edital:dt_publicacao "01/09/2023"
+		edital:vl_investimento "4435200"^^xsd:double
+		edital:vinculadoA PBPG:PR1
+	]
+	instance Edital-PBPG-10-2021 : edital:edital [
+		base:id "01/10/2021"
+		base:nome "FACEPE 10/2021-PBPG"
+		edital:dt_publicacao "05/09/2021"
+		edital:vl_investimento "5237760"^^xsd:double
+		edital:vinculadoA PBPG:PR1
+	]
+	
+	//PROJETOS	
+	instance Projeto-APQ-4821-3.14-24 : projeto:projeto [
+		base:id "APQ-4821-3.14/24"
+		base:nome "Modelagem Matemática de Sistemas Dinâmicos Não Lineares"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9056-7.22-24 : projeto:projeto [
+		base:id "APQ-9056-7.22/24"
+		base:nome "Aplicação de Algoritmos de Machine Learning para Previsão de Séries Temporais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1764-2.08-24 : projeto:projeto [
+		base:id "APQ-1764-2.08/24"
+		base:nome "Otimização de Rotas Logísticas utilizando Algoritmos Genéticos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6395-5.67-24 : projeto:projeto [
+		base:id "APQ-6395-5.67/24"
+		base:nome "Simulação Numérica de Fenômenos de Difusão em Meios Porosos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2487-1.45-24 : projeto:projeto [
+		base:id "APQ-2487-1.45/24"
+		base:nome "Análise Computacional de Redes Complexas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7139-4.91-24 : projeto:projeto [
+		base:id "APQ-7139-4.91/24"
+		base:nome "Desenvolvimento de Modelos Preditivos para Detecção de Anomalias em Dados"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5642-6.33-24 : projeto:projeto [
+		base:id "APQ-5642-6.33/24"
+		base:nome "Aplicação de Métodos de Monte Carlo em Problemas de Física Estatística"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8301-9.02-24 : projeto:projeto [
+		base:id "APQ-8301-9.02/24"
+		base:nome "Estudo de Métodos Numéricos para Solução de Equações Diferenciais Parciais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2974-0.76-24 : projeto:projeto [
+		base:id "APQ-2974-0.76/24"
+		base:nome "Implementação de Sistemas de Recomendação Baseados em Aprendizado de Máquina"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6518-8.54-24 : projeto:projeto [
+		base:id "APQ-6518-8.54/24"
+		base:nome "Análise de Desempenho de Algoritmos de Ordenação em Grandes Bases de Dados"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4096-3.11-24 : projeto:projeto [
+		base:id "APQ-4096-3.11/24"
+		base:nome "Modelagem Computacional de Sistemas Caóticos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7823-2.47-24 : projeto:projeto [
+		base:id "APQ-7823-2.47/24"
+		base:nome "Aplicação de Processamento de Linguagem Natural para Classificação de Textos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1359-7.88-24 : projeto:projeto [
+		base:id "APQ-1359-7.88/24"
+		base:nome "Estudo de Métodos de Criptografia Baseados em Teoria dos Números"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9684-4.20-24 : projeto:projeto [
+		base:id "APQ-9684-4.20/24"
+		base:nome "Simulação de Sistemas Multiagentes para Modelagem de Fenômenos Sociais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5207-6.09-24 : projeto:projeto [
+		base:id "APQ-5207-6.09/24"
+		base:nome "Desenvolvimento de Algoritmos de Visão Computacional para Reconhecimento de Padrões"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3148-1.63-24 : projeto:projeto [
+		base:id "APQ-3148-1.63/24"
+		base:nome "Análise Estatística de Grandes Conjuntos de Dados Científicos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8472-5.95-24 : projeto:projeto [
+		base:id "APQ-8472-5.95/24"
+		base:nome "Aplicação de Redes Neurais Profundas para Reconhecimento de Imagens"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6921-9.18-24 : projeto:projeto [
+		base:id "APQ-6921-9.18/24"
+		base:nome "Modelagem Matemática de Epidemias Utilizando Sistemas de Equações Diferenciais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4035-2.71-24 : projeto:projeto [
+		base:id "APQ-4035-2.71/24"
+		base:nome "Desenvolvimento de Métodos de Otimização para Problemas de Grande Escala"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7560-8.06-24 : projeto:projeto [
+		base:id "APQ-7560-8.06/24"
+		base:nome "Análise de Complexidade Computacional em Algoritmos de Busca"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2849-4.59-24 : projeto:projeto [
+		base:id "APQ-2849-4.59/24"
+		base:nome "Estudo de Métodos de Redução de Dimensionalidade em Dados de Alta Dimensão"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9173-7.34-24 : projeto:projeto [
+		base:id "APQ-9173-7.34/24"
+		base:nome "Aplicação de Inteligência Artificial na Detecção de Fraudes Financeiras"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6408-3.90-24 : projeto:projeto [
+		base:id "APQ-6408-3.90/24"
+		base:nome "Modelagem e Simulação de Sistemas de Controle Automático"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1587-0.42-24 : projeto:projeto [
+		base:id "APQ-1587-0.42/24"
+		base:nome "Desenvolvimento de Técnicas de Data Mining para Descoberta de Conhecimento"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7254-6.77-24 : projeto:projeto [
+		base:id "APQ-7254-6.77/24"
+		base:nome "Aplicação de Métodos Estatísticos em Problemas de Inferência Bayesiana"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8396-1.25-24 : projeto:projeto [
+		base:id "APQ-8396-1.25/24"
+		base:nome "Simulação Computacional de Sistemas Quânticos Simplificados"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4620-5.83-24 : projeto:projeto [
+		base:id "APQ-4620-5.83/24"
+		base:nome "Análise de Estabilidade em Sistemas Dinâmicos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9082-8.14-24 : projeto:projeto [
+		base:id "APQ-9082-8.14/24"
+		base:nome "Aplicação de Algoritmos Evolutivos para Problemas de Otimização Combinatória"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3761-2.60-24 : projeto:projeto [
+		base:id "APQ-3761-2.60/24"
+		base:nome "Modelagem Matemática de Processos de Crescimento Populacional"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5914-9.47-24 : projeto:projeto [
+		base:id "APQ-5914-9.47/24"
+		base:nome "Desenvolvimento de Ferramentas Computacionais para Análise de Dados Científicos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2476-4.31-24 : projeto:projeto [
+		base:id "APQ-2476-4.31/24"
+		base:nome "Estudo de Métodos de Compressão de Dados Baseados em Transformadas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8045-7.12-24 : projeto:projeto [
+		base:id "APQ-8045-7.12/24"
+		base:nome "Aplicação de Aprendizado de Máquina em Problemas de Classificação Multiclasse"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6732-1.05-24 : projeto:projeto [
+		base:id "APQ-6732-1.05/24"
+		base:nome "Simulação de Propagação de Ondas em Meios Heterogêneos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5287-6.48-24 : projeto:projeto [
+		base:id "APQ-5287-6.48/24"
+		base:nome "Análise Estatística de Dados Espaciais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1934-2.76-24 : projeto:projeto [
+		base:id "APQ-1934-2.76/24"
+		base:nome "Desenvolvimento de Sistemas Inteligentes para Tomada de Decisão"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7615-4.93-24 : projeto:projeto [
+		base:id "APQ-7615-4.93/24"
+		base:nome "Modelagem Computacional de Sistemas Complexos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2840-8.11-24 : projeto:projeto [
+		base:id "APQ-2840-8.11/24"
+		base:nome "Aplicação de Métodos Numéricos em Problemas de Engenharia"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9053-3.64-24 : projeto:projeto [
+		base:id "APQ-9053-3.64/24"
+		base:nome "Estudo de Estruturas Algorítmicas para Processamento de Grandes Dados"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6421-7.59-24 : projeto:projeto [
+		base:id "APQ-6421-7.59/24"
+		base:nome "Aplicação de Teoria dos Grafos em Problemas de Redes de Transporte"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3157-9.08-24 : projeto:projeto [
+		base:id "APQ-3157-9.08/24"
+		base:nome "Desenvolvimento de Modelos Preditivos para Sistemas Energéticos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7782-5.46-24 : projeto:projeto [
+		base:id "APQ-7782-5.46/24"
+		base:nome "Análise de Eficiência de Métodos de Otimização Estocástica"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5049-1.90-24 : projeto:projeto [
+		base:id "APQ-5049-1.90/24"
+		base:nome "Simulação Computacional de Processos Físicos em Escala Micro"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2681-6.33-24 : projeto:projeto [
+		base:id "APQ-2681-6.33/24"
+		base:nome "Aplicação de Técnicas de Inteligência Artificial em Sistemas Autônomos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9374-0.17-24 : projeto:projeto [
+		base:id "APQ-9374-0.17/24"
+		base:nome "Avaliação da Efetividade de Programas de Atenção Primária na Prevenção de Doenças Crônicas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4162-3.52-24 : projeto:projeto [
+		base:id "APQ-4162-3.52/24"
+		base:nome "Análise Epidemiológica da Prevalência de Hipertensão em Populações Urbanas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7018-8.77-24 : projeto:projeto [
+		base:id "APQ-7018-8.77/24"
+		base:nome "Impacto da Alimentação Saudável na Prevenção de Doenças Cardiovasculares"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5831-4.09-24 : projeto:projeto [
+		base:id "APQ-5831-4.09/24"
+		base:nome "Avaliação da Qualidade de Vida de Pacientes com Diabetes Mellitus"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8247-7.21-24 : projeto:projeto [
+		base:id "APQ-8247-7.21/24"
+		base:nome "Estudo sobre a Adesão ao Tratamento em Pacientes com Doenças Crônicas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3926-2.68-24 : projeto:projeto [
+		base:id "APQ-3926-2.68/24"
+		base:nome "Análise dos Determinantes Sociais da Saúde em Comunidades Vulneráveis"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6154-9.40-24 : projeto:projeto [
+		base:id "APQ-6154-9.40/24"
+		base:nome "Avaliação da Cobertura Vacinal e seus Impactos na Saúde Pública"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2749-5.13-24 : projeto:projeto [
+		base:id "APQ-2749-5.13/24"
+		base:nome "Estudo da Prevalência de Ansiedade e Depressão em Estudantes Universitários"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8602-6.72-24 : projeto:projeto [
+		base:id "APQ-8602-6.72/24"
+		base:nome "Impacto da Atividade Física na Saúde Mental de Adultos Jovens"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1407-3.88-24 : projeto:projeto [
+		base:id "APQ-1407-3.88/24"
+		base:nome "Avaliação da Eficiência de Programas de Controle do Tabagismo"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7593-1.54-24 : projeto:projeto [
+		base:id "APQ-7593-1.54/24"
+		base:nome "Análise do Uso Racional de Medicamentos na Atenção Básica"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4685-8.26-24 : projeto:projeto [
+		base:id "APQ-4685-8.26/24"
+		base:nome "Estudo sobre Fatores de Risco Associados à Obesidade Infantil"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9027-4.61-24 : projeto:projeto [
+		base:id "APQ-9027-4.61/24"
+		base:nome "Avaliação da Qualidade do Atendimento em Serviços de Urgência e Emergência"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3176-7.03-24 : projeto:projeto [
+		base:id "APQ-3176-7.03/24"
+		base:nome "Análise da Incidência de Doenças Respiratórias em Regiões Urbanas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6258-0.99-24 : projeto:projeto [
+		base:id "APQ-6258-0.99/24"
+		base:nome "Impacto das Tecnologias Digitais no Monitoramento da Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7941-6.15-24 : projeto:projeto [
+		base:id "APQ-7941-6.15/24"
+		base:nome "Avaliação da Segurança do Paciente em Ambientes Hospitalares"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2530-2.47-24 : projeto:projeto [
+		base:id "APQ-2530-2.47/24"
+		base:nome "Estudo da Prevenção de Infecções Relacionadas à Assistência à Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8164-9.36-24 : projeto:projeto [
+		base:id "APQ-8164-9.36/24"
+		base:nome "Análise da Saúde Mental de Profissionais da Área da Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4712-5.84-24 : projeto:projeto [
+		base:id "APQ-4712-5.84/24"
+		base:nome "Avaliação da Efetividade de Programas de Educação em Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9386-3.22-24 : projeto:projeto [
+		base:id "APQ-9386-3.22/24"
+		base:nome "Estudo sobre a Prevalência de Anemia em Crianças em Idade Escolar"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6025-8.67-24 : projeto:projeto [
+		base:id "APQ-6025-8.67/24"
+		base:nome "Impacto da Telemedicina no Acesso aos Serviços de Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-1873-4.56-24 : projeto:projeto [
+		base:id "APQ-1873-4.56/24"
+		base:nome "Avaliação do Cuidado Integral ao Idoso na Atenção Primária"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7548-7.91-24 : projeto:projeto [
+		base:id "APQ-7548-7.91/24"
+		base:nome "Análise da Incidência de Doenças Tropicais Negligenciadas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-3901-1.33-24 : projeto:projeto [
+		base:id "APQ-3901-1.33/24"
+		base:nome "Estudo sobre a Qualidade do Sono e seus Impactos na Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6892-6.05-24 : projeto:projeto [
+		base:id "APQ-6892-6.05/24"
+		base:nome "Avaliação da Assistência Pré-Natal e seus Resultados Materno-Infantis"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2157-9.48-24 : projeto:projeto [
+		base:id "APQ-2157-9.48/24"
+		base:nome "Análise da Prevenção de Infecções Sexualmente Transmissíveis em Jovens"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-8430-2.74-24 : projeto:projeto [
+		base:id "APQ-8430-2.74/24"
+		base:nome "Impacto da Pandemia de COVID-19 na Saúde Mental da População"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-5648-5.19-24 : projeto:projeto [
+		base:id "APQ-5648-5.19/24"
+		base:nome "Avaliação da Efetividade de Programas de Promoção da Saúde nas Escolas"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9703-7.60-24 : projeto:projeto [
+		base:id "APQ-9703-7.60/24"
+		base:nome "Estudo sobre o Controle da Hipertensão em Unidades de Saúde"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4215-0.83-24 : projeto:projeto [
+		base:id "APQ-4215-0.83/24"
+		base:nome "Análise da Mortalidade por Doenças Crônicas Não Transmissíveis"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-7369-3.97-24 : projeto:projeto [
+		base:id "APQ-7369-3.97/24"
+		base:nome "Avaliação do Uso de Tecnologias em Saúde para Monitoramento de Pacientes"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-2584-6.41-24 : projeto:projeto [
+		base:id "APQ-2584-6.41/24"
+		base:nome "Estudo sobre a Prevenção de Quedas em Idosos"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-6810-8.29-24 : projeto:projeto [
+		base:id "APQ-6810-8.29/24"
+		base:nome "Impacto de Intervenções Nutricionais na Saúde da População"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-9041-4.12-24 : projeto:projeto [
+		base:id "APQ-9041-4.12/24"
+		base:nome "Avaliação da Qualidade da Atenção à Saúde em Comunidades Rurais"
+		projeto:dt_inicio_projeto "01/01/2024"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "57600"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-12-2023
+	]
+	instance Projeto-APQ-4821-3.14-22 : projeto:projeto [
+		base:id "APQ-4821-3.14/22"
+		base:nome "Modelagem Matemática e Simulação Numérica de Sistemas Dinâmicos Não Lineares em Ambientes Complexos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-9056-7.22-22 : projeto:projeto [
+		base:id "APQ-9056-7.22/22"
+		base:nome "Desenvolvimento de Métodos de Aprendizado de Máquina para Análise de Dados de Alta Dimensionalidade"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-1764-2.08-22 : projeto:projeto [
+		base:id "APQ-1764-2.08/22"
+		base:nome "Algoritmos de Otimização Estocástica Aplicados a Problemas de Grande Escala"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-6395-5.67-22 : projeto:projeto [
+		base:id "APQ-6395-5.67/22"
+		base:nome "Análise Teórica e Computacional de Redes Complexas em Sistemas Naturais e Tecnológicos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-2487-1.45-22 : projeto:projeto [
+		base:id "APQ-2487-1.45/22"
+		base:nome "Métodos Numéricos Avançados para Solução de Equações Diferenciais Parciais em Fenômenos Físicos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-7139-4.91-22 : projeto:projeto [
+		base:id "APQ-7139-4.91/22"
+		base:nome "Modelagem Computacional de Sistemas Multiagentes para Estudo de Dinâmicas Emergentes"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-5642-6.33-22 : projeto:projeto [
+		base:id "APQ-5642-6.33/22"
+		base:nome "Desenvolvimento de Técnicas de Inteligência Artificial para Detecção de Padrões em Grandes Bases de Dados"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-8301-9.02-22 : projeto:projeto [
+		base:id "APQ-8301-9.02/22"
+		base:nome "Aplicação de Teoria dos Grafos na Análise de Estruturas de Redes de Comunicação"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-2974-0.76-22 : projeto:projeto [
+		base:id "APQ-2974-0.76/22"
+		base:nome "Estudo de Métodos de Redução de Dimensionalidade em Aprendizado de Máquina"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-6518-8.54-22 : projeto:projeto [
+		base:id "APQ-6518-8.54/22"
+		base:nome "Simulação Computacional de Sistemas Físicos Complexos Utilizando Métodos de Monte Carlo"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-4096-3.11-22 : projeto:projeto [
+		base:id "APQ-4096-3.11/22"
+		base:nome "Desenvolvimento de Algoritmos de Visão Computacional para Reconhecimento de Objetos em Ambientes Complexos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-7823-2.47-22 : projeto:projeto [
+		base:id "APQ-7823-2.47/22"
+		base:nome "Análise de Complexidade Computacional em Problemas de Otimização Combinatória"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-1359-7.88-22 : projeto:projeto [
+		base:id "APQ-1359-7.88/22"
+		base:nome "Modelagem Matemática de Processos de Difusão e Transporte em Sistemas Naturais"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-9684-4.20-22 : projeto:projeto [
+		base:id "APQ-9684-4.20/22"
+		base:nome "Aplicação de Redes Neurais Profundas na Análise e Classificação de Dados Científicos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-5207-6.09-22 : projeto:projeto [
+		base:id "APQ-5207-6.09/22"
+		base:nome "Desenvolvimento de Métodos Computacionais para Processamento de Grandes Volumes de Dados"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-3148-1.63-22 : projeto:projeto [
+		base:id "APQ-3148-1.63/22"
+		base:nome "Estudo de Estabilidade e Controle em Sistemas Dinâmicos Não Lineares"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-8472-5.95-22 : projeto:projeto [
+		base:id "APQ-8472-5.95/22"
+		base:nome "Modelagem e Simulação de Sistemas Complexos Utilizando Abordagens Computacionais Avançadas"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "EXATAS"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-6921-9.18-22 : projeto:projeto [
+		base:id "APQ-6921-9.18/22"
+		base:nome "Avaliação do Impacto de Intervenções em Atenção Primária na Prevenção de Doenças Crônicas Não Transmissíveis"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-4035-2.71-22 : projeto:projeto [
+		base:id "APQ-4035-2.71/22"
+		base:nome "Modelagem Epidemiológica da Disseminação de Doenças Infecciosas em Ambientes Urbanos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-7560-8.06-22 : projeto:projeto [
+		base:id "APQ-7560-8.06/22"
+		base:nome "Determinantes Sociais da Saúde e suas Relações com Desigualdades no Acesso aos Serviços de Saúde"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-2849-4.59-22 : projeto:projeto [
+		base:id "APQ-2849-4.59/22"
+		base:nome "Avaliação da Efetividade de Programas de Promoção da Saúde em Comunidades Vulneráveis"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-9173-7.34-22 : projeto:projeto [
+		base:id "APQ-9173-7.34/22"
+		base:nome "Impacto de Intervenções Nutricionais na Prevenção da Obesidade e Doenças Metabólicas"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-6408-3.90-22 : projeto:projeto [
+		base:id "APQ-6408-3.90/22"
+		base:nome "Análise da Saúde Mental de Profissionais da Saúde em Contextos de Alta Demanda Assistencial"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-1587-0.42-22 : projeto:projeto [
+		base:id "APQ-1587-0.42/22"
+		base:nome "Avaliação de Tecnologias Digitais no Monitoramento e Acompanhamento de Pacientes Crônicos"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-7254-6.77-22 : projeto:projeto [
+		base:id "APQ-7254-6.77/22"
+		base:nome "Estudo Longitudinal sobre Fatores de Risco Associados a Doenças Cardiovasculares"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-8396-1.25-22 : projeto:projeto [
+		base:id "APQ-8396-1.25/22"
+		base:nome "Avaliação da Qualidade da Atenção Pré-Natal e seus Impactos nos Desfechos Materno-Infantis"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-4620-5.83-22 : projeto:projeto [
+		base:id "APQ-4620-5.83/22"
+		base:nome "Análise da Efetividade de Estratégias de Vacinação em Programas de Saúde Pública"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-9082-8.14-22 : projeto:projeto [
+		base:id "APQ-9082-8.14/22"
+		base:nome "Impacto da Telemedicina na Ampliação do Acesso aos Serviços de Saúde em Regiões Remotas"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-3761-2.60-22 : projeto:projeto [
+		base:id "APQ-3761-2.60/22"
+		base:nome "Avaliação da Segurança do Paciente e da Qualidade Assistencial em Ambientes Hospitalares"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-5914-9.47-22 : projeto:projeto [
+		base:id "APQ-5914-9.47/22"
+		base:nome "Estudo sobre a Prevenção e Controle de Infecções Relacionadas à Assistência à Saúde"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-2476-4.31-22 : projeto:projeto [
+		base:id "APQ-2476-4.31/22"
+		base:nome "Análise dos Determinantes da Adesão ao Tratamento em Pacientes com Doenças Crônicas"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "NÃO"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	instance Projeto-APQ-8045-7.12-22 : projeto:projeto [
+		base:id "APQ-8045-7.12/22"
+		base:nome "Avaliação de Políticas Públicas de Saúde no Controle de Doenças Tropicais Negligenciadas"
+		projeto:dt_inicio_projeto "01/01/2022"
+		projeto:dt_fim_projeto "31/12/2025"
+		projeto:vl_fomento "163680"^^xsd:double
+		projeto:vl_area_prioritaria "SIM"
+		projeto:nm_area_conhecimento "SAÚDE"
+		projeto:nm_rde "FORA RMR"
+		projeto:submetidoA Edital-PBPG-10-2021
+	]
+	
+	//BOLSISTAS
+	instance Bolsista-20050593234 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "20050593234"
+		base:nome "Adriana Lima"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5183-4.96/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4821-3.14-24
+	]
+	instance Bolsista-71854583077 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "71854583077"
+		base:nome "Rafaela Silva"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9745-2.52/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9056-7.22-24
+	]
+	instance Bolsista-77530227416 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "77530227416"
+		base:nome "Renato Gomes"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-3366-4.06/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1764-2.08-24
+	]
+	instance Bolsista-86649387339 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "86649387339"
+		base:nome "Carlos Gomes"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8342-9.60/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6395-5.67-24
+	]
+	instance Bolsista-38646889653 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "38646889653"
+		base:nome "Thiago Lima"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2392-4.15/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2487-1.45-24
+	]
+	instance Bolsista-34455003126 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "34455003126"
+		base:nome "Adriana Silva"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1115-8.93/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7139-4.91-24
+	]
+	instance Bolsista-34204123805 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "34204123805"
+		base:nome "Mateus Souza"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6247-2.61/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5642-6.33-24
+	]
+	instance Bolsista-99351049159 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "99351049159"
+		base:nome "Daniel Martins"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7277-3.20/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8301-9.02-24
+	]
+	instance Bolsista-88391341232 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "88391341232"
+		base:nome "Otávio Carvalho"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2600-0.60/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2974-0.76-24
+	]
+	instance Bolsista-87296664576 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "87296664576"
+		base:nome "Olivia Rodrigues"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6651-3.31/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6518-8.54-24
+	]
+	instance Bolsista-93004033208 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "93004033208"
+		base:nome "Tatiane Rocha"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-3041-8.94/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4096-3.11-24
+	]
+	instance Bolsista-54779999693 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "54779999693"
+		base:nome "Isabela Rocha"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8040-1.40/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7823-2.47-24
+	]
+	instance Bolsista-59733897825 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "59733897825"
+		base:nome "Bruno Pereira"
+		bolsista:an_nascimento_bolsista "2006"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-3118-5.53/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1359-7.88-24
+	]
+	instance Bolsista-15267729302 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "15267729302"
+		base:nome "Samuel Costa"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-3495-0.68/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9684-4.20-24
+	]
+	instance Bolsista-16835749580 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "16835749580"
+		base:nome "Helena Araújo"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-3774-4.77/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5207-6.09-24
+	]
+	instance Bolsista-00790441667 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "00790441667"
+		base:nome "Eduardo Rodrigues"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1081-2.43/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3148-1.63-24
+	]
+	instance Bolsista-30629539189 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "30629539189"
+		base:nome "Gabriel Gomes"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1944-5.36/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8472-5.95-24
+	]
+	instance Bolsista-08708979502 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "08708979502"
+		base:nome "Caio Teixeira"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8233-8.41/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6921-9.18-24
+	]
+	instance Bolsista-22902357095 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "22902357095"
+		base:nome "Igor Ferreira"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4966-6.95/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4035-2.71-24
+	]
+	instance Bolsista-14241451632 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "14241451632"
+		base:nome "Fernanda Ribeiro"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7675-6.93/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7560-8.06-24
+	]
+	instance Bolsista-17187624026 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "17187624026"
+		base:nome "Ana Rodrigues"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5278-3.41/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2849-4.59-24
+	]
+	instance Bolsista-58712187097 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "58712187097"
+		base:nome "Adriana Santos"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7354-9.64/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9173-7.34-24
+	]
+	instance Bolsista-59759687208 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "59759687208"
+		base:nome "Eduardo Gomes"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8771-1.76/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6408-3.90-24
+	]
+	instance Bolsista-77230499518 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "77230499518"
+		base:nome "Mateus Teixeira"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8944-6.49/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1587-0.42-24
+	]
+	instance Bolsista-54863337655 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "54863337655"
+		base:nome "Adriana Rodrigues"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6082-8.51/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7254-6.77-24
+	]
+	instance Bolsista-09357398236 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "09357398236"
+		base:nome "Lucas Dias"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5052-1.45/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8396-1.25-24
+	]
+	instance Bolsista-76031646803 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "76031646803"
+		base:nome "Fernanda Silva"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6488-5.43/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4620-5.83-24
+	]
+	instance Bolsista-91161196064 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "91161196064"
+		base:nome "Paulo Ribeiro"
+		bolsista:an_nascimento_bolsista "2006"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4251-3.32/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9082-8.14-24
+	]
+	instance Bolsista-31011354608 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "31011354608"
+		base:nome "Gustavo Almeida"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-2801-2.22/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3761-2.60-24
+	]
+	instance Bolsista-85652125136 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "85652125136"
+		base:nome "Thiago Araújo"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-6104-4.07/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5914-9.47-24
+	]
+	instance Bolsista-42042938599 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "42042938599"
+		base:nome "Ana Ribeiro"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-3729-3.73/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2476-4.31-24
+	]
+	instance Bolsista-27509859948 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "27509859948"
+		base:nome "Igor Almeida"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-3197-6.52/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8045-7.12-24
+	]
+	instance Bolsista-16211352417 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "16211352417"
+		base:nome "Samuel Costa"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-6288-5.97/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6732-1.05-24
+	]
+	instance Bolsista-96791538007 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "96791538007"
+		base:nome "Isabela Dias"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-3166-6.51/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5287-6.48-24
+	]
+	instance Bolsista-91663241490 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "91663241490"
+		base:nome "Rafaela Gomes"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-2819-7.44/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1934-2.76-24
+	]
+	instance Bolsista-31069429163 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "31069429163"
+		base:nome "Yasmin Gomes"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-5281-1.58/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7615-4.93-24
+	]
+	instance Bolsista-51152801082 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "51152801082"
+		base:nome "Yasmin Santos"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-2542-2.50/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2840-8.11-24
+	]
+	instance Bolsista-18371698100 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "18371698100"
+		base:nome "Fernanda Dias"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-5842-1.58/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9053-3.64-24
+	]
+	instance Bolsista-35417593486 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "35417593486"
+		base:nome "Caio Ribeiro"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-5726-2.95/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6421-7.59-24
+	]
+	instance Bolsista-54432045485 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "54432045485"
+		base:nome "Lucas Carvalho"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-5183-4.96/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3157-9.08-24
+	]
+	instance Bolsista-59294418120 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "59294418120"
+		base:nome "Adriana Gomes"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-6217-6.39/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7782-5.46-24
+	]
+	instance Bolsista-58018179131 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "58018179131"
+		base:nome "Eduardo Araújo"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-4037-7.61/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5049-1.90-24
+	]
+	instance Bolsista-98191743922 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "98191743922"
+		base:nome "Sabrina Rodrigues"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-8671-1.00/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2681-6.33-24
+	]
+	instance Bolsista-00046419578 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "00046419578"
+		base:nome "Diego Santos"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2489-9.73/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9374-0.17-24
+	]
+	instance Bolsista-35593735905 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "35593735905"
+		base:nome "Helena Souza"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5183-4.96/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4162-3.52-24
+	]
+	instance Bolsista-06138822617 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "06138822617"
+		base:nome "Tatiane Araújo"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7057-4.32/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7018-8.77-24
+	]
+	instance Bolsista-09427478012 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "09427478012"
+		base:nome "Diego Silva"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4914-2.34/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5831-4.09-24
+	]
+	instance Bolsista-37869369195 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "37869369195"
+		base:nome "João Costa"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9112-7.99/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8247-7.21-24
+	]
+	instance Bolsista-29318407343 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "29318407343"
+		base:nome "Eduardo Santos"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4136-3.28/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3926-2.68-24
+	]
+	instance Bolsista-96168383930 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "96168383930"
+		base:nome "Victor Rocha"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7057-4.30/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6154-9.40-24
+	]
+	instance Bolsista-66478762866 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "66478762866"
+		base:nome "Tatiane Pereira"
+		bolsista:an_nascimento_bolsista "2006"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4203-4.80/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2749-5.13-24
+	]
+	instance Bolsista-27219613229 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "27219613229"
+		base:nome "Carlos Rodrigues"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6909-7.16/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8602-6.72-24
+	]
+	instance Bolsista-57370164713 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "57370164713"
+		base:nome "Eduardo Souza"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5685-6.29/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1407-3.88-24
+	]
+	instance Bolsista-87371168003 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "87371168003"
+		base:nome "Karen Silva"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1603-4.90/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7593-1.54-24
+	]
+	instance Bolsista-63705106104 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "63705106104"
+		base:nome "Natália Costa"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4223-2.11/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4685-8.26-24
+	]
+	instance Bolsista-42299040889 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "42299040889"
+		base:nome "Adriana Martins"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5346-7.01/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9027-4.61-24
+	]
+	instance Bolsista-65934523864 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "65934523864"
+		base:nome "Gustavo Souza"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9496-1.30/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3176-7.03-24
+	]
+	instance Bolsista-40113492405 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "40113492405"
+		base:nome "Tatiane Almeida"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6239-9.48/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6258-0.99-24
+	]
+	instance Bolsista-63613981106 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "63613981106"
+		base:nome "Gustavo Almeida"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2687-9.33/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7941-6.15-24
+	]
+	instance Bolsista-1981140948 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "19811409480"
+		base:nome "Victor Pereira"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-4286-6.61/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2530-2.47-24
+	]
+	instance Bolsista-14490859970 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "14490859970"
+		base:nome "Sabrina Lima"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-4996-5.05/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8164-9.36-24
+	]
+	instance Bolsista-99362149869 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "99362149869"
+		base:nome "Mateus Ferreira"
+		bolsista:an_nascimento_bolsista "2006"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-1969-6.41/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4712-5.84-24
+	]
+	instance Bolsista-33465994000 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "33465994000"
+		base:nome "Carlos Oliveira"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-5157-0.01/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9386-3.22-24
+	]
+	instance Bolsista-50397843682 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "50397843682"
+		base:nome "Adriana Dias"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-7668-6.00/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6025-8.67-24
+	]
+	instance Bolsista-62058066227 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "62058066227"
+		base:nome "Gabriel Rocha"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "OLINDA"
+		bolsista:id_bolsa "IBPG-1706-8.42/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1873-4.56-24
+	]
+	instance Bolsista-45141413055 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "45141413055"
+		base:nome "Gabriel Dias"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-7687-9.44/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7548-7.91-24
+	]
+	instance Bolsista-46653142507 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "46653142507"
+		base:nome "Felipe Pereira"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-2709-1.89/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3901-1.33-24
+	]
+	instance Bolsista-90793365562 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "90793365562"
+		base:nome "Diego Martins"
+		bolsista:an_nascimento_bolsista "2001"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-2489-4.21/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6892-6.05-24
+	]
+	instance Bolsista-51537320963 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "51537320963"
+		base:nome "Felipe Araújo"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-4437-5.27/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2157-9.48-24
+	]
+	instance Bolsista-02829173066 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "02829173066"
+		base:nome "Elaine Nascimento"
+		bolsista:an_nascimento_bolsista "2003"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-4757-5.24/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8430-2.74-24
+	]
+	instance Bolsista-11935135619 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "11935135619"
+		base:nome "Carlos Almeida"
+		bolsista:an_nascimento_bolsista "2000"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-6631-4.46/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5648-5.19-24
+	]
+	instance Bolsista-43465932595 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "43465932595"
+		base:nome "Hugo Teixeira"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "PETROLINA"
+		bolsista:id_bolsa "IBPG-9242-3.22/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9703-7.60-24
+	]
+	instance Bolsista-32058681886 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "32058681886"
+		base:nome "Diego Souza"
+		bolsista:an_nascimento_bolsista "2006"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-1676-2.43/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4215-0.83-24
+	]
+	instance Bolsista-41224580303 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "41224580303"
+		base:nome "João Lima"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-7448-4.36/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7369-3.97-24
+	]
+	instance Bolsista-66118255415 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "66118255415"
+		base:nome "Felipe Pereira"
+		bolsista:an_nascimento_bolsista "2005"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-7647-6.16/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2584-6.41-24
+	]
+	instance Bolsista-40163939730 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "40163939730"
+		base:nome "Fernanda Nascimento"
+		bolsista:an_nascimento_bolsista "2004"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-9061-8.28/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6810-8.29-24
+	]
+	instance Bolsista-44047590100 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "44047590100"
+		base:nome "Gabriel Lima"
+		bolsista:an_nascimento_bolsista "2002"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-6224-9.79/24"
+		bolsista:dt_inicio_bolsa "01/01/2024"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "57600"^^xsd:double
+		bolsista:nm_modalidade "MESTRADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9041-4.12-24
+	]
+	instance Bolsista-52573059332 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "52573059332"
+		base:nome "João Lima"
+		bolsista:an_nascimento_bolsista "1994"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4821-3.14/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4821-3.14-22
+	]
+	instance Bolsista-62743722967 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "62743722967"
+		base:nome "Leonardo Martins"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9056-7.22/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9056-7.22-22
+	]
+	instance Bolsista-40880432942 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "40880432942"
+		base:nome "Daniel Silva"
+		bolsista:an_nascimento_bolsista "1991"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1764-2.08/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1764-2.08-22
+	]
+	instance Bolsista-02023873134 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "02023873134"
+		base:nome "Sabrina Ferreira"
+		bolsista:an_nascimento_bolsista "1989"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6395-5.67/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6395-5.67-22
+	]
+	instance Bolsista-22635028150 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "22635028150"
+		base:nome "Karen Gomes"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2487-1.45/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2487-1.45-22
+	]
+	instance Bolsista-20328967610 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "20328967610"
+		base:nome "Renato Barbosa"
+		bolsista:an_nascimento_bolsista "1993"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7139-4.91/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7139-4.91-22
+	]
+	instance Bolsista-49290739797 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "49290739797"
+		base:nome "Caio Martins"
+		bolsista:an_nascimento_bolsista "1990"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-5642-6.33/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5642-6.33-22
+	]
+	instance Bolsista-31175524050 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "31175524050"
+		base:nome "Natália Oliveira"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8301-9.02/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8301-9.02-22
+	]
+	instance Bolsista-10650611020 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "10650611020"
+		base:nome "Otávio Lima"
+		bolsista:an_nascimento_bolsista "1988"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2974-0.76/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2974-0.76-22
+	]
+	instance Bolsista-30515991155 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "30515991155"
+		base:nome "Ana Almeida"
+		bolsista:an_nascimento_bolsista "1995"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6518-8.54/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6518-8.54-22
+	]
+	instance Bolsista-55501742004 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "55501742004"
+		base:nome "Lucas Ferreira"
+		bolsista:an_nascimento_bolsista "1992"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4096-3.11/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4096-3.11-22
+	]
+	instance Bolsista-62085920896 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "62085920896"
+		base:nome "Nicolas Almeida"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7823-2.47/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7823-2.47-22
+	]
+	instance Bolsista-63583019180 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "63583019180"
+		base:nome "Patrícia Costa"
+		bolsista:an_nascimento_bolsista "1991"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1359-7.88/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1359-7.88-22
+	]
+	instance Bolsista-22085680526 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "22085680526"
+		base:nome "Tatiane Ribeiro"
+		bolsista:an_nascimento_bolsista "1994"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-9684-4.20/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9684-4.20-22
+	]
+	instance Bolsista-73269220200 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "73269220200"
+		base:nome "Ana Araújo"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-5207-6.09/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5207-6.09-22
+	]
+	instance Bolsista-10660429772 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "10660429772"
+		base:nome "Samuel Costa"
+		bolsista:an_nascimento_bolsista "1990"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-3148-1.63/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3148-1.63-22
+	]
+	instance Bolsista-65932291990 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "65932291990"
+		base:nome "Rafaela Carvalho"
+		bolsista:an_nascimento_bolsista "1993"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "CARUARU"
+		bolsista:id_bolsa "IBPG-8472-5.95/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8472-5.95-22
+	]
+	instance Bolsista-52181689040 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "52181689040"
+		base:nome "Olivia Oliveira"
+		bolsista:an_nascimento_bolsista "1989"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6921-9.18/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6921-9.18-22
+	]
+	instance Bolsista-82298458081 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "82298458081"
+		base:nome "Otávio Souza"
+		bolsista:an_nascimento_bolsista "1998"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4035-2.71/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4035-2.71-22
+	]
+	instance Bolsista-10647877546 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "10647877546"
+		base:nome "Isabela Rocha"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7560-8.06/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7560-8.06-22
+	]
+	instance Bolsista-66484912300 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "66484912300"
+		base:nome "João Araújo"
+		bolsista:an_nascimento_bolsista "1992"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-2849-4.59/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2849-4.59-22
+	]
+	instance Bolsista-09080008800 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "09080008800"
+		base:nome "Mateus Gomes"
+		bolsista:an_nascimento_bolsista "1995"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9173-7.34/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9173-7.34-22
+	]
+	instance Bolsista-28110472206 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "28110472206"
+		base:nome "Otávio Rocha"
+		bolsista:an_nascimento_bolsista "1990"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-6408-3.90/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-6408-3.90-22
+	]
+	instance Bolsista-92369173726 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "92369173726"
+		base:nome "Vanessa Dias"
+		bolsista:an_nascimento_bolsista "1988"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-1587-0.42/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-1587-0.42-22
+	]
+	instance Bolsista-76600926937 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "76600926937"
+		base:nome "Juliana Ferreira"
+		bolsista:an_nascimento_bolsista "1996"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-7254-6.77/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-7254-6.77-22
+	]
+	instance Bolsista-51723557404 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "51723557404"
+		base:nome "Eduardo Gomes"
+		bolsista:an_nascimento_bolsista "1993"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-8396-1.25/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8396-1.25-22
+	]
+	instance Bolsista-61074354257 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "61074354257"
+		base:nome "Isabela Souza"
+		bolsista:an_nascimento_bolsista "1999"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-4620-5.83/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-4620-5.83-22
+	]
+	instance Bolsista-49708556840 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "49708556840"
+		base:nome "Juliana Araújo"
+		bolsista:an_nascimento_bolsista "1994"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "RECIFE"
+		bolsista:id_bolsa "IBPG-9082-8.14/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-9082-8.14-22
+	]
+	instance Bolsista-48012378272 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "48012378272"
+		base:nome "Adriana Almeida"
+		bolsista:an_nascimento_bolsista "1991"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-3761-2.60/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-3761-2.60-22
+	]
+	instance Bolsista-05482683397 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "05482683397"
+		base:nome "Gabriel Santos"
+		bolsista:an_nascimento_bolsista "1997"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-5914-9.47/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-5914-9.47-22
+	]
+	instance Bolsista-06537209714 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "06537209714"
+		base:nome "Hugo Lima"
+		bolsista:an_nascimento_bolsista "1992"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-2476-4.31/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:id_semestre_defesa "2025.2"
+		bolsista:id_semestre_titulacao "2025.2"
+		bolsista:nm_status "ADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-2476-4.31-22
+	]
+	instance Bolsista-12379243328 : bolsista:bolsista [
+		bolsista:nr_cpf_bolsista "12379243328"
+		base:nome "Natália Costa"
+		bolsista:an_nascimento_bolsista "1995"
+		bolsista:nm_pais_nacionalidade_bolsista "BRASIL"
+		bolsista:nm_cidade_endereco_bolsista "GARANHUNS"
+		bolsista:id_bolsa "IBPG-8045-7.12/22"
+		bolsista:dt_inicio_bolsa "01/01/2022"
+		bolsista:id_semestre_bolsa_fim "2025.2"
+		bolsista:vl_recebido "163680"^^xsd:double
+		bolsista:nm_modalidade "DOUTORADO"
+		bolsista:nm_status "INADIMPLENTE"
+		bolsista:desenvolve Projeto-APQ-8045-7.12-22
+	]
+}

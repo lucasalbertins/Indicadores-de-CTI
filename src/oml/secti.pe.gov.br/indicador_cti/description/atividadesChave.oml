@@ -1,7 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadesChave {
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
 	instance AC1 : canvas:AtividadeChave [
 		base:nome "Gestão do ciclo de vida do edital/concessão"

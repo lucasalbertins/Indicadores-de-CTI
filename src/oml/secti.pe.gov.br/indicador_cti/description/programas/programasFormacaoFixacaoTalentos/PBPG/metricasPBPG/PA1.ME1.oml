@@ -2,29 +2,29 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 		
 	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
 	instance estratSemestre : formulas:estratificacao [
-		base:id "estrat_semestre"
+		base:id "estrat_semestre_PA1.ME1"
 		base:nome "Semestre"
 	]
 	
 	instance estratModalidade : formulas:estratificacao [
-		base:id "estrat_modalidade"
+		base:id "estrat_modalidade_PA1.ME1"
 		base:nome "Modalidade"
 	]
 	
 	instance estratArea : formulas:estratificacao [
-		base:id "estrat_area"
+		base:id "estrat_area_PA1.ME1"
 		base:nome "Grande Área do Conhecimento FACEPE"
 	]
 	
 	instance estratRDE : formulas:estratificacao [
-		base:id "estrat_rde"
+		base:id "estrat_rde_PA1.ME1"
 		base:nome "Região de Desenvolvimento do Estado"
 	]
 	
@@ -48,7 +48,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	 
 	 // Fórmula: divisão(bolsistasTitulados, cotasEncerradas)
 	instance formulaDivisao : formulas:formula [
-		base:id "formula_divisao"
+		base:id "formula_divisao_PA1.ME1"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
 		formulas:possuiArgumento argDividendo
 		formulas:possuiArgumento argDivisor
@@ -56,7 +56,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 	
 	instance argDividendo : formulas:argumento [
-		base:id "arg_dividendo"
+		base:id "arg_dividendo_PA1.ME1"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "dividend"
 		formulas:possuiValor AgilFap_Quantidade_Titulados
@@ -64,7 +64,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 	
 	instance argDivisor : formulas:argumento [
-		base:id "var_divisor"
+		base:id "var_divisor_PA1.ME1"
 		formulas:posicao "2"^^xsd:int
 		formulas:nome "divisor"
 		formulas:argumentoDe formulaDivisao
@@ -72,16 +72,16 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 
 	instance AgilFap_Quantidade_Titulados : formulas:tipovalorMetrica [
-		base:id "AgilFapQtdeTitulados"
+		base:id "AgilFapQtdeTitulados_PA1.ME1"
 		formulas:valorMetrica PA1.ME2:quantidadeTitulados
 	]
 	
 	 instance AgilFap_Cotas_Encerradas : formulas:tipovalorFonteDados [
-		base:id "AgilFapCotasEncerradas"
+		base:id "AgilFapCotasEncerradas_PA1.ME1"
 		formulas:valorFonteDados "agilfap.cotas.encerradas"
 	]
 	instance formulaMultiplicacao : formulas:formula[
-		base:id "formula_multiplicacao"
+		base:id "formula_multiplicacao_PA1.ME1"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
 		formulas:possuiArgumento argMultiplicando
 		formulas:possuiArgumento argMultiplicador
@@ -90,7 +90,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// Argumento 1: multiplicando (métrica composta com fórmula interna)
 	instance argMultiplicando : formulas:argumento [
-		base:id "arg_multiplicando"
+		base:id "arg_multiplicando_PA1.ME1"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "multiplicand"
 		formulas:possuiValor valorFormulaDivisao
@@ -99,7 +99,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	 
 	// Argumento 2: multiplicador (valor literal)
 	instance argMultiplicador : formulas:argumento [
-		base:id "arg_multiplicador"
+		base:id "arg_multiplicador_PA1.ME1"
 		formulas:posicao "2"^^xsd:int
 		formulas:nome "multiplier"
 		formulas:possuiValor valorLiteral

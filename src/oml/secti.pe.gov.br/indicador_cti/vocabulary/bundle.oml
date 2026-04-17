@@ -1,10 +1,13 @@
 vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^bundle {
 	
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/indicador#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/indicador#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#>
 }

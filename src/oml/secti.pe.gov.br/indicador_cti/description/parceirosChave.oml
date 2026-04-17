@@ -1,7 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave#> as parceirosChave {
 	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
 	instance PC1 : canvas:ParceiroChave [
 		base:nome "Instituições de Ciência e Tecnologia (ICTs)"

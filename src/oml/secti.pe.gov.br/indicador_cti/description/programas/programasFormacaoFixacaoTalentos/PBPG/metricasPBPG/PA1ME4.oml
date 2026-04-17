@@ -1,29 +1,29 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1ME4#> as PA1ME4 {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
 	instance estratEDT : formulas:estratificacao [
-		base:id "estrat_edital"
+		base:id "estrat_edital_PA1.ME4"
 		base:nome "Edital"
 	]
 	
 	instance estratModalidade : formulas:estratificacao [
-		base:id "estrat_modalidade"
+		base:id "estrat_modalidade_PA1.ME4"
 		base:nome "Modalidade"
 	]
 	
 	instance estratArea : formulas:estratificacao [
-		base:id "estrat_area"
+		base:id "estrat_area_PA1.ME4"
 		base:nome "Grande Área do Conhecimento FACEPE"
 	]
 	
 	instance estratRDE : formulas:estratificacao [
-		base:id "estrat_rde"
+		base:id "estrat_rde_PA1.ME4"
 		base:nome "Região de Desenvolvimento do Estado"
 	]
 	
@@ -43,15 +43,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// Fórmula: divisão(bolsistasTitulados, cotasEncerradas)
 	instance formulaDivisao : formulas:formula [
-		base:id "formula_divisao"
+		base:id "formula_divisao_PA1.ME4"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
 		formulas:possuiArgumento argDividendo
 		formulas:possuiArgumento argDivisor
-		formulas:formulaDe taxaTomadaContas
+		//formulas:formulaDe taxaTomadaContas
 	]
 	
 	instance argDividendo : formulas:argumento [
-		base:id "arg_dividendo"
+		base:id "arg_dividendo_PA1.ME4"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "dividend"
 		formulas:possuiValor Sucupira_Bolsistas_PBPG_Tomada_Contas
@@ -59,7 +59,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 	
 	instance argDivisor : formulas:argumento [
-		base:id "var_divisor"
+		base:id "var_divisor_PA1.ME4"
 		formulas:posicao "2"^^xsd:int
 		formulas:nome "divisor"
 		formulas:argumentoDe formulaDivisao
@@ -67,25 +67,24 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 
 	instance Sucupira_Bolsistas_PBPG_Tomada_Contas : formulas:tipovalorFonteDados [
-		base:id "SucupiraBolsistasPBPGTomadaContas"
+		base:id "SucupiraBolsistasPBPGTomadaContas_PA1.ME4"
 		formulas:valorFonteDados "sucupira.pbpg.tomada.contas" //falta add o url real
 		]
 	
 	 instance Sucupira_Total_Bolsistas_PBPG : formulas:tipovalorFonteDados [
-		base:id "SucupiraTotalBolsistas - PBPG"
+		base:id "SucupiraTotalBolsistas - PBPG_PA1.ME4"
 		formulas:valorFonteDados "sucupira.total.bolsistas"
 	]
 	instance formulaMultiplicacao : formulas:formula[
-		base:id "formula_multiplicacao"
+		base:id "formula_multiplicacao_PA1.ME4"
 		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
 		formulas:possuiArgumento argMultiplicando
 		formulas:possuiArgumento argMultiplicador
-		formulas:formulaDe taxaTomadaContas
 	]
 	
 	// Argumento 1: multiplicando (métrica composta com fórmula interna)
 	instance argMultiplicando : formulas:argumento [
-		base:id "arg_multiplicando"
+		base:id "arg_multiplicando_PA1.ME4"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "multiplicand"
 		formulas:possuiValor valorFormulaDivisao
@@ -94,7 +93,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	 
 	// Argumento 2: multiplicador (valor literal)
 	instance argMultiplicador : formulas:argumento [
-		base:id "arg_multiplicador"
+		base:id "arg_multiplicador_PA1.ME4"
 		formulas:posicao "2"^^xsd:int
 		formulas:nome "multiplier"
 		formulas:possuiValor valorLiteral

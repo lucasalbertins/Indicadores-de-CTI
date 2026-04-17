@@ -1,0 +1,57 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#> as projeto {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital#> as edital
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	concept projeto < base:EntidadeNomeavel, base:EntidadeIdentificavel
+	
+	scalar area-prioritaria [
+		oneOf "SIM", "NÃO"
+	]
+	scalar area-conhecimento [
+		oneOf "HUMANAS", "EXATAS", "SAÚDE"
+	]
+	scalar rde [
+		oneOf "RMR", "FORA RMR"
+	]
+	
+	scalar property dt_inicio_projeto [
+		domain projeto
+		range xsd:string
+		functional
+	]
+	scalar property dt_fim_projeto [
+		domain projeto
+		range xsd:string
+		functional
+	]
+	scalar property vl_fomento [
+		domain projeto
+		range xsd:double
+		functional
+	]
+	scalar property vl_area_prioritaria [
+		domain projeto
+		range area-prioritaria
+		functional
+	]
+	scalar property nm_area_conhecimento [
+		domain projeto
+		range area-conhecimento
+		functional
+	]
+	scalar property nm_rde [
+		domain projeto
+		range rde
+		functional
+	]
+	
+	relation submetidoA [
+		from projeto
+		to edital:edital
+		reverse vincula
+		asymmetric
+		irreflexive
+	]
+}

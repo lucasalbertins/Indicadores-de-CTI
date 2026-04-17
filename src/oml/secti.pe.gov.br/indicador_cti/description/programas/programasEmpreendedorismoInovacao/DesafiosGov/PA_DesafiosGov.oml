@@ -3,8 +3,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/DesafiosGov/DesafiosGov#> as DesafiosGov
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao#> as planoAvaliacao
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "O programa induziu o aumento do  volume de projetos de PD&I em parceria entre o Estado e empresas de base tecnológica?"
