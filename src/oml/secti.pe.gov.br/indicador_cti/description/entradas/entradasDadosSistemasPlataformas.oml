@@ -1,0 +1,26 @@
+description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance EN2.1 : canvas:Entrada [
+		base:nome "AgilFAP"
+		base:id "EN2.1"
+	]
+	instance EN2.2 : canvas:Entrada [
+		base:nome "Sistema PROUPE"
+		base:id "EN2.2"
+	]
+	instance EN2.3 : canvas:Entrada [
+		base:nome "Plataformas Porto Digital"
+		base:id "EN2.3"
+	]
+	instance EN2.4 : canvas:Entrada [
+		base:nome "Dados e desafios governamentais"
+		base:id "EN2.4"
+	]
+	instance EN2.5 : canvas:Entrada [
+		base:nome "Sistemas de monitoramento dos espaços/projetos"
+		base:id "EN2.5"
+	]
+}

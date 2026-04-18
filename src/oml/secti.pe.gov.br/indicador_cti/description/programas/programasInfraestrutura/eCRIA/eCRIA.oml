@@ -4,7 +4,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica#> as entradasInfraestruturaFisica
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
@@ -21,7 +24,9 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 		parceirosAcademiaICTs:PC3.8
 		programa:condicionadoPor fatorExterno:FE.OP14, fatorExterno:FE.OP15, fatorExterno:FE.OP16, fatorExterno:FE.OP17, fatorExterno:FE.OP18, 
 		fatorExterno:FE.AM20, fatorExterno:FE.AM21, fatorExterno:FE.AM22, fatorExterno:FE.AM23, fatorExterno:FE.AM24, fatorExterno:FE.AM25
-		programa:recebeEntradas entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN12, entrada:EN13, entrada:EN14
+		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.3, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		entradasDadosSistemasPlataformas:EN2.5, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.6, entradasCapitalHumano:EN3.7, 
+		entradasInfraestruturaFisica:EN4.2
 		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, atividadeChave:AC13, 
 		atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17, atividadeChave:AC18
 		programa:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17

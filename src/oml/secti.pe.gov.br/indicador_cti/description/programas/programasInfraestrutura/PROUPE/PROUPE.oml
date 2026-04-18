@@ -3,7 +3,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
@@ -19,7 +21,8 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5
 		programa:condicionadoPor fatorExterno:FE.OP19, fatorExterno:FE.OP20, fatorExterno:FE.OP21, fatorExterno:FE.OP22,fatorExterno:FE.OP23, 
 		fatorExterno:FE.OP24,fatorExterno:FE.AM26, fatorExterno:FE.AM27, fatorExterno:FE.AM28, fatorExterno:FE.AM29
-		programa:recebeEntradas entrada:EN2, entrada:EN4, entrada:EN6, entrada:EN15
+		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.2, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.2, 
+		entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.3
 		programa:executa atividadeChave:AC19, atividadeChave:AC20, atividadeChave:AC21, atividadeChave:AC22, atividadeChave:AC23, atividadeChave:AC24, 
 		atividadeChave:AC25
 		programa:geraSaidas saida:SA18, saida:SA19, saida:SA20, saida:SA21, saida:SA22, saida:SA23, saida:SA24, saida:SA25, saida:SA26, saida:SA27, saida:SA28, 

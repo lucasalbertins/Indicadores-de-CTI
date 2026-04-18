@@ -1,0 +1,34 @@
+description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance EN5.1 : canvas:Entrada [
+		base:nome "Estratégia Estadual CT&I"
+		base:id "EN5.1"
+	]
+	instance EN5.2 : canvas:Entrada [
+		base:nome "Marco Legal Nacional de CT&I - Lei 10.973/2004, Lei 13.243/2016 etc."
+		base:id "EN5.2"
+	]
+	instance EN5.3 : canvas:Entrada [
+		base:nome "Marco Legal Estadual de CT&I -  Lei Estadual 13.690/2008 etc."
+		base:id "EN5.3"
+	]
+	instance EN5.4 : canvas:Entrada [
+		base:nome "Acordos de Cooperação Técnica"
+		base:id "EN5.4"
+	]
+	instance EN5.5 : canvas:Entrada [
+		base:nome "Contrato de Gestão"
+		base:id "EN5.5"
+	]
+	instance EN5.6 : canvas:Entrada [
+		base:nome "Convênios"
+		base:id "EN5.6"
+	]
+	instance EN5.7 : canvas:Entrada [
+		base:nome "Proposta preliminar e detalhada de projetos elaborados pelos proponentes para as etapas de seleção"
+		base:id "EN5.7"
+	]
+}

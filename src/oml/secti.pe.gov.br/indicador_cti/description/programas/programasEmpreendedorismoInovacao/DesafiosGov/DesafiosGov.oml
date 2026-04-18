@@ -6,7 +6,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao#> as parceirosAmbientesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
-	extends <http://secti.pe.gov.br/indicador_cti/description/entradas#> as entrada
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
@@ -22,7 +25,8 @@ da gestão pública do estado de Pernambuco"
 		programa:possuiParceiros parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosGoverno:PC1.11, parceirosEmpresas:PC4.1, 
 		parceirosEmpresas:PC4.2, parceirosAmbientesInovacao:PC5.9
 		programa:condicionadoPor fatorExterno:FE.OP8, fatorExterno:FE.OP9, fatorExterno:FE.OP11, fatorExterno:FE.OP13, fatorExterno:FE.AM15, fatorExterno:FE.AM19
-		programa:recebeEntradas entrada:EN1, entrada:EN2, entrada:EN3, entrada:EN4, entrada:EN6, entrada:EN5
+		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.4, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
 		programa:produzResultados RE.CP1, RE.MP1, RE.LP1, RE.LP2

@@ -1,0 +1,30 @@
+description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance EN1.1 : canvas:Entrada [
+		base:nome "Orçamento estadual - FACEPE"
+		base:id "EN1.1"
+	]
+	instance EN1.2 : canvas:Entrada [
+		base:nome "Orçamento estadual - SECTI-PE"
+		base:id "EN1.2"
+	]
+	instance EN1.3 : canvas:Entrada [
+		base:nome "Orçamento estadual - Outras secretarias"
+		base:id "EN1.3"
+	]
+	instance EN1.4 : canvas:Entrada [
+		base:nome "Orçamento Estadual - Fundo Inovar-PE"
+		base:id "EN1.4"
+	]
+	instance EN1.5 : canvas:Entrada [
+		base:nome "Contrapartida Financeira de instituições parceira e proponentes"
+		base:id "EN1.5"
+	]
+	instance EN1.6 : canvas:Entrada [
+		base:nome "Contrapartida Não-Financeira de instituições parceira e proponentes"
+		base:id "EN1.6"
+	]
+}
