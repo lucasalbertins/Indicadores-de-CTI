@@ -10,7 +10,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica#> as entradasInfraestruturaFisica
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -31,8 +30,6 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 		atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17, atividadeChave:AC18
 		programa:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP8
-		programa:direcionadoA publicoAlvo:PU.DI20, publicoAlvo:PU.DI21, publicoAlvo:PU.IN17, publicoAlvo:PU.IN18, publicoAlvo:PU.IN19, publicoAlvo:PU.IN20, 
-		publicoAlvo:PU.IN21
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
 	]

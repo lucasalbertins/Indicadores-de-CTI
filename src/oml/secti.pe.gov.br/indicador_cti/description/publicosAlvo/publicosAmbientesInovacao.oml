@@ -1,0 +1,38 @@
+description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PA4.1 : canvas:PublicoAlvo [
+		base:nome "Parques Tecnológicos"
+		base:id "PA4.1"
+	]
+	instance PA4.2 : canvas:PublicoAlvo [
+		base:nome "Porto Digital"
+		base:id "PA4.2"
+	]
+	instance PA4.3 : canvas:PublicoAlvo [
+		base:nome "Parqtel"
+		base:id "PA4.3"
+	]
+	instance PA4.4 : canvas:PublicoAlvo [
+		base:nome "ITEP"
+		base:id "PA4.4"
+	]
+	instance PA4.5 : canvas:PublicoAlvo [
+		base:nome "Comunidades de startups (Manguezal, Sete Colinas, ACIC, Tapioca Valley, Caroá Hub; São Francisco Valley, etc)"
+		base:id "PA4.5"
+	]
+	instance PA4.6 : canvas:PublicoAlvo [
+		base:nome "Incubadoras"
+		base:id "PA4.6"
+	]
+	instance PA4.7 : canvas:PublicoAlvo [
+		base:nome "Aceleradoras"
+		base:id "PA4.7"
+	]
+	instance PA4.8 : canvas:PublicoAlvo [
+		base:nome "Hubs de Inovação (Coworkings, Living Labs, Espaços Makers, etc)"
+		base:id "PA4.8"
+	]
+}

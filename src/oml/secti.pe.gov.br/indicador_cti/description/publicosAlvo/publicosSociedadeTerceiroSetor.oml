@@ -1,0 +1,34 @@
+description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	instance PA5.1 : canvas:PublicoAlvo [
+		base:nome "Cidadão e sociedade em geral"
+		base:id "PA5.1"
+	]
+	instance PA5.2 : canvas:PublicoAlvo [
+		base:nome "Terceiro Setor (ONGs, Organizações da Sociedade Civil de Interesse Público - OSCIP, Organizações Sociais - OS)"
+		base:id "PA5.2"
+	]
+	instance PA5.3 : canvas:PublicoAlvo [
+		base:nome "Povos e comunidades tradicionais (quilombolas, indígenas, ribeirinhos etc)"
+		base:id "PA5.3"
+	]
+	instance PA5.4 : canvas:PublicoAlvo [
+		base:nome "Grupo sociais em situação de vulnerabilidade"
+		base:id "PA5.4"
+	]
+	instance PA5.5 : canvas:PublicoAlvo [
+		base:nome "População LGBTQIA+"
+		base:id "PA5.5"
+	]
+	instance PA5.6 : canvas:PublicoAlvo [
+		base:nome "Mulheres negras, pretas, pardas"
+		base:id "PA5.6"
+	]
+	instance PA5.7 : canvas:PublicoAlvo [
+		base:nome "Pessoas com Deficiência (PCD)"
+		base:id "PA5.7"
+	]
+}

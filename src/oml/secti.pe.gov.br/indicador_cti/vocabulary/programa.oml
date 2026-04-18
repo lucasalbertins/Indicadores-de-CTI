@@ -64,13 +64,15 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as progra
 		asymmetric
 		irreflexive
 	]
-	relation direcionadoA [
+	relation entity direcionadoA [
 		from programaCTI
 		to canvas:PublicoAlvo
-		reverse orientadoA
+		forward abrange
+		reverse acolhidoPor
 		asymmetric
 		irreflexive
-	]
+	] < base:EntidadeTipavel
+	
 	relation avaliadoPor [
 		from programaCTI
 		to pl:questaoAvaliacao

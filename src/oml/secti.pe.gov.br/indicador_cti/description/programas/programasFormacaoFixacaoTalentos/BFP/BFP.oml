@@ -11,7 +11,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -28,8 +27,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7, saida:SA8
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3
-		programa:direcionadoA publicoAlvo:PU.DI5, publicoAlvo:PU.DI6, publicoAlvo:PU.IN6, publicoAlvo:PU.IN1, publicoAlvo:PU.IN8, publicoAlvo:PU.IN3, 
-		publicoAlvo:PU.IN4, publicoAlvo:PU.IN5
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA_BFP:PA1, PA_BFP:PA2, PA_BFP:PA3, PA_BFP:PA4, PA_BFP:PA5, PA_BFP:PA6, PA_BFP:PA7, PA_BFP:PA8, PA_BFP:PA9, PA_BFP:PA10, PA_BFP:PA11

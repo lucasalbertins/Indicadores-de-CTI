@@ -12,7 +12,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -30,7 +29,6 @@ da gestão pública do estado de Pernambuco"
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
 		programa:produzResultados RE.CP1, RE.MP1, RE.LP1, RE.LP2
-		programa:direcionadoA publicoAlvo:PU.DI18, publicoAlvo:PU.DI19, publicoAlvo:PU.IN14, publicoAlvo:PU.IN15, publicoAlvo:PU.IN16
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA_DesafiosGov:PA1, PA_DesafiosGov:PA2, PA_DesafiosGov:PA3, PA_DesafiosGov:PA4, PA_DesafiosGov:PA5

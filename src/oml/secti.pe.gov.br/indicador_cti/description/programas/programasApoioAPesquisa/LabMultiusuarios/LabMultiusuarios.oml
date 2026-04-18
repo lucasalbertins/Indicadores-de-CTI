@@ -12,7 +12,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -34,7 +33,6 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA3, saida:SA4
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2
-		programa:direcionadoA publicoAlvo:PU.DI7, publicoAlvo:PU.DI8, publicoAlvo:PU.DI9, publicoAlvo:PU.IN3
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8, OB.ES9
 		programa:avaliadoPor PA_LabMultiusuarios:PA1, PA_LabMultiusuarios:PA2, PA_LabMultiusuarios:PA3, PA_LabMultiusuarios:PA4, PA_LabMultiusuarios:PA5, 

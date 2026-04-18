@@ -10,7 +10,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
  	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
-	extends <http://secti.pe.gov.br/indicador_cti/description/publicoAlvo#> as publicoAlvo
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -28,8 +27,6 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
 		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
 		programa:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
-		programa:direcionadoA publicoAlvo:PU.DI14, publicoAlvo:PU.DI15, publicoAlvo:PU.DI9, publicoAlvo:PU.DI16, publicoAlvo:PU.DI17, publicoAlvo:PU.IN9, 
-		publicoAlvo:PU.IN10, publicoAlvo:PU.IN11, publicoAlvo:PU.IN12, publicoAlvo:PU.IN13
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
 		programa:avaliadoPor PA_RedesInovacao:PA1, PA_RedesInovacao:PA2, PA_RedesInovacao:PA3, PA_RedesInovacao:PA4, PA_RedesInovacao:PA5, PA_RedesInovacao:PA6, 
