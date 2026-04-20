@@ -13,6 +13,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
@@ -58,6 +59,16 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 	relation instance PR6.direcionadoA.PA2.1 : programa:direcionadoA [
 		from PR6
 		to publicosGovernoInstituicoesPublicas:PA2.1
+		base:tipo "direto"
+	]
+	relation instance PR6.direcionadoA.PA2.2 : programa:direcionadoA [
+		from PR6
+		to publicosGovernoInstituicoesPublicas:PA2.2
+		base:tipo "indireto"
+	]
+	relation instance PR6.direcionadoA.PA3.2 : programa:direcionadoA [
+		from PR6
+		to publicosEmpresasEmpreendedores:PA3.2
 		base:tipo "direto"
 	]
 	relation instance PR6.direcionadoA.PA5.1 : programa:direcionadoA [

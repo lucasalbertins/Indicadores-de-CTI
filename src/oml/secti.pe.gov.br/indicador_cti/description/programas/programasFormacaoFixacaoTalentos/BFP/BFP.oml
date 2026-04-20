@@ -11,6 +11,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -30,6 +35,73 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA_BFP:PA1, PA_BFP:PA2, PA_BFP:PA3, PA_BFP:PA4, PA_BFP:PA5, PA_BFP:PA6, PA_BFP:PA7, PA_BFP:PA8, PA_BFP:PA9, PA_BFP:PA10, PA_BFP:PA11
+	]
+	
+	// Relações BFP --> Público-Alvo
+	relation instance PR4.direcionadoA.PA1.2 : programa:direcionadoA [
+		from PR4
+		to publicosAcademiaICTs:PA1.2
+		base:tipo "direto"
+	]
+	relation instance PR4.direcionadoA.PA1.6 : programa:direcionadoA [
+		from PR4
+		to publicosAcademiaICTs:PA1.6
+		base:tipo "direto"
+	]
+	relation instance PR4.direcionadoA.PA1.13 : programa:direcionadoA [
+		from PR4
+		to publicosAcademiaICTs:PA1.13
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA1.14 : programa:direcionadoA [
+		from PR4
+		to publicosAcademiaICTs:PA1.14
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA2.2 : programa:direcionadoA [
+		from PR4
+		to publicosGovernoInstituicoesPublicas:PA2.2
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA2.3 : programa:direcionadoA [
+		from PR4
+		to publicosGovernoInstituicoesPublicas:PA2.3
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA3.2 : programa:direcionadoA [
+		from PR4
+		to publicosEmpresasEmpreendedores:PA3.2
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA3.5 : programa:direcionadoA [
+		from PR4
+		to publicosEmpresasEmpreendedores:PA3.5
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA4.1 : programa:direcionadoA [
+		from PR4
+		to publicosAmbientesInovacao:PA4.1
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA4.6 : programa:direcionadoA [
+		from PR4
+		to publicosAmbientesInovacao:PA4.6
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA4.7 : programa:direcionadoA [
+		from PR4
+		to publicosAmbientesInovacao:PA4.7
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA4.8 : programa:direcionadoA [
+		from PR4
+		to publicosAmbientesInovacao:PA4.8
+		base:tipo "indireto"
+	]
+	relation instance PR4.direcionadoA.PA5.1 : programa:direcionadoA [
+		from PR4
+		to publicosSociedadeTerceiroSetor:PA5.1
+		base:tipo "indireto"
 	]
 	
 	// Objetivo Geral

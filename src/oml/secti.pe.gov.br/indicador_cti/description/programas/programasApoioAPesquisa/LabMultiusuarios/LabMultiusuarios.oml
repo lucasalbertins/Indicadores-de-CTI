@@ -12,6 +12,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -39,6 +42,53 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 		PA_LabMultiusuarios:PA6, PA_LabMultiusuarios:PA7, PA_LabMultiusuarios:PA8, PA_LabMultiusuarios:PA9, PA_LabMultiusuarios:PA10, PA_LabMultiusuarios:PA11, 
 		PA_LabMultiusuarios:PA12, PA_LabMultiusuarios:PA13, PA_LabMultiusuarios:PA14, PA_LabMultiusuarios:PA15, PA_LabMultiusuarios:PA16, PA_LabMultiusuarios:PA17, 
 		PA_LabMultiusuarios:PA18, PA_LabMultiusuarios:PA19, PA_LabMultiusuarios:PA20, PA_LabMultiusuarios:PA21, PA_LabMultiusuarios:PA22
+	]
+	
+	// Relações Laboratórios MultiUsuários --> Público-Alvo
+	relation instance PR2.direcionadoA.PA1.1 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.1
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.2 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.2
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.5 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.5
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.6 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.6
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.7 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.7
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.10 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.10
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA1.11 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PA1.11
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA3.2 : programa:direcionadoA [
+		from PR2
+		to publicosEmpresasEmpreendedores:PA3.2
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PA5.1 : programa:direcionadoA [
+		from PR2
+		to publicosSociedadeTerceiroSetor:PA5.1
+		base:tipo "indireto"
 	]
 	
 	// Objetivo Geral

@@ -10,6 +10,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica#> as entradasInfraestruturaFisica
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -32,6 +35,48 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP8
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
+	]
+	
+	// Relações eCRIA --> Público-Alvo
+	relation instance PR5.direcionadoA.PA1.4 : programa:direcionadoA [
+		from PR5
+		to publicosAcademiaICTs:PA1.4
+		base:tipo "direto"
+	]
+	relation instance PR5.direcionadoA.PA1.9 : programa:direcionadoA [
+		from PR5
+		to publicosAcademiaICTs:PA1.9
+		base:tipo "direto"
+	]
+	relation instance PR5.direcionadoA.PA3.2 : programa:direcionadoA [
+		from PR5
+		to publicosEmpresasEmpreendedores:PA3.2
+		base:tipo "indireto"
+	]
+	relation instance PR5.direcionadoA.PA3.3 : programa:direcionadoA [
+		from PR5
+		to publicosEmpresasEmpreendedores:PA3.3
+		base:tipo "indireto"
+	]
+	relation instance PR5.direcionadoA.PA3.6 : programa:direcionadoA [
+		from PR5
+		to publicosEmpresasEmpreendedores:PA3.6
+		base:tipo "indireto"
+	]
+	relation instance PR5.direcionadoA.PA5.1 : programa:direcionadoA [
+		from PR5
+		to publicosSociedadeTerceiroSetor:PA5.1
+		base:tipo "indireto"
+	]
+	relation instance PR5.direcionadoA.PA5.3 : programa:direcionadoA [
+		from PR5
+		to publicosSociedadeTerceiroSetor:PA5.3
+		base:tipo "indireto"
+	]
+	relation instance PR5.direcionadoA.PA5.4 : programa:direcionadoA [
+		from PR5
+		to publicosSociedadeTerceiroSetor:PA5.4
+		base:tipo "indireto"
 	]
 	
 	// Objetivo Geral

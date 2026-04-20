@@ -12,6 +12,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -32,6 +36,58 @@ da gestão pública do estado de Pernambuco"
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA_DesafiosGov:PA1, PA_DesafiosGov:PA2, PA_DesafiosGov:PA3, PA_DesafiosGov:PA4, PA_DesafiosGov:PA5
+	]
+	
+	// Relações Desafios.gov --> Público-Alvo
+	relation instance PR7.direcionadoA.PA2.2 : programa:direcionadoA [
+		from PR7
+		to publicosGovernoInstituicoesPublicas:PA2.2
+		base:tipo "direto"
+	]
+	relation instance PR7.direcionadoA.PA2.3 : programa:direcionadoA [
+		from PR7
+		to publicosGovernoInstituicoesPublicas:PA2.3
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA3.2 : programa:direcionadoA [
+		from PR7
+		to publicosEmpresasEmpreendedores:PA3.2
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA3.5 : programa:direcionadoA [
+		from PR7
+		to publicosEmpresasEmpreendedores:PA3.5
+		base:tipo "direto"
+	]
+	relation instance PR7.direcionadoA.PA4.1 : programa:direcionadoA [
+		from PR7
+		to publicosAmbientesInovacao:PA4.1
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA4.6 : programa:direcionadoA [
+		from PR7
+		to publicosAmbientesInovacao:PA4.6
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA4.7 : programa:direcionadoA [
+		from PR7
+		to publicosAmbientesInovacao:PA4.7
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA4.8 : programa:direcionadoA [
+		from PR7
+		to publicosAmbientesInovacao:PA4.8
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA5.1 : programa:direcionadoA [
+		from PR7
+		to publicosSociedadeTerceiroSetor:PA5.1
+		base:tipo "indireto"
+	]
+	relation instance PR7.direcionadoA.PA5.2 : programa:direcionadoA [
+		from PR7
+		to publicosSociedadeTerceiroSetor:PA5.2
+		base:tipo "indireto"
 	]
 	
 	// Objetivo Geral
