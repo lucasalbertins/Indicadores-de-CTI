@@ -45,49 +45,49 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 	]
 	
 	// Relações Laboratórios MultiUsuários --> Público-Alvo
-	relation instance PR2.direcionadoA.PA1.1 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.1 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.1
+		to publicosAcademiaICTs:PU1.1
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.2 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.2 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.2
+		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.5 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.5 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.5
+		to publicosAcademiaICTs:PU1.5
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.6 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.6 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.6
+		to publicosAcademiaICTs:PU1.6
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.7 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.7 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.7
+		to publicosAcademiaICTs:PU1.7
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.10 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.10 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.10
+		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA1.11 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU1.11 : programa:direcionadoA [
 		from PR2
-		to publicosAcademiaICTs:PA1.11
+		to publicosAcademiaICTs:PU1.11
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA3.2 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU3.2 : programa:direcionadoA [
 		from PR2
-		to publicosEmpresasEmpreendedores:PA3.2
+		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
 	]
-	relation instance PR2.direcionadoA.PA5.1 : programa:direcionadoA [
+	relation instance PR2.direcionadoA.PU5.1 : programa:direcionadoA [
 		from PR2
-		to publicosSociedadeTerceiroSetor:PA5.1
+		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
 	

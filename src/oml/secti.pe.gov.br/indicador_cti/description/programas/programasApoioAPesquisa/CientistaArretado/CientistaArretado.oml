@@ -41,39 +41,39 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 	]
 	
 	// Relações Cientista Arretado --> Público-Alvo
-	relation instance PR6.direcionadoA.PA1.2 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU1.2 : programa:direcionadoA [
 		from PR6
-		to publicosAcademiaICTs:PA1.2
+		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PA1.10 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU1.10 : programa:direcionadoA [
 		from PR6
-		to publicosAcademiaICTs:PA1.10
+		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PA1.11 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU1.11 : programa:direcionadoA [
 		from PR6
-		to publicosAcademiaICTs:PA1.11
+		to publicosAcademiaICTs:PU1.11
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PA2.1 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU2.1 : programa:direcionadoA [
 		from PR6
-		to publicosGovernoInstituicoesPublicas:PA2.1
+		to publicosGovernoInstituicoesPublicas:PU2.1
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PA2.2 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU2.2 : programa:direcionadoA [
 		from PR6
-		to publicosGovernoInstituicoesPublicas:PA2.2
+		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	relation instance PR6.direcionadoA.PA3.2 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU3.2 : programa:direcionadoA [
 		from PR6
-		to publicosEmpresasEmpreendedores:PA3.2
+		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PA5.1 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU5.1 : programa:direcionadoA [
 		from PR6
-		to publicosSociedadeTerceiroSetor:PA5.1
+		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "direto"
 	]
 	

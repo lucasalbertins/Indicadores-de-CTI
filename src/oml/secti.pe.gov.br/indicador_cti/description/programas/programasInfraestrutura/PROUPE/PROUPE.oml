@@ -34,9 +34,9 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 	]
 	
 	// Relações PROUPE --> Público-Alvo
-	relation instance PR9.direcionadoA.PA1.10 : programa:direcionadoA [
+	relation instance PR9.direcionadoA.PU1.10 : programa:direcionadoA [
 		from PR9
-		to publicosAcademiaICTs:PA1.10
+		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
 	

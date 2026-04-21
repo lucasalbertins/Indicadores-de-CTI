@@ -38,44 +38,44 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 	]
 	
 	// Relações eCRIA --> Público-Alvo
-	relation instance PR5.direcionadoA.PA1.4 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU1.4 : programa:direcionadoA [
 		from PR5
-		to publicosAcademiaICTs:PA1.4
+		to publicosAcademiaICTs:PU1.4
 		base:tipo "direto"
 	]
-	relation instance PR5.direcionadoA.PA1.9 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU1.9 : programa:direcionadoA [
 		from PR5
-		to publicosAcademiaICTs:PA1.9
+		to publicosAcademiaICTs:PU1.9
 		base:tipo "direto"
 	]
-	relation instance PR5.direcionadoA.PA3.2 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.2 : programa:direcionadoA [
 		from PR5
-		to publicosEmpresasEmpreendedores:PA3.2
+		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PA3.3 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.3 : programa:direcionadoA [
 		from PR5
-		to publicosEmpresasEmpreendedores:PA3.3
+		to publicosEmpresasEmpreendedores:PU3.3
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PA3.6 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.6 : programa:direcionadoA [
 		from PR5
-		to publicosEmpresasEmpreendedores:PA3.6
+		to publicosEmpresasEmpreendedores:PU3.6
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PA5.1 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.1 : programa:direcionadoA [
 		from PR5
-		to publicosSociedadeTerceiroSetor:PA5.1
+		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PA5.3 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.3 : programa:direcionadoA [
 		from PR5
-		to publicosSociedadeTerceiroSetor:PA5.3
+		to publicosSociedadeTerceiroSetor:PU5.3
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PA5.4 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.4 : programa:direcionadoA [
 		from PR5
-		to publicosSociedadeTerceiroSetor:PA5.4
+		to publicosSociedadeTerceiroSetor:PU5.4
 		base:tipo "indireto"
 	]
 	

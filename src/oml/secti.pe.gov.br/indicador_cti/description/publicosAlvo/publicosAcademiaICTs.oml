@@ -3,60 +3,60 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
-	instance PA1.1 : canvas:PublicoAlvo [
+	instance PU1.1 : canvas:PublicoAlvo [
 		base:nome "Pesquisadores sem doutorado"
-		base:id "PA1.1"
+		base:id "PU1.1"
 	]
-	instance PA1.2 : canvas:PublicoAlvo [
+	instance PU1.2 : canvas:PublicoAlvo [
 		base:nome "Pesquisadores com doutorado"
-		base:id "PA1.2"
+		base:id "PU1.2"
 	]
-	instance PA1.3 : canvas:PublicoAlvo [
+	instance PU1.3 : canvas:PublicoAlvo [
 		base:nome "Professores em geral"
-		base:id "PA1.3"
+		base:id "PU1.3"
 	]
-	instance PA1.4 : canvas:PublicoAlvo [
+	instance PU1.4 : canvas:PublicoAlvo [
 		base:nome "Professores da educação básica (ensino fundamental e médio)"
-		base:id "PA1.4"
+		base:id "PU1.4"
 	]
-	instance PA1.5 : canvas:PublicoAlvo [
+	instance PU1.5 : canvas:PublicoAlvo [
 		base:nome "Professores de graduação"
-		base:id "PA1.5"
+		base:id "PU1.5"
 	]
-	instance PA1.6 : canvas:PublicoAlvo [
+	instance PU1.6 : canvas:PublicoAlvo [
 		base:nome "Professores de pós-graduação"
-		base:id "PA1.6"
+		base:id "PU1.6"
 	]
-	instance PA1.7 : canvas:PublicoAlvo [
+	instance PU1.7 : canvas:PublicoAlvo [
 		base:nome "Profissionais técnicos de instituições de caráter educativo, cultural, científico ou tecnológico"
-		base:id "PA1.7"
+		base:id "PU1.7"
 	]
-	instance PA1.8 : canvas:PublicoAlvo [
+	instance PU1.8 : canvas:PublicoAlvo [
 		base:nome "Estudantes em geral"
-		base:id "PA1.8"
+		base:id "PU1.8"
 	]
-	instance PA1.9 : canvas:PublicoAlvo [
+	instance PU1.9 : canvas:PublicoAlvo [
 		base:nome "Estudantes da educação básica (ensino fundamental e médio)"
-		base:id "PA1.9"
+		base:id "PU1.9"
 	]
-	instance PA1.10 : canvas:PublicoAlvo [
+	instance PU1.10 : canvas:PublicoAlvo [
 		base:nome "Estudantes de graduação"
-		base:id "PA1.10"
+		base:id "PU1.10"
 	]
-	instance PA1.11 : canvas:PublicoAlvo [
+	instance PU1.11 : canvas:PublicoAlvo [
 		base:nome "Estudantes de pós-graduação"
-		base:id "PA1.11"
+		base:id "PU1.11"
 	]
-	instance PA1.12 : canvas:PublicoAlvo [
+	instance PU1.12 : canvas:PublicoAlvo [
 		base:nome "Grupos de Pesquisa"
-		base:id "PA1.12"
+		base:id "PU1.12"
 	]
-	instance PA1.13 : canvas:PublicoAlvo [
+	instance PU1.13 : canvas:PublicoAlvo [
 		base:nome "Instituições Científicas, Tecnológicas e de Inovação (ICTs)"
-		base:id "PA1.13"
+		base:id "PU1.13"
 	]
-	instance PA1.14 : canvas:PublicoAlvo [
+	instance PU1.14 : canvas:PublicoAlvo [
 		base:nome "Programas de Pós-Graduação (PPG) de Pernambuco"
-		base:id "PA1.14"
+		base:id "PU1.14"
 	]
 }

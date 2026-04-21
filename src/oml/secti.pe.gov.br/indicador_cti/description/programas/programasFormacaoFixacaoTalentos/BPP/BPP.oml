@@ -37,74 +37,74 @@ bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos
 	]
 	
 	// Relações BPP --> Público-Alvo
-	relation instance PR8.direcionadoA.PA1.1 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU1.1 : programa:direcionadoA [
 		from PR8
-		to publicosAcademiaICTs:PA1.1
+		to publicosAcademiaICTs:PU1.1
 		base:tipo "direto"
 	]
-	relation instance PR8.direcionadoA.PA1.2 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU1.2 : programa:direcionadoA [
 		from PR8
-		to publicosAcademiaICTs:PA1.2
+		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR8.direcionadoA.PA1.8 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU1.8 : programa:direcionadoA [
 		from PR8
-		to publicosAcademiaICTs:PA1.8
+		to publicosAcademiaICTs:PU1.8
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA1.13 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU1.13 : programa:direcionadoA [
 		from PR8
-		to publicosAcademiaICTs:PA1.13
+		to publicosAcademiaICTs:PU1.13
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA1.14 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU1.14 : programa:direcionadoA [
 		from PR8
-		to publicosAcademiaICTs:PA1.14
+		to publicosAcademiaICTs:PU1.14
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA2.2 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU2.2 : programa:direcionadoA [
 		from PR8
-		to publicosGovernoInstituicoesPublicas:PA2.2
+		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA2.3 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU2.3 : programa:direcionadoA [
 		from PR8
-		to publicosGovernoInstituicoesPublicas:PA2.3
+		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA3.2 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU3.2 : programa:direcionadoA [
 		from PR8
-		to publicosEmpresasEmpreendedores:PA3.2
+		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA3.5 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU3.5 : programa:direcionadoA [
 		from PR8
-		to publicosEmpresasEmpreendedores:PA3.5
+		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA4.1 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU4.1 : programa:direcionadoA [
 		from PR8
-		to publicosAmbientesInovacao:PA4.1
+		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA4.6 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU4.6 : programa:direcionadoA [
 		from PR8
-		to publicosAmbientesInovacao:PA4.6
+		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA4.7 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU4.7 : programa:direcionadoA [
 		from PR8
-		to publicosAmbientesInovacao:PA4.7
+		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA4.8 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU4.8 : programa:direcionadoA [
 		from PR8
-		to publicosAmbientesInovacao:PA4.8
+		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PA5.1 : programa:direcionadoA [
+	relation instance PR8.direcionadoA.PU5.1 : programa:direcionadoA [
 		from PR8
-		to publicosSociedadeTerceiroSetor:PA5.1
+		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
 	
