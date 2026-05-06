@@ -3,7 +3,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -23,9 +27,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores"
 		base:id "PR5"
 		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.3, parceirosGoverno:PC1.5, parceirosAgenciasFomento:PC2.1, 
-		parceirosAcademiaICTs:PC3.8
-		programa:condicionadoPor fatorExterno:FE.OP14, fatorExterno:FE.OP15, fatorExterno:FE.OP16, fatorExterno:FE.OP17, fatorExterno:FE.OP18, 
-		fatorExterno:FE.AM20, fatorExterno:FE.AM21, fatorExterno:FE.AM22, fatorExterno:FE.AM23, fatorExterno:FE.AM24, fatorExterno:FE.AM25
+		parceirosAcademiaICTs:PC3.10
+		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP9, fatoresDinamicaEcossistema:FE5.OP10, fatoresDinamicaEcossistema:FE5.OP11, 
+		fatoresDinamicaEcossistema:FE5.OP12, fatoresDinamicaEcossistema:FE5.OP13, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2, 
+		fatoresCenarioTecnologico:FE3.AM5, fatoresCenarioTecnologico:FE3.AM6, fatoresCenarioTecnologico:FE3.AM7, fatoresCenarioSocialEducacional:FE4.AM2, 
+		fatoresCenarioSocialEducacional:FE4.AM4
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.3, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasDadosSistemasPlataformas:EN2.5, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.6, entradasCapitalHumano:EN3.7, 
 		entradasInfraestruturaFisica:EN4.2

@@ -3,7 +3,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -24,9 +26,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Apoia pesquisadores com notável produção científica, tecnológica ou de inovação em Pernambuco. A modalidade oferece bolsas e adicionais de 
 bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos, especialmente no interior do estado"
 		base:id "PR8"
-		programa:possuiParceiros parceirosAcademiaICTs:PC3.2, parceirosAcademiaICTs:PC3.4, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.9, 
-		parceirosAgenciasFomento:PC2.10
-		programa:condicionadoPor fatorExterno:FE.OP1, fatorExterno:FE.OP2, fatorExterno:FE.AM1, fatorExterno:FE.AM12, fatorExterno:FE.AM4
+		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTs:PC3.3, 
+		parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
+		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, 
+		fatoresCenarioTecnologico:FE3.AM4, fatoresDinamicaEcossistema:FE5.AM3
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, 
 		entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
@@ -52,14 +55,14 @@ bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos
 		to publicosAcademiaICTs:PU1.8
 		base:tipo "indireto"
 	]
-	relation instance PR8.direcionadoA.PU1.13 : programa:direcionadoA [
-		from PR8
-		to publicosAcademiaICTs:PU1.13
-		base:tipo "indireto"
-	]
 	relation instance PR8.direcionadoA.PU1.14 : programa:direcionadoA [
 		from PR8
 		to publicosAcademiaICTs:PU1.14
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU1.15 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.15
 		base:tipo "indireto"
 	]
 	relation instance PR8.direcionadoA.PU2.2 : programa:direcionadoA [

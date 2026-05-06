@@ -5,7 +5,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -26,10 +30,11 @@ estado, mediante apoio financeiro a projetos para manutenção, operação e dis
 interesse científico visando ampliar a sua disponibilidade e acessibilidade para pesquisadores, empresas e sociedade em geral, e maximizar os benefícios dessas 
 estruturas, equipamentos e acervos para a geração de conhecimento no estado de Pernambuco"
 		base:id "PR2"
-		programa:possuiParceiros parceirosAgenciasFomento:PC2.1, parceirosAcademiaICTs:PC3.2, parceirosAcademiaICTs:PC3.4, parceirosEmpresas:PC4.1, 
-		parceirosEmpresas:PC4.2, parceirosGoverno:PC1.10, parceirosAcademiaICTs:PC3.6, parceirosAcademiaICTs:PC3.7
-		programa:condicionadoPor fatorExterno:FE.OP3, fatorExterno:FE.OP4, fatorExterno:FE.OP5, fatorExterno:FE.OP6, fatorExterno:FE.AM7, fatorExterno:FE.AM8, 
-		fatorExterno:FE.AM9, fatorExterno:FE.AM10
+		programa:possuiParceiros parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.1, parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, 
+		parceirosAcademiaICTs:PC3.6, parceirosAcademiaICTs:PC3.8, parceirosAcademiaICTs:PC3.9, parceirosEmpresas:PC4.1, parceirosEmpresas:PC4.2
+		programa:condicionadoPor fatoresCenarioEconomico:FE1.OP1, fatoresCenarioInstitucionalLegal:FE2.OP2, fatoresCenarioTecnologico:FE3.OP2, 
+		fatoresDinamicaEcossistema:FE5.OP4, fatoresCenarioEconomico:FE1.AM3, fatoresCenarioEconomico:FE1.AM6, fatoresCenarioInstitucionalLegal:FE2.AM6, 
+		fatoresCenarioSocialEducacional:FE4.AM1
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.6, entradasCapitalHumano:EN3.7, 
 		entradasInstrumentosLegaisNormativos:EN5.1
@@ -78,6 +83,11 @@ estruturas, equipamentos e acervos para a geração de conhecimento no estado de
 	relation instance PR2.direcionadoA.PU1.11 : programa:direcionadoA [
 		from PR2
 		to publicosAcademiaICTs:PU1.11
+		base:tipo "direto"
+	]
+	relation instance PR2.direcionadoA.PU1.12 : programa:direcionadoA [
+		from PR2
+		to publicosAcademiaICTs:PU1.12
 		base:tipo "direto"
 	]
 	relation instance PR2.direcionadoA.PU3.2 : programa:direcionadoA [

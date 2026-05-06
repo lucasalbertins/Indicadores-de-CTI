@@ -32,19 +32,29 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/par
 		base:id "PC1.7"
 	]
 	instance PC1.8 : canvas:ParceiroChave [
-		base:nome "ATI"
+		base:nome "SDEC-PE"
 		base:id "PC1.8"
 	]
 	instance PC1.9 : canvas:ParceiroChave [
-		base:nome "Consulados e embaixadas"
+		base:nome "ATI-PE"
 		base:id "PC1.9"
 	]
 	instance PC1.10 : canvas:ParceiroChave [
-		base:nome "Órgãos da administração pública direta do Estado"
+		base:nome "Consulados e embaixadas"
 		base:id "PC1.10"
 	]
+	
+	//Falta validação
 	instance PC1.11 : canvas:ParceiroChave [
-		base:nome "Órgãos públicos integrantes"
+		base:nome "Órgãos da administração pública direta do Estado"
 		base:id "PC1.11"
+	]
+	instance PC1.12 : canvas:ParceiroChave [
+		base:nome "Órgãos públicos integrantes apoiadores"
+		base:id "PC1.12"
+	]
+	instance PC1.13 : canvas:ParceiroChave [
+		base:nome "Órgãos privados integrantes apoiadores"
+		base:id "PC1.13"
 	]
 }

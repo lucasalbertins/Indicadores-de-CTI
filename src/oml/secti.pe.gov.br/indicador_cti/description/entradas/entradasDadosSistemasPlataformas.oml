@@ -12,15 +12,21 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasD
 		base:id "EN2.2"
 	]
 	instance EN2.3 : canvas:Entrada [
-		base:nome "Plataformas Porto Digital"
+		base:nome "Plataformas Tecnológicas"
 		base:id "EN2.3"
 	]
 	instance EN2.4 : canvas:Entrada [
-		base:nome "Dados e desafios governamentais"
+		base:nome "Dados"
 		base:id "EN2.4"
 	]
 	instance EN2.5 : canvas:Entrada [
-		base:nome "Sistemas de monitoramento dos espaços/projetos"
+		base:nome "Desafios governamentais"
 		base:id "EN2.5"
+	]
+	
+	//Falta validação
+	instance EN2.6 : canvas:Entrada [
+		base:nome "Sistemas de monitoramento dos espaços/projetos"
+		base:id "EN2.6"
 	]
 }

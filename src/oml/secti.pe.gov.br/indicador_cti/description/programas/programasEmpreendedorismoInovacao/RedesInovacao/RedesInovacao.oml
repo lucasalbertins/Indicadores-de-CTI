@@ -3,7 +3,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/PA_RedesInovacao#> as PA_RedesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
- 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+ 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
  	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
  	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
  	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -24,9 +27,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Foi criado para fomentar a criação e o fortalecimento de redes de colaboração entre diferentes instituições e setores, com o objetivo de 
 impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		base:id "PR3"
-		programa:possuiParceiros parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4, parceirosGoverno:PC1.11
-		programa:condicionadoPor fatorExterno:FE.OP8, fatorExterno:FE.OP9, fatorExterno:FE.OP10, fatorExterno:FE.OP11, fatorExterno:FE.OP12, fatorExterno:FE.AM15, 
-		fatorExterno:FE.AM16, fatorExterno:FE.AM17, fatorExterno:FE.AM18
+		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4
+		programa:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
+		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM7, 
+		fatoresDinamicaEcossistema:FE5.AM1, fatoresDinamicaEcossistema:FE5.AM2
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.4, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
@@ -44,14 +48,14 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		to publicosAcademiaICTs:PU1.7
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU1.12 : programa:direcionadoA [
-		from PR3
-		to publicosAcademiaICTs:PU1.12
-		base:tipo "indireto"
-	]
 	relation instance PR3.direcionadoA.PU1.13 : programa:direcionadoA [
 		from PR3
 		to publicosAcademiaICTs:PU1.13
+		base:tipo "indireto"
+	]
+	relation instance PR3.direcionadoA.PU1.14 : programa:direcionadoA [
+		from PR3
+		to publicosAcademiaICTs:PU1.14
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU2.2 : programa:direcionadoA [

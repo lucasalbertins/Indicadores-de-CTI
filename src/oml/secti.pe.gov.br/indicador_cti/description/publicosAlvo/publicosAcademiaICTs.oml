@@ -44,19 +44,23 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 		base:id "PU1.10"
 	]
 	instance PU1.11 : canvas:PublicoAlvo [
-		base:nome "Estudantes de pós-graduação"
+		base:nome "Estudantes de pós-graduação lato sensu"
 		base:id "PU1.11"
 	]
 	instance PU1.12 : canvas:PublicoAlvo [
-		base:nome "Grupos de Pesquisa"
+		base:nome "Estudantes de pós-graduação stricto sensu"
 		base:id "PU1.12"
 	]
 	instance PU1.13 : canvas:PublicoAlvo [
-		base:nome "Instituições Científicas, Tecnológicas e de Inovação (ICTs)"
+		base:nome "Grupos de Pesquisa"
 		base:id "PU1.13"
 	]
 	instance PU1.14 : canvas:PublicoAlvo [
-		base:nome "Programas de Pós-Graduação (PPG) de Pernambuco"
+		base:nome "ICTs"
 		base:id "PU1.14"
+	]
+	instance PU1.15 : canvas:PublicoAlvo [
+		base:nome "PPGs"
+		base:id "PU1.15"
 	]
 }

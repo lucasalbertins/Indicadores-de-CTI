@@ -1,0 +1,44 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	//Oportunidades
+	// Falta validação
+	instance FE1.OP1 : canvas:Ameaca [
+		base:nome "Disponibilidade orçamentária e financeira do Tesouro Estadual"
+		base:id "FE1.OP1"
+	]
+	
+	//Ameaças
+	instance FE1.AM1 : canvas:Ameaca [
+		base:nome "Indisponibilidade financeira do Fundo Inovar-PE"
+		base:id "FE1.AM1"
+	]
+	instance FE1.AM2 : canvas:Ameaca [
+		base:nome "Limitação orçamentária do governo do Estado para continuidade das ações"
+		base:id "FE1.AM2"
+	]
+	instance FE1.AM3 : canvas:Ameaca [
+		base:nome "Crises político-econômica nacional e internacional"
+		base:id "FE1.AM3"
+	]
+	instance FE1.AM4 : canvas:Ameaca [
+		base:nome "Mercado de trabalho em recessão"
+		base:id "FE1.AM4"
+	]
+	instance FE1.AM5 : canvas:Ameaca [
+		base:nome "Baixa atratividade das bolsas"
+		base:id "FE1.AM5"
+	]
+	
+	//Falta validação
+	instance FE1.AM6 : canvas:Ameaca [
+		base:nome "Flutuação cambial"
+		base:id "FE1.AM6"
+	]
+	instance FE1.AM7 : canvas:Ameaca [
+		base:nome "Mercado de trabalho aquecido"
+		base:id "FE1.AM7"
+	]
+}

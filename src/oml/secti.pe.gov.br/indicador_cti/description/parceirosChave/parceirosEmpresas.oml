@@ -43,4 +43,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/par
 		base:nome "Apex Brasil"
 		base:id "PC4.10"
 	]
+	
+	//Falta validação
+	instance PC4.11 : canvas:ParceiroChave [
+		base:nome "Empresas integrantes dos projetos apoiados"
+		base:id "PC4.11"
+	]
 }

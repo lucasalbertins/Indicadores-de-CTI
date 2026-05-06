@@ -4,7 +4,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -24,9 +26,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Financia pesquisas aplicadas para resolver desafios da gestão pública estadual. Com foco em inovação, aproxima pesquisadores sêniores de 
 ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que gerem impacto social e soluções baseadas em evidências"
 		base:id "PR6"
-		programa:possuiParceiros parceirosAgenciasFomento:PC2.1, parceirosGoverno:PC1.1, parceirosGoverno:PC1.2, parceirosGoverno:PC1.10, 
-		parceirosAcademiaICTs:PC3.2, parceirosAcademiaICTs:PC3.4
-		programa:condicionadoPor fatorExterno:FE.OP7, fatorExterno:FE.OP4, fatorExterno:FE.AM13, fatorExterno:FE.AM14, fatorExterno:FE.AM8, fatorExterno:FE.AM10
+		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.2, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.1, 
+		parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
+		programa:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioSocialEducacional:FE4.OP2, fatoresCenarioEconomico:FE1.AM2, 
+		fatoresCenarioEconomico:FE1.AM3, fatoresCenarioTecnologico:FE3.AM1, fatoresCenarioSocialEducacional:FE4.AM1
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasDadosSistemasPlataformas:EN2.4, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1, entradasInstrumentosLegaisNormativos:EN5.7
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
@@ -51,9 +54,9 @@ ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que
 		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU1.11 : programa:direcionadoA [
+	relation instance PR6.direcionadoA.PU1.12 : programa:direcionadoA [
 		from PR6
-		to publicosAcademiaICTs:PU1.11
+		to publicosAcademiaICTs:PU1.12
 		base:tipo "direto"
 	]
 	relation instance PR6.direcionadoA.PU2.1 : programa:direcionadoA [

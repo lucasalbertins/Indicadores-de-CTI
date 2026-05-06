@@ -24,11 +24,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 		base:id "PU5.5"
 	]
 	instance PU5.6 : canvas:PublicoAlvo [
-		base:nome "Mulheres negras, pretas, pardas"
+		base:nome "Mulheres em geral"
 		base:id "PU5.6"
 	]
 	instance PU5.7 : canvas:PublicoAlvo [
-		base:nome "Pessoas com Deficiência (PCD)"
+		base:nome "Mulheres negras ou pardas"
 		base:id "PU5.7"
+	]
+	instance PU5.8 : canvas:PublicoAlvo [
+		base:nome "PCDs"
+		base:id "PU5.8"
 	]
 }
