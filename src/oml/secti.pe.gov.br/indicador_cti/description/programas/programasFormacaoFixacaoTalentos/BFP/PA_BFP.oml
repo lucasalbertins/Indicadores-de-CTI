@@ -1,6 +1,10 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/PA_BFP#> as PA_BFP {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesInfraestruturaAtivosCTI#> as fontesInfraestruturaAtivosCTI
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosSocioeconomicosTerritoriais#> as fontesDadosSocioeconomicosTerritoriais
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP#> as BFP
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
@@ -11,10 +15,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 período de concessão da cota?"
 		base:id "PA1 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2
 		planoAvaliacao:temEscopo PA1.ES
-		planoAvaliacao:temMetodologia PA1.MA1, PA1.MA2
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA1.MA1, PA1.MA4
 		planoAvaliacao:alinhaComResultado BFP:RE.CP1
 	]
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
@@ -22,10 +26,10 @@ período de concessão da cota?"
 um ano após o período de concessão da bolsa?"
 		base:id "PA2 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2, PA2.ME3, PA2.ME4, PA2.ME5, PA2.ME6, PA2.ME7, PA2.ME8, PA2.ME9, PA2.ME10
 		planoAvaliacao:temEscopo PA2.ES
-		planoAvaliacao:temMetodologia PA2.MA1, PA2.MA2
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA2.MA1, PA2.MA4
 		planoAvaliacao:temLimitacao LIM1
 		planoAvaliacao:alinhaComResultado BFP:RE.CP2
 	]
@@ -34,10 +38,10 @@ um ano após o período de concessão da bolsa?"
 pelo bolsista BFP, considerando até um ano após o período de concessão da cota?"
 		base:id "PA3 - BFP"
 		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA3.ME1, PA3.ME2, PA3.ME3
 		planoAvaliacao:temEscopo PA3.ES
-		planoAvaliacao:temMetodologia PA3.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA3.MA1
 		planoAvaliacao:temLimitacao LIM2
 		planoAvaliacao:alinhaComResultado BFP:RE.CP3
 	]
@@ -46,10 +50,10 @@ pelo bolsista BFP, considerando até um ano após o período de concessão da co
 cota?"
 		base:id "PA4 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2
 		planoAvaliacao:temEscopo PA4.ES
-		planoAvaliacao:temMetodologia PA4.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA4.MA1
 		planoAvaliacao:alinhaComResultado BFP:RE.CP4
 	]
 	instance PA5 : planoAvaliacao:questaoAvaliacao [
@@ -57,10 +61,10 @@ cota?"
 um ano após o fim da bolsa?"
 		base:id "PA5 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA5.ME1, PA5.ME2, PA5.ME3, PA5.ME4
 		planoAvaliacao:temEscopo PA5.ES
-		planoAvaliacao:temMetodologia PA5.MA1, PA5.MA2
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA5.MA1, PA5.MA4
 		planoAvaliacao:temLimitacao LIM1
 		planoAvaliacao:alinhaComResultado BFP:RE.CP5
 	]
@@ -68,10 +72,10 @@ um ano após o fim da bolsa?"
 		base:nome "Qual a evolução do conceito CAPES dos PPGs apoiados pelo BFP na qual o supervisor está vinculado?"
 		base:id "PA6 - BFP"
 		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
 		planoAvaliacao:temMetrica PA6.ME1, PA6.ME2, PA6.ME3
 		planoAvaliacao:temEscopo PA6.ES
-		planoAvaliacao:temMetodologia PA6.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA6.MA1
 		planoAvaliacao:temLimitacao LIM1
 		planoAvaliacao:alinhaComResultado BFP:RE.MP1
 	]
@@ -80,20 +84,20 @@ um ano após o fim da bolsa?"
 considerando o período de três anos após o fim da bolsa?"
 		base:id "PA7 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA7.ME1
 		planoAvaliacao:temEscopo PA7.ES
-		planoAvaliacao:temMetodologia PA7.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA7.MA1
 		planoAvaliacao:alinhaComResultado BFP:RE.MP2
 	]
 	instance PA8 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas inovações (produtos, processos, serviços) fomentadas pelo BFP foram adotadas por empresas e pelo governo?"
 		base:id "PA8 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2, PA8.ME3
 		planoAvaliacao:temEscopo PA8.ES
-		planoAvaliacao:temMetodologia PA8.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA8.MA1
 		planoAvaliacao:temLimitacao LIM3
 		planoAvaliacao:alinhaComResultado BFP:RE.MP3
 	]
@@ -102,20 +106,20 @@ considerando o período de três anos após o fim da bolsa?"
 atividade econômica) após 3 anos de fim da concessão da cota?"
 		base:id "PA9 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA9.ME1, PA9.ME2, PA9.ME3
 		planoAvaliacao:temEscopo PA9.ES
-		planoAvaliacao:temMetodologia PA9.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA9.MA1
 		planoAvaliacao:alinhaComResultado BFP:RE.LP3
 	]
 	instance PA10 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o quantitativo de patentes e programas de computador de egressos do BFP licenciados e comercializados?"
 		base:id "PA10 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA10.ME1
 		planoAvaliacao:temEscopo PA10.ES
-		planoAvaliacao:temMetodologia PA10.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA10.MA1
 		planoAvaliacao:temLimitacao LIM3
 		planoAvaliacao:alinhaComResultado BFP:RE.LP2
 	]
@@ -123,10 +127,10 @@ atividade econômica) após 3 anos de fim da concessão da cota?"
 		base:nome "Qual a evolução da produtividade dos segmentos econômicos de Pernambuco com maior percentual de doutores egressos do BFP?"
 		base:id "PA11 - BFP"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA11.ME1
 		planoAvaliacao:temEscopo PA11.ES
-		planoAvaliacao:temMetodologia PA11.MA
-		planoAvaliacao:temRisco R1
+		planoAvaliacao:temMetodologia PA11.MA1
 		planoAvaliacao:alinhaComResultado BFP:RE.LP1
 	]
 	
@@ -136,98 +140,108 @@ atividade econômica) após 3 anos de fim da concessão da cota?"
 		base:descricao "Número de bolsistas BFP que se fixaram no Estado em relação ao total de cotas encerradas no ano, desagregado por grande área do 
 conhecimento FACEPE, e Região de Desenvolvimento do Estado (RDE)"
 		base:id "PA1.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI3, fonte:FI10
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesSistemasBasesGovernamentais:FI2.6
 	]
 	instance PA1.ME2 : metricas:metrica [
 		base:nome "Quantidade Fixados"
 		base:descricao "Número de bolsistas BFP fixados no estado, desagregado por ano, grande área do conhecimento FACEPE, e Região de Desenvolvimento do Estado 
 (RDE)"
 		base:id "PA1.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI3, fonte:FI10
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesSistemasBasesGovernamentais:FI2.6
 	]
 	
 	instance PA2.ME1 : metricas:metrica [
 		base:nome "Quantidade Produção Científica"
 		base:descricao "Número anual da produção científica em geral dos bolsistas BFP desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI5, fonte:FI7
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesBasesAcademicasCientificasEducacionais:FI3.3
 	]
 	instance PA2.ME2 : metricas:metrica [
 		base:nome "Quantidade Publicações Periódicos Bolsistas"
 		base:descricao "Número anual de publicações em periódicos em geral dos bolsistas BFP desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI5, fonte:FI7
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesBasesAcademicasCientificasEducacionais:FI3.3
 	]
 	instance PA2.ME3 : metricas:metrica [
 		base:nome "Quantidade Publicações Periódicos Scopus Bolsistas"
 		base:descricao "Número anual de publicações em periódicos indexados na base científica Scopus dos bolsistas BFP desagregado pela grande área do 
 conhecimento FACEPE"
 		base:id "PA2.ME3 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME4 : metricas:metrica [
 		base:nome "Taxa Publicações Periódicos Qualificados Bolsistas"
 		base:descricao "Número anual de publicações em periódicos indexados na base Scopus dos bolsistas BFP por quartil sobre o número total de publicações em 
 periódicos indexados na Scopus dos bolsistas BFP no mesmo ano de publicação desagregado pela grande área de conhecimento FACEPE"
 		base:id "PA2.ME4 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME5 : metricas:metrica [
 		base:nome "Quantidade Citações Bolsistas"
 		base:descricao "Número anual de citações em geral dos bolsistas BFP desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME5 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI5, fonte:FI7
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesBasesAcademicasCientificasEducacionais:FI3.3
 	]
 	instance PA2.ME6 : metricas:metrica [
 		base:nome "Quantidade Citações Scopus Bolsistas"
 		base:descricao "Número anual de citações na base científica Scopus dos bolsistas BFP desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME6 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME7 : metricas:metrica [
 		base:nome "Média Citações por Publicação Scopus Bolsistas"
 		base:descricao "Número anual de citações na base científica Scopus dos bolsistas BFP sobre o número total de publicações indexadas na Scopus dos bolsistas 
 BFP no mesmo ano desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME7 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME8 : metricas:metrica [
 		base:nome "Taxa Citações Quartil Superior Scopus Bolsistas"
 		base:descricao "Número anual de citações presentes no quartil superior (Top 25%) na base científica Scopus dos bolsistas BFP sobre o número total de 
 citações na Scopus dos bolsistas BFP no mesmo ano desagregado pela grande área do conhecimento FACEPE"
 		base:id "PA2.ME8 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME9 : metricas:metrica [
 		base:nome "Índice h Scopus Bolsistas"
 		base:descricao "Índice h médio na base científica Scopus dos bolsistas BFP desagregado por ano e grande área do conhecimento FACEPE"
 		base:id "PA2.ME9 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	instance PA2.ME10 : metricas:metrica [
 		base:nome "Índice h5 Scopus Bolsistas"
 		base:descricao "Índice h5 médio na base científica Scopus dos bolsistas BFP desagregado por ano e grande área do conhecimento FACEPE"
 		base:id "PA2.ME10 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI8
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.4
 	]
 	
 	instance PA3.ME1 : metricas:metrica [
 		base:nome "Quantidade (Co)orientação Bolsista"
 		base:descricao "Número de trabalhos de Iniciação Científica, Extensão e Inovação com coorientação do bolsista BFP por ano"
 		base:id "PA3.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	instance PA3.ME2 : metricas:metrica [
 		base:nome "Quantidade (Co)orientação TCC Bolsista"
 		base:descricao "Número de trabalhos conclusão de curso de graduação com coorientação do bolsista BFP por ano"
 		base:id "PA3.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	instance PA3.ME3 : metricas:metrica [
 		base:nome "Quantidade (Co)orientação Pós-graduação"
 		base:descricao "Número de trabalhos conclusão de curso de pós-graduação com coorientação do bolsista BFP por ano"
 		base:id "PA3.ME3 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	
 	instance PA4.ME1 : metricas:metrica [
@@ -235,66 +249,68 @@ citações na Scopus dos bolsistas BFP no mesmo ano desagregado pela grande áre
 		base:descricao "Número anual da Propriedade Intelectual (PI) dos bolsistas BFP desagregado por grande área do conhecimento FACEPE; e tipo da propriedade 
 intelectual (patente, programa de computador, desenho industrial, marca, cultivares, partituras, etc.)"
 		base:id "PA4.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI5, fonte:FI6
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesInfraestruturaAtivosCTI:FI4.2
 	]
 	instance PA4.ME2 : metricas:metrica [
 		base:nome "Taxa PI Bolsistas BFP"
 		base:descricao "Proporção de bolsistas BFP com Propriedade Intelectual com relação ao total de bolsistas BFP desagregado por ano e por área"
 		base:id "PA4.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI5, fonte:FI6
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesInfraestruturaAtivosCTI:FI4.2
 	]
 	
 	instance PA5.ME1 : metricas:metrica [
 		base:nome "Quantidade Bolsista Projeto Pesquisa Nacional"
 		base:descricao "Número de bolsistas BFP que participam de projetos de pesquisa e inovação em cooperação com ICTs nacionais por ano e área de atuação"
 		base:id "PA5.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	instance PA5.ME2 : metricas:metrica [
 		base:nome "Taxa Bolsista Projeto Pesquisa Nacional"
 		base:descricao "Proporção de bolsistas BFP que atuam em pelo menos um projeto PDI em cooperação com ICTs nacionais com relação ao total de bolsistas BFP no 
 ano e área de atuação"
 		base:id "PA5.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	instance PA5.ME3 : metricas:metrica [
 		base:nome "Quantidade Bolsista Projeto Pesquisa Internacional"
 		base:descricao "Número de bolsistas BFP que participam de projetos de pesquisa e inovação em cooperação com ICTs internacionais"
 		base:id "PA5.ME3 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	instance PA5.ME4 : metricas:metrica [
 		base:nome "Taxa Bolsista Projeto Pesquisa Internacional"
 		base:descricao "Proporção de bolsistas BFP que atuam em pelo menos um projeto PDI em cooperação com ICTs internacionais com relação ao total de bolsistas 
 BFP no ano e área de atuação"
 		base:id "PA5.ME4 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	
 	instance PA6.ME1 : metricas:metrica [
 		base:nome "Conceito PPG"
 		base:descricao "Conceito CAPES dos Programas de Pós-graduação (PPG) apoiados pelo BFP, por avaliação quadrienal e por área de conhecimento"
 		base:id "PA6.ME1 - BFP"
-		metricas:temFonte fonte:FI2
+		metricas:temFonte fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA6.ME2 : metricas:metrica [
 		base:nome "Taxa PPG Excelência"
 		base:descricao "Percentual de PPGs apoiados pelo BFP com conceitos de excelência da CAPES (6 e 7)"
 		base:id "PA6.ME2 - BFP"
-		metricas:temFonte fonte:FI2
+		metricas:temFonte fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA6.ME3 : metricas:metrica [
 		base:nome "Taxa PPG Emergentes"
 		base:descricao "Percentual de PPGs apoiados pelo BFP que elevaram seu conceito CAPES"
 		base:id "PA6.ME3 - BFP"
-		metricas:temFonte fonte:FI2
+		metricas:temFonte fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	
 	instance PA7.ME1 : metricas:metrica [
 		base:nome "Quantidade Startups Bolsistas"
 		base:descricao "Número de startups e spin-offs acadêmicos com a participação direta de egressos do BFP"
 		base:id "PA7.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI5, fonte:FI10
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.6, fontesBasesAcademicasCientificasEducacionais:FI3.2
 	]
 	
 	instance PA8.ME1 : metricas:metrica [
@@ -302,7 +318,7 @@ BFP no ano e área de atuação"
 		base:descricao "Número de inovações (produtos, processos, serviços) fomentadas pelo BFP e adotadas pelas empresas e governo em até 3 anos após o fim da 
 bolsa, desagregado por ano, grande área de conhecimento FACEPE e Região de Desenvolvimento do Estado (RDE)"
 		base:id "PA8.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA8.ME2 : metricas:metrica [
 		base:nome "Média Inovações Bolsistas"
@@ -310,14 +326,14 @@ bolsa, desagregado por ano, grande área de conhecimento FACEPE e Região de Des
 bolsa, sobre o número de bolsistas BFP respondentes do survey, desagregado por ano de fim da bolsa, grande área de conhecimento FACEPE e Região de Desenvolvimento 
 do Estado (RDE)"
 		base:id "PA8.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA8.ME3 : metricas:metrica [
 		base:nome "Taxa Inovações Bolsistas"
 		base:descricao "Número de bolsistas BFP com inovações (produtos, processos, serviços) adotadas pelas empresas e governo, em até 3 anos de egresso, sobre o 
 número de bolsistas BFP respondentes do survey, desagregado por ano, grande área de conhecimento FACEPE e Região de Desenvolvimento do Estado (RDE)"
 		base:id "PA8.ME3 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	
 	instance PA9.ME1 : metricas:metrica [
@@ -325,7 +341,8 @@ número de bolsistas BFP respondentes do survey, desagregado por ano, grande ár
 		base:descricao "Número de bolsistas BFP formalmente empregados no estado de Pernambuco após 3 anos de egresso, desagregado por ano, grande área de 
 conhecimento FACEPE, seção da Classificação Nacional de Atividades Econômicas (CNAE) e Região de Desenvolvimento do Estado (RDE)"
 		base:id "PA9.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI3, fonte:FI12
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesDadosSocioeconomicosTerritoriais:FI5.3
 	]
 	instance PA9.ME2 : metricas:metrica [
 		base:nome "Taxa Empregabilidade PE Bolsistas"
@@ -333,14 +350,16 @@ conhecimento FACEPE, seção da Classificação Nacional de Atividades Econômic
 Pernambuco no mesmo ano, região de desenvolvimento do estado e atividade econômica, desagregado por ano, grande área de conhecimento FACEPE, Região de 
 Desenvolvimento do Estado (RDE) e seção da Classificação Nacional de Atividades Econômicas (CNAE)"
 		base:id "PA9.ME2 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI3, fonte:FI12
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesDadosSocioeconomicosTerritoriais:FI5.3
 	]
 	instance PA9.ME3 : metricas:metrica [
 		base:nome "Quantidade CNAE Bolsista"
 		base:descricao "Número de egressos BFP após 3 anos de egresso empregados por seção da Classificação Nacional de Atividades Econômicas (CNAE) e Renda formal 
 (faixas de salários mínimos)"
 		base:id "PA9.ME3 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI3, fonte:FI12
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesDadosSocioeconomicosTerritoriais:FI5.3
 	]
 	
 	instance PA10.ME1 : metricas:metrica [
@@ -348,14 +367,15 @@ Desenvolvimento do Estado (RDE) e seção da Classificação Nacional de Ativida
 		base:descricao "Número de Propriedade Intelectual (PI) licenciada/comercializada de bolsistas BFP em até 10 anos após o fim da bolsa, desagregado por ano 
 de fim da bolsa e grande área de conhecimento FACEPE"
 		base:id "PA10.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI2, fonte:FI6, fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, 
+		fontesInfraestruturaAtivosCTI:FI4.2
 	]
 	
 	instance PA11.ME1 : metricas:metrica [
 		base:nome "Produtividade Econômica"
 		base:descricao "Produto por trabalhador (produtividade) nos segmentos econômicos de Pernambuco em que atuam profissionalmente doutores egressos do BFP"
 		base:id "PA11.ME1 - BFP"
-		metricas:temFonte fonte:FI1, fonte:FI3, fonte:FI12
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesDadosSocioeconomicosTerritoriais:FI5.3
 	]
 	
 	// Escopos e Métodos de Avaliação
@@ -369,9 +389,9 @@ contemplados)"
 		base:descricao "Análise descritiva"
 		base:id "PA1.MA1 - BFP"
 	]
-	instance PA1.MA2 : planoAvaliacao:metodoAvaliacao [
+	instance PA1.MA4 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Regressão descontínua"
-		base:id "PA1.MA2 - BFP"
+		base:id "PA1.MA4 - BFP"
 	]
 	
 	instance PA2.ES : planoAvaliacao:escopo [
@@ -383,9 +403,9 @@ contemplados)"
 		base:descricao "Análise descritiva"
 		base:id "PA2.MA1 - BFP"
 	]
-	instance PA2.MA2 : planoAvaliacao:metodoAvaliacao [
+	instance PA2.MA4 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Regressão descontínua"
-		base:id "PA2.MA2 - BFP"
+		base:id "PA2.MA4 - BFP"
 	]
 	
 	instance PA3.ES : planoAvaliacao:escopo [
@@ -393,9 +413,9 @@ contemplados)"
 (ao longo dos anos)"
 		base:id "PA3.ES - BFP"
 	]
-	instance PA3.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA3.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA3.MA - BFP"
+		base:id "PA3.MA1 - BFP"
 	]
 	
 	instance PA4.ES : planoAvaliacao:escopo [
@@ -403,9 +423,9 @@ contemplados)"
 concessão da cota. A comparação será longitudinal (ao longo dos anos) do próprio BFP"
 		base:id "PA4.ES - BFP"
 	]
-	instance PA4.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA4.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA4.MA - BFP"
+		base:id "PA4.MA1 - BFP"
 	]
 	
 	instance PA5.ES : planoAvaliacao:escopo [
@@ -418,9 +438,9 @@ comparação será longitudinal (ao longo dos anos) do próprio BFP e transversa
 		base:descricao "Análise descritiva"
 		base:id "PA5.MA1 - BFP"
 	]
-	instance PA5.MA2 : planoAvaliacao:metodoAvaliacao [
+	instance PA5.MA4 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Regressão descontínua"
-		base:id "PA5.MA2 - BFP"
+		base:id "PA5.MA4 - BFP"
 	]
 	
 	instance PA6.ES : planoAvaliacao:escopo [
@@ -428,19 +448,19 @@ comparação será longitudinal (ao longo dos anos) do próprio BFP e transversa
 (ao longo dos quadriênios)"
 		base:id "PA6.ES - BFP"
 	]
-	instance PA6.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA6.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA6.MA - BFP"
+		base:id "PA6.MA1 - BFP"
 	]
 	
 	instance PA7.ES : planoAvaliacao:escopo [
-		base:descricao "PA7.ES. Espera-se identificar a evolução da geração de negócios a partir do trabalho de pesquisa fomentado pelo BFP. A comparação será 
-longitudinal (ao longo dos anos) do próprio BFP"
+		base:descricao "Espera-se identificar a evolução da geração de negócios a partir do trabalho de pesquisa fomentado pelo BFP. A comparação será longitudinal 
+(ao longo dos anos) do próprio BFP"
 		base:id "PA7.ES - BFP"
 	]
-	instance PA7.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA7.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA7.MA - BFP"
+		base:id "PA7.MA1 - BFP"
 	]
 	
 	instance PA8.ES : planoAvaliacao:escopo [
@@ -448,9 +468,9 @@ longitudinal (ao longo dos anos) do próprio BFP"
 (ao longo dos anos) do próprio BFP"
 		base:id "PA8.ES - BFP"
 	]
-	instance PA8.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA8.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA8.MA - BFP"
+		base:id "PA8.MA1 - BFP"
 	]
 	
 	instance PA9.ES : planoAvaliacao:escopo [
@@ -458,9 +478,9 @@ longitudinal (ao longo dos anos) do próprio BFP"
 comparação será longitudinal (ao longo dos anos)"
 		base:id "PA9.ES - BFP"
 	]
-	instance PA9.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA9.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA9.MA - BFP"
+		base:id "PA9.MA1 - BFP"
 	]
 	
 	instance PA10.ES : planoAvaliacao:escopo [
@@ -468,9 +488,9 @@ comparação será longitudinal (ao longo dos anos)"
 pelo BFP. A comparação será longitudinal (ao longo dos anos) do próprio BFP"
 		base:id "PA10.ES - BFP"
 	]
-	instance PA10.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA10.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA10.MA - BFP"
+		base:id "PA10.MA1 - BFP"
 	]
 	
 	instance PA11.ES : planoAvaliacao:escopo [
@@ -478,21 +498,12 @@ pelo BFP. A comparação será longitudinal (ao longo dos anos) do próprio BFP"
 profissionalmente. A comparação será longitudinal (ao longo dos anos)"
 		base:id "PA11.ES - BFP"
 	]
-	instance PA11.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA11.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA11.MA - BFP"
+		base:id "PA11.MA1 - BFP"
 	]
 
-	// Riscos e Limitações
-	instance R1 : planoAvaliacao:risco [
-		base:descricao "Acesso à uma ou mais fontes para obtenção de informações de indivíduos"
-		base:id "R1 - BFP"
-	]
-	instance R2 : planoAvaliacao:risco [
-		base:descricao "Dependência de respostas voluntárias na aplicação de survey"
-		base:id "R2 - BFP"
-	]
-
+	//Limitações
 	instance LIM1 : planoAvaliacao:limitacao [
 		base:descricao "A análise identifica correlação, mas não garante identificar a causalidade entre as cotas BFP que os bolsistas recebem e a evolução da 
 produção científica dos bolsistas"

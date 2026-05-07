@@ -1,0 +1,10 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	
+	instance FI1.1 : planoAvaliacao:fonteInformacao [
+		base:nome "Levantamento primário (formulários, questionários, entrevistas, surveys)"
+		base:id "FI1.1"
+	]
+}

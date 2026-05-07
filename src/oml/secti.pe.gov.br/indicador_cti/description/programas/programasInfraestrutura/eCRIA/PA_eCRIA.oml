@@ -1,6 +1,5 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA#> as PA_eCRIA {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA#> as eCRIA
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
@@ -23,7 +22,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Número de espaços planejado"
 		base:descricao "Nº de novos espaços de ambientes pedagógicos planejados"
 		base:id "PA1.ME1 - eCRIA"
-		metricas:temFonte fonte:FI18
+		//metricas:temFonte fonte:FI18
 		//P1.M1.VE. Definido no planejamento anual pela SECTI e Secretaria de Educação
 	]
 	

@@ -1,0 +1,14 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesInfraestruturaAtivosCTI#> as fontesInfraestruturaAtivosCTI {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	
+	instance FI4.1 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma Nacional de Infraestrutura de Pesquisa (PNIPE/MCTI)"
+		base:id "FI4.1"
+	]
+	instance FI4.2 : planoAvaliacao:fonteInformacao [
+		base:nome "Repositório de Propriedade Intelectual do INPI"
+		base:id "FI4.2"
+	]
+}

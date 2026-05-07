@@ -8,16 +8,23 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/plan
 	concept fonteInformacao < base:EntidadeNomeavel, base:EntidadeIdentificavel
 	concept escopo < base:EntidadeDescritivel, base:EntidadeIdentificavel
 	concept metodoAvaliacao < base:EntidadeDescritivel, base:EntidadeIdentificavel
-	concept risco < base:EntidadeDescritivel, base:EntidadeIdentificavel
 	concept limitacao < base:EntidadeDescritivel
 	
 	scalar Custo [
 		oneOf "Alto", "Moderado", "Baixo"
 	]
+	scalar Risco [
+		oneOf "Alto", "Médio", "Baixo"
+	]
 	
 	scalar property custo [
 		domain questaoAvaliacao
 		range Custo
+		functional
+	]
+	scalar property risco [
+		domain questaoAvaliacao
+		range Risco
 		functional
 	]
 	
@@ -39,13 +46,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/plan
 		from questaoAvaliacao
 		to metodoAvaliacao
 		reverse metodologiaPara
-		asymmetric
-		irreflexive
-	]
-	relation temRisco [
-		from questaoAvaliacao
-		to risco
-		reverse riscoPara
 		asymmetric
 		irreflexive
 	]
