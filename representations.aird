@@ -4,25 +4,18 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/bundle.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/indicadores.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/bundle.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/indicador.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/base.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/canvas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/programa.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa-EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspaçosCria.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/Programa_EspacosCria.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/fatoresExternos.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/atividadesChave.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/saidas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/resultados.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicoAlvo.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/planoAvaliacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/classificacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/questaoAvaliacao.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/metricas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/fontesInformacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/redesInovacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA.oml</semanticResources>
@@ -32,7 +25,6 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETSolucoes.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/COMPETResiTec.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/fontesInformacao.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/formulas.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1.oml</semanticResources>
@@ -60,16 +52,40 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME3.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1ME4.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/calculo-metricas-PBPG.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/indicador.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
     <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2002/07/owl.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME3.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1ME4.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

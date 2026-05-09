@@ -29,7 +29,7 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, atividadeChave:AC13, 
 		atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17, atividadeChave:AC18
 		programa:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP8
+		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP5
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
 	]
@@ -46,12 +46,12 @@ na formação de habilidades portadoras de futuro e no empreendedorismo inovador
 	instance OB.ES0 : canvas:ObjetivoEspecifico [
 		base:nome "Implantar espaços e garantir estrutura física e equipamentos para permitir a execução do programa"
 		base:id "OB.ES0 - eCRIA"
-		canvas:buscaAtingir RE.CP1, RE.LP8
+		canvas:buscaAtingir RE.CP1, RE.LP5
 	]
 	instance OB.ES1 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a criatividade, soft skills e o protagonismo estudantil através da resolução de desafios cotidianos"
 		base:id "OB.ES1 - eCRIA"
-		canvas:buscaAtingir RE.CP2, RE.LP8
+		canvas:buscaAtingir RE.CP2, RE.LP5
 	]
 	instance OB.ES3 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular projetos e formação na área de STEM+C"
@@ -141,22 +141,22 @@ na formação de habilidades portadoras de futuro e no empreendedorismo inovador
 		base:id "RE.LP1 - eCRIA"
 		canvas:prazo "longo"
 	]
-	instance RE.LP3 : canvas:ResultadoEsperado [
+	instance RE.LP2 : canvas:ResultadoEsperado [
 		base:nome "Maior competitividade das empresas e entidades pernambucanas"
 		base:id "RE.LP3 - eCRIA"
 		canvas:prazo "longo"
 	]
-	instance RE.LP4 : canvas:ResultadoEsperado [
+	instance RE.LP3 : canvas:ResultadoEsperado [
 		base:nome "Mais recursos humanos desenvolvendo soluções baseadas em CT&I em todo o território pernambucano promovendo transformação social"
 		base:id "RE.LP4 - eCRIA" 
 		canvas:prazo "longo"
 	]
-	instance RE.LP5 : canvas:ResultadoEsperado [
+	instance RE.LP4 : canvas:ResultadoEsperado [
 		base:nome "Mais estudantes formados em cursos superiores nas áreas de STEM+C"
 		base:id "RE.LP5 - eCRIA"
 		canvas:prazo "longo"
 	]
-	instance RE.LP8 : canvas:ResultadoEsperado [
+	instance RE.LP5 : canvas:ResultadoEsperado [
 		base:nome "Promoção da modernização das escolas e práticas para atividades curriculares"
 		base:id "RE.LP8 - eCRIA"
 		canvas:prazo "longo"

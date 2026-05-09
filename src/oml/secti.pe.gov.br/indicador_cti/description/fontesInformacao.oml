@@ -73,7 +73,77 @@ description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#>
 	]
 	
 	instance FI18 : planoAvaliacao:fonteInformacao [
-		base:nome "Relatório mensal da plataforma de CT&I de acompanhamento de implantação dos ECRIA"
+		base:nome ". Relatório de atividade de acompanhamento da plataforma de CT&I de acompanhamento de implantação dos ECRIA"
 		base:id "FI18"
 	]
-}
+	
+	instance FI19 : planoAvaliacao:fonteInformacao [
+		base:nome "Painel do IDHM por município no Atlas do Desenvolvimento Humano no Brasil"
+		base:id "FI19"
+	]
+	
+	instance FI20 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de dados de município do estado de Pernambuco (http://www.bde.pe.gov.br/)"
+		base:id "FI20"
+	]
+	
+	instance FI21 : planoAvaliacao:fonteInformacao[
+		base:nome "Relatório de acompanhamento mensal de operação dos ECRIAs gerado pelo coordenador responsável"
+		base:id "FI21"
+	]
+	
+	instance FI22 : planoAvaliacao:fonteInformacao [
+		base:nome "Orçamento anual da escolas para manutenção dos ECRIA"
+		base:id "FI22"
+	]
+	
+	instance FI23 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de dados de acompanhamento acadêmico da escola"
+		base:id "FI23"
+	]
+	instance FI24 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de dados INEP"
+		base:id "FI24"
+	]
+	instance FI25 : planoAvaliacao:fonteInformacao [
+		base:nome "Pesquisa de satisfação semestral"
+		base:id "FI25"
+	]
+	instance FI26 : planoAvaliacao:fonteInformacao [
+		base:nome "Dados de matrículas no SISU/ENEM"
+		base:id "FI26"
+	]
+	
+	instance FI27 : planoAvaliacao:fonteInformacao [
+		base:nome "Relatório de capacitação de docentes do ECRIA, incluindo capacitações específicas ou providas pela EGAPE"
+		base:id "FI27"
+	]
+	
+	instance FI28 : planoAvaliacao:fonteInformacao [
+		base:nome "Instrumento de avaliação com questões específicas"
+		base:id "FI28"
+	]
+	
+	instance FI29 : planoAvaliacao:fonteInformacao [
+		base:nome "Relatório de empreendedorismo dos ECRIA (dados primários)"
+		base:id "FI29"
+	]
+	
+	instance FI30 : planoAvaliacao:fonteInformacao [
+		base:nome " Pesquisa baseada em amostras com consulta no RAIS (Relação Anual de Informações Sociais) e CAGED (Cadastro Geral de Empregados e Desempregados)"
+		base:id "FI30"
+	]
+	
+	instance FI31 : planoAvaliacao:fonteInformacao [
+		base:nome "Sistema de informação do PROUPE"
+		base:id "FI31"
+	]
+	instance FI32 : planoAvaliacao:fonteInformacao [
+		base:nome "Microdados do Censo da Educação Superior (Inep)"
+		base:id "FI32"
+	]
+	instance FI33 : planoAvaliacao:fonteInformacao [
+		base:nome "Pesquisa direcionada com os egressos"
+		base:id "FI33"
+	]
+	}
