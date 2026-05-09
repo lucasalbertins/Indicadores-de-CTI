@@ -6,7 +6,11 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#>
@@ -19,7 +23,11 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosSocioeconomicosTerritoriais#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesInfraestruturaAtivosCTI#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/PA_CientistaArretado#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/CientistaArretado/CientistaArretado#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/LabMultiusuarios/PA_LabMultiusuarios#>

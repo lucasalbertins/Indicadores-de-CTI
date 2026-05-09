@@ -1,0 +1,55 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	//Oportunidades
+	instance FE3.OP1 : canvas:Oportunidade [
+		base:nome "Novas tecnologias para responder às demandas e aos desafios estratégicos do estado"
+		base:id "FE3.OP1"
+	]
+	instance FE3.OP2 : canvas:Oportunidade [
+		base:nome "Novas tecnologias e suas tendências para responder às demandas, aos desafios estratégicos e problemas urgentes"
+		base:id "FE3.OP2"
+	]
+	instance FE3.OP3 : canvas:Oportunidade [
+		base:nome "Fomento a ecossistemas de Inteligência Artificial geograficamente distribuídos"
+		base:id "FE3.OP3"
+	]
+	instance FE3.OP4 : canvas:Oportunidade [
+		base:nome "Expansão da demanda por conectividade"
+		base:id "FE3.OP4"
+	]
+	
+	//Ameaças
+	instance FE3.AM1 : canvas:Ameaca [
+		base:nome "Problemas estruturais na gestão de dados governamentais (dispersão, divergência e escassez)"
+		base:id "FE3.AM1"
+	]
+	instance FE3.AM2 : canvas:Ameaca [
+		base:nome "Riscos tecnológicos e de segurança da informação"
+		base:id "FE3.AM2"
+	]
+	instance FE3.AM3 : canvas:Ameaca [
+		base:nome "Problemas de gestão com o sistema de gerenciamento do PROUPE"
+		base:id "FE3.AM3"
+	]
+	
+	//Falta validação
+	instance FE3.AM4 : canvas:Ameaca [
+		base:nome "Estrutura administrativa de suporte ao programa insuficiente"
+		base:id "FE3.AM4"
+	]
+	instance FE3.AM5 : canvas:Ameaca [
+		base:nome "Falta de recursos humanos capacitados para operacionalizar e monitorar as ações"
+		base:id "FE3.AM5"
+	]
+	instance FE3.AM6 : canvas:Ameaca [
+		base:nome "Falta de perenidade nas políticas de manutenção e aprimoramento dos ECRIA"
+		base:id "FE3.AM6"
+	]
+	instance FE3.AM7 : canvas:Ameaca [
+		base:nome "Falta de priorização da política de estímulo a STEM+C em mudancas de gestão"
+		base:id "FE3.AM7"
+	]
+}

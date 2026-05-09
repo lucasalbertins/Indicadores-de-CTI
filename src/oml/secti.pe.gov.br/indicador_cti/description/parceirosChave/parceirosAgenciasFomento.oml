@@ -39,6 +39,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/par
 		base:nome "Agências internacionais de fomento"
 		base:id "PC2.9"
 	]
+	
+	//Falta validação
 	instance PC2.10 : canvas:ParceiroChave [
 		base:nome "Agências nacionais de fomento de forma geral"
 		base:id "PC2.10"

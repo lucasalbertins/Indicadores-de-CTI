@@ -1,0 +1,34 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	
+	instance FI3.1 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma Sucupira (CAPES/MEC)"
+		base:id "FI3.1"
+	]
+	instance FI3.2 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma Lattes (CNPq/MCTI)"
+		base:id "FI3.2"
+	]
+	instance FI3.3 : planoAvaliacao:fonteInformacao [
+		base:nome "Google Scholar (Google Acadêmico)"
+		base:id "FI3.3"
+	]
+	instance FI3.4 : planoAvaliacao:fonteInformacao [
+		base:nome "Scopus/SciVal (Elsevier)"
+		base:id "FI3.4"
+	]
+	instance FI3.5 : planoAvaliacao:fonteInformacao [
+		base:nome "INEP/MEC – Censo do Ensino Superior"
+		base:id "FI3.5"
+	]
+	instance FI3.6 : planoAvaliacao:fonteInformacao [
+		base:nome "INEP/MEC – SISU/ENEM"
+		base:id "FI3.6"
+	]
+	instance FI3.7 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma PROUPE"
+		base:id "FI3.7"
+	]
+}

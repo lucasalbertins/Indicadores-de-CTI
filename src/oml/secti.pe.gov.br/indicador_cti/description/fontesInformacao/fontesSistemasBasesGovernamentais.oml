@@ -1,0 +1,42 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	
+	instance FI2.1 : planoAvaliacao:fonteInformacao [
+		base:nome "AgilFAP"
+		base:id "FI2.1"
+	]
+	instance FI2.2 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma RAIS/CAGED (MTE)"
+		base:id "FI2.2"
+	]
+	instance FI2.3 : planoAvaliacao:fonteInformacao [
+		base:nome "Diário Oficial do Estado (CEPE)"
+		base:id "FI2.3"
+	]
+	instance FI2.4 : planoAvaliacao:fonteInformacao [
+		base:nome "Portal da Transparência de Pernambuco"
+		base:id "FI2.4"
+	]
+	instance FI2.5 : planoAvaliacao:fonteInformacao [
+		base:nome "Portal da Transparência do Governo Federal"
+		base:id "FI2.5"
+	]
+	instance FI2.6 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de Dados da JUCEPE"
+		base:id "FI2.6"
+	]
+	instance FI2.7 : planoAvaliacao:fonteInformacao [
+		base:nome "e-Fisco"
+		base:id "FI2.7"
+	]
+	instance FI2.8 : planoAvaliacao:fonteInformacao [
+		base:nome "Planilhas de acompanhamento (SECTI, FACEPE, ICTs e outros)"
+		base:id "FI2.8"
+	]
+	instance FI2.9 : planoAvaliacao:fonteInformacao [
+		base:nome "Relatórios Técnicos do Programa"
+		base:id "FI2.9"
+	]
+}

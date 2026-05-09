@@ -3,13 +3,20 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -19,9 +26,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Apoia pesquisadores com notável produção científica, tecnológica ou de inovação em Pernambuco. A modalidade oferece bolsas e adicionais de 
 bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos, especialmente no interior do estado"
 		base:id "PR8"
-		programa:possuiParceiros parceirosAcademiaICTs:PC3.2, parceirosAcademiaICTs:PC3.4, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.9, 
-		parceirosAgenciasFomento:PC2.10
-		programa:condicionadoPor fatorExterno:FE.OP1, fatorExterno:FE.OP2, fatorExterno:FE.AM1, fatorExterno:FE.AM12, fatorExterno:FE.AM4
+		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTs:PC3.3, 
+		parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
+		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, 
+		fatoresCenarioTecnologico:FE3.AM4, fatoresDinamicaEcossistema:FE5.AM3
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, 
 		entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
@@ -29,6 +37,78 @@ bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.CP6, RE.CP7, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3, RE.LP4
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8
+	]
+	
+	// Relações BPP --> Público-Alvo
+	relation instance PR8.direcionadoA.PU1.1 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.1
+		base:tipo "direto"
+	]
+	relation instance PR8.direcionadoA.PU1.2 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.2
+		base:tipo "direto"
+	]
+	relation instance PR8.direcionadoA.PU1.8 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.8
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU1.14 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.14
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU1.15 : programa:direcionadoA [
+		from PR8
+		to publicosAcademiaICTs:PU1.15
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU2.2 : programa:direcionadoA [
+		from PR8
+		to publicosGovernoInstituicoesPublicas:PU2.2
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU2.3 : programa:direcionadoA [
+		from PR8
+		to publicosGovernoInstituicoesPublicas:PU2.3
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU3.2 : programa:direcionadoA [
+		from PR8
+		to publicosEmpresasEmpreendedores:PU3.2
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU3.5 : programa:direcionadoA [
+		from PR8
+		to publicosEmpresasEmpreendedores:PU3.5
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU4.1 : programa:direcionadoA [
+		from PR8
+		to publicosAmbientesInovacao:PU4.1
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU4.6 : programa:direcionadoA [
+		from PR8
+		to publicosAmbientesInovacao:PU4.6
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU4.7 : programa:direcionadoA [
+		from PR8
+		to publicosAmbientesInovacao:PU4.7
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU4.8 : programa:direcionadoA [
+		from PR8
+		to publicosAmbientesInovacao:PU4.8
+		base:tipo "indireto"
+	]
+	relation instance PR8.direcionadoA.PU5.1 : programa:direcionadoA [
+		from PR8
+		to publicosSociedadeTerceiroSetor:PU5.1
+		base:tipo "indireto"
 	]
 	
 	// Objetivo Geral

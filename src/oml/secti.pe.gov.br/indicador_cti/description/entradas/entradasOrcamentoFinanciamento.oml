@@ -23,8 +23,4 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasO
 		base:nome "Contrapartida Financeira de instituições parceira e proponentes"
 		base:id "EN1.5"
 	]
-	instance EN1.6 : canvas:Entrada [
-		base:nome "Contrapartida Não-Financeira de instituições parceira e proponentes"
-		base:id "EN1.6"
-	]
 }

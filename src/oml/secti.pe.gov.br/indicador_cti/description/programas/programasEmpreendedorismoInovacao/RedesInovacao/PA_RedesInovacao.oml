@@ -1,6 +1,8 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/PA_RedesInovacao#> as PA_RedesInovacao {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesInfraestruturaAtivosCTI#> as fontesInfraestruturaAtivosCTI
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasEmpreendedorismoInovacao/RedesInovacao/RedesInovacao#> as RedesInovacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
@@ -10,10 +12,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Quantos eventos e ações de inovação aberta (hackathons, maratonas, match days, workshops de ideação, entre outros) foram realizadas?"
 		base:id "PA1 - RedesInovacao"
 		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2, PA1.ME3
 		planoAvaliacao:temEscopo PA1.ES
-		planoAvaliacao:temMetodologia PA1.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA1.MA1
 		planoAvaliacao:temLimitacao LIM1
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.CP1, RedesInovacao:RE.MP1
 	]
@@ -21,10 +23,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "A rede induziu o aumento de projetos de CT&I nas suas respectivas áreas?"
 		base:id "PA2 - RedesInovacao"
 		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2
 		planoAvaliacao:temEscopo PA2.ES
-		planoAvaliacao:temMetodologia PA2.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA2.MA1
 		planoAvaliacao:temLimitacao LIM2, LIM3
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.CP2
 	]
@@ -32,10 +34,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "A rede contribuiu para a geração de startups?"
 		base:id "PA3 - RedesInovacao"
 		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA3.ME1, PA3.ME2
 		planoAvaliacao:temEscopo PA3.ES
-		planoAvaliacao:temMetodologia PA3.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA3.MA1
 		planoAvaliacao:temLimitacao LIM1, LIM4, LIM5
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.MP2
 	]
@@ -43,10 +45,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Como evoluiu a diversidade de atores (startups, indústria, ICTs, órgãos públicos, organizações civis, etc) nas redes após o programa?"
 		base:id "PA4 - RedesInovacao"
 		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2
 		planoAvaliacao:temEscopo PA4.ES
-		planoAvaliacao:temMetodologia PA4.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA4.MA1
 		planoAvaliacao:temLimitacao LIM1
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP3
 	]
@@ -54,10 +56,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Qual a taxa de conversão de projetos em transferências tecnológicas/licenciamentos?"
 		base:id "PA5 - RedesInovacao"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA5.ME1
 		planoAvaliacao:temEscopo PA5.ES
-		planoAvaliacao:temMetodologia PA5.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA5.MA1
 		planoAvaliacao:temLimitacao LIM6
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP1
 	]
@@ -65,10 +67,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Quantas inovações (produtos/processos) foram implantadas com impacto mensurável em produtividade?"
 		base:id "PA6 - RedesInovacao"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA6.ME1
 		planoAvaliacao:temEscopo PA6.ES
-		planoAvaliacao:temMetodologia PA6.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA6.MA1
 		planoAvaliacao:temLimitacao LIM7, LIM8
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP1
 	]
@@ -76,10 +78,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Houve aumento da produção de CT&I dos grupos associados aos projetos?"
 		base:id "PA7 - RedesInovacao"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA7.ME1, PA7.ME2
 		planoAvaliacao:temEscopo PA7.ES
-		planoAvaliacao:temMetodologia PA7.MA
-		planoAvaliacao:temRisco R1, R2
+		planoAvaliacao:temMetodologia PA7.MA1
 		planoAvaliacao:temLimitacao LIM1, LIM9
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP4
 	]
@@ -87,10 +89,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Qual o percentual de redes que alcançaram a autossustentabilidade financeira após 2 anos de apoio?"
 		base:id "PA8 - RedesInovacao"
 		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2, PA8.ME3
 		planoAvaliacao:temEscopo PA8.ES
-		planoAvaliacao:temMetodologia PA8.MA
-		planoAvaliacao:temRisco R1, R2, R3
+		planoAvaliacao:temMetodologia PA8.MA1
 		planoAvaliacao:temLimitacao LIM1, LIM10
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP3
 	]
@@ -98,10 +100,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Houve crescimento do faturamento de empresas participantes nas redes?"
 		base:id "PA9 - RedesInovacao"
 		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA9.ME1, PA9.ME2
 		planoAvaliacao:temEscopo PA9.ES
-		planoAvaliacao:temMetodologia PA9.MA
-		planoAvaliacao:temRisco R4
+		planoAvaliacao:temMetodologia PA9.MA1
 		planoAvaliacao:temLimitacao LIM4
 		planoAvaliacao:alinhaComResultado RedesInovacao:RE.LP2
 	]
@@ -110,102 +112,102 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA1.ME1 : metricas:metrica [
 		base:descricao "Número de ações de inovação aberta por edital, por tipo"
 		base:id "PA1.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA1.ME2 : metricas:metrica [
 		base:descricao "Número de participantes por evento"
 		base:id "PA1.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA1.ME3 : metricas:metrica [
 		base:descricao "Número de produtos que foram gerados em decorrência dos eventos por edital (POC, MVP, ou soluções)"
 		base:id "PA1.ME3 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA2.ME1 : metricas:metrica [
 		base:descricao "Número de projetos de CT&I alavancados pelas redes apoiadas no edital"
 		base:id "PA2.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI1
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
 	]
 	instance PA2.ME2 : metricas:metrica [
 		base:descricao "Valor alavancado pelas redes apoiadas no edital"
 		base:id "PA2.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA3.ME1 : metricas:metrica [
 		base:descricao "Número de startups geradas em função das redes apoiadas no edital"
 		base:id "PA3.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA3.ME2 : metricas:metrica [
 		base:descricao "Número de startups geradas que já tiveram contratos e faturamento"
 		base:id "PA3.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 
 	instance PA4.ME1 : metricas:metrica [
 		base:descricao "Número de atores (startup, indústria, ICTs, órgãos públicos, organizações civis, etc) em cada rede, na submissão por modalidade e por setor 
 econômico"
 		base:id "PA4.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA4.ME2 : metricas:metrica [
 		base:descricao "Número de atores (startup, indústria, ICTs, órgãos públicos, organizações civis, etc) em cada rede, ao final do projeto por modalidade e 
 por setor econômico"
 		base:id "PA4.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA5.ME1 : metricas:metrica [
 		base:descricao "Número de transferências de tecnologia ou licenciamentos que foram realizadas em cada projeto"
 		base:id "PA5.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11, fonte:FI6
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesInfraestruturaAtivosCTI:FI4.2
 	]
 	
 	instance PA6.ME1 : metricas:metrica [
 		base:descricao "Número de inovações que foram incorporadas nos processos produtivos"
 		base:id "PA6.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA7.ME1 : metricas:metrica [
 		base:descricao "Número de artigos ao longo do projeto"
 		base:id "PA7.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA7.ME2 : metricas:metrica [
 		base:descricao "Número de PI (patentes e softwares) ao longo do projeto"
 		base:id "PA7.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA8.ME1 : metricas:metrica [
 		base:descricao "Valor dos recursos captados por rede junto à órgãos de fomento"
 		base:id "PA8.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA8.ME2 : metricas:metrica [
 		base:descricao "Valor dos recursos captados por rede em acordos de parceria"
 		base:id "PA8.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA8.ME3 : metricas:metrica [
 		base:descricao "Valor dos recursos captados por treinamentos, eventos e ações da rede"
 		base:id "PA8.ME3 - RedesInovacao"
-		metricas:temFonte fonte:FI11
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	
 	instance PA9.ME1 : metricas:metrica [
 		base:descricao "Valor do faturamento das empresas no começo do projeto"
 		base:id "PA9.ME1 - RedesInovacao"
-		metricas:temFonte fonte:FI11, fonte:FI3, fonte:FI17
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.2, fontesSistemasBasesGovernamentais:FI2.8
 	]
 	instance PA9.ME2 : metricas:metrica [
 		base:descricao "Valor do faturamento das empresas ao final do projeto"
 		base:id "PA9.ME2 - RedesInovacao"
-		metricas:temFonte fonte:FI11, fonte:FI3, fonte:FI17
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.2, fontesSistemasBasesGovernamentais:FI2.8
 	]
 	
 	// Escopos e Métodos de Avaliação
@@ -215,9 +217,9 @@ Estado, considerando a diversidade de formatos (hackathons, maratonas, match day
 Redes de Inovação"
 		base:id "PA1.ES - RedesInovacao"
 	]
-	instance PA1.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA1.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA1.MA - RedesInovacao"
+		base:id "PA1.MA1 - RedesInovacao"
 	]
 	
 	instance PA2.ES : planoAvaliacao:escopo [
@@ -225,9 +227,9 @@ Redes de Inovação"
 estratégicas apoiadas. A comparação será longitudinal entre os editais do próprio programa"
 		base:id "PA2.ES - RedesInovacao"
 	]
-	instance PA2.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA2.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA2.MA - RedesInovacao"
+		base:id "PA2.MA1 - RedesInovacao"
 	]
 	
 	instance PA3.ES : planoAvaliacao:escopo [
@@ -235,9 +237,9 @@ estratégicas apoiadas. A comparação será longitudinal entre os editais do pr
 evolução desse indicador ao longo das edições do programa"
 		base:id "PA3.ES - RedesInovacao"
 	]
-	instance PA3.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA3.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA3.MA - RedesInovacao"
+		base:id "PA3.MA1 - RedesInovacao"
 	]
 	
 	instance PA4.ES : planoAvaliacao:escopo [
@@ -246,9 +248,9 @@ evolução desse indicador ao longo das edições do programa"
 submissão e o final do projeto, além da análise longitudinal entre editais"
 		base:id "PA4.ES - RedesInovacao"
 	]
-	instance PA4.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA4.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA4.MA - RedesInovacao"
+		base:id "PA4.MA1 - RedesInovacao"
 	]
 	
 	instance PA5.ES : planoAvaliacao:escopo [
@@ -256,9 +258,9 @@ submissão e o final do projeto, além da análise longitudinal entre editais"
 tecnológicas e licenciamentos. A análise observará a evolução desse indicador ao longo das edições do programa"
 		base:id "PA5.ES - RedesInovacao"
 	]
-	instance PA5.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA5.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA5.MA - RedesInovacao"
+		base:id "PA5.MA1 - RedesInovacao"
 	]
 	
 	instance PA6.ES : planoAvaliacao:escopo [
@@ -266,9 +268,9 @@ tecnológicas e licenciamentos. A análise observará a evolução desse indicad
 envolvidas, com potencial impacto em produtividade. A comparação será longitudinal entre os editais do programa"
 		base:id "PA6.ES - RedesInovacao"
 	]
-	instance PA6.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA6.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA6.MA - RedesInovacao"
+		base:id "PA6.MA1 - RedesInovacao"
 	]
 	
 	instance PA7.ES : planoAvaliacao:escopo [
@@ -276,9 +278,9 @@ envolvidas, com potencial impacto em produtividade. A comparação será longitu
 redes apoiadas. A análise considerará a variação antes e após o apoio, além da evolução entre edições do programa"
 		base:id "PA7.ES - RedesInovacao"
 	]
-	instance PA7.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA7.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA7.MA - RedesInovacao"
+		base:id "PA7.MA1 - RedesInovacao"
 	]
 	
 	instance PA8.ES : planoAvaliacao:escopo [
@@ -286,9 +288,9 @@ redes apoiadas. A análise considerará a variação antes e após o apoio, alé
 considerando sua capacidade de captar recursos após o período de apoio. A comparação será longitudinal entre as redes apoiadas em diferentes editais"
 		base:id "PA8.ES - RedesInovacao"
 	]
-	instance PA8.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA8.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA8.MA - RedesInovacao"
+		base:id "PA8.MA1 - RedesInovacao"
 	]
 	
 	instance PA9.ES : planoAvaliacao:escopo [
@@ -297,30 +299,12 @@ meio da evolução do faturamento ao longo do tempo. A análise considerará a v
 cada edição"
 		base:id "PA9.ES - RedesInovacao"
 	]
-	instance PA9.MA : planoAvaliacao:metodoAvaliacao [
+	instance PA9.MA1 : planoAvaliacao:metodoAvaliacao [
 		base:descricao "Análise descritiva"
-		base:id "PA9.MA - RedesInovacao"
-	]
-	
-	//Riscos
-	instance R1 : planoAvaliacao:risco [
-		base:descricao "Subnotificação"
-		base:id "R1 - RedesInovacao"
-	]
-	instance R2 : planoAvaliacao:risco [
-		base:descricao "Dados incompletos"
-		base:id "R2 - RedesInovacao"
-	]
-	instance R3 : planoAvaliacao:risco [
-		base:descricao "Falta de transparência"
-		base:id "R3 - RedesInovacao"
-	]
-	instance R4 : planoAvaliacao:risco [
-		base:descricao "Acesso restrito a dados fiscais"
-		base:id "R4 - RedesInovacao"
+		base:id "PA9.MA1 - RedesInovacao"
 	]
 
-	// Limitações
+	//Limitações
 	instance LIM1 : planoAvaliacao:limitacao [
 		base:descricao "Dependência dos respondentes para obtenção das informações"
 	]

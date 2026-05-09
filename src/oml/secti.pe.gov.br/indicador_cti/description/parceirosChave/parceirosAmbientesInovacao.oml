@@ -35,6 +35,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/par
 		base:nome "Hubs de Inovação (Coworkings, Living Labs, Espaços Makers, etc)"
 		base:id "PC5.8"
 	]
+	
+	//Falta validação
 	instance PC5.9 : canvas:ParceiroChave [
 		base:nome "Ambientes promotores de inovação de forma geral"
 		base:id "PC5.9"

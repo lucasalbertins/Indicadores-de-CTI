@@ -2,12 +2,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos#> as fatorExterno
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
@@ -17,9 +22,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas de estudo para alunos de instituições de ensino superior 
 públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		base:id "PR9"
-		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5
-		programa:condicionadoPor fatorExterno:FE.OP19, fatorExterno:FE.OP20, fatorExterno:FE.OP21, fatorExterno:FE.OP22,fatorExterno:FE.OP23, 
-		fatorExterno:FE.OP24,fatorExterno:FE.AM26, fatorExterno:FE.AM27, fatorExterno:FE.AM28, fatorExterno:FE.AM29
+		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.7
+		programa:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresCenarioSocialEducacional:FE4.OP3, fatoresCenarioSocialEducacional:FE4.OP4, 
+		fatoresCenarioSocialEducacional:FE4.OP5, fatoresDinamicaEcossistema:FE5.OP5, fatoresDinamicaEcossistema:FE5.OP6, fatoresCenarioEconomico:FE1.AM2, 
+		fatoresCenarioInstitucionalLegal:FE2.AM3, fatoresCenarioInstitucionalLegal:FE2.AM4, fatoresCenarioInstitucionalLegal:FE2.AM5, 
+		fatoresCenarioTecnologico:FE3.AM3
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.2, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.2, 
 		entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.3
 		programa:executa atividadeChave:AC19, atividadeChave:AC20, atividadeChave:AC21, atividadeChave:AC22, atividadeChave:AC23, atividadeChave:AC24, 
@@ -30,6 +37,13 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		RE.LP6
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+	]
+	
+	// Relações PROUPE --> Público-Alvo
+	relation instance PR9.direcionadoA.PU1.10 : programa:direcionadoA [
+		from PR9
+		to publicosAcademiaICTs:PU1.10
+		base:tipo "direto"
 	]
 	
 	// Objetivo Geral

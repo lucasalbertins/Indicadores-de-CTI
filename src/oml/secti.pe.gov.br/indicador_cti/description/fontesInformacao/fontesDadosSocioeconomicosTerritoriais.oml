@@ -1,0 +1,18 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosSocioeconomicosTerritoriais#> as fontesDadosSocioeconomicosTerritoriais {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	
+	instance FI5.1 : planoAvaliacao:fonteInformacao [
+		base:nome "Painel do IDHM"
+		base:id "FI5.1"
+	]
+	instance FI5.2 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de Dados do Estado de Pernambuco (BDE)"
+		base:id "FI5.2"
+	]
+	instance FI5.3 : planoAvaliacao:fonteInformacao [
+		base:nome "Base de dados do IBGE"
+		base:id "FI5.3"
+	]
+}

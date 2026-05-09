@@ -3,32 +3,32 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
-	instance PA2.1 : canvas:PublicoAlvo [
+	instance PU2.1 : canvas:PublicoAlvo [
 		base:nome "Servidores públicos (técnicos, gestores, analistas, funcionários públicos)"
-		base:id "PA2.1"
+		base:id "PU2.1"
 	]
-	instance PA2.2 : canvas:PublicoAlvo [
+	instance PU2.2 : canvas:PublicoAlvo [
 		base:nome "Órgãos do governo estadual (secretarias, autarquias,...)"
-		base:id "PA2.2"
+		base:id "PU2.2"
 	]
-	instance PA2.3 : canvas:PublicoAlvo [
+	instance PU2.3 : canvas:PublicoAlvo [
 		base:nome "Órgãos dos governos municipais (secretarias, autarquias,...)"
-		base:id "PA2.3"
+		base:id "PU2.3"
 	]
-	instance PA2.4 : canvas:PublicoAlvo [
+	instance PU2.4 : canvas:PublicoAlvo [
 		base:nome "Hospitais públicos e privados e unidades de saúde (ex.: UPA)"
-		base:id "PA2.4"
+		base:id "PU2.4"
 	]
-	instance PA2.5 : canvas:PublicoAlvo [
+	instance PU2.5 : canvas:PublicoAlvo [
 		base:nome "Instituições de Ensino Públicas ou Privadas"
-		base:id "PA2.5"
+		base:id "PU2.5"
 	]
-	instance PA2.6 : canvas:PublicoAlvo [
+	instance PU2.6 : canvas:PublicoAlvo [
 		base:nome "Escolas de ensino médio (EREM, ETE, outras)"
-		base:id "PA2.6"
+		base:id "PU2.6"
 	]
-	instance PA2.7 : canvas:PublicoAlvo [
+	instance PU2.7 : canvas:PublicoAlvo [
 		base:nome "Escolas de ensino fundamental"
-		base:id "PA2.7"
+		base:id "PU2.7"
 	]
 }

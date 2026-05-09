@@ -1,6 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2 {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao#> as fonte
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
@@ -42,7 +43,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:estratificadaPor estratPrazoConclusao
 		formulas:estratificadaPor estratArea
 		formulas:estratificadaPor estratRDE
-		metricas:temFonte fonte:FI2
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	
 	// retorna o valor da fonte de dados

@@ -27,6 +27,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasI
 		base:nome "Convênios"
 		base:id "EN5.6"
 	]
+	
+	//Falta validação
 	instance EN5.7 : canvas:Entrada [
 		base:nome "Proposta preliminar e detalhada de projetos elaborados pelos proponentes para as etapas de seleção"
 		base:id "EN5.7"

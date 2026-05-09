@@ -1,0 +1,49 @@
+description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal {
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	
+	//Oportunidades
+	instance FE2.OP1 : canvas:Oportunidade [
+		base:nome "Aprimoramento do arcabouço legal de inovação"
+		base:id "FE2.OP1"
+	]
+	
+	//Falta validação
+	instance FE2.OP2 : canvas:Oportunidade [
+		base:nome "Legislação nacional e estadual vigente relacionada ao Marco Legal de CT&I"
+		base:id "FE2.OP2"
+	]
+	
+	//Ameaças
+	instance FE2.AM1 : canvas:Ameaca [
+		base:nome "Desconhecimento das oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de soluções inovadoras"
+		base:id "FE2.AM1"
+	]
+	instance FE2.AM2 : canvas:Ameaca [
+		base:nome "Lentidão e burocracia para investir e manter a infraestrutura"
+		base:id "FE2.AM2"
+	]
+	instance FE2.AM3 : canvas:Ameaca [
+		base:nome "Validação equivocada das inscrições pelas Autarquias Municipais de Ensino Superior"
+		base:id "FE2.AM3"
+	]
+	instance FE2.AM4 : canvas:Ameaca [
+		base:nome "Dificuldades no cumprimento da proporção legal prevista na Lei nº 17.945/2022"
+		base:id "FE2.AM4"
+	]
+	instance FE2.AM5 : canvas:Ameaca [
+		base:nome "Descumprimento da contrapartida obrigatória por parte de bolsistas"
+		base:id "FE2.AM5"
+	]
+	
+	//Falta validação
+	instance FE2.AM6 : canvas:Ameaca [
+		base:nome "Limite da cota de importação de equipamentos e insumos para pesquisa do país"
+		base:id "FE2.AM6"
+	]
+	instance FE2.AM7 : canvas:Ameaca [
+		base:nome "Restrições apresentadas pelo arcabouço legal"
+		base:id "FE2.AM7"
+	]
+}
