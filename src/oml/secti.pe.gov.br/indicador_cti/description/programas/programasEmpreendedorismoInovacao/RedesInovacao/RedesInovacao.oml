@@ -29,8 +29,7 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		base:id "PR3"
 		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4
 		programa:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
-		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM7, 
-		fatoresDinamicaEcossistema:FE5.AM1, fatoresDinamicaEcossistema:FE5.AM2
+		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresDinamicaEcossistema:FE5.AM1
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.4, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7

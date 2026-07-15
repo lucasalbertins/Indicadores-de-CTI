@@ -4,7 +4,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
 	//Oportunidades
-	// Falta validação
 	instance FE1.OP1 : canvas:Ameaca [
 		base:nome "Disponibilidade orçamentária e financeira do Tesouro Estadual"
 		base:id "FE1.OP1"
@@ -31,8 +30,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:nome "Baixa atratividade das bolsas"
 		base:id "FE1.AM5"
 	]
-	
-	//Falta validação
+
 	instance FE1.AM6 : canvas:Ameaca [
 		base:nome "Flutuação cambial"
 		base:id "FE1.AM6"

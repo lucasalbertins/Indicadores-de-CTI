@@ -4,8 +4,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano

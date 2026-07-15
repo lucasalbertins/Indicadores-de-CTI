@@ -3,6 +3,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	
+	
 	//Oportunidades
 	instance FE3.OP1 : canvas:Oportunidade [
 		base:nome "Novas tecnologias para responder às demandas e aos desafios estratégicos do estado"
@@ -35,7 +36,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE3.AM3"
 	]
 	
-	//Falta validação
 	instance FE3.AM4 : canvas:Ameaca [
 		base:nome "Estrutura administrativa de suporte ao programa insuficiente"
 		base:id "FE3.AM4"

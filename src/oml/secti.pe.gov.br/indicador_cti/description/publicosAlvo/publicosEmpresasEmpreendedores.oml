@@ -24,7 +24,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 		base:id "PU3.5"
 	]
 	instance PU3.6 : canvas:PublicoAlvo [
-		base:nome "Cooperativas e associações"
+		base:nome "Empreendedores inovadores "
 		base:id "PU3.6"
+	] 
+	instance PU3.7 : canvas:PublicoAlvo [
+		base:nome "Cooperativas e associações e outras organizações afins"
+		base:id "PU3.7"
+	]
+	instance PU3.8 : canvas:PublicoAlvo [
+		base:nome "Mulheres empreendedoras"
+		base:id "PU3.8"
 	]
 }

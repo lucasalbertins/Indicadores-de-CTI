@@ -26,7 +26,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/form
 	
 	concept tipovalorLiteral < valordeArgumento
 	concept tipovalorMetrica < valordeArgumento 
-	concept tipovalorFonteDados < valordeArgumento
 	concept tipovalorFormula < valordeArgumento
 	
 	scalar property posicao [
@@ -45,12 +44,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/form
     	domain tipovalorLiteral
     	range xsd:decimal
     	functional
-	]
-	
-	scalar property valorFonteDados [
-	    domain tipovalorFonteDados
-	    range xsd:string //URI
-	    functional
 	]
 	
 	

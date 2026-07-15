@@ -32,8 +32,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:nome "Reconhecimento da importância das pesquisas nas atividades produtivas"
 		base:id "FE5.OP7"
 	]
-	
-	//Falta validação
+
 	instance FE5.OP8 : canvas:Oportunidade [
 		base:nome "Projeção do Estado quanto ao nº de empresas pernambucanas de base tecnológica especializadas em soluções de aprimoramento dos serviços públicos"
 		base:id "FE5.OP8"
@@ -69,7 +68,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE5.AM2"
 	]
 	
-	//Falta validação
 	instance FE5.AM3 : canvas:Ameaca [
 		base:nome "Evasão das ICTs fora da RMR"
 		base:id "FE5.AM3"

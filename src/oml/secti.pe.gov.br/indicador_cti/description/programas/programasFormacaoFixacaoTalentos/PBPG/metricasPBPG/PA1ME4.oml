@@ -67,14 +67,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:possuiValor Sucupira_Total_Bolsistas_PBPG
 	]
 
-	instance Sucupira_Bolsistas_PBPG_Tomada_Contas : formulas:tipovalorFonteDados [
+	instance Sucupira_Bolsistas_PBPG_Tomada_Contas : formulas:tipovalorMetrica [
 		base:id "SucupiraBolsistasPBPGTomadaContas_PA1.ME4"
-		formulas:valorFonteDados "sucupira.pbpg.tomada.contas" //falta add o url real
+		formulas:valorMetrica "sucupira.pbpg.tomada.contas" //falta add o url real
 		]
 	
-	 instance Sucupira_Total_Bolsistas_PBPG : formulas:tipovalorFonteDados [
+	 instance Sucupira_Total_Bolsistas_PBPG : formulas:tipovalorMetrica [
 		base:id "SucupiraTotalBolsistas - PBPG_PA1.ME4"
-		formulas:valorFonteDados "sucupira.total.bolsistas"
+		formulas:valorMetrica "sucupira.total.bolsistas"
 	]
 	instance formulaMultiplicacao : formulas:formula[
 		base:id "formula_multiplicacao_PA1.ME4"

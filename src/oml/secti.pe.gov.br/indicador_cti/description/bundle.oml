@@ -44,6 +44,8 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/eCRIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PA_PROUPE#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PROUPE#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PortoDigital/PortoDigital#> 
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/REPEPE#> 
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/calculo-metricas-PBPG#>

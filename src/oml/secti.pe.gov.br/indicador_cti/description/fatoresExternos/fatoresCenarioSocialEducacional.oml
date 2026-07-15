@@ -8,18 +8,22 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:nome "Maior reconhecimento da importância das atividades de CT&I/PD&I para a sociedade"
 		base:id "FE4.OP1"
 	]
+	
 	instance FE4.OP2 : canvas:Oportunidade [
 		base:nome "Massa crítica de pesquisadores existente no estado nas mais variadas áreas do conhecimento"
 		base:id "FE4.OP2"
 	]
+	
 	instance FE4.OP3 : canvas:Oportunidade [
 		base:nome "Expansão da demanda por Ensino Superior no interior"
 		base:id "FE4.OP3"
 	]
+	
 	instance FE4.OP4 : canvas:Oportunidade [
 		base:nome "Valorização das áreas STEM e das licenciaturas"
 		base:id "FE4.OP4"
 	]
+	
 	instance FE4.OP5 : canvas:Oportunidade [
 		base:nome "Crescimento do mercado de trabalho qualificado"
 		base:id "FE4.OP5"
@@ -35,7 +39,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE4.AM2"
 	]
 	
-	//Falta validação
 	instance FE4.AM3 : canvas:Ameaca [
 		base:nome "Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco"
 		base:id "FE4.AM3"

@@ -77,9 +77,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:valorMetrica PA1.ME2:quantidadeTitulados
 	]
 	
-	 instance AgilFap_Cotas_Encerradas : formulas:tipovalorFonteDados [
+	 instance AgilFap_Cotas_Encerradas : formulas:tipovalorMetrica [
 		base:id "AgilFapCotasEncerradas_PA1.ME1"
-		formulas:valorFonteDados "agilfap.cotas.encerradas"
+		formulas:valorMetrica "agilfap.cotas.encerradas"
 	]
 	instance formulaMultiplicacao : formulas:formula[
 		base:id "formula_multiplicacao_PA1.ME1"

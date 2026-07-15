@@ -35,4 +35,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 		base:nome "Hubs de Inovação (Coworkings, Living Labs, Espaços Makers, etc)"
 		base:id "PU4.8"
 	]
+	instance PU4.9 : canvas:PublicoAlvo [
+		base:nome "Ambientes promotores de inovação em geral"
+		base:id "PU4.9"
+	]
 }

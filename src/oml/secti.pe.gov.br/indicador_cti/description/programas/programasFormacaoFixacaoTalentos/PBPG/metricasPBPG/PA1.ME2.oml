@@ -62,8 +62,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:argumentoDe formulaIdentidadePA1ME2
 	]
 	
-	instance AgilFap_bolsistas_Titulados : formulas:tipovalorFonteDados [
+	instance AgilFap_bolsistas_Titulados : formulas:tipovalorMetrica [
 		base:id "AgilFapTitulados_PA1.ME2"
-		formulas:valorFonteDados "agilfap.bolsistas.titulados"
+		formulas:valorMetrica "agilfap.bolsistas.titulados"
 	]
 }

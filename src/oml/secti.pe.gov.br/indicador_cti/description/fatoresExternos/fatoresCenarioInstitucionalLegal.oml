@@ -9,7 +9,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE2.OP1"
 	]
 	
-	//Falta validação
 	instance FE2.OP2 : canvas:Oportunidade [
 		base:nome "Legislação nacional e estadual vigente relacionada ao Marco Legal de CT&I"
 		base:id "FE2.OP2"
@@ -37,7 +36,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE2.AM5"
 	]
 	
-	//Falta validação
 	instance FE2.AM6 : canvas:Ameaca [
 		base:nome "Limite da cota de importação de equipamentos e insumos para pesquisa do país"
 		base:id "FE2.AM6"
