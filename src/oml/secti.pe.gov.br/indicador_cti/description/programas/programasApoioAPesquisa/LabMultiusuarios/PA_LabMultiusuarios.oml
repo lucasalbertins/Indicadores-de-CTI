@@ -295,10 +295,12 @@ por ano "
 	instance PA4.ME2 : metricas:metrica [
 		base:descricao "Número de acervos científicos apoiados pelo Programa no estado por ano"
 		base:id "PA4.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
 	]
 	instance PA4.ME3 : metricas:metrica [
 		base:descricao "Percentual de acervos científicos apoiados pelo Programa em relação ao total de acervos científicos existentes no estado por ano"
 		base:id "PA4.ME3 - LabMultiusuarios"
+		metricas:temFonte fontesInfraestruturaAtivosCTI:FI4.1
 	]
 	
 	instance PA5.ME1 : metricas:metrica [
@@ -310,6 +312,7 @@ por ano "
 		base:descricao "Número de usuários atendido nos laboratórios apoiados por ano por tipo e categoria (Pessoas: estudante, pesquisadores, professores, 
 técnicos, outros ou Instituição: ICT pública, ICT privada, governo – administração pública, empresa pública, empresa privada, outros)"
 		base:id "PA5.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA5.ME3 : metricas:metrica [
 		base:descricao "Taxa de crescimento anual do número total de usuários dos laboratórios apoiados por tipo e categoria de usuários por ano (valores em 
@@ -327,6 +330,7 @@ percentuais)"
 		base:descricao "Número de usuários atendido nos laboratórios apoiados por ano por tipo e categoria (Pessoas: estudante, pesquisadores, professores, 
 técnicos, outros ou Instituição: ICT pública, ICT privada, governo – administração pública, empresa pública, empresa privada, outros)"
 		base:id "PA6.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA6.ME3 : metricas:metrica [
 		base:descricao "Taxa de crescimento anual do número de usuários dos acervos científicos apoiados por tipo e categoria de usuários por ano (valores em 
@@ -367,6 +371,7 @@ programa"
 	instance PA9.ME2 : metricas:metrica [
 		base:descricao "Número de novos tipos de serviços prestados pelos laboratórios multiusuários com o apoio do programa"
 		base:id "PA9.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA9.ME3 : metricas:metrica [
 		base:descricao "Taxa de crescimento anual do número de tipos de serviços prestados pelos laboratórios multiusuários apoiados por ano (em valores 
@@ -383,6 +388,7 @@ percentuais)"
 	instance PA10.ME2 : metricas:metrica [
 		base:descricao "Número de novos serviços oferecidos pelos acervos científicos com o apoio do programa"
 		base:id "PA10.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA10.ME3 : metricas:metrica [
 		base:descricao "Taxa de crescimento anual do número de serviços prestados pelos acervos científicos com o apoio do programa por ano (em valores 
@@ -425,6 +431,7 @@ ano"
 		base:descricao "Participação percentual dos laboratórios multiusuários e acervos científicos apoiados diretamente relacionados com pedidos de patentes em 
 relação ao total de laboratórios multiusuários e acervos científicos apoiados"
 		base:id "PA13.ME3 - LabMultiusuarios"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesDadosPrimarios:FI1.1
 	]
 	instance PA13.ME4 : metricas:metrica [
 		base:descricao "Número de pedidos de patentes registrados a partir do uso direto dos laboratórios multiusuários e acervos científicos apoiados"
@@ -445,6 +452,7 @@ relação ao total de laboratórios multiusuários e acervos científicos apoiad
 	instance PA14.ME3 : metricas:metrica [
 		base:descricao "Número de acervos científicos apoiados com acordos multi-institucionais firmados por ano"
 		base:id "PA14.ME3 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA14.ME4 : metricas:metrica [
 		base:descricao "Número de acordos multi-institucionais firmados por ano a partir dos acervos científicos apoiados"
@@ -508,6 +516,7 @@ comercial para instituição)"
 	instance PA19.ME2 : metricas:metrica [
 		base:descricao "Número de laboratórios com outras certificações específicas"
 		base:id "PA19.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
 	]
 	instance PA19.ME3 : metricas:metrica [
 		base:descricao "Percentual de laboratórios apoiados e certificados em relação ao total apoiado"
@@ -546,10 +555,12 @@ total de laboratórios multiusuários e acervos científicos apoiados por ano"
 	instance PA22.ME2 : metricas:metrica [
 		base:descricao "Percentual de laboratórios multiusuários acervos científicos que atendem a PPG"
 		base:id "PA22.ME2 - LabMultiusuarios"
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA22.ME3 : metricas:metrica [
 		base:descricao "Número de PPG de Pernambuco atendidos por laboratório multiusuários e acervos científicos apoiados pelo Programa"
 		base:id "PA22.ME3 - LabMultiusuarios"
+		metricas:temFonte fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 	instance PA22.ME4 : metricas:metrica [
 		base:descricao "Percentual de PPG de Pernambuco atendidos por laboratório multiusuários e acervos científicos apoiados pelo Programa"

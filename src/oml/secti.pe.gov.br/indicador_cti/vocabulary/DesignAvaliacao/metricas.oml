@@ -6,7 +6,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metr
 	
 	concept metrica < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel, 
 	base:EntidadeAgregavel [
-		restricts temFonte to min 0
+		restricts temFonte to min 1
 	]
 	
 	scalar Finalidade [

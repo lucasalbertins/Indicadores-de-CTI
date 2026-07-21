@@ -744,19 +744,19 @@ e o atendimento aos diversos municípios atendidos pelas autarquias e relevânci
 		base:descricao "Atualmente o sistema de informação do PROUPE não prevê outros possíveis grupos prioritários"
 	]
 	instance LIM6 : planoAvaliacao:limitacao [
-		base:nome "Atualmente o sistema de informação do PROUPE não contém informação sobre os alunos não bolsistas"
+		base:descricao "Atualmente o sistema de informação do PROUPE não contém informação sobre os alunos não bolsistas"
 	]
 	instance LIM7 : planoAvaliacao:limitacao [
-		base:nome "Atualmente o sistema de informação do PROUPE não contém relatório semestral das autarquias com dos alunos, egressos e evadidos"
+		base:descricao "Atualmente o sistema de informação do PROUPE não contém relatório semestral das autarquias com dos alunos, egressos e evadidos"
 	]
 	instance LIM8 : planoAvaliacao:limitacao [
-		base:nome "Atualmente não existe o delineamento metodológico da pesquisa direcionada com os egressos."
+		base:descricao "Atualmente não existe o delineamento metodológico da pesquisa direcionada com os egressos."
 	]
 	instance LIM9 : planoAvaliacao:limitacao [
-		base:nome "Pode ser não ser possível identificar outras externalidades destas contrapartidas"
+		base:descricao "Pode ser não ser possível identificar outras externalidades destas contrapartidas"
 	]
 	instance LIM10 : planoAvaliacao:limitacao [
-		base:nome "Atualmente não está sendo medido o Número de Projetos científicos, tecnológicos e de inovação"
+		base:descricao "Atualmente não está sendo medido o Número de Projetos científicos, tecnológicos e de inovação"
 	]
 
 }
