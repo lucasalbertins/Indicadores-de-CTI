@@ -67,7 +67,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance argDivisor : formulas:argumento [
 		base:id "var_divisor_PA1.ME1"
 		formulas:posicao "2"^^xsd:int
-		formulas:nome "divisor"
+		formulas:nome "Cotas encerradas"
 		formulas:argumentoDe formulaDivisao
 		formulas:possuiValor AgilFap_Cotas_Encerradas
 	]

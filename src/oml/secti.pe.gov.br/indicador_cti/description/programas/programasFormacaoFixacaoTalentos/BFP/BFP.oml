@@ -33,7 +33,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, 
 		entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1
 		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7, saida:SA8
+		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
 		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3
 		programa:buscaAtingirGeral OB.GE
 		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
@@ -46,9 +46,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR4.direcionadoA.PU1.6 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU1.3 : programa:direcionadoA [
 		from PR4
-		to publicosAcademiaICTs:PU1.6
+		to publicosAcademiaICTs:PU1.3
 		base:tipo "direto"
 	]
 	relation instance PR4.direcionadoA.PU1.14 : programa:direcionadoA [
@@ -66,39 +66,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU2.3 : programa:direcionadoA [
-		from PR4
-		to publicosGovernoInstituicoesPublicas:PU2.3
-		base:tipo "indireto"
-	]
+	
 	relation instance PR4.direcionadoA.PU3.2 : programa:direcionadoA [
 		from PR4
 		to publicosEmpresasEmpreendedores:PU3.2
-		base:tipo "indireto"
-	]
-	relation instance PR4.direcionadoA.PU3.5 : programa:direcionadoA [
-		from PR4
-		to publicosEmpresasEmpreendedores:PU3.5
-		base:tipo "indireto"
-	]
-	relation instance PR4.direcionadoA.PU4.1 : programa:direcionadoA [
-		from PR4
-		to publicosAmbientesInovacao:PU4.1
-		base:tipo "indireto"
-	]
-	relation instance PR4.direcionadoA.PU4.6 : programa:direcionadoA [
-		from PR4
-		to publicosAmbientesInovacao:PU4.6
-		base:tipo "indireto"
-	]
-	relation instance PR4.direcionadoA.PU4.7 : programa:direcionadoA [
-		from PR4
-		to publicosAmbientesInovacao:PU4.7
-		base:tipo "indireto"
-	]
-	relation instance PR4.direcionadoA.PU4.8 : programa:direcionadoA [
-		from PR4
-		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
 	relation instance PR4.direcionadoA.PU5.1 : programa:direcionadoA [
@@ -106,6 +77,12 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
+	
+	relation instance PR4.direcionadoA.PU4.9 : programa:direcionadoA [
+		from PR4
+		to publicosAmbientesInovacao:PU4.9
+		base:tipo "indireto"
+	]	
 	
 	// Objetivo Geral
 	instance OB.GE : canvas:ObjetivoGeral [
@@ -141,7 +118,7 @@ públicas de pesquisa e desenvolvimento que atuem em investigação científica,
 		canvas:buscaAtingir RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP2
 	]
 	instance OB.ES6 : canvas:ObjetivoEspecifico [
-		base:nome "Contribuir para o desenvolvimento científico, tecnológico ou de inovação"
+		base:nome "Contribuir para o desenvolvimento científico, tecnológico ou de inovação em PE"
 		base:id "OB.ES6 - BFP"
 		canvas:buscaAtingir RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2
 	]

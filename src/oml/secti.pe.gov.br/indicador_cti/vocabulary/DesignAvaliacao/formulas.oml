@@ -71,6 +71,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/form
 		irreflexive	
 	]
 	
+
+	
 	// variavel que referencia OUTRA FÓRMULA (para aninhamento)
 	relation valorFormula [
 		from tipovalorFormula

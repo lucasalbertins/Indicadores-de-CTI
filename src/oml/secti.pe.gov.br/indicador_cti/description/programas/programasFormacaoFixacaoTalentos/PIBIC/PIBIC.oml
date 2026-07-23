@@ -1,0 +1,180 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PIBIC#> as PIBIC {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao#> as parceirosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTS
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	
+	instance PR12 : programa:programaCTI [
+		base:nome "PIBIC"
+		base:descricao "Procura estimular pesquisadores produtivos a engajarem estudantes de graduação no processo de investigação científica, otimizando a capacidade da instituição na formação de profissionais altamente qualificados despertando a vocação entre estudantes de graduação para os campos das ciências e das carreiras tecnológicas, incentivando talentos potenciais, mediante sua participação em projetos de pesquisa que introduzam o jovem universitário no domínio do método científico."
+		base:id "PR12"
+		
+		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTS:PC3.1, parceirosEmpresas:PC4.2
+		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2, fatoresCenarioSocialEducacional:FE4.AM2
+		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1, entradasInstrumentosLegaisNormativos:EN5.2, entradasInstrumentosLegaisNormativos:EN5.3
+		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
+		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6
+		
+		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.MP1, RE.MP2, RE.LP1, RE.LP2
+		programa:buscaAtingirGeral OB.GE
+		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6		
+	]
+	
+	// Relações Direcionadas (Públicos-Alvo)
+	relation instance PR12.direcionadoA.PU1.2 : programa:direcionadoA [
+		from PR12
+		to publicosAcademiaICTs:PU1.2
+		base:tipo "direto"
+	]
+	
+	relation instance PR12.direcionadoA.PU1.10 : programa:direcionadoA [
+		from PR12
+		to publicosAcademiaICTs:PU1.10
+		base:tipo "direto"
+	]
+	
+	relation instance PR12.direcionadoA.PU1.14 : programa:direcionadoA [
+		from PR12
+		to publicosAcademiaICTs:PU1.14
+		base:tipo "direto"
+	]
+	
+	relation instance PR12.direcionadoA.PU1.15 : programa:direcionadoA [
+		from PR12
+		to publicosAcademiaICTs:PU1.15
+		base:tipo "indireto"
+	]
+	
+	
+	
+	relation instance PR12.direcionadoA.PU2.2 : programa:direcionadoA [
+		from PR12
+		to publicosGovernoInstituicoesPublicas:PU2.2
+		base:tipo "indireto"
+	]
+	
+	relation instance PR12.direcionadoA.PU3.2 : programa:direcionadoA [
+		from PR12
+		to publicosEmpresasEmpreendedores:PU3.2
+		base:tipo "indireto"
+	]
+	
+	relation instance PR12.direcionadoA.PU4.9 : programa:direcionadoA [
+		from PR12
+		to publicosAmbientesInovacao:PU4.9
+		base:tipo "indireto"
+	]
+	
+	relation instance PR12.direcionadoA.PU5.1 : programa:direcionadoA [
+		from PR12
+		to publicosSociedadeTerceiroSetor:PU5.1
+		base:tipo "indireto"
+	]	
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Apoiar atividades de pesquisa científica, tecnológica e de inovação, mediante a seleção de propostas para concessão de bolsas de iniciação científica a alunos de graduação, visando o avanço do conhecimento científico e tecnológico, em todas as áreas do conhecimento."
+		base:id "OB.GE - PIBIC"
+	]
+	
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Despertar a vocação entre estudantes de graduação para os campos da ciência e tecnologia, consolidando a iniciação científica como pilar estratégico."
+		base:id "OB.ES1 - PIBIC"
+		canvas:buscaAtingir RE.CP1, RE.CP3, RE.MP1, RE.MP2, RE.LP1, RE.LP2
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Elevar o padrão formativo de profissionais aptos a atuar em diversos setores da economia/academia e fortalecer o fluxo de talentos para a pós-graduação."
+		base:id "OB.ES2 - PIBIC"
+		canvas:buscaAtingir RE.CP1, RE.MP1, RE.MP2, RE.LP1, RE.LP2
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar a adaptação e promover a inserção à vida acadêmica buscando minimizar a evasão universitária."
+		base:id "OB.ES3 - PIBIC"
+		canvas:buscaAtingir RE.CP2, RE.CP3
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular, através de ações afirmativas (a partir de 2025), a participação, no ambiente de ciência e tecnologia, de estudantes que se declarem negros (pretas e pardas), quilombolas, ciganas, indígenas, mães de crianças de até seis anos de idade incompletos, pessoas trans (transexuais, transgêneros e travestis) ou com deficiência."
+		base:id "OB.ES4 - PIBIC"
+		canvas:buscaAtingir RE.CP1, RE.CP2, RE.CP3
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular, através de critério recente (2026) de priorização, a participação de jovens doutores produtivos como orientadores do programa."
+		base:id "OB.ES5 - PIBIC"
+		canvas:buscaAtingir RE.CP1
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular, através de critério de priorização, a participação de pesquisadores produtivos fora da RMR como orientadores do programa."
+		base:id "OB.ES6 - PIBIC"
+		canvas:buscaAtingir RE.CP1
+	]
+	
+	// Resultados Esperados
+	
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Aumento da produção científica de bolsistas e orientadores publicada em eventos e periódicos;"
+		base:id "RE.CP1 - PIBIC"
+		canvas:prazo "curto"
+	]
+	
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Redução da evasão nos cursos de graduação nos quais os bolsistas estão vinculados."
+		base:id "RE.CP2 - PIBIC"
+		canvas:prazo "curto"
+	]
+	
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Incremento na taxa de conclusão da graduação entre os bolsistas."
+		base:id "RE.CP3 - PIBIC"
+		canvas:prazo "curto"
+	]
+	
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Elevação do percentual de egressos matriculados em programas de pós-graduação (Acadêmico ou Profissional)."
+		base:id "RE.MP1 - PIBIC"
+		canvas:prazo "médio"
+	]
+	
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Elevação da proporção de bolsistas egressos que migraram para o doutorado."
+		base:id "RE.MP2 - PIBIC"
+		canvas:prazo "médio"
+	]
+	
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Aumento do percentual de egressos matriculados em programas de doutorado."
+		base:id "RE.LP1 - PIBIC"
+		canvas:prazo "longo"
+	]
+	
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento da empregabilidade de egressos atuantes na indústria, setor público ou empreendedorismo."
+		base:id "RE.LP2 - PIBIC"
+		canvas:prazo "longo"
+	]
+	
+}

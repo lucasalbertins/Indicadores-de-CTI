@@ -1,8 +1,8 @@
-vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#> as bolsista {
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#> as bolsista {
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 
-	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#> as projeto
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#> as projeto
 
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
