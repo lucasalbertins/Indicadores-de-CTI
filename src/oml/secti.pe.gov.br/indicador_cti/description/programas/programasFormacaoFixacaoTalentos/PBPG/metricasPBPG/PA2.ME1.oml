@@ -1,0 +1,58 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME1#> as PA2.ME1 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+		
+	// ESTRATIFICAÇÕES
+	instance estratSemestre : formulas:estratificacao [
+		base:id "estrat_semestre_PA2.ME1"
+		base:nome "Semestre"
+	]
+	
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA2.ME1"
+		base:nome "Modalidade"
+	]
+	
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA2.ME1"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	
+	// MÉTRICA: Quantidade Trabalhos Áreas Prioritárias
+	instance quantidadeTrabalhosAreasPrioritarias : metricas:metrica [
+		base:id "PA2.ME1_PBPG"
+		base:nome "Quantidade Trabalhos Áreas Prioritárias"
+		base:descricao "Número de bolsistas PBPG titulados por semestre com área prioritária para Pernambuco postulada na proposta submetida, desagregado por modalidade (mestrado e doutorado) e grande área do conhecimento FACEPE."
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaIdentidade
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+	]
+	 
+	instance formulaIdentidade : formulas:formula [
+		base:id "formula_identidade_PA2.ME1"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argValorUnico
+	]
+	
+	instance argValorUnico : formulas:argumento [
+		base:id "arg_valor_unico_PA2.ME1"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor Valor_Trabalhos_Prioritarios
+		formulas:argumentoDe formulaIdentidade
+	]
+	
+	
+	instance Valor_Trabalhos_Prioritarios : formulas:tipovalorMetrica [
+		base:id "ValorTrabalhosPrioritarios_PA2.ME1"
+		formulas:valorMetrica "agilfap.bolsistas.titulados.area_prioritaria"
+	]
+}

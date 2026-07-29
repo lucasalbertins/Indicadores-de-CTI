@@ -109,6 +109,8 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/edital.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME1.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME2.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

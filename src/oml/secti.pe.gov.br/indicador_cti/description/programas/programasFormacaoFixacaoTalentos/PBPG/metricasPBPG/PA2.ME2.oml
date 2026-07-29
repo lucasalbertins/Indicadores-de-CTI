@@ -1,0 +1,113 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME2#> as PA2.ME2 {
+	
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME1#> as PA2.ME1
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	// ESTRATIFICAÇÕES
+	instance estratSemestre : formulas:estratificacao [
+		base:id "estrat_semestre_PA2.ME2"
+		base:nome "Semestre"
+	]
+	
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA2.ME2"
+		base:nome "Modalidade"
+	]
+	
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA2.ME2"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	
+	// MÉTRICA: Taxa Trabalhos Áreas Prioritárias
+	instance taxaTrabalhosAreasPrioritarias : metricas:metrica [
+		base:id "PA2.ME2_PBPG"
+		base:nome "Taxa Trabalhos Áreas Prioritárias"
+		base:descricao "Número de bolsistas PBPG titulados no semestre, com área prioritária para Pernambuco postulada na proposta submetida, sobre o total de bolsistas PBPG titulados no semestre, desagregado por modalidade (mestrado e doutorado) e grande área do conhecimento FACEPE."
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+		// Agregado logicamente ao total absoluto da PA1.ME2
+		base:agregadoPor PA1.ME2:quantidadeTitulados
+	]
+	
+	// Fórmula Interna: Divisão (Trabalhos Prioritários / Total Titulados)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA2.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendo
+		formulas:possuiArgumento argDivisor
+	]
+	
+	// Numerador: Referencia a métrica instanciada na PA2.ME1
+	instance argDividendo : formulas:argumento [
+		base:id "arg_dividendo_PA2.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor Metrica_Quantidade_Areas_Prioritarias
+		formulas:argumentoDe formulaDivisao
+	]
+	
+	// Denominador: Referencia a métrica importada da PA1.ME2
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA2.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor Metrica_Quantidade_Titulados_Total
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance Metrica_Quantidade_Areas_Prioritarias : formulas:tipovalorMetrica [
+		base:id "MetricaQtdeAreasPrioritarias_PA2.ME2"
+		formulas:valorMetrica PA2.ME1:quantidadeTrabalhosAreasPrioritarias
+	]
+	
+	instance Metrica_Quantidade_Titulados_Total : formulas:tipovalorMetrica [
+		base:id "MetricaQtdeTituladosTotal_PA2.ME2"
+		formulas:valorMetrica PA1.ME2:quantidadeTitulados
+	]
+	
+	
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA2.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicando
+		formulas:possuiArgumento argMultiplicador
+		formulas:formulaDe taxaTrabalhosAreasPrioritarias
+	]
+	
+	instance argMultiplicando : formulas:argumento [
+		base:id "arg_multiplicando_PA2.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivisao
+		formulas:argumentoDe formulaMultiplicacao
+	]
+	 
+	instance argMultiplicador : formulas:argumento [
+		base:id "arg_multiplicador_PA2.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:argumentoDe formulaMultiplicacao
+	]
+	
+	instance valorFormulaDivisao : formulas:tipovalorFormula [
+	 	formulas:valorFormula formulaDivisao
+	]
+	 
+	instance valorLiteral : formulas:tipovalorLiteral [
+		formulas:valorLiteral 100
+	]
+}
