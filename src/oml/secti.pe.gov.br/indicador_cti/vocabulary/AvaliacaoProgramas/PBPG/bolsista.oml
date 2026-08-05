@@ -6,7 +6,63 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
-	concept bolsista < base:EntidadeNomeavel
+	/*
+	 * PESSOA (abstrata)
+	 *
+	 * Agrupa os atributos que pertencem à pessoa, e não ao vínculo de bolsa,
+	 * conforme o diagrama de classes da ontologia principal (ontologia.jpeg).
+	 * É um aspect: não é instanciável, logo continua havendo um único tipo
+	 * concreto (bolsista) e um único bloco por indivíduo nas descrições.
+	 *
+	 * Os demais papéis do diagrama -- autor, coordenador e empregado -- devem
+	 * especializar este mesmo aspect quando forem modelados, herdando estes
+	 * atributos sem duplicação e sem migração de dados.
+	 *
+	 * nm_pessoa do diagrama é herdado como base:nome.
+	 */
+	aspect pessoa < base:EntidadeNomeavel
+
+	scalar property nr_cpf [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	scalar property an_nascimento [
+		domain pessoa
+		range xsd:int
+		functional
+	]
+
+	scalar property nm_pais_nacionalidade [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_cidade_endereco [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	scalar property ds_url_cv_lattes [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	/*
+	 * BOLSISTA
+	 *
+	 * LIMITAÇÃO CONHECIDA: os atributos do vínculo de bolsa estão no próprio
+	 * bolsista e são functional, logo cada indivíduo comporta uma única bolsa.
+	 * As métricas PA3.ME2 e PA3.ME3 -- mestre titulado que, dois anos depois,
+	 * está em curso de doutorado -- exigem duas concessões para a mesma pessoa
+	 * e vão requerer que o vínculo seja reificado numa entidade própria
+	 * (ver descrições em PA-PBPG.oml). PA1 e PA2 não são afetadas.
+	 */
+	concept bolsista < pessoa
 
 	scalar modalidade [
 		oneOf "MESTRADO", "DOUTORADO"
@@ -14,30 +70,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	scalar status [
 		oneOf "ADIMPLENTE", "INADIMPLENTE"
-	]
-
-	scalar property nr_cpf_bolsista [
-		domain bolsista
-		range xsd:string
-		functional
-	]
-
-	scalar property an_nascimento_bolsista [
-		domain bolsista
-		range xsd:string
-		functional
-	]
-
-	scalar property nm_pais_nacionalidade_bolsista [
-		domain bolsista
-		range xsd:string
-		functional
-	]
-
-	scalar property nm_cidade_endereco_bolsista [
-		domain bolsista
-		range xsd:string
-		functional
 	]
 
 	scalar property id_bolsa [
@@ -52,7 +84,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 		functional
 	]
 
-	scalar property id_semestre_bolsa_fim [
+	scalar property dt_fim_bolsa [
 		domain bolsista
 		range xsd:string
 		functional
