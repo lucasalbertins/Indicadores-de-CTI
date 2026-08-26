@@ -39,4 +39,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/f
 		base:nome "Relatórios Técnicos do Programa"
 		base:id "FI2.9"
 	]
+	
+	instance FI2.10 : planoAvaliacao:fonteInformacao [
+		base:nome "Relatório de gestão semestral sobre a REPEPE da SECTI"
+		base:id "FI2.10"
+	]
+	
+	instance FI2.11 : planoAvaliacao:fonteInformacao [
+		base:nome "Contrato coorporativo dos serviços de telemática do governo"
+		base:id "FI2.11"
+	]
 }

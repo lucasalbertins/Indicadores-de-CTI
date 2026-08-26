@@ -20,39 +20,39 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Rede Pernambucana de Pesquisa e Educação" 
 		base:descricao "Programa voltado à integração de instituições de educação, pesquisa e órgãos governamentais por meio de rede óptica digital de alta performance." 
 		base:id "PR17" 
-		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3,parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.5, 
+		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3,parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.5, 
 		parceirosAcademiaICTs:PC3.6, parceirosEmpresas:PC4.7, parceirosEmpresas:PC4.8, parceirosGoverno:PC1.9
-		programa:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioTecnologico:FE3.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2,
+		canvas:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioTecnologico:FE3.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2,
 		 fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresDinamicaEcossistema:FE5.OP5
-		programa:recebeEntradas entradasInfraestruturaFisica:EN4.1, entradasCapitalHumano:EN3.4, entradasInstrumentosLegaisNormativos:EN5.4,
+		canvas:recebeEntradas entradasInfraestruturaFisica:EN4.1, entradasCapitalHumano:EN3.4, entradasInstrumentosLegaisNormativos:EN5.4,
 		 entradasInstrumentosLegaisNormativos:EN5.2
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3 
-		programa:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, RE.LP6, RE.LP7 
-		programa:buscaAtingirGeral OB.GE 
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3 
+		canvas:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, RE.LP6, RE.LP7 
+		canvas:buscaAtingirGeral OB.GE 
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4
 	]
 	
 	// Relações REPEPE --> Público-Alvo 
-	relation instance PR17.direcionadoA.PU1 : programa:direcionadoA [
+	relation instance PR17.direcionadoA.PU1 : canvas:direcionadoA [
 		from PR17 
 		to publicosAcademiaICTs:PU1.14 
 		base:tipo "direto"
 	] 
 	
-	relation instance PR17.direcionadoA.PU2 : programa:direcionadoA [ 
+	relation instance PR17.direcionadoA.PU2 : canvas:direcionadoA [ 
 		from PR17
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		 base:tipo "direto"
 	]
 	
-	relation instance PR17.direcionadoA.PU3 : programa:direcionadoA [ 
+	relation instance PR17.direcionadoA.PU3 : canvas:direcionadoA [ 
 		from PR17 
 		to publicosGovernoInstituicoesPublicas:PU2.3 
 		base:tipo "direto"
 	] 
 	
-	relation instance PR17.direcionadoA.PU4 : programa:direcionadoA [ 
+	relation instance PR17.direcionadoA.PU4 : canvas:direcionadoA [ 
 		from PR17 
 		to publicosGovernoInstituicoesPublicas:PU2.4 
 		base:tipo "indireto"

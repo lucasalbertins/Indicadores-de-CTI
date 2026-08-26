@@ -26,82 +26,82 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Bolsa de Fixação de Pesquisador"
 		base:descricao "É destinada a atrair e fixar doutores em instituições de ensino ou pesquisa (ICTs) e empresas em Pernambuco"
 		base:id "PR4"
-		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTs:PC3.3, 
+		canvas:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTs:PC3.3, 
 		parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
-		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, 
+		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, 
 		fatoresCenarioEconomico:FE1.AM4, fatoresCenarioEconomico:FE1.AM5, fatoresCenarioTecnologico:FE3.AM4
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, 
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, 
 		entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7, saida:SA8
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7, saida:SA8
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2, RE.LP3
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 		programa:avaliadoPor PA_BFP:PA1, PA_BFP:PA2, PA_BFP:PA3, PA_BFP:PA4, PA_BFP:PA5, PA_BFP:PA6, PA_BFP:PA7, PA_BFP:PA8, PA_BFP:PA9, PA_BFP:PA10, PA_BFP:PA11
 	]
 	
 	// Relações BFP --> Público-Alvo
-	relation instance PR4.direcionadoA.PU1.2 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU1.2 : canvas:direcionadoA [
 		from PR4
 		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR4.direcionadoA.PU1.6 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU1.6 : canvas:direcionadoA [
 		from PR4
 		to publicosAcademiaICTs:PU1.6
 		base:tipo "direto"
 	]
-	relation instance PR4.direcionadoA.PU1.14 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU1.14 : canvas:direcionadoA [
 		from PR4
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU1.15 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU1.15 : canvas:direcionadoA [
 		from PR4
 		to publicosAcademiaICTs:PU1.15
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU2.2 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU2.2 : canvas:direcionadoA [
 		from PR4
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU2.3 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU2.3 : canvas:direcionadoA [
 		from PR4
 		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU3.2 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU3.2 : canvas:direcionadoA [
 		from PR4
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU3.5 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU3.5 : canvas:direcionadoA [
 		from PR4
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU4.1 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU4.1 : canvas:direcionadoA [
 		from PR4
 		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU4.6 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU4.6 : canvas:direcionadoA [
 		from PR4
 		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU4.7 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU4.7 : canvas:direcionadoA [
 		from PR4
 		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU4.8 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU4.8 : canvas:direcionadoA [
 		from PR4
 		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
-	relation instance PR4.direcionadoA.PU5.1 : programa:direcionadoA [
+	relation instance PR4.direcionadoA.PU5.1 : canvas:direcionadoA [
 		from PR4
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"

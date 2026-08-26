@@ -66,11 +66,6 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores.oml</semanticResources>
@@ -98,6 +93,12 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/REPEPE.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PortoDigital/PortoDigital.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/PA_REPEPE.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

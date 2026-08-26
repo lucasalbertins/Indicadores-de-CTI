@@ -26,60 +26,60 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e 
 técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores"
 		base:id "PR5"
-		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.3, parceirosGoverno:PC1.5, parceirosAgenciasFomento:PC2.1, 
+		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.3, parceirosGoverno:PC1.5, parceirosAgenciasFomento:PC2.1, 
 		parceirosAcademiaICTs:PC3.10
-		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP9, fatoresDinamicaEcossistema:FE5.OP10, fatoresDinamicaEcossistema:FE5.OP11, 
+		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP9, fatoresDinamicaEcossistema:FE5.OP10, fatoresDinamicaEcossistema:FE5.OP11, 
 		fatoresDinamicaEcossistema:FE5.OP12, fatoresDinamicaEcossistema:FE5.OP13, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2, 
 		fatoresCenarioTecnologico:FE3.AM5, fatoresCenarioTecnologico:FE3.AM6, fatoresCenarioTecnologico:FE3.AM7, fatoresCenarioSocialEducacional:FE4.AM2, 
 		fatoresCenarioSocialEducacional:FE4.AM4
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.3, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.3, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasDadosSistemasPlataformas:EN2.5, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.6, entradasCapitalHumano:EN3.7, 
 		entradasInfraestruturaFisica:EN4.2
-		programa:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, atividadeChave:AC13, 
+		canvas:executa atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12, atividadeChave:AC13, 
 		atividadeChave:AC14, atividadeChave:AC15, atividadeChave:AC16, atividadeChave:AC17, atividadeChave:AC18
-		programa:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP5
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
+		canvas:geraSaidas saida:SA12, saida:SA13, saida:SA14, saida:SA15, saida:SA16, saida:SA17
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP5
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
 	]
 	
 	// Relações eCRIA --> Público-Alvo
-	relation instance PR5.direcionadoA.PU1.4 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU1.4 : canvas:direcionadoA [
 		from PR5
 		to publicosAcademiaICTs:PU1.4
 		base:tipo "direto"
 	]
-	relation instance PR5.direcionadoA.PU1.9 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU1.9 : canvas:direcionadoA [
 		from PR5
 		to publicosAcademiaICTs:PU1.9
 		base:tipo "direto"
 	]
-	relation instance PR5.direcionadoA.PU3.2 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.2 : canvas:direcionadoA [
 		from PR5
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PU3.3 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.3 : canvas:direcionadoA [
 		from PR5
 		to publicosEmpresasEmpreendedores:PU3.3
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PU3.6 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU3.6 : canvas:direcionadoA [
 		from PR5
 		to publicosEmpresasEmpreendedores:PU3.6
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PU5.1 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.1 : canvas:direcionadoA [
 		from PR5
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PU5.3 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.3 : canvas:direcionadoA [
 		from PR5
 		to publicosSociedadeTerceiroSetor:PU5.3
 		base:tipo "indireto"
 	]
-	relation instance PR5.direcionadoA.PU5.4 : programa:direcionadoA [
+	relation instance PR5.direcionadoA.PU5.4 : canvas:direcionadoA [
 		from PR5
 		to publicosSociedadeTerceiroSetor:PU5.4
 		base:tipo "indireto"

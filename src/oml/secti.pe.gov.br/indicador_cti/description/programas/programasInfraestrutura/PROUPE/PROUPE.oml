@@ -22,25 +22,25 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas de estudo para alunos de instituições de ensino superior 
 públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		base:id "PR9"
-		programa:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.7
-		programa:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresCenarioSocialEducacional:FE4.OP3, fatoresCenarioSocialEducacional:FE4.OP4, 
+		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.7
+		canvas:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresCenarioSocialEducacional:FE4.OP3, fatoresCenarioSocialEducacional:FE4.OP4, 
 		fatoresCenarioSocialEducacional:FE4.OP5, fatoresDinamicaEcossistema:FE5.OP5, fatoresDinamicaEcossistema:FE5.OP6, fatoresCenarioEconomico:FE1.AM2, 
 		fatoresCenarioInstitucionalLegal:FE2.AM3, fatoresCenarioInstitucionalLegal:FE2.AM4, fatoresCenarioInstitucionalLegal:FE2.AM5, 
 		fatoresCenarioTecnologico:FE3.AM3
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.2, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.2, 
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.2, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.2, 
 		entradasCapitalHumano:EN3.2, entradasCapitalHumano:EN3.3
-		programa:executa atividadeChave:AC19, atividadeChave:AC20, atividadeChave:AC21, atividadeChave:AC22, atividadeChave:AC23, atividadeChave:AC24, 
+		canvas:executa atividadeChave:AC19, atividadeChave:AC20, atividadeChave:AC21, atividadeChave:AC22, atividadeChave:AC23, atividadeChave:AC24, 
 		atividadeChave:AC25
-		programa:geraSaidas saida:SA18, saida:SA19, saida:SA20, saida:SA21, saida:SA22, saida:SA23, saida:SA24, saida:SA25, saida:SA26, saida:SA27, saida:SA28, 
+		canvas:geraSaidas saida:SA18, saida:SA19, saida:SA20, saida:SA21, saida:SA22, saida:SA23, saida:SA24, saida:SA25, saida:SA26, saida:SA27, saida:SA28, 
 		saida:SA29, saida:SA30, saida:SA31, saida:SA32, saida:SA33, saida:SA34
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.MP6, RE.MP7, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, 
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.MP6, RE.MP7, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, 
 		RE.LP6
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
 	]
 	
 	// Relações PROUPE --> Público-Alvo
-	relation instance PR9.direcionadoA.PU1.10 : programa:direcionadoA [
+	relation instance PR9.direcionadoA.PU1.10 : canvas:direcionadoA [
 		from PR9
 		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"

@@ -28,54 +28,54 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Programa Estratégico Porto Digital" 
 		base:descricao "Programa voltado ao fortalecimento do ecossistema de inovação e empreendedorismo inovador em Pernambuco." 
 		base:id "PR13" 
-		programa:possuiParceiros parceirosGoverno:PC1.10, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.1, parceirosAgenciasFomento:PC2.5,
+		canvas:possuiParceiros parceirosGoverno:PC1.10, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.1, parceirosAgenciasFomento:PC2.5,
 		parceirosAgenciasFomento:PC2.8, parceirosAcademiaICTs:PC3.2, parceirosAcademiaICTs:PC3.5, parceirosEmpresas:PC4.5, parceirosEmpresas:PC4.7,
 		parceirosAmbientesInovacao:PC5.2, parceirosAmbientesInovacao:PC5.5, parceirosAmbientesInovacao:PC5.6, parceirosAmbientesInovacao:PC5.7,
 		parceirosAmbientesInovacao:PC5.8
-		programa:recebeEntradas entradasInstrumentosLegaisNormativos:EN5.5, entradasCapitalHumano:EN3.4, entradasDadosSistemasPlataformas:EN2.3,
+		canvas:recebeEntradas entradasInstrumentosLegaisNormativos:EN5.5, entradasCapitalHumano:EN3.4, entradasDadosSistemasPlataformas:EN2.3,
 		entradasInfraestruturaFisica:EN4.3, entradasOrcamentoFinanciamento:EN1.5
-		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.AM1, fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM2, fatoresDinamicaEcossistema:FE5.AM1 
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7, atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12 
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7, saida:SA8, saida:SA9, saida:SA10, saida:SA11, saida:SA12 
+		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.AM1, fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM2, fatoresDinamicaEcossistema:FE5.AM1 
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7, atividadeChave:AC8, atividadeChave:AC9, atividadeChave:AC10, atividadeChave:AC11, atividadeChave:AC12 
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7, saida:SA8, saida:SA9, saida:SA10, saida:SA11, saida:SA12 
 	]
 		
-	relation instance PR13.direcionadoA.PU4.5 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU4.5 : canvas:direcionadoA [
 		from PR13
 		to publicosAmbientesInovacao:PU4.5
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU3.5 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU3.5 :canvas:direcionadoA [
 		from PR13
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU4.9 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU4.9 : canvas:direcionadoA [
 		from PR13
 		to publicosAmbientesInovacao:PU4.9
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU1.8 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU1.8 : canvas:direcionadoA [
 		from PR13
 		to publicosAcademiaICTs:PU1.8
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU1.7 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU1.7 : canvas:direcionadoA [
 		from PR13
 		to publicosAcademiaICTs:PU1.7
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU3.6 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU3.6 : canvas:direcionadoA [
 		from PR13
 		to publicosEmpresasEmpreendedores:PU3.6
 		base:tipo "direto"
 	]
 	
-	relation instance PR13.direcionadoA.PU3.2 : programa:direcionadoA [
+	relation instance PR13.direcionadoA.PU3.2 : canvas:direcionadoA [
 		from PR13
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
