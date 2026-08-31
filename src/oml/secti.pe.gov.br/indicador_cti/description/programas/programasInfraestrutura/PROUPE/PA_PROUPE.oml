@@ -6,11 +6,20 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Universidade para Todos em Pernambuco (PROUPE)"
+		base:id "PA-PR9"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_PROUPE:PA1, PA_PROUPE:PA2, PA_PROUPE:PA3, PA_PROUPE:PA4, PA_PROUPE:PA5, PA_PROUPE:PA6, PA_PROUPE:PA7, PA_PROUPE:PA8, PA_PROUPE:PA9, PA_PROUPE:PA10
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o número e percentual de beneficiários e de bolsas concedidas por semestre e a evolução do acesso ao ensino superior para estudantes de baixa renda?"
 		base:id "PA1 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2, PA1.ME3, PA1.ME4, PA1.ME5
 		planoAvaliacao:temEscopo PA1.ES
 		planoAvaliacao:temMetodologia PA1.MA1, PA1.MA2, PA1.MA3, PA1.MA4, PA1.MA5, PA1.MA6, PA1.MA7
@@ -22,7 +31,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o percentual de atendimento nas autarquias?"
 		base:id "PA2 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2, PA2.ME3, PA2.ME4, PA2.ME5
 		planoAvaliacao:temEscopo PA2.ES
 		planoAvaliacao:temMetodologia PA2.MA1, PA2.MA2, PA2.MA3, PA2.MA4, PA2.MA5, PA2.MA6, PA2.MA7
@@ -46,7 +55,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA4 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o percentual de vagas reservadas efetivamente ocupadas pelos grupos prioritários?"
 		base:id "PA4 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2, PA4.ME3, PA4.ME4, PA4.ME5, PA4.ME6, PA4.ME7, PA4.ME8, PA4.ME9, PA4.ME10
 		planoAvaliacao:temEscopo PA4.ES
 		planoAvaliacao:temMetodologia PA4.MA1, PA4.MA2, PA4.MA3, PA4.MA4, PA4.MA5, PA4.MA6, PA4.MA7, PA4.MA8, PA4.MA9, PA4.MA10, PA4.MA11, PA4.MA12
@@ -57,7 +66,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA5 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da matrícula em cursos STEM e licenciaturas?"
 		base:id "PA5 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA5.ME1, PA5.ME2, PA5.ME3, PA5.ME4, PA5.ME5, PA5.ME6, PA5.ME7, PA5.ME8, PA5.ME9, PA5.ME10, PA5.ME11
 		planoAvaliacao:temEscopo PA5.ES
 		planoAvaliacao:temMetodologia PA5.MA1, PA5.MA2, PA5.MA3, PA5.MA4
@@ -68,7 +77,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA6 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Como o programa contribuiu para o fortalecimento das licenciaturas e cursos STEM?"
 		base:id "PA6 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA6.ME1, PA6.ME2, PA6.ME3, PA6.ME4, PA6.ME5
 		planoAvaliacao:temEscopo PA6.ES
 		planoAvaliacao:temMetodologia PA6.MA1, PA6.MA2, PA6.MA3
@@ -80,7 +89,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA7 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de conclusão e evasão dos bolsistas PROUPE comparada aos demais estudantes?"
 		base:id "PA7 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA7.ME1, PA7.ME2, PA7.ME3, PA7.ME4, PA7.ME5, PA7.ME6, PA7.ME7, PA7.ME8, PA7.ME9
 		planoAvaliacao:temEscopo PA7.ES
 		planoAvaliacao:temMetodologia PA7.MA1, PA7.MA2, PA7.MA3
@@ -104,7 +113,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA9 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Como as contrapartidas sociais dos bolsistas impactam as comunidades?"
 		base:id "PA9 - PROUPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA9.ME1, PA9.ME2, PA9.ME3
 		planoAvaliacao:temEscopo PA9.ES
 		planoAvaliacao:temMetodologia PA9.MA1, PA9.MA2, PA9.MA3
@@ -113,7 +122,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		planoAvaliacao:alinhaComResultado PROUPE:RE.CP2
 	]
 	
-	instance PA10_PROUPE : planoAvaliacao:questaoAvaliacao [
+	instance PA10 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Como o programa fortalece as cadeias produtivas regionais?"
 		base:id "PA10 - PROUPE"
 		planoAvaliacao:custo "Alto"

@@ -8,6 +8,19 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Lab.Multiusuários"
+		base:id "PA-PR2"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-06-05T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_LabMultiusuarios:PA1, PA_LabMultiusuarios:PA2, PA_LabMultiusuarios:PA3, PA_LabMultiusuarios:PA4, PA_LabMultiusuarios:PA5, 
+		PA_LabMultiusuarios:PA6, PA_LabMultiusuarios:PA7, PA_LabMultiusuarios:PA8, PA_LabMultiusuarios:PA9, PA_LabMultiusuarios:PA10, PA_LabMultiusuarios:PA11, 
+		PA_LabMultiusuarios:PA12, PA_LabMultiusuarios:PA13, PA_LabMultiusuarios:PA14, PA_LabMultiusuarios:PA15, PA_LabMultiusuarios:PA16, PA_LabMultiusuarios:PA17, 
+		PA_LabMultiusuarios:PA18, PA_LabMultiusuarios:PA19, PA_LabMultiusuarios:PA20, PA_LabMultiusuarios:PA21, PA_LabMultiusuarios:PA22
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução do número de laboratórios multiusuários apoiados pelo Programa em Pernambuco por ano?"
@@ -24,7 +37,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Qual a evolução da participação dos laboratórios multiusuários apoiados pelo Programa no total de laboratórios multiusuários existentes em 
 Pernambuco por ano?"
 		base:id "PA2 - LabMultiusuarios"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2, PA2.ME3
 		planoAvaliacao:temEscopo PA2.ES

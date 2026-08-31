@@ -5,6 +5,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Rede Pernambucana de Pesquisa e Educação"
+		base:id "PA-PR17"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-07-07T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_REPEPE:PA1, PA_REPEPE:PA2, PA_REPEPE:PA3, PA_REPEPE:PA4, PA_REPEPE:PA5, PA_REPEPE:PA6, PA_REPEPE:PA7, PA_REPEPE:PA8, PA_REPEPE:PA9, PA_REPEPE:PA10
+	]
 	
 	// Perguntas de Avaliação 
 
@@ -77,7 +86,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA7 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a redução percentual nos custos de conectividade das instituições após a adesão à REPEPE?"
 		base:id "PA7 - REPEPE"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA7.ME1, PA7.ME2
 		planoAvaliacao:temEscopo PA7.ES

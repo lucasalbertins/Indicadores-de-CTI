@@ -17,15 +17,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/eCRIA/PA_eCRIA#> as PA_eCRIA
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	instance PR5 : programa:programaCTI [
-		base:nome "Espaços CRIA"
-		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e 
-técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores"
-		base:id "PR5"
+	instance CanvasPR5 : canvas:canvas [
+		base:nome "Canvas do Programa Espaços Cria"
+		base:id "C-PR5"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.3, parceirosGoverno:PC1.5, parceirosAgenciasFomento:PC2.1, 
 		parceirosAcademiaICTs:PC3.10
 		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP9, fatoresDinamicaEcossistema:FE5.OP10, fatoresDinamicaEcossistema:FE5.OP11, 
@@ -41,6 +43,16 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP3, RE.LP4, RE.LP5, RE.LP5
 		canvas:buscaAtingirGeral OB.GE
 		canvas:buscaAtingirEspecifico OB.ES0, OB.ES1, OB.ES3, OB.ES4, OB.ES5, OB.ES7, OB.ES8, OB.ES11
+	]
+	
+	instance PR5 : programa:programaCTI [
+		base:nome "Espaços CRIA"
+		base:descricao "Foi criado para fomentar a cultura da inovação e do empreendedorismo criativo entre estudantes da rede pública estadual de ensino médio e 
+técnico de Pernambuco, através da criação de ambientes de aprendizagem colaborativos e inovadores"
+		base:id "PR5"
+		programa:temCanvas CanvasPR5
+		programa:temPlanoAvaliacao PA_eCRIA:PAV1
+		
 	]
 	
 	// Relações eCRIA --> Público-Alvo

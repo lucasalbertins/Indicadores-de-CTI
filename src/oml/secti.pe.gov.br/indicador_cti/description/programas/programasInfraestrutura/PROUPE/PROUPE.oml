@@ -13,15 +13,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PROUPE/PA_PROUPE#> as PA_PROUPE
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	instance PR9 : programa:programaCTI [
-		base:nome "ProUPE"
-		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas de estudo para alunos de instituições de ensino superior 
-públicas estaduais, principalmente de autarquias municipais de Pernambuco"
-		base:id "PR9"
+	instance CanvasPR9 : canvas:canvas [
+		base:nome "Canvas do Programa Universidade para Todos em Pernambuco (PROUPE)"
+		base:id "C-PR9"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.7
 		canvas:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresCenarioSocialEducacional:FE4.OP3, fatoresCenarioSocialEducacional:FE4.OP4, 
 		fatoresCenarioSocialEducacional:FE4.OP5, fatoresDinamicaEcossistema:FE5.OP5, fatoresDinamicaEcossistema:FE5.OP6, fatoresCenarioEconomico:FE1.AM2, 
@@ -37,6 +39,15 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 		RE.LP6
 		canvas:buscaAtingirGeral OB.GE
 		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
+	]
+	
+	instance PR9 : programa:programaCTI [
+		base:nome "ProUPE"
+		base:descricao "O Proupe (Programa Universidade para Todos em Pernambuco) é um programa de bolsas de estudo para alunos de instituições de ensino superior 
+públicas estaduais, principalmente de autarquias municipais de Pernambuco"
+		base:id "PR9"
+		programa:temCanvas CanvasPR9
+		programa:temPlanoAvaliacao PA_PROUPE:PAV1
 	]
 	
 	// Relações PROUPE --> Público-Alvo

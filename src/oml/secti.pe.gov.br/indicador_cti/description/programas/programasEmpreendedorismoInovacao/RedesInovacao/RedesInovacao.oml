@@ -21,83 +21,91 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance CanvasPR3 : canvas:canvas [
+		base:nome "Canvas do Programa Redes de Inovação"
+		base:id "C-PR3"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-05-27T00:00:00Z"^^xsd:dateTime
+		canvas:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4
+		canvas:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
+		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresDinamicaEcossistema:FE5.AM1
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.4, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
+		canvas:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
+		canvas:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
+	]
 	
 	instance PR3 : programa:programaCTI [
 		base:nome "Redes de Inovação"
 		base:descricao "Foi criado para fomentar a criação e o fortalecimento de redes de colaboração entre diferentes instituições e setores, com o objetivo de 
 impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 		base:id "PR3"
-		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4
-		programa:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
-		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresDinamicaEcossistema:FE5.AM1
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.4, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
-		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
-		programa:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA6, saida:SA7
-		programa:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
-		programa:avaliadoPor PA_RedesInovacao:PA1, PA_RedesInovacao:PA2, PA_RedesInovacao:PA3, PA_RedesInovacao:PA4, PA_RedesInovacao:PA5, PA_RedesInovacao:PA6, 
-		PA_RedesInovacao:PA7, PA_RedesInovacao:PA8, PA_RedesInovacao:PA9
+		programa:temCanvas CanvasPR3
+		programa:temPlanoAvaliacao PA_RedesInovacao:PAV1
 	]
 	
 	// Relações Redes de Inovação --> Público-Alvo
-	relation instance PR3.direcionadoA.PU1.7 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU1.7 : canvas:direcionadoA [
 		from PR3
 		to publicosAcademiaICTs:PU1.7
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU1.13 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU1.13 : canvas:direcionadoA [
 		from PR3
 		to publicosAcademiaICTs:PU1.13
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU1.14 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU1.14 : canvas:direcionadoA [
 		from PR3
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU2.2 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU2.2 : canvas:direcionadoA [
 		from PR3
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU2.3 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU2.3 : canvas:direcionadoA [
 		from PR3
 		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU3.2 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU3.2 : canvas:direcionadoA [
 		from PR3
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
 	]
-	relation instance PR3.direcionadoA.PU3.5 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU3.5 : canvas:direcionadoA [
 		from PR3
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU4.1 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU4.1 : canvas:direcionadoA [
 		from PR3
 		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU4.6 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU4.6 : canvas:direcionadoA [
 		from PR3
 		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU4.7 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU4.7 : canvas:direcionadoA [
 		from PR3
 		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU4.8 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU4.8 : canvas:direcionadoA [
 		from PR3
 		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
-	relation instance PR3.direcionadoA.PU5.2 : programa:direcionadoA [
+	relation instance PR3.direcionadoA.PU5.2 : canvas:direcionadoA [
 		from PR3
 		to publicosSociedadeTerceiroSetor:PU5.2
 		base:tipo "direto"

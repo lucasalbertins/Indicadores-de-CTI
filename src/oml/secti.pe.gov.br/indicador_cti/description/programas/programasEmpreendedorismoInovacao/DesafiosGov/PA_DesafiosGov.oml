@@ -7,6 +7,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Desafios.gov"
+		base:id "PA-PR7"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-06-25T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_DesafiosGov:PA1, PA_DesafiosGov:PA2, PA_DesafiosGov:PA3, PA_DesafiosGov:PA4, PA_DesafiosGov:PA5
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "O programa induziu o aumento do  volume de projetos de PD&I em parceria entre o Estado e empresas de base tecnológica?"
@@ -22,7 +31,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
 		base:nome "As soluções desenvolvidas nos projetos apoiados pelo programa foram absorvidas pelo Estado?"
 		base:id "PA2 - DesafiosGov"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA2.ME1
 		planoAvaliacao:temEscopo PA2.ES
@@ -33,7 +42,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA3 : planoAvaliacao:questaoAvaliacao [
 		base:nome "O programa gerou pedidos de propriedade intelectual (patentes depositadas e programas registrados)?"
 		base:id "PA3 - DesafiosGov"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA3.ME1
 		planoAvaliacao:temEscopo PA3.ES
@@ -44,7 +53,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA4 : planoAvaliacao:questaoAvaliacao [
 		base:nome "O programa induziu a contratação de soluções pelo Estado junto às empresas apoiadas?"
 		base:id "PA4 - DesafiosGov"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Baixo"
 		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2
 		planoAvaliacao:temEscopo PA4.ES
@@ -55,7 +64,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA5 : planoAvaliacao:questaoAvaliacao [
 		base:nome "O programa induziu o aumento dos empregos, do faturamento e da carteira ofertada pelas empresas apoiadas no programa?"
 		base:id "PA5 - DesafiosGov"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA5.ME1, PA5.ME2, PA5.ME3
 		planoAvaliacao:temEscopo PA5.ES

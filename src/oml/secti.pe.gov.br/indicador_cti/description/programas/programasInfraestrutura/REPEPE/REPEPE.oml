@@ -12,14 +12,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
 	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
 	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/PA_REPEPE#> as PA_REPEPE
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	instance PR17 : programa:programaCTI [ 
-		base:nome "Rede Pernambucana de Pesquisa e Educação" 
-		base:descricao "Programa voltado à integração de instituições de educação, pesquisa e órgãos governamentais por meio de rede óptica digital de alta performance." 
-		base:id "PR17" 
+	instance CanvasPR17 : canvas:canvas [
+		base:nome "Canvas do Programa Rede Pernambucana de Pesquisa e Educação"
+		base:id "C-PR17"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-05-12T00:00:00Z"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3,parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.5, 
 		parceirosAcademiaICTs:PC3.6, parceirosEmpresas:PC4.7, parceirosEmpresas:PC4.8, parceirosGoverno:PC1.9
 		canvas:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioTecnologico:FE3.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2,
@@ -31,6 +34,14 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		canvas:produzResultados RE.CP1, RE.CP2, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2, RE.LP3, RE.LP4, RE.LP5, RE.LP6, RE.LP7 
 		canvas:buscaAtingirGeral OB.GE 
 		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4
+	]
+	
+	instance PR17 : programa:programaCTI [ 
+		base:nome "Rede Pernambucana de Pesquisa e Educação" 
+		base:descricao "Programa voltado à integração de instituições de educação, pesquisa e órgãos governamentais por meio de rede óptica digital de alta performance." 
+		base:id "PR17" 
+		programa:temCanvas CanvasPR17
+		programa:temPlanoAvaliacao PA_REPEPE:PAV1
 	]
 	
 	// Relações REPEPE --> Público-Alvo 

@@ -8,11 +8,21 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Espaços Cria"
+		base:id "PA-PR5"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-06-23T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_eCRIA:PA1, PA_eCRIA:PA2, PA_eCRIA:PA3, PA_eCRIA:PA4, PA_eCRIA:PA5, PA_eCRIA:PA6, PA_eCRIA:PA7, PA_eCRIA:PA8, PA_eCRIA:PA9, PA_eCRIA:PA10, 
+		PA_eCRIA:PA11, PA_eCRIA:PA12, PA_eCRIA:PA13, PA_eCRIA:PA14
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos Espaços Cria foram implantados, com distribuição por região de desenvolvimento (RD), tipo de escola e faixa de IDHM?"
 		base:id "PA1 - eCRIA"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2, PA1.ME3
 		planoAvaliacao:temEscopo PA1.ES
 		planoAvaliacao:temMetodologia PA1.MA1, PA1.MA2, PA1.MA3, PA1.MA4, PA1.MA5, PA1.MA6, PA1.MA7, PA1.MA8, PA1.MA9
@@ -36,7 +46,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA3 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quais as principais barreiras para a operação dos espaços (manutenção, capacitação, conectividade)?"
 		base:id "PA3 - eCRIA"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA3.ME1, PA3.ME2, PA3.ME3, PA3.ME4, PA3.ME5
 		planoAvaliacao:temEscopo PA3.ES
 		planoAvaliacao:temMetodologia PA3.MA1, PA3.MA2, PA3.MA3, PA3.MA4, PA3.MA5, PA3.MA6, PA3.MA7
@@ -72,7 +82,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA6 : planoAvaliacao:questaoAvaliacao [
 	  base:nome "Como o programa impactou os indicadores educacionais (IDEB, SAEPE) das escolas participantes?"
 	  base:id "PA6 - eCRIA"
-	  planoAvaliacao:custo "Moderado"
+	  planoAvaliacao:custo "Médio"
 	  planoAvaliacao:temMetrica PA6.ME1
 	  planoAvaliacao:temEscopo PA6.ES
 	  planoAvaliacao:temMetodologia PA6.MA1
@@ -144,7 +154,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA12 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o aumento na participação de mulheres em atividades STEM+C nos espaços?"
 		base:id "PA12 - eCRIA"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:temMetrica PA12.ME1, PA12.ME2, PA12.ME3
 		planoAvaliacao:temEscopo PA12.ES
 		planoAvaliacao:temMetodologia PA12.MA1, PA12.MA2, PA12.MA3, PA12.MA4, PA12.MA5

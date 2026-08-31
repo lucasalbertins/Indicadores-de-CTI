@@ -7,6 +7,17 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao[
+		base:nome "Plano de Avaliação do Programa Redes de Inovação"
+		base:id "PA-PR3"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-06-25T00:00:00Z"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_RedesInovacao:PA1, PA_RedesInovacao:PA2, PA_RedesInovacao:PA3, PA_RedesInovacao:PA4, PA_RedesInovacao:PA5, PA_RedesInovacao:PA6, 
+		PA_RedesInovacao:PA7, PA_RedesInovacao:PA8, PA_RedesInovacao:PA9
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos eventos e ações de inovação aberta (hackathons, maratonas, match days, workshops de ideação, entre outros) foram realizadas?"
@@ -22,7 +33,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA2 : planoAvaliacao:questaoAvaliacao [
 		base:nome "A rede induziu o aumento de projetos de CT&I nas suas respectivas áreas?"
 		base:id "PA2 - RedesInovacao"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2
 		planoAvaliacao:temEscopo PA2.ES
@@ -88,7 +99,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA8 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual o percentual de redes que alcançaram a autossustentabilidade financeira após 2 anos de apoio?"
 		base:id "PA8 - RedesInovacao"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2, PA8.ME3
 		planoAvaliacao:temEscopo PA8.ES
