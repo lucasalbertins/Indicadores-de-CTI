@@ -27,7 +27,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Espaços Cria"
 		base:id "C-PR5"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-05-26T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.3, parceirosGoverno:PC1.5, parceirosAgenciasFomento:PC2.1, 
 		parceirosAcademiaICTs:PC3.10
 		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP9, fatoresDinamicaEcossistema:FE5.OP10, fatoresDinamicaEcossistema:FE5.OP11, 
@@ -57,42 +57,42 @@ técnico de Pernambuco, através da criação de ambientes de aprendizagem colab
 	
 	// Relações eCRIA --> Público-Alvo
 	relation instance PR5.direcionadoA.PU1.4 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosAcademiaICTs:PU1.4
 		base:tipo "direto"
 	]
 	relation instance PR5.direcionadoA.PU1.9 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosAcademiaICTs:PU1.9
 		base:tipo "direto"
 	]
 	relation instance PR5.direcionadoA.PU3.2 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
 	relation instance PR5.direcionadoA.PU3.3 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosEmpresasEmpreendedores:PU3.3
 		base:tipo "indireto"
 	]
 	relation instance PR5.direcionadoA.PU3.6 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosEmpresasEmpreendedores:PU3.6
 		base:tipo "indireto"
 	]
 	relation instance PR5.direcionadoA.PU5.1 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
 	relation instance PR5.direcionadoA.PU5.3 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosSociedadeTerceiroSetor:PU5.3
 		base:tipo "indireto"
 	]
 	relation instance PR5.direcionadoA.PU5.4 : canvas:direcionadoA [
-		from PR5
+		from CanvasPR5
 		to publicosSociedadeTerceiroSetor:PU5.4
 		base:tipo "indireto"
 	]

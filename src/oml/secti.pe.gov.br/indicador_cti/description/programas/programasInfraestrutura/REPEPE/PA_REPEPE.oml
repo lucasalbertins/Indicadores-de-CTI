@@ -11,7 +11,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Rede Pernambucana de Pesquisa e Educação"
 		base:id "PA-PR17"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-07-07T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-07-07T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_REPEPE:PA1, PA_REPEPE:PA2, PA_REPEPE:PA3, PA_REPEPE:PA4, PA_REPEPE:PA5, PA_REPEPE:PA6, PA_REPEPE:PA7, PA_REPEPE:PA8, PA_REPEPE:PA9, PA_REPEPE:PA10
 	]
 	

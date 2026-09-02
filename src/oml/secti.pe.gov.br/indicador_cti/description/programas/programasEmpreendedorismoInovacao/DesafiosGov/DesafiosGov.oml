@@ -28,7 +28,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Desafios.gov"
 		base:id "C-PR7"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-06-25T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-06-25T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosEmpresas:PC4.11, 
 		parceirosAmbientesInovacao:PC5.9
 		canvas:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
@@ -54,52 +54,52 @@ da gestão pública do estado de Pernambuco"
 	
 	// Relações Desafios.gov --> Público-Alvo
 	relation instance PR7.direcionadoA.PU2.2 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "direto"
 	]
 	relation instance PR7.direcionadoA.PU2.3 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU3.2 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU3.5 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "direto"
 	]
 	relation instance PR7.direcionadoA.PU4.1 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU4.6 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU4.7 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU4.8 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU5.1 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
 	relation instance PR7.direcionadoA.PU5.2 : canvas:direcionadoA [
-		from PR7
+		from CanvasPR7
 		to publicosSociedadeTerceiroSetor:PU5.2
 		base:tipo "indireto"
 	]

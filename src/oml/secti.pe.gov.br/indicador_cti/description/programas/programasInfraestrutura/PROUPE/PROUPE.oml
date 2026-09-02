@@ -23,7 +23,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Universidade para Todos em Pernambuco (PROUPE)"
 		base:id "C-PR9"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-05-26T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.7
 		canvas:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresCenarioSocialEducacional:FE4.OP3, fatoresCenarioSocialEducacional:FE4.OP4, 
 		fatoresCenarioSocialEducacional:FE4.OP5, fatoresDinamicaEcossistema:FE5.OP5, fatoresDinamicaEcossistema:FE5.OP6, fatoresCenarioEconomico:FE1.AM2, 
@@ -52,7 +52,7 @@ públicas estaduais, principalmente de autarquias municipais de Pernambuco"
 	
 	// Relações PROUPE --> Público-Alvo
 	relation instance PR9.direcionadoA.PU1.10 : canvas:direcionadoA [
-		from PR9
+		from CanvasPR9
 		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]

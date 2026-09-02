@@ -14,7 +14,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Espaços Cria"
 		base:id "PA-PR5"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-06-23T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-06-23T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_eCRIA:PA1, PA_eCRIA:PA2, PA_eCRIA:PA3, PA_eCRIA:PA4, PA_eCRIA:PA5, PA_eCRIA:PA6, PA_eCRIA:PA7, PA_eCRIA:PA8, PA_eCRIA:PA9, PA_eCRIA:PA10, 
 		PA_eCRIA:PA11, PA_eCRIA:PA12, PA_eCRIA:PA13, PA_eCRIA:PA14
 	]

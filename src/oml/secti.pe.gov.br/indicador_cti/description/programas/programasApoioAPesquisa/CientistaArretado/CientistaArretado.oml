@@ -26,15 +26,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Cientista Arretado"
 		base:id "C-PR6"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-03-11T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-03-11T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.2, parceirosGoverno:PC1.11, parceirosAgenciasFomento:PC2.1, 
 		parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
 		canvas:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioSocialEducacional:FE4.OP2, fatoresCenarioEconomico:FE1.AM2, 
 		fatoresCenarioEconomico:FE1.AM3, fatoresCenarioTecnologico:FE3.AM1, fatoresCenarioSocialEducacional:FE4.AM1
 		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
 		entradasDadosSistemasPlataformas:EN2.4, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1, entradasInstrumentosLegaisNormativos:EN5.7
-		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC6, atividadeChave:AC7
-		canvas:geraSaidas saida:SA1, saida:SA3, saida:SA4, saida:SA9, saida:SA10, saida:SA11
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7, saida:SA8, saida:SA9, saida:SA10, saida:SA11, saida:SA12
 		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.LP1, RE.LP2
 		canvas:buscaAtingirGeral OB.GE
 		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5
@@ -42,54 +42,52 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	instance PR6 : programa:programaCTI [
 		base:nome "Cientista Arretado"
-		base:descricao "Financia pesquisas aplicadas para resolver desafios da gestão pública estadual. Com foco em inovação, aproxima pesquisadores sêniores de 
-ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que gerem impacto social e soluções baseadas em evidências"
+		base:descricao "Financia pesquisas aplicadas para resolver desafios da gestão pública estadual. Com foco em inovação, aproxima pesquisadores sêniores de ICTs das demandas de secretarias, oferecendo bolsas e recursos para projetos que gerem impacto social e soluções baseadas em evidências"
 		base:id "PR6"
 		programa:temCanvas CanvasPR6
 		programa:temPlanoAvaliacao PA_CientistaArretado:PAV1
 	]
 	
 	// Relações Cientista Arretado --> Público-Alvo
-	relation instance PR6.direcionadoA.PU1.2 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU1.2 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU1.10 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU1.10 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU1.12 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU1.12 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosAcademiaICTs:PU1.12
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU2.1 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU2.1 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosGovernoInstituicoesPublicas:PU2.1
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU2.2 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU2.2 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	relation instance PR6.direcionadoA.PU3.2 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU3.2 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
 	]
-	relation instance PR6.direcionadoA.PU5.1 : canvas:direcionadoA [
-		from PR6
+	relation instance CanvasPR6.direcionadoA.PU5.1 : canvas:direcionadoA [
+		from CanvasPR6
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "direto"
 	]
 	
 	// Objetivo Geral
 	instance OB.GE : canvas:ObjetivoGeral [
-		base:nome "Fomentar a cooperação entre o governo do estado e pesquisadores de ICTs pernambucanas para o desenvolvimento de inovações e tecnologias que 
-solucionem desafios no âmbito governamental"
+		base:nome "Fomentar a cooperação entre o governo do estado e pesquisadores de ICTs pernambucanas para o desenvolvimento de inovações e tecnologias que solucionem desafios no âmbito governamental"
 		base:id "OB.GE - CientistaArretado"
 		canvas:buscaAtingir RE.CP1
 	]
@@ -116,8 +114,7 @@ solucionem desafios no âmbito governamental"
 		canvas:buscaAtingir RE.CP5, RE.MP2, RE.MP3
 	]
 	instance OB.ES5 : canvas:ObjetivoEspecifico [
-		base:nome "Fortalecer o Sistema Estadual de Ciência, Tecnologia e Inovação com maior interação, integração, intercâmbio de conhecimento e alianças 
-estratégicas entre ICTs e o governo do estado"
+		base:nome "Fortalecer o Sistema Estadual de Ciência, Tecnologia e Inovação com maior interação, integração, intercâmbio de conhecimento e alianças estratégicas entre ICTs e o governo do estado"
 		base:id "OB.ES5 - CientistaArretado"
 		canvas:buscaAtingir RE.CP4, RE.LP2
 	]
@@ -146,8 +143,7 @@ estratégicas entre ICTs e o governo do estado"
 		canvas:prazo "curto"
 	]
 	instance RE.CP5 : canvas:ResultadoEsperado [
-		base:nome "Recursos humanos do governo (técnico, servidores, gestores públicos) mais capacitados para o desenvolvimento, uso e aplicação das soluções 
-desenvolvidas"
+		base:nome "Recursos humanos do governo (técnico, servidores, gestores públicos) mais capacitados para o desenvolvimento, uso e aplicação das soluções desenvolvidas"
 		base:id "RE.CP5 - CientistaArretado"
 		canvas:prazo "curto"
 	]
@@ -164,8 +160,7 @@ desenvolvidas"
 		canvas:prazo "médio"
 	]
 	instance RE.MP3 : canvas:ResultadoEsperado [
-		base:nome "Garantia, sem ônus, do direito de propriedade, uso e posse dos resultados desenvolvidos (dados, códigos fonte, tecnologias, documentos) para os 
-órgãos e entidades da administração pública estadual"
+		base:nome "Garantia, sem ônus, do direito de propriedade, uso e posse dos resultados desenvolvidos (dados, códigos fonte, tecnologias, documentos) para os órgãos e entidades da administração pública estadual"
 		base:id "RE.MP3 - CientistaArretado"
 		canvas:prazo "médio"
 	]

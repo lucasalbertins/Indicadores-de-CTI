@@ -13,7 +13,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Desafios.gov"
 		base:id "PA-PR7"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-06-25T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-06-25T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_DesafiosGov:PA1, PA_DesafiosGov:PA2, PA_DesafiosGov:PA3, PA_DesafiosGov:PA4, PA_DesafiosGov:PA5
 	]
 	

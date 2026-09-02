@@ -15,7 +15,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Lab.Multiusuários"
 		base:id "PA-PR2"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-06-05T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-06-05T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_LabMultiusuarios:PA1, PA_LabMultiusuarios:PA2, PA_LabMultiusuarios:PA3, PA_LabMultiusuarios:PA4, PA_LabMultiusuarios:PA5, 
 		PA_LabMultiusuarios:PA6, PA_LabMultiusuarios:PA7, PA_LabMultiusuarios:PA8, PA_LabMultiusuarios:PA9, PA_LabMultiusuarios:PA10, PA_LabMultiusuarios:PA11, 
 		PA_LabMultiusuarios:PA12, PA_LabMultiusuarios:PA13, PA_LabMultiusuarios:PA14, PA_LabMultiusuarios:PA15, PA_LabMultiusuarios:PA16, PA_LabMultiusuarios:PA17, 

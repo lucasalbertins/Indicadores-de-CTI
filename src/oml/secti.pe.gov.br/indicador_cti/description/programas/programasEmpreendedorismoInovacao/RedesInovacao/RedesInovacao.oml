@@ -27,7 +27,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Redes de Inovação"
 		base:id "C-PR3"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-05-27T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-05-27T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.2, parceirosAgenciasFomento:PC2.3, parceirosAgenciasFomento:PC2.4
 		canvas:condicionadoPor fatoresCenarioInstitucionalLegal:FE2.OP1, fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, 
 		fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, fatoresCenarioEconomico:FE1.AM1, fatoresDinamicaEcossistema:FE5.AM1
@@ -51,62 +51,62 @@ impulsionar atividades de pesquisa, desenvolvimento e inovação em Pernambuco"
 	
 	// Relações Redes de Inovação --> Público-Alvo
 	relation instance PR3.direcionadoA.PU1.7 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAcademiaICTs:PU1.7
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU1.13 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAcademiaICTs:PU1.13
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU1.14 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU2.2 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU2.3 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU3.2 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "direto"
 	]
 	relation instance PR3.direcionadoA.PU3.5 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU4.1 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU4.6 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU4.7 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU4.8 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
 	relation instance PR3.direcionadoA.PU5.2 : canvas:direcionadoA [
-		from PR3
+		from CanvasPR3
 		to publicosSociedadeTerceiroSetor:PU5.2
 		base:tipo "direto"
 	]

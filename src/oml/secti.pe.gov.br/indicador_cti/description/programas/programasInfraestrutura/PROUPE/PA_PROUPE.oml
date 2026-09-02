@@ -12,7 +12,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Universidade para Todos em Pernambuco (PROUPE)"
 		base:id "PA-PR9"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-05-26T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-05-26T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_PROUPE:PA1, PA_PROUPE:PA2, PA_PROUPE:PA3, PA_PROUPE:PA4, PA_PROUPE:PA5, PA_PROUPE:PA6, PA_PROUPE:PA7, PA_PROUPE:PA8, PA_PROUPE:PA9, PA_PROUPE:PA10
 	]
 	

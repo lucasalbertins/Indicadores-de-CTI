@@ -13,7 +13,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa Cientista Arretado"
 		base:id "PA-PR6"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-03-11T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-03-11T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA_CientistaArretado:PA1, PA_CientistaArretado:PA2, PA_CientistaArretado:PA3, PA_CientistaArretado:PA4, PA_CientistaArretado:PA5, 
 		PA_CientistaArretado:PA6, PA_CientistaArretado:PA7, PA_CientistaArretado:PA8, PA_CientistaArretado:PA9, PA_CientistaArretado:PA10, 
 		PA_CientistaArretado:PA11, PA_CientistaArretado:PA12, PA_CientistaArretado:PA13, PA_CientistaArretado:PA14, PA_CientistaArretado:PA15, 

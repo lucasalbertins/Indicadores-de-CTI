@@ -22,7 +22,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa Rede Pernambucana de Pesquisa e Educação"
 		base:id "C-PR17"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-05-12T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-05-12T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosAcademiaICTs:PC3.3,parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.5, 
 		parceirosAcademiaICTs:PC3.6, parceirosEmpresas:PC4.7, parceirosEmpresas:PC4.8, parceirosGoverno:PC1.9
 		canvas:condicionadoPor fatoresCenarioTecnologico:FE3.OP1, fatoresCenarioTecnologico:FE3.OP4, fatoresCenarioTecnologico:FE3.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2,
@@ -46,25 +46,25 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// Relações REPEPE --> Público-Alvo 
 	relation instance PR17.direcionadoA.PU1 : canvas:direcionadoA [
-		from PR17 
+		from CanvasPR17 
 		to publicosAcademiaICTs:PU1.14 
 		base:tipo "direto"
 	] 
 	
 	relation instance PR17.direcionadoA.PU2 : canvas:direcionadoA [ 
-		from PR17
+		from CanvasPR17
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		 base:tipo "direto"
 	]
 	
 	relation instance PR17.direcionadoA.PU3 : canvas:direcionadoA [ 
-		from PR17 
+		from CanvasPR17 
 		to publicosGovernoInstituicoesPublicas:PU2.3 
 		base:tipo "direto"
 	] 
 	
 	relation instance PR17.direcionadoA.PU4 : canvas:direcionadoA [ 
-		from PR17 
+		from CanvasPR17 
 		to publicosGovernoInstituicoesPublicas:PU2.4 
 		base:tipo "indireto"
 	] 

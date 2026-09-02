@@ -15,7 +15,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Plano de Avaliação do Programa de Bolsas de Pós-Graduação"
 		base:id "PA-PR1"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-06-05T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-06-05T00:00:00"^^xsd:dateTime
 		planoAvaliacao:temQuestaoAvaliacao PA-PBPG:PA1, PA-PBPG:PA2, PA-PBPG:PA3, PA-PBPG:PA4, PA-PBPG:PA5, PA-PBPG:PA6, PA-PBPG:PA7, PA-PBPG:PA8, PA-PBPG:PA9, PA-PBPG:PA10, 
 		PA-PBPG:PA11, PA-PBPG:PA12, PA-PBPG:PA13, PA-PBPG:PA14
 	]
@@ -23,7 +23,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de sucesso e quantos bolsistas PBPG foram titulados como mestres e doutores, por ano, por prazo (regular ou prorrogado), por área de conhecimento e por região de desenvolvimento do Estado?"
 		base:id "PA1 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA1.ME1, PA1.ME2, PA1.ME3, PA1.ME4
 		planoAvaliacao:temEscopo PA1.ES
@@ -85,7 +85,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA7 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados por egressos PBPG em até dois anos após a titulação?"
 		base:id "PA7 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA7.ME1, PA7.ME2, PA7.ME3, PA7.ME4, PA7.ME5
 		planoAvaliacao:temEscopo PA7.ES
@@ -95,7 +95,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA8 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas publicações em co-autoria com organizações (empresas, ICT e governo) públicas ou privadas, nacionais ou estrangeiras foram realizadas por bolsistas PBPG em até dois anos após a titulação?"
 		base:id "PA8 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2, PA8.ME3, PA8.ME4, PA8.ME5
 		planoAvaliacao:temEscopo PA8.ES
@@ -105,7 +105,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA9 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantas patentes foram depositadas e programas de computador foram registrados em co-autoria com organizações (empresas, ICT, governo) públicas ou privadas, nacionais ou internacionais por bolsistas PBPG em até 02 anos após a titulação?"
 		base:id "PA9 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA9.ME1, PA9.ME2, PA9.ME3, PA9.ME4, PA9.ME5
 		planoAvaliacao:temEscopo PA9.ES
@@ -115,7 +115,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA10 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos mestrados/doutorados sanduíche foram realizados por bolsistas PBPG em ICT nacionais e internacionais?"
 		base:id "PA10 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Alto"
 		planoAvaliacao:temMetrica PA10.ME1, PA10.ME2, PA10.ME3
 		planoAvaliacao:temEscopo PA10.ES
@@ -135,7 +135,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PA12 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Quantos bolsistas PPBG foram co-orientados por pesquisadores de outras ICTs e/ou co-titulados (co-tutela) mestres e doutores?"
 		base:id "PA12 - PBPG"
-		planoAvaliacao:custo "Moderado"
+		planoAvaliacao:custo "Médio"
 		planoAvaliacao:risco "Médio"
 		planoAvaliacao:temMetrica PA12.ME1, PA12.ME2, PA12.ME3, PA12.ME4
 		planoAvaliacao:temEscopo PA12.ES

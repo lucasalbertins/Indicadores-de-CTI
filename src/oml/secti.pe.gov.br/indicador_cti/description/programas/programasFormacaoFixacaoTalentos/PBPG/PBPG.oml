@@ -29,7 +29,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:nome "Canvas do Programa de Bolsas de Pós-Graduação"
 		base:id "C-PR1"
 		base:versao "V1-Homologado"
-		base:dataCriacao "2026-03-24T00:00:00Z"^^xsd:dateTime
+		base:dataCriacao "2026-03-24T00:00:00"^^xsd:dateTime
 		canvas:possuiParceiros parceirosGoverno:PC1.12, parceirosGoverno:PC1.13, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, 
 		parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
 		canvas:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioEconomico:FE1.AM2,
@@ -56,67 +56,67 @@ pós-graduação"
 	
 	// Relações PBPG --> Público-Alvo
 	relation instance PR1.direcionadoA.PU1.6 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAcademiaICTs:PU1.6
 		base:tipo "direto"
 	]
 	relation instance PR1.direcionadoA.PU1.12 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAcademiaICTs:PU1.12
 		base:tipo "direto"
 	]
 	relation instance PR1.direcionadoA.PU1.14 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU1.15 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAcademiaICTs:PU1.15
 		base:tipo "direto"
 	]
 	relation instance PR1.direcionadoA.PU2.2 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU2.3 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosGovernoInstituicoesPublicas:PU2.3
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU3.2 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU3.5 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosEmpresasEmpreendedores:PU3.5
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU4.1 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAmbientesInovacao:PU4.1
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU4.6 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAmbientesInovacao:PU4.6
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU4.7 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAmbientesInovacao:PU4.7
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU4.8 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosAmbientesInovacao:PU4.8
 		base:tipo "indireto"
 	]
 	relation instance PR1.direcionadoA.PU5.1 : canvas:direcionadoA [
-		from PR1
+		from CanvasPR1
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
