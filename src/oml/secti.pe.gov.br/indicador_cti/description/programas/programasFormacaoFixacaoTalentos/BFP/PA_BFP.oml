@@ -9,6 +9,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao [
+		base:nome "Plano de Avaliação do Programa Bolsa de Fixação de Pesquisador"
+		base:id "PA-PR4"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-09-06T00:00:00"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_BFP:PA1, PA_BFP:PA2, PA_BFP:PA3, PA_BFP:PA4, PA_BFP:PA5, PA_BFP:PA6, PA_BFP:PA7, PA_BFP:PA8, PA_BFP:PA9, PA_BFP:PA10, PA_BFP:PA11
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a taxa de fixação dos bolsistas BFP e quantos bolsistas estão fixados no ecossistema de CT&I do Estado, considerando até um ano após o período de concessão da cota?"

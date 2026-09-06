@@ -1,5 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PIBIC#> as PIBIC {
 	
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PA_PIBIC#> as PA_PIBIC
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
@@ -48,6 +50,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Procura estimular pesquisadores produtivos a engajarem estudantes de graduação no processo de investigação científica, otimizando a capacidade da instituição na formação de profissionais altamente qualificados despertando a vocação entre estudantes de graduação para os campos das ciências e das carreiras tecnológicas, incentivando talentos potenciais, mediante sua participação em projetos de pesquisa que introduzam o jovem universitário no domínio do método científico."
 		base:id "PR12"
 		programa:temCanvas CanvasPR12
+		programa:temPlanoAvaliacao PA_PIBIC:PAV1
 	]
 	
 	// Relações Direcionadas (Públicos-Alvo)

@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/BIA#> as BIA {
 
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/PA_BIA#> as PA_BIA
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
@@ -47,6 +48,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:descricao "Incentivar a adaptação à vida acadêmica e a inserção em atividades de ensino, pesquisa e extensão de alunos egressos da rede pública de ensino que obtiveram as melhores classificações nos exames vestibulares das Instituições públicas de Ensino Superior (IES) de Pernambuco, federais ou estaduais, buscando evitar que, por carência de recursos financeiros, estes alunos abandonem os cursos ainda no primeiro ano de estudo."
 		base:id "PR50"
 		programa:temCanvas CanvasPR50
+		programa:temPlanoAvaliacao PA_BIA:PAV1
 	]
 	
 	// Relações Direcionadas (Públicos-Alvo)

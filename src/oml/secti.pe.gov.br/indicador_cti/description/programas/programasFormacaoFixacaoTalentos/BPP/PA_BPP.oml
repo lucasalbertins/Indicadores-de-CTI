@@ -8,6 +8,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao [
+		base:nome "Plano de Avaliação do Programa Bolsa de Produtividade Pernambucana"
+		base:id "PA-PR8"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-09-06T00:00:00"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_BPP:PA1, PA_BPP:PA2, PA_BPP:PA3, PA_BPP:PA4, PA_BPP:PA5, PA_BPP:PA6, PA_BPP:PA7, PA_BPP:PA8, PA_BPP:PA9, PA_BPP:PA10, PA_BPP:PA11, PA_BPP:PA12, PA_BPP:PA13
+	]
 	
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
 		base:nome "Qual a evolução da produção científica dos bolsistas BPP com/sem coautoria de pesquisadores/alunos de Pernambuco, considerando até um ano de egresso do edital?"

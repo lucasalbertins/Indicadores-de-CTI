@@ -9,6 +9,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance PAV1 : planoAvaliacao:planoAvaliacao [
+		base:nome "Plano de Avaliação do Programa PIBIC"
+		base:id "PA-PR12"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-09-06T00:00:00"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA_PIBIC:PA1, PA_PIBIC:PA2, PA_PIBIC:PA3, PA_PIBIC:PA4, PA_PIBIC:PA5, PA_PIBIC:PA6, PA_PIBIC:PA7
+	]
 
 	// Perguntas de Avaliação (PA)
 	instance PA1 : planoAvaliacao:questaoAvaliacao [
