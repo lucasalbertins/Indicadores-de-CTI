@@ -1,83 +1,12 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa {
 	
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
-	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
-	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as pl
+	
+
 	
 	concept programaCTI < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
-		restricts buscaAtingirGeral to max 1
+		
 	]
 
-	relation possuiParceiros [
-		from programaCTI
-		to canvas:ParceiroChave
-		reverse parceiroDe
-		asymmetric
-		irreflexive
-	]
-	relation condicionadoPor [
-		from programaCTI
-		to canvas:FatorExterno
-		reverse condiciona
-		asymmetric
-		irreflexive
-	]
-	relation recebeEntradas [
-		from programaCTI
-		to canvas:Entrada
-		reverse entradaDe
-		asymmetric
-		irreflexive
-	]
-	relation executa [
-		from programaCTI
-		to canvas:AtividadeChave
-		reverse executadoPor
-		asymmetric
-		irreflexive
-	]
-	relation geraSaidas [
-		from programaCTI
-		to canvas:Saida
-		reverse saidaDe
-		asymmetric
-		irreflexive
-	]
-	relation produzResultados [
-		from programaCTI
-		to canvas:ResultadoEsperado
-		reverse resultadoDe
-		asymmetric
-		irreflexive
-	]
-	relation buscaAtingirGeral [
-		from programaCTI
-		to canvas:ObjetivoGeral
-		reverse atingidoPor
-		asymmetric
-		irreflexive
-	]
-	relation buscaAtingirEspecifico [
-		from programaCTI
-		to canvas:ObjetivoEspecifico
-		reverse alcancadoPor
-		asymmetric
-		irreflexive
-	]
-	relation entity direcionadoA [
-		from programaCTI
-		to canvas:PublicoAlvo
-		forward abrange
-		reverse acolhidoPor
-		asymmetric
-		irreflexive
-	] < base:EntidadeTipavel
 	
-	relation avaliadoPor [
-		from programaCTI
-		to pl:questaoAvaliacao
-		reverse avalia
-		asymmetric
-		irreflexive
-	]
 }

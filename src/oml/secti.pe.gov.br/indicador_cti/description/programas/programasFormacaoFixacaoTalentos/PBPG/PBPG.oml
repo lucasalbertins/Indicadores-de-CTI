@@ -19,97 +19,21 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/canvas-PBPG#> as canvas-PBPG
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#> as PA-PBPG  
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as pA
 	
 	instance PR1 : programa:programaCTI [
 		base:nome "Programa de Bolsas de Pós-Graduação"
 		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas de estudo para alunos de 
 pós-graduação"
 		base:id "PR1"
-		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosGoverno:PC1.13, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, 
-		parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
-		programa:condicionadoPor fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioEconomico:FE1.AM2,
-		fatoresCenarioEconomico:FE1.AM3, fatoresCenarioInstitucionalLegal:FE2.AM1, fatoresCenarioSocialEducacional:FE4.AM2, fatoresCenarioSocialEducacional:FE4.AM3
-
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
-		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, 
-		atividadeChave:AC7
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2, RE.LP3, RE.LP4
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6
-		programa:avaliadoPor PA-PBPG:PA1, PA-PBPG:PA2, PA-PBPG:PA3, PA-PBPG:PA4, PA-PBPG:PA5, PA-PBPG:PA6, PA-PBPG:PA7, PA-PBPG:PA8, PA-PBPG:PA9, PA-PBPG:PA10, 
-		PA-PBPG:PA11, PA-PBPG:PA12, PA-PBPG:PA13, PA-PBPG:PA14
-	]
-	
-	// Relações PBPG --> Público-Alvo
-	relation instance PR1.direcionadoA.PU1.6 : programa:direcionadoA [
-		from PR1
-		to publicosAcademiaICTs:PU1.6
-		base:tipo "direto"
-	]
-	relation instance PR1.direcionadoA.PU1.12 : programa:direcionadoA [
-		from PR1
-		to publicosAcademiaICTs:PU1.12
-		base:tipo "direto"
-	]
-	relation instance PR1.direcionadoA.PU1.14 : programa:direcionadoA [
-		from PR1
-		to publicosAcademiaICTs:PU1.14
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU1.15 : programa:direcionadoA [
-		from PR1
-		to publicosAcademiaICTs:PU1.15
-		base:tipo "direto"
-	]
-	relation instance PR1.direcionadoA.PU2.2 : programa:direcionadoA [
-		from PR1
-		to publicosGovernoInstituicoesPublicas:PU2.2
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU2.3 : programa:direcionadoA [
-		from PR1
-		to publicosGovernoInstituicoesPublicas:PU2.3
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU3.2 : programa:direcionadoA [
-		from PR1
-		to publicosEmpresasEmpreendedores:PU3.2
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU3.5 : programa:direcionadoA [
-		from PR1
-		to publicosEmpresasEmpreendedores:PU3.5
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU4.1 : programa:direcionadoA [
-		from PR1
-		to publicosAmbientesInovacao:PU4.1
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU4.6 : programa:direcionadoA [
-		from PR1
-		to publicosAmbientesInovacao:PU4.6
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU4.7 : programa:direcionadoA [
-		from PR1
-		to publicosAmbientesInovacao:PU4.7
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU4.8 : programa:direcionadoA [
-		from PR1
-		to publicosAmbientesInovacao:PU4.8
-		base:tipo "indireto"
-	]
-	relation instance PR1.direcionadoA.PU5.1 : programa:direcionadoA [
-		from PR1
-		to publicosSociedadeTerceiroSetor:PU5.1
-		base:tipo "indireto"
+		canvas:temCanvas canvas-PBPG:cnvsPBPG
+		pA:temPlanoAvaliacao PA-PBPG:planoPBPG
+		
 	]
 	
 	// Objetivo Geral

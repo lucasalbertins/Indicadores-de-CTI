@@ -1,0 +1,52 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/canvas-PBPG#> as canvas-PBPG {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#> as PA-PBPG
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#> as PBPG
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosGovernoInstituicoesPublicas#> as publicosGovernoInstituicoesPublicas
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+
+	instance cnvsPBPG : canvas:Canvas  [
+		
+		
+		canvas:temParceiroChave parceirosGoverno:PC1.12,parceirosGoverno:PC1.13, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, 
+		parceirosAcademiaICTs:PC3.3, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6
+		canvas:temObjetivo PBPG:OB.GE, PBPG:OB.ES1, PBPG:OB.ES2, PBPG:OB.ES3, PBPG:OB.ES4, PBPG:OB.ES5, PBPG:OB.ES6
+		canvas:temFatorExterno fatoresCenarioSocialEducacional:FE4.OP1, fatoresDinamicaEcossistema:FE5.OP1, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioEconomico:FE1.AM2,
+		fatoresCenarioEconomico:FE1.AM3, fatoresCenarioInstitucionalLegal:FE2.AM1, fatoresCenarioSocialEducacional:FE4.AM2, fatoresCenarioSocialEducacional:FE4.AM3
+
+		canvas:temEntrada entradasOrcamentoFinanciamento:EN1.1,entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
+		
+		canvas:temSaida saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6, saida:SA7
+		
+		canvas:temAtividadeChave atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, 
+		atividadeChave:AC7
+				                         
+		canvas:esperaAtingir PBPG:RE.CP1, PBPG:RE.CP2, PBPG:RE.CP3, PBPG:RE.CP4, PBPG:RE.CP5, PBPG:RE.MP1, PBPG:RE.MP2, PBPG:RE.MP3, PBPG:RE.MP4, PBPG:RE.MP5, PBPG:RE.LP1,
+		 PBPG:RE.LP2, PBPG:RE.LP3, PBPG:RE.LP4
+		
+	]
+	
+		
+
+}
