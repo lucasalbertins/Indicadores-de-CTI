@@ -2,9 +2,9 @@ vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^
 	
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital#>
-	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/edital#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/indicador#>

@@ -1,0 +1,113 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME4#> as PA1.ME4 {
+	
+	// Importa a ME3 que servirá como denominador (total na base scopus)
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME3#> as PA1.ME3
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+		
+	// ESTRATIFICAÇÕES
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA1.ME4_BPP"
+		base:nome "Ano"
+	]
+	
+	instance estratQuartil : formulas:estratificacao [
+		base:id "estrat_quartil_PA1.ME4_BPP"
+		base:nome "Quartil"
+	]
+	
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA1.ME4_BPP"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	
+	// MÉTRICA: Taxa Publicações Periódicos Qualificados Bolsistas
+	// Fórmula: multiplicação(divisão(publicacoesQuartil, totalPublicacoesScopus), 100)
+	instance taxaPublicacoesQualificadas : metricas:metrica [
+		base:id "PA1.ME4_BPP"
+		base:nome "Taxa Publicações Periódicos Qualificados Bolsistas"
+		base:descricao "Número anual de publicações em periódicos indexados na base Scopus dos bolsistas BPP por quartil sobre o número total de publicações em periódicos indexados na Scopus dos bolsistas BPP no mesmo ano de publicação desagregado pela grande área de conhecimento FACEPE."
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratQuartil
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, fontesBasesAcademicasCientificasEducacionais:FI3.4
+		// Vinculando ao total absoluto (ME3)
+		base:agregadoPor PA1.ME3:quantidadePublicacoesScopus
+	]
+	 
+	// Fórmula Interna: divisão(publicacoesQuartil, totalPublicacoesScopus)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA1.ME4_BPP"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendo
+		formulas:possuiArgumento argDivisor
+	]
+	
+	// Numerador: Publicações restritas por Quartil
+	instance argDividendo : formulas:argumento [
+		base:id "arg_dividendo_PA1.ME4_BPP"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor Scopus_Publicacoes_Quartil
+		formulas:argumentoDe formulaDivisao
+	]
+	
+	// Denominador: Referencia a Métrica PA1.ME3 (Total Scopus)
+	instance argDivisor : formulas:argumento [
+		base:id "var_divisor_PA1.ME4_BPP"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor Scopus_Publicacoes_Total_ME3
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance Scopus_Publicacoes_Quartil : formulas:tipovalorMetrica [
+		base:id "ScopusPublicacoesQuartil_PA1.ME4_BPP"
+		formulas:valorMetrica taxaPublicacoesQualificadas
+	]
+	
+	// Tipovalor puxando a métrica do arquivo PA1.ME3 importado lá em cima
+	instance Scopus_Publicacoes_Total_ME3 : formulas:tipovalorMetrica [
+		base:id "ScopusPublicacoesTotalMetrica_PA1.ME4_BPP"
+		formulas:valorMetrica PA1.ME3:quantidadePublicacoesScopus
+	]
+	
+	// Fórmula Externa: Multiplicação (* 100)
+	instance formulaMultiplicacao : formulas:formula[
+		base:id "formula_multiplicacao_PA1.ME4_BPP"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicando
+		formulas:possuiArgumento argMultiplicador
+		formulas:formulaDe taxaPublicacoesQualificadas
+	]
+	
+	instance argMultiplicando : formulas:argumento [
+		base:id "arg_multiplicando_PA1.ME4_BPP"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivisao
+		formulas:argumentoDe formulaMultiplicacao
+	]
+	 
+	instance argMultiplicador : formulas:argumento [
+		base:id "arg_multiplicador_PA1.ME4_BPP"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:argumentoDe formulaMultiplicacao
+	]
+	
+	instance valorFormulaDivisao : formulas:tipovalorFormula [
+	 	formulas:valorFormula formulaDivisao
+	]
+	 
+	instance valorLiteral : formulas:tipovalorLiteral [
+		formulas:valorLiteral 100
+	]
+}

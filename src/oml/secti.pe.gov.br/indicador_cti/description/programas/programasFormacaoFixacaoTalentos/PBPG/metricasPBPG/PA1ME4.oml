@@ -54,7 +54,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance argDividendo : formulas:argumento [
 		base:id "arg_dividendo_PA1.ME4"
 		formulas:posicao "1"^^xsd:int
-		formulas:nome "dividend"
+		formulas:nome "Quantidade tomada contas"
 		formulas:possuiValor Sucupira_Bolsistas_PBPG_Tomada_Contas
 		formulas:argumentoDe formulaDivisao
 	]
@@ -62,7 +62,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance argDivisor : formulas:argumento [
 		base:id "var_divisor_PA1.ME4"
 		formulas:posicao "2"^^xsd:int
-		formulas:nome "divisor"
+		formulas:nome "Total bolsistas"
 		formulas:argumentoDe formulaDivisao
 		formulas:possuiValor Sucupira_Total_Bolsistas_PBPG
 	]

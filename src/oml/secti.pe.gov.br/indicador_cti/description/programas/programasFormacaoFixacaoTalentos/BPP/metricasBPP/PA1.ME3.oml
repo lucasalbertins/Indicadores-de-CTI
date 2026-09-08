@@ -1,0 +1,53 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME3#> as PA1.ME3 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+		
+	// ESTRATIFICAÇÕES
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA1.ME3_BPP"
+		base:nome "Ano"
+	]
+	
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA1.ME3_BPP"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	
+	// MÉTRICA: Quantidade Publicações Periódicos Scopus Bolsistas
+	instance quantidadePublicacoesScopus : metricas:metrica [
+		base:id "PA1.ME3_BPP"
+		base:nome "Quantidade Publicações Periódicos Scopus Bolsistas"
+		base:descricao "Número anual de publicações em periódicos indexados na base científica Scopus dos BPP, desagregado pela grande área do conhecimento FACEPE."
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaIdentidade
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea		
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, fontesBasesAcademicasCientificasEducacionais:FI3.4
+	]
+	 
+	// retorna o valor da fonte de dados
+	instance formulaIdentidade : formulas:formula [
+		base:id "formula_identidade_PA1.ME3_BPP"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argValorUnico
+	]
+	
+	// Variável vem da fonte de dados
+	instance argValorUnico : formulas:argumento [
+		base:id "arg_valor_unico_PA1.ME3_BPP"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor Valor_Publicacoes_Scopus
+		formulas:argumentoDe formulaIdentidade
+	]
+	
+	instance Valor_Publicacoes_Scopus : formulas:tipovalorMetrica [
+		base:id "ValorPublicacoesScopus_PA1.ME3_BPP"
+		formulas:valorMetrica quantidadePublicacoesScopus
+	]
+}

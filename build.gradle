@@ -27,15 +27,7 @@ buildscript {
         classpath 'io.opencaesar.owl:owl-reason-gradle:+'
         classpath 'io.opencaesar.oml:oml-merge-gradle:+'
         classpath 'io.opencaesar.adapters:oml2owl-gradle:+'
-        classpath 'io.github.raks0009:oml-web-viewer-gradle:1.0.2'
 	}
-}
-
-apply plugin: 'io.github.raks0009.oml-web-viewer'
-
-startWebViewer {
-    endpointURL = 'http://localhost:3030/dataset'
-    port = 5173
 }
 
 /*

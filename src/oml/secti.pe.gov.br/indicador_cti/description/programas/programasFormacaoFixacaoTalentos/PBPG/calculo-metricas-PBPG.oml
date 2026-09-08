@@ -2,9 +2,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#> as PBPG
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/bolsista#> as bolsista
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/projeto#> as projeto
-	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/CalculoMetricas/edital#> as edital
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#> as bolsista
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#> as projeto
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/edital#> as edital
 	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
 	//EDITAIS
