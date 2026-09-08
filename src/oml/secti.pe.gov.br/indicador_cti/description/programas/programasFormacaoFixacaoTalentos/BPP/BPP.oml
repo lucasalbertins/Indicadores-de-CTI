@@ -1,5 +1,6 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP#> as BPP {
 	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/PA_BPP#> as PA_BPP
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
@@ -7,7 +8,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
 	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
-	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioTecnologico#> as fatoresCenarioTecnologico
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
 	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
@@ -19,71 +19,74 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
 	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosSociedadeTerceiroSetor#> as publicosSociedadeTerceiroSetor
+	
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
-	instance PR8 : programa:programaCTI [
-		base:nome "Bolsa Pernambucana de Produtividade"
-		base:descricao "Apoia pesquisadores com notável produção científica, tecnológica ou de inovação em Pernambuco. A modalidade oferece bolsas e adicionais de bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos, especialmente no interior do estado"
-		base:id "PR8"
+	instance CanvasPR8 : canvas:canvas [
+		base:nome "Canvas do Programa Bolsa de Produtividade Pernambucana"
+		base:id "C-PR8"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-09-06T00:00:00"^^xsd:dateTime
 		
-		programa:possuiParceiros parceirosGoverno:PC1.10, parceirosAgenciasFomento:PC2.5, parceirosAgenciasFomento:PC2.6, parceirosAgenciasFomento:PC2.7, parceirosAgenciasFomento:PC2.9, parceirosAcademiaICTs:PC3.1
-		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP1, fatoresDinamicaEcossistema:FE5.OP2, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM1, fatoresCenarioSocialEducacional:FE4.AM1
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasCapitalHumano:EN3.1, entradasDadosSistemasPlataformas:EN2.1, entradasInstrumentosLegaisNormativos:EN5.1
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6
-		
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.CP6, RE.CP7, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8
+		canvas:possuiParceiros parceirosGoverno:PC1.10, parceirosAgenciasFomento:PC2.5, parceirosAgenciasFomento:PC2.6, parceirosAgenciasFomento:PC2.7, parceirosAgenciasFomento:PC2.9, parceirosAcademiaICTs:PC3.1
+		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP1, fatoresDinamicaEcossistema:FE5.OP2, fatoresCenarioEconomico:FE1.AM1, fatoresCenarioInstitucionalLegal:FE2.AM1, fatoresCenarioSocialEducacional:FE4.AM1
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.CP6, RE.CP7, RE.MP1, RE.MP2, RE.LP1, RE.LP2, RE.LP3, RE.LP4
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8
 	]
 	
-	// Relações BPP --> Público-Alvo
-	relation instance PR8.direcionadoA.PU1.2 : programa:direcionadoA [
-		from PR8
+	instance PR8 : programa:programaCTI [
+		base:nome "BPP"
+		base:descricao "Apoia pesquisadores com notável produção científica, tecnológica ou de inovação em Pernambuco. A modalidade oferece bolsas e adicionais de bancada para aumentar a qualidade da pesquisa e promover a fixação de talentos, especialmente no interior do estado."
+		base:id "PR8"
+		programa:temCanvas CanvasPR8
+		programa:temPlanoAvaliacao PA_BPP:PAV1
+	]
+	
+	// Relações Direcionadas (Públicos-Alvo)
+	relation instance CanvasPR8.direcionadoA.PU1.2 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
-	
-	relation instance PR8.direcionadoA.PU1.8 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU1.8 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosAcademiaICTs:PU1.8
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU1.14 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU1.14 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU1.15 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU1.15 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosAcademiaICTs:PU1.15
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU2.2 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU2.2 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU3.2 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU3.2 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU4.9 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU4.9 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosAmbientesInovacao:PU4.9
 		base:tipo "indireto"
 	]
-	
-	relation instance PR8.direcionadoA.PU5.1 : programa:direcionadoA [
-		from PR8
+	relation instance CanvasPR8.direcionadoA.PU5.1 : canvas:direcionadoA [
+		from CanvasPR8
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]
@@ -94,7 +97,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:id "OB.GE - BPP"
 	]
 	
-	// Objetivos Específicos
+	// Objetivos Específicos e Correlação de Resultados
 	instance OB.ES1 : canvas:ObjetivoEspecifico [
 		base:nome "Estimular a fixação de pesquisadores fora da RMR."
 		base:id "OB.ES1 - BPP"
@@ -140,7 +143,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// Curto Prazo
 	instance RE.CP1 : canvas:ResultadoEsperado [
-		base:nome "Aumento da produção científica qualificada e de alto impacto;"
+		base:nome "Aumento da produção científica qualificada e de alto impacto."
 		base:id "RE.CP1 - BPP"
 		canvas:prazo "curto"
 	]
@@ -170,7 +173,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		canvas:prazo "curto"
 	]
 	instance RE.CP7 : canvas:ResultadoEsperado [
-		base:nome "Aumento do número de bolsistas que não renovaram a bolsa para adquirir bolsa PQ ou DT do CNPq"
+		base:nome "Aumento do número de bolsistas que não renovaram a bolsa para adquirir bolsa PQ ou DT do CNPq."
 		base:id "RE.CP7 - BPP"
 		canvas:prazo "curto"
 	]
@@ -189,7 +192,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	// Longo Prazo
 	instance RE.LP1 : canvas:ResultadoEsperado [
-		base:nome "Licenciamento da propriedade intelectual pela Indústria e Governo;"
+		base:nome "Licenciamento da propriedade intelectual pela Indústria e Governo."
 		base:id "RE.LP1 - BPP"
 		canvas:prazo "longo"
 	]

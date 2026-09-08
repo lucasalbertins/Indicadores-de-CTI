@@ -10,6 +10,20 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base {
 	]
 	aspect EntidadeAgregavel
 	
+	aspect Versao
+	
+	scalar property versao [
+		domain Versao
+		range xsd:string
+		functional
+	]
+
+	scalar property dataCriacao [
+		domain Versao
+		range xsd:dateTime
+		functional
+	]
+	
 	scalar Tipo [
 		oneOf "direto", "indireto"
 	]

@@ -63,11 +63,6 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAmbientesInovacao.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas.oml</semanticResources>
-    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores.oml</semanticResources>

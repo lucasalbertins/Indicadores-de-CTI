@@ -1,6 +1,14 @@
 vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas {
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	
+
+
+	concept canvas < base:EntidadeNomeavel, base:EntidadeIdentificavel, base:Versao [
+		restricts base:id to max 1
+		restricts base:id to min 1
+		restricts buscaAtingirGeral to max 1
+	]
 
 	concept ParceiroChave < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel [
 		restricts base:id to max 1
@@ -99,4 +107,71 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canv
 		asymmetric
 		irreflexive
 	]
+	
+	//refatoração
+	
+	relation possuiParceiros [
+		from canvas
+		to ParceiroChave
+		reverse parceiroDe
+		asymmetric
+		irreflexive
+	]
+	relation condicionadoPor [
+		from canvas
+		to FatorExterno
+		reverse condiciona
+		asymmetric
+		irreflexive
+	]
+	relation recebeEntradas [
+		from canvas
+		to Entrada
+		reverse entradaDoCanvas
+		asymmetric
+		irreflexive
+	]
+	relation executa [
+		from canvas
+		to canvas:AtividadeChave
+		reverse executadoPor
+		asymmetric
+		irreflexive
+	]
+	relation geraSaidas [
+		from canvas
+		to canvas:Saida
+		reverse saidaDoCanvas
+		asymmetric
+		irreflexive
+	]
+	relation produzResultados [
+		from canvas
+		to ResultadoEsperado
+		reverse resultadoDe
+		asymmetric
+		irreflexive
+	]
+	relation buscaAtingirGeral [
+		from canvas
+		to ObjetivoGeral
+		reverse atingidoPorCanvas
+		asymmetric
+		irreflexive
+	]
+	relation buscaAtingirEspecifico [
+		from canvas
+		to ObjetivoEspecifico
+		reverse alcancadoPor
+		asymmetric
+		irreflexive
+	]
+	relation entity direcionadoA [
+		from canvas
+		to PublicoAlvo
+		forward abrange
+		reverse acolhidoPor
+		asymmetric
+		irreflexive
+		]< base:EntidadeTipavel
 }

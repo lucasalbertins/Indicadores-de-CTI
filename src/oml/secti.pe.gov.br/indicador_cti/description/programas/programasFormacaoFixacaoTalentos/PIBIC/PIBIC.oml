@@ -1,5 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PIBIC#> as PIBIC {
 	
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PA_PIBIC#> as PA_PIBIC
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
 	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
@@ -24,70 +26,79 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
 	
+	instance CanvasPR12 : canvas:canvas [
+		base:nome "Canvas do PIBIC"
+		base:id "C-PR12"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-03-11T00:00:00"^^xsd:dateTime
+		
+		canvas:possuiParceiros parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTS:PC3.1, parceirosEmpresas:PC4.2
+		canvas:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2, fatoresCenarioSocialEducacional:FE4.AM2
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1, entradasInstrumentosLegaisNormativos:EN5.2, entradasInstrumentosLegaisNormativos:EN5.3
+		canvas:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
+		canvas:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6
+		
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.MP1, RE.MP2, RE.LP1, RE.LP2
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6		
+	]
+
 	instance PR12 : programa:programaCTI [
 		base:nome "PIBIC"
 		base:descricao "Procura estimular pesquisadores produtivos a engajarem estudantes de graduação no processo de investigação científica, otimizando a capacidade da instituição na formação de profissionais altamente qualificados despertando a vocação entre estudantes de graduação para os campos das ciências e das carreiras tecnológicas, incentivando talentos potenciais, mediante sua participação em projetos de pesquisa que introduzam o jovem universitário no domínio do método científico."
 		base:id "PR12"
-		
-		programa:possuiParceiros parceirosGoverno:PC1.12, parceirosAgenciasFomento:PC2.9, parceirosAgenciasFomento:PC2.10, parceirosAcademiaICTS:PC3.1, parceirosEmpresas:PC4.2
-		programa:condicionadoPor fatoresDinamicaEcossistema:FE5.OP6, fatoresDinamicaEcossistema:FE5.OP7, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioInstitucionalLegal:FE2.AM2, fatoresCenarioSocialEducacional:FE4.AM2
-		programa:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasDadosSistemasPlataformas:EN2.1, entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInstrumentosLegaisNormativos:EN5.1, entradasInstrumentosLegaisNormativos:EN5.2, entradasInstrumentosLegaisNormativos:EN5.3
-		programa:executa atividadeChave:AC1, atividadeChave:AC2, atividadeChave:AC3, atividadeChave:AC4, atividadeChave:AC5, atividadeChave:AC6, atividadeChave:AC7
-		programa:geraSaidas saida:SA1, saida:SA2, saida:SA3, saida:SA4, saida:SA5, saida:SA6
-		
-		programa:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.MP1, RE.MP2, RE.LP1, RE.LP2
-		programa:buscaAtingirGeral OB.GE
-		programa:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6		
+		programa:temCanvas CanvasPR12
+		programa:temPlanoAvaliacao PA_PIBIC:PAV1
 	]
 	
 	// Relações Direcionadas (Públicos-Alvo)
-	relation instance PR12.direcionadoA.PU1.2 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU1.2 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosAcademiaICTs:PU1.2
 		base:tipo "direto"
 	]
 	
-	relation instance PR12.direcionadoA.PU1.10 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU1.10 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosAcademiaICTs:PU1.10
 		base:tipo "direto"
 	]
 	
-	relation instance PR12.direcionadoA.PU1.14 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU1.14 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosAcademiaICTs:PU1.14
 		base:tipo "direto"
 	]
 	
-	relation instance PR12.direcionadoA.PU1.15 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU1.15 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosAcademiaICTs:PU1.15
 		base:tipo "indireto"
 	]
 	
 	
-	
-	relation instance PR12.direcionadoA.PU2.2 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU2.2 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosGovernoInstituicoesPublicas:PU2.2
 		base:tipo "indireto"
 	]
 	
-	relation instance PR12.direcionadoA.PU3.2 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU3.2 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosEmpresasEmpreendedores:PU3.2
 		base:tipo "indireto"
 	]
 	
-	relation instance PR12.direcionadoA.PU4.9 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU4.9 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosAmbientesInovacao:PU4.9
 		base:tipo "indireto"
 	]
 	
-	relation instance PR12.direcionadoA.PU5.1 : programa:direcionadoA [
-		from PR12
+	relation instance CanvasPR12.direcionadoA.PU5.1 : canvas:direcionadoA [
+		from CanvasPR12
 		to publicosSociedadeTerceiroSetor:PU5.1
 		base:tipo "indireto"
 	]	
@@ -176,5 +187,4 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		base:id "RE.LP2 - PIBIC"
 		canvas:prazo "longo"
 	]
-	
 }
