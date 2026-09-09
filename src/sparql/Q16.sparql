@@ -1,0 +1,43 @@
+# ============================================================================
+# Q16 - MS1 BOLSISTAS_PBPG_TITULADOS (medida numeradora da PA1.ME1)
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Reproduz o bloco PA1.ME1.MS1 da planilha "Repositorio Avaliacao PBPG":
+# quantidade de bolsistas titulados no semestre, em TODOS os 8 recortes
+# previstos pelas estratificacoes declaradas na metrica (metricasPBPG/PA1.ME1):
+#   {} {MOD} {AREA} {MOD,AREA} {RDE} {MOD,RDE} {AREA,RDE} {MOD,AREA,RDE}
+#
+# Titulado = bolsista com bolsista:id_semestre_titulacao no semestre avaliado.
+#
+# COMO O CUBO E MONTADO: a clausula VALUES (?gMod ?gArea ?gRde) replica cada
+# bolsista uma vez por recorte; o BIND troca a dimensao nao usada pelo rotulo
+# "(todas)". O GROUP BY sobre os rotulos produz, numa unica consulta, os mesmos
+# GROUPING SETS que a planilha traz em linhas com celulas vazias. ?nivel diz
+# quantas dimensoes o recorte usa (0 = total do semestre).
+# ============================================================================
+
+PREFIX bolsista: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+PREFIX projeto:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
+
+SELECT ?semestre ?modalidade ?area ?rde ?nivel (COUNT(DISTINCT ?b) AS ?titulados)
+WHERE {
+  # Semestre de referencia do ciclo avaliado: ajuste aqui para outro ciclo.
+  VALUES ?semestre { "2025.2" }
+
+  ?b a bolsista:bolsista ;
+     bolsista:id_semestre_titulacao ?semestre ;
+     bolsista:nm_modalidade ?vMod ;
+     bolsista:desenvolve ?p .
+  ?p projeto:nm_area_conhecimento ?vArea ;
+     projeto:nm_rde              ?vRde .
+
+  VALUES (?gMod ?gArea ?gRde) {
+    (0 0 0) (1 0 0) (0 1 0) (1 1 0) (0 0 1) (1 0 1) (0 1 1) (1 1 1)
+  }
+  BIND(IF(?gMod  = 1, ?vMod,  "(todas)") AS ?modalidade)
+  BIND(IF(?gArea = 1, ?vArea, "(todas)") AS ?area)
+  BIND(IF(?gRde  = 1, ?vRde,  "(todas)") AS ?rde)
+  BIND(?gMod + ?gArea + ?gRde            AS ?nivel)
+}
+GROUP BY ?semestre ?modalidade ?area ?rde ?nivel
+ORDER BY ?semestre ?nivel ?area ?modalidade ?rde

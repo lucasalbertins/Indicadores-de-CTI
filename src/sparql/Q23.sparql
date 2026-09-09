@@ -1,0 +1,67 @@
+# ============================================================================
+# Q23 - Arvore de calculo da PA1.ME1 (formula OpenMath e origem dos argumentos)
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Percorre a formula declarada em metricasPBPG/PA1.ME1 e devolve, argumento a
+# argumento, de onde sai cada numero:
+#     times( divide(MS1 titulados, MS2 cotas encerradas), 100 )
+# ?profundidade 0 e a formula da metrica; os niveis seguintes sao as formulas
+# aninhadas alcancadas por possuiValor/valorFormula. Auditar essa arvore e o
+# que garante que a taxa das Q18-Q20 corresponde a metrica pactuada.
+#
+# ACHADO DE MODELAGEM: form:valorMetrica e usada de dois modos nesta descricao
+# - como relacao para a metrica PA1.ME2 (numerador) e como literal com a chave
+# "agilfap.cotas.encerradas" (denominador), que nao tem instancia de metrica
+# propria. Por isso a consulta trata os dois casos (isIRI / isLiteral). Criar
+# uma metrica para as cotas encerradas - a MS2 da planilha - tornaria a
+# formula homogenea e a propriedade voltaria a ser so uma relacao.
+# ============================================================================
+
+PREFIX base: <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX met:  <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#>
+PREFIX form: <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#>
+
+SELECT ?profundidade ?formula ?operacao ?posicao ?argumento ?tipoDoValor ?origemDoValor
+WHERE {
+  ?m a met:metrica ; base:id "PA1.ME1_PBPG" .
+
+  # Formula da metrica (profundidade 0) e as formulas aninhadas sob ela.
+  {
+    ?m form:possuiFormula ?f .
+    BIND(0 AS ?profundidade)
+  } UNION {
+    ?m form:possuiFormula/form:possuiArgumento/form:possuiValor/form:valorFormula ?f .
+    BIND(1 AS ?profundidade)
+  }
+
+  ?f base:id                 ?formula ;
+     form:referenciaOperacao ?operacao ;
+     form:possuiArgumento    ?a .
+  ?a form:posicao     ?posicao ;
+     form:nome        ?argumento ;
+     form:possuiValor ?v .
+
+  {
+    ?v a form:tipovalorLiteral ; form:valorLiteral ?lit .
+    BIND("literal" AS ?tipoDoValor)
+    BIND(STR(?lit) AS ?origemDoValor)
+  } UNION {
+    # argumento que aponta para outra metrica da ontologia
+    ?v a form:tipovalorMetrica ; form:valorMetrica ?ref .
+    FILTER( isIRI(?ref) )
+    ?ref base:nome ?nomeRef .
+    BIND("metrica" AS ?tipoDoValor)
+    BIND(?nomeRef  AS ?origemDoValor)
+  } UNION {
+    # argumento que aponta direto para uma chave da fonte de dados
+    ?v a form:tipovalorMetrica ; form:valorMetrica ?ref .
+    FILTER( isLiteral(?ref) )
+    BIND("chave da fonte de dados" AS ?tipoDoValor)
+    BIND(STR(?ref)                 AS ?origemDoValor)
+  } UNION {
+    ?v a form:tipovalorFormula ; form:valorFormula/base:id ?idSub .
+    BIND("formula aninhada" AS ?tipoDoValor)
+    BIND(?idSub             AS ?origemDoValor)
+  }
+}
+ORDER BY ?profundidade ?formula ?posicao

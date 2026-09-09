@@ -1,0 +1,78 @@
+# ============================================================================
+# Q22 - Ficha tecnica da PA1.ME1 (rastreabilidade da informacao de gestao)
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Devolve, num unico quadro "componente / valor", toda a cadeia que justifica a
+# taxa apurada nas Q16-Q20: do objetivo especifico do programa ao resultado
+# esperado, dai a questao de avaliacao PA1, sua metrica, meta, finalidade,
+# escopo, metodo, custo, risco, fontes de informacao e estratificacoes.
+# E o que responde, diante do numero, "de onde veio e para que serve".
+#
+# Percurso: canvas:buscaAtingir liga objetivo -> resultado esperado, e
+# plano:alinhaComResultado liga a questao de avaliacao ao mesmo resultado.
+# ============================================================================
+
+PREFIX base:   <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX canvas: <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#>
+PREFIX plano:  <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#>
+PREFIX met:    <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#>
+PREFIX form:   <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#>
+
+SELECT ?ordem ?componente ?valor
+WHERE {
+  ?qa a plano:questaoAvaliacao ;
+      base:id "PA1 - PBPG" .
+  ?qa plano:temMetrica ?m .
+  ?m base:nome ?nomeMetrica .
+  FILTER( CONTAINS(?nomeMetrica, "Taxa Titula") )
+
+  {
+    BIND(1 AS ?ordem) BIND("Objetivo especifico" AS ?componente)
+    ?qa plano:alinhaComResultado ?re .
+    ?obj a canvas:ObjetivoEspecifico ; canvas:buscaAtingir ?re ; base:nome ?valor .
+  } UNION {
+    BIND(2 AS ?ordem) BIND("Resultado esperado" AS ?componente)
+    ?qa plano:alinhaComResultado ?re .
+    ?re base:nome ?valor .
+  } UNION {
+    BIND(3 AS ?ordem) BIND("Questao de avaliacao" AS ?componente)
+    ?qa base:nome ?valor .
+  } UNION {
+    BIND(4 AS ?ordem) BIND("Custo da questao" AS ?componente)
+    ?qa plano:custo ?valor .
+  } UNION {
+    BIND(5 AS ?ordem) BIND("Risco da questao" AS ?componente)
+    ?qa plano:risco ?valor .
+  } UNION {
+    BIND(6 AS ?ordem) BIND("Escopo" AS ?componente)
+    ?qa plano:temEscopo/base:descricao ?valor .
+  } UNION {
+    BIND(7 AS ?ordem) BIND("Metodo de avaliacao" AS ?componente)
+    ?qa plano:temMetodologia/base:descricao ?valor .
+  } UNION {
+    BIND(8 AS ?ordem) BIND("Metrica" AS ?componente)
+    ?m base:nome ?valor .
+  } UNION {
+    BIND(9 AS ?ordem) BIND("Definicao da metrica" AS ?componente)
+    ?m base:descricao ?valor .
+  } UNION {
+    BIND(10 AS ?ordem) BIND("Finalidade" AS ?componente)
+    ?m met:finalidade ?valor .
+  } UNION {
+    BIND(11 AS ?ordem) BIND("Valor meta (como gravado)" AS ?componente)
+    ?m met:valorMeta ?vm . BIND(STR(?vm) AS ?valor)
+  } UNION {
+    BIND(12 AS ?ordem) BIND("Valor atual (como gravado)" AS ?componente)
+    ?m met:valorAtual ?va . BIND(STR(?va) AS ?valor)
+  } UNION {
+    BIND(13 AS ?ordem) BIND("Fonte de informacao" AS ?componente)
+    ?m met:temFonte/base:nome ?valor .
+  } UNION {
+    # As estratificacoes estao na metrica homonima com formula, em
+    # metricasPBPG/PA1.ME1 (base:id "PA1.ME1_PBPG").
+    BIND(14 AS ?ordem) BIND("Estratificacao" AS ?componente)
+    ?mf a met:metrica ; base:id "PA1.ME1_PBPG" .
+    ?mf form:estratificadaPor/base:nome ?valor .
+  }
+}
+ORDER BY ?ordem ?valor
