@@ -48,7 +48,11 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/REPEPE#> 
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/bolsistas-PBPG#>
+	// Estudo de caso sintético (109 cotas), versionado. Quem tiver o
+	// bolsistas-PBPG.oml gerado do Tabelão — dado pessoal real, fora do git —
+	// troca esta linha localmente por .../PBPG/bolsistas-PBPG#. Não commitar a
+	// troca: o include não resolvido quebra o build de quem clonar.
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/calculo-metricas-PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME3#>
