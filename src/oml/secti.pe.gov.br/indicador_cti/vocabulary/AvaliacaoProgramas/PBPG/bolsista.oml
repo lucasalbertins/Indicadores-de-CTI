@@ -4,6 +4,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#> as projeto
 
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#> as ppg
+
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
 	/*
@@ -124,6 +126,33 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 		from bolsista
 		to projeto:projeto
 		reverse desenvolvidoPor
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * O bolsista cursa mestrado ou doutorado num unico Programa de
+	 * Pos-Graduacao. O PPG, por sua vez, pertence a uma unica grande area do
+	 * conhecimento (ver ppg.oml), o que da a esta relacao um segundo papel:
+	 * e por ela que a area do conhecimento do BOLSISTA fica determinada, sem
+	 * depender do projeto.
+	 *
+	 * O "unico PPG" esta em functional: no maximo um. A outra metade -- ao
+	 * menos um -- seria
+	 *
+	 *     concept bolsista < pessoa [ restricts matriculadoEm to exactly 1 ]
+	 *
+	 * e NAO pode ser ligada agora: nenhum dos 9.237 bolsistas de
+	 * bolsistas-PBPG.oml nem dos 109 de calculo-metricas-PBPG.oml tem PPG, e o
+	 * owlReason reprova cada um deles com "Individual violates minimum
+	 * cardinality restriction", derrubando ./gradlew check. Ligue essa linha
+	 * quando a matricula estiver preenchida nas descricoes.
+	 */
+	relation matriculadoEm [
+		from bolsista
+		to ppg:ppg
+		reverse possuiBolsista
+		functional
 		asymmetric
 		irreflexive
 	]
