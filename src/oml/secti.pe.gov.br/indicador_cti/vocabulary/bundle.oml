@@ -7,6 +7,8 @@ vocabulary bundle <http://secti.pe.gov.br/indicador_cti/vocabulary/bundle#> as ^
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/areaConhecimento#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAno#>
+	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/conceitoPPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/coordenador#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#>
 	includes <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#>

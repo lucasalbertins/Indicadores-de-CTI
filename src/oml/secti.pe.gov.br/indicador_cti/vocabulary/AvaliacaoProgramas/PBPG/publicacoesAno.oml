@@ -1,0 +1,39 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAno#> as publicacoesAno {
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	/*
+	 * PUBLICAÇÕES POR ANO
+	 *
+	 * Um registro por ano-base: quantas publicações foram produzidas naquele
+	 * ano. É a forma tabular que as métricas PA5.ME1 e PA5.ME2 ("número anual
+	 * de publicações ... desagregado pela grande área do conhecimento FACEPE")
+	 * pedem, sem exigir uma entidade publicação.
+	 *
+	 * Vocabulário próprio, e não dentro de areaConhecimento.oml: é conceito
+	 * com identidade e ciclo de vida próprios, e a IRI deve dizer isso --
+	 * publicacoesAno#publicacoesAno, não areaConhecimento#publicacoesAno.
+	 *
+	 * Quem liga a área a estes registros é a relação possuiPublicacoesAno, do
+	 * lado de areaConhecimento.oml, que é onde a origem da relação mora --
+	 * mesmo padrão de bolsista:desenvolve apontando para projeto:projeto.
+	 */
+	concept publicacoesAno < base:EntidadeIdentificavel [
+		restricts an_base        to exactly 1
+		restricts qt_publicacoes to exactly 1
+	]
+
+	scalar property an_base [
+		domain publicacoesAno
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_publicacoes [
+		domain publicacoesAno
+		range xsd:int
+		functional
+	]
+}

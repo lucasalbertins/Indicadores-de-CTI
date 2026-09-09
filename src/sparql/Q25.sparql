@@ -21,20 +21,22 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ppg:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#>
 PREFIX area: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/areaConhecimento#>
+PREFIX pub:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAno#>
+PREFIX cppg: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/conceitoPPG#>
 PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
 PREFIX coord: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/coordenador#>
 
 SELECT ?origem ?ligacao ?destino ?cardinalidade ?caracteristica
 WHERE {
-  VALUES ?classe { bols:bolsista coord:coordenador ppg:ppg ppg:conceitoPPG
-                   area:areaConhecimento area:publicacoesAno }
+  VALUES ?classe { bols:bolsista coord:coordenador ppg:ppg cppg:conceitoPPG
+                   area:areaConhecimento pub:publicacoesAno }
 
   ?prop rdfs:domain ?classe ;
         rdfs:range  ?alvo .
   FILTER( ?prop IN ( bols:matriculadoEm, coord:membroDe,
                      ppg:classificadoEm, ppg:avaliadoCom,
-                     ppg:an_base, ppg:cd_conceito_ppg,
-                     area:possuiPublicacoesAno, area:an_base, area:qt_publicacoes ) )
+                     cppg:an_base, cppg:cd_conceito_ppg,
+                     area:possuiPublicacoesAno, pub:an_base, pub:qt_publicacoes ) )
 
   # cardinalidade declarada no conceito de origem, quando houver
   OPTIONAL {
