@@ -1,0 +1,107 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME3#> as PA3.ME3 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA3.ME3).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME2#> as PA3.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA3.ME3"
+		base:nome "Ano"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA3.ME3"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	// MÉTRICA
+	instance taxaMestresDoutorandos : metricas:metrica [
+		base:id "PA3.ME3_PBPG"
+		base:nome "Taxa Mestres Doutorandos"
+		base:descricao "Número de bolsistas PBPG titulados como mestres que, após dois anos da titulação, estão em cursos de doutorado em Instituições de Ciência e Tecnologia (ICT) sediadas em Pernambuco sobre o total de bolsistas PBPG titulados como mestres, desagregado por ano e grande área do conhecimento FACEPE."
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, fontesBasesAcademicasCientificasEducacionais:FI3.2
+	]
+
+	// fórmula aninhada
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA3.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividend
+		formulas:possuiArgumento argDivisor
+	]
+
+	instance argDividend : formulas:argumento [
+		base:id "arg_dividend_PA3.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valDividend
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance valDividend : formulas:tipovalorMetrica [
+		base:id "val_dividend_PA3.ME3"
+		formulas:valorMetrica PA3.ME2:quantidadeMestresDoutorandos
+	]
+
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA3.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valDivisor
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance valDivisor : formulas:tipovalorMetrica [
+		base:id "val_divisor_PA3.ME3"
+		formulas:valorMetrica PA1.ME2:quantidadeTitulados
+	]
+
+	// fórmula raiz
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA3.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicand
+		formulas:possuiArgumento argMultiplier
+		formulas:formulaDe taxaMestresDoutorandos
+	]
+
+	instance argMultiplicand : formulas:argumento [
+		base:id "arg_multiplicand_PA3.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valMultiplicand
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplicand : formulas:tipovalorFormula [
+		base:id "val_multiplicand_PA3.ME3"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance argMultiplier : formulas:argumento [
+		base:id "arg_multiplier_PA3.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valMultiplier
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplier : formulas:tipovalorLiteral [
+		base:id "val_multiplier_PA3.ME3"
+		formulas:valorLiteral 100
+	]
+
+}

@@ -1,0 +1,109 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA4.ME3#> as PA4.ME3 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA4.ME3).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratQuadrienio : formulas:estratificacao [
+		base:id "estrat_quadrienio_PA4.ME3"
+		base:nome "Quadriênio de Avaliação"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA4.ME3"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	// MÉTRICA
+	instance taxaPpgEmergentes : metricas:metrica [
+		base:id "PA4.ME3_PBPG"
+		base:nome "Taxa PPG Emergentes"
+		base:descricao "Número de Programas de Pós-graduação (PPG) apoiados pelo PBPG que elevaram o conceito CAPES no quadriênio sobre o total de PPG apoiados pelo PBPG no mesmo quadriênio, desagregado pela grande área de conhecimento FACEPE."
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratQuadrienio
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+	]
+
+	// fórmula aninhada
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA4.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argPpgEmergentesApoiadosPbpg
+		formulas:possuiArgumento argPpgApoiadosPbpg
+	]
+
+	instance argPpgEmergentesApoiadosPbpg : formulas:argumento [
+		base:id "arg_ppg_emergentes_apoiados_pbpg_PA4.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "PPG_Emergentes_Apoiados_PBPG"
+		formulas:possuiValor valPpgEmergentesApoiadosPbpg
+		formulas:argumentoDe formulaDivisao
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valPpgEmergentesApoiadosPbpg : formulas:tipovalorMetrica [
+		base:id "val_ppg_emergentes_apoiados_pbpg_PA4.ME3"
+		formulas:valorMetrica "agilfap.ppg.emergentes.apoiados.pbpg"
+	]
+
+	instance argPpgApoiadosPbpg : formulas:argumento [
+		base:id "arg_ppg_apoiados_pbpg_PA4.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "PPG_Apoiados_PBPG"
+		formulas:possuiValor valPpgApoiadosPbpg
+		formulas:argumentoDe formulaDivisao
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valPpgApoiadosPbpg : formulas:tipovalorMetrica [
+		base:id "val_ppg_apoiados_pbpg_PA4.ME3"
+		formulas:valorMetrica "agilfap.ppg.apoiados.pbpg"
+	]
+
+	// fórmula raiz
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA4.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicand
+		formulas:possuiArgumento argMultiplier
+		formulas:formulaDe taxaPpgEmergentes
+	]
+
+	instance argMultiplicand : formulas:argumento [
+		base:id "arg_multiplicand_PA4.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valMultiplicand
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplicand : formulas:tipovalorFormula [
+		base:id "val_multiplicand_PA4.ME3"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance argMultiplier : formulas:argumento [
+		base:id "arg_multiplier_PA4.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valMultiplier
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplier : formulas:tipovalorLiteral [
+		base:id "val_multiplier_PA4.ME3"
+		formulas:valorLiteral 100
+	]
+
+}

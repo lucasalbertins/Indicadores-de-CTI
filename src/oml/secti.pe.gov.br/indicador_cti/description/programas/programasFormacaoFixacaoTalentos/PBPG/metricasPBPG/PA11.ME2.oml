@@ -1,0 +1,121 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA11.ME2#> as PA11.ME2 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA11.ME2).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA11.ME1#> as PA11.ME1
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA11.ME2"
+		base:nome "Ano"
+	]
+
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA11.ME2"
+		base:nome "Modalidade"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA11.ME2"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde_PA11.ME2"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA
+	instance taxaBolsistasEmStartups : metricas:metrica [
+		base:id "PA11.ME2_PBPG"
+		base:nome "Taxa Bolsistas em Startups"
+		base:descricao "Número de bolsistas PBPG diretamente envolvidos em atividades de empresas nascentes (startups) de base científica e tecnológica do estado de Pernambuco, em até 5 anos após a titulação, sobre o número de bolsistas PPG respondentes do survey, desagregado por ano de titulação, modalidade (mestrado e doutorado), grande área de conhecimento FACEPE e Região de Desenvolvimento do Estado (RDE)."
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+	]
+
+	// fórmula aninhada
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA11.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argBolsistasPbpgEmStartups
+		formulas:possuiArgumento argBolsistasPbpgRespondentesSurvey
+	]
+
+	instance argBolsistasPbpgEmStartups : formulas:argumento [
+		base:id "arg_bolsistas_pbpg_em_startups_PA11.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Bolsistas PBPG em Startups"
+		formulas:possuiValor valBolsistasPbpgEmStartups
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance valBolsistasPbpgEmStartups : formulas:tipovalorMetrica [
+		base:id "val_bolsistas_pbpg_em_startups_PA11.ME2"
+		formulas:valorMetrica PA11.ME1:quantidadeBolsistasEmStartups
+	]
+
+	instance argBolsistasPbpgRespondentesSurvey : formulas:argumento [
+		base:id "arg_bolsistas_pbpg_respondentes_survey_PA11.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "Bolsistas PBPG Respondentes Survey"
+		formulas:possuiValor valBolsistasPbpgRespondentesSurvey
+		formulas:argumentoDe formulaDivisao
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valBolsistasPbpgRespondentesSurvey : formulas:tipovalorMetrica [
+		base:id "val_bolsistas_pbpg_respondentes_survey_PA11.ME2"
+		formulas:valorMetrica "primario.bolsistas.pbpg.respondentes.survey"
+	]
+
+	// fórmula raiz
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA11.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicand
+		formulas:possuiArgumento argMultiplier
+		formulas:formulaDe taxaBolsistasEmStartups
+	]
+
+	instance argMultiplicand : formulas:argumento [
+		base:id "arg_multiplicand_PA11.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valMultiplicand
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplicand : formulas:tipovalorFormula [
+		base:id "val_multiplicand_PA11.ME2"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance argMultiplier : formulas:argumento [
+		base:id "arg_multiplier_PA11.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valMultiplier
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplier : formulas:tipovalorLiteral [
+		base:id "val_multiplier_PA11.ME2"
+		formulas:valorLiteral 100
+	]
+
+}

@@ -1,0 +1,129 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME1#> as PA3.ME1 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA3.ME1).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#> as PA1.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA3.ME1"
+		base:nome "Ano"
+	]
+
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA3.ME1"
+		base:nome "Modalidade"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA3.ME1"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	instance estratSegmento : formulas:estratificacao [
+		base:id "estrat_segmento_PA3.ME1"
+		base:nome "Segmento"
+	]
+
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde_PA3.ME1"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA
+	instance taxaFixacao : metricas:metrica [
+		base:id "PA3.ME1_PBPG"
+		base:nome "Taxa Fixação"
+		base:descricao "Número de bolsistas PBPG titulados com emprego formal no estado de Pernambuco após dois anos da titulação sobre o total de bolsistas PBPG titulados, desagregado por ano, modalidade (mestrado e doutorado), grande área do conhecimento FACEPE, segmento (governo, empresas, ICT) e por Região de Desenvolvimento do Estado (RDE)."
+		metricas:finalidade "Equilibrar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratSegmento
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2, fontesSistemasBasesGovernamentais:FI2.6, fontesBasesAcademicasCientificasEducacionais:FI3.1
+		metricas:valorAtual 0.65
+		metricas:valorMeta 0.70
+	]
+
+	// fórmula aninhada
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA3.ME1"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argBolsistasTituladosEmpregados
+		formulas:possuiArgumento argDivisor
+	]
+
+	instance argBolsistasTituladosEmpregados : formulas:argumento [
+		base:id "arg_bolsistas_titulados_empregados_PA3.ME1"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Bolsistas titulados empregados"
+		formulas:possuiValor valBolsistasTituladosEmpregados
+		formulas:argumentoDe formulaDivisao
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valBolsistasTituladosEmpregados : formulas:tipovalorMetrica [
+		base:id "val_bolsistas_titulados_empregados_PA3.ME1"
+		formulas:valorMetrica "agilfap.bolsistas.titulados.empregados"
+	]
+
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA3.ME1"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valDivisor
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance valDivisor : formulas:tipovalorMetrica [
+		base:id "val_divisor_PA3.ME1"
+		formulas:valorMetrica PA1.ME2:quantidadeTitulados
+	]
+
+	// fórmula raiz
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA3.ME1"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicand
+		formulas:possuiArgumento argMultiplier
+		formulas:formulaDe taxaFixacao
+	]
+
+	instance argMultiplicand : formulas:argumento [
+		base:id "arg_multiplicand_PA3.ME1"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valMultiplicand
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplicand : formulas:tipovalorFormula [
+		base:id "val_multiplicand_PA3.ME1"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance argMultiplier : formulas:argumento [
+		base:id "arg_multiplier_PA3.ME1"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valMultiplier
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplier : formulas:tipovalorLiteral [
+		base:id "val_multiplier_PA3.ME1"
+		formulas:valorLiteral 100
+	]
+
+}
