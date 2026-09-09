@@ -1,0 +1,22 @@
+# Q14 - Pessoas com mais de uma bolsa PBPG
+# O vocabulario admite uma unica concessao por individuo (atributos do vinculo
+# sao functional), entao o gerador emite um individuo por BOLSA, sufixado por
+# edital/ano. O mesmo CPF aparece assim como varios bolsistas distintos.
+# Consequencia: contar ?b a bolsista:bolsista conta BOLSAS, nao PESSOAS.
+
+PREFIX base: <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?cpf
+       (SAMPLE(?nome) AS ?pessoa)
+       (COUNT(DISTINCT ?b) AS ?bolsas)
+       (GROUP_CONCAT(DISTINCT ?modalidade; separator=" + ") AS ?modalidades)
+WHERE {
+  ?b a bols:bolsista ;
+     base:nome          ?nome ;
+     bols:nr_cpf        ?cpf ;
+     bols:nm_modalidade ?modalidade .
+}
+GROUP BY ?cpf
+HAVING ( COUNT(DISTINCT ?b) > 1 )
+ORDER BY DESC(?bolsas) ?cpf

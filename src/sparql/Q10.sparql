@@ -1,0 +1,19 @@
+# Q10 - Taxa de defesa registrada, por modalidade
+# ATENCAO: NAO e a metrica PA1.ME1. O Tabelao Financeiro nao traz titulacao;
+# o denominador sao todas as bolsas, inclusive vigentes. Serve como piso
+# observavel do indicador, nao como taxa de titulacao.
+
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?modalidade
+       (COUNT(DISTINCT ?b) AS ?bolsas)
+       (SUM(IF(BOUND(?sem), 1, 0)) AS ?comDefesa)
+       (xsd:decimal(SUM(IF(BOUND(?sem), 1, 0))) / COUNT(DISTINCT ?b) AS ?taxaDefesa)
+WHERE {
+  ?b a bols:bolsista ;
+     bols:nm_modalidade ?modalidade .
+  OPTIONAL { ?b bols:id_semestre_defesa ?sem }
+}
+GROUP BY ?modalidade
+ORDER BY ?modalidade
