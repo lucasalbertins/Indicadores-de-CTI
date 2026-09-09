@@ -1,5 +1,5 @@
 # ============================================================================
-# Q25 - Vocabulario PPG / Area de Conhecimento / Publicacoes por Ano
+# Q25 - Vocabulario PPG, coordenador, area de conhecimento e series por ano
 # ============================================================================
 # Desenha o modelo direto do endpoint: para cada conceito novo, o que ele
 # aponta, com que cardinalidade e com que caracteristica de relacao. E a
@@ -22,14 +22,18 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ppg:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#>
 PREFIX area: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/areaConhecimento#>
 PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+PREFIX coord: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/coordenador#>
 
 SELECT ?origem ?ligacao ?destino ?cardinalidade ?caracteristica
 WHERE {
-  VALUES ?classe { bols:bolsista ppg:ppg area:areaConhecimento area:publicacoesAno }
+  VALUES ?classe { bols:bolsista coord:coordenador ppg:ppg ppg:conceitoPPG
+                   area:areaConhecimento area:publicacoesAno }
 
   ?prop rdfs:domain ?classe ;
         rdfs:range  ?alvo .
-  FILTER( ?prop IN ( bols:matriculadoEm, ppg:classificadoEm,
+  FILTER( ?prop IN ( bols:matriculadoEm, coord:coordena,
+                     ppg:classificadoEm, ppg:possuiConceito,
+                     ppg:an_avaliacao, ppg:vl_conceito,
                      area:possuiPublicacoesAno, area:an_base, area:qt_publicacoes ) )
 
   # cardinalidade declarada no conceito de origem, quando houver

@@ -1,0 +1,42 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/coordenador#> as coordenador {
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#> as bolsista
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#> as ppg
+
+	/*
+	 * COORDENADOR
+	 *
+	 * Segundo papel de pessoa a ser modelado, depois de bolsista. Reunião de
+	 * 02/09/2026: "tanto o coordenador quanto o bolsista estão vinculados ao
+	 * programa de pós-graduação", e a informação de coordenador já existe no
+	 * planilhão do AgilFAP.
+	 *
+	 * Especializa bolsista:pessoa, como o comentário daquele aspect previa:
+	 * herda base:nome, nr_cpf, an_nascimento, nm_pais_nacionalidade,
+	 * nm_cidade_endereco e ds_url_cv_lattes sem duplicar nada.
+	 *
+	 * POR QUE ESTE ARQUIVO IMPORTA bolsista#: só para alcançar o aspect
+	 * pessoa, que mora lá. O lugar certo dele seria um pessoa.oml próprio, mas
+	 * mover o aspect muda a IRI de todos os atributos de pessoa
+	 * (bolsista#nr_cpf viraria pessoa#nr_cpf) e obrigaria a regerar as
+	 * descrições e reescrever as consultas Q8-Q25. Fica para uma migração
+	 * própria; a herança funciona igual das duas formas.
+	 *
+	 * Os papéis autor e empregado, também previstos no diagrama, não entram
+	 * aqui: não têm atributo, relação nem dado próprio hoje. Quando tiverem,
+	 * especializam o mesmo aspect do mesmo jeito.
+	 */
+	concept coordenador < bolsista:pessoa [
+		restricts coordena to exactly 1
+	]
+
+	relation coordena [
+		from coordenador
+		to ppg:ppg
+		reverse coordenadoPor
+		functional
+		asymmetric
+		irreflexive
+	]
+}

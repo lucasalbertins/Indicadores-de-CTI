@@ -135,7 +135,12 @@ task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: ow
     iris = [
         "$rootIri/classes".toString(),
         "$rootIri/properties".toString(),
-        "$rootIri/individuals".toString()
+        "$rootIri/individuals".toString(),
+        // Vocabulário que nenhuma descrição usa ainda -- coordenador, hoje --
+        // não é alcançado pelo fecho de imports das entailments e chegaria ao
+        // endpoint sem rdfs:domain, rdfs:range nem cardinalidade. Carregar o
+        // bundle de vocabulário garante o modelo inteiro no Fuseki.
+        "http://secti.pe.gov.br/indicador_cti/vocabulary/bundle"
     ]
 }
 
