@@ -50,20 +50,19 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 */
 
 	/*
-	 * PESSOA -- entidade estável, uma por CPF.
+	 * PESSOA -- entidade estável, uma por CPF. O nr_cpf é functional e
+	 * obrigatório, que é o que importa: identifica a pessoa. Não há declaração
+	 * de "key" porque esta versão do OML só aceita key em aspect, e criar um
+	 * aspect só para isso acrescentaria uma classe sem significado ao modelo.
 	 */
-	aspect identificavelPorCPF [
-		key nr_cpf
+	concept pessoa < base:EntidadeNomeavel [
+		restricts nr_cpf to exactly 1
 	]
 
 	scalar property nr_cpf [
-		domain identificavelPorCPF
+		domain pessoa
 		range xsd:string
 		functional
-	]
-
-	concept pessoa < base:EntidadeNomeavel, identificavelPorCPF [
-		restricts nr_cpf to exactly 1
 	]
 
 	scalar property an_nascimento [
