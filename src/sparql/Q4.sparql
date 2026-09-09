@@ -1,4 +1,4 @@
-//Contar o número de atividades-chave por programa
+#Contar o número de atividades-chave por programa
 
 PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
 PREFIX canvas: <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>

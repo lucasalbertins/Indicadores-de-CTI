@@ -6,3 +6,12 @@ build/
 *.zip
 *.pid
 
+.venv/
+generated/
+__pycache__/
+
+# amostras geradas com dado pessoal real — não publicar
+src/oml/**/amostra-PBPG.oml
+src/oml/**/bolsistas-PBPG*.oml
+
+*.hprof
