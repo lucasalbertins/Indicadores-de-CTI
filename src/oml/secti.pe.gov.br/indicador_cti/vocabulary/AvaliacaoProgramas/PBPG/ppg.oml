@@ -48,33 +48,41 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * pelo PBPG por avaliação quadrienal") e PA4.ME2 ("PPG com conceitos de
 	 * excelência da CAPES (6 e 7)").
 	 *
-	 * vl_conceito é xsd:int, e não uma enumeração de "1".."7", justamente
-	 * porque PA4.ME2 precisa comparar (>= 6). A faixa válida é 1 a 7.
+	 * NOMES ALINHADOS AO DIAGRAMA DE CLASSES: an_base e cd_conceito_ppg, e a
+	 * relação avaliadoCom (no diagrama, avaliado_com). Atributo segue o
+	 * snake_case do diagrama; relação segue o camelCase que o resto do
+	 * vocabulário usa (submetidoA, vinculadoA, desenvolve).
+	 *
+	 * cd_conceito_ppg é xsd:string porque o diagrama diz char, e "cd_" é o
+	 * prefixo de código na casa (cd_ppg, cd_ict_capes). ATENÇÃO: PA4.ME2 fala
+	 * em "conceitos de excelência da CAPES (6 e 7)", então a comparação vai
+	 * precisar de xsd:integer(?cd_conceito_ppg) na consulta. Se a CAPES nunca
+	 * mais usar letra, vale reabrir e trocar para xsd:int.
 	 *
 	 * Sem cardinalidade mínima em possuiConceito: PPG recém-criado ainda não
 	 * passou por avaliação quadrienal e não tem conceito nenhum.
 	 */
 	concept conceitoPPG < base:EntidadeIdentificavel [
-		restricts an_avaliacao to exactly 1
-		restricts vl_conceito  to exactly 1
+		restricts an_base          to exactly 1
+		restricts cd_conceito_ppg  to exactly 1
 	]
 
-	scalar property an_avaliacao [
+	scalar property an_base [
 		domain conceitoPPG
 		range xsd:int
 		functional
 	]
 
-	scalar property vl_conceito [
+	scalar property cd_conceito_ppg [
 		domain conceitoPPG
-		range xsd:int
+		range xsd:string
 		functional
 	]
 
-	relation possuiConceito [
+	relation avaliadoCom [
 		from ppg
 		to conceitoPPG
-		reverse conceitoDe
+		reverse avaliacaoDe
 		inverse functional
 		asymmetric
 		irreflexive

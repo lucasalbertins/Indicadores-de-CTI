@@ -1,0 +1,267 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/alternativas/pessoa-papeis#> as pessoa-papeis {
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#> as projeto
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#> as ppg
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	/*
+	 * ====================================================================
+	 * PROPOSTA -- NÃO ESTÁ NO BUNDLE, NÃO AFETA NADA EM PRODUÇÃO
+	 * ====================================================================
+	 *
+	 * Modelagem alternativa em que PESSOA é um conceito instanciável, e não
+	 * o aspect de hoje. Compila junto com o resto (o omlToOwl percorre toda a
+	 * árvore src/oml), mas está fora de vocabulary/bundle.oml de propósito:
+	 * serve para exibir e discutir, sem entrar no grafo.
+	 *
+	 * Namespace próprio, então convive com o vocabulário atual sem colidir.
+	 *
+	 * MOTIVAÇÃO
+	 *
+	 * Hoje bolsista:pessoa é um aspect e os atributos do vínculo de bolsa
+	 * (dt_inicio_bolsa, vl_recebido, nm_modalidade...) moram no próprio
+	 * bolsista e são functional. Um indivíduo comporta uma única bolsa, então
+	 * o gerador emite um indivíduo por BOLSA, sufixado por edital e ano: o
+	 * mesmo CPF vira vários bolsistas distintos. Consequência conhecida --
+	 * contar bolsista:bolsista conta BOLSAS, não PESSOAS (9.237 bolsas para
+	 * 8.435 pessoas), e as métricas PA3.ME2 e PA3.ME3 (mestre titulado que,
+	 * dois anos depois, está em doutorado) não têm como ser calculadas.
+	 *
+	 * A PROPOSTA
+	 *
+	 * A pessoa passa a ser a entidade estável, identificada pelo CPF, e cada
+	 * vínculo vira um PAPEL ligado a ela. Uma pessoa exerce vários papéis, e
+	 * o mesmo papel pode se repetir -- duas bolsas são dois indivíduos de
+	 * bolsista, ambos apontando para a mesma pessoa.
+	 *
+	 * DIFERENÇA PARA O DIAGRAMA DE CLASSES
+	 *
+	 * No diagrama, Coordenador/Bolsista/Autor/Empregado são subclasses de
+	 * Pessoa (é_uma). Aqui são papéis ligados por relação. A herança resolve
+	 * "uma pessoa com vários papéis" -- basta o indivíduo ter vários tipos --
+	 * mas NÃO resolve "a mesma pessoa com duas bolsas", porque os atributos
+	 * do vínculo continuam functional no indivíduo-pessoa. Só a separação
+	 * pessoa/papel resolve os dois casos de uma vez. Ver o comparativo em
+	 * docs/alternativa-pessoa-como-conceito.md.
+	 */
+
+	/*
+	 * PESSOA -- entidade estável, uma por CPF.
+	 */
+	aspect identificavelPorCPF [
+		key nr_cpf
+	]
+
+	scalar property nr_cpf [
+		domain identificavelPorCPF
+		range xsd:string
+		functional
+	]
+
+	concept pessoa < base:EntidadeNomeavel, identificavelPorCPF [
+		restricts nr_cpf to exactly 1
+	]
+
+	scalar property an_nascimento [
+		domain pessoa
+		range xsd:int
+		functional
+	]
+
+	scalar property nm_pais_nacionalidade [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_cidade_endereco [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	scalar property ds_url_cv_lattes [
+		domain pessoa
+		range xsd:string
+		functional
+	]
+
+	/*
+	 * PAPEL -- o que a pessoa é em determinado vínculo. Aspect: não se
+	 * instancia papel genérico, só bolsista, coordenador, autor, empregado.
+	 * Todo papel pertence a exatamente uma pessoa.
+	 */
+	aspect papel < base:EntidadeIdentificavel [
+		restricts exercidoPor to exactly 1
+	]
+
+	relation exerce [
+		from pessoa
+		to papel
+		reverse exercidoPor
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * BOLSISTA -- um indivíduo por CONCESSÃO. Duas bolsas da mesma pessoa são
+	 * dois bolsistas apontando para a mesma pessoa, e é isso que destrava
+	 * PA3.ME2 e PA3.ME3.
+	 */
+	scalar modalidade [
+		oneOf "MESTRADO", "DOUTORADO"
+	]
+
+	scalar status [
+		oneOf "ADIMPLENTE", "INADIMPLENTE"
+	]
+
+	concept bolsista < papel
+
+	scalar property id_bolsa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+
+	scalar property dt_inicio_bolsa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+
+	scalar property dt_fim_bolsa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+
+	scalar property vl_recebido [
+		domain bolsista
+		range xsd:double
+		functional
+	]
+
+	scalar property nm_modalidade [
+		domain bolsista
+		range modalidade
+		functional
+	]
+
+	scalar property id_semestre_defesa [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+
+	scalar property id_semestre_titulacao [
+		domain bolsista
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_status [
+		domain bolsista
+		range status
+		functional
+	]
+
+	relation desenvolve [
+		from bolsista
+		to projeto:projeto
+		reverse desenvolvidoPor
+		asymmetric
+		irreflexive
+	]
+
+	relation matriculadoEm [
+		from bolsista
+		to ppg:ppg
+		reverse possuiBolsista
+		functional
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * COORDENADOR -- atributos e relação conforme o diagrama de classes.
+	 */
+	concept coordenador < papel
+
+	scalar property cd_cat_bolsa_produtividade [
+		domain coordenador
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_maior_titulacao [
+		domain coordenador
+		range xsd:string
+		functional
+	]
+
+	scalar property ano_maior_titulacao [
+		domain coordenador
+		range xsd:int
+		functional
+	]
+
+	relation membroDe [
+		from coordenador
+		to ppg:ppg
+		reverse possuiMembro
+		functional
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * AUTOR e EMPREGADO -- os outros dois papéis do diagrama. Entram aqui
+	 * porque a proposta só se sustenta se comportar os quatro; hoje não têm
+	 * dado carregado.
+	 */
+	concept autor < papel
+
+	scalar property nm_orc_id [
+		domain autor
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_scopus_id [
+		domain autor
+		range xsd:string
+		functional
+	]
+
+	scalar property ds_ur_google_scholar [
+		domain autor
+		range xsd:string
+		functional
+	]
+
+	concept empregado < papel
+
+	scalar property an_admissao [
+		domain empregado
+		range xsd:int
+		functional
+	]
+
+	scalar property an_demissao [
+		domain empregado
+		range xsd:int
+		functional
+	]
+
+	scalar property vl_remuneracao [
+		domain empregado
+		range xsd:double
+		functional
+	]
+}

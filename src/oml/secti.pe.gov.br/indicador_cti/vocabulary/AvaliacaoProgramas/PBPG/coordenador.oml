@@ -4,6 +4,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#> as ppg
 
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
 	/*
 	 * COORDENADOR
 	 *
@@ -28,13 +30,36 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * especializam o mesmo aspect do mesmo jeito.
 	 */
 	concept coordenador < bolsista:pessoa [
-		restricts coordena to exactly 1
+		restricts membroDe to exactly 1
 	]
 
-	relation coordena [
+	scalar property cd_cat_bolsa_produtividade [
+		domain coordenador
+		range xsd:string
+		functional
+	]
+
+	scalar property nm_maior_titulacao [
+		domain coordenador
+		range xsd:string
+		functional
+	]
+
+	scalar property ano_maior_titulacao [
+		domain coordenador
+		range xsd:int
+		functional
+	]
+
+	/*
+	 * membroDe, e não "coordena": no diagrama de classes, coordena é a relação
+	 * Coordenador -> Projeto, e o vínculo com o programa chama-se membro_de.
+	 * O nome coordena fica reservado para quando a relação com projeto entrar.
+	 */
+	relation membroDe [
 		from coordenador
 		to ppg:ppg
-		reverse coordenadoPor
+		reverse possuiMembro
 		functional
 		asymmetric
 		irreflexive

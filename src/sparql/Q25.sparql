@@ -31,9 +31,9 @@ WHERE {
 
   ?prop rdfs:domain ?classe ;
         rdfs:range  ?alvo .
-  FILTER( ?prop IN ( bols:matriculadoEm, coord:coordena,
-                     ppg:classificadoEm, ppg:possuiConceito,
-                     ppg:an_avaliacao, ppg:vl_conceito,
+  FILTER( ?prop IN ( bols:matriculadoEm, coord:membroDe,
+                     ppg:classificadoEm, ppg:avaliadoCom,
+                     ppg:an_base, ppg:cd_conceito_ppg,
                      area:possuiPublicacoesAno, area:an_base, area:qt_publicacoes ) )
 
   # cardinalidade declarada no conceito de origem, quando houver
