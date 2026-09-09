@@ -135,7 +135,11 @@ task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: ow
     iris = [
         "$rootIri/classes".toString(),
         "$rootIri/properties".toString(),
-        "$rootIri/individuals".toString()
+        "$rootIri/individuals".toString(),
+        // Vocabulário completo: sem isto o Fuseki recebe só as entailments
+        // (subClassOf/inverseOf) e o modelo aparece sem domínio, imagem nem
+        // cardinalidade. Necessário para navegar o vocabulário no endpoint.
+        "http://secti.pe.gov.br/indicador_cti/vocabulary/bundle"
     ]
 }
 

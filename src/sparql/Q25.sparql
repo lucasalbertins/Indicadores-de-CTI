@@ -1,0 +1,59 @@
+# ============================================================================
+# Q25 - Vocabulario PPG / Area de Conhecimento / Publicacoes por Ano
+# ============================================================================
+# Desenha o modelo direto do endpoint: para cada conceito novo, o que ele
+# aponta, com que cardinalidade e com que caracteristica de relacao. E a
+# consulta para colar na UI do Fuseki (http://localhost:3030) quando o assunto
+# for mostrar o vocabulario a alguem, sem depender de Rosetta nem de imagem
+# exportada -- o que aparece aqui e o que esta de fato carregado.
+#
+# PRE-REQUISITO: o owlLoad precisa subir tambem o bundle de VOCABULARIO, e nao
+# so as entailments (classes/properties/individuals). Sem isso o endpoint tem
+# os nomes das classes mas nao tem rdfs:domain, rdfs:range nem as restricoes
+# de cardinalidade, e esta consulta volta vazia. Ver a lista `iris` da tarefa
+# owlLoad no build.gradle.
+#
+# A coluna ?cardinalidade le a owl:Restriction declarada no conceito de
+# origem; ?caracteristica mostra functional / inverse functional, que e onde
+# o "no maximo um" fica gravado quando nao ha restricao explicita.
+# ============================================================================
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ppg:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/ppg#>
+PREFIX area: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/areaConhecimento#>
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?origem ?ligacao ?destino ?cardinalidade ?caracteristica
+WHERE {
+  VALUES ?classe { bols:bolsista ppg:ppg area:areaConhecimento area:publicacoesAno }
+
+  ?prop rdfs:domain ?classe ;
+        rdfs:range  ?alvo .
+  FILTER( ?prop IN ( bols:matriculadoEm, ppg:classificadoEm,
+                     area:possuiPublicacoesAno, area:an_base, area:qt_publicacoes ) )
+
+  # cardinalidade declarada no conceito de origem, quando houver
+  OPTIONAL {
+    ?classe rdfs:subClassOf ?r .
+    ?r owl:onProperty ?prop .
+    OPTIONAL { ?r owl:cardinality    ?exata }
+    OPTIONAL { ?r owl:minCardinality ?minimo }
+    OPTIONAL { ?r owl:maxCardinality ?maximo }
+  }
+
+  BIND( IF(BOUND(?exata),  CONCAT("exatamente ", STR(?exata)),
+        IF(BOUND(?minimo), CONCAT("no minimo ",  STR(?minimo)),
+        IF(BOUND(?maximo), CONCAT("no maximo ",  STR(?maximo)),
+                           "sem restricao explicita"))) AS ?cardinalidade )
+
+  BIND( CONCAT(
+          IF(EXISTS { ?prop a owl:FunctionalProperty },        "functional ", ""),
+          IF(EXISTS { ?prop a owl:InverseFunctionalProperty }, "inverse-functional ", "")
+        ) AS ?caracteristica )
+
+  BIND( REPLACE(STR(?classe), "^.*[#/]", "") AS ?origem )
+  BIND( REPLACE(STR(?prop),   "^.*[#/]", "") AS ?ligacao )
+  BIND( REPLACE(STR(?alvo),   "^.*[#/]", "") AS ?destino )
+}
+ORDER BY ?origem ?ligacao
