@@ -7,11 +7,10 @@
 # for mostrar o vocabulario a alguem, sem depender de Rosetta nem de imagem
 # exportada -- o que aparece aqui e o que esta de fato carregado.
 #
-# PRE-REQUISITO: o owlLoad precisa subir tambem o bundle de VOCABULARIO, e nao
-# so as entailments (classes/properties/individuals). Sem isso o endpoint tem
-# os nomes das classes mas nao tem rdfs:domain, rdfs:range nem as restricoes
-# de cardinalidade, e esta consulta volta vazia. Ver a lista `iris` da tarefa
-# owlLoad no build.gradle.
+# O endpoint recebe as tres saidas do reasoner (classes/properties/individuals),
+# mas o owlLoad segue os owl:imports delas e acaba carregando os 89 arquivos OWL
+# do fecho -- vocabularios inclusive. Por isso rdfs:domain, rdfs:range e as
+# restricoes de cardinalidade estao disponiveis sem configuracao extra.
 #
 # A coluna ?cardinalidade le a owl:Restriction declarada no conceito de
 # origem; ?caracteristica mostra functional / inverse functional, que e onde
