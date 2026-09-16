@@ -1,0 +1,124 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAnoScopus#> as publicacoesAnoScopus {
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	/*
+	 * PUBLICAÇÕES POR ANO E QUARTIL -- BASE SCOPUS
+	 *
+	 * A visão Scopus da produção, separada da visão geral que mora em
+	 * publicacoesAno.oml. São duas séries distintas, e não uma só, porque o
+	 * plano de avaliação as trata como métricas diferentes, sobre fontes
+	 * diferentes -- reunião de 09/09/2026: "a gente tem claramente métricas em
+	 * que descreve que é Scopus, e outras métricas que é geral. As que são
+	 * Scopus, basicamente, só é o repositório Scopus, e as que são geral é o
+	 * Lattes. São diferentes as métricas".
+	 *
+	 * Esta é a visão que o Scopus/SciVal entrega pronta, sem pré-processamento
+	 * -- "uma coisa é essa do Scopus, que já vem o dado bruto, a gente não
+	 * precisa fazer nenhum processamento sobre os dados". Por isso ela pendura
+	 * direto na área de conhecimento, e não no PPG: o recorte já vem agregado
+	 * por área, e é nesse nível que a desagregação das métricas acontece. A
+	 * visão Lattes, que exige varrer publicação a publicação e desduplicar
+	 * coautoria, ficou explicitamente para depois ("o importante nesse
+	 * primeiro momento é a gente focar nos Scopus... depois a gente faz uma
+	 * extensão para o Lattes, que de fato é mais desafiador").
+	 *
+	 * GRÃO: um registro por (área de conhecimento, ano-base, quartil). Quem
+	 * liga a área a estes registros é areaConhecimento:possuiPublicacoesAnoScopus.
+	 *
+	 * DOCENTES E BOLSISTAS EM MEDIDAS SEPARADAS, e não um registro por
+	 * público: as duas populações têm definições próprias no plano de
+	 * avaliação -- docente permanente do PPG (via Sucupira) e bolsista PBPG em
+	 * até 02 anos após a titulação -- e cada métrica cita uma só delas. Manter
+	 * as quatro medidas no mesmo registro reproduz a caixa do diagrama de
+	 * 09/09/2026 ("a quantidade de publicações só dos Scopus dos docentes, dos
+	 * bolsistas e citações, tanto de docente quanto de bolsista") e evita um
+	 * FILTER por público em toda consulta.
+	 *
+	 * Atende, do lado dos docentes, PA5.ME3 (quantidade de publicações),
+	 * PA5.ME4 (taxa por quartil), PA5.ME6 (citações Scopus), PA5.ME7 (média de
+	 * citações por publicação) e PA5.ME8 (taxa de citações no quartil
+	 * superior); e as métricas espelhadas dos bolsistas em PA6.
+	 */
+	concept publicacoesAnoScopus < base:EntidadeIdentificavel [
+		restricts an_base    to exactly 1
+		restricts nm_quartil to exactly 1
+	]
+
+	/*
+	 * QUARTIL DO PERIÓDICO
+	 *
+	 * A desagregação que faltava -- reunião de 09/09/2026: "o quartil, que eu
+	 * acho que o George não considerou. O quartil, ele é muito importante pra
+	 * gente pela questão da publicação qualificada na área, aquela quantidade
+	 * de publicações que é em revistas que são consideradas as top 25, top 50".
+	 *
+	 * O quartil é do PERIÓDICO NA ÁREA, não da publicação: o mesmo periódico
+	 * pode ser Q1 em computação e Q3 em administração ("uma revista que é A1,
+	 * top 25% na computação, pode ser uma top 75% na administração"). É por
+	 * isso que ele só faz sentido dentro de um registro que já fixou a área.
+	 *
+	 * NAO_CLASSIFICADO não é enfeite. A soma dos quatro quartis deveria dar o
+	 * total do ano ("se você quiser saber todas as publicações de um ano, você
+	 * tem que somar os quatro quartis"), e isso só se sustenta se a publicação
+	 * sem quartil tiver onde ficar. Na coleta Scopus de 15/09/2026, 6 das 199
+	 * publicações (3,0%) não tinham CiteScore percentile para o ISSN --
+	 * periódico novo, ISSN ausente no documento ou veículo que não é
+	 * periódico. Jogá-las fora faria o total por área não fechar com a fonte.
+	 *
+	 * Na extração o campo se chama nr_quartil; aqui é nm_quartil porque a casa
+	 * usa nm_ para propriedade cujo range é scalar enumerado (nm_modalidade,
+	 * nm_status).
+	 */
+	scalar quartil [
+		oneOf "Q1", "Q2", "Q3", "Q4", "NAO_CLASSIFICADO"
+	]
+
+	scalar property an_base [
+		domain publicacoesAnoScopus
+		range xsd:int
+		functional
+	]
+
+	scalar property nm_quartil [
+		domain publicacoesAnoScopus
+		range quartil
+		functional
+	]
+
+	/*
+	 * MEDIDAS SEM CARDINALIDADE MÍNIMA, só functional -- no máximo uma, não
+	 * necessariamente uma. A coleta Scopus hoje cobre os 42 bolsistas com
+	 * Scopus ID resolvido; os docentes permanentes dependem da relação de
+	 * docentes do Sucupira, que ainda não foi cruzada. Exigir "exatamente 1"
+	 * nas quatro medidas reprovaria no owlReason todo registro carregado só
+	 * com o lado dos bolsistas -- é a mesma armadilha já documentada em
+	 * bolsista:matriculadoEm. Ligue o "exatamente 1" quando as duas
+	 * populações estiverem sendo carregadas juntas.
+	 */
+	scalar property qt_publicacoes_docentes [
+		domain publicacoesAnoScopus
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_publicacoes_bolsistas [
+		domain publicacoesAnoScopus
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_citacoes_docentes [
+		domain publicacoesAnoScopus
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_citacoes_bolsistas [
+		domain publicacoesAnoScopus
+		range xsd:int
+		functional
+	]
+}

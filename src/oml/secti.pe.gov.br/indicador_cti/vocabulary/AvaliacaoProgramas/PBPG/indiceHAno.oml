@@ -1,0 +1,86 @@
+vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/indiceHAno#> as indiceHAno {
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	/*
+	 * ÍNDICE h E h5 MÉDIOS POR ANO -- BASE SCOPUS
+	 *
+	 * Conceito à parte de publicacoesAnoScopus, e não mais um punhado de
+	 * atributos lá dentro. O motivo é o grão -- reunião de 09/09/2026: "não
+	 * tem como ficar o índice h por quartil, não faz sentido, porque o índice
+	 * h não é da publicação; nesse caso o índice h é do docente e do bolsista,
+	 * considerando TODAS as publicações". Pendurar o h num registro que já foi
+	 * quebrado em quatro quartis obrigaria a repetir o mesmo valor quatro
+	 * vezes, ou a inventar um quartil de mentira para guardá-lo. Foi a própria
+	 * saída apontada na reunião: "a gente poderia quebrar em mais de um
+	 * conceito aí".
+	 *
+	 * GRÃO: um registro por (área de conhecimento, ano-base). É o que PA5.ME9
+	 * e PA5.ME10 pedem -- "índice h médio / índice h5 médio na base científica
+	 * Scopus dos docentes permanentes dos PPG apoiados pelo PBPG desagregado
+	 * por ano e grande área do conhecimento FACEPE" -- e as métricas
+	 * espelhadas dos bolsistas.
+	 *
+	 * MÉDIA JÁ AGREGADA, e não h por pessoa. O valor que entra aqui é a média
+	 * do grupo naquela área, que é o que a métrica pede. A expectativa
+	 * discutida na reunião é que o SciVal devolva isso pronto para um conjunto
+	 * de pesquisadores, pelo conceito de entidade dele -- "já que ele faz isso
+	 * para a ICT, é a gente dar um conjunto de professores daquela área de
+	 * conhecimento e ele já calcular qual seria esse índice h médio, mas tem
+	 * que testar isso". Enquanto o teste não fecha, a média sai da consulta
+	 * SPARQL sobre o h por autor, e o valor oficial substitui sem mudar o
+	 * modelo.
+	 *
+	 * ATENÇÃO -- h5 NÃO É COLETÁVEL HOJE. A Author Retrieval API devolve 401
+	 * em view=METRICS com a chave institucional atual (testado em 15/09/2026):
+	 * a assinatura cobre as views STANDARD, não as COMPLETE/METRICS. O h vem
+	 * sendo calculado localmente a partir das citações dos documentos do
+	 * próprio autor, mas o h5 -- que é o h restrito à janela de cinco anos --
+	 * depende da mesma entitlement. É o mesmo impasse de token institucional
+	 * tratado na reunião. A propriedade fica declarada para que o modelo
+	 * esteja completo quando o acesso destravar.
+	 *
+	 * xsd:double, e não xsd:int: é média de um grupo, não o h de uma pessoa.
+	 */
+	concept indiceHAno < base:EntidadeIdentificavel [
+		restricts an_base to exactly 1
+	]
+
+	scalar property an_base [
+		domain indiceHAno
+		range xsd:int
+		functional
+	]
+
+	/*
+	 * Sem cardinalidade mínima, pelo mesmo motivo de publicacoesAnoScopus: a
+	 * população de docentes permanentes ainda não foi cruzada com o Sucupira,
+	 * e o h5 depende de entitlement que a chave atual não tem. Um registro
+	 * carregado só com o h médio dos bolsistas é válido.
+	 */
+	scalar property nr_indice_h_medio_docentes [
+		domain indiceHAno
+		range xsd:double
+		functional
+	]
+
+	scalar property nr_indice_h5_medio_docentes [
+		domain indiceHAno
+		range xsd:double
+		functional
+	]
+
+	scalar property nr_indice_h_medio_bolsistas [
+		domain indiceHAno
+		range xsd:double
+		functional
+	]
+
+	scalar property nr_indice_h5_medio_bolsistas [
+		domain indiceHAno
+		range xsd:double
+		functional
+	]
+}

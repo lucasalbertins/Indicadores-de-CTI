@@ -4,6 +4,10 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAno#> as publicacoesAno
 
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAnoScopus#> as publicacoesAnoScopus
+
+	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/indiceHAno#> as indiceHAno
+
 	/*
 	 * ÁREA DE CONHECIMENTO
 	 *
@@ -17,14 +21,50 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * publicações por ano (publicacoesAno.oml) e o PPG (ppg.oml). A migração do scalar
 	 * para o conceito é um passo à parte, que exige regerar as descrições.
 	 */
-	concept areaConhecimento < base:EntidadeNomeavel, base:EntidadeIdentificavel [
-		restricts possuiPublicacoesAno to min 1
-	]
+	/*
+	 * SEM RESTRICAO DE CARDINALIDADE em possuiPublicacoesAno -- reuniao de
+	 * 09/09/2026: "inicialmente nao vai ter nenhum... eu nao sei se a gente ja
+	 * vai ter de cara esses dados levantados, de publicacoes. Talvez seja
+	 * interessante so botar uma relacao, mas sem nenhuma constraint". Uma area
+	 * de conhecimento carregada antes da coleta do Scopus e valida.
+	 */
+	concept areaConhecimento < base:EntidadeNomeavel, base:EntidadeIdentificavel
 
 	relation possuiPublicacoesAno [
 		from areaConhecimento
 		to publicacoesAno:publicacoesAno
 		reverse publicacoesAnoDe
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * A SÉRIE SCOPUS, ao lado da série geral acima. Mesmas características de
+	 * possuiPublicacoesAno e mesma ausência de cardinalidade mínima, pelo
+	 * mesmo motivo: a área é carregada antes da coleta, e continua válida sem
+	 * nenhum registro de publicação.
+	 *
+	 * inverse functional: um registro de (ano, quartil) pertence a uma única
+	 * área -- é o que impede a mesma contagem ser reaproveitada em duas áreas.
+	 */
+	relation possuiPublicacoesAnoScopus [
+		from areaConhecimento
+		to publicacoesAnoScopus:publicacoesAnoScopus
+		reverse publicacoesAnoScopusDe
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	/*
+	 * O índice h e o h5 médios do ano, que não cabem na série por quartil
+	 * (ver indiceHAno.oml).
+	 */
+	relation possuiIndiceHAno [
+		from areaConhecimento
+		to indiceHAno:indiceHAno
+		reverse indiceHAnoDe
 		inverse functional
 		asymmetric
 		irreflexive
