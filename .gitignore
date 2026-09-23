@@ -15,3 +15,21 @@ src/oml/**/amostra-PBPG.oml
 src/oml/**/bolsistas-PBPG*.oml
 
 *.hprof
+
+# workspace do Eclipse/Rosetta, se o projeto for aberto como workspace
+.metadata/
+bin/
+.classpath
+
+# planilhas e extracoes: carregam dado pessoal, a fonte mora fora do repositorio
+# (os scripts de scripts/ recebem o caminho por argumento)
+*.xlsx
+*.xls
+*.csv
+*.tsv
+
+# sistema operacional e editores
+.DS_Store
+Thumbs.db
+*~
+~$*
