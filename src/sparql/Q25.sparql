@@ -36,7 +36,7 @@ WHERE {
   ?prop rdfs:domain ?classe ;
         rdfs:range  ?alvo .
   FILTER( ?prop IN ( bols:matriculadoEm, coord:membroDe,
-                     ppg:classificadoEm, ppg:avaliadoCom,
+                     ppg:cd_ppg, ppg:classificadoEm, ppg:avaliadoCom,
                      cppg:an_inicio, cppg:an_fim, cppg:cd_conceito_ppg,
                      area:possuiPublicacoesAno, pub:an_base, pub:nm_quartil,
                      pub:qt_publicacoes_docentes, pub:qt_publicacoes_bolsistas,

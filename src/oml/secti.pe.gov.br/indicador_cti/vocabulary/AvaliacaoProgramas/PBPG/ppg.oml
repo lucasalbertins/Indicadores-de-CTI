@@ -6,6 +6,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/conceitoPPG#> as conceitoPPG
 
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
 	/*
 	 * PROGRAMA DE PÓS-GRADUAÇÃO (PPG)
 	 *
@@ -15,7 +17,20 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * Um PPG pertence a uma única grande área do conhecimento.
 	 */
 	concept ppg < base:EntidadeNomeavel, base:EntidadeIdentificavel [
+		restricts cd_ppg         to exactly 1
 		restricts classificadoEm to exactly 1
+	]
+
+	/*
+	 * cd_ppg, e não só o base:id herdado: é o nome do diagrama de classes, e o
+	 * mesmo padrão de conceitoPPG:cd_conceito_ppg e bolsista:id_bolsa -- o
+	 * código de domínio fica explícito, o base:id continua sendo a chave da
+	 * instância. xsd:string porque o diagrama diz char.
+	 */
+	scalar property cd_ppg [
+		domain ppg
+		range xsd:string
+		functional
 	]
 
 	relation classificadoEm [
