@@ -45,8 +45,7 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * "uma pessoa com vários papéis" -- basta o indivíduo ter vários tipos --
 	 * mas NÃO resolve "a mesma pessoa com duas bolsas", porque os atributos
 	 * do vínculo continuam functional no indivíduo-pessoa. Só a separação
-	 * pessoa/papel resolve os dois casos de uma vez. Ver o comparativo em
-	 * docs/alternativa-pessoa-como-conceito.md.
+	 * pessoa/papel resolve os dois casos de uma vez.
 	 */
 
 	/*
