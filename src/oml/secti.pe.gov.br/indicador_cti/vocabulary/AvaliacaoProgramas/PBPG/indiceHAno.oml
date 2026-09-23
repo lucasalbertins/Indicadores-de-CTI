@@ -7,12 +7,12 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	/*
 	 * ÍNDICE h E h5 MÉDIOS POR ANO -- BASE SCOPUS
 	 *
-	 * Conceito à parte de publicacoesAnoScopus, e não mais um punhado de
+	 * Conceito à parte da série de publicações, e não mais um punhado de
 	 * atributos lá dentro. O motivo é o grão -- reunião de 09/09/2026: "não
 	 * tem como ficar o índice h por quartil, não faz sentido, porque o índice
 	 * h não é da publicação; nesse caso o índice h é do docente e do bolsista,
 	 * considerando TODAS as publicações". Pendurar o h num registro que já foi
-	 * quebrado em quatro quartis obrigaria a repetir o mesmo valor quatro
+	 * quebrado por quartil obrigaria a repetir o mesmo valor quatro
 	 * vezes, ou a inventar um quartil de mentira para guardá-lo. Foi a própria
 	 * saída apontada na reunião: "a gente poderia quebrar em mais de um
 	 * conceito aí".
@@ -55,8 +55,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	]
 
 	/*
-	 * Sem cardinalidade mínima, pelo mesmo motivo de publicacoesAnoScopus: a
-	 * população de docentes permanentes ainda não foi cruzada com o Sucupira,
+	 * Sem cardinalidade mínima, só functional: a população de docentes
+	 * permanentes ainda não foi cruzada com o Sucupira,
 	 * e o h5 depende de entitlement que a chave atual não tem. Um registro
 	 * carregado só com o h médio dos bolsistas é válido.
 	 */

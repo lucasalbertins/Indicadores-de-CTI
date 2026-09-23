@@ -4,29 +4,12 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAno#> as publicacoesAno
 
-	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAnoScopus#> as publicacoesAnoScopus
-
 	extends <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/indiceHAno#> as indiceHAno
 
 	/*
 	 * ÁREA DE CONHECIMENTO
 	 *
-	 * Grande área do conhecimento FACEPE, usada como dimensão de desagregação
-	 * em praticamente todas as métricas do plano de avaliação do PBPG.
-	 *
-	 * Convive, por ora, com o scalar projeto:area-conhecimento (oneOf
-	 * "HUMANAS", "EXATAS", "SAÚDE"), que continua sendo o que a ABox do estudo
-	 * de caso preenche via projeto:nm_area_conhecimento. Este conceito é a
-	 * forma reificada da mesma noção: só ele pode receber relações -- as
-	 * publicações por ano (publicacoesAno.oml) e o PPG (ppg.oml). A migração do scalar
-	 * para o conceito é um passo à parte, que exige regerar as descrições.
-	 */
-	/*
-	 * SEM RESTRICAO DE CARDINALIDADE em possuiPublicacoesAno -- reuniao de
-	 * 09/09/2026: "inicialmente nao vai ter nenhum... eu nao sei se a gente ja
-	 * vai ter de cara esses dados levantados, de publicacoes. Talvez seja
-	 * interessante so botar uma relacao, mas sem nenhuma constraint". Uma area
-	 * de conhecimento carregada antes da coleta do Scopus e valida.
+	 * SEM RESTRICAO DE CARDINALIDADE em possuiPublicacoesAno.
 	 */
 	concept areaConhecimento < base:EntidadeNomeavel, base:EntidadeIdentificavel
 
@@ -40,26 +23,8 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	]
 
 	/*
-	 * A SÉRIE SCOPUS, ao lado da série geral acima. Mesmas características de
-	 * possuiPublicacoesAno e mesma ausência de cardinalidade mínima, pelo
-	 * mesmo motivo: a área é carregada antes da coleta, e continua válida sem
-	 * nenhum registro de publicação.
-	 *
-	 * inverse functional: um registro de (ano, quartil) pertence a uma única
-	 * área -- é o que impede a mesma contagem ser reaproveitada em duas áreas.
-	 */
-	relation possuiPublicacoesAnoScopus [
-		from areaConhecimento
-		to publicacoesAnoScopus:publicacoesAnoScopus
-		reverse publicacoesAnoScopusDe
-		inverse functional
-		asymmetric
-		irreflexive
-	]
-
-	/*
-	 * O índice h e o h5 médios do ano, que não cabem na série por quartil
-	 * (ver indiceHAno.oml).
+	 * O índice h e o h5 médios do ano, em conceito próprio porque o grão é
+	 * outro: (área, ano), sem quartil -- ver indiceHAno.oml.
 	 */
 	relation possuiIndiceHAno [
 		from areaConhecimento

@@ -10,30 +10,10 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	 * O conceito que a CAPES atribui ao PPG a cada avaliação quadrienal.
 	 * Um registro por avaliação.
 	 *
-	 * QUADRIÊNIO, NÃO ANO-BASE -- reunião de 09/09/2026: "talvez ao invés de
-	 * ano-base, seja interessante colocar quadriênio mesmo, porque esse
-	 * conceito vale por quatro anos". O par an_inicio/an_fim delimita a
-	 * vigência: o quadriênio 2017-2020 é an_inicio 2017, an_fim 2020. Dois
-	 * inteiros, e não uma string "2017-2020", para que "qual era o conceito
-	 * vigente em 2019" seja um FILTER de faixa na consulta, sem parsing.
+	 * QUADRIÊNIO, NÃO ANO-BASE 
 	 *
-	 * É a entidade que falta para PA4.ME1 ("Conceito CAPES dos PPG apoiados
-	 * pelo PBPG por avaliação quadrienal") e PA4.ME2 ("PPG com conceitos de
-	 * excelência da CAPES (6 e 7)").
 	 *
-	 * Vocabulário próprio pelo mesmo motivo de publicacoesAno: é conceito com
-	 * identidade própria, e a IRI deve dizê-lo. Quem liga o PPG a estes
-	 * registros é avaliadoCom, do lado de ppg.oml.
-	 *
-	 * NOMES ALINHADOS AO DIAGRAMA DE CLASSES: cd_conceito_ppg. O diagrama traz
-	 * an_base, substituído aqui pelo par an_inicio/an_fim (ver acima) -- vale
-	 * atualizar o diagrama na próxima revisão.
-	 *
-	 * cd_conceito_ppg é xsd:string porque o diagrama diz char, e "cd_" é o
-	 * prefixo de código na casa (cd_ppg, cd_ict_capes). ATENÇÃO: PA4.ME2 fala
-	 * em "conceitos de excelência da CAPES (6 e 7)", então a comparação vai
-	 * precisar de xsd:integer(?cd_conceito_ppg) na consulta. Se a CAPES nunca
-	 * mais usar letra, vale reabrir e trocar para xsd:int.
+	
 	 */
 	concept conceitoPPG < base:EntidadeIdentificavel [
 		restricts an_inicio       to exactly 1

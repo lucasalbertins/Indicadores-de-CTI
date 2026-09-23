@@ -25,25 +25,22 @@ PREFIX pub:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas
 PREFIX cppg: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/conceitoPPG#>
 PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
 PREFIX coord: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/coordenador#>
-PREFIX pubs: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/publicacoesAnoScopus#>
 PREFIX hidx: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/indiceHAno#>
 
 SELECT ?origem ?ligacao ?destino ?cardinalidade ?caracteristica
 WHERE {
   VALUES ?classe { bols:bolsista coord:coordenador ppg:ppg cppg:conceitoPPG
                    area:areaConhecimento pub:publicacoesAno
-                   pubs:publicacoesAnoScopus hidx:indiceHAno }
+                   hidx:indiceHAno }
 
   ?prop rdfs:domain ?classe ;
         rdfs:range  ?alvo .
   FILTER( ?prop IN ( bols:matriculadoEm, coord:membroDe,
                      ppg:classificadoEm, ppg:avaliadoCom,
                      cppg:an_inicio, cppg:an_fim, cppg:cd_conceito_ppg,
-                     area:possuiPublicacoesAno, pub:an_base, pub:qt_publicacoes,
-                     area:possuiPublicacoesAnoScopus,
-                     pubs:an_base, pubs:nm_quartil,
-                     pubs:qt_publicacoes_docentes, pubs:qt_publicacoes_bolsistas,
-                     pubs:qt_citacoes_docentes, pubs:qt_citacoes_bolsistas,
+                     area:possuiPublicacoesAno, pub:an_base, pub:nm_quartil,
+                     pub:qt_publicacoes_docentes, pub:qt_publicacoes_bolsistas,
+                     pub:qt_citacoes_docentes, pub:qt_citacoes_bolsistas,
                      area:possuiIndiceHAno, hidx:an_base,
                      hidx:nr_indice_h_medio_docentes, hidx:nr_indice_h5_medio_docentes,
                      hidx:nr_indice_h_medio_bolsistas, hidx:nr_indice_h5_medio_bolsistas ) )

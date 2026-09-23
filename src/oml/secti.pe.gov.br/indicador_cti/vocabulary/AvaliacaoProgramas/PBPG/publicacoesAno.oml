@@ -5,24 +5,40 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
 	/*
-	 * PUBLICAÇÕES POR ANO
+	 * PUBLICAÇÕES E CITAÇÕES POR ANO E QUARTIL
 	 *
-	 * Um registro por ano-base: quantas publicações foram produzidas naquele
-	 * ano. É a forma tabular que as métricas PA5.ME1 e PA5.ME2 ("número anual
-	 * de publicações ... desagregado pela grande área do conhecimento FACEPE")
-	 * pedem, sem exigir uma entidade publicação.
+	 * Série única de produção, alimentada hoje pelo Scopus -- decisão de
+	 * 22/09/2026: como o trabalho inicial é só com o Scopus, duas séries em
+	 * paralelo eram redundância sem uso. A extensão para o Lattes entra nesta
+	 * mesma série quando chegar.
 	 *
-	 * Vocabulário próprio, e não dentro de areaConhecimento.oml: é conceito
-	 * com identidade e ciclo de vida próprios, e a IRI deve dizer isso --
-	 * publicacoesAno#publicacoesAno, não areaConhecimento#publicacoesAno.
+	 * GRÃO: um registro por (área de conhecimento, ano-base, quartil).
 	 *
 	 * Quem liga a área a estes registros é a relação possuiPublicacoesAno, do
 	 * lado de areaConhecimento.oml, que é onde a origem da relação mora --
 	 * mesmo padrão de bolsista:desenvolve apontando para projeto:projeto.
+	 *
+	 * O índice h não cabe aqui: o grão dele é (área, ano), sem quartil, porque
+	 * o h é da pessoa sobre todas as publicações -- ver indiceHAno.oml.
 	 */
 	concept publicacoesAno < base:EntidadeIdentificavel [
-		restricts an_base        to exactly 1
-		restricts qt_publicacoes to exactly 1
+		restricts an_base    to exactly 1
+		restricts nm_quartil to exactly 1
+	]
+
+	/*
+	 * QUARTIL DO PERIÓDICO NA ÁREA, e não da publicação: o mesmo periódico
+	 * pode ser Q1 em computação e Q3 em administração. É por isso que só faz
+	 * sentido dentro de um registro que já fixou a área.
+	 *
+	 * NAO_CLASSIFICADO. A soma dos quartis tem de fechar com o
+	 * total do ano na fonte, e isso só se sustenta se a publicação sem quartil
+	 * tiver onde ficar. 
+	 *
+
+	 */
+	scalar quartil [
+		oneOf "Q1", "Q2", "Q3", "Q4", "NAO_CLASSIFICADO"
 	]
 
 	scalar property an_base [
@@ -31,7 +47,46 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/P
 		functional
 	]
 
-	scalar property qt_publicacoes [
+	scalar property nm_quartil [
+		domain publicacoesAno
+		range quartil
+		functional
+	]
+
+	/*
+	 * MEDIDAS POR PÚBLICO, em vez de um total indiferenciado: docente
+	 * permanente do PPG (via Sucupira) e bolsista PBPG em até 02 anos após a
+	 * titulação têm definições próprias no plano de avaliação, e cada métrica
+	 * cita uma só delas. O total do ano sai de um SUM sobre os quartis e os
+	 * dois públicos, o que evita guardar a mesma contagem duas vezes.
+	 *
+	 * SEM CARDINALIDADE MÍNIMA, só functional -- no máximo uma, não
+	 * necessariamente uma. A coleta cobre hoje os bolsistas com Scopus ID
+	 * resolvido; os docentes permanentes dependem do cruzamento com o
+	 * Sucupira, que ainda não foi feito. Exigir "exatamente 1" reprovaria no
+	 * owlReason todo registro carregado só com o lado dos bolsistas -- a mesma
+	 * armadilha já documentada em bolsista:matriculadoEm. Ligue o "exatamente
+	 * 1" quando as duas populações estiverem sendo carregadas juntas.
+	 */
+	scalar property qt_publicacoes_docentes [
+		domain publicacoesAno
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_publicacoes_bolsistas [
+		domain publicacoesAno
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_citacoes_docentes [
+		domain publicacoesAno
+		range xsd:int
+		functional
+	]
+
+	scalar property qt_citacoes_bolsistas [
 		domain publicacoesAno
 		range xsd:int
 		functional
