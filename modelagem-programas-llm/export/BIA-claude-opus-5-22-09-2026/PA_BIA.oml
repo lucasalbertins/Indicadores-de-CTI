@@ -1,0 +1,108 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/PA_BIA#> as PA_BIA {
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA1#> as metricasPA1
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA2#> as metricasPA2
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA3#> as metricasPA3
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA4#> as metricasPA4
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/BIA#> as BIA
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	instance PAV1 : planoAvaliacao:planoAvaliacao [
+		base:nome "Plano de Avaliação do Programa de Bolsas de Incentivo Acadêmico"
+		base:id "PA-PR50"
+		base:versao "V2-Consolidado"
+		base:dataCriacao "2026-09-22T00:00:00"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA1, PA2, PA3, PA4
+	]
+
+	// Questões de Avaliação (PA)
+	instance PA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a taxa de evasão dos bolsistas BIA em relação a evasão geral?"
+		base:id "PA1 - BIA"
+		planoAvaliacao:custo "Médio"
+		planoAvaliacao:risco "Médio"
+		planoAvaliacao:temMetrica metricasPA1:PA1.ME1, metricasPA1:PA1.ME2, metricasPA1:PA1.ME3,
+		metricasPA1:PA1.ME4, metricasPA1:PA1.ME5
+		planoAvaliacao:temEscopo PA1.ES
+		planoAvaliacao:temMetodologia PA1.MA1
+		planoAvaliacao:alinhaComResultado BIA:RE.CP1
+	]
+
+	instance PA2 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quantos bolsistas BIA migraram para o PIBIC/FACEPE e outros programas durante a graduação?"
+		base:id "PA2 - BIA"
+		planoAvaliacao:custo "Médio"
+		planoAvaliacao:risco "Médio"
+		planoAvaliacao:temMetrica metricasPA2:PA2.ME1, metricasPA2:PA2.ME2, metricasPA2:PA2.ME3,
+		metricasPA2:PA2.ME4, metricasPA2:PA2.ME5
+		planoAvaliacao:temEscopo PA2.ES
+		planoAvaliacao:temMetodologia PA2.MA1
+		planoAvaliacao:alinhaComResultado BIA:RE.MP1
+	]
+
+	instance PA3 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução da empregabilidade do bolsista egresso BIA em setores estratégicos em Pernambuco?"
+		base:id "PA3 - BIA"
+		planoAvaliacao:custo "Médio"
+		planoAvaliacao:risco "Médio"
+		planoAvaliacao:temMetrica metricasPA3:PA3.ME1, metricasPA2:PA2.ME2, metricasPA3:PA3.ME3
+		planoAvaliacao:temEscopo PA3.ES
+		planoAvaliacao:temMetodologia PA3.MA1
+		planoAvaliacao:alinhaComResultado BIA:RE.LP2
+	]
+
+	instance PA4 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Quantos alunos bolsistas egressos BIA estão matriculados em programas de mestrado acadêmico e profissional em IES pernambucana?"
+		base:id "PA4 - BIA"
+		planoAvaliacao:custo "Médio"
+		planoAvaliacao:risco "Médio"
+		planoAvaliacao:temMetrica metricasPA4:PA4.ME1, metricasPA2:PA2.ME2, metricasPA4:PA4.ME3,
+		metricasPA4:PA4.ME4, metricasPA4:PA4.ME5
+		planoAvaliacao:temEscopo PA4.ES
+		planoAvaliacao:temMetodologia PA4.MA1
+		planoAvaliacao:alinhaComResultado BIA:RE.LP1
+	]
+
+	// Escopos e Métodos de Avaliação
+	instance PA1.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar a evasão dos bolsistas BIA nos cursos de graduação e comparar com a taxa de evasão geral do curso ao qual o bolsista é vinculado. A comparação será longitudinal (ao longo dos anos)."
+		base:id "PA1.ES - BIA"
+	]
+
+	instance PA1.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA1.MA1 - BIA"
+	]
+
+	instance PA2.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o número de bolsistas BIA que encerraram a bolsa e que migraram para programas de bolsa como PIBIC/FACEPE e outros programas. A comparação será longitudinal (ao longo dos semestres)."
+		base:id "PA2.ES - BIA"
+	]
+
+	instance PA2.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA2.MA1 - BIA"
+	]
+
+	instance PA3.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar o grau de empregabilidade do bolsista egresso BIA após a conclusão do curso do bolsista vinculado. A comparação será longitudinal (ao longo dos anos)."
+		base:id "PA3.ES - BIA"
+	]
+
+	instance PA3.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA3.MA1 - BIA"
+	]
+
+	instance PA4.ES : planoAvaliacao:escopo [
+		base:descricao "Espera-se identificar a quantidade de bolsistas egressos do BIA que estão matriculados em programas de pós-graduação de nível acadêmico e profissional em IES pernambucanas. A comparação será longitudinal (ao longo dos anos)."
+		base:id "PA4.ES - BIA"
+	]
+
+	instance PA4.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA4.MA1 - BIA"
+	]
+}

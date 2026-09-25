@@ -1,0 +1,85 @@
+# CANVAS DA ESTRATÉGIA - BOLSA PERNAMBUCANA DE PRODUTIVIDADE -BPP (PR8) 
+
+## Parceiros-chave (PC) 
+- PC1.10. Secretarias e órgãos do Governo Estadual
+- PC2.5. FINEP 
+- PC2.6. CAPES/MEC 
+- PC2.7. CNPq/MCTI 
+- PC2.9. Agências internacionais de fomento à CT&I. 
+- PC3.1. Instituições de Ciência e Tecnologia (ICT)
+ 
+## Entradas (EN) 
+- EN1.1 Orçamento estadual - FACEPE 
+- EN3.5. Câmaras de Assessoramento da FACEPE 
+- EN3.7 Avaliadores externos e ad-hoc 
+- EN3.1. RH FACEPE 
+- EN2.1. Sistema AgilFAP 
+- EN5.1. Estratégia Estadual de CT&I. 
+
+## Objetivos do Programa (OB) 
+### Geral (GE):  
+- OB.GE. Apoiar pesquisadores(as) residentes e atuantes fora da Região Metropolitana do Recife (RMR), que contribuam para o incremento da produção científica, tecnológica e inovadora de qualidade. 
+### ESPECÍFICOS (ES): 
+- OB.ES1. Estimular a fixação de pesquisadores fora da RMR. 
+- OB.ES2. Contribuir para fortalecer e/ou nuclear os grupos de pesquisa atuantes no estado fora da RMR. 
+- OB.ES3. Estimular a produção e a disseminação de conhecimento de vanguarda, além da mão de obra de alto nível para o desenvolvimento competitivo e sustentável do Estado fora da RMR. 
+- OB.ES4. Contribuir para formação de recursos humanos, a nível técnico, graduação e pós-graduação no estado fora da RMR. 
+- OB.ES5. Estimular cooperações e transferências científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais. 
+- OB.ES6. Ampliar a competitividade do pesquisador para além do âmbito local. 
+- OB.ES7. Apoiar a criação e consolidação de Programas de Pós-graduação (PPGs) fora da RMR 
+- OB.ES8. Estimular a participação em sociedades científicas, conselhos, editoriais de periódicos no país e no exterior. 
+
+## Público-alvo (PU) 
+### DIRETO (DI): 
+- PU1.2. Pesquisador com Doutorado 
+### INDIRETOS (IN): 
+- PU.1.8. Estudantes em Geral 
+- PU.1.14. ICTs em Geral 
+- PU.1.15. PPGS 
+- PU.2.2. Órgãos do Governo Estadual 
+- PU.3.2. Empresas Privadas em Geral 
+- PU.4.9. Ambientes Promotores de Inovação em Geral 
+- PU.5.1. Cidadão e Sociedade em Geral. 
+ 
+## Atividades-chave (AC) 
+- AC1. Gestão do ciclo de vida da concessão, divulgação, julgamento e resultados 
+- AC2. Gestão das bolsas BPP 
+- AC3. Acompanhamento técnico do BPP 
+- AC4. Manutenção evolutiva e corretiva do AgilFAP 
+- AC5. Monitoramento dos indicadores de desempenho e impacto [incluindo egressos] do BPP e 
+- AC6. Avaliação do BPP.
+
+## Fatores-externos (FE) 
+### OPORTUNIDADES (OP): 
+- FE5.OP1. Parcerias eventuais com Governo e Indústria para financiamento ou complemento da bolsa BPP 
+- FE5.OP2. Reconhecimento da importância das pesquisas nas atividades produtivas. 
+### AMEAÇAS (AM): 
+- FE1.AM1. Cortes e contingenciamento de recursos estaduais para CT&I 
+- FE2.AM1. Estrutura administrativa de suporte ao BPP insuficiente.
+- FE4.AM1. Evasão das ICTs fora da RMR
+
+## Saídas (SA) 
+- SA1. BPP gerenciado com sucesso 
+- SA2. Bolsas implementadas e pagas de acordo com o planejamento 
+- SA3. Relatórios parciais e final de acompanhamento dos bolsistas BPP 
+- SA4. AgilFAP em operação plena para atendimento ao BPP 
+- SA5. Infográfico atualizado de Indicadores de desempenho e impacto do BPP 
+- SA6. Plano de Avaliação do BPP executado. 
+ 
+## Resultados (RE) [Objetivo(s) Específico(s) associado] 
+### CURTO PRAZO [da concessão até 1 ano de egresso do edital]: 
+- RE.CP1. Aumento da produção científica qualificada e de alto impacto [OB.ES3] 
+- RE.CP2. Aumento do número de orientações, nos níveis técnico, de graduação e pós-graduação em pesquisa e inovação nas ICTs fora da RMR. [OB.ES4] 
+- RE.CP3. Aumento da Proteção intelectual do conhecimento gerado por meio de patentes depositadas e programas de software registrados. [OB.ES3] 
+- RE.CP4. Aumento de cooperações e transferências científicas e tecnológicas com organizações públicas e privadas, nacionais e internacionais. [OB.ES{2,3,5}] 
+- RE.CP5. Aumento da captação de recursos através de editais de fomento, cooperações e convênios com ICTs e empresas. [OB.ES{2,6}] 
+- RE.CP6. Aumento da participação em sociedades científicas, conselhos, editoriais de periódicos no país e no exterior. [OB.ES8] 
+- RE.CP7. Aumento do número de bolsistas que não renovaram a bolsa para adquirir bolsa PQ ou DT do CNPq [OB.ES{2,3,4,5,6,7,8}] 
+### MÉDIO PRAZO [a partir de 1 ano de egresso até 3 anos de egresso do edital BPP]: 
+- RE.MP1. Aumento de Startups de base científica e tecnológica e Spin-offs acadêmicos fora da RMR. [OB.ES{3,5}] 
+- RE.MP2. Geração de inovações (produtos, processos, soluções, serviços) para Indústria, Governo e Sociedade. [OB.ES5] 
+### LONGO PRAZO [após 3 anos de egresso do edital BPP]: 
+- RE.LP1. Licenciamento da propriedade intelectual pela Indústria e Governo [OB.ES{3,5}] 
+- RE.LP2. Fortalecimento da permanência do pesquisador fora da RMR. [OB.ES{1,6,7}] 
+- RE.LP3. Criação de novos PPGs fora da RMR com participação dos bolsistas BPP. [OB.ES7] 
+- RE.LP4. Aumento do conceito CAPES dos PPGs fora da RMR. [OB.ES7] 

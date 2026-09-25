@@ -1,0 +1,276 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA2#> as PA2 {
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratSemestre : formulas:estratificacao [
+		base:id "estrat_semestre_PA2_BIA"
+		base:nome "Semestre"
+	]
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA2_BIA"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	instance estratCurso : formulas:estratificacao [
+		base:id "estrat_curso_PA2_BIA"
+		base:nome "Curso de Graduação"
+	]
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde_PA2_BIA"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+	instance estratTipoPrograma : formulas:estratificacao [
+		base:id "estrat_tipo_programa_PA2_BIA"
+		base:nome "Tipo de Programa"
+	]
+
+	// MÉTRICA PA2.ME2 - denominador comum das taxas de PA2, PA3 e PA4
+	instance PA2.ME2 : metricas:metrica [
+		base:nome "Número Total de Concluintes da Bolsa BIA"
+		base:descricao "Número absoluto de bolsistas BIA que encerraram a bolsa, desagregado por semestre, grande área de conhecimento da FACEPE, curso e RDE."
+		base:id "PA2.ME2 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaConcluintes
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance formulaConcluintes : formulas:formula [
+		base:id "formula_identidade_PA2.ME2_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argConcluintes
+		formulas:formulaDe PA2.ME2
+	]
+	instance argConcluintes : formulas:argumento [
+		base:id "arg_valor_unico_PA2.ME2_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorConcluintes
+		formulas:argumentoDe formulaConcluintes
+	]
+	instance valorConcluintes : formulas:tipovalorMetrica [
+		base:id "valor_PA2.ME2_BIA"
+		formulas:valorMetrica PA2.ME2
+	]
+
+	// MÉTRICA PA2.ME1 - contagem direta da fonte
+	instance PA2.ME1 : metricas:metrica [
+		base:nome "Número de Bolsistas Migrados para PIBIC/FACEPE"
+		base:descricao "Número anual absoluto de bolsistas BIA que migraram para bolsa PIBIC/FACEPE após o fim da bolsa, desagregados por semestre, grande área de conhecimento da FACEPE, curso e RDE."
+		base:id "PA2.ME1 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMigradosPibic
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance formulaMigradosPibic : formulas:formula [
+		base:id "formula_identidade_PA2.ME1_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argMigradosPibic
+		formulas:formulaDe PA2.ME1
+	]
+	instance argMigradosPibic : formulas:argumento [
+		base:id "arg_valor_unico_PA2.ME1_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorMigradosPibic
+		formulas:argumentoDe formulaMigradosPibic
+	]
+	instance valorMigradosPibic : formulas:tipovalorMetrica [
+		base:id "valor_PA2.ME1_BIA"
+		formulas:valorMetrica PA2.ME1
+	]
+
+	// MÉTRICA PA2.ME3 - taxa: multiplicacao(divisao(PA2.ME1, PA2.ME2), 100)
+	instance PA2.ME3 : metricas:metrica [
+		base:nome "Taxa de Bolsistas Migrados para PIBIC/FACEPE"
+		base:descricao "Percentual anual de bolsistas BIA que migraram para bolsa PIBIC/FACEPE em relação ao número total de bolsistas concluintes desagregados por semestre, grande área de conhecimento FACEPE, curso e RDE."
+		base:id "PA2.ME3 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultTaxaPibic
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance formulaDivTaxaPibic : formulas:formula [
+		base:id "formula_divisao_PA2.ME3_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendoPibic
+		formulas:possuiArgumento argDivisorPibic
+	]
+	instance argDividendoPibic : formulas:argumento [
+		base:id "arg_dividendo_PA2.ME3_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valorMigradosParaTaxa
+		formulas:argumentoDe formulaDivTaxaPibic
+	]
+	instance argDivisorPibic : formulas:argumento [
+		base:id "arg_divisor_PA2.ME3_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valorConcluintesParaTaxaPibic
+		formulas:argumentoDe formulaDivTaxaPibic
+	]
+	instance valorMigradosParaTaxa : formulas:tipovalorMetrica [
+		base:id "valorMigrados_PA2.ME3_BIA"
+		formulas:valorMetrica PA2.ME1
+	]
+	instance valorConcluintesParaTaxaPibic : formulas:tipovalorMetrica [
+		base:id "valorConcluintes_PA2.ME3_BIA"
+		formulas:valorMetrica PA2.ME2
+	]
+
+	instance formulaMultTaxaPibic : formulas:formula [
+		base:id "formula_multiplicacao_PA2.ME3_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicandoPibic
+		formulas:possuiArgumento argMultiplicadorPibic
+		formulas:formulaDe PA2.ME3
+	]
+	instance argMultiplicandoPibic : formulas:argumento [
+		base:id "arg_multiplicando_PA2.ME3_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivPibic
+		formulas:argumentoDe formulaMultTaxaPibic
+	]
+	instance argMultiplicadorPibic : formulas:argumento [
+		base:id "arg_multiplicador_PA2.ME3_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorCemPibic
+		formulas:argumentoDe formulaMultTaxaPibic
+	]
+	instance valorFormulaDivPibic : formulas:tipovalorFormula [
+		base:id "valorFormulaDivisao_PA2.ME3_BIA"
+		formulas:valorFormula formulaDivTaxaPibic
+	]
+	instance valorCemPibic : formulas:tipovalorLiteral [
+		base:id "valorLiteral100_PA2.ME3_BIA"
+		formulas:valorLiteral 100
+	]
+
+	// MÉTRICA PA2.ME4 - contagem direta da fonte
+	instance PA2.ME4 : metricas:metrica [
+		base:nome "Número de Bolsistas Migrados para Outros Programas"
+		base:descricao "Número anual absoluto de bolsistas BIA que migraram para bolsa de outros Programas após o fim da bolsa, desagregados por semestre, grande área de conhecimento, curso, tipo de programa e RDE."
+		base:id "PA2.ME4 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMigradosOutros
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratTipoPrograma
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.2,
+		fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaMigradosOutros : formulas:formula [
+		base:id "formula_identidade_PA2.ME4_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argMigradosOutros
+		formulas:formulaDe PA2.ME4
+	]
+	instance argMigradosOutros : formulas:argumento [
+		base:id "arg_valor_unico_PA2.ME4_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorMigradosOutros
+		formulas:argumentoDe formulaMigradosOutros
+	]
+	instance valorMigradosOutros : formulas:tipovalorMetrica [
+		base:id "valor_PA2.ME4_BIA"
+		formulas:valorMetrica PA2.ME4
+	]
+
+	// MÉTRICA PA2.ME5 - taxa: multiplicacao(divisao(PA2.ME4, PA2.ME2), 100)
+	instance PA2.ME5 : metricas:metrica [
+		base:nome "Taxa de Bolsistas Migrados para Outros Programas"
+		base:descricao "Percentual de bolsistas BIA que migraram para outros programas de bolsa em relação ao número total de bolsistas concluintes desagregados por semestre, grande área de conhecimento FACEPE, curso, tipo de programa e RDE."
+		base:id "PA2.ME5 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultTaxaOutros
+		formulas:estratificadaPor estratSemestre
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratTipoPrograma
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaDivTaxaOutros : formulas:formula [
+		base:id "formula_divisao_PA2.ME5_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendoOutros
+		formulas:possuiArgumento argDivisorOutros
+	]
+	instance argDividendoOutros : formulas:argumento [
+		base:id "arg_dividendo_PA2.ME5_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valorMigradosOutrosParaTaxa
+		formulas:argumentoDe formulaDivTaxaOutros
+	]
+	instance argDivisorOutros : formulas:argumento [
+		base:id "arg_divisor_PA2.ME5_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valorConcluintesParaTaxaOutros
+		formulas:argumentoDe formulaDivTaxaOutros
+	]
+	instance valorMigradosOutrosParaTaxa : formulas:tipovalorMetrica [
+		base:id "valorMigradosOutros_PA2.ME5_BIA"
+		formulas:valorMetrica PA2.ME4
+	]
+	instance valorConcluintesParaTaxaOutros : formulas:tipovalorMetrica [
+		base:id "valorConcluintes_PA2.ME5_BIA"
+		formulas:valorMetrica PA2.ME2
+	]
+
+	instance formulaMultTaxaOutros : formulas:formula [
+		base:id "formula_multiplicacao_PA2.ME5_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicandoOutros
+		formulas:possuiArgumento argMultiplicadorOutros
+		formulas:formulaDe PA2.ME5
+	]
+	instance argMultiplicandoOutros : formulas:argumento [
+		base:id "arg_multiplicando_PA2.ME5_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivOutros
+		formulas:argumentoDe formulaMultTaxaOutros
+	]
+	instance argMultiplicadorOutros : formulas:argumento [
+		base:id "arg_multiplicador_PA2.ME5_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorCemOutros
+		formulas:argumentoDe formulaMultTaxaOutros
+	]
+	instance valorFormulaDivOutros : formulas:tipovalorFormula [
+		base:id "valorFormulaDivisao_PA2.ME5_BIA"
+		formulas:valorFormula formulaDivTaxaOutros
+	]
+	instance valorCemOutros : formulas:tipovalorLiteral [
+		base:id "valorLiteral100_PA2.ME5_BIA"
+		formulas:valorLiteral 100
+	]
+}
