@@ -1,0 +1,59 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME1#> as PA5.ME1 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA5.ME1).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA5.ME1"
+		base:nome "Ano"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA5.ME1"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	// MÉTRICA
+	instance quantidadeProducaoCientificaDocentes : metricas:metrica [
+		base:id "PA5.ME1_PBPG"
+		base:nome "Quantidade Produção Científica Docentes"
+		base:descricao "Número anual da produção científica em geral dos docentes permanentes dos PPG apoiados pelo PBPG desagregado pela grande área do conhecimento FACEPE."
+		formulas:possuiFormula formulaIdentidade
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, fontesBasesAcademicasCientificasEducacionais:FI3.2, fontesBasesAcademicasCientificasEducacionais:FI3.3
+	]
+
+	// fórmula raiz
+	instance formulaIdentidade : formulas:formula [
+		base:id "formula_identidade_PA5.ME1"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argQuantidadeProducaoCientificaDocentes
+		formulas:formulaDe quantidadeProducaoCientificaDocentes
+	]
+
+	instance argQuantidadeProducaoCientificaDocentes : formulas:argumento [
+		base:id "arg_quantidade_producao_cientifica_docentes_PA5.ME1"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Quantidade Produção Científica Docentes"
+		formulas:possuiValor valQuantidadeProducaoCientificaDocentes
+		formulas:argumentoDe formulaIdentidade
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valQuantidadeProducaoCientificaDocentes : formulas:tipovalorMetrica [
+		base:id "val_quantidade_producao_cientifica_docentes_PA5.ME1"
+		formulas:valorMetrica "agilfap.quantidade.producao.cientifica.docentes"
+	]
+
+}

@@ -1,4 +1,4 @@
-// Programas que recebem recursos humanos como entrada, e têm a gestão de ciclo de vida do edital como atividade-chave
+# Programas que recebem recursos humanos como entrada, e têm a gestão de ciclo de vida do edital como atividade-chave
 
 PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
 PREFIX programas: <http://secti.pe.gov.br/indicador_cti/description/programas#>

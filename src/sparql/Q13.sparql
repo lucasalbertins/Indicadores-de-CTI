@@ -1,0 +1,25 @@
+# Q13 - Auditoria de completude e consistencia das bolsas
+# Sinaliza registros que exigem conferencia no Tabelao: sem projeto vinculado,
+# sem valor, ou com valor negativo (estorno que zerou/inverteu a soma das parcelas).
+
+PREFIX base: <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?nome ?cpf ?modalidade ?inicioBolsa ?valorRecebido ?problema
+WHERE {
+  ?b a bols:bolsista ;
+     base:nome            ?nome ;
+     bols:nr_cpf          ?cpf ;
+     bols:nm_modalidade   ?modalidade ;
+     bols:dt_inicio_bolsa ?inicioBolsa .
+
+  OPTIONAL { ?b bols:vl_recebido ?valorRecebido }
+  OPTIONAL { ?b bols:desenvolve  ?p }
+
+  FILTER( !BOUND(?valorRecebido) || ?valorRecebido < 0 || !BOUND(?p) )
+
+  BIND( IF(!BOUND(?p),              "sem projeto vinculado",
+        IF(!BOUND(?valorRecebido),  "sem valor recebido",
+                                    "valor recebido negativo")) AS ?problema )
+}
+ORDER BY ?problema ?nome

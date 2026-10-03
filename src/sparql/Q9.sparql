@@ -1,0 +1,15 @@
+# Q9 - Bolsas por modalidade e situacao de defesa
+# O Tabelao registra a DATA DE ENVIO DA DISSERTACAO/TESE, da qual deriva
+# id_semestre_defesa. Nao ha registro de titulacao nem de adimplencia.
+
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?modalidade ?situacaoDefesa (COUNT(DISTINCT ?b) AS ?bolsas)
+WHERE {
+  ?b a bols:bolsista ;
+     bols:nm_modalidade ?modalidade .
+  OPTIONAL { ?b bols:id_semestre_defesa ?sem }
+  BIND( IF(BOUND(?sem), "COM DEFESA REGISTRADA", "SEM REGISTRO") AS ?situacaoDefesa )
+}
+GROUP BY ?modalidade ?situacaoDefesa
+ORDER BY ?modalidade ?situacaoDefesa

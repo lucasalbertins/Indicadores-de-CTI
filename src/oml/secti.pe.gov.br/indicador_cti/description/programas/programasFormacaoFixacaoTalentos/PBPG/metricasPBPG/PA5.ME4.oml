@@ -1,0 +1,114 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME4#> as PA5.ME4 {
+
+	// Gerado por scripts/gerar_metricas_oml.py a partir de formulas.json.
+	// Fórmula, argumentos e operações OpenMath vêm do JSON; temFonte,
+	// finalidade e valores vêm do PA-PBPG.oml (métrica PA5.ME4).
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME3#> as PA5.ME3
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (dimensões de desagregação citadas na descrição)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA5.ME4"
+		base:nome "Ano"
+	]
+
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA5.ME4"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+
+	instance estratQuartil : formulas:estratificacao [
+		base:id "estrat_quartil_PA5.ME4"
+		base:nome "Quartil do Periódico"
+	]
+
+	// MÉTRICA
+	instance taxaPublicacoesPeriodicosQualificadosDocentes : metricas:metrica [
+		base:id "PA5.ME4_PBPG"
+		base:nome "Taxa Publicações Periódicos Qualificados Docentes"
+		base:descricao "Número anual de publicações em periódicos indexados na base Scopus dos docentes permanentes dos PPG apoiados pelo PBPG por quartil sobre o número total de publicações em periódicos indexados na Scopus dos docentes permanentes dos PPG apoiados pelo PBPG no mesmo ano de publicação desagregado pela grande área de conhecimento FACEPE."
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratQuartil
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1, fontesBasesAcademicasCientificasEducacionais:FI3.4
+	]
+
+	// fórmula aninhada
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA5.ME4"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argPublicacoesDocentesQualificadosPpgScopus
+		formulas:possuiArgumento argPublicacoesDocentesPpgScopus
+	]
+
+	instance argPublicacoesDocentesQualificadosPpgScopus : formulas:argumento [
+		base:id "arg_publicacoes_docentes_qualificados_ppg_scopus_PA5.ME4"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Publicacoes_Docentes_Qualificados_PPG_Scopus"
+		formulas:possuiValor valPublicacoesDocentesQualificadosPpgScopus
+		formulas:argumentoDe formulaDivisao
+	]
+
+	// PENDENTE: no Plano de Avaliação este operando é uma métrica
+	// simples própria; até que ela exista, fica a chave de extração.
+	instance valPublicacoesDocentesQualificadosPpgScopus : formulas:tipovalorMetrica [
+		base:id "val_publicacoes_docentes_qualificados_ppg_scopus_PA5.ME4"
+		formulas:valorMetrica "agilfap.publicacoes.docentes.qualificados.ppg.scopus"
+	]
+
+	instance argPublicacoesDocentesPpgScopus : formulas:argumento [
+		base:id "arg_publicacoes_docentes_ppg_scopus_PA5.ME4"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "Publicacoes_Docentes_PPG_Scopus"
+		formulas:possuiValor valPublicacoesDocentesPpgScopus
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance valPublicacoesDocentesPpgScopus : formulas:tipovalorMetrica [
+		base:id "val_publicacoes_docentes_ppg_scopus_PA5.ME4"
+		formulas:valorMetrica PA5.ME3:quantidadePublicacoesPeriodicosScopusDocentes
+	]
+
+	// fórmula raiz
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA5.ME4"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicand
+		formulas:possuiArgumento argMultiplier
+		formulas:formulaDe taxaPublicacoesPeriodicosQualificadosDocentes
+	]
+
+	instance argMultiplicand : formulas:argumento [
+		base:id "arg_multiplicand_PA5.ME4"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valMultiplicand
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplicand : formulas:tipovalorFormula [
+		base:id "val_multiplicand_PA5.ME4"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance argMultiplier : formulas:argumento [
+		base:id "arg_multiplier_PA5.ME4"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valMultiplier
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valMultiplier : formulas:tipovalorLiteral [
+		base:id "val_multiplier_PA5.ME4"
+		formulas:valorLiteral 100
+	]
+
+}

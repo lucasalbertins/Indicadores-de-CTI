@@ -1,0 +1,21 @@
+# Q8 - Listagem das bolsas PBPG (dados do Tabelao Financeiro AgilFAP)
+# Cada linha e uma BOLSA, nao uma pessoa: o mesmo CPF pode ter mais de uma
+# concessao (ver Q14). Somente os atributos com fonte no Tabelao.
+
+PREFIX base: <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?nome ?cpf ?modalidade ?inicioBolsa ?fimBolsa ?valorRecebido ?semestreDefesa
+WHERE {
+  ?b a bols:bolsista ;
+     base:nome            ?nome ;
+     bols:nr_cpf          ?cpf ;
+     bols:nm_modalidade   ?modalidade ;
+     bols:dt_inicio_bolsa ?inicioBolsa ;
+     bols:dt_fim_bolsa    ?fimBolsa .
+
+  # 13 bolsas sem valor; defesa registrada em apenas 2.190 das 9.237
+  OPTIONAL { ?b bols:vl_recebido       ?valorRecebido }
+  OPTIONAL { ?b bols:id_semestre_defesa ?semestreDefesa }
+}
+ORDER BY ?nome ?inicioBolsa

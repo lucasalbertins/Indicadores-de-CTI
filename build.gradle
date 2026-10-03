@@ -35,7 +35,8 @@ buildscript {
  */
 ext {
     // Name of dataset (matches one used in .fuseki.ttl file)
-    dataset = 'Indicadores de CTI'
+    // Sem espaços: este valor é concatenado direto na URL do endpoint pelo owl-load
+    dataset = 'indicadores-CTI'
     // Root ontology IRI of the dataset
     rootIri = 'http://secti.pe.gov.br/indicador_cti/description/bundle'
 }
@@ -118,13 +119,19 @@ task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
  */
 task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: owlReason) {
     inputs.files(startFuseki.outputFolderPath) // rerun when fuseki restarts
+    mustRunAfter startFuseki // declara a ordem exigida pela validação do Gradle 8+
     catalogPath = file('build/owl/catalog.xml')
     endpointURL = "http://localhost:3030/$dataset".toString()
     fileExtensions = ['owl', 'ttl']
     iris = [
         "$rootIri/classes".toString(),
         "$rootIri/properties".toString(),
-        "$rootIri/individuals".toString()
+        "$rootIri/individuals".toString(),
+        // Vocabulário que nenhuma descrição usa ainda -- coordenador, hoje --
+        // não é alcançado pelo fecho de imports das entailments e chegaria ao
+        // endpoint sem rdfs:domain, rdfs:range nem cardinalidade. Carregar o
+        // bundle de vocabulário garante o modelo inteiro no Fuseki.
+        "http://secti.pe.gov.br/indicador_cti/vocabulary/bundle"
     ]
 }
 
