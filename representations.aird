@@ -114,6 +114,36 @@
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA2.ME1.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME3.oml</semanticResources>
     <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME2.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/context/PBPG.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/context/bolsista.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/context/edital.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/context/projeto.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/BIA.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/PA_BIA.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/metricasBIA/PA1.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/metricasBIA/PA2.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/metricasBIA/PA3.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BIA-claude-opus-5-22-09-2026/metricasBIA/PA4.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-claude-opus-5-18-08-2026-20-18.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-deepseek-v4-pro-18-08-2026-20-37.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-gemini-25-24-08-2026-16-37.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-gemini-35-24-08-2026-16-35.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_0.5b-18-08-2026-22-55.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_1.5b-18-08-2026-23-42.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_14b-18-08-2026-22-27.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_3.0b-18-08-2026-22-40.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_32b-18-08-2026-22-21.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-local-qwen2.5-coder_7.0b-19-08-2026-07-43.oml</semanticResources>
+    <semanticResources>modelagem-programas-llm/export/BPP-openai-gpt-5.6-18-08-2026-21-21.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME3.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME1.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME2.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA10.ME2.oml</semanticResources>
+    <semanticResources>src/oml/secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA10.ME1.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fIZVoJ0UEe-93eZU_6ntLQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mwRF8J0UEe-93eZU_6ntLQ" name="Indicador Editor" repPath="#_mwJxMJ0UEe-93eZU_6ntLQ" changeId="1730992028115">

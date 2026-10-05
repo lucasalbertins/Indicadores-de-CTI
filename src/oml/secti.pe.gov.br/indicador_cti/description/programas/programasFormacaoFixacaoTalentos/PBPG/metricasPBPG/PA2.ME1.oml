@@ -53,6 +53,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	
 	instance Valor_Trabalhos_Prioritarios : formulas:tipovalorMetrica [
 		base:id "ValorTrabalhosPrioritarios_PA2.ME1"
-		formulas:valorMetrica "agilfap.bolsistas.titulados.area_prioritaria"
+		formulas:valorMetrica quantidadeTrabalhosAreasPrioritarias
 	]
 }

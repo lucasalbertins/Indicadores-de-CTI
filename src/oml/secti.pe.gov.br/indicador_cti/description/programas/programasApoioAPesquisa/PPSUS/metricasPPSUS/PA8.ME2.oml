@@ -51,7 +51,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	]
 
 	instance varFontePA8ME2 : formulas:argumento [
-		base:id "arg_fontepa8me2_PA8.ME2"
+		base:id "arg_fontePA8.ME2"
 		formulas:posicao "1"^^xsd:int
 		formulas:nome "Estudantes de Pós-Graduação Titulados"
 		formulas:possuiValor AgilFap_Estudantes_Titulados
@@ -60,6 +60,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 
 	instance AgilFap_Estudantes_Titulados : formulas:tipovalorMetrica [
 		base:id "AgilFapEstudantesTitulados_PA8.ME2"
-		formulas:valorMetrica "agilfap.estudantes.titulados"
+		formulas:valorMetrica quantidadeEstudantesTitulados
 	]
 }

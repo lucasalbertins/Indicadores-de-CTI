@@ -1,0 +1,52 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME2#> as PA9.ME2 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA9.ME2"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA9.ME2"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Integrantes com Vínculo Formal no Sistema de Saúde de PE
+	instance integrantesVinculadosSUS : metricas:metrica [
+		base:id "PA9.ME2_PPSUS"
+		base:nome "Integrantes com Vínculo Formal no Sistema de Saúde de PE"
+		base:descricao "Número de integrantes dos projetos apoiados que possuíam vínculo formal no Sistema de Atenção de Saúde do Estado de Pernambuco"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaIdentidadePA9ME2
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.13
+	]
+
+	// retorna o valor da fonte de dados
+	instance formulaIdentidadePA9ME2 : formulas:formula [
+		base:id "formula_identidade_PA9.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento varFontePA9ME2
+		formulas:formulaDe integrantesVinculadosSUS
+	]
+
+	instance varFontePA9ME2 : formulas:argumento [
+		base:id "arg_fontepa9me2_PA9.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Integrantes com Vínculo Formal no Sistema de Saúde de PE"
+		formulas:possuiValor CNES_Integrantes_Vinculados
+		formulas:argumentoDe formulaIdentidadePA9ME2
+	]
+
+	instance CNES_Integrantes_Vinculados : formulas:tipovalorMetrica [
+		base:id "CNESIntegrantesVinculados_PA9.ME2"
+		formulas:valorMetrica integrantesVinculadosSUS 
+	]
+}

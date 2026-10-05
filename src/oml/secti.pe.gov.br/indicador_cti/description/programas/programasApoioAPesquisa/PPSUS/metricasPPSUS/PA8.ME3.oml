@@ -47,7 +47,19 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 		formulas:estratificadaPor estratEixo
 		formulas:estratificadaPor estratRde
 		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
-		base:agregadoPor PA8.ME2:quantidadeEstudantesTitulados
+		base:agregadoPor PA8.ME2:quantidadeEstudantesTitulados, integrantesDistintosApoiados
+	]
+	
+	instance integrantesDistintosApoiados : metricas:metrica[
+		base:id "PA8.ME3_TI"
+		base:nome "Número total de integrantes distintos dos projetos apoiados no edital"
+		base:descricao "número total de integrantes distintos dos projetos apoiados no edital e, ano a, eixo temático x e RDE r"
+		metricas:finalidade "Maximizar"
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratEixo
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
 	]
 
 	// Fórmula: multiplicação(divisão(numerador, denominador), 100)
@@ -81,7 +93,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 
 	instance Val_Integrantes_Distintos : formulas:tipovalorMetrica [
 		base:id "AgilFapIntegrantesDistintos_PA8.ME3"
-		formulas:valorMetrica "val.integrantes.distintos"
+		formulas:valorMetrica integrantesDistintosApoiados
 	]
 
 	instance formulaMultiplicacao : formulas:formula [

@@ -59,6 +59,6 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 
 	instance AgilFap_Projetos_Apoiados : formulas:tipovalorMetrica [
 		base:id "AgilFapProjetosApoiados_PA2.ME1"
-		formulas:valorMetrica "agilfap.projetos.apoiados"
+		formulas:valorMetrica quantidadeProjetosApoiados
 	]
 }

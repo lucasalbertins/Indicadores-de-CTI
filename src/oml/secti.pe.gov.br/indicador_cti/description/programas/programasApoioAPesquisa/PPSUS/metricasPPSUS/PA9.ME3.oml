@@ -1,0 +1,103 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME3#> as PA9.ME3 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME1#> as PA9.ME1
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA9.ME2#> as PA9.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA9.ME3"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA9.ME3"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Taxa de Fixação de RH Qualificados no Sistema de Atenção de Saúde de Pernambuco
+	instance taxaFixacaoRH : metricas:metrica [
+		base:id "PA9.ME3_PPSUS"
+		base:nome "Taxa de Fixação de RH Qualificados no Sistema de Atenção de Saúde de Pernambuco"
+		base:descricao "Percentual de integrantes dos projetos que mantinham vínculo formal no Sistema de Atenção de Saúde de Pernambuco após 2 anos do fim do projeto"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.13
+		base:agregadoPor PA9.ME2:integrantesVinculadosSUS
+		base:agregadoPor PA9.ME1:totalIntegrantes
+	]
+
+	// Fórmula: multiplicação(divisão(numerador, denominador), 100)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA9.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendo
+		formulas:possuiArgumento argDivisor
+	]
+
+	instance argDividendo : formulas:argumento [
+		base:id "arg_dividendo_PA9.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor Val_Integrantes_Vinculados
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA9.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor Val_Integrantes_Total
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance Val_Integrantes_Vinculados : formulas:tipovalorMetrica [
+		base:id "ValIntegrantesVinculados_PA9.ME3"
+		formulas:valorMetrica PA9.ME2:integrantesVinculadosSUS
+	]
+
+	instance Val_Integrantes_Total : formulas:tipovalorMetrica [
+		base:id "ValIntegrantesTotal_PA9.ME3"
+		formulas:valorMetrica PA9.ME1:totalIntegrantes
+	]
+
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA9.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicando
+		formulas:possuiArgumento argMultiplicador
+		formulas:formulaDe taxaFixacaoRH
+	]
+
+	instance argMultiplicando : formulas:argumento [
+		base:id "arg_multiplicando_PA9.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivisao
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance argMultiplicador : formulas:argumento [
+		base:id "arg_multiplicador_PA9.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valorFormulaDivisao : formulas:tipovalorFormula [
+		base:id "valor_formula_divisao_PA9.ME3"
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance valorLiteral : formulas:tipovalorLiteral [
+		base:id "valor_literal_100_PA9.ME3"
+		formulas:valorLiteral 100
+	]
+}
