@@ -1,0 +1,132 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA3#> as PA3 {
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA2#> as metricasPA2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA3_BIA"
+		base:nome "Ano"
+	]
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA3_BIA"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	instance estratAtividadeEconomica : formulas:estratificacao [
+		base:id "estrat_atividade_economica_PA3_BIA"
+		base:nome "Atividade Econômica"
+	]
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde_PA3_BIA"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA PA3.ME1 - contagem direta da fonte
+	instance PA3.ME1 : metricas:metrica [
+		base:nome "Número de Bolsistas Empregados"
+		base:descricao "Número absoluto de bolsistas egressos BIA que possuem vínculo empregatício formal em Pernambuco após a conclusão do curso, desagregados por ano, área de conhecimento FACEPE, atividade econômica e região de desenvolvimento."
+		base:id "PA3.ME1 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaEmpregados
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratAtividadeEconomica
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2
+	]
+
+	instance formulaEmpregados : formulas:formula [
+		base:id "formula_identidade_PA3.ME1_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argEmpregados
+		formulas:formulaDe PA3.ME1
+	]
+	instance argEmpregados : formulas:argumento [
+		base:id "arg_valor_unico_PA3.ME1_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorEmpregados
+		formulas:argumentoDe formulaEmpregados
+	]
+	instance valorEmpregados : formulas:tipovalorMetrica [
+		base:id "valor_PA3.ME1_BIA"
+		formulas:valorMetrica PA3.ME1
+	]
+
+	// MÉTRICA PA3.ME3 - taxa: multiplicacao(divisao(PA3.ME1, PA2.ME2), 100)
+	instance PA3.ME3 : metricas:metrica [
+		base:nome "Taxa de Bolsistas BIA Empregados"
+		base:descricao "Percentual de bolsistas egressos BIA que estão empregados em relação ao número total de bolsistas concluintes desagregados por ano, grande área de conhecimento FACEPE, atividade econômica e RDE."
+		base:id "PA3.ME3 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultTaxaEmpregados
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratAtividadeEconomica
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesSistemasBasesGovernamentais:FI2.2
+	]
+
+	instance formulaDivTaxaEmpregados : formulas:formula [
+		base:id "formula_divisao_PA3.ME3_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendoEmpregados
+		formulas:possuiArgumento argDivisorEmpregados
+	]
+	instance argDividendoEmpregados : formulas:argumento [
+		base:id "arg_dividendo_PA3.ME3_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valorEmpregadosParaTaxa
+		formulas:argumentoDe formulaDivTaxaEmpregados
+	]
+	instance argDivisorEmpregados : formulas:argumento [
+		base:id "arg_divisor_PA3.ME3_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valorConcluintesParaTaxaEmpregados
+		formulas:argumentoDe formulaDivTaxaEmpregados
+	]
+	instance valorEmpregadosParaTaxa : formulas:tipovalorMetrica [
+		base:id "valorEmpregados_PA3.ME3_BIA"
+		formulas:valorMetrica PA3.ME1
+	]
+	instance valorConcluintesParaTaxaEmpregados : formulas:tipovalorMetrica [
+		base:id "valorConcluintes_PA3.ME3_BIA"
+		formulas:valorMetrica metricasPA2:PA2.ME2
+	]
+
+	instance formulaMultTaxaEmpregados : formulas:formula [
+		base:id "formula_multiplicacao_PA3.ME3_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicandoEmpregados
+		formulas:possuiArgumento argMultiplicadorEmpregados
+		formulas:formulaDe PA3.ME3
+	]
+	instance argMultiplicandoEmpregados : formulas:argumento [
+		base:id "arg_multiplicando_PA3.ME3_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivEmpregados
+		formulas:argumentoDe formulaMultTaxaEmpregados
+	]
+	instance argMultiplicadorEmpregados : formulas:argumento [
+		base:id "arg_multiplicador_PA3.ME3_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorCemEmpregados
+		formulas:argumentoDe formulaMultTaxaEmpregados
+	]
+	instance valorFormulaDivEmpregados : formulas:tipovalorFormula [
+		base:id "valorFormulaDivisao_PA3.ME3_BIA"
+		formulas:valorFormula formulaDivTaxaEmpregados
+	]
+	instance valorCemEmpregados : formulas:tipovalorLiteral [
+		base:id "valorLiteral100_PA3.ME3_BIA"
+		formulas:valorLiteral 100
+	]
+}

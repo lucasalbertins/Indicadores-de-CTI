@@ -1,4 +1,4 @@
-//Conta a quantidade de entradas de um programa
+#Conta a quantidade de entradas de um programa
 
 PREFIX programa: <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#>
 PREFIX canvas: <http://secti.pe.gov.br/indicador_cti/vocabulary/canvas#>

@@ -1,0 +1,19 @@
+# Q12 - Valores de bolsa recebidos, por modalidade
+# Total, media, minimo e maximo repassado aos bolsistas PBPG.
+# Apoia o acompanhamento financeiro das cotas (atividade-chave AC2).
+
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?modalidade
+       (COUNT(DISTINCT ?b) AS ?bolsas)
+       (SUM(?vl)       AS ?totalRecebido)
+       (AVG(?vl)       AS ?mediaPorBolsista)
+       (MIN(?vl)       AS ?menorValor)
+       (MAX(?vl)       AS ?maiorValor)
+WHERE {
+  ?b a bols:bolsista ;
+     bols:nm_modalidade ?modalidade ;
+     bols:vl_recebido   ?vl .
+}
+GROUP BY ?modalidade
+ORDER BY ?modalidade

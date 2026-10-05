@@ -9,7 +9,7 @@
 
 <#service> rdf:type fuseki:Service ;
     rdfs:label          "Indicadores de CTI" ;												# Human readable label for dataset
-    fuseki:name         "Indicadores de CTI" ;												# Name of the dataset in the endpoint url
+    fuseki:name         "indicadores-CTI" ;													# Name of the dataset in the endpoint url (sem espaços: vai para a URL)
     fuseki:serviceReadWriteGraphStore "data" ;											# SPARQL Graph store protocol (read and write)
     fuseki:endpoint 	[ fuseki:operation fuseki:query ;	fuseki:name "sparql"  ] ;	# SPARQL query service
     fuseki:endpoint 	[ fuseki:operation fuseki:shacl ;	fuseki:name "shacl" ] ;		# SHACL query service
@@ -18,7 +18,7 @@
 ## In memory TDB with union graph.
 <#dataset> rdf:type   tdb:DatasetTDB ;
   tdb:location "--mem--" ;
-  # Query timeout on this dataset (1s, 1000 milliseconds)
-  ja:context [ ja:cxtName "arq:queryTimeout" ; ja:cxtValue "1000" ] ;
+  # Query timeout on this dataset (30s, 30000 milliseconds)
+  ja:context [ ja:cxtName "arq:queryTimeout" ; ja:cxtValue "30000" ] ;
   # Make the default graph be the union of all named graphs.
   tdb:unionDefaultGraph true .

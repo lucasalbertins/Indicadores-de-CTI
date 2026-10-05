@@ -1,0 +1,95 @@
+# ============================================================================
+# Q20 - PA1.ME1: estratos criticos (onde a gestao precisa agir)
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Ordena os recortes da Q18 pelo numero ABSOLUTO de cotas nao tituladas - o
+# gestor ve primeiro onde a perda e maior, e nao apenas onde o percentual e
+# pior - e classifica cada um contra duas referencias:
+#   * a meta pactuada (met:valorMeta da metrica ligada a questao PA1); e
+#   * a taxa global do proprio semestre, que revela os estratos que puxam o
+#     indicador para baixo mesmo quando todos cumprem a meta.
+#
+# So entram recortes com ao menos ?minimoCotas cotas encerradas: celulas de 3
+# ou 4 cotas oscilam demais para orientar decisao. Recortes de nivel 0 (o
+# total do semestre) ficam de fora, pois sao a propria referencia.
+# Sobre a unidade de met:valorMeta, ver a nota da Q19.
+# ============================================================================
+
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX base:     <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX plano:    <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#>
+PREFIX met:      <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#>
+PREFIX bolsista: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+PREFIX projeto:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
+
+SELECT ?semestre ?modalidade ?area ?rde
+       ?cotasEncerradas ?titulados ?naoTitulados ?taxaPct
+       ?metaPct ?taxaGlobalPct ?situacao
+WHERE {
+  # Corte minimo de cotas para o recorte entrar na lista.
+  VALUES ?minimoCotas { 10 }
+
+  # --- referencia 1: meta pactuada no plano de avaliacao -------------------
+  {
+    SELECT (MIN(?metaPctInterna) AS ?metaPct)
+    WHERE {
+      ?qa a plano:questaoAvaliacao ;
+          base:id "PA1 - PBPG" ;
+          plano:temMetrica ?m .
+      ?m base:nome ?nomeMetrica ; met:valorMeta ?vm .
+      FILTER( CONTAINS(?nomeMetrica, "Taxa Titula") )
+      BIND( IF(xsd:decimal(?vm) <= 1, xsd:decimal(?vm) * 100, xsd:decimal(?vm)) AS ?metaPctInterna )
+    }
+  }
+
+  # --- referencia 2: taxa global do semestre -------------------------------
+  {
+    SELECT ?semestre (ROUND(10000 * xsd:decimal(SUM(?tit)) / COUNT(DISTINCT ?bg)) / 100 AS ?taxaGlobalPct)
+    WHERE {
+      VALUES ?semestre { "2025.2" }
+      ?bg a bolsista:bolsista ;
+          bolsista:dt_fim_bolsa ?semestre .
+      OPTIONAL { ?bg bolsista:id_semestre_titulacao ?sg }
+      BIND(IF(BOUND(?sg) && ?sg = ?semestre, 1, 0) AS ?tit)
+    }
+    GROUP BY ?semestre
+  }
+
+  # --- cubo de recortes (mesma construcao da Q18) --------------------------
+  {
+    SELECT ?semestre ?modalidade ?area ?rde ?nivel
+           (COUNT(DISTINCT ?b) AS ?cotasEncerradas)
+           (SUM(?ehTitulado)   AS ?titulados)
+    WHERE {
+      # Semestre de referencia do ciclo avaliado: ajuste aqui para outro ciclo.
+      VALUES ?semestre { "2025.2" }
+      ?b a bolsista:bolsista ;
+         bolsista:dt_fim_bolsa  ?semestre ;
+         bolsista:nm_modalidade ?vMod ;
+         bolsista:desenvolve ?p .
+      ?p projeto:nm_area_conhecimento ?vArea ;
+         projeto:nm_rde              ?vRde .
+      OPTIONAL { ?b bolsista:id_semestre_titulacao ?sTitulacao }
+      BIND(IF(BOUND(?sTitulacao) && ?sTitulacao = ?semestre, 1, 0) AS ?ehTitulado)
+      VALUES (?gMod ?gArea ?gRde) {
+        (0 0 0) (1 0 0) (0 1 0) (1 1 0) (0 0 1) (1 0 1) (0 1 1) (1 1 1)
+      }
+      BIND(IF(?gMod  = 1, ?vMod,  "(todas)") AS ?modalidade)
+      BIND(IF(?gArea = 1, ?vArea, "(todas)") AS ?area)
+      BIND(IF(?gRde  = 1, ?vRde,  "(todas)") AS ?rde)
+      BIND(?gMod + ?gArea + ?gRde            AS ?nivel)
+    }
+    GROUP BY ?semestre ?modalidade ?area ?rde ?nivel
+  }
+
+  BIND( ?cotasEncerradas - ?titulados AS ?naoTitulados )
+  BIND( ROUND(10000 * xsd:decimal(?titulados) / ?cotasEncerradas) / 100 AS ?taxaPct )
+  BIND(
+    IF( ?taxaPct < ?metaPct,        "ABAIXO DA META",
+    IF( ?taxaPct < ?taxaGlobalPct,  "ABAIXO DA MEDIA DO CICLO",
+                                    "ACIMA DA MEDIA DO CICLO" ) ) AS ?situacao )
+
+  FILTER( ?nivel > 0 )
+  FILTER( ?cotasEncerradas >= ?minimoCotas )
+}
+ORDER BY DESC(?naoTitulados) ?taxaPct

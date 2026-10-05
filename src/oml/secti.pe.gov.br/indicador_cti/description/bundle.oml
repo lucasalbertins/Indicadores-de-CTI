@@ -40,7 +40,6 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BFP/BFP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/PA_BPP#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/BPP#>
-	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/BIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/PA_BIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PIBIC#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PIBIC/PA_PIBIC#>
@@ -51,8 +50,20 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/PortoDigital/PortoDigital#> 
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/REPEPE#> 
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasInfraestrutura/REPEPE/PA_REPEPE#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/PPSUS#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/PA_PPSUS#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA2.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA5.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME3#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PernambucanasInovadoras/PernambucanasInovadoras#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PernambucanasInovadoras/PA_PernambucanasInovadoras#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PBPG#>
+	// Estudo de caso sintético (109 cotas), versionado. Quem tiver o
+	// bolsistas-PBPG.oml gerado do Tabelão — dado pessoal real, fora do git —
+	// troca esta linha localmente por .../PBPG/bolsistas-PBPG#. Não commitar a
+	// troca: o include não resolvido quebra o build de quem clonar.
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/calculo-metricas-PBPG#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME1#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1.ME2#>
@@ -60,6 +71,20 @@ description bundle <http://secti.pe.gov.br/indicador_cti/description/bundle#> as
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA1ME4#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME1#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA2.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA3.ME3#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA4.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA4.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA4.ME3#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME3#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA5.ME4#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA11.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA11.ME2#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/metricasPBPG/PA14.ME1#>
+	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/BIA#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME1#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME3#>
 	includes <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BPP/metricasBPP/PA1.ME4#>

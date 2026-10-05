@@ -1,0 +1,240 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/metricasBIA/PA1#> as PA1 {
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA1_BIA"
+		base:nome "Ano"
+	]
+	instance estratArea : formulas:estratificacao [
+		base:id "estrat_area_PA1_BIA"
+		base:nome "Grande Área do Conhecimento FACEPE"
+	]
+	instance estratCurso : formulas:estratificacao [
+		base:id "estrat_curso_PA1_BIA"
+		base:nome "Curso de Graduação"
+	]
+	instance estratRDE : formulas:estratificacao [
+		base:id "estrat_rde_PA1_BIA"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA PA1.ME1 - contagem direta da fonte
+	instance PA1.ME1 : metricas:metrica [
+		base:nome "Quantidade Evasão Bolsistas"
+		base:descricao "Número anual de bolsistas BIA que evadiram do curso vinculado, desagregado pela grande área de conhecimento FACEPE, curso, e RDE."
+		base:id "PA1.ME1 - BIA"
+		metricas:finalidade "Minimizar"
+		formulas:possuiFormula formulaQuantidadeEvasao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaQuantidadeEvasao : formulas:formula [
+		base:id "formula_identidade_PA1.ME1_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argQuantidadeEvasao
+		formulas:formulaDe PA1.ME1
+	]
+	instance argQuantidadeEvasao : formulas:argumento [
+		base:id "arg_valor_unico_PA1.ME1_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorQuantidadeEvasao
+		formulas:argumentoDe formulaQuantidadeEvasao
+	]
+	instance valorQuantidadeEvasao : formulas:tipovalorMetrica [
+		base:id "valor_PA1.ME1_BIA"
+		formulas:valorMetrica PA1.ME1
+	]
+
+	// MÉTRICA PA1.ME4 - contagem direta da fonte (denominador de PA1.ME2)
+	instance PA1.ME4 : metricas:metrica [
+		base:nome "Número Total de Bolsistas BIA"
+		base:descricao "Número anual absoluto de bolsistas BIA com bolsa vigente, desagregado por grande área de conhecimento FACEPE, curso e RDE."
+		base:id "PA1.ME4 - BIA"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaTotalBolsistas
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance formulaTotalBolsistas : formulas:formula [
+		base:id "formula_identidade_PA1.ME4_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argTotalBolsistas
+		formulas:formulaDe PA1.ME4
+	]
+	instance argTotalBolsistas : formulas:argumento [
+		base:id "arg_valor_unico_PA1.ME4_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorTotalBolsistas
+		formulas:argumentoDe formulaTotalBolsistas
+	]
+	instance valorTotalBolsistas : formulas:tipovalorMetrica [
+		base:id "valor_PA1.ME4_BIA"
+		formulas:valorMetrica PA1.ME4
+	]
+
+	// MÉTRICA PA1.ME2 - taxa: multiplicacao(divisao(PA1.ME1, PA1.ME4), 100)
+	instance PA1.ME2 : metricas:metrica [
+		base:nome "Taxa Evasão Bolsista"
+		base:descricao "Número anual de bolsistas BIA que evadiram do curso sobre o número total de bolsistas BIA desagregado pela grande área de conhecimento FACEPE, curso e RDE."
+		base:id "PA1.ME2 - BIA"
+		metricas:finalidade "Minimizar"
+		formulas:possuiFormula formulaMultTaxaEvasao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaDivTaxaEvasao : formulas:formula [
+		base:id "formula_divisao_PA1.ME2_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendoEvasao
+		formulas:possuiArgumento argDivisorEvasao
+	]
+	instance argDividendoEvasao : formulas:argumento [
+		base:id "arg_dividendo_PA1.ME2_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valorEvadidos
+		formulas:argumentoDe formulaDivTaxaEvasao
+	]
+	instance argDivisorEvasao : formulas:argumento [
+		base:id "arg_divisor_PA1.ME2_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valorTotalParaTaxa
+		formulas:argumentoDe formulaDivTaxaEvasao
+	]
+	instance valorEvadidos : formulas:tipovalorMetrica [
+		base:id "valorEvadidos_PA1.ME2_BIA"
+		formulas:valorMetrica PA1.ME1
+	]
+	instance valorTotalParaTaxa : formulas:tipovalorMetrica [
+		base:id "valorTotalBolsistas_PA1.ME2_BIA"
+		formulas:valorMetrica PA1.ME4
+	]
+
+	instance formulaMultTaxaEvasao : formulas:formula [
+		base:id "formula_multiplicacao_PA1.ME2_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicandoEvasao
+		formulas:possuiArgumento argMultiplicadorEvasao
+		formulas:formulaDe PA1.ME2
+	]
+	instance argMultiplicandoEvasao : formulas:argumento [
+		base:id "arg_multiplicando_PA1.ME2_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivEvasao
+		formulas:argumentoDe formulaMultTaxaEvasao
+	]
+	instance argMultiplicadorEvasao : formulas:argumento [
+		base:id "arg_multiplicador_PA1.ME2_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorCemEvasao
+		formulas:argumentoDe formulaMultTaxaEvasao
+	]
+	instance valorFormulaDivEvasao : formulas:tipovalorFormula [
+		base:id "valorFormulaDivisao_PA1.ME2_BIA"
+		formulas:valorFormula formulaDivTaxaEvasao
+	]
+	instance valorCemEvasao : formulas:tipovalorLiteral [
+		base:id "valorLiteral100_PA1.ME2_BIA"
+		formulas:valorLiteral 100
+	]
+
+	// MÉTRICA PA1.ME5 - taxa de evasão geral do curso (denominador de PA1.ME3)
+	instance PA1.ME5 : metricas:metrica [
+		base:nome "Taxa Evasão Geral do Curso"
+		base:descricao "Taxa anual de evasão do conjunto dos estudantes do curso de graduação ao qual o bolsista BIA está vinculado, desagregada por grande área de conhecimento FACEPE, curso e RDE."
+		base:id "PA1.ME5 - BIA"
+		metricas:finalidade "Minimizar"
+		formulas:possuiFormula formulaTaxaEvasaoGeral
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaTaxaEvasaoGeral : formulas:formula [
+		base:id "formula_identidade_PA1.ME5_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento argTaxaEvasaoGeral
+		formulas:formulaDe PA1.ME5
+	]
+	instance argTaxaEvasaoGeral : formulas:argumento [
+		base:id "arg_valor_unico_PA1.ME5_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "value"
+		formulas:possuiValor valorTaxaEvasaoGeral
+		formulas:argumentoDe formulaTaxaEvasaoGeral
+	]
+	instance valorTaxaEvasaoGeral : formulas:tipovalorMetrica [
+		base:id "valor_PA1.ME5_BIA"
+		formulas:valorMetrica PA1.ME5
+	]
+
+	// MÉTRICA PA1.ME3 - razão entre a taxa do bolsista e a taxa geral
+	instance PA1.ME3 : metricas:metrica [
+		base:nome "Taxa evasão Bolsista e evasão geral"
+		base:descricao "Evolução anual das taxas de evasão dos bolsistas BIA e da taxa de evasão do curso ao qual o bolsista pertence desagregado pela grande área de conhecimento FACEPE, curso e RDE."
+		base:id "PA1.ME3 - BIA"
+		metricas:finalidade "Minimizar"
+		formulas:possuiFormula formulaRazaoEvasao
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratArea
+		formulas:estratificadaPor estratCurso
+		formulas:estratificadaPor estratRDE
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.5
+	]
+
+	instance formulaRazaoEvasao : formulas:formula [
+		base:id "formula_divisao_PA1.ME3_BIA"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendoRazao
+		formulas:possuiArgumento argDivisorRazao
+		formulas:formulaDe PA1.ME3
+	]
+	instance argDividendoRazao : formulas:argumento [
+		base:id "arg_dividendo_PA1.ME3_BIA"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor valorTaxaBolsista
+		formulas:argumentoDe formulaRazaoEvasao
+	]
+	instance argDivisorRazao : formulas:argumento [
+		base:id "arg_divisor_PA1.ME3_BIA"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor valorTaxaGeral
+		formulas:argumentoDe formulaRazaoEvasao
+	]
+	instance valorTaxaBolsista : formulas:tipovalorMetrica [
+		base:id "valorTaxaBolsista_PA1.ME3_BIA"
+		formulas:valorMetrica PA1.ME2
+	]
+	instance valorTaxaGeral : formulas:tipovalorMetrica [
+		base:id "valorTaxaGeral_PA1.ME3_BIA"
+		formulas:valorMetrica PA1.ME5
+	]
+}

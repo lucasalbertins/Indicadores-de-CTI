@@ -1,0 +1,53 @@
+# ============================================================================
+# Q24 - PA1.ME1 por edital e modalidade: taxa, execucao e custo por titulado
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Recorta a taxa pelo instrumento que a gestao efetivamente opera - o edital -
+# e a coloca ao lado do dinheiro: quanto foi pago em bolsas, qual o custo medio
+# por titulado e quanto do investimento anunciado no edital isso representa.
+# Sustenta as atividades-chave de gestao do ciclo de vida do edital (AC1) e de
+# acompanhamento das cotas (AC2).
+#
+# custoPorTitulado = total pago em bolsas do recorte / titulados do recorte.
+# Nao inclui custo indireto de gestao; e o custo direto de bolsa. Fica vazio
+# quando o recorte nao teve titulado algum.
+# ============================================================================
+
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX base:     <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX bolsista: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+PREFIX projeto:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
+PREFIX edital:   <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/edital#>
+
+SELECT ?semestre ?nomeEdital ?modalidade
+       (COUNT(DISTINCT ?b)   AS ?cotasEncerradas)
+       (SUM(?ehTitulado)     AS ?titulados)
+       (ROUND(10000 * xsd:decimal(SUM(?ehTitulado)) / COUNT(DISTINCT ?b)) / 100 AS ?taxaPct)
+       (xsd:decimal(SUM(?vlRecebido)) AS ?totalPagoEmBolsas)
+       # vazio quando o recorte nao teve nenhum titulado (divisao por zero)
+       (COALESCE(ROUND(100 * xsd:decimal(SUM(?vlRecebido)) / SUM(?ehTitulado)) / 100)
+                                      AS ?custoPorTitulado)
+       (xsd:decimal(SAMPLE(?vlInvestimento)) AS ?investimentoDoEdital)
+WHERE {
+  # Semestre de referencia do ciclo avaliado: ajuste aqui para outro ciclo.
+  VALUES ?semestre { "2025.2" }
+
+  ?b a bolsista:bolsista ;
+     bolsista:dt_fim_bolsa  ?semestre ;
+     bolsista:nm_modalidade ?vMod ;
+     bolsista:desenvolve ?p .
+  ?p projeto:submetidoA ?ed .
+  ?ed base:nome ?nomeEdital .
+
+  OPTIONAL { ?ed edital:vl_investimento      ?vlInvestimento }
+  OPTIONAL { ?b  bolsista:vl_recebido        ?vl }
+  OPTIONAL { ?b  bolsista:id_semestre_titulacao ?sTitulacao }
+  BIND( IF(BOUND(?vl), ?vl, 0)                                 AS ?vlRecebido )
+  BIND( IF(BOUND(?sTitulacao) && ?sTitulacao = ?semestre, 1, 0) AS ?ehTitulado )
+
+  # Uma linha por modalidade e uma linha "(todas)" por edital.
+  VALUES ?gMod { 0 1 }
+  BIND( IF(?gMod = 1, ?vMod, "(todas)") AS ?modalidade )
+}
+GROUP BY ?semestre ?nomeEdital ?modalidade
+ORDER BY ?nomeEdital ?modalidade

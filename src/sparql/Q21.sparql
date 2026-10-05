@@ -1,0 +1,46 @@
+# ============================================================================
+# Q21 - PA1.ME1: cotas encerradas SEM titulacao (lista de acompanhamento)
+# ============================================================================
+# Estudo de caso: PA1.ME1 - PBPG "Taxa de Titulacao".
+# Abre o complemento do numerador: as cotas que encerraram no semestre e nao
+# tem titulacao registrada. E a informacao operacional que sustenta a taxa -
+# quem precisa de prestacao de contas, prorrogacao ou tomada de contas.
+# Alimenta tambem PA1.ME3 (Taxa Nao Titulacao) e PA1.ME4 (Taxa Tomada Contas).
+#
+# ?situacaoDefesa distingue quem ja depositou dissertacao/tese mas ainda nao
+# consta titulado (pendencia de registro) de quem sequer defendeu.
+# ============================================================================
+
+PREFIX base:     <http://secti.pe.gov.br/indicador_cti/vocabulary/base#>
+PREFIX bolsista: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+PREFIX projeto:  <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/projeto#>
+
+SELECT ?nome ?cpf ?idBolsa ?modalidade ?area ?rde ?status ?situacaoDefesa
+       ?nomeEdital ?valorRecebido ?tituloProjeto
+WHERE {
+  # Semestre de referencia do ciclo avaliado: ajuste aqui para outro ciclo.
+  VALUES ?semestre { "2025.2" }
+
+  ?b a bolsista:bolsista ;
+     bolsista:dt_fim_bolsa  ?semestre ;
+     base:nome              ?nome ;
+     bolsista:nr_cpf        ?cpf ;
+     bolsista:nm_modalidade ?modalidade ;
+     bolsista:desenvolve ?p .
+  ?p base:nome                    ?tituloProjeto ;
+     projeto:nm_area_conhecimento ?area ;
+     projeto:nm_rde               ?rde .
+
+  # sem titulacao registrada no semestre
+  FILTER NOT EXISTS { ?b bolsista:id_semestre_titulacao ?semestre }
+
+  OPTIONAL { ?b bolsista:nm_status    ?status }
+  OPTIONAL { ?b bolsista:id_bolsa     ?idBolsa }
+  OPTIONAL { ?b bolsista:vl_recebido  ?valorRecebido }
+  OPTIONAL { ?b bolsista:id_semestre_defesa ?semDefesa }
+  OPTIONAL { ?p projeto:submetidoA/base:nome ?nomeEdital }
+
+  BIND( IF(BOUND(?semDefesa), "DEFENDEU, TITULACAO NAO REGISTRADA",
+                              "SEM DEFESA REGISTRADA") AS ?situacaoDefesa )
+}
+ORDER BY ?area ?modalidade ?rde ?nome

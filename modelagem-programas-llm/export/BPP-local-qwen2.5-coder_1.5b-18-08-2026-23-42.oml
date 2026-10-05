@@ -1,0 +1,113 @@
+```oml
+<canvas:Canvas xmlns="http://secti.pe.gov.br/indicador_cti/vocabulary/base#"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <canvas:Title>Programa de Bolsas de Pós-Graduação (PBPG) - Desenvolvimento da Ontologia dos Indicadores de Ciência, Tecnologia e Inovação</canvas:Title>
+    <canvas:Description>This canvas outlines the design and implementation of the evaluation plan for the Programa de Bolsas de Pós-Graduação (PBPG), focusing on the development of an ontology to support the analysis and evaluation of impact.</canvas:Description>
+    <canvas:Author>Prof. Dr. [Your Name]</canvas:Author>
+    <canvas:Date>[Current Date]</canvas:Date>
+    <canvas:Version>07/07/2026</canvas:Version>
+
+    <!-- Define the ontology structure -->
+    <canvas:Ontology>
+        <canvas:Class name="ProgramaCTI" extends="base:EntidadeNomeavel, base:EntidadeIdentificavel">
+            <canvas:Property name="nome" type="xsd:string"/>
+            <canvas:Property name="descricao" type="xsd:string"/>
+            <canvas:Property name="id" type="xsd:string"/>
+            <canvas:Relation name="vinculadoA" from="ProgramaCTI" to="programaCTI"/>
+        </canvas:Class>
+        <!-- Add more classes as needed -->
+    </canvas:Ontology>
+
+    <!-- Define the ontology instances -->
+    <canvas:Instance id="PR1" type="ProgramaCTI">
+        <base:name>Programa de Bolsas de Pós-Graduação</base:name>
+        <base:description>Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas de estudo para alunos de pós-graduação.</base:description>
+        <base:id>PR1</base:id>
+        <programa:possuiParceiros>
+            <parceiro type="PC1.10">SECTI-PE</parceiro>
+            <parceiro type="PC1.2">SEPLAG-PE</parceiro>
+            <parceiro type="PC1.3">SEE-PE</parceiro>
+            <parceiro type="PC1.4">SES-PE</parceiro>
+            <parceiro type="PC1.5">SAD-PE</parceiro>
+            <parceiro type="SEDEPE"></parceiro>
+            <parceiro type="PC1.6">SECMULHER-PE</parceiro>
+            <parceiro type="PC1.7">SDEC-PE</parceiro>
+            <parceiro type="PC1.8">ATI-PE</parceiro>
+            <parceiro type="PC1.9">FACEPE</parceiro>
+            <parceiro type="PC1.10">Secretarias e órgãos do governo estadual</parceiro>
+            <parceiro type="PC2.5">FINEP</parceiro>
+            <parceiro type="PC2.6">CAPES/MEC</parceiro>
+            <parceiro type="PC2.7">CNPq/MCTI</parceiro>
+            <parceiro type="PC2.9">Agências internacionais de fomento</parceiro>
+            <parceiro type="PC3.3">ICTs em geral</parceiro>
+            <parceiro type="PC3.5">ICTs / IES - Federais e Estaduais</parceiro>
+            <parceiro type="PC3.6">ICTs / IES - Autarquias Municipais</parceiro>
+            <parceiro type="PC3.7">ICTs / IES - Privadas</parceiro>
+            <parceiro type="PC3.8">Laboratórios Multiusuários</parceiro>
+            <parceiro type="PC3.9">Acervos Científicos</parceiro>
+            <parceiro type="PC4.1">Empresas públicas em geral</parceiro>
+            <parceiro type="PC4.2">Empresas privadas em geral</parceiro>
+            <parceiro type="PC4.3">Empresas privadas - MPEs</parceiro>
+            <parceiro type="PC4.4">Empresas privadas - Médias e Grandes</parceiro>
+            <parceiro type="PC4.5">Empresas privadas - de base tecnológica e startups</parceiro>
+            <parceiro type="PC4.6">Cooperativas, associações e outras organizações afins</parceiro>
+            <parceiro type="PC4.7">Sistema S (Sebrae, Senac, Senai e SESC)</parceiro>
+            <parceiro type="PC4.8">Neoenergia</parceiro>
+            <parceiro type="PC4.9">Provedores de internet</parceiro>
+            <parceiro type="PC4.10">Apex Brasil</parceiro>
+        </programa:possuiParceiros>
+        <programa:condicionadoPor>
+            <fator type="F1.AM1">Cortes e contingenciamento de recursos estaduais para CT&I</fator>
+            <fator type="F1.AM2">Mercado de trabalho aquecido</fator>
+            <fator type="F1.AM3">Baixa atratividade das bolsas</fator>
+            <fator type="F2.AM1">Estrutura administrativa de suporte ao BPP insuficiente</fator>
+            <fator type="F4.AM1">Evasão dos estudantes</fator>
+            <fator type="F4.AM2">Falta de aderência das dissertações e teses com desafios e problemas relevantes do estado de Pernambuco.</fator>
+        </programa:condicionadoPor>
+        <programa:recebeEntradas>
+            <entrada type="EN1.1">Orçamento estadual - FACEPE</entrada>
+            <entrada type="EN1.5">Contrapartida Financeira de instituições parceira e proponentes</entrada>
+            <entrada type="EN2.1">Sistema AgilFAP</entrada>
+            <entrada type="EN3.1">RH FACEPE</entrada>
+            <entrada type="EN3.5">Câmaras de assessoramento da FACEPE</entrada>
+            <entrada type="EN3.7">Avaliadores externos e ad-hoc</entrada>
+        </programa:recebeEntradas>
+        <programa:executa>
+            <atividade type="AC1">Gestão do ciclo de vida da concessão, divulgação, julgamento e resultados</atividade>
+            <atividade type="AC2">Gestão das bolsas PBPG</atividade>
+            <atividade type="AC3">Acompanhamento técnico do BPP</atividade>
+            <atividade type="AC4">Manutenção evolutiva e corretiva do AgilFAP</atividade>
+            <atividade type="AC5">Gestão de parcerias com entes públicos e privados: prospecção, formalização</atividade>
+            <atividade type="AC6">Monitoramento dos indicadores de desempenho e impacto do BPP</atividade>
+            <atividade type="AC7">Avaliação do BPP</atividade>
+        </programa:executa>
+        <programa:geraSaidas>
+            <saida type="SA1">Edital PBPG gerenciado com sucesso</saida>
+            <saida type="SA2">Bolsas implementadas e pagas de acordo com o planejamento</saida>
+            <saida type="SA3">Relatórios parciais e final de acompanhamento dos bolsistas PBPG</saida>
+            <saida type="SA4">AgilFAP em operação plena para atendimento ao BPP</saida>
+            <saida type="SA5">Parcerias formalizadas por meio de instrumentos legais como convênios, acordos de cooperação técnica, etc.</saida>
+            <saida type="SA6">Infográfico atualizado de Indicadores de desempenho e impacto do BPP</saida>
+            <saida type="SA7">Plano de Avaliação do BPP executado.</saida>
+        </programa:geraSaidas>
+        <programa:produzResultados>
+            <resultado type="RE.CP1">Aumento do número de mestres e doutores titulados no Estado</resultado>
+            <resultado type="RE.CP2">Aumento da produção científica publicada em eventos e periódicos qualificados e de alto impacto</resultado>
+            <resultado type="RE.CP3">Aumento do número de patentes depositadas e programas de software registrados</resultado>
+            <resultado type="RE.CP4">Incremento do estoque de conhecimento em áreas estratégicas para o Estado</resultado>
+            <resultado type="RE.CP5">Maior intercâmbio científico nacional e internacional</resultado>
+            <resultado type="RE.MP1">Aumento da fixação de mestres e doutores pelo ecossistema de CT&I do Estado, inclusive no interior</resultado>
+            <resultado type="RE.MP2">Aumento do conceito CAPES dos PPGs novos e emergentes</resultados>
+            <resultado type="RE.MP3">Manutenção do conceito CAPES dos PPGs de excelência</resultados>
+            <resultado type="RE.MP4">Aumento do número de startups de base científica e tecnológica e spin-offs acadêmicos</resultados>
+            <resultado type="RE.MP5">Aumento das inovações para Governo, Empresas e Sociedade</resultados>
+            <resultado type="RE.LP1">Evolução dos índices econômicos, sociais e ambientais do Estado</resultados>
+            <resultado type="RE.LP2">Fortalecimento das cadeias produtivas de setores estratégicos para Pernambuco</resultados>
+            <resultado type="RE.LP3">Aumento da quantidade de licenciamentos de propriedade intelectual pelo Governo e Empresas Privadas</resultados>
+            <resultado type="RE.LP4">Aumento da empregabilidade dos egressos PBPG de alto nível salarial.</resultados>
+        </programa:produzResultados>
+    </canvas:Instance>
+
+    <!-- Add more instances as needed -->
+</canvas:Canvas>
+```

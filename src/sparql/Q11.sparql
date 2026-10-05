@@ -1,0 +1,15 @@
+# Q11 - Bolsas por ano de inicio de vigencia e modalidade
+# Substitui o perfil demografico: o Tabelao nao traz nascimento, cidade nem
+# nacionalidade. O ano sai de dt_inicio_bolsa, gravada como "dd/mm/aaaa".
+
+PREFIX bols: <http://secti.pe.gov.br/indicador_cti/vocabulary/AvaliacaoProgramas/PBPG/bolsista#>
+
+SELECT ?anoInicio ?modalidade (COUNT(DISTINCT ?b) AS ?bolsas)
+WHERE {
+  ?b a bols:bolsista ;
+     bols:nm_modalidade   ?modalidade ;
+     bols:dt_inicio_bolsa ?dt .
+  BIND( SUBSTR(?dt, 7, 4) AS ?anoInicio )
+}
+GROUP BY ?anoInicio ?modalidade
+ORDER BY DESC(?anoInicio) ?modalidade
