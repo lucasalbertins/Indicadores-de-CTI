@@ -63,4 +63,8 @@ description <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publi
 		base:nome "PPGs"
 		base:id "PU1.15"
 	]
+	instance PU1.16 : canvas:PublicoAlvo [
+		base:nome "Mulheres pesquisadoras doutoras"
+		base:id "PU1.16"
+	]
 }

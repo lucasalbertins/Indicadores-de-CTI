@@ -47,4 +47,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:nome "Perda de adesão do corpo docente aos programas de capacitação correlatos via atividades de treinamento"
 		base:id "FE4.AM4"
 	]
+	
+	instance FE4.AM5 : canvas:Ameaca [
+		base:nome "Persistência de barreiras culturais para mulheres no empreendedorismo inovador, em especial na área de tecnologia"
+		base:id "FE4.AM5"
+	]
 }

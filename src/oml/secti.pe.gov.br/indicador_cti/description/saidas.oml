@@ -140,4 +140,57 @@ do programa"
 		base:nome "Avaliação de impacto do programa publicada periodicamente, evidenciando resultados e benefícios sociais, educacionais e econômicos"
 		base:id "SA34"
 	]
+	
+	instance SA35 : canvas:Saida [
+		base:nome "Edital de lançamento"
+		base:id "SA35"
+	]
+	instance SA36 : canvas:Saida [
+		base:nome "Homologação e publicação dos resultados finais"
+		base:id "SA36"
+	]
+	instance SA37 : canvas:Saida [
+		base:nome "Recursos financeiros aplicados"
+		base:id "SA37"
+	]
+	instance SA38 : canvas:Saida [
+		base:nome "Relatórios técnicos parciais"
+		base:id "SA38"
+	]
+	instance SA39 : canvas:Saida [
+		base:nome "Projetos apresentados em eventos de avaliação"
+		base:id "SA39"
+	]
+	instance SA40 : canvas:Saida [
+		base:nome "Relatório final técnico e financeiro aprovado"
+		base:id "SA40"
+	]
+	instance SA41 : canvas:Saida [
+		base:nome "Prioridades temáticas de pesquisa em saúde definidas"
+		base:id "SA41"
+	]
+	instance SA42 : canvas:Saida [
+		base:nome "Resultado do enquadramento das propostas (enquadradas e desenquadradas) publicado"
+		base:id "SA42"
+	]
+	instance SA43 : canvas:Saida [
+		base:nome "Pareceres ad hoc emitidos"
+		base:id "SA43"
+	]
+	instance SA44 : canvas:Saida [
+		base:nome "Pareceres de mérito técnico e relevância socio sanitária pelos especialistas emitidos"
+		base:id "SA44"
+	]
+	instance SA45 : canvas:Saida [
+		base:nome "Resultado preliminar da análise e julgamento publicado"
+		base:id "SA45"
+	]
+	instance SA46 : canvas:Saida [
+		base:nome "Termos de Outorga de projetos de pesquisa assinados"
+		base:id "SA46"
+	]
+	instance SA47 : canvas:Saida [
+		base:nome "Seminário Marco Zero com apresentação dos projetos aprovados à comunidade científica, equipe técnica da saúde e sociedade civil"
+		base:id "SA47"
+	]
 }

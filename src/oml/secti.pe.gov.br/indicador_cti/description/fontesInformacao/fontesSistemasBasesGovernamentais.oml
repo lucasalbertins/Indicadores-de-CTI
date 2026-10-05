@@ -49,4 +49,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/f
 		base:nome "Contrato coorporativo dos serviços de telemática do governo"
 		base:id "FI2.11"
 	]
+	
+	instance FI2.12 : planoAvaliacao:fonteInformacao [
+		base:nome "Plataforma Pesquisa Saúde (TABNET/MS)"
+		base:id "FI2.12"
+	]
+	
+	instance FI2.13 : planoAvaliacao:fonteInformacao [
+		base:nome "Cadastro Nacional de Estabelecimentos de Saúde (CNES/DATASUS/MS)"
+		base:id "FI2.13"
+	]
+	 
 }

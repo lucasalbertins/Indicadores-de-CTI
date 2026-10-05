@@ -23,7 +23,6 @@ vocabulary <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/form
 	
 	
 	aspect valordeArgumento < base:EntidadeIdentificavel
-	
 	concept tipovalorLiteral < valordeArgumento
 	concept tipovalorMetrica < valordeArgumento 
 	concept tipovalorFormula < valordeArgumento

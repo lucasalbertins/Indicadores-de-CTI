@@ -1,0 +1,191 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PernambucanasInovadoras/PernambucanasInovadoras#> as PernambucanasInovadoras {
+	
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInfraestruturaFisica#> as entradasInfraestruturaFisica
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAcademiaICTs#> as publicosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosEmpresasEmpreendedores#> as publicosEmpresasEmpreendedores
+	extends <http://secti.pe.gov.br/indicador_cti/description/publicosAlvo/publicosAmbientesInovacao#> as publicosAmbientesInovacao
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	instance CanvasPR10 : canvas:canvas [
+		base:nome "Canvas do Programa Pernambucanas Inovadoras"
+		base:id "C-PR10"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-08-25T00:00:00"^^xsd:dateTime
+		canvas:possuiParceiros parceirosGoverno:PC1.1, parceirosGoverno:PC1.6, parceirosGoverno:PC1.7, parceirosAgenciasFomento:PC2.1, parceirosAgenciasFomento:PC2.3, parceirosAcademiaICTs:PC3.1, parceirosAcademiaICTs:PC3.3,
+		parceirosAcademiaICTs:PC3.4, parceirosAcademiaICTs:PC3.5, parceirosAcademiaICTs:PC3.6, parceirosEmpresas:PC4.3, parceirosEmpresas:PC4.5, parceirosEmpresas:PC4.6
+		canvas:condicionadoPor fatoresCenarioSocialEducacional:FE4.AM5, fatoresCenarioEconomico:FE1.AM8, fatoresCenarioInstitucionalLegal:FE2.AM8, fatoresCenarioEconomico:FE1.OP2,
+		fatoresCenarioInstitucionalLegal:FE2.OP3, fatoresCenarioInstitucionalLegal:FE2.OP4
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.4, entradasDadosSistemasPlataformas:EN2.1, entradasDadosSistemasPlataformas:EN2.5,
+		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasCapitalHumano:EN3.7, entradasInfraestruturaFisica:EN4.3
+		canvas:executa atividadeChave:AC1, atividadeChave:AC26, atividadeChave:AC27, atividadeChave:AC28, atividadeChave:AC29, atividadeChave:AC30, atividadeChave:AC31
+		canvas:geraSaidas saida:SA35, saida:SA36,saida:SA37, saida:SA38, saida:SA39, saida:SA40
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.CP5, RE.MP1, RE.MP2, RE.LP1
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7
+	]
+
+	instance PR10 : programa:programaCTI [
+		base:nome "Pernambucanas Inovadoras"
+		base:descricao "Programa de apoio a pesquisadoras vinculadas às ICT-PE em projetos de pesquisa que se convertam em soluções inovadoras de impacto social e/ou econômico, fortalecendo o protagonismo feminino em iniciativas de empreendedorismo no Sistema de CT&I de Pernambuco"
+		base:id "PR10"
+		programa:temCanvas CanvasPR10
+	]
+
+	// Relações Pernambucanas Inovadoras --> Público-Alvo
+	relation instance CanvasPR10.direcionadoA.PU1.16 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAcademiaICTs:PU1.16
+		base:tipo "direto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU3.8 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosEmpresasEmpreendedores:PU3.8
+		base:tipo "direto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU1.10 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAcademiaICTs:PU1.10
+		base:tipo "direto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU1.11 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAcademiaICTs:PU1.11
+		base:tipo "direto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU1.14 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAcademiaICTs:PU1.14
+		base:tipo "direto"
+	]
+	// Indiretos
+	relation instance CanvasPR10.direcionadoA.PU3.2 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosEmpresasEmpreendedores:PU3.2
+		base:tipo "indireto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU3.5 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosEmpresasEmpreendedores:PU3.5
+		base:tipo "indireto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU3.6 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosEmpresasEmpreendedores:PU3.6
+		base:tipo "indireto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU4.1 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAmbientesInovacao:PU4.1
+		base:tipo "indireto"
+	]
+	relation instance CanvasPR10.direcionadoA.PU4.5 : canvas:direcionadoA [
+		from CanvasPR10
+		to publicosAmbientesInovacao:PU4.5
+		base:tipo "indireto"
+	]
+
+
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Apoiar pesquisadoras vinculadas às ICT-PE em projetos de pesquisa que se convertam em soluções inovadoras de impacto social e/ou econômico, fortalecendo o protagonismo feminino em iniciativas de empreendedorismo no Sistema de CT&I de Pernambuco"
+		base:id "OB.GE - PernambucanasiInovadoras"
+	]
+	
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Incentivar o protagonismo feminino e reduzir disparidades de gênero em projetos de inovação no Sistema Estadual de CT&I"
+		base:id "OB.ES1 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.CP1, RE.CP2
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a liderança feminina em startups, spin-offs e empresas de base tecnológica no Ecossistema de Inovação do Estado"
+		base:id "OB.ES2 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.MP2
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Promover maior integração entre academia (ICTs) e demais agentes do Sistema Estadual de CT&I (empresa, governo, associações) a partir das pesquisadoras atuantes no estado"
+		base:id "OB.ES3 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.CP3
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar o desenvolvimento de inovações (protótipo, piloto, novos produtos, serviços e processos) por meio das pesquisadoras beneficiadas pelo Programa"
+		base:id "OB.ES4 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.MP1
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Preparar as pesquisadoras beneficiadas para progredir na esteira/trilha dos programas de empreendedorismo inovador do estado, ampliando a probabilidade de sucesso nessa esteira/trilha"
+		base:id "OB.ES5 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.LP1
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Ampliar a diversidade social (com maior participação das mulheres pretas, indígenas, trans, travestis e/ou PCDs) nas políticas de CT&I do estado"
+		base:id "OB.ES6 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.CP4
+	]
+	instance OB.ES7 : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar os projetos de inovação liderados por mulheres nas ICT-PE do interior do estado"
+		base:id "OB.ES7 - PernambucanasiInovadoras"
+		canvas:buscaAtingir RE.CP5
+	]
+
+	// RESULTADOS ESPERADOS
+	// Curto Prazo (0 a 1 ano)
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do número de projetos de inovação liderados por mulheres em Pernambuco"
+		base:id "RE.CP1 - PernambucanasiInovadoras"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Redução da desigualdade de gênero e das disparidades de representatividade no Sistema Estadual de CT&I"
+		base:id "RE.CP2 - PernambucanasiInovadoras"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Integração de pesquisadoras em projetos de inovação realizado em parceria entre as ICT-PE com os demais atores do sistema de CT&I"
+		base:id "RE.CP3 - PernambucanasiInovadoras"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Ampliação da diversidade social (mulheres pretas, indígenas, trans, travestis e PCD) nos projetos de inovação do estado"
+		base:id "RE.CP4 - PernambucanasiInovadoras"
+		canvas:prazo "curto"
+	]
+	instance RE.CP5 : canvas:ResultadoEsperado [
+		base:nome "Aumento da capilaridade regional do programa, com crescimento no número de projetos aprovados coordenados por pesquisadoras vinculadas às ICT-PE fora da Região Metropolitana do Recife (RMR)"
+		base:id "RE.CP5 - PernambucanasiInovadoras"
+		canvas:prazo "curto"
+	]
+
+	// Médio Prazo (De 1 a 2 anos)
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Novos produtos, serviços ou processos em desenvolvimento (piloto ou protótipo), resultantes da transformação do conhecimento científico em soluções inovadoras"
+		base:id "RE.MP1 - PernambucanasiInovadoras"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Aumento de startups, spinoff e empresas de base tecnológica lideradas por mulheres"
+		base:id "RE.MP2 - PernambucanasiInovadoras"
+		canvas:prazo "médio"
+	]
+
+	// Longo Prazo (acima de 2 anos)
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do sucesso (participação) das pesquisadoras beneficiadas pelo PPI na esteira/trilha dos programas de empreendedorismo inovador do estado"
+		base:id "RE.LP1 - PernambucanasiInovadoras"
+		canvas:prazo "longo"
+	]
+}

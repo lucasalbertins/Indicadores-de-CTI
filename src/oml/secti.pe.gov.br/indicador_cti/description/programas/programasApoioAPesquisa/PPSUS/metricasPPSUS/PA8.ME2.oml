@@ -1,0 +1,65 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME2#> as PA8.ME2 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA8.ME2"
+		base:nome "Modalidade Acadêmica"
+	]
+
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA8.ME2"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratEixo : formulas:estratificacao [
+		base:id "estrat_eixo_PA8.ME2"
+		base:nome "Eixo Temático"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA8.ME2"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Estudantes de Pós-Graduação Titulados
+	instance quantidadeEstudantesTitulados : metricas:metrica [
+		base:id "PA8.ME2_PPSUS"
+		base:nome "Estudantes de Pós-Graduação Titulados"
+		base:descricao "Número de estudantes de pós-graduação integrantes dos projetos apoiados titulados até 2 anos após o encerramento do projeto"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaIdentidadePA8ME2
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratEixo
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+	]
+
+	// retorna o valor da fonte de dados
+	instance formulaIdentidadePA8ME2 : formulas:formula [
+		base:id "formula_identidade_PA8.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento varFontePA8ME2
+		formulas:formulaDe quantidadeEstudantesTitulados
+	]
+
+	instance varFontePA8ME2 : formulas:argumento [
+		base:id "arg_fontepa8me2_PA8.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Estudantes de Pós-Graduação Titulados"
+		formulas:possuiValor AgilFap_Estudantes_Titulados
+		formulas:argumentoDe formulaIdentidadePA8ME2
+	]
+
+	instance AgilFap_Estudantes_Titulados : formulas:tipovalorMetrica [
+		base:id "AgilFapEstudantesTitulados_PA8.ME2"
+		formulas:valorMetrica "agilfap.estudantes.titulados"
+	]
+}

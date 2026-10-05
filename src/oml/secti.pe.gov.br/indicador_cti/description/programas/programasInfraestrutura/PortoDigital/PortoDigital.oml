@@ -41,7 +41,7 @@ description <http://secti.pe.gov.br/indicador_cti/description/programas/programa
 	instance PR13 : programa:programaCTI [
 		base:nome "Porto Digital"
 		base:descricao "Programa voltado ao fortalecimento do ecossistema de inovação e empreendedorismo inovador em Pernambuco." 
-		base:id PR13
+		base:id "PR13"
 		programa:temCanvas CanvasPR13
 		//programa:temPlanoAvaliacao PA_PortoDigital:
 		

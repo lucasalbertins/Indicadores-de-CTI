@@ -1,0 +1,380 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PernambucanasInovadoras/PA_PernambucanasInovadoras#> as PA_PernambucanasInovadoras {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PernambucanasInovadoras/PernambucanasInovadoras#> as PernambucanasInovadoras
+	
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	
+	instance PAV10 : planoAvaliacao:planoAvaliacao [
+		base:nome "Plano de Avaliação do Programa Pernambucanas Inovadoras"
+		base:id "PA-PR10"
+		base:versao "V1-Final"
+		base:dataCriacao "2026-08-25T00:00:00"^^xsd:dateTime
+		planoAvaliacao:temQuestaoAvaliacao PA1, PA2, PA3, PA4, PA5, PA6, PA7, PA8
+	]
+	
+	// Perguntas de Avaliação (PA)
+	//===================================================================
+
+	instance PA1 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução do número de projetos de inovação liderados/coordenados por mulheres na FACEPE?"
+		base:id "PA1 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA1.ME1
+		planoAvaliacao:temEscopo PA1.ES
+		planoAvaliacao:temMetodologia PA1.MA1, PA1.MA4
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.CP1
+	]
+	instance PA2 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução da Taxa de Liderança Feminina nos projetos de inovação na FACEPE?"
+		base:id "PA2 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA2.ME1, PA2.ME2, PA2.ME3
+		planoAvaliacao:temEscopo PA2.ES
+		planoAvaliacao:temMetodologia PA2.MA1, PA2.MA4
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.CP1
+	]
+	instance PA3 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução do número de mulheres na liderança/chefia de startups, spin-offs e empresas de base tecnológica no Ecossistema de Inovação do Estado?"
+		base:id "PA3 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
+		planoAvaliacao:temMetrica PA3.ME1
+		planoAvaliacao:temEscopo PA3.ES
+		planoAvaliacao:temMetodologia PA3.MA1, PA3.MA4
+		planoAvaliacao:temLimitacao LIM1
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.MP2
+	]
+	instance PA4 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução da relação das pesquisadoras das ICTs com os demais agentes do Sistema de CT&I?"
+		base:id "PA4 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA4.ME1, PA4.ME2
+		planoAvaliacao:temEscopo PA4.ES
+		planoAvaliacao:temMetodologia PA4.MA1, PA4.MA4
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.CP2
+	]
+	instance PA5 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Em que medida os projetos apoiados pelo Programa resultaram em inovações em seus diferentes estágios?"
+		base:id "PA5 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Alto"
+		planoAvaliacao:risco "Alto"
+		planoAvaliacao:temMetrica PA5.ME1, PA5.ME2, PA5.ME3, PA5.ME4
+		planoAvaliacao:temEscopo PA5.ES
+		planoAvaliacao:temMetodologia PA5.MA1
+		planoAvaliacao:temLimitacao LIM1, LIM2
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.MP1
+	]
+	instance PA6 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a probabilidade de uma beneficiária do PPI progredir na esteira/trilha dos programas de empreendedorismo inovador da FACEPE/SECTI?"
+		base:id "PA6 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA6.ME1, PA6.ME2, PA6.ME3, PA6.ME4, PA6.ME5, PA6.ME6, PA6.ME7
+		planoAvaliacao:temEscopo PA6.ES
+		planoAvaliacao:temMetodologia PA6.MA1, PA6.MA4
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.LP1
+	]
+	instance PA7 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Como os critérios de diversidade estão sendo efetivamente aplicados na seleção?"
+		base:id "PA7 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA7.ME1
+		planoAvaliacao:temEscopo PA7.ES
+		planoAvaliacao:temMetodologia PA7.MA1, PA7.MA4
+		planoAvaliacao:temLimitacao LIM3
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.CP3
+	]
+	instance PA8 : planoAvaliacao:questaoAvaliacao [
+		base:nome "Qual a evolução da taxa de interiorização de projetos de inovação coordenados por mulheres alcançada pelo programa?"
+		base:id "PA8 - PernambucanasInovadoras"
+		planoAvaliacao:custo "Baixo"
+		planoAvaliacao:risco "Baixo"
+		planoAvaliacao:temMetrica PA8.ME1, PA8.ME2
+		planoAvaliacao:temEscopo PA8.ES
+		planoAvaliacao:temMetodologia PA8.MA1, PA8.MA4
+		planoAvaliacao:alinhaComResultado PernambucanasInovadoras:RE.CP5
+	]
+
+	// Métricas (ME) e Fontes de Informação (FI)
+
+	instance PA1.ME1 : metricas:metrica [
+		base:nome "Quantidade Projetos Liderados por Mulheres"
+		base:descricao "Número de projetos de inovação aprovados na FACEPE liderados/coordenados por mulheres, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA1.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance PA2.ME1 : metricas:metrica [
+		base:nome "Quantidade Projetos Liderados por Mulheres"
+		base:descricao "Número de projetos de inovação aprovados na FACEPE liderados/coordenados por mulheres, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA2.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA2.ME2 : metricas:metrica [
+		base:nome "Quantidade Total Projetos de Inovação"
+		base:descricao "Total de projetos de inovação aprovados na FACEPE, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA2.ME2 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA2.ME3 : metricas:metrica [
+		base:nome "Taxa Liderança Feminina"
+		base:descricao "Taxa de Liderança Feminina nos projetos de inovação: participação percentual de projetos de inovação coordenados por mulheres no total de 
+projetos de inovação da FACEPE, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA2.ME3 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance PA3.ME1 : metricas:metrica [
+		base:nome "Quantidade Mulheres em Liderança Startups"
+		base:descricao "Número de mulheres na liderança/chefia de startups, spin-offs e empresas de base tecnológica dos projetos apoiados pelo programa, por ano e 
+Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA3.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
+	]
+
+	instance PA4.ME1 : metricas:metrica [
+		base:nome "Quantidade Agentes CT&I Relacionados"
+		base:descricao "Número total de agentes do Sistema Estadual de CT&I diferentes (CNPJ) relacionados nos projetos apoiados no Programa, por ano e Região de 
+Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA4.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA4.ME2 : metricas:metrica [
+		base:nome "Adensamento Institucional"
+		base:descricao "Adensamento institucional: número médio de agentes diferentes (CNPJ) do Sistema Estadual de CT&I relacionados nos projetos apoiados no 
+Programa por projeto, por ano e Região de Desenvolvimento de Pernambuco (RDE)."
+		base:id "PA4.ME2 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance PA5.ME1 : metricas:metrica [
+		base:nome "Quantidade Total Projetos Aprovados"
+		base:descricao "Número total de projetos aprovados, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA5.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
+	]
+	instance PA5.ME2 : metricas:metrica [
+		base:nome "Quantidade Projetos com Resultado Técnico"
+		base:descricao "Número de projetos com protótipo, piloto, prova de conceito (PoC), novos produtos e/ou processos finalizados e aprovados ao final do contrato, 
+por tipo de resultado, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA5.ME2 - PernambucanasInovadoras"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
+	]
+	instance PA5.ME3 : metricas:metrica [
+		base:nome "Participação Percentual Tipos de Resultado"
+		base:descricao "Participação percentual dos tipos de resultados dos projetos apoiados pelo Programa em relação ao total de resultados, por ano e Região de 
+Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA5.ME3 - PernambucanasInovadoras"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
+	]
+	instance PA5.ME4 : metricas:metrica [
+		base:nome "Taxa de Inovação dos Projetos"
+		base:descricao "Taxa de Inovação dos Projetos: percentual de novos produtos, serviços e/ou processos finalizados e aprovados, como resultados dos projetos 
+apoiados, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA5.ME4 - PernambucanasInovadoras"
+		metricas:temFonte fontesDadosPrimarios:FI1.1
+	]
+
+	instance PA6.ME1 : metricas:metrica [
+		base:nome "Beneficiadas Pernambucanas Inovadoras"
+		base:descricao "CPF (nome) das beneficiadas no Programa Pernambucanas Inovadoras (a partir de 2022), por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME2 : metricas:metrica [
+		base:nome "Beneficiadas Pró-Startups Mulheres"
+		base:descricao "CPF (nome) de todas as mulheres beneficiadas no Programa Pró-Startups Mulheres que Inovam (a partir de 2022), por ano, acumulado por ano e 
+Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME2 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME3 : metricas:metrica [
+		base:nome "Beneficiadas COMPET Mulheres"
+		base:descricao "CPF (nome) de todas as mulheres beneficiadas no Programa COMPET Mulheres (a partir de 2022), por ano, acumulado por ano e Região de 
+Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME3 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME4 : metricas:metrica [
+		base:nome "Beneficiadas Demais Programas Empreendedorismo"
+		base:descricao "CPF (nome) de todas as mulheres beneficiadas em todos os programas de fomento ao empreendedorismo inovador da FACEPE/SECTI, exceto os 
+exclusivos para mulheres (a partir de 2022), por ano, acumulado por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME4 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME5 : metricas:metrica [
+		base:nome "Sobreposição Pernambucanas x Pró-Startups Mulheres"
+		base:descricao "Número de vezes que o CPF (nome) das beneficiadas no Programa Pernambucanas Inovadoras é encontrado no conjunto do número de CPF das 
+beneficiadas no Programa Pró-Startups Mulheres que Inovam (a partir de 2022), por ano, acumulado por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME5 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME6 : metricas:metrica [
+		base:nome "Sobreposição Pernambucanas x COMPET Mulheres"
+		base:descricao "Número de vezes que o CPF (nome) das beneficiadas no Programa Pernambucanas Inovadoras é encontrado no conjunto do número de CPF das 
+beneficiadas no Programa COMPET Mulheres (a partir de 2022), por ano, acumulado por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME6 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA6.ME7 : metricas:metrica [
+		base:nome "Sobreposição Pernambucanas x Demais Programas"
+		base:descricao "Número de vezes que o CPF (nome) das beneficiadas no Programa Pernambucanas Inovadoras é encontrado no conjunto de todos os programas de 
+fomento ao empreendedorismo inovador da FACEPE/SECTI, exceto os exclusivos para mulheres (a partir de 2022), por ano, acumulado por ano e Região de 
+Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA6.ME7 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance PA7.ME1 : metricas:metrica [
+		base:nome "Taxa Diversidade Social dos Projetos"
+		base:descricao "Taxa de Diversidade Social dos Projetos: percentual de integrantes dos projetos apoiados declarados negros, indígenas, trans ou PCD em 
+relação ao total de integrantes, por ano e Região de Desenvolvimento de Pernambuco (RDE)"
+		base:id "PA7.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	instance PA8.ME1 : metricas:metrica [
+		base:nome "Quantidade Projetos por Município"
+		base:descricao "Número total de projetos apoiados pelo Programa, por ano e município de localização da ICT de vinculação da coordenadora do projeto"
+		base:id "PA8.ME1 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+	instance PA8.ME2 : metricas:metrica [
+		base:nome "Taxa de Interiorização dos Projetos"
+		base:descricao "Taxa de Interiorização dos projetos: percentual de projetos coordenados por mulheres vinculadas a ICTs no interior do estado em relação ao 
+total de projetos apoiados em todo o estado, por ano"
+		base:id "PA8.ME2 - PernambucanasInovadoras"
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	// Escopos (ES) e Métodos de Avaliação (MA)
+	
+	instance PA1.ES : planoAvaliacao:escopo [
+		base:descricao "Identificar o aumento do número de projetos de inovação sob a liderança/coordenação de mulheres no total de projetos da FACEPE (projetos de 
+inovação na Diretoria de Inovação), por ano"
+		base:id "PA1.ES - PernambucanasInovadoras"
+	]
+	instance PA1.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA1.MA1 - PernambucanasInovadoras"
+	]
+	instance PA1.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA1.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA2.ES : planoAvaliacao:escopo [
+		base:descricao "Identificar o aumento da participação de projetos de inovação sob a liderança/coordenação de mulheres no total de projetos da FACEPE 
+(projetos de inovação na Diretoria de Inovação), por ano"
+		base:id "PA2.ES - PernambucanasInovadoras"
+	]
+	instance PA2.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA2.MA1 - PernambucanasInovadoras"
+	]
+	instance PA2.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA2.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA3.ES : planoAvaliacao:escopo [
+		base:descricao "Avaliar a ascensão profissional e o protagonismo feminino nas startups, spin-offs e empresas de base tecnológica dos projetos apoiados pelo 
+programa"
+		base:id "PA3.ES - PernambucanasInovadoras"
+	]
+	instance PA3.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA3.MA1 - PernambucanasInovadoras"
+	]
+	instance PA3.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA3.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA4.ES : planoAvaliacao:escopo [
+		base:descricao "Avaliar a capacidade das pesquisadoras de articulação entre a academia e os demais agentes do Sistema Estadual de CT&I"
+		base:id "PA4.ES - PernambucanasInovadoras"
+	]
+	instance PA4.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA4.MA1 - PernambucanasInovadoras"
+	]
+	instance PA4.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA4.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA5.ES : planoAvaliacao:escopo [
+		base:descricao "Verificar a conversão de conhecimento acadêmico em soluções comerciais ou sociais de impacto"
+		base:id "PA5.ES - PernambucanasInovadoras"
+	]
+	instance PA5.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Avaliação de resultados técnicos e subjetivos. Somatório anual dos resultados ao longo do tempo.
+
+Tipos de resultados considerados: Prova de Conceito; Protótipo; Piloto; Produto novo ou significativamente melhorado; Processo novo ou 
+significativamente melhorado; Outros (especificar)."
+		base:id "PA5.MA1 - PernambucanasInovadoras"
+	]
+
+	instance PA6.ES : planoAvaliacao:escopo [
+		base:descricao "Verificar a taxa de sucesso das pesquisadoras beneficiadas pelo programa na esteira (trilha) dos programas de empreendedorismo inovador do 
+estado"
+		base:id "PA6.ES - PernambucanasInovadoras"
+	]
+	instance PA6.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA6.MA1 - PernambucanasInovadoras"
+	]
+	instance PA6.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA6.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA7.ES : planoAvaliacao:escopo [
+		base:descricao "Avaliar a eficácia das políticas de inclusão e interseccionalidade no ecossistema de inovação"
+		base:id "PA7.ES - PernambucanasInovadoras"
+	]
+	instance PA7.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA7.MA1 - PernambucanasInovadoras"
+	]
+	instance PA7.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA7.MA4 - PernambucanasInovadoras"
+	]
+
+	instance PA8.ES : planoAvaliacao:escopo [
+		base:descricao "Mensurar a redução de disparidades territoriais no Sistema de CT&I estadual"
+		base:id "PA8.ES - PernambucanasInovadoras"
+	]
+	instance PA8.MA1 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Análise Descritiva"
+		base:id "PA8.MA1 - PernambucanasInovadoras"
+	]
+	instance PA8.MA4 : planoAvaliacao:metodoAvaliacao [
+		base:descricao "Regressão de Dados em Painel"
+		base:id "PA8.MA4 - PernambucanasInovadoras"
+	]
+
+	// Limitações
+
+	instance LIM1 : planoAvaliacao:limitacao [
+		base:descricao "Os dados para os cálculos das métricas dependem dos resultados da pesquisa primária"
+	]
+	instance LIM2 : planoAvaliacao:limitacao [
+		base:descricao "O ciclo de desenvolvimento técnico pode ser superior ao tempo do projeto"
+	]
+	instance LIM3 : planoAvaliacao:limitacao [
+		base:descricao "Há possibilidades de subnotificação ou erro na declaração étnico-racial e social dos proponentes"
+	]
+}

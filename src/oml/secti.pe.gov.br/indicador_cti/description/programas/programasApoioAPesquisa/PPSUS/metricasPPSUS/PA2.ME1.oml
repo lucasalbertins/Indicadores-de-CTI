@@ -1,0 +1,64 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA2.ME1#> as PA2.ME1 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA2.ME1"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratEixo : formulas:estratificacao [
+		base:id "estrat_eixo_PA2.ME1"
+		base:nome "Eixo Prioritário"
+	]
+
+	instance estratFaixa : formulas:estratificacao [
+		base:id "estrat_faixa_PA2.ME1"
+		base:nome "Faixa de Fomento"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA2.ME1"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Quantidade de Projetos Apoiados
+	instance quantidadeProjetosApoiados : metricas:metrica [
+		base:id "PA2.ME1_PPSUS"
+		base:nome "Quantidade de Projetos Apoiados"
+		base:descricao "Quantidade de projetos de pesquisa (grupos de pesquisa) apoiados pelo PPSUS-PE"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaIdentidadePA2ME1
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratEixo
+		formulas:estratificadaPor estratFaixa
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1
+	]
+
+	// retorna o valor da fonte de dados
+	instance formulaIdentidadePA2ME1 : formulas:formula [
+		base:id "formula_identidade_PA2.ME1"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/fns1#identity"
+		formulas:possuiArgumento varFontePA2ME1
+		formulas:formulaDe quantidadeProjetosApoiados
+	]
+
+	instance varFontePA2ME1 : formulas:argumento [
+		base:id "arg_fontepa2me1_PA2.ME1"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "Quantidade de Projetos Apoiados"
+		formulas:possuiValor AgilFap_Projetos_Apoiados
+		formulas:argumentoDe formulaIdentidadePA2ME1
+	]
+
+	instance AgilFap_Projetos_Apoiados : formulas:tipovalorMetrica [
+		base:id "AgilFapProjetosApoiados_PA2.ME1"
+		formulas:valorMetrica "agilfap.projetos.apoiados"
+	]
+}

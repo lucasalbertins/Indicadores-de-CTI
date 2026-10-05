@@ -1,0 +1,118 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME3#> as PA8.ME3 {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA8.ME2#> as PA8.ME2
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratModalidade : formulas:estratificacao [
+		base:id "estrat_modalidade_PA8.ME3"
+		base:nome "Modalidade Acadêmica"
+	]
+
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA8.ME3"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratAno : formulas:estratificacao [
+		base:id "estrat_ano_PA8.ME3"
+		base:nome "Ano da Concessão do Apoio"
+	]
+
+	instance estratEixo : formulas:estratificacao [
+		base:id "estrat_eixo_PA8.ME3"
+		base:nome "Eixo Temático"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA8.ME3"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Taxa de Formação de Recursos Humanos de Alto Nível
+	instance taxaFormacaoRH : metricas:metrica [
+		base:id "PA8.ME3_PPSUS"
+		base:nome "Taxa de Formação de Recursos Humanos de Alto Nível"
+		base:descricao "Percentual de estudantes de pós-graduação titulados até 2 anos após o encerramento do projeto em relação ao total de integrantes distintos dos projetos apoiados"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratModalidade
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratAno
+		formulas:estratificadaPor estratEixo
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesSistemasBasesGovernamentais:FI2.1, fontesBasesAcademicasCientificasEducacionais:FI3.1
+		base:agregadoPor PA8.ME2:quantidadeEstudantesTitulados
+	]
+
+	// Fórmula: multiplicação(divisão(numerador, denominador), 100)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA8.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendo
+		formulas:possuiArgumento argDivisor
+	]
+
+	instance argDividendo : formulas:argumento [
+		base:id "arg_dividendo_PA8.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor Val_Estudantes_Titulados
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA8.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor Val_Integrantes_Distintos
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance Val_Estudantes_Titulados : formulas:tipovalorMetrica [
+		base:id "ValEstudantesTitulados_PA8.ME3"
+		formulas:valorMetrica PA8.ME2:quantidadeEstudantesTitulados
+	]
+
+	instance Val_Integrantes_Distintos : formulas:tipovalorMetrica [
+		base:id "AgilFapIntegrantesDistintos_PA8.ME3"
+		formulas:valorMetrica "val.integrantes.distintos"
+	]
+
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA8.ME3"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicando
+		formulas:possuiArgumento argMultiplicador
+		formulas:formulaDe taxaFormacaoRH
+	]
+
+	instance argMultiplicando : formulas:argumento [
+		base:id "arg_multiplicando_PA8.ME3"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivisao
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance argMultiplicador : formulas:argumento [
+		base:id "arg_multiplicador_PA8.ME3"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valorFormulaDivisao : formulas:tipovalorFormula [
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance valorLiteral : formulas:tipovalorLiteral [
+		formulas:valorLiteral 100
+	]
+}

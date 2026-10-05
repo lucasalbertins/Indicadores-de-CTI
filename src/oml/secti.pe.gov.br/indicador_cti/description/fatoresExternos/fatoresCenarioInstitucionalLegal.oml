@@ -14,6 +14,15 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE2.OP2"
 	]
 	
+	instance FE2.OP3 : canvas:FatorExterno [
+		base:nome "Alinhamento do Programa com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU"
+		base:id "FE2.OP3"
+	]
+	instance FE2.OP4 : canvas:FatorExterno [
+		base:nome "Ambiente favorável para as políticas afirmativas em Pernambuco"
+		base:id "FE2.OP4"
+	]
+	
 	//Ameaças
 	instance FE2.AM1 : canvas:Ameaca [
 		base:nome "Desconhecimento das oportunidades relacionadas ao Marco Legal de CT&I e às compras públicas de soluções inovadoras"
@@ -43,5 +52,10 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 	instance FE2.AM7 : canvas:Ameaca [
 		base:nome "Restrições apresentadas pelo arcabouço legal"
 		base:id "FE2.AM7"
+	]
+	
+	instance FE2.AM8 : canvas:FatorExterno [
+		base:nome "Reforma tributária"
+		base:id "FE2.AM8"
 	]
 }

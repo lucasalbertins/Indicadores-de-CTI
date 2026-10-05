@@ -1,0 +1,106 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA5.ME2#> as PA5.ME2 {
+
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/metricasPPSUS/PA2.ME1#> as PA2.ME1
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
+	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/metricas#> as metricas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/formulas#> as formulas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	// ESTRATIFICAÇÕES (Dimensões de Desagregação)
+	instance estratEdital : formulas:estratificacao [
+		base:id "estrat_edital_PA5.ME2"
+		base:nome "Edital/Ano"
+	]
+
+	instance estratEixo : formulas:estratificacao [
+		base:id "estrat_eixo_PA5.ME2"
+		base:nome "Eixo Temático"
+	]
+
+	instance estratRde : formulas:estratificacao [
+		base:id "estrat_rde_PA5.ME2"
+		base:nome "Região de Desenvolvimento do Estado"
+	]
+
+	// MÉTRICA: Taxa de Inovação por Edital/Ano
+	instance taxaInovacaoPorEdital : metricas:metrica [
+		base:id "PA5.ME2_PPSUS"
+		base:nome "Taxa de Inovação por Edital/Ano"
+		base:descricao "Percentual de projetos apoiados que geraram ao menos uma tecnologia ou inovação (produto, processo ou serviço) em relação ao total de projetos apoiados"
+		metricas:finalidade "Maximizar"
+		formulas:possuiFormula formulaMultiplicacao
+		formulas:estratificadaPor estratEdital
+		formulas:estratificadaPor estratEixo
+		formulas:estratificadaPor estratRde
+		metricas:temFonte fontesDadosPrimarios:FI1.1, fontesSistemasBasesGovernamentais:FI2.1
+		base:agregadoPor PA2.ME1:quantidadeProjetosApoiados
+	]
+
+	// Fórmula: multiplicação(divisão(numerador, denominador), 100)
+	instance formulaDivisao : formulas:formula [
+		base:id "formula_divisao_PA5.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#divide"
+		formulas:possuiArgumento argDividendo
+		formulas:possuiArgumento argDivisor
+	]
+
+	instance argDividendo : formulas:argumento [
+		base:id "arg_dividendo_PA5.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "dividend"
+		formulas:possuiValor Levantamento_Projetos_Inovadores
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance argDivisor : formulas:argumento [
+		base:id "arg_divisor_PA5.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "divisor"
+		formulas:possuiValor Val_Projetos_Apoiados
+		formulas:argumentoDe formulaDivisao
+	]
+
+	instance Levantamento_Projetos_Inovadores : formulas:tipovalorMetrica [
+		base:id "LevantamentoProjetosInovadores_PA5.ME2"
+		formulas:valorMetrica "levantamento.projetos.inovadores"
+	]
+
+	instance Val_Projetos_Apoiados : formulas:tipovalorMetrica [
+		base:id "ValProjetosApoiados_PA5.ME2"
+		formulas:valorMetrica PA2.ME1:quantidadeProjetosApoiados
+	]
+
+	instance formulaMultiplicacao : formulas:formula [
+		base:id "formula_multiplicacao_PA5.ME2"
+		formulas:referenciaOperacao "http://www.openmath.org/cd/arith1#times"
+		formulas:possuiArgumento argMultiplicando
+		formulas:possuiArgumento argMultiplicador
+		formulas:formulaDe taxaInovacaoPorEdital
+	]
+
+	instance argMultiplicando : formulas:argumento [
+		base:id "arg_multiplicando_PA5.ME2"
+		formulas:posicao "1"^^xsd:int
+		formulas:nome "multiplicand"
+		formulas:possuiValor valorFormulaDivisao
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance argMultiplicador : formulas:argumento [
+		base:id "arg_multiplicador_PA5.ME2"
+		formulas:posicao "2"^^xsd:int
+		formulas:nome "multiplier"
+		formulas:possuiValor valorLiteral
+		formulas:argumentoDe formulaMultiplicacao
+	]
+
+	instance valorFormulaDivisao : formulas:tipovalorFormula [
+		formulas:valorFormula formulaDivisao
+	]
+
+	instance valorLiteral : formulas:tipovalorLiteral [
+		formulas:valorLiteral 100
+	]
+}

@@ -9,6 +9,11 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 		base:id "FE1.OP1"
 	]
 	
+	instance FE1.OP2 : canvas:FatorExterno [
+		base:nome "Crescente demanda do mercado por soluções de impacto social, econômico e para o meio ambiente"
+		base:id "FE1.OP2"
+	]
+	
 	//Ameaças
 	instance FE1.AM1 : canvas:Ameaca [
 		base:nome "Indisponibilidade financeira do Fundo Inovar-PE"
@@ -38,5 +43,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fa
 	instance FE1.AM7 : canvas:Ameaca [
 		base:nome "Mercado de trabalho aquecido"
 		base:id "FE1.AM7"
+	]
+	instance FE1.AM8 : canvas:FatorExterno [
+		base:nome "Instabilidade econômica nacional e internacional que pode elevar os custos de insumos e importação"
+		base:id "FE1.AM8"
 	]
 }

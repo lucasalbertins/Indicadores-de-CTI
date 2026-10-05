@@ -1,0 +1,165 @@
+description <http://secti.pe.gov.br/indicador_cti/description/programas/programasApoioAPesquisa/PPSUS/PPSUS#> as PPSUS {
+	
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosGoverno#> as parceirosGoverno
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAgenciasFomento#> as parceirosAgenciasFomento
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosAcademiaICTs#> as parceirosAcademiaICTs
+	extends <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/parceirosEmpresas#> as parceirosEmpresas
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioEconomico#> as fatoresCenarioEconomico
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioSocialEducacional#> as fatoresCenarioSocialEducacional
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresDinamicaEcossistema#> as fatoresDinamicaEcossistema
+	extends <http://secti.pe.gov.br/indicador_cti/description/fatoresExternos/fatoresCenarioInstitucionalLegal#> as fatoresCenarioInstitucionalLegal
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasOrcamentoFinanciamento#> as entradasOrcamentoFinanciamento
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasDadosSistemasPlataformas#> as entradasDadosSistemasPlataformas
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasCapitalHumano#> as entradasCapitalHumano
+	extends <http://secti.pe.gov.br/indicador_cti/description/entradas/entradasInstrumentosLegaisNormativos#> as entradasInstrumentosLegaisNormativos
+	extends <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> as atividadeChave
+	extends <http://secti.pe.gov.br/indicador_cti/description/saidas#> as saida
+	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/PBPG/PA-PBPG#> as PA-PBPG
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/canvas#> as canvas
+	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/programa#> as programa
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	instance CanvasPR14 : canvas:canvas [
+		base:nome "Canvas do Programa Pesquisa para o SUS"
+		base:id "C-PR14"
+		base:versao "V1-Homologado"
+		base:dataCriacao "2026-03-24T00:00:00"^^xsd:dateTime
+		canvas:possuiParceiros parceirosGoverno:PC1.4, parceirosAgenciasFomento:PC2.1, parceirosAgenciasFomento:PC2.7, parceirosGoverno:PC1.14, parceirosAcademiaICTs:PC3.1,
+		parceirosEmpresas:PC4.1
+		canvas:condicionadoPor  fatoresCenarioEconomico:FE1.OP1, fatoresDinamicaEcossistema:FE5.OP2, fatoresDinamicaEcossistema:FE5.OP3, 
+		fatoresCenarioEconomico:FE1.AM1, fatoresCenarioEconomico:FE1.AM2, fatoresCenarioSocialEducacional:FE4.AM1, fatoresCenarioInstitucionalLegal:FE2.AM6
+		canvas:recebeEntradas entradasOrcamentoFinanciamento:EN1.1, entradasOrcamentoFinanciamento:EN1.5, entradasDadosSistemasPlataformas:EN2.1, 
+		entradasCapitalHumano:EN3.1, entradasCapitalHumano:EN3.5, entradasInstrumentosLegaisNormativos:EN5.1
+		canvas:executa atividadeChave:AC1, atividadeChave:AC3, atividadeChave:AC5, atividadeChave:AC38, atividadeChave:AC26, atividadeChave:AC27, atividadeChave:AC28, 
+		atividadeChave:AC29, atividadeChave:AC31, atividadeChave:AC31, atividadeChave:AC32, atividadeChave:AC33, atividadeChave:AC34, atividadeChave:AC35,
+		atividadeChave:AC36, atividadeChave:AC37
+		canvas:geraSaidas saida:SA5, saida:SA41, saida:SA35, saida:SA42, saida:SA43, saida:SA44, saida:SA45, saida:SA36, saida:SA46, saida:SA47, saida:SA37,
+		saida:SA2, saida:SA15, saida:SA3, saida:SA40, saida:SA8
+		canvas:produzResultados RE.CP1, RE.CP2, RE.CP3, RE.CP4, RE.MP1, RE.MP2, RE.MP3, RE.MP4, RE.MP5, RE.LP1, RE.LP2
+		canvas:buscaAtingirGeral OB.GE
+		canvas:buscaAtingirEspecifico OB.ES1, OB.ES2, OB.ES3, OB.ES4, OB.ES5, OB.ES6, OB.ES7, OB.ES8
+	]
+	
+	instance PR14 : programa:programaCTI [
+		base:nome "Programa de Bolsas de Pós-Graduação"
+		base:descricao "Foi criado para fomentar o desenvolvimento científico e tecnológico do estado de Pernambuco, oferecendo bolsas de estudo para alunos de 
+pós-graduação"
+		base:id "PR14"
+		programa:temCanvas CanvasPR14
+		programa:temPlanoAvaliacao PA-PBPG:PAV1
+	]
+	
+	// Objetivo Geral
+	instance OB.GE : canvas:ObjetivoGeral [
+		base:nome "Fortalecer a capacidade de pesquisa e desenvolvimento tecnológico na área da saúde para gerar conhecimentos e inovações que respondam aos 
+problemas prioritários do SUS em Pernambuco, melhorando a gestão e a atenção à saúde pública"
+		base:id "OB.GE - PPSUS"
+	]
+
+	// Objetivos Específicos
+	instance OB.ES1 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar o desenvolvimento científico no Ecossistema de CT&I da Saúde de Pernambuco"
+		base:id "OB.ES1 - PPSUS"
+		canvas:buscaAtingir RE.CP1, RE.MP1
+	]
+	instance OB.ES2 : canvas:ObjetivoEspecifico [
+		base:nome "Fomentar o desenvolvimento de soluções tecnológicas e inovadoras nas áreas prioritárias da saúde pública do estado"
+		base:id "OB.ES2 - PPSUS"
+		canvas:buscaAtingir RE.MP2
+	]
+	instance OB.ES3 : canvas:ObjetivoEspecifico [
+		base:nome "Apoiar a formação e fixação de recursos humanos nas áreas prioritárias do SUS"
+		base:id "OB.ES3 - PPSUS"
+		canvas:buscaAtingir RE.CP2, RE.MP3
+	]
+	instance OB.ES4 : canvas:ObjetivoEspecifico [
+		base:nome "Promover a inclusão de pessoa com deficiência (PCD) e a equidade de gênero e étnico-racial na ciência em saúde"
+		base:id "OB.ES4 - PPSUS"
+		canvas:buscaAtingir RE.CP3
+	]
+	instance OB.ES5 : canvas:ObjetivoEspecifico [
+		base:nome "Reduzir as desigualdades regionais em C&TI na área da saúde no contexto do Brasil"
+		base:id "OB.ES5 - PPSUS"
+		canvas:buscaAtingir RE.LP1
+	]
+	instance OB.ES6 : canvas:ObjetivoEspecifico [
+		base:nome "Estimular a aplicação dos resultados dos projetos na gestão e/ou atenção à saúde no SUS"
+		base:id "OB.ES6 - PPSUS"
+		canvas:buscaAtingir RE.MP4
+	]
+	instance OB.ES7 : canvas:ObjetivoEspecifico [
+		base:nome "Impulsionar a cooperação dos pesquisadores e grupos de pesquisa dentro e fora do estado"
+		base:id "OB.ES7 - PPSUS"
+		canvas:buscaAtingir RE.CP4, RE.MP5
+	]
+	instance OB.ES8 : canvas:ObjetivoEspecifico [
+		base:nome "Reduzir as disparidades territoriais para a CT&I na área da saúde pública do estado, em especial, da RMR e com o interior"
+		base:id "OB.ES8 - PPSUS"
+		canvas:buscaAtingir RE.LP2
+	]
+	
+	// Resultados Esperados
+
+	// Curto Prazo
+	instance RE.CP1 : canvas:ResultadoEsperado [
+		base:nome "Fortalecimento dos grupos de pesquisa locais voltados para as áreas da saúde"
+		base:id "RE.CP1 - PPSUS"
+		canvas:prazo "curto"
+	]
+	instance RE.CP2 : canvas:ResultadoEsperado [
+		base:nome "Ampliação do número de pesquisadores atuando em temas prioritários para o SUS em Pernambuco"
+		base:id "RE.CP2 - PPSUS"
+		canvas:prazo "curto"
+	]
+	instance RE.CP3 : canvas:ResultadoEsperado [
+		base:nome "Ampliação da inclusão de PCD e da equidade de gênero e étnico-racial nos projetos de pesquisa na área da saúde"
+		base:id "RE.CP3 - PPSUS"
+		canvas:prazo "curto"
+	]
+	instance RE.CP4 : canvas:ResultadoEsperado [
+		base:nome "Articulação e cooperação entre pesquisadores/grupos de pesquisa de diferentes instituições dentro e fora do estado"
+		base:id "RE.CP4 - PPSUS"
+		canvas:prazo "curto"
+	]
+
+	// Médio Prazo
+	instance RE.MP1 : canvas:ResultadoEsperado [
+		base:nome "Produção científica e tecnológica no contexto das áreas prioritárias do SUS"
+		base:id "RE.MP1 - PPSUS"
+		canvas:prazo "médio"
+	]
+	instance RE.MP2 : canvas:ResultadoEsperado [
+		base:nome "Tecnologias e inovações aplicáveis às áreas prioritárias da saúde pública"
+		base:id "RE.MP2 - PPSUS"
+		canvas:prazo "médio"
+	]
+	instance RE.MP3 : canvas:ResultadoEsperado [
+		base:nome "Formação e fixação de profissionais qualificados no Ecossistema de CT&I da Saúde estadual"
+		base:id "RE.MP3 - PPSUS"
+		canvas:prazo "médio"
+	]
+	instance RE.MP4 : canvas:ResultadoEsperado [
+		base:nome "Disseminação de conhecimentos técnicos e científicos para gestores e profissionais da saúde pública do estado"
+		base:id "RE.MP4 - PPSUS"
+		canvas:prazo "médio"
+	]
+	instance RE.MP5 : canvas:ResultadoEsperado [
+		base:nome "Incorporação de evidências científicas e novas tecnologias nos protocolos de gestão do SUS e na qualidade da atenção à saúde pública"
+		base:id "RE.MP5 - PPSUS"
+		canvas:prazo "médio"
+	]
+
+	// Longo Prazo
+	instance RE.LP1 : canvas:ResultadoEsperado [
+		base:nome "Redução de desigualdades regionais no Ecossistema de CT&I da Saúde, em especial de Pernambuco em relação ao Brasil"
+		base:id "RE.LP1 - PPSUS"
+		canvas:prazo "longo"
+	]
+	instance RE.LP2 : canvas:ResultadoEsperado [
+		base:nome "Redução das disparidades territoriais para a CT&I na área da saúde pública no estado, em especial entre a RMR e o interior"
+		base:id "RE.LP2 - PPSUS"
+		canvas:prazo "longo"
+	]
+	
+}

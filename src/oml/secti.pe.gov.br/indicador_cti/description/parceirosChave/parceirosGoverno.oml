@@ -57,4 +57,9 @@ description <http://secti.pe.gov.br/indicador_cti/description/parceirosChave/par
 		base:nome "Órgãos privados integrantes apoiadores"
 		base:id "PC1.13"
 	]
+	
+	instance PC1.14 : canvas:ParceiroChave [
+		base:nome "Ministério da Saúde"
+		base:id "PC1.14"
+	]
 }

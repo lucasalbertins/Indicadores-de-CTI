@@ -103,4 +103,57 @@ description <http://secti.pe.gov.br/indicador_cti/description/atividadesChave#> 
 		base:nome "Monitoramento de execução do Programa"
 		base:id "AC25"
 	]
+	instance AC26 : canvas:AtividadeChave [
+		base:nome "Submissão da proposta e análise de enquadramento técnico e documental"
+		base:id "AC26"
+	]
+	instance AC27 : canvas:AtividadeChave [
+		base:nome "Contratação via Termos de Outorga"
+		base:id "AC27"
+	]
+	instance AC28 : canvas:AtividadeChave [
+		base:nome "Desembolso de recursos"
+		base:id "AC28"
+	]
+	instance AC29 : canvas:AtividadeChave [
+		base:nome "Acompanhamento técnico e monitoramento"
+		base:id "AC29"
+	]
+	instance AC30 : canvas:AtividadeChave [
+		base:nome "Apresentação dos resultados finais e prestação de contas (técnica e financeira)"
+		base:id "AC30"
+	]
+	instance AC31 : canvas:AtividadeChave [
+		base:nome "Análise da prestação de contas (técnica e financeira)"
+		base:id "AC31"
+	]
+	
+	instance AC32 : canvas:AtividadeChave [
+		base:nome "Definição das prioridades de pesquisa em saúde a partir das demandas do SUS"
+		base:id "AC32"
+	]
+	instance AC33 : canvas:AtividadeChave [
+		base:nome "Avaliação de mérito técnico-científico por consultores ad hoc"
+		base:id "AC33"
+	]
+	instance AC34 : canvas:AtividadeChave [
+		base:nome "Avaliação de mérito técnico e relevância socio sanitária pela comissão de especialistas"
+		base:id "AC34"
+	]
+	instance AC35 : canvas:AtividadeChave [
+		base:nome "Homologação do resultado/processo seletivo pelo Comitê Gestor"
+		base:id "AC35"
+	]
+	instance AC36 : canvas:AtividadeChave [
+		base:nome "Seminário de apresentação dos resultados finais dos projetos"
+		base:id "AC36"
+	]
+	instance AC37 : canvas:AtividadeChave [
+		base:nome "Implementação de soluções tecnológicas e inovação no sistema de saúde"
+		base:id "AC37"
+	]
+	instance AC38 : canvas:AtividadeChave [
+		base:nome "Submissão eletrônica das propostas no SISC&T e no AgilFAP"
+		base:id "AC38"
+	]
 }

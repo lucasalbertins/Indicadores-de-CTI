@@ -1,10 +1,7 @@
 description <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/PA_BIA#> as PA_BIA {
 	
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosPrimarios#> as fontesDadosPrimarios
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesSistemasBasesGovernamentais#> as fontesSistemasBasesGovernamentais
 	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesBasesAcademicasCientificasEducacionais#> as fontesBasesAcademicasCientificasEducacionais
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesInfraestruturaAtivosCTI#> as fontesInfraestruturaAtivosCTI
-	extends <http://secti.pe.gov.br/indicador_cti/description/fontesInformacao/fontesDadosSocioeconomicosTerritoriais#> as fontesDadosSocioeconomicosTerritoriais
 	extends <http://secti.pe.gov.br/indicador_cti/description/programas/programasFormacaoFixacaoTalentos/BIA/BIA#> as BIA
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/base#> as base
 	uses <http://secti.pe.gov.br/indicador_cti/vocabulary/DesignAvaliacao/planoAvaliacao#> as planoAvaliacao
